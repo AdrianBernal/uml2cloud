@@ -792,7 +792,7 @@
           </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_FXRU6PiVEee9u4WotLDcAQ" name="User">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FXRU6fiVEee9u4WotLDcAQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_tWH_EIZVEeexBrHTG7KRXw"/>
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FXRU6fiVEee9u4WotLDcAQ" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
           <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FXRU6viVEee9u4WotLDcAQ" name="base_Lifeline" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
           </eStructuralFeatures>
@@ -1416,18 +1416,10 @@
     <packagedElement xmi:type="uml:Extension" xmi:id="_qkJmsIZVEeexBrHTG7KRXw" name="E_VM_Component1" memberEnd="_qkJmsYZVEeexBrHTG7KRXw _qkKNwIZVEeexBrHTG7KRXw">
       <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_qkJmsYZVEeexBrHTG7KRXw" name="extension_VM" type="_ne1bkIZVEeexBrHTG7KRXw" aggregation="composite" association="_qkJmsIZVEeexBrHTG7KRXw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Stereotype" xmi:id="_tWH_EIZVEeexBrHTG7KRXw" name="User">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Z4u80IZWEeexBrHTG7KRXw" name="base_Lifeline" association="_Z4tusIZWEeexBrHTG7KRXw">
-        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Lifeline"/>
-      </ownedAttribute>
-    </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_X4cgEIZWEeexBrHTG7KRXw" name="CloudProvider">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_aR_KUIZWEeexBrHTG7KRXw" name="base_Lifeline" association="_aR98MIZWEeexBrHTG7KRXw">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Lifeline"/>
       </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Extension" xmi:id="_Z4tusIZWEeexBrHTG7KRXw" name="E_User_Lifeline1" memberEnd="_Z4uVwIZWEeexBrHTG7KRXw _Z4u80IZWEeexBrHTG7KRXw">
-      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_Z4uVwIZWEeexBrHTG7KRXw" name="extension_User" type="_tWH_EIZVEeexBrHTG7KRXw" aggregation="composite" association="_Z4tusIZWEeexBrHTG7KRXw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Extension" xmi:id="_aR98MIZWEeexBrHTG7KRXw" name="E_CloudProvider_Lifeline1" memberEnd="_aR-jQIZWEeexBrHTG7KRXw _aR_KUIZWEeexBrHTG7KRXw">
       <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_aR-jQIZWEeexBrHTG7KRXw" name="extension_CloudProvider" type="_X4cgEIZWEeexBrHTG7KRXw" aggregation="composite" association="_aR98MIZWEeexBrHTG7KRXw"/>

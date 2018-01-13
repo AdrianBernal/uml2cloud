@@ -623,27 +623,6 @@
       <element xmi:type="uml:Stereotype" href="uml2cloud.profile.uml#_o0vekIZVEeexBrHTG7KRXw"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_o00XEYZVEeexBrHTG7KRXw" x="360" y="220"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_tWNeoIZVEeexBrHTG7KRXw" type="Stereotype_Shape" fillColor="15198183" transparency="0">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JDcAxs19EeeHSYyNd1S86Q" source="PapyrusCSSForceValue">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDcAx819EeeHSYyNd1S86Q" key="fillColor" value="true"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_M8P5IM6gEeeB2v-4aR4RrQ" key="gradient" value="true"/>
-      </eAnnotations>
-      <children xmi:type="notation:DecorationNode" xmi:id="_tWNeooZVEeexBrHTG7KRXw" type="Stereotype_NameLabel"/>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_tWNeo4ZVEeexBrHTG7KRXw" type="Stereotype_AttributeCompartment">
-        <styles xmi:type="notation:TitleStyle" xmi:id="_tWNepIZVEeexBrHTG7KRXw"/>
-        <styles xmi:type="notation:SortingStyle" xmi:id="_tWNepYZVEeexBrHTG7KRXw"/>
-        <styles xmi:type="notation:FilteringStyle" xmi:id="_tWNepoZVEeexBrHTG7KRXw"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tWNep4ZVEeexBrHTG7KRXw"/>
-      </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_tWNeqIZVEeexBrHTG7KRXw" type="Stereotype_OperationCompartment">
-        <styles xmi:type="notation:TitleStyle" xmi:id="_tWNeqYZVEeexBrHTG7KRXw"/>
-        <styles xmi:type="notation:SortingStyle" xmi:id="_tWNeqoZVEeexBrHTG7KRXw"/>
-        <styles xmi:type="notation:FilteringStyle" xmi:id="_tWNeq4ZVEeexBrHTG7KRXw"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tWNerIZVEeexBrHTG7KRXw"/>
-      </children>
-      <element xmi:type="uml:Stereotype" href="uml2cloud.profile.uml#_tWH_EIZVEeexBrHTG7KRXw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tWNeoYZVEeexBrHTG7KRXw" x="740" y="220"/>
-    </children>
     <children xmi:type="notation:Shape" xmi:id="_X4hYkIZWEeexBrHTG7KRXw" type="Stereotype_Shape" fillColor="15198183" transparency="0">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JDcA0M19EeeHSYyNd1S86Q" source="PapyrusCSSForceValue">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDcA0c19EeeHSYyNd1S86Q" key="fillColor" value="true"/>
@@ -893,13 +872,6 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_q6PygoZVEeexBrHTG7KRXw" points="[200, 360, -643984, -643984]$[180, 320, -643984, -643984]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_q6g4QIZVEeexBrHTG7KRXw" id="(1.0,0.5660377358490566)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_q6hfUIZVEeexBrHTG7KRXw" id="(0.0,0.5660377358490566)"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_Z5ApoIZWEeexBrHTG7KRXw" type="Extension_Edge" source="_tWNeoIZVEeexBrHTG7KRXw" target="_kE0y0IZVEeexBrHTG7KRXw" routing="Tree">
-      <styles xmi:type="notation:FontStyle" xmi:id="_Z5ApoYZWEeexBrHTG7KRXw"/>
-      <element xmi:type="uml:Extension" href="uml2cloud.profile.uml#_Z4tusIZWEeexBrHTG7KRXw"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Z5ApooZWEeexBrHTG7KRXw" points="[780, 220, -643984, -643984]$[780, 213, -643984, -643984]$[850, 213, -643984, -643984]$[850, 169, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z5UysIZWEeexBrHTG7KRXw" id="(0.4,0.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z5UysYZWEeexBrHTG7KRXw" id="(0.49333333333333335,1.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_aSQ3IIZWEeexBrHTG7KRXw" type="Extension_Edge" source="_X4hYkIZWEeexBrHTG7KRXw" target="_kE0y0IZVEeexBrHTG7KRXw" routing="Tree">
       <styles xmi:type="notation:FontStyle" xmi:id="_aSQ3IYZWEeexBrHTG7KRXw"/>
