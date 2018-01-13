@@ -3,7 +3,7 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Hardware;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -55,7 +55,7 @@ public abstract class HardwareImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.HARDWARE;
+		return UML2CloudProfilePackage.Literals.HARDWARE;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public abstract class HardwareImpl extends MinimalEObjectImpl.Container implemen
 			base_Component = (Component)eResolveProxy(oldBase_Component);
 			if (base_Component != oldBase_Component) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.HARDWARE__BASE_COMPONENT, oldBase_Component, base_Component));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.HARDWARE__BASE_COMPONENT, oldBase_Component, base_Component));
 			}
 		}
 		return base_Component;
@@ -93,7 +93,7 @@ public abstract class HardwareImpl extends MinimalEObjectImpl.Container implemen
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.HARDWARE__BASE_COMPONENT, oldBase_Component, base_Component));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.HARDWARE__BASE_COMPONENT, oldBase_Component, base_Component));
 	}
 
 	/**
@@ -104,7 +104,7 @@ public abstract class HardwareImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.HARDWARE__BASE_COMPONENT:
+			case UML2CloudProfilePackage.HARDWARE__BASE_COMPONENT:
 				if (resolve) return getBase_Component();
 				return basicGetBase_Component();
 		}
@@ -119,7 +119,7 @@ public abstract class HardwareImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.HARDWARE__BASE_COMPONENT:
+			case UML2CloudProfilePackage.HARDWARE__BASE_COMPONENT:
 				setBase_Component((Component)newValue);
 				return;
 		}
@@ -134,7 +134,7 @@ public abstract class HardwareImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.HARDWARE__BASE_COMPONENT:
+			case UML2CloudProfilePackage.HARDWARE__BASE_COMPONENT:
 				setBase_Component((Component)null);
 				return;
 		}
@@ -149,7 +149,7 @@ public abstract class HardwareImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.HARDWARE__BASE_COMPONENT:
+			case UML2CloudProfilePackage.HARDWARE__BASE_COMPONENT:
 				return base_Component != null;
 		}
 		return super.eIsSet(featureID);

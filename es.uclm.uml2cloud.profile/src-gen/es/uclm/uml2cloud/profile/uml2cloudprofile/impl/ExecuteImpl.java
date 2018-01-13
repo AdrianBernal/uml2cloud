@@ -4,7 +4,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.AppInstantiation;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Execute;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import java.util.Collection;
 
@@ -75,7 +75,7 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.EXECUTE;
+		return UML2CloudProfilePackage.Literals.EXECUTE;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 			base_Message = (Message)eResolveProxy(oldBase_Message);
 			if (base_Message != oldBase_Message) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.EXECUTE__BASE_MESSAGE, oldBase_Message, base_Message));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.EXECUTE__BASE_MESSAGE, oldBase_Message, base_Message));
 			}
 		}
 		return base_Message;
@@ -113,7 +113,7 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 		Message oldBase_Message = base_Message;
 		base_Message = newBase_Message;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.EXECUTE__BASE_MESSAGE, oldBase_Message, base_Message));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.EXECUTE__BASE_MESSAGE, oldBase_Message, base_Message));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 	 */
 	public EList<AppInstantiation> getAppInstantiation() {
 		if (appInstantiation == null) {
-			appInstantiation = new EObjectContainmentEList<AppInstantiation>(AppInstantiation.class, this, UML2CloudPackage.EXECUTE__APP_INSTANTIATION);
+			appInstantiation = new EObjectContainmentEList<AppInstantiation>(AppInstantiation.class, this, UML2CloudProfilePackage.EXECUTE__APP_INSTANTIATION);
 		}
 		return appInstantiation;
 	}
@@ -136,7 +136,7 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case UML2CloudPackage.EXECUTE__APP_INSTANTIATION:
+			case UML2CloudProfilePackage.EXECUTE__APP_INSTANTIATION:
 				return ((InternalEList<?>)getAppInstantiation()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -150,10 +150,10 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.EXECUTE__BASE_MESSAGE:
+			case UML2CloudProfilePackage.EXECUTE__BASE_MESSAGE:
 				if (resolve) return getBase_Message();
 				return basicGetBase_Message();
-			case UML2CloudPackage.EXECUTE__APP_INSTANTIATION:
+			case UML2CloudProfilePackage.EXECUTE__APP_INSTANTIATION:
 				return getAppInstantiation();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -168,10 +168,10 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.EXECUTE__BASE_MESSAGE:
+			case UML2CloudProfilePackage.EXECUTE__BASE_MESSAGE:
 				setBase_Message((Message)newValue);
 				return;
-			case UML2CloudPackage.EXECUTE__APP_INSTANTIATION:
+			case UML2CloudProfilePackage.EXECUTE__APP_INSTANTIATION:
 				getAppInstantiation().clear();
 				getAppInstantiation().addAll((Collection<? extends AppInstantiation>)newValue);
 				return;
@@ -187,10 +187,10 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.EXECUTE__BASE_MESSAGE:
+			case UML2CloudProfilePackage.EXECUTE__BASE_MESSAGE:
 				setBase_Message((Message)null);
 				return;
-			case UML2CloudPackage.EXECUTE__APP_INSTANTIATION:
+			case UML2CloudProfilePackage.EXECUTE__APP_INSTANTIATION:
 				getAppInstantiation().clear();
 				return;
 		}
@@ -205,9 +205,9 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.EXECUTE__BASE_MESSAGE:
+			case UML2CloudProfilePackage.EXECUTE__BASE_MESSAGE:
 				return base_Message != null;
-			case UML2CloudPackage.EXECUTE__APP_INSTANTIATION:
+			case UML2CloudProfilePackage.EXECUTE__APP_INSTANTIATION:
 				return appInstantiation != null && !appInstantiation.isEmpty();
 		}
 		return super.eIsSet(featureID);

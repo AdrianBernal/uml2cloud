@@ -19,17 +19,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage
  * @generated
  */
-public class UML2CloudSwitch<T> extends Switch<T> {
+public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static UML2CloudPackage modelPackage;
+	protected static UML2CloudProfilePackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class UML2CloudSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UML2CloudSwitch() {
+	public UML2CloudProfileSwitch() {
 		if (modelPackage == null) {
-			modelPackage = UML2CloudPackage.eINSTANCE;
+			modelPackage = UML2CloudProfilePackage.eINSTANCE;
 		}
 	}
 
@@ -66,183 +66,183 @@ public class UML2CloudSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case UML2CloudPackage.DATA_CENTER: {
+			case UML2CloudProfilePackage.DATA_CENTER: {
 				DataCenter dataCenter = (DataCenter)theEObject;
 				T result = caseDataCenter(dataCenter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.RACK_ELEMENT: {
+			case UML2CloudProfilePackage.RACK_ELEMENT: {
 				RackElement rackElement = (RackElement)theEObject;
 				T result = caseRackElement(rackElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.RACK: {
+			case UML2CloudProfilePackage.RACK: {
 				Rack rack = (Rack)theEObject;
 				T result = caseRack(rack);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.NODE: {
+			case UML2CloudProfilePackage.NODE: {
 				Node node = (Node)theEObject;
 				T result = caseNode(node);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.CPU: {
+			case UML2CloudProfilePackage.CPU: {
 				CPU cpu = (CPU)theEObject;
 				T result = caseCPU(cpu);
 				if (result == null) result = caseHardware(cpu);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.HARDWARE: {
+			case UML2CloudProfilePackage.HARDWARE: {
 				Hardware hardware = (Hardware)theEObject;
 				T result = caseHardware(hardware);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.MEMORY: {
+			case UML2CloudProfilePackage.MEMORY: {
 				Memory memory = (Memory)theEObject;
 				T result = caseMemory(memory);
 				if (result == null) result = caseHardware(memory);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.DISK: {
+			case UML2CloudProfilePackage.DISK: {
 				Disk disk = (Disk)theEObject;
 				T result = caseDisk(disk);
 				if (result == null) result = caseHardware(disk);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.RACK_CMP: {
+			case UML2CloudProfilePackage.RACK_CMP: {
 				RackCmp rackCmp = (RackCmp)theEObject;
 				T result = caseRackCmp(rackCmp);
 				if (result == null) result = caseRack(rackCmp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.NODE_CMP: {
+			case UML2CloudProfilePackage.NODE_CMP: {
 				NodeCmp nodeCmp = (NodeCmp)theEObject;
 				T result = caseNodeCmp(nodeCmp);
 				if (result == null) result = caseNode(nodeCmp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.RACK_STO: {
+			case UML2CloudProfilePackage.RACK_STO: {
 				RackSto rackSto = (RackSto)theEObject;
 				T result = caseRackSto(rackSto);
 				if (result == null) result = caseRack(rackSto);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.NODE_STO: {
+			case UML2CloudProfilePackage.NODE_STO: {
 				NodeSto nodeSto = (NodeSto)theEObject;
 				T result = caseNodeSto(nodeSto);
 				if (result == null) result = caseNode(nodeSto);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.SCENARIO: {
+			case UML2CloudProfilePackage.SCENARIO: {
 				Scenario scenario = (Scenario)theEObject;
 				T result = caseScenario(scenario);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.REPOSITORY: {
+			case UML2CloudProfilePackage.REPOSITORY: {
 				Repository repository = (Repository)theEObject;
 				T result = caseRepository(repository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.APPLICATION: {
+			case UML2CloudProfilePackage.APPLICATION: {
 				Application application = (Application)theEObject;
 				T result = caseApplication(application);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.VM: {
+			case UML2CloudProfilePackage.VM: {
 				VM vm = (VM)theEObject;
 				T result = caseVM(vm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.LOCAL_APPLICATION: {
+			case UML2CloudProfilePackage.LOCAL_APPLICATION: {
 				LocalApplication localApplication = (LocalApplication)theEObject;
 				T result = caseLocalApplication(localApplication);
 				if (result == null) result = caseApplication(localApplication);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.USER: {
+			case UML2CloudProfilePackage.USER: {
 				User user = (User)theEObject;
 				T result = caseUser(user);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.CLOUD_PROVIDER: {
+			case UML2CloudProfilePackage.CLOUD_PROVIDER: {
 				CloudProvider cloudProvider = (CloudProvider)theEObject;
 				T result = caseCloudProvider(cloudProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.REQUEST: {
+			case UML2CloudProfilePackage.REQUEST: {
 				Request request = (Request)theEObject;
 				T result = caseRequest(request);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.SUBSCRIBE: {
+			case UML2CloudProfilePackage.SUBSCRIBE: {
 				Subscribe subscribe = (Subscribe)theEObject;
 				T result = caseSubscribe(subscribe);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.VM_INSTANTIATION: {
+			case UML2CloudProfilePackage.VM_INSTANTIATION: {
 				VMInstantiation vmInstantiation = (VMInstantiation)theEObject;
 				T result = caseVMInstantiation(vmInstantiation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.APP_INSTANTIATION: {
+			case UML2CloudProfilePackage.APP_INSTANTIATION: {
 				AppInstantiation appInstantiation = (AppInstantiation)theEObject;
 				T result = caseAppInstantiation(appInstantiation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.OK: {
+			case UML2CloudProfilePackage.OK: {
 				OK ok = (OK)theEObject;
 				T result = caseOK(ok);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.NOTIFY: {
+			case UML2CloudProfilePackage.NOTIFY: {
 				Notify notify = (Notify)theEObject;
 				T result = caseNotify(notify);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.TIMEOUT: {
+			case UML2CloudProfilePackage.TIMEOUT: {
 				Timeout timeout = (Timeout)theEObject;
 				T result = caseTimeout(timeout);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.RESPONSE: {
+			case UML2CloudProfilePackage.RESPONSE: {
 				Response response = (Response)theEObject;
 				T result = caseResponse(response);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.REJECT: {
+			case UML2CloudProfilePackage.REJECT: {
 				Reject reject = (Reject)theEObject;
 				T result = caseReject(reject);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudPackage.EXECUTE: {
+			case UML2CloudProfilePackage.EXECUTE: {
 				Execute execute = (Execute)theEObject;
 				T result = caseExecute(execute);
 				if (result == null) result = defaultCase(theEObject);
@@ -703,4 +703,4 @@ public class UML2CloudSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //UML2CloudSwitch
+} //UML2CloudProfileSwitch

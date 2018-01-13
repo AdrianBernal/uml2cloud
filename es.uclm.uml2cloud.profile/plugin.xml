@@ -6,13 +6,6 @@
 
 <plugin>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated uml2cloud.profile -->
-      <package
-            uri="http://www.uclm.es/UML/profiles/UML2Cloud/1"
-            class="es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage"
-            genModel="model/uml2cloud.profile.genmodel"/>
-   </extension>
    <extension
          point="org.eclipse.emf.ecore.uri_mapping">
       <mapping
@@ -36,6 +29,14 @@
             path="pathmap://UML2CLOUD_PROFILE/uml2cloud.profile"
             provider="uclm.es">
       </profile>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated uml2cloud.profile -->
+      <package
+            uri="http://www.uclm.es/UML/profiles/UML2Cloud/1"
+            class="es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage"
+            genModel="model/uml2cloud.profile.genmodel"/>
    </extension>
 
 </plugin>

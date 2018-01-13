@@ -3,9 +3,9 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.CPU;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudValidator;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -118,7 +118,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.CPU;
+		return UML2CloudProfilePackage.Literals.CPU;
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 		int oldNumberOfCores = numberOfCores;
 		numberOfCores = newNumberOfCores;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.CPU__NUMBER_OF_CORES, oldNumberOfCores, numberOfCores));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CPU__NUMBER_OF_CORES, oldNumberOfCores, numberOfCores));
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 		int oldSpeedMIPS = speedMIPS;
 		speedMIPS = newSpeedMIPS;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.CPU__SPEED_MIPS, oldSpeedMIPS, speedMIPS));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CPU__SPEED_MIPS, oldSpeedMIPS, speedMIPS));
 	}
 
 	/**
@@ -181,7 +181,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 		double oldTickS = tickS;
 		tickS = newTickS;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.CPU__TICK_S, oldTickS, tickS));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CPU__TICK_S, oldTickS, tickS));
 	}
 
 	/**
@@ -199,8 +199,8 @@ public class CPUImpl extends HardwareImpl implements CPU {
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.CPU__SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.CPU__SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "speedMIPS_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -224,8 +224,8 @@ public class CPUImpl extends HardwareImpl implements CPU {
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.CPU__TICK_SMUST_BE_GREATER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.CPU__TICK_SMUST_BE_GREATER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "tickS_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -249,8 +249,8 @@ public class CPUImpl extends HardwareImpl implements CPU {
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.CPU__NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.CPU__NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "numberOfCores_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -267,11 +267,11 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.CPU__NUMBER_OF_CORES:
+			case UML2CloudProfilePackage.CPU__NUMBER_OF_CORES:
 				return getNumberOfCores();
-			case UML2CloudPackage.CPU__SPEED_MIPS:
+			case UML2CloudProfilePackage.CPU__SPEED_MIPS:
 				return getSpeedMIPS();
-			case UML2CloudPackage.CPU__TICK_S:
+			case UML2CloudProfilePackage.CPU__TICK_S:
 				return getTickS();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -285,13 +285,13 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.CPU__NUMBER_OF_CORES:
+			case UML2CloudProfilePackage.CPU__NUMBER_OF_CORES:
 				setNumberOfCores((Integer)newValue);
 				return;
-			case UML2CloudPackage.CPU__SPEED_MIPS:
+			case UML2CloudProfilePackage.CPU__SPEED_MIPS:
 				setSpeedMIPS((Integer)newValue);
 				return;
-			case UML2CloudPackage.CPU__TICK_S:
+			case UML2CloudProfilePackage.CPU__TICK_S:
 				setTickS((Double)newValue);
 				return;
 		}
@@ -306,13 +306,13 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.CPU__NUMBER_OF_CORES:
+			case UML2CloudProfilePackage.CPU__NUMBER_OF_CORES:
 				setNumberOfCores(NUMBER_OF_CORES_EDEFAULT);
 				return;
-			case UML2CloudPackage.CPU__SPEED_MIPS:
+			case UML2CloudProfilePackage.CPU__SPEED_MIPS:
 				setSpeedMIPS(SPEED_MIPS_EDEFAULT);
 				return;
-			case UML2CloudPackage.CPU__TICK_S:
+			case UML2CloudProfilePackage.CPU__TICK_S:
 				setTickS(TICK_S_EDEFAULT);
 				return;
 		}
@@ -327,11 +327,11 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.CPU__NUMBER_OF_CORES:
+			case UML2CloudProfilePackage.CPU__NUMBER_OF_CORES:
 				return numberOfCores != NUMBER_OF_CORES_EDEFAULT;
-			case UML2CloudPackage.CPU__SPEED_MIPS:
+			case UML2CloudProfilePackage.CPU__SPEED_MIPS:
 				return speedMIPS != SPEED_MIPS_EDEFAULT;
-			case UML2CloudPackage.CPU__TICK_S:
+			case UML2CloudProfilePackage.CPU__TICK_S:
 				return tickS != TICK_S_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -346,11 +346,11 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudPackage.CPU___SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.CPU___SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return speedMIPS_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.CPU___TICK_SMUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.CPU___TICK_SMUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return tickS_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.CPU___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.CPU___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return numberOfCores_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

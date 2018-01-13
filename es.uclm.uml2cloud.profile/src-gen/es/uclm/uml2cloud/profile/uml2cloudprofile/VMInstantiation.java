@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getVmType <em>Vm Type</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getVMInstantiation()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVMInstantiation()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface VMInstantiation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instances</em>' attribute.
 	 * @see #setInstances(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getVMInstantiation_Instances()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVMInstantiation_Instances()
 	 * @model default="1" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface VMInstantiation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vm Type</em>' reference.
 	 * @see #setVmType(VM)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getVMInstantiation_VmType()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVMInstantiation_VmType()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */

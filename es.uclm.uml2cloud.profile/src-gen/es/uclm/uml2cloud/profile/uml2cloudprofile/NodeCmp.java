@@ -9,7 +9,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile;
  * <!-- end-user-doc -->
  *
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getNodeCmp()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNodeCmp()
  * @model
  * @generated
  */

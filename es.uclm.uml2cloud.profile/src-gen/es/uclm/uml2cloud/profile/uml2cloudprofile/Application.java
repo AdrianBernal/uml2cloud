@@ -18,7 +18,7 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Application#getBase_Component <em>Base Component</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getApplication()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getApplication()
  * @model abstract="true"
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Application extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Component</em>' reference.
 	 * @see #setBase_Component(Component)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getApplication_Base_Component()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getApplication_Base_Component()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */

@@ -3,9 +3,9 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudValidator;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -91,7 +91,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.SUBSCRIBE;
+		return UML2CloudProfilePackage.Literals.SUBSCRIBE;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 			base_Message = (Message)eResolveProxy(oldBase_Message);
 			if (base_Message != oldBase_Message) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.SUBSCRIBE__BASE_MESSAGE, oldBase_Message, base_Message));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.SUBSCRIBE__BASE_MESSAGE, oldBase_Message, base_Message));
 			}
 		}
 		return base_Message;
@@ -129,7 +129,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 		Message oldBase_Message = base_Message;
 		base_Message = newBase_Message;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.SUBSCRIBE__BASE_MESSAGE, oldBase_Message, base_Message));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.SUBSCRIBE__BASE_MESSAGE, oldBase_Message, base_Message));
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 		double oldMaxSubTime = maxSubTime;
 		maxSubTime = newMaxSubTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.SUBSCRIBE__MAX_SUB_TIME, oldMaxSubTime, maxSubTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.SUBSCRIBE__MAX_SUB_TIME, oldMaxSubTime, maxSubTime));
 	}
 
 	/**
@@ -168,8 +168,8 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.SUBSCRIBE__T4_MUST_BE_GREATER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.SUBSCRIBE__T4_MUST_BE_GREATER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "t4_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -193,8 +193,8 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.SUBSCRIBE__T4_SHOULD_BE_GREATER_THAN_OR_EQUAL_TO_T1_FROM_CONNECT_IF_YOU_WANT_TO_SUBSCRIBE,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.SUBSCRIBE__T4_SHOULD_BE_GREATER_THAN_OR_EQUAL_TO_T1_FROM_CONNECT_IF_YOU_WANT_TO_SUBSCRIBE,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -211,10 +211,10 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.SUBSCRIBE__BASE_MESSAGE:
+			case UML2CloudProfilePackage.SUBSCRIBE__BASE_MESSAGE:
 				if (resolve) return getBase_Message();
 				return basicGetBase_Message();
-			case UML2CloudPackage.SUBSCRIBE__MAX_SUB_TIME:
+			case UML2CloudProfilePackage.SUBSCRIBE__MAX_SUB_TIME:
 				return getMaxSubTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -228,10 +228,10 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.SUBSCRIBE__BASE_MESSAGE:
+			case UML2CloudProfilePackage.SUBSCRIBE__BASE_MESSAGE:
 				setBase_Message((Message)newValue);
 				return;
-			case UML2CloudPackage.SUBSCRIBE__MAX_SUB_TIME:
+			case UML2CloudProfilePackage.SUBSCRIBE__MAX_SUB_TIME:
 				setMaxSubTime((Double)newValue);
 				return;
 		}
@@ -246,10 +246,10 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.SUBSCRIBE__BASE_MESSAGE:
+			case UML2CloudProfilePackage.SUBSCRIBE__BASE_MESSAGE:
 				setBase_Message((Message)null);
 				return;
-			case UML2CloudPackage.SUBSCRIBE__MAX_SUB_TIME:
+			case UML2CloudProfilePackage.SUBSCRIBE__MAX_SUB_TIME:
 				setMaxSubTime(MAX_SUB_TIME_EDEFAULT);
 				return;
 		}
@@ -264,9 +264,9 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.SUBSCRIBE__BASE_MESSAGE:
+			case UML2CloudProfilePackage.SUBSCRIBE__BASE_MESSAGE:
 				return base_Message != null;
-			case UML2CloudPackage.SUBSCRIBE__MAX_SUB_TIME:
+			case UML2CloudProfilePackage.SUBSCRIBE__MAX_SUB_TIME:
 				return maxSubTime != MAX_SUB_TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -281,9 +281,9 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudPackage.SUBSCRIBE___T4_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.SUBSCRIBE___T4_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return t4_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.SUBSCRIBE___T4_SHOULD_BE_GREATER_THAN_OR_EQUAL_TO_T1_FROM_CONNECT_IF_YOU_WANT_TO_SUBSCRIBE__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.SUBSCRIBE___T4_SHOULD_BE_GREATER_THAN_OR_EQUAL_TO_T1_FROM_CONNECT_IF_YOU_WANT_TO_SUBSCRIBE__DIAGNOSTICCHAIN_MAP:
 				return t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

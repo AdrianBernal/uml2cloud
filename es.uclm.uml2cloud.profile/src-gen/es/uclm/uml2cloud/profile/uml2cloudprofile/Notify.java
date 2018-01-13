@@ -18,7 +18,7 @@ import org.eclipse.uml2.uml.Message;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Notify#getBase_Message <em>Base Message</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getNotify()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNotify()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Notify extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Message</em>' reference.
 	 * @see #setBase_Message(Message)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getNotify_Base_Message()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNotify_Base_Message()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */

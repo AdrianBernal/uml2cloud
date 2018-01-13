@@ -23,7 +23,7 @@ import org.eclipse.uml2.uml.Message;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#getMaxSubTime <em>Max Sub Time</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getSubscribe()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getSubscribe()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface Subscribe extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Message</em>' reference.
 	 * @see #setBase_Message(Message)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getSubscribe_Base_Message()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getSubscribe_Base_Message()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -65,7 +65,7 @@ public interface Subscribe extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Sub Time</em>' attribute.
 	 * @see #setMaxSubTime(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getSubscribe_MaxSubTime()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getSubscribe_MaxSubTime()
 	 * @model default="0.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */

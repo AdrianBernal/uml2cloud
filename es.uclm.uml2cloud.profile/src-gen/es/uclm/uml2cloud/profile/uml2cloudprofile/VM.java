@@ -27,7 +27,7 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getMemoryGB <em>Memory GB</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getVM()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface VM extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Component</em>' reference.
 	 * @see #setBase_Component(Component)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getVM_Base_Component()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_Base_Component()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -69,7 +69,7 @@ public interface VM extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Cores</em>' attribute.
 	 * @see #setNumberOfCores(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getVM_NumberOfCores()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_NumberOfCores()
 	 * @model default="2" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -96,7 +96,7 @@ public interface VM extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Disk GB</em>' attribute.
 	 * @see #setDiskGB(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getVM_DiskGB()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_DiskGB()
 	 * @model default="500.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */
@@ -123,7 +123,7 @@ public interface VM extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cost Per Hour</em>' attribute.
 	 * @see #setCostPerHour(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getVM_CostPerHour()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_CostPerHour()
 	 * @model default="15.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */
@@ -150,7 +150,7 @@ public interface VM extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>SCU</em>' attribute.
 	 * @see #setSCU(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getVM_SCU()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_SCU()
 	 * @model default="2.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */
@@ -177,7 +177,7 @@ public interface VM extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Memory GB</em>' attribute.
 	 * @see #setMemoryGB(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getVM_MemoryGB()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_MemoryGB()
 	 * @model default="4.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */

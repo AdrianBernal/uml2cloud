@@ -3,7 +3,7 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.NodeSto;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -31,7 +31,7 @@ public class NodeStoImpl extends NodeImpl implements NodeSto {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.NODE_STO;
+		return UML2CloudProfilePackage.Literals.NODE_STO;
 	}
 
 } //NodeStoImpl

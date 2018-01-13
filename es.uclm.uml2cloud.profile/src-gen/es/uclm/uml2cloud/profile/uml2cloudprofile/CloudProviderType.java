@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Cloud Provider Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getCloudProviderType()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCloudProviderType()
  * @model
  * @generated
  */

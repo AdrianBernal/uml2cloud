@@ -15,7 +15,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackCmp#getNodeCmpType <em>Node Cmp Type</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRackCmp()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRackCmp()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface RackCmp extends Rack {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node Cmp Type</em>' reference.
 	 * @see #setNodeCmpType(NodeCmp)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRackCmp_NodeCmpType()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRackCmp_NodeCmpType()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */

@@ -3,7 +3,7 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.NodeCmp;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -31,7 +31,7 @@ public class NodeCmpImpl extends NodeImpl implements NodeCmp {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.NODE_CMP;
+		return UML2CloudProfilePackage.Literals.NODE_CMP;
 	}
 
 } //NodeCmpImpl

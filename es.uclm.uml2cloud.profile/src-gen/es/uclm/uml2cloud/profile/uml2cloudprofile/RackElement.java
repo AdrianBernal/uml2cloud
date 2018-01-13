@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getDataCenter <em>Data Center</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRackElement()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRackElement()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface RackElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instances</em>' attribute.
 	 * @see #setInstances(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRackElement_Instances()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRackElement_Instances()
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface RackElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rack</em>' reference.
 	 * @see #setRack(Rack)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRackElement_Rack()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRackElement_Rack()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface RackElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Center</em>' container reference.
 	 * @see #setDataCenter(DataCenter)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRackElement_DataCenter()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRackElement_DataCenter()
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getRackElements
 	 * @model opposite="rackElements" required="true" transient="false" ordered="false"
 	 * @generated

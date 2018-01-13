@@ -9,7 +9,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile;
  * <!-- end-user-doc -->
  *
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getNodeSto()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNodeSto()
  * @model
  * @generated
  */

@@ -4,7 +4,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.NodeSto;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.RackSto;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -53,7 +53,7 @@ public class RackStoImpl extends RackImpl implements RackSto {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.RACK_STO;
+		return UML2CloudProfilePackage.Literals.RACK_STO;
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class RackStoImpl extends RackImpl implements RackSto {
 			nodeStoType = (NodeSto)eResolveProxy(oldNodeStoType);
 			if (nodeStoType != oldNodeStoType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.RACK_STO__NODE_STO_TYPE, oldNodeStoType, nodeStoType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.RACK_STO__NODE_STO_TYPE, oldNodeStoType, nodeStoType));
 			}
 		}
 		return nodeStoType;
@@ -91,7 +91,7 @@ public class RackStoImpl extends RackImpl implements RackSto {
 		NodeSto oldNodeStoType = nodeStoType;
 		nodeStoType = newNodeStoType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.RACK_STO__NODE_STO_TYPE, oldNodeStoType, nodeStoType));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK_STO__NODE_STO_TYPE, oldNodeStoType, nodeStoType));
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class RackStoImpl extends RackImpl implements RackSto {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_STO__NODE_STO_TYPE:
+			case UML2CloudProfilePackage.RACK_STO__NODE_STO_TYPE:
 				if (resolve) return getNodeStoType();
 				return basicGetNodeStoType();
 		}
@@ -117,7 +117,7 @@ public class RackStoImpl extends RackImpl implements RackSto {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_STO__NODE_STO_TYPE:
+			case UML2CloudProfilePackage.RACK_STO__NODE_STO_TYPE:
 				setNodeStoType((NodeSto)newValue);
 				return;
 		}
@@ -132,7 +132,7 @@ public class RackStoImpl extends RackImpl implements RackSto {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_STO__NODE_STO_TYPE:
+			case UML2CloudProfilePackage.RACK_STO__NODE_STO_TYPE:
 				setNodeStoType((NodeSto)null);
 				return;
 		}
@@ -147,7 +147,7 @@ public class RackStoImpl extends RackImpl implements RackSto {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_STO__NODE_STO_TYPE:
+			case UML2CloudProfilePackage.RACK_STO__NODE_STO_TYPE:
 				return nodeStoType != null;
 		}
 		return super.eIsSet(featureID);

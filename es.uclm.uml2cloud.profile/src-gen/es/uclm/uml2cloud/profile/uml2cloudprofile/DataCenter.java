@@ -25,7 +25,7 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getRackElements <em>Rack Elements</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getDataCenter()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDataCenter()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface DataCenter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Component</em>' reference.
 	 * @see #setBase_Component(Component)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getDataCenter_Base_Component()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDataCenter_Base_Component()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -69,7 +69,7 @@ public interface DataCenter extends EObject {
 	 * @return the value of the '<em>Network</em>' attribute.
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Channel
 	 * @see #setNetwork(Channel)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getDataCenter_Network()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDataCenter_Network()
 	 * @model default="Ethernet40Gbps" required="true" ordered="false"
 	 * @generated
 	 */
@@ -97,7 +97,7 @@ public interface DataCenter extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rack Elements</em>' containment reference list.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getDataCenter_RackElements()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDataCenter_RackElements()
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getDataCenter
 	 * @model opposite="dataCenter" containment="true" required="true" ordered="false"
 	 * @generated

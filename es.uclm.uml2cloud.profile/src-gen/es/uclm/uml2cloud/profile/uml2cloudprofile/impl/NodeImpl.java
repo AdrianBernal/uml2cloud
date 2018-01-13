@@ -7,7 +7,7 @@ import es.uclm.uml2cloud.profile.uml2cloudprofile.CPUScheduler;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Disk;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Memory;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Node;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -113,7 +113,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.NODE;
+		return UML2CloudProfilePackage.Literals.NODE;
 	}
 
 	/**
@@ -127,7 +127,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			base_Component = (Component)eResolveProxy(oldBase_Component);
 			if (base_Component != oldBase_Component) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.NODE__BASE_COMPONENT, oldBase_Component, base_Component));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.NODE__BASE_COMPONENT, oldBase_Component, base_Component));
 			}
 		}
 		return base_Component;
@@ -151,7 +151,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.NODE__BASE_COMPONENT, oldBase_Component, base_Component));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.NODE__BASE_COMPONENT, oldBase_Component, base_Component));
 	}
 
 	/**
@@ -172,7 +172,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		CPUScheduler oldCpuScheduler = cpuScheduler;
 		cpuScheduler = newCpuScheduler == null ? CPU_SCHEDULER_EDEFAULT : newCpuScheduler;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.NODE__CPU_SCHEDULER, oldCpuScheduler, cpuScheduler));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.NODE__CPU_SCHEDULER, oldCpuScheduler, cpuScheduler));
 	}
 
 	/**
@@ -186,7 +186,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			cpu = (CPU)eResolveProxy(oldCpu);
 			if (cpu != oldCpu) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.NODE__CPU, oldCpu, cpu));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.NODE__CPU, oldCpu, cpu));
 			}
 		}
 		return cpu;
@@ -210,7 +210,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		CPU oldCpu = cpu;
 		cpu = newCpu;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.NODE__CPU, oldCpu, cpu));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.NODE__CPU, oldCpu, cpu));
 	}
 
 	/**
@@ -224,7 +224,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			memory = (Memory)eResolveProxy(oldMemory);
 			if (memory != oldMemory) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.NODE__MEMORY, oldMemory, memory));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.NODE__MEMORY, oldMemory, memory));
 			}
 		}
 		return memory;
@@ -248,7 +248,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		Memory oldMemory = memory;
 		memory = newMemory;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.NODE__MEMORY, oldMemory, memory));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.NODE__MEMORY, oldMemory, memory));
 	}
 
 	/**
@@ -262,7 +262,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			storage = (Disk)eResolveProxy(oldStorage);
 			if (storage != oldStorage) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.NODE__STORAGE, oldStorage, storage));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.NODE__STORAGE, oldStorage, storage));
 			}
 		}
 		return storage;
@@ -286,7 +286,7 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		Disk oldStorage = storage;
 		storage = newStorage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.NODE__STORAGE, oldStorage, storage));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.NODE__STORAGE, oldStorage, storage));
 	}
 
 	/**
@@ -297,18 +297,18 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.NODE__BASE_COMPONENT:
+			case UML2CloudProfilePackage.NODE__BASE_COMPONENT:
 				if (resolve) return getBase_Component();
 				return basicGetBase_Component();
-			case UML2CloudPackage.NODE__CPU_SCHEDULER:
+			case UML2CloudProfilePackage.NODE__CPU_SCHEDULER:
 				return getCpuScheduler();
-			case UML2CloudPackage.NODE__CPU:
+			case UML2CloudProfilePackage.NODE__CPU:
 				if (resolve) return getCpu();
 				return basicGetCpu();
-			case UML2CloudPackage.NODE__MEMORY:
+			case UML2CloudProfilePackage.NODE__MEMORY:
 				if (resolve) return getMemory();
 				return basicGetMemory();
-			case UML2CloudPackage.NODE__STORAGE:
+			case UML2CloudProfilePackage.NODE__STORAGE:
 				if (resolve) return getStorage();
 				return basicGetStorage();
 		}
@@ -323,19 +323,19 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.NODE__BASE_COMPONENT:
+			case UML2CloudProfilePackage.NODE__BASE_COMPONENT:
 				setBase_Component((Component)newValue);
 				return;
-			case UML2CloudPackage.NODE__CPU_SCHEDULER:
+			case UML2CloudProfilePackage.NODE__CPU_SCHEDULER:
 				setCpuScheduler((CPUScheduler)newValue);
 				return;
-			case UML2CloudPackage.NODE__CPU:
+			case UML2CloudProfilePackage.NODE__CPU:
 				setCpu((CPU)newValue);
 				return;
-			case UML2CloudPackage.NODE__MEMORY:
+			case UML2CloudProfilePackage.NODE__MEMORY:
 				setMemory((Memory)newValue);
 				return;
-			case UML2CloudPackage.NODE__STORAGE:
+			case UML2CloudProfilePackage.NODE__STORAGE:
 				setStorage((Disk)newValue);
 				return;
 		}
@@ -350,19 +350,19 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.NODE__BASE_COMPONENT:
+			case UML2CloudProfilePackage.NODE__BASE_COMPONENT:
 				setBase_Component((Component)null);
 				return;
-			case UML2CloudPackage.NODE__CPU_SCHEDULER:
+			case UML2CloudProfilePackage.NODE__CPU_SCHEDULER:
 				setCpuScheduler(CPU_SCHEDULER_EDEFAULT);
 				return;
-			case UML2CloudPackage.NODE__CPU:
+			case UML2CloudProfilePackage.NODE__CPU:
 				setCpu((CPU)null);
 				return;
-			case UML2CloudPackage.NODE__MEMORY:
+			case UML2CloudProfilePackage.NODE__MEMORY:
 				setMemory((Memory)null);
 				return;
-			case UML2CloudPackage.NODE__STORAGE:
+			case UML2CloudProfilePackage.NODE__STORAGE:
 				setStorage((Disk)null);
 				return;
 		}
@@ -377,15 +377,15 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.NODE__BASE_COMPONENT:
+			case UML2CloudProfilePackage.NODE__BASE_COMPONENT:
 				return base_Component != null;
-			case UML2CloudPackage.NODE__CPU_SCHEDULER:
+			case UML2CloudProfilePackage.NODE__CPU_SCHEDULER:
 				return cpuScheduler != CPU_SCHEDULER_EDEFAULT;
-			case UML2CloudPackage.NODE__CPU:
+			case UML2CloudProfilePackage.NODE__CPU:
 				return cpu != null;
-			case UML2CloudPackage.NODE__MEMORY:
+			case UML2CloudProfilePackage.NODE__MEMORY:
 				return memory != null;
-			case UML2CloudPackage.NODE__STORAGE:
+			case UML2CloudProfilePackage.NODE__STORAGE:
 				return storage != null;
 		}
 		return super.eIsSet(featureID);

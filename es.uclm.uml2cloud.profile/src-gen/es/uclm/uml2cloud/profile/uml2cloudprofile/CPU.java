@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getTickS <em>Tick S</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getCPU()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCPU()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface CPU extends Hardware {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Cores</em>' attribute.
 	 * @see #setNumberOfCores(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getCPU_NumberOfCores()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCPU_NumberOfCores()
 	 * @model default="2" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -63,7 +63,7 @@ public interface CPU extends Hardware {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Speed MIPS</em>' attribute.
 	 * @see #setSpeedMIPS(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getCPU_SpeedMIPS()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCPU_SpeedMIPS()
 	 * @model default="30000" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -90,7 +90,7 @@ public interface CPU extends Hardware {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tick S</em>' attribute.
 	 * @see #setTickS(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getCPU_TickS()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCPU_TickS()
 	 * @model default="0.01" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */

@@ -18,7 +18,7 @@ import org.eclipse.uml2.uml.Message;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Timeout#getBase_Message <em>Base Message</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getTimeout()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getTimeout()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Timeout extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Message</em>' reference.
 	 * @see #setBase_Message(Message)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getTimeout_Base_Message()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getTimeout_Base_Message()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */

@@ -4,7 +4,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProviderType;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -75,7 +75,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.SCENARIO;
+		return UML2CloudProfilePackage.Literals.SCENARIO;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 			base_Package = (org.eclipse.uml2.uml.Package)eResolveProxy(oldBase_Package);
 			if (base_Package != oldBase_Package) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.SCENARIO__BASE_PACKAGE, oldBase_Package, base_Package));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.SCENARIO__BASE_PACKAGE, oldBase_Package, base_Package));
 			}
 		}
 		return base_Package;
@@ -113,7 +113,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 		org.eclipse.uml2.uml.Package oldBase_Package = base_Package;
 		base_Package = newBase_Package;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.SCENARIO__BASE_PACKAGE, oldBase_Package, base_Package));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.SCENARIO__BASE_PACKAGE, oldBase_Package, base_Package));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 		CloudProviderType oldCloudProvider = cloudProvider;
 		cloudProvider = newCloudProvider == null ? CLOUD_PROVIDER_EDEFAULT : newCloudProvider;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.SCENARIO__CLOUD_PROVIDER, oldCloudProvider, cloudProvider));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.SCENARIO__CLOUD_PROVIDER, oldCloudProvider, cloudProvider));
 	}
 
 	/**
@@ -145,10 +145,10 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.SCENARIO__BASE_PACKAGE:
+			case UML2CloudProfilePackage.SCENARIO__BASE_PACKAGE:
 				if (resolve) return getBase_Package();
 				return basicGetBase_Package();
-			case UML2CloudPackage.SCENARIO__CLOUD_PROVIDER:
+			case UML2CloudProfilePackage.SCENARIO__CLOUD_PROVIDER:
 				return getCloudProvider();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -162,10 +162,10 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.SCENARIO__BASE_PACKAGE:
+			case UML2CloudProfilePackage.SCENARIO__BASE_PACKAGE:
 				setBase_Package((org.eclipse.uml2.uml.Package)newValue);
 				return;
-			case UML2CloudPackage.SCENARIO__CLOUD_PROVIDER:
+			case UML2CloudProfilePackage.SCENARIO__CLOUD_PROVIDER:
 				setCloudProvider((CloudProviderType)newValue);
 				return;
 		}
@@ -180,10 +180,10 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.SCENARIO__BASE_PACKAGE:
+			case UML2CloudProfilePackage.SCENARIO__BASE_PACKAGE:
 				setBase_Package((org.eclipse.uml2.uml.Package)null);
 				return;
-			case UML2CloudPackage.SCENARIO__CLOUD_PROVIDER:
+			case UML2CloudProfilePackage.SCENARIO__CLOUD_PROVIDER:
 				setCloudProvider(CLOUD_PROVIDER_EDEFAULT);
 				return;
 		}
@@ -198,9 +198,9 @@ public class ScenarioImpl extends MinimalEObjectImpl.Container implements Scenar
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.SCENARIO__BASE_PACKAGE:
+			case UML2CloudProfilePackage.SCENARIO__BASE_PACKAGE:
 				return base_Package != null;
-			case UML2CloudPackage.SCENARIO__CLOUD_PROVIDER:
+			case UML2CloudProfilePackage.SCENARIO__CLOUD_PROVIDER:
 				return cloudProvider != CLOUD_PROVIDER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -22,7 +22,7 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getStorage <em>Storage</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getNode()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNode()
  * @model abstract="true"
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Component</em>' reference.
 	 * @see #setBase_Component(Component)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getNode_Base_Component()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNode_Base_Component()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface Node extends EObject {
 	 * @return the value of the '<em>Cpu Scheduler</em>' attribute.
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPUScheduler
 	 * @see #setCpuScheduler(CPUScheduler)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getNode_CpuScheduler()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNode_CpuScheduler()
 	 * @model default="FIFO" required="true" ordered="false"
 	 * @generated
 	 */
@@ -93,7 +93,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cpu</em>' reference.
 	 * @see #setCpu(CPU)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getNode_Cpu()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNode_Cpu()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -119,7 +119,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Memory</em>' reference.
 	 * @see #setMemory(Memory)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getNode_Memory()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNode_Memory()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -145,7 +145,7 @@ public interface Node extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Storage</em>' reference.
 	 * @see #setStorage(Disk)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getNode_Storage()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNode_Storage()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */

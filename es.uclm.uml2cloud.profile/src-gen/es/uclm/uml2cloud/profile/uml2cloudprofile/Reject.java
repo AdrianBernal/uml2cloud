@@ -18,7 +18,7 @@ import org.eclipse.uml2.uml.Message;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Reject#getBase_Message <em>Base Message</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getReject()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getReject()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Reject extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Message</em>' reference.
 	 * @see #setBase_Message(Message)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getReject_Base_Message()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getReject_Base_Message()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */

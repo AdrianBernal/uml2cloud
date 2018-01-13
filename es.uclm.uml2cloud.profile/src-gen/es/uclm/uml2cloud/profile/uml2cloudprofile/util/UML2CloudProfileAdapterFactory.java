@@ -16,17 +16,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage
  * @generated
  */
-public class UML2CloudAdapterFactory extends AdapterFactoryImpl {
+public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static UML2CloudPackage modelPackage;
+	protected static UML2CloudProfilePackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class UML2CloudAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UML2CloudAdapterFactory() {
+	public UML2CloudProfileAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = UML2CloudPackage.eINSTANCE;
+			modelPackage = UML2CloudProfilePackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class UML2CloudAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UML2CloudSwitch<Adapter> modelSwitch =
-		new UML2CloudSwitch<Adapter>() {
+	protected UML2CloudProfileSwitch<Adapter> modelSwitch =
+		new UML2CloudProfileSwitch<Adapter>() {
 			@Override
 			public Adapter caseDataCenter(DataCenter object) {
 				return createDataCenterAdapter();
@@ -621,4 +621,4 @@ public class UML2CloudAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //UML2CloudAdapterFactory
+} //UML2CloudProfileAdapterFactory

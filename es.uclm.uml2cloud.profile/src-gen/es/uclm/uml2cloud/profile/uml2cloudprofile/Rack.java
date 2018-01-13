@@ -25,7 +25,7 @@ import org.eclipse.uml2.uml.Component;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getBoards <em>Boards</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRack()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRack()
  * @model abstract="true"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface Rack extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Component</em>' reference.
 	 * @see #setBase_Component(Component)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRack_Base_Component()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRack_Base_Component()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface Rack extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nodes Per Board</em>' attribute.
 	 * @see #setNodesPerBoard(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRack_NodesPerBoard()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRack_NodesPerBoard()
 	 * @model default="8" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -96,7 +96,7 @@ public interface Rack extends EObject {
 	 * @return the value of the '<em>Comm Link</em>' attribute.
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Channel
 	 * @see #setCommLink(Channel)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRack_CommLink()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRack_CommLink()
 	 * @model default="Ethernet40Gbps" required="true" ordered="false"
 	 * @generated
 	 */
@@ -124,7 +124,7 @@ public interface Rack extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Boards</em>' attribute.
 	 * @see #setBoards(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRack_Boards()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRack_Boards()
 	 * @model default="8" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */

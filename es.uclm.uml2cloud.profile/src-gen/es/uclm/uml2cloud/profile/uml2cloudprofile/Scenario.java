@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario#getCloudProvider <em>Cloud Provider</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getScenario()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getScenario()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface Scenario extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Package</em>' reference.
 	 * @see #setBase_Package(org.eclipse.uml2.uml.Package)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getScenario_Base_Package()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getScenario_Base_Package()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface Scenario extends EObject {
 	 * @return the value of the '<em>Cloud Provider</em>' attribute.
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProviderType
 	 * @see #setCloudProvider(CloudProviderType)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getScenario_CloudProvider()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getScenario_CloudProvider()
 	 * @model default="CloudProviderFirstFit" required="true" ordered="false"
 	 * @generated
 	 */

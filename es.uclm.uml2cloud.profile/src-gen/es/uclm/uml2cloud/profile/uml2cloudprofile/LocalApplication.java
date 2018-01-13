@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getIterations <em>Iterations</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getLocalApplication()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getLocalApplication()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface LocalApplication extends Application {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input Data Size Mi B</em>' attribute.
 	 * @see #setInputDataSizeMiB(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getLocalApplication_InputDataSizeMiB()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getLocalApplication_InputDataSizeMiB()
 	 * @model default="10" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface LocalApplication extends Application {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output Data Size Mi B</em>' attribute.
 	 * @see #setOutputDataSizeMiB(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getLocalApplication_OutputDataSizeMiB()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getLocalApplication_OutputDataSizeMiB()
 	 * @model default="5" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -93,7 +93,7 @@ public interface LocalApplication extends Application {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input File</em>' attribute.
 	 * @see #setInputFile(String)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getLocalApplication_InputFile()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getLocalApplication_InputFile()
 	 * @model default="/inputFile_0.dat" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
@@ -120,7 +120,7 @@ public interface LocalApplication extends Application {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output File</em>' attribute.
 	 * @see #setOutputFile(String)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getLocalApplication_OutputFile()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getLocalApplication_OutputFile()
 	 * @model default="/outputFile_0.dat" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
@@ -147,7 +147,7 @@ public interface LocalApplication extends Application {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>MIs</em>' attribute.
 	 * @see #setMIs(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getLocalApplication_MIs()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getLocalApplication_MIs()
 	 * @model default="10000" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -174,7 +174,7 @@ public interface LocalApplication extends Application {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Iterations</em>' attribute.
 	 * @see #setIterations(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getLocalApplication_Iterations()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getLocalApplication_Iterations()
 	 * @model default="25" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */

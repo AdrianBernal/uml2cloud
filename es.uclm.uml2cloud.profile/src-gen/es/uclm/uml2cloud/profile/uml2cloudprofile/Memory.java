@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getWriteLatencyUS <em>Write Latency US</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getMemory()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getMemory()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface Memory extends Hardware {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Size GB</em>' attribute.
 	 * @see #setSizeGB(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getMemory_SizeGB()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getMemory_SizeGB()
 	 * @model default="4.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */
@@ -63,7 +63,7 @@ public interface Memory extends Hardware {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Read Latency US</em>' attribute.
 	 * @see #setReadLatencyUS(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getMemory_ReadLatencyUS()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getMemory_ReadLatencyUS()
 	 * @model default="5" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -90,7 +90,7 @@ public interface Memory extends Hardware {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Write Latency US</em>' attribute.
 	 * @see #setWriteLatencyUS(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getMemory_WriteLatencyUS()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getMemory_WriteLatencyUS()
 	 * @model default="5" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */

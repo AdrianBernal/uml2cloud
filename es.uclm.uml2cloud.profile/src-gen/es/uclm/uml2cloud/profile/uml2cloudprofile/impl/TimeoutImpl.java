@@ -3,7 +3,7 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Timeout;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -55,7 +55,7 @@ public class TimeoutImpl extends MinimalEObjectImpl.Container implements Timeout
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.TIMEOUT;
+		return UML2CloudProfilePackage.Literals.TIMEOUT;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class TimeoutImpl extends MinimalEObjectImpl.Container implements Timeout
 			base_Message = (Message)eResolveProxy(oldBase_Message);
 			if (base_Message != oldBase_Message) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.TIMEOUT__BASE_MESSAGE, oldBase_Message, base_Message));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.TIMEOUT__BASE_MESSAGE, oldBase_Message, base_Message));
 			}
 		}
 		return base_Message;
@@ -93,7 +93,7 @@ public class TimeoutImpl extends MinimalEObjectImpl.Container implements Timeout
 		Message oldBase_Message = base_Message;
 		base_Message = newBase_Message;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.TIMEOUT__BASE_MESSAGE, oldBase_Message, base_Message));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.TIMEOUT__BASE_MESSAGE, oldBase_Message, base_Message));
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class TimeoutImpl extends MinimalEObjectImpl.Container implements Timeout
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.TIMEOUT__BASE_MESSAGE:
+			case UML2CloudProfilePackage.TIMEOUT__BASE_MESSAGE:
 				if (resolve) return getBase_Message();
 				return basicGetBase_Message();
 		}
@@ -119,7 +119,7 @@ public class TimeoutImpl extends MinimalEObjectImpl.Container implements Timeout
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.TIMEOUT__BASE_MESSAGE:
+			case UML2CloudProfilePackage.TIMEOUT__BASE_MESSAGE:
 				setBase_Message((Message)newValue);
 				return;
 		}
@@ -134,7 +134,7 @@ public class TimeoutImpl extends MinimalEObjectImpl.Container implements Timeout
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.TIMEOUT__BASE_MESSAGE:
+			case UML2CloudProfilePackage.TIMEOUT__BASE_MESSAGE:
 				setBase_Message((Message)null);
 				return;
 		}
@@ -149,7 +149,7 @@ public class TimeoutImpl extends MinimalEObjectImpl.Container implements Timeout
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.TIMEOUT__BASE_MESSAGE:
+			case UML2CloudProfilePackage.TIMEOUT__BASE_MESSAGE:
 				return base_Message != null;
 		}
 		return super.eIsSet(featureID);

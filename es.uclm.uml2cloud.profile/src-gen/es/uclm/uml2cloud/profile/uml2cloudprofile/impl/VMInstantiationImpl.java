@@ -2,7 +2,7 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.VM;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation;
 
@@ -75,7 +75,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.VM_INSTANTIATION;
+		return UML2CloudProfilePackage.Literals.VM_INSTANTIATION;
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 		int oldInstances = instances;
 		instances = newInstances;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.VM_INSTANTIATION__INSTANCES, oldInstances, instances));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM_INSTANTIATION__INSTANCES, oldInstances, instances));
 	}
 
 	/**
@@ -110,7 +110,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 			vmType = (VM)eResolveProxy(oldVmType);
 			if (vmType != oldVmType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.VM_INSTANTIATION__VM_TYPE, oldVmType, vmType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.VM_INSTANTIATION__VM_TYPE, oldVmType, vmType));
 			}
 		}
 		return vmType;
@@ -134,7 +134,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 		VM oldVmType = vmType;
 		vmType = newVmType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.VM_INSTANTIATION__VM_TYPE, oldVmType, vmType));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM_INSTANTIATION__VM_TYPE, oldVmType, vmType));
 	}
 
 	/**
@@ -145,9 +145,9 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.VM_INSTANTIATION__INSTANCES:
+			case UML2CloudProfilePackage.VM_INSTANTIATION__INSTANCES:
 				return getInstances();
-			case UML2CloudPackage.VM_INSTANTIATION__VM_TYPE:
+			case UML2CloudProfilePackage.VM_INSTANTIATION__VM_TYPE:
 				if (resolve) return getVmType();
 				return basicGetVmType();
 		}
@@ -162,10 +162,10 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.VM_INSTANTIATION__INSTANCES:
+			case UML2CloudProfilePackage.VM_INSTANTIATION__INSTANCES:
 				setInstances((Integer)newValue);
 				return;
-			case UML2CloudPackage.VM_INSTANTIATION__VM_TYPE:
+			case UML2CloudProfilePackage.VM_INSTANTIATION__VM_TYPE:
 				setVmType((VM)newValue);
 				return;
 		}
@@ -180,10 +180,10 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.VM_INSTANTIATION__INSTANCES:
+			case UML2CloudProfilePackage.VM_INSTANTIATION__INSTANCES:
 				setInstances(INSTANCES_EDEFAULT);
 				return;
-			case UML2CloudPackage.VM_INSTANTIATION__VM_TYPE:
+			case UML2CloudProfilePackage.VM_INSTANTIATION__VM_TYPE:
 				setVmType((VM)null);
 				return;
 		}
@@ -198,9 +198,9 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.VM_INSTANTIATION__INSTANCES:
+			case UML2CloudProfilePackage.VM_INSTANTIATION__INSTANCES:
 				return instances != INSTANCES_EDEFAULT;
-			case UML2CloudPackage.VM_INSTANTIATION__VM_TYPE:
+			case UML2CloudProfilePackage.VM_INSTANTIATION__VM_TYPE:
 				return vmType != null;
 		}
 		return super.eIsSet(featureID);

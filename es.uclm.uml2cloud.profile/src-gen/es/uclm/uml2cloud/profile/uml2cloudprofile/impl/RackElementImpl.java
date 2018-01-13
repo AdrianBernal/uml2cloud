@@ -5,7 +5,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Rack;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -80,7 +80,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.RACK_ELEMENT;
+		return UML2CloudProfilePackage.Literals.RACK_ELEMENT;
 	}
 
 	/**
@@ -101,7 +101,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 		int oldInstances = instances;
 		instances = newInstances;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.RACK_ELEMENT__INSTANCES, oldInstances, instances));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK_ELEMENT__INSTANCES, oldInstances, instances));
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 			rack = (Rack)eResolveProxy(oldRack);
 			if (rack != oldRack) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.RACK_ELEMENT__RACK, oldRack, rack));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.RACK_ELEMENT__RACK, oldRack, rack));
 			}
 		}
 		return rack;
@@ -139,7 +139,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 		Rack oldRack = rack;
 		rack = newRack;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.RACK_ELEMENT__RACK, oldRack, rack));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK_ELEMENT__RACK, oldRack, rack));
 	}
 
 	/**
@@ -148,7 +148,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * @generated
 	 */
 	public DataCenter getDataCenter() {
-		if (eContainerFeatureID() != UML2CloudPackage.RACK_ELEMENT__DATA_CENTER) return null;
+		if (eContainerFeatureID() != UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER) return null;
 		return (DataCenter)eInternalContainer();
 	}
 
@@ -158,7 +158,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * @generated
 	 */
 	public NotificationChain basicSetDataCenter(DataCenter newDataCenter, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newDataCenter, UML2CloudPackage.RACK_ELEMENT__DATA_CENTER, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newDataCenter, UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER, msgs);
 		return msgs;
 	}
 
@@ -168,19 +168,19 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * @generated
 	 */
 	public void setDataCenter(DataCenter newDataCenter) {
-		if (newDataCenter != eInternalContainer() || (eContainerFeatureID() != UML2CloudPackage.RACK_ELEMENT__DATA_CENTER && newDataCenter != null)) {
+		if (newDataCenter != eInternalContainer() || (eContainerFeatureID() != UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER && newDataCenter != null)) {
 			if (EcoreUtil.isAncestor(this, newDataCenter))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newDataCenter != null)
-				msgs = ((InternalEObject)newDataCenter).eInverseAdd(this, UML2CloudPackage.DATA_CENTER__RACK_ELEMENTS, DataCenter.class, msgs);
+				msgs = ((InternalEObject)newDataCenter).eInverseAdd(this, UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS, DataCenter.class, msgs);
 			msgs = basicSetDataCenter(newDataCenter, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.RACK_ELEMENT__DATA_CENTER, newDataCenter, newDataCenter));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER, newDataCenter, newDataCenter));
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_ELEMENT__DATA_CENTER:
+			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetDataCenter((DataCenter)otherEnd, msgs);
@@ -207,7 +207,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_ELEMENT__DATA_CENTER:
+			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
 				return basicSetDataCenter(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -221,8 +221,8 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case UML2CloudPackage.RACK_ELEMENT__DATA_CENTER:
-				return eInternalContainer().eInverseRemove(this, UML2CloudPackage.DATA_CENTER__RACK_ELEMENTS, DataCenter.class, msgs);
+			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
+				return eInternalContainer().eInverseRemove(this, UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS, DataCenter.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -235,12 +235,12 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_ELEMENT__INSTANCES:
+			case UML2CloudProfilePackage.RACK_ELEMENT__INSTANCES:
 				return getInstances();
-			case UML2CloudPackage.RACK_ELEMENT__RACK:
+			case UML2CloudProfilePackage.RACK_ELEMENT__RACK:
 				if (resolve) return getRack();
 				return basicGetRack();
-			case UML2CloudPackage.RACK_ELEMENT__DATA_CENTER:
+			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
 				return getDataCenter();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -254,13 +254,13 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_ELEMENT__INSTANCES:
+			case UML2CloudProfilePackage.RACK_ELEMENT__INSTANCES:
 				setInstances((Integer)newValue);
 				return;
-			case UML2CloudPackage.RACK_ELEMENT__RACK:
+			case UML2CloudProfilePackage.RACK_ELEMENT__RACK:
 				setRack((Rack)newValue);
 				return;
-			case UML2CloudPackage.RACK_ELEMENT__DATA_CENTER:
+			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
 				setDataCenter((DataCenter)newValue);
 				return;
 		}
@@ -275,13 +275,13 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_ELEMENT__INSTANCES:
+			case UML2CloudProfilePackage.RACK_ELEMENT__INSTANCES:
 				setInstances(INSTANCES_EDEFAULT);
 				return;
-			case UML2CloudPackage.RACK_ELEMENT__RACK:
+			case UML2CloudProfilePackage.RACK_ELEMENT__RACK:
 				setRack((Rack)null);
 				return;
-			case UML2CloudPackage.RACK_ELEMENT__DATA_CENTER:
+			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
 				setDataCenter((DataCenter)null);
 				return;
 		}
@@ -296,11 +296,11 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_ELEMENT__INSTANCES:
+			case UML2CloudProfilePackage.RACK_ELEMENT__INSTANCES:
 				return instances != INSTANCES_EDEFAULT;
-			case UML2CloudPackage.RACK_ELEMENT__RACK:
+			case UML2CloudProfilePackage.RACK_ELEMENT__RACK:
 				return rack != null;
-			case UML2CloudPackage.RACK_ELEMENT__DATA_CENTER:
+			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
 				return getDataCenter() != null;
 		}
 		return super.eIsSet(featureID);

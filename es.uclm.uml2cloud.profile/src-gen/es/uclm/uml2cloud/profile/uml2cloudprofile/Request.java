@@ -23,7 +23,7 @@ import org.eclipse.uml2.uml.Message;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getRentingTime <em>Renting Time</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRequest()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRequest()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface Request extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Message</em>' reference.
 	 * @see #setBase_Message(Message)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRequest_Base_Message()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRequest_Base_Message()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface Request extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Renting Time</em>' attribute.
 	 * @see #setRentingTime(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRequest_RentingTime()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRequest_RentingTime()
 	 * @model dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */

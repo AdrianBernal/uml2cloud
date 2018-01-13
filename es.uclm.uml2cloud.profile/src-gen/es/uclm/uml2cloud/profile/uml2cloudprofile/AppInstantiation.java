@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.AppInstantiation#getInstances <em>Instances</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getAppInstantiation()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getAppInstantiation()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface AppInstantiation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Application Type</em>' reference.
 	 * @see #setApplicationType(Application)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getAppInstantiation_ApplicationType()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getAppInstantiation_ApplicationType()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -58,7 +58,7 @@ public interface AppInstantiation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instances</em>' attribute.
 	 * @see #setInstances(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getAppInstantiation_Instances()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getAppInstantiation_Instances()
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */

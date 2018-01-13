@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#getSizePerDeviceGB <em>Size Per Device GB</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getDisk()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDisk()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Disk extends Hardware {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Of Disks</em>' attribute.
 	 * @see #setNumberOfDisks(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getDisk_NumberOfDisks()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDisk_NumberOfDisks()
 	 * @model default="1" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface Disk extends Hardware {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Read Bandwidth MBps</em>' attribute.
 	 * @see #setReadBandwidthMBps(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getDisk_ReadBandwidthMBps()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDisk_ReadBandwidthMBps()
 	 * @model default="500.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */
@@ -91,7 +91,7 @@ public interface Disk extends Hardware {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Write Bandwidth MBps</em>' attribute.
 	 * @see #setWriteBandwidthMBps(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getDisk_WriteBandwidthMBps()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDisk_WriteBandwidthMBps()
 	 * @model default="350.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */
@@ -118,7 +118,7 @@ public interface Disk extends Hardware {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Size Per Device GB</em>' attribute.
 	 * @see #setSizePerDeviceGB(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getDisk_SizePerDeviceGB()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDisk_SizePerDeviceGB()
 	 * @model default="1000" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */

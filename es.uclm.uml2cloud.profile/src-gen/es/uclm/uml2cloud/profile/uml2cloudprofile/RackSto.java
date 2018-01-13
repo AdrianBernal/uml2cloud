@@ -15,7 +15,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackSto#getNodeStoType <em>Node Sto Type</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRackSto()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRackSto()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface RackSto extends Rack {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node Sto Type</em>' reference.
 	 * @see #setNodeStoType(NodeSto)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRackSto_NodeStoType()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRackSto_NodeStoType()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */

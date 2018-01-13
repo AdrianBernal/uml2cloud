@@ -3,9 +3,9 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Memory;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudValidator;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -118,7 +118,7 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.MEMORY;
+		return UML2CloudProfilePackage.Literals.MEMORY;
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 		double oldSizeGB = sizeGB;
 		sizeGB = newSizeGB;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.MEMORY__SIZE_GB, oldSizeGB, sizeGB));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.MEMORY__SIZE_GB, oldSizeGB, sizeGB));
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 		int oldReadLatencyUS = readLatencyUS;
 		readLatencyUS = newReadLatencyUS;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.MEMORY__READ_LATENCY_US, oldReadLatencyUS, readLatencyUS));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.MEMORY__READ_LATENCY_US, oldReadLatencyUS, readLatencyUS));
 	}
 
 	/**
@@ -181,7 +181,7 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 		int oldWriteLatencyUS = writeLatencyUS;
 		writeLatencyUS = newWriteLatencyUS;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.MEMORY__WRITE_LATENCY_US, oldWriteLatencyUS, writeLatencyUS));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.MEMORY__WRITE_LATENCY_US, oldWriteLatencyUS, writeLatencyUS));
 	}
 
 	/**
@@ -199,8 +199,8 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.MEMORY__SIZE_GB_MUST_BE_GREATER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.MEMORY__SIZE_GB_MUST_BE_GREATER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "sizeGB_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -224,8 +224,8 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.MEMORY__READ_LATENCY_US_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.MEMORY__READ_LATENCY_US_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "readLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -249,8 +249,8 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.MEMORY__WRITE_LATENCY_US_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.MEMORY__WRITE_LATENCY_US_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "writeLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -267,11 +267,11 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.MEMORY__SIZE_GB:
+			case UML2CloudProfilePackage.MEMORY__SIZE_GB:
 				return getSizeGB();
-			case UML2CloudPackage.MEMORY__READ_LATENCY_US:
+			case UML2CloudProfilePackage.MEMORY__READ_LATENCY_US:
 				return getReadLatencyUS();
-			case UML2CloudPackage.MEMORY__WRITE_LATENCY_US:
+			case UML2CloudProfilePackage.MEMORY__WRITE_LATENCY_US:
 				return getWriteLatencyUS();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -285,13 +285,13 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.MEMORY__SIZE_GB:
+			case UML2CloudProfilePackage.MEMORY__SIZE_GB:
 				setSizeGB((Double)newValue);
 				return;
-			case UML2CloudPackage.MEMORY__READ_LATENCY_US:
+			case UML2CloudProfilePackage.MEMORY__READ_LATENCY_US:
 				setReadLatencyUS((Integer)newValue);
 				return;
-			case UML2CloudPackage.MEMORY__WRITE_LATENCY_US:
+			case UML2CloudProfilePackage.MEMORY__WRITE_LATENCY_US:
 				setWriteLatencyUS((Integer)newValue);
 				return;
 		}
@@ -306,13 +306,13 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.MEMORY__SIZE_GB:
+			case UML2CloudProfilePackage.MEMORY__SIZE_GB:
 				setSizeGB(SIZE_GB_EDEFAULT);
 				return;
-			case UML2CloudPackage.MEMORY__READ_LATENCY_US:
+			case UML2CloudProfilePackage.MEMORY__READ_LATENCY_US:
 				setReadLatencyUS(READ_LATENCY_US_EDEFAULT);
 				return;
-			case UML2CloudPackage.MEMORY__WRITE_LATENCY_US:
+			case UML2CloudProfilePackage.MEMORY__WRITE_LATENCY_US:
 				setWriteLatencyUS(WRITE_LATENCY_US_EDEFAULT);
 				return;
 		}
@@ -327,11 +327,11 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.MEMORY__SIZE_GB:
+			case UML2CloudProfilePackage.MEMORY__SIZE_GB:
 				return sizeGB != SIZE_GB_EDEFAULT;
-			case UML2CloudPackage.MEMORY__READ_LATENCY_US:
+			case UML2CloudProfilePackage.MEMORY__READ_LATENCY_US:
 				return readLatencyUS != READ_LATENCY_US_EDEFAULT;
-			case UML2CloudPackage.MEMORY__WRITE_LATENCY_US:
+			case UML2CloudProfilePackage.MEMORY__WRITE_LATENCY_US:
 				return writeLatencyUS != WRITE_LATENCY_US_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -346,11 +346,11 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudPackage.MEMORY___SIZE_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.MEMORY___SIZE_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return sizeGB_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.MEMORY___READ_LATENCY_US_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.MEMORY___READ_LATENCY_US_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
 				return readLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.MEMORY___WRITE_LATENCY_US_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.MEMORY___WRITE_LATENCY_US_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
 				return writeLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

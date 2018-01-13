@@ -32,7 +32,7 @@
     <details key="VALIDATION_DELEGATES" value="IGNORE"/>
   </genAnnotations>
   <foreignModel>uml2cloud.profile.uml</foreignModel>
-  <genPackages xsi:type="genmodel:GenPackage" prefix="UML2Cloud" basePackage="es.uclm.uml2cloud.profile"
+  <genPackages xsi:type="genmodel:GenPackage" prefix="UML2CloudProfile" basePackage="es.uclm.uml2cloud.profile"
       disposableProviderFactory="true" ecorePackage="uml2cloudprofile.ecore#/">
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="uml2cloudprofile.ecore#//Channel">
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//Channel/Ethernet10Mbps"/>

@@ -3,7 +3,7 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Notify;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -55,7 +55,7 @@ public class NotifyImpl extends MinimalEObjectImpl.Container implements Notify {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.NOTIFY;
+		return UML2CloudProfilePackage.Literals.NOTIFY;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class NotifyImpl extends MinimalEObjectImpl.Container implements Notify {
 			base_Message = (Message)eResolveProxy(oldBase_Message);
 			if (base_Message != oldBase_Message) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.NOTIFY__BASE_MESSAGE, oldBase_Message, base_Message));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.NOTIFY__BASE_MESSAGE, oldBase_Message, base_Message));
 			}
 		}
 		return base_Message;
@@ -93,7 +93,7 @@ public class NotifyImpl extends MinimalEObjectImpl.Container implements Notify {
 		Message oldBase_Message = base_Message;
 		base_Message = newBase_Message;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.NOTIFY__BASE_MESSAGE, oldBase_Message, base_Message));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.NOTIFY__BASE_MESSAGE, oldBase_Message, base_Message));
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class NotifyImpl extends MinimalEObjectImpl.Container implements Notify {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.NOTIFY__BASE_MESSAGE:
+			case UML2CloudProfilePackage.NOTIFY__BASE_MESSAGE:
 				if (resolve) return getBase_Message();
 				return basicGetBase_Message();
 		}
@@ -119,7 +119,7 @@ public class NotifyImpl extends MinimalEObjectImpl.Container implements Notify {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.NOTIFY__BASE_MESSAGE:
+			case UML2CloudProfilePackage.NOTIFY__BASE_MESSAGE:
 				setBase_Message((Message)newValue);
 				return;
 		}
@@ -134,7 +134,7 @@ public class NotifyImpl extends MinimalEObjectImpl.Container implements Notify {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.NOTIFY__BASE_MESSAGE:
+			case UML2CloudProfilePackage.NOTIFY__BASE_MESSAGE:
 				setBase_Message((Message)null);
 				return;
 		}
@@ -149,7 +149,7 @@ public class NotifyImpl extends MinimalEObjectImpl.Container implements Notify {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.NOTIFY__BASE_MESSAGE:
+			case UML2CloudProfilePackage.NOTIFY__BASE_MESSAGE:
 				return base_Message != null;
 		}
 		return super.eIsSet(featureID);

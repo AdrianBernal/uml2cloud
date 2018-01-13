@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Repository#getBase_Package <em>Base Package</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRepository()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRepository()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface Repository extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Package</em>' reference.
 	 * @see #setBase_Package(org.eclipse.uml2.uml.Package)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getRepository_Base_Package()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRepository_Base_Package()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */

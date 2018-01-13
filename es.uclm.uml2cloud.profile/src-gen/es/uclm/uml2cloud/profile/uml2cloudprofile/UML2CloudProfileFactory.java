@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage
  * @generated
  */
-public interface UML2CloudFactory extends EFactory {
+public interface UML2CloudProfileFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	UML2CloudFactory eINSTANCE = es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudFactoryImpl.init();
+	UML2CloudProfileFactory eINSTANCE = es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfileFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Data Center</em>'.
@@ -253,6 +253,6 @@ public interface UML2CloudFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	UML2CloudPackage getUML2CloudPackage();
+	UML2CloudProfilePackage getUML2CloudProfilePackage();
 
-} //UML2CloudFactory
+} //UML2CloudProfileFactory

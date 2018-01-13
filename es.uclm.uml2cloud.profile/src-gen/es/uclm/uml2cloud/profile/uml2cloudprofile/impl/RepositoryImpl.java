@@ -3,7 +3,7 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Repository;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -53,7 +53,7 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.REPOSITORY;
+		return UML2CloudProfilePackage.Literals.REPOSITORY;
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 			base_Package = (org.eclipse.uml2.uml.Package)eResolveProxy(oldBase_Package);
 			if (base_Package != oldBase_Package) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.REPOSITORY__BASE_PACKAGE, oldBase_Package, base_Package));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.REPOSITORY__BASE_PACKAGE, oldBase_Package, base_Package));
 			}
 		}
 		return base_Package;
@@ -91,7 +91,7 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 		org.eclipse.uml2.uml.Package oldBase_Package = base_Package;
 		base_Package = newBase_Package;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.REPOSITORY__BASE_PACKAGE, oldBase_Package, base_Package));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.REPOSITORY__BASE_PACKAGE, oldBase_Package, base_Package));
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.REPOSITORY__BASE_PACKAGE:
+			case UML2CloudProfilePackage.REPOSITORY__BASE_PACKAGE:
 				if (resolve) return getBase_Package();
 				return basicGetBase_Package();
 		}
@@ -117,7 +117,7 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.REPOSITORY__BASE_PACKAGE:
+			case UML2CloudProfilePackage.REPOSITORY__BASE_PACKAGE:
 				setBase_Package((org.eclipse.uml2.uml.Package)newValue);
 				return;
 		}
@@ -132,7 +132,7 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.REPOSITORY__BASE_PACKAGE:
+			case UML2CloudProfilePackage.REPOSITORY__BASE_PACKAGE:
 				setBase_Package((org.eclipse.uml2.uml.Package)null);
 				return;
 		}
@@ -147,7 +147,7 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.REPOSITORY__BASE_PACKAGE:
+			case UML2CloudProfilePackage.REPOSITORY__BASE_PACKAGE:
 				return base_Package != null;
 		}
 		return super.eIsSet(featureID);

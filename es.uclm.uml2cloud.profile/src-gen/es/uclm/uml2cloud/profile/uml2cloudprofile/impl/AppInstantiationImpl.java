@@ -4,7 +4,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.AppInstantiation;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Application;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -75,7 +75,7 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.APP_INSTANTIATION;
+		return UML2CloudProfilePackage.Literals.APP_INSTANTIATION;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 			applicationType = (Application)eResolveProxy(oldApplicationType);
 			if (applicationType != oldApplicationType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.APP_INSTANTIATION__APPLICATION_TYPE, oldApplicationType, applicationType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.APP_INSTANTIATION__APPLICATION_TYPE, oldApplicationType, applicationType));
 			}
 		}
 		return applicationType;
@@ -113,7 +113,7 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 		Application oldApplicationType = applicationType;
 		applicationType = newApplicationType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.APP_INSTANTIATION__APPLICATION_TYPE, oldApplicationType, applicationType));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.APP_INSTANTIATION__APPLICATION_TYPE, oldApplicationType, applicationType));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 		int oldInstances = instances;
 		instances = newInstances;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.APP_INSTANTIATION__INSTANCES, oldInstances, instances));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.APP_INSTANTIATION__INSTANCES, oldInstances, instances));
 	}
 
 	/**
@@ -145,10 +145,10 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.APP_INSTANTIATION__APPLICATION_TYPE:
+			case UML2CloudProfilePackage.APP_INSTANTIATION__APPLICATION_TYPE:
 				if (resolve) return getApplicationType();
 				return basicGetApplicationType();
-			case UML2CloudPackage.APP_INSTANTIATION__INSTANCES:
+			case UML2CloudProfilePackage.APP_INSTANTIATION__INSTANCES:
 				return getInstances();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -162,10 +162,10 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.APP_INSTANTIATION__APPLICATION_TYPE:
+			case UML2CloudProfilePackage.APP_INSTANTIATION__APPLICATION_TYPE:
 				setApplicationType((Application)newValue);
 				return;
-			case UML2CloudPackage.APP_INSTANTIATION__INSTANCES:
+			case UML2CloudProfilePackage.APP_INSTANTIATION__INSTANCES:
 				setInstances((Integer)newValue);
 				return;
 		}
@@ -180,10 +180,10 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.APP_INSTANTIATION__APPLICATION_TYPE:
+			case UML2CloudProfilePackage.APP_INSTANTIATION__APPLICATION_TYPE:
 				setApplicationType((Application)null);
 				return;
-			case UML2CloudPackage.APP_INSTANTIATION__INSTANCES:
+			case UML2CloudProfilePackage.APP_INSTANTIATION__INSTANCES:
 				setInstances(INSTANCES_EDEFAULT);
 				return;
 		}
@@ -198,9 +198,9 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.APP_INSTANTIATION__APPLICATION_TYPE:
+			case UML2CloudProfilePackage.APP_INSTANTIATION__APPLICATION_TYPE:
 				return applicationType != null;
-			case UML2CloudPackage.APP_INSTANTIATION__INSTANCES:
+			case UML2CloudProfilePackage.APP_INSTANTIATION__INSTANCES:
 				return instances != INSTANCES_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

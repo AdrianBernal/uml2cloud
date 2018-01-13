@@ -3,9 +3,9 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Disk;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudValidator;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -139,7 +139,7 @@ public class DiskImpl extends HardwareImpl implements Disk {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.DISK;
+		return UML2CloudProfilePackage.Literals.DISK;
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class DiskImpl extends HardwareImpl implements Disk {
 		int oldNumberOfDisks = numberOfDisks;
 		numberOfDisks = newNumberOfDisks;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.DISK__NUMBER_OF_DISKS, oldNumberOfDisks, numberOfDisks));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.DISK__NUMBER_OF_DISKS, oldNumberOfDisks, numberOfDisks));
 	}
 
 	/**
@@ -181,7 +181,7 @@ public class DiskImpl extends HardwareImpl implements Disk {
 		double oldReadBandwidthMBps = readBandwidthMBps;
 		readBandwidthMBps = newReadBandwidthMBps;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.DISK__READ_BANDWIDTH_MBPS, oldReadBandwidthMBps, readBandwidthMBps));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.DISK__READ_BANDWIDTH_MBPS, oldReadBandwidthMBps, readBandwidthMBps));
 	}
 
 	/**
@@ -202,7 +202,7 @@ public class DiskImpl extends HardwareImpl implements Disk {
 		double oldWriteBandwidthMBps = writeBandwidthMBps;
 		writeBandwidthMBps = newWriteBandwidthMBps;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.DISK__WRITE_BANDWIDTH_MBPS, oldWriteBandwidthMBps, writeBandwidthMBps));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.DISK__WRITE_BANDWIDTH_MBPS, oldWriteBandwidthMBps, writeBandwidthMBps));
 	}
 
 	/**
@@ -223,7 +223,7 @@ public class DiskImpl extends HardwareImpl implements Disk {
 		int oldSizePerDeviceGB = sizePerDeviceGB;
 		sizePerDeviceGB = newSizePerDeviceGB;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.DISK__SIZE_PER_DEVICE_GB, oldSizePerDeviceGB, sizePerDeviceGB));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.DISK__SIZE_PER_DEVICE_GB, oldSizePerDeviceGB, sizePerDeviceGB));
 	}
 
 	/**
@@ -241,8 +241,8 @@ public class DiskImpl extends HardwareImpl implements Disk {
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.DISK__NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.DISK__NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "numberOfDisks_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -266,8 +266,8 @@ public class DiskImpl extends HardwareImpl implements Disk {
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.DISK__READ_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.DISK__READ_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "readBandwidthMBps_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -291,8 +291,8 @@ public class DiskImpl extends HardwareImpl implements Disk {
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.DISK__WRITE_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.DISK__WRITE_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "writeBandwidthMBps_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -316,8 +316,8 @@ public class DiskImpl extends HardwareImpl implements Disk {
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.DISK__SIZE_PER_DEVICE_GB_MUST_BE_GREATTER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.DISK__SIZE_PER_DEVICE_GB_MUST_BE_GREATTER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "sizePerDeviceGB_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -334,13 +334,13 @@ public class DiskImpl extends HardwareImpl implements Disk {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.DISK__NUMBER_OF_DISKS:
+			case UML2CloudProfilePackage.DISK__NUMBER_OF_DISKS:
 				return getNumberOfDisks();
-			case UML2CloudPackage.DISK__READ_BANDWIDTH_MBPS:
+			case UML2CloudProfilePackage.DISK__READ_BANDWIDTH_MBPS:
 				return getReadBandwidthMBps();
-			case UML2CloudPackage.DISK__WRITE_BANDWIDTH_MBPS:
+			case UML2CloudProfilePackage.DISK__WRITE_BANDWIDTH_MBPS:
 				return getWriteBandwidthMBps();
-			case UML2CloudPackage.DISK__SIZE_PER_DEVICE_GB:
+			case UML2CloudProfilePackage.DISK__SIZE_PER_DEVICE_GB:
 				return getSizePerDeviceGB();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -354,16 +354,16 @@ public class DiskImpl extends HardwareImpl implements Disk {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.DISK__NUMBER_OF_DISKS:
+			case UML2CloudProfilePackage.DISK__NUMBER_OF_DISKS:
 				setNumberOfDisks((Integer)newValue);
 				return;
-			case UML2CloudPackage.DISK__READ_BANDWIDTH_MBPS:
+			case UML2CloudProfilePackage.DISK__READ_BANDWIDTH_MBPS:
 				setReadBandwidthMBps((Double)newValue);
 				return;
-			case UML2CloudPackage.DISK__WRITE_BANDWIDTH_MBPS:
+			case UML2CloudProfilePackage.DISK__WRITE_BANDWIDTH_MBPS:
 				setWriteBandwidthMBps((Double)newValue);
 				return;
-			case UML2CloudPackage.DISK__SIZE_PER_DEVICE_GB:
+			case UML2CloudProfilePackage.DISK__SIZE_PER_DEVICE_GB:
 				setSizePerDeviceGB((Integer)newValue);
 				return;
 		}
@@ -378,16 +378,16 @@ public class DiskImpl extends HardwareImpl implements Disk {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.DISK__NUMBER_OF_DISKS:
+			case UML2CloudProfilePackage.DISK__NUMBER_OF_DISKS:
 				setNumberOfDisks(NUMBER_OF_DISKS_EDEFAULT);
 				return;
-			case UML2CloudPackage.DISK__READ_BANDWIDTH_MBPS:
+			case UML2CloudProfilePackage.DISK__READ_BANDWIDTH_MBPS:
 				setReadBandwidthMBps(READ_BANDWIDTH_MBPS_EDEFAULT);
 				return;
-			case UML2CloudPackage.DISK__WRITE_BANDWIDTH_MBPS:
+			case UML2CloudProfilePackage.DISK__WRITE_BANDWIDTH_MBPS:
 				setWriteBandwidthMBps(WRITE_BANDWIDTH_MBPS_EDEFAULT);
 				return;
-			case UML2CloudPackage.DISK__SIZE_PER_DEVICE_GB:
+			case UML2CloudProfilePackage.DISK__SIZE_PER_DEVICE_GB:
 				setSizePerDeviceGB(SIZE_PER_DEVICE_GB_EDEFAULT);
 				return;
 		}
@@ -402,13 +402,13 @@ public class DiskImpl extends HardwareImpl implements Disk {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.DISK__NUMBER_OF_DISKS:
+			case UML2CloudProfilePackage.DISK__NUMBER_OF_DISKS:
 				return numberOfDisks != NUMBER_OF_DISKS_EDEFAULT;
-			case UML2CloudPackage.DISK__READ_BANDWIDTH_MBPS:
+			case UML2CloudProfilePackage.DISK__READ_BANDWIDTH_MBPS:
 				return readBandwidthMBps != READ_BANDWIDTH_MBPS_EDEFAULT;
-			case UML2CloudPackage.DISK__WRITE_BANDWIDTH_MBPS:
+			case UML2CloudProfilePackage.DISK__WRITE_BANDWIDTH_MBPS:
 				return writeBandwidthMBps != WRITE_BANDWIDTH_MBPS_EDEFAULT;
-			case UML2CloudPackage.DISK__SIZE_PER_DEVICE_GB:
+			case UML2CloudProfilePackage.DISK__SIZE_PER_DEVICE_GB:
 				return sizePerDeviceGB != SIZE_PER_DEVICE_GB_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -423,13 +423,13 @@ public class DiskImpl extends HardwareImpl implements Disk {
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudPackage.DISK___NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.DISK___NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return numberOfDisks_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.DISK___READ_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.DISK___READ_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return readBandwidthMBps_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.DISK___WRITE_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.DISK___WRITE_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return writeBandwidthMBps_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.DISK___SIZE_PER_DEVICE_GB_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.DISK___SIZE_PER_DEVICE_GB_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return sizePerDeviceGB_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

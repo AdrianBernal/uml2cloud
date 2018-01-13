@@ -18,7 +18,7 @@ import org.eclipse.uml2.uml.Lifeline;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getBase_Lifeline <em>Base Lifeline</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getUser()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getUser()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface User extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Lifeline</em>' reference.
 	 * @see #setBase_Lifeline(Lifeline)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getUser_Base_Lifeline()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getUser_Base_Lifeline()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */

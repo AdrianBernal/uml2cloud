@@ -4,7 +4,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.NodeCmp;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.RackCmp;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -53,7 +53,7 @@ public class RackCmpImpl extends RackImpl implements RackCmp {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.RACK_CMP;
+		return UML2CloudProfilePackage.Literals.RACK_CMP;
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class RackCmpImpl extends RackImpl implements RackCmp {
 			nodeCmpType = (NodeCmp)eResolveProxy(oldNodeCmpType);
 			if (nodeCmpType != oldNodeCmpType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.RACK_CMP__NODE_CMP_TYPE, oldNodeCmpType, nodeCmpType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.RACK_CMP__NODE_CMP_TYPE, oldNodeCmpType, nodeCmpType));
 			}
 		}
 		return nodeCmpType;
@@ -91,7 +91,7 @@ public class RackCmpImpl extends RackImpl implements RackCmp {
 		NodeCmp oldNodeCmpType = nodeCmpType;
 		nodeCmpType = newNodeCmpType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.RACK_CMP__NODE_CMP_TYPE, oldNodeCmpType, nodeCmpType));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK_CMP__NODE_CMP_TYPE, oldNodeCmpType, nodeCmpType));
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class RackCmpImpl extends RackImpl implements RackCmp {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_CMP__NODE_CMP_TYPE:
+			case UML2CloudProfilePackage.RACK_CMP__NODE_CMP_TYPE:
 				if (resolve) return getNodeCmpType();
 				return basicGetNodeCmpType();
 		}
@@ -117,7 +117,7 @@ public class RackCmpImpl extends RackImpl implements RackCmp {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_CMP__NODE_CMP_TYPE:
+			case UML2CloudProfilePackage.RACK_CMP__NODE_CMP_TYPE:
 				setNodeCmpType((NodeCmp)newValue);
 				return;
 		}
@@ -132,7 +132,7 @@ public class RackCmpImpl extends RackImpl implements RackCmp {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_CMP__NODE_CMP_TYPE:
+			case UML2CloudProfilePackage.RACK_CMP__NODE_CMP_TYPE:
 				setNodeCmpType((NodeCmp)null);
 				return;
 		}
@@ -147,7 +147,7 @@ public class RackCmpImpl extends RackImpl implements RackCmp {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK_CMP__NODE_CMP_TYPE:
+			case UML2CloudProfilePackage.RACK_CMP__NODE_CMP_TYPE:
 				return nodeCmpType != null;
 		}
 		return super.eIsSet(featureID);

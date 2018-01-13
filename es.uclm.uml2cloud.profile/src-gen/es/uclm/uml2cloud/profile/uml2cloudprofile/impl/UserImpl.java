@@ -2,7 +2,7 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.User;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -55,7 +55,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.USER;
+		return UML2CloudProfilePackage.Literals.USER;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 			base_Lifeline = (Lifeline)eResolveProxy(oldBase_Lifeline);
 			if (base_Lifeline != oldBase_Lifeline) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.USER__BASE_LIFELINE, oldBase_Lifeline, base_Lifeline));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.USER__BASE_LIFELINE, oldBase_Lifeline, base_Lifeline));
 			}
 		}
 		return base_Lifeline;
@@ -93,7 +93,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 		Lifeline oldBase_Lifeline = base_Lifeline;
 		base_Lifeline = newBase_Lifeline;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.USER__BASE_LIFELINE, oldBase_Lifeline, base_Lifeline));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.USER__BASE_LIFELINE, oldBase_Lifeline, base_Lifeline));
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.USER__BASE_LIFELINE:
+			case UML2CloudProfilePackage.USER__BASE_LIFELINE:
 				if (resolve) return getBase_Lifeline();
 				return basicGetBase_Lifeline();
 		}
@@ -119,7 +119,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.USER__BASE_LIFELINE:
+			case UML2CloudProfilePackage.USER__BASE_LIFELINE:
 				setBase_Lifeline((Lifeline)newValue);
 				return;
 		}
@@ -134,7 +134,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.USER__BASE_LIFELINE:
+			case UML2CloudProfilePackage.USER__BASE_LIFELINE:
 				setBase_Lifeline((Lifeline)null);
 				return;
 		}
@@ -149,7 +149,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.USER__BASE_LIFELINE:
+			case UML2CloudProfilePackage.USER__BASE_LIFELINE:
 				return base_Lifeline != null;
 		}
 		return super.eIsSet(featureID);

@@ -29,12 +29,12 @@ import es.uclm.uml2cloud.profile.uml2cloudprofile.Response;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Timeout;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudFactory;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfileFactory;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.User;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudValidator;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -58,7 +58,7 @@ import org.eclipse.uml2.uml.UMLPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class UML2CloudPackageImpl extends EPackageImpl implements UML2CloudPackage {
+public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2CloudProfilePackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -294,12 +294,12 @@ public class UML2CloudPackageImpl extends EPackageImpl implements UML2CloudPacka
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#eNS_URI
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private UML2CloudPackageImpl() {
-		super(eNS_URI, UML2CloudFactory.eINSTANCE);
+	private UML2CloudProfilePackageImpl() {
+		super(eNS_URI, UML2CloudProfileFactory.eINSTANCE);
 	}
 
 	/**
@@ -312,7 +312,7 @@ public class UML2CloudPackageImpl extends EPackageImpl implements UML2CloudPacka
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link UML2CloudPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link UML2CloudProfilePackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -321,11 +321,11 @@ public class UML2CloudPackageImpl extends EPackageImpl implements UML2CloudPacka
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static UML2CloudPackage init() {
-		if (isInited) return (UML2CloudPackage)EPackage.Registry.INSTANCE.getEPackage(UML2CloudPackage.eNS_URI);
+	public static UML2CloudProfilePackage init() {
+		if (isInited) return (UML2CloudProfilePackage)EPackage.Registry.INSTANCE.getEPackage(UML2CloudProfilePackage.eNS_URI);
 
 		// Obtain or create and register package
-		UML2CloudPackageImpl theUML2CloudPackage = (UML2CloudPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof UML2CloudPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new UML2CloudPackageImpl());
+		UML2CloudProfilePackageImpl theUML2CloudProfilePackage = (UML2CloudProfilePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof UML2CloudProfilePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new UML2CloudProfilePackageImpl());
 
 		isInited = true;
 
@@ -335,27 +335,27 @@ public class UML2CloudPackageImpl extends EPackageImpl implements UML2CloudPacka
 		UMLPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theUML2CloudPackage.createPackageContents();
+		theUML2CloudProfilePackage.createPackageContents();
 
 		// Initialize created meta-data
-		theUML2CloudPackage.initializePackageContents();
+		theUML2CloudProfilePackage.initializePackageContents();
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
-			(theUML2CloudPackage, 
+			(theUML2CloudProfilePackage, 
 			 new EValidator.Descriptor() {
 				 public EValidator getEValidator() {
-					 return UML2CloudValidator.INSTANCE;
+					 return UML2CloudProfileValidator.INSTANCE;
 				 }
 			 });
 
 		// Mark meta-data to indicate it can't be changed
-		theUML2CloudPackage.freeze();
+		theUML2CloudProfilePackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(UML2CloudPackage.eNS_URI, theUML2CloudPackage);
-		return theUML2CloudPackage;
+		EPackage.Registry.INSTANCE.put(UML2CloudProfilePackage.eNS_URI, theUML2CloudProfilePackage);
+		return theUML2CloudProfilePackage;
 	}
 
 	/**
@@ -1443,8 +1443,8 @@ public class UML2CloudPackageImpl extends EPackageImpl implements UML2CloudPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UML2CloudFactory getUML2CloudFactory() {
-		return (UML2CloudFactory)getEFactoryInstance();
+	public UML2CloudProfileFactory getUML2CloudProfileFactory() {
+		return (UML2CloudProfileFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -2062,4 +2062,4 @@ public class UML2CloudPackageImpl extends EPackageImpl implements UML2CloudPacka
 		   });
 	}
 
-} //UML2CloudPackageImpl
+} //UML2CloudProfilePackageImpl

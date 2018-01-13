@@ -17,17 +17,17 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
  * <!-- begin-user-doc -->
  * The <b>Validator</b> for the model.
  * <!-- end-user-doc -->
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage
  * @generated
  */
-public class UML2CloudValidator extends EObjectValidator {
+public class UML2CloudProfileValidator extends EObjectValidator {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final UML2CloudValidator INSTANCE = new UML2CloudValidator();
+	public static final UML2CloudProfileValidator INSTANCE = new UML2CloudProfileValidator();
 
 	/**
 	 * A constant for the {@link org.eclipse.emf.common.util.Diagnostic#getSource() source} of diagnostic {@link org.eclipse.emf.common.util.Diagnostic#getCode() codes} from this package.
@@ -277,7 +277,7 @@ public class UML2CloudValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UML2CloudValidator() {
+	public UML2CloudProfileValidator() {
 		super();
 	}
 
@@ -289,7 +289,7 @@ public class UML2CloudValidator extends EObjectValidator {
 	 */
 	@Override
 	protected EPackage getEPackage() {
-	  return UML2CloudPackage.eINSTANCE;
+	  return UML2CloudProfilePackage.eINSTANCE;
 	}
 
 	/**
@@ -301,69 +301,69 @@ public class UML2CloudValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
-			case UML2CloudPackage.DATA_CENTER:
+			case UML2CloudProfilePackage.DATA_CENTER:
 				return validateDataCenter((DataCenter)value, diagnostics, context);
-			case UML2CloudPackage.RACK_ELEMENT:
+			case UML2CloudProfilePackage.RACK_ELEMENT:
 				return validateRackElement((RackElement)value, diagnostics, context);
-			case UML2CloudPackage.RACK:
+			case UML2CloudProfilePackage.RACK:
 				return validateRack((Rack)value, diagnostics, context);
-			case UML2CloudPackage.NODE:
+			case UML2CloudProfilePackage.NODE:
 				return validateNode((Node)value, diagnostics, context);
-			case UML2CloudPackage.CPU:
+			case UML2CloudProfilePackage.CPU:
 				return validateCPU((CPU)value, diagnostics, context);
-			case UML2CloudPackage.HARDWARE:
+			case UML2CloudProfilePackage.HARDWARE:
 				return validateHardware((Hardware)value, diagnostics, context);
-			case UML2CloudPackage.MEMORY:
+			case UML2CloudProfilePackage.MEMORY:
 				return validateMemory((Memory)value, diagnostics, context);
-			case UML2CloudPackage.DISK:
+			case UML2CloudProfilePackage.DISK:
 				return validateDisk((Disk)value, diagnostics, context);
-			case UML2CloudPackage.RACK_CMP:
+			case UML2CloudProfilePackage.RACK_CMP:
 				return validateRackCmp((RackCmp)value, diagnostics, context);
-			case UML2CloudPackage.NODE_CMP:
+			case UML2CloudProfilePackage.NODE_CMP:
 				return validateNodeCmp((NodeCmp)value, diagnostics, context);
-			case UML2CloudPackage.RACK_STO:
+			case UML2CloudProfilePackage.RACK_STO:
 				return validateRackSto((RackSto)value, diagnostics, context);
-			case UML2CloudPackage.NODE_STO:
+			case UML2CloudProfilePackage.NODE_STO:
 				return validateNodeSto((NodeSto)value, diagnostics, context);
-			case UML2CloudPackage.SCENARIO:
+			case UML2CloudProfilePackage.SCENARIO:
 				return validateScenario((Scenario)value, diagnostics, context);
-			case UML2CloudPackage.REPOSITORY:
+			case UML2CloudProfilePackage.REPOSITORY:
 				return validateRepository((Repository)value, diagnostics, context);
-			case UML2CloudPackage.APPLICATION:
+			case UML2CloudProfilePackage.APPLICATION:
 				return validateApplication((Application)value, diagnostics, context);
-			case UML2CloudPackage.VM:
+			case UML2CloudProfilePackage.VM:
 				return validateVM((VM)value, diagnostics, context);
-			case UML2CloudPackage.LOCAL_APPLICATION:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION:
 				return validateLocalApplication((LocalApplication)value, diagnostics, context);
-			case UML2CloudPackage.USER:
+			case UML2CloudProfilePackage.USER:
 				return validateUser((User)value, diagnostics, context);
-			case UML2CloudPackage.CLOUD_PROVIDER:
+			case UML2CloudProfilePackage.CLOUD_PROVIDER:
 				return validateCloudProvider((CloudProvider)value, diagnostics, context);
-			case UML2CloudPackage.REQUEST:
+			case UML2CloudProfilePackage.REQUEST:
 				return validateRequest((Request)value, diagnostics, context);
-			case UML2CloudPackage.SUBSCRIBE:
+			case UML2CloudProfilePackage.SUBSCRIBE:
 				return validateSubscribe((Subscribe)value, diagnostics, context);
-			case UML2CloudPackage.VM_INSTANTIATION:
+			case UML2CloudProfilePackage.VM_INSTANTIATION:
 				return validateVMInstantiation((VMInstantiation)value, diagnostics, context);
-			case UML2CloudPackage.APP_INSTANTIATION:
+			case UML2CloudProfilePackage.APP_INSTANTIATION:
 				return validateAppInstantiation((AppInstantiation)value, diagnostics, context);
-			case UML2CloudPackage.OK:
+			case UML2CloudProfilePackage.OK:
 				return validateOK((OK)value, diagnostics, context);
-			case UML2CloudPackage.NOTIFY:
+			case UML2CloudProfilePackage.NOTIFY:
 				return validateNotify((Notify)value, diagnostics, context);
-			case UML2CloudPackage.TIMEOUT:
+			case UML2CloudProfilePackage.TIMEOUT:
 				return validateTimeout((Timeout)value, diagnostics, context);
-			case UML2CloudPackage.RESPONSE:
+			case UML2CloudProfilePackage.RESPONSE:
 				return validateResponse((Response)value, diagnostics, context);
-			case UML2CloudPackage.REJECT:
+			case UML2CloudProfilePackage.REJECT:
 				return validateReject((Reject)value, diagnostics, context);
-			case UML2CloudPackage.EXECUTE:
+			case UML2CloudProfilePackage.EXECUTE:
 				return validateExecute((Execute)value, diagnostics, context);
-			case UML2CloudPackage.CHANNEL:
+			case UML2CloudProfilePackage.CHANNEL:
 				return validateChannel((Channel)value, diagnostics, context);
-			case UML2CloudPackage.CPU_SCHEDULER:
+			case UML2CloudProfilePackage.CPU_SCHEDULER:
 				return validateCPUScheduler((CPUScheduler)value, diagnostics, context);
-			case UML2CloudPackage.CLOUD_PROVIDER_TYPE:
+			case UML2CloudProfilePackage.CLOUD_PROVIDER_TYPE:
 				return validateCloudProviderType((CloudProviderType)value, diagnostics, context);
 			default:
 				return true;
@@ -1072,4 +1072,4 @@ public class UML2CloudValidator extends EObjectValidator {
 		return super.getResourceLocator();
 	}
 
-} //UML2CloudValidator
+} //UML2CloudProfileValidator

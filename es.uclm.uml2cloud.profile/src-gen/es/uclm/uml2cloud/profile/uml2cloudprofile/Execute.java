@@ -21,7 +21,7 @@ import org.eclipse.uml2.uml.Message;
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Execute#getAppInstantiation <em>App Instantiation</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getExecute()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getExecute()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface Execute extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Message</em>' reference.
 	 * @see #setBase_Message(Message)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getExecute_Base_Message()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getExecute_Base_Message()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface Execute extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>App Instantiation</em>' containment reference list.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage#getExecute_AppInstantiation()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getExecute_AppInstantiation()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */

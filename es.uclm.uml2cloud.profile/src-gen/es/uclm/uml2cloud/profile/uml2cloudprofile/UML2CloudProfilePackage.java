@@ -21,12 +21,12 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudFactory
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfileFactory
  * @model kind="package"
  *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='uml2cloud'"
  * @generated
  */
-public interface UML2CloudPackage extends EPackage {
+public interface UML2CloudProfilePackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -57,14 +57,14 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	UML2CloudPackage eINSTANCE = es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl.init();
+	UML2CloudProfilePackage eINSTANCE = es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterImpl <em>Data Center</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getDataCenter()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getDataCenter()
 	 * @generated
 	 */
 	int DATA_CENTER = 0;
@@ -137,7 +137,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackElementImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRackElement()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackElement()
 	 * @generated
 	 */
 	int RACK_ELEMENT = 1;
@@ -192,7 +192,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRack()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRack()
 	 * @generated
 	 */
 	int RACK = 2;
@@ -274,7 +274,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getNode()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNode()
 	 * @generated
 	 */
 	int NODE = 3;
@@ -347,7 +347,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.HardwareImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getHardware()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getHardware()
 	 * @generated
 	 */
 	int HARDWARE = 5;
@@ -384,7 +384,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CPUImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getCPU()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCPU()
 	 * @generated
 	 */
 	int CPU = 4;
@@ -475,7 +475,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.MemoryImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getMemory()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getMemory()
 	 * @generated
 	 */
 	int MEMORY = 6;
@@ -566,7 +566,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DiskImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getDisk()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getDisk()
 	 * @generated
 	 */
 	int DISK = 7;
@@ -675,7 +675,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackCmpImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRackCmp()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackCmp()
 	 * @generated
 	 */
 	int RACK_CMP = 8;
@@ -766,7 +766,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeCmpImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getNodeCmp()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNodeCmp()
 	 * @generated
 	 */
 	int NODE_CMP = 9;
@@ -839,7 +839,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackStoImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRackSto()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackSto()
 	 * @generated
 	 */
 	int RACK_STO = 10;
@@ -930,7 +930,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeStoImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getNodeSto()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNodeSto()
 	 * @generated
 	 */
 	int NODE_STO = 11;
@@ -1003,7 +1003,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ScenarioImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getScenario()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getScenario()
 	 * @generated
 	 */
 	int SCENARIO = 12;
@@ -1049,7 +1049,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RepositoryImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRepository()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRepository()
 	 * @generated
 	 */
 	int REPOSITORY = 13;
@@ -1086,7 +1086,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ApplicationImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getApplication()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getApplication()
 	 * @generated
 	 */
 	int APPLICATION = 14;
@@ -1123,7 +1123,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getVM()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVM()
 	 * @generated
 	 */
 	int VM = 15;
@@ -1250,7 +1250,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.LocalApplicationImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getLocalApplication()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getLocalApplication()
 	 * @generated
 	 */
 	int LOCAL_APPLICATION = 16;
@@ -1377,7 +1377,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getUser()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getUser()
 	 * @generated
 	 */
 	int USER = 17;
@@ -1414,7 +1414,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getCloudProvider()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudProvider()
 	 * @generated
 	 */
 	int CLOUD_PROVIDER = 18;
@@ -1451,7 +1451,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRequest()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRequest()
 	 * @generated
 	 */
 	int REQUEST = 19;
@@ -1515,7 +1515,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SubscribeImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getSubscribe()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getSubscribe()
 	 * @generated
 	 */
 	int SUBSCRIBE = 20;
@@ -1579,7 +1579,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getVMInstantiation()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVMInstantiation()
 	 * @generated
 	 */
 	int VM_INSTANTIATION = 21;
@@ -1625,7 +1625,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.AppInstantiationImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getAppInstantiation()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getAppInstantiation()
 	 * @generated
 	 */
 	int APP_INSTANTIATION = 22;
@@ -1671,7 +1671,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.OKImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getOK()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getOK()
 	 * @generated
 	 */
 	int OK = 23;
@@ -1708,7 +1708,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NotifyImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getNotify()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNotify()
 	 * @generated
 	 */
 	int NOTIFY = 24;
@@ -1745,7 +1745,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.TimeoutImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getTimeout()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getTimeout()
 	 * @generated
 	 */
 	int TIMEOUT = 25;
@@ -1782,7 +1782,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ResponseImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getResponse()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getResponse()
 	 * @generated
 	 */
 	int RESPONSE = 26;
@@ -1819,7 +1819,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RejectImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getReject()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getReject()
 	 * @generated
 	 */
 	int REJECT = 27;
@@ -1856,7 +1856,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ExecuteImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getExecute()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getExecute()
 	 * @generated
 	 */
 	int EXECUTE = 28;
@@ -1902,7 +1902,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Channel
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getChannel()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getChannel()
 	 * @generated
 	 */
 	int CHANNEL = 29;
@@ -1912,7 +1912,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPUScheduler
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getCPUScheduler()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCPUScheduler()
 	 * @generated
 	 */
 	int CPU_SCHEDULER = 30;
@@ -1922,7 +1922,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProviderType
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getCloudProviderType()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudProviderType()
 	 * @generated
 	 */
 	int CLOUD_PROVIDER_TYPE = 31;
@@ -3196,7 +3196,7 @@ public interface UML2CloudPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	UML2CloudFactory getUML2CloudFactory();
+	UML2CloudProfileFactory getUML2CloudProfileFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3217,7 +3217,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getDataCenter()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getDataCenter()
 		 * @generated
 		 */
 		EClass DATA_CENTER = eINSTANCE.getDataCenter();
@@ -3267,7 +3267,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackElementImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRackElement()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackElement()
 		 * @generated
 		 */
 		EClass RACK_ELEMENT = eINSTANCE.getRackElement();
@@ -3301,7 +3301,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRack()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRack()
 		 * @generated
 		 */
 		EClass RACK = eINSTANCE.getRack();
@@ -3359,7 +3359,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getNode()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNode()
 		 * @generated
 		 */
 		EClass NODE = eINSTANCE.getNode();
@@ -3409,7 +3409,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CPUImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getCPU()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCPU()
 		 * @generated
 		 */
 		EClass CPU = eINSTANCE.getCPU();
@@ -3467,7 +3467,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.HardwareImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getHardware()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getHardware()
 		 * @generated
 		 */
 		EClass HARDWARE = eINSTANCE.getHardware();
@@ -3485,7 +3485,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.MemoryImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getMemory()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getMemory()
 		 * @generated
 		 */
 		EClass MEMORY = eINSTANCE.getMemory();
@@ -3543,7 +3543,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DiskImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getDisk()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getDisk()
 		 * @generated
 		 */
 		EClass DISK = eINSTANCE.getDisk();
@@ -3617,7 +3617,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackCmpImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRackCmp()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackCmp()
 		 * @generated
 		 */
 		EClass RACK_CMP = eINSTANCE.getRackCmp();
@@ -3635,7 +3635,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeCmpImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getNodeCmp()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNodeCmp()
 		 * @generated
 		 */
 		EClass NODE_CMP = eINSTANCE.getNodeCmp();
@@ -3645,7 +3645,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackStoImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRackSto()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackSto()
 		 * @generated
 		 */
 		EClass RACK_STO = eINSTANCE.getRackSto();
@@ -3663,7 +3663,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeStoImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getNodeSto()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNodeSto()
 		 * @generated
 		 */
 		EClass NODE_STO = eINSTANCE.getNodeSto();
@@ -3673,7 +3673,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ScenarioImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getScenario()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getScenario()
 		 * @generated
 		 */
 		EClass SCENARIO = eINSTANCE.getScenario();
@@ -3699,7 +3699,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RepositoryImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRepository()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRepository()
 		 * @generated
 		 */
 		EClass REPOSITORY = eINSTANCE.getRepository();
@@ -3717,7 +3717,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ApplicationImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getApplication()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getApplication()
 		 * @generated
 		 */
 		EClass APPLICATION = eINSTANCE.getApplication();
@@ -3735,7 +3735,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getVM()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVM()
 		 * @generated
 		 */
 		EClass VM = eINSTANCE.getVM();
@@ -3833,7 +3833,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.LocalApplicationImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getLocalApplication()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getLocalApplication()
 		 * @generated
 		 */
 		EClass LOCAL_APPLICATION = eINSTANCE.getLocalApplication();
@@ -3923,7 +3923,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getUser()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getUser()
 		 * @generated
 		 */
 		EClass USER = eINSTANCE.getUser();
@@ -3941,7 +3941,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getCloudProvider()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudProvider()
 		 * @generated
 		 */
 		EClass CLOUD_PROVIDER = eINSTANCE.getCloudProvider();
@@ -3959,7 +3959,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getRequest()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRequest()
 		 * @generated
 		 */
 		EClass REQUEST = eINSTANCE.getRequest();
@@ -4001,7 +4001,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SubscribeImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getSubscribe()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getSubscribe()
 		 * @generated
 		 */
 		EClass SUBSCRIBE = eINSTANCE.getSubscribe();
@@ -4043,7 +4043,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getVMInstantiation()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVMInstantiation()
 		 * @generated
 		 */
 		EClass VM_INSTANTIATION = eINSTANCE.getVMInstantiation();
@@ -4069,7 +4069,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.AppInstantiationImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getAppInstantiation()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getAppInstantiation()
 		 * @generated
 		 */
 		EClass APP_INSTANTIATION = eINSTANCE.getAppInstantiation();
@@ -4095,7 +4095,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.OKImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getOK()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getOK()
 		 * @generated
 		 */
 		EClass OK = eINSTANCE.getOK();
@@ -4113,7 +4113,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NotifyImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getNotify()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNotify()
 		 * @generated
 		 */
 		EClass NOTIFY = eINSTANCE.getNotify();
@@ -4131,7 +4131,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.TimeoutImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getTimeout()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getTimeout()
 		 * @generated
 		 */
 		EClass TIMEOUT = eINSTANCE.getTimeout();
@@ -4149,7 +4149,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ResponseImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getResponse()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getResponse()
 		 * @generated
 		 */
 		EClass RESPONSE = eINSTANCE.getResponse();
@@ -4167,7 +4167,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RejectImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getReject()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getReject()
 		 * @generated
 		 */
 		EClass REJECT = eINSTANCE.getReject();
@@ -4185,7 +4185,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ExecuteImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getExecute()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getExecute()
 		 * @generated
 		 */
 		EClass EXECUTE = eINSTANCE.getExecute();
@@ -4211,7 +4211,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Channel
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getChannel()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getChannel()
 		 * @generated
 		 */
 		EEnum CHANNEL = eINSTANCE.getChannel();
@@ -4221,7 +4221,7 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPUScheduler
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getCPUScheduler()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCPUScheduler()
 		 * @generated
 		 */
 		EEnum CPU_SCHEDULER = eINSTANCE.getCPUScheduler();
@@ -4231,11 +4231,11 @@ public interface UML2CloudPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProviderType
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudPackageImpl#getCloudProviderType()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudProviderType()
 		 * @generated
 		 */
 		EEnum CLOUD_PROVIDER_TYPE = eINSTANCE.getCloudProviderType();
 
 	}
 
-} //UML2CloudPackage
+} //UML2CloudProfilePackage

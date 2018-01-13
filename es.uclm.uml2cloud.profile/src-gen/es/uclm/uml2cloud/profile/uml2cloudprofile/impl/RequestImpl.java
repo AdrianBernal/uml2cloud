@@ -3,9 +3,9 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Request;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudValidator;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -91,7 +91,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.REQUEST;
+		return UML2CloudProfilePackage.Literals.REQUEST;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 			base_Message = (Message)eResolveProxy(oldBase_Message);
 			if (base_Message != oldBase_Message) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.REQUEST__BASE_MESSAGE, oldBase_Message, base_Message));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.REQUEST__BASE_MESSAGE, oldBase_Message, base_Message));
 			}
 		}
 		return base_Message;
@@ -129,7 +129,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 		Message oldBase_Message = base_Message;
 		base_Message = newBase_Message;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.REQUEST__BASE_MESSAGE, oldBase_Message, base_Message));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.REQUEST__BASE_MESSAGE, oldBase_Message, base_Message));
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 		double oldRentingTime = rentingTime;
 		rentingTime = newRentingTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.REQUEST__RENTING_TIME, oldRentingTime, rentingTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.REQUEST__RENTING_TIME, oldRentingTime, rentingTime));
 	}
 
 	/**
@@ -168,8 +168,8 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.REQUEST__T1_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.REQUEST__T1_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "t1_Must_Be_Greater_Than_Or_Equal_To_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -193,8 +193,8 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.REQUEST__T2_MUST_BE_GREATER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.REQUEST__T2_MUST_BE_GREATER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "t2_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -211,10 +211,10 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.REQUEST__BASE_MESSAGE:
+			case UML2CloudProfilePackage.REQUEST__BASE_MESSAGE:
 				if (resolve) return getBase_Message();
 				return basicGetBase_Message();
-			case UML2CloudPackage.REQUEST__RENTING_TIME:
+			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
 				return getRentingTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -228,10 +228,10 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.REQUEST__BASE_MESSAGE:
+			case UML2CloudProfilePackage.REQUEST__BASE_MESSAGE:
 				setBase_Message((Message)newValue);
 				return;
-			case UML2CloudPackage.REQUEST__RENTING_TIME:
+			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
 				setRentingTime((Double)newValue);
 				return;
 		}
@@ -246,10 +246,10 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.REQUEST__BASE_MESSAGE:
+			case UML2CloudProfilePackage.REQUEST__BASE_MESSAGE:
 				setBase_Message((Message)null);
 				return;
-			case UML2CloudPackage.REQUEST__RENTING_TIME:
+			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
 				setRentingTime(RENTING_TIME_EDEFAULT);
 				return;
 		}
@@ -264,9 +264,9 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.REQUEST__BASE_MESSAGE:
+			case UML2CloudProfilePackage.REQUEST__BASE_MESSAGE:
 				return base_Message != null;
-			case UML2CloudPackage.REQUEST__RENTING_TIME:
+			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
 				return rentingTime != RENTING_TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -281,9 +281,9 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudPackage.REQUEST___T1_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.REQUEST___T1_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
 				return t1_Must_Be_Greater_Than_Or_Equal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.REQUEST___T2_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.REQUEST___T2_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return t2_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

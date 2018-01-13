@@ -4,9 +4,9 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Channel;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Rack;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudValidator;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -134,7 +134,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.RACK;
+		return UML2CloudProfilePackage.Literals.RACK;
 	}
 
 	/**
@@ -148,7 +148,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 			base_Component = (Component)eResolveProxy(oldBase_Component);
 			if (base_Component != oldBase_Component) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudPackage.RACK__BASE_COMPONENT, oldBase_Component, base_Component));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.RACK__BASE_COMPONENT, oldBase_Component, base_Component));
 			}
 		}
 		return base_Component;
@@ -172,7 +172,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.RACK__BASE_COMPONENT, oldBase_Component, base_Component));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__BASE_COMPONENT, oldBase_Component, base_Component));
 	}
 
 	/**
@@ -193,7 +193,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 		int oldNodesPerBoard = nodesPerBoard;
 		nodesPerBoard = newNodesPerBoard;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.RACK__NODES_PER_BOARD, oldNodesPerBoard, nodesPerBoard));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__NODES_PER_BOARD, oldNodesPerBoard, nodesPerBoard));
 	}
 
 	/**
@@ -214,7 +214,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 		Channel oldCommLink = commLink;
 		commLink = newCommLink == null ? COMM_LINK_EDEFAULT : newCommLink;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.RACK__COMM_LINK, oldCommLink, commLink));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__COMM_LINK, oldCommLink, commLink));
 	}
 
 	/**
@@ -235,7 +235,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 		int oldBoards = boards;
 		boards = newBoards;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.RACK__BOARDS, oldBoards, boards));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__BOARDS, oldBoards, boards));
 	}
 
 	/**
@@ -253,8 +253,8 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.RACK__BOARDS_MUST_BE_GREATTER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.RACK__BOARDS_MUST_BE_GREATTER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "boards_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -278,8 +278,8 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.RACK__NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.RACK__NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "nodesPerBoard_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -296,14 +296,14 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK__BASE_COMPONENT:
+			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
 				if (resolve) return getBase_Component();
 				return basicGetBase_Component();
-			case UML2CloudPackage.RACK__NODES_PER_BOARD:
+			case UML2CloudProfilePackage.RACK__NODES_PER_BOARD:
 				return getNodesPerBoard();
-			case UML2CloudPackage.RACK__COMM_LINK:
+			case UML2CloudProfilePackage.RACK__COMM_LINK:
 				return getCommLink();
-			case UML2CloudPackage.RACK__BOARDS:
+			case UML2CloudProfilePackage.RACK__BOARDS:
 				return getBoards();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -317,16 +317,16 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK__BASE_COMPONENT:
+			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
 				setBase_Component((Component)newValue);
 				return;
-			case UML2CloudPackage.RACK__NODES_PER_BOARD:
+			case UML2CloudProfilePackage.RACK__NODES_PER_BOARD:
 				setNodesPerBoard((Integer)newValue);
 				return;
-			case UML2CloudPackage.RACK__COMM_LINK:
+			case UML2CloudProfilePackage.RACK__COMM_LINK:
 				setCommLink((Channel)newValue);
 				return;
-			case UML2CloudPackage.RACK__BOARDS:
+			case UML2CloudProfilePackage.RACK__BOARDS:
 				setBoards((Integer)newValue);
 				return;
 		}
@@ -341,16 +341,16 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK__BASE_COMPONENT:
+			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
 				setBase_Component((Component)null);
 				return;
-			case UML2CloudPackage.RACK__NODES_PER_BOARD:
+			case UML2CloudProfilePackage.RACK__NODES_PER_BOARD:
 				setNodesPerBoard(NODES_PER_BOARD_EDEFAULT);
 				return;
-			case UML2CloudPackage.RACK__COMM_LINK:
+			case UML2CloudProfilePackage.RACK__COMM_LINK:
 				setCommLink(COMM_LINK_EDEFAULT);
 				return;
-			case UML2CloudPackage.RACK__BOARDS:
+			case UML2CloudProfilePackage.RACK__BOARDS:
 				setBoards(BOARDS_EDEFAULT);
 				return;
 		}
@@ -365,13 +365,13 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.RACK__BASE_COMPONENT:
+			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
 				return base_Component != null;
-			case UML2CloudPackage.RACK__NODES_PER_BOARD:
+			case UML2CloudProfilePackage.RACK__NODES_PER_BOARD:
 				return nodesPerBoard != NODES_PER_BOARD_EDEFAULT;
-			case UML2CloudPackage.RACK__COMM_LINK:
+			case UML2CloudProfilePackage.RACK__COMM_LINK:
 				return commLink != COMM_LINK_EDEFAULT;
-			case UML2CloudPackage.RACK__BOARDS:
+			case UML2CloudProfilePackage.RACK__BOARDS:
 				return boards != BOARDS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -386,9 +386,9 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudPackage.RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return boards_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return nodesPerBoard_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

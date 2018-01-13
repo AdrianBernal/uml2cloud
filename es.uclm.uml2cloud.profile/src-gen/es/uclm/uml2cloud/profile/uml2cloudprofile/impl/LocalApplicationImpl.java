@@ -3,9 +3,9 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudPackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudValidator;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -181,7 +181,7 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudPackage.Literals.LOCAL_APPLICATION;
+		return UML2CloudProfilePackage.Literals.LOCAL_APPLICATION;
 	}
 
 	/**
@@ -202,7 +202,7 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 		int oldInputDataSizeMiB = inputDataSizeMiB;
 		inputDataSizeMiB = newInputDataSizeMiB;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B, oldInputDataSizeMiB, inputDataSizeMiB));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B, oldInputDataSizeMiB, inputDataSizeMiB));
 	}
 
 	/**
@@ -223,7 +223,7 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 		int oldOutputDataSizeMiB = outputDataSizeMiB;
 		outputDataSizeMiB = newOutputDataSizeMiB;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B, oldOutputDataSizeMiB, outputDataSizeMiB));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B, oldOutputDataSizeMiB, outputDataSizeMiB));
 	}
 
 	/**
@@ -244,7 +244,7 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 		String oldInputFile = inputFile;
 		inputFile = newInputFile;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.LOCAL_APPLICATION__INPUT_FILE, oldInputFile, inputFile));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.LOCAL_APPLICATION__INPUT_FILE, oldInputFile, inputFile));
 	}
 
 	/**
@@ -265,7 +265,7 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 		String oldOutputFile = outputFile;
 		outputFile = newOutputFile;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.LOCAL_APPLICATION__OUTPUT_FILE, oldOutputFile, outputFile));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.LOCAL_APPLICATION__OUTPUT_FILE, oldOutputFile, outputFile));
 	}
 
 	/**
@@ -286,7 +286,7 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 		int oldMIs = mIs;
 		mIs = newMIs;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.LOCAL_APPLICATION__MIS, oldMIs, mIs));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.LOCAL_APPLICATION__MIS, oldMIs, mIs));
 	}
 
 	/**
@@ -307,7 +307,7 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 		int oldIterations = iterations;
 		iterations = newIterations;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudPackage.LOCAL_APPLICATION__ITERATIONS, oldIterations, iterations));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.LOCAL_APPLICATION__ITERATIONS, oldIterations, iterations));
 	}
 
 	/**
@@ -325,8 +325,8 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "inputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -350,8 +350,8 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "outputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -375,8 +375,8 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.LOCAL_APPLICATION__MIS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.LOCAL_APPLICATION__MIS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "MIs_Must_Be_Greater_Than_Or_Equal_To_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -400,8 +400,8 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 				diagnostics.add
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
-						 UML2CloudValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudValidator.LOCAL_APPLICATION__ITERATIONS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.LOCAL_APPLICATION__ITERATIONS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "iterations_Must_Be_Greater_Than_Or_Equal_To_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
@@ -418,17 +418,17 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudPackage.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B:
 				return getInputDataSizeMiB();
-			case UML2CloudPackage.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B:
 				return getOutputDataSizeMiB();
-			case UML2CloudPackage.LOCAL_APPLICATION__INPUT_FILE:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__INPUT_FILE:
 				return getInputFile();
-			case UML2CloudPackage.LOCAL_APPLICATION__OUTPUT_FILE:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__OUTPUT_FILE:
 				return getOutputFile();
-			case UML2CloudPackage.LOCAL_APPLICATION__MIS:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__MIS:
 				return getMIs();
-			case UML2CloudPackage.LOCAL_APPLICATION__ITERATIONS:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__ITERATIONS:
 				return getIterations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -442,22 +442,22 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudPackage.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B:
 				setInputDataSizeMiB((Integer)newValue);
 				return;
-			case UML2CloudPackage.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B:
 				setOutputDataSizeMiB((Integer)newValue);
 				return;
-			case UML2CloudPackage.LOCAL_APPLICATION__INPUT_FILE:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__INPUT_FILE:
 				setInputFile((String)newValue);
 				return;
-			case UML2CloudPackage.LOCAL_APPLICATION__OUTPUT_FILE:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__OUTPUT_FILE:
 				setOutputFile((String)newValue);
 				return;
-			case UML2CloudPackage.LOCAL_APPLICATION__MIS:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__MIS:
 				setMIs((Integer)newValue);
 				return;
-			case UML2CloudPackage.LOCAL_APPLICATION__ITERATIONS:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__ITERATIONS:
 				setIterations((Integer)newValue);
 				return;
 		}
@@ -472,22 +472,22 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B:
 				setInputDataSizeMiB(INPUT_DATA_SIZE_MI_B_EDEFAULT);
 				return;
-			case UML2CloudPackage.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B:
 				setOutputDataSizeMiB(OUTPUT_DATA_SIZE_MI_B_EDEFAULT);
 				return;
-			case UML2CloudPackage.LOCAL_APPLICATION__INPUT_FILE:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__INPUT_FILE:
 				setInputFile(INPUT_FILE_EDEFAULT);
 				return;
-			case UML2CloudPackage.LOCAL_APPLICATION__OUTPUT_FILE:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__OUTPUT_FILE:
 				setOutputFile(OUTPUT_FILE_EDEFAULT);
 				return;
-			case UML2CloudPackage.LOCAL_APPLICATION__MIS:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__MIS:
 				setMIs(MIS_EDEFAULT);
 				return;
-			case UML2CloudPackage.LOCAL_APPLICATION__ITERATIONS:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__ITERATIONS:
 				setIterations(ITERATIONS_EDEFAULT);
 				return;
 		}
@@ -502,17 +502,17 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudPackage.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B:
 				return inputDataSizeMiB != INPUT_DATA_SIZE_MI_B_EDEFAULT;
-			case UML2CloudPackage.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B:
 				return outputDataSizeMiB != OUTPUT_DATA_SIZE_MI_B_EDEFAULT;
-			case UML2CloudPackage.LOCAL_APPLICATION__INPUT_FILE:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__INPUT_FILE:
 				return INPUT_FILE_EDEFAULT == null ? inputFile != null : !INPUT_FILE_EDEFAULT.equals(inputFile);
-			case UML2CloudPackage.LOCAL_APPLICATION__OUTPUT_FILE:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__OUTPUT_FILE:
 				return OUTPUT_FILE_EDEFAULT == null ? outputFile != null : !OUTPUT_FILE_EDEFAULT.equals(outputFile);
-			case UML2CloudPackage.LOCAL_APPLICATION__MIS:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__MIS:
 				return mIs != MIS_EDEFAULT;
-			case UML2CloudPackage.LOCAL_APPLICATION__ITERATIONS:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION__ITERATIONS:
 				return iterations != ITERATIONS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -527,13 +527,13 @@ public class LocalApplicationImpl extends ApplicationImpl implements LocalApplic
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudPackage.LOCAL_APPLICATION___INPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION___INPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
 				return inputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.LOCAL_APPLICATION___OUTPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION___OUTPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
 				return outputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.LOCAL_APPLICATION___MIS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION___MIS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
 				return MIs_Must_Be_Greater_Than_Or_Equal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudPackage.LOCAL_APPLICATION___ITERATIONS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
+			case UML2CloudProfilePackage.LOCAL_APPLICATION___ITERATIONS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
 				return iterations_Must_Be_Greater_Than_Or_Equal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

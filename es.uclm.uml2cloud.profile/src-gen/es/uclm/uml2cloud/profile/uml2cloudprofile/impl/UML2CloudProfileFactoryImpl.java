@@ -19,24 +19,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class UML2CloudFactoryImpl extends EFactoryImpl implements UML2CloudFactory {
+public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2CloudProfileFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static UML2CloudFactory init() {
+	public static UML2CloudProfileFactory init() {
 		try {
-			UML2CloudFactory theUML2CloudFactory = (UML2CloudFactory)EPackage.Registry.INSTANCE.getEFactory(UML2CloudPackage.eNS_URI);
-			if (theUML2CloudFactory != null) {
-				return theUML2CloudFactory;
+			UML2CloudProfileFactory theUML2CloudProfileFactory = (UML2CloudProfileFactory)EPackage.Registry.INSTANCE.getEFactory(UML2CloudProfilePackage.eNS_URI);
+			if (theUML2CloudProfileFactory != null) {
+				return theUML2CloudProfileFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new UML2CloudFactoryImpl();
+		return new UML2CloudProfileFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class UML2CloudFactoryImpl extends EFactoryImpl implements UML2CloudFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UML2CloudFactoryImpl() {
+	public UML2CloudProfileFactoryImpl() {
 		super();
 	}
 
@@ -57,31 +57,31 @@ public class UML2CloudFactoryImpl extends EFactoryImpl implements UML2CloudFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case UML2CloudPackage.DATA_CENTER: return createDataCenter();
-			case UML2CloudPackage.RACK_ELEMENT: return createRackElement();
-			case UML2CloudPackage.CPU: return createCPU();
-			case UML2CloudPackage.MEMORY: return createMemory();
-			case UML2CloudPackage.DISK: return createDisk();
-			case UML2CloudPackage.RACK_CMP: return createRackCmp();
-			case UML2CloudPackage.NODE_CMP: return createNodeCmp();
-			case UML2CloudPackage.RACK_STO: return createRackSto();
-			case UML2CloudPackage.NODE_STO: return createNodeSto();
-			case UML2CloudPackage.SCENARIO: return createScenario();
-			case UML2CloudPackage.REPOSITORY: return createRepository();
-			case UML2CloudPackage.VM: return createVM();
-			case UML2CloudPackage.LOCAL_APPLICATION: return createLocalApplication();
-			case UML2CloudPackage.USER: return createUser();
-			case UML2CloudPackage.CLOUD_PROVIDER: return createCloudProvider();
-			case UML2CloudPackage.REQUEST: return createRequest();
-			case UML2CloudPackage.SUBSCRIBE: return createSubscribe();
-			case UML2CloudPackage.VM_INSTANTIATION: return createVMInstantiation();
-			case UML2CloudPackage.APP_INSTANTIATION: return createAppInstantiation();
-			case UML2CloudPackage.OK: return createOK();
-			case UML2CloudPackage.NOTIFY: return createNotify();
-			case UML2CloudPackage.TIMEOUT: return createTimeout();
-			case UML2CloudPackage.RESPONSE: return createResponse();
-			case UML2CloudPackage.REJECT: return createReject();
-			case UML2CloudPackage.EXECUTE: return createExecute();
+			case UML2CloudProfilePackage.DATA_CENTER: return createDataCenter();
+			case UML2CloudProfilePackage.RACK_ELEMENT: return createRackElement();
+			case UML2CloudProfilePackage.CPU: return createCPU();
+			case UML2CloudProfilePackage.MEMORY: return createMemory();
+			case UML2CloudProfilePackage.DISK: return createDisk();
+			case UML2CloudProfilePackage.RACK_CMP: return createRackCmp();
+			case UML2CloudProfilePackage.NODE_CMP: return createNodeCmp();
+			case UML2CloudProfilePackage.RACK_STO: return createRackSto();
+			case UML2CloudProfilePackage.NODE_STO: return createNodeSto();
+			case UML2CloudProfilePackage.SCENARIO: return createScenario();
+			case UML2CloudProfilePackage.REPOSITORY: return createRepository();
+			case UML2CloudProfilePackage.VM: return createVM();
+			case UML2CloudProfilePackage.LOCAL_APPLICATION: return createLocalApplication();
+			case UML2CloudProfilePackage.USER: return createUser();
+			case UML2CloudProfilePackage.CLOUD_PROVIDER: return createCloudProvider();
+			case UML2CloudProfilePackage.REQUEST: return createRequest();
+			case UML2CloudProfilePackage.SUBSCRIBE: return createSubscribe();
+			case UML2CloudProfilePackage.VM_INSTANTIATION: return createVMInstantiation();
+			case UML2CloudProfilePackage.APP_INSTANTIATION: return createAppInstantiation();
+			case UML2CloudProfilePackage.OK: return createOK();
+			case UML2CloudProfilePackage.NOTIFY: return createNotify();
+			case UML2CloudProfilePackage.TIMEOUT: return createTimeout();
+			case UML2CloudProfilePackage.RESPONSE: return createResponse();
+			case UML2CloudProfilePackage.REJECT: return createReject();
+			case UML2CloudProfilePackage.EXECUTE: return createExecute();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -95,11 +95,11 @@ public class UML2CloudFactoryImpl extends EFactoryImpl implements UML2CloudFacto
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case UML2CloudPackage.CHANNEL:
+			case UML2CloudProfilePackage.CHANNEL:
 				return createChannelFromString(eDataType, initialValue);
-			case UML2CloudPackage.CPU_SCHEDULER:
+			case UML2CloudProfilePackage.CPU_SCHEDULER:
 				return createCPUSchedulerFromString(eDataType, initialValue);
-			case UML2CloudPackage.CLOUD_PROVIDER_TYPE:
+			case UML2CloudProfilePackage.CLOUD_PROVIDER_TYPE:
 				return createCloudProviderTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -114,11 +114,11 @@ public class UML2CloudFactoryImpl extends EFactoryImpl implements UML2CloudFacto
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case UML2CloudPackage.CHANNEL:
+			case UML2CloudProfilePackage.CHANNEL:
 				return convertChannelToString(eDataType, instanceValue);
-			case UML2CloudPackage.CPU_SCHEDULER:
+			case UML2CloudProfilePackage.CPU_SCHEDULER:
 				return convertCPUSchedulerToString(eDataType, instanceValue);
-			case UML2CloudPackage.CLOUD_PROVIDER_TYPE:
+			case UML2CloudProfilePackage.CLOUD_PROVIDER_TYPE:
 				return convertCloudProviderTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -440,8 +440,8 @@ public class UML2CloudFactoryImpl extends EFactoryImpl implements UML2CloudFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UML2CloudPackage getUML2CloudPackage() {
-		return (UML2CloudPackage)getEPackage();
+	public UML2CloudProfilePackage getUML2CloudProfilePackage() {
+		return (UML2CloudProfilePackage)getEPackage();
 	}
 
 	/**
@@ -451,8 +451,8 @@ public class UML2CloudFactoryImpl extends EFactoryImpl implements UML2CloudFacto
 	 * @generated
 	 */
 	@Deprecated
-	public static UML2CloudPackage getPackage() {
-		return UML2CloudPackage.eINSTANCE;
+	public static UML2CloudProfilePackage getPackage() {
+		return UML2CloudProfilePackage.eINSTANCE;
 	}
 
-} //UML2CloudFactoryImpl
+} //UML2CloudProfileFactoryImpl
