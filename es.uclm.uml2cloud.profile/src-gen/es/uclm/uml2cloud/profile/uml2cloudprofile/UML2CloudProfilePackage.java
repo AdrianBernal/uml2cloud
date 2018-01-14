@@ -49,7 +49,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "UML2Cloud";
+	String eNS_PREFIX = "UML2CloudProfile";
 
 	/**
 	 * The singleton instance of the package.

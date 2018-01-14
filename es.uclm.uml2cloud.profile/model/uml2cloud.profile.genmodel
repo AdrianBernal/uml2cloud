@@ -12,7 +12,7 @@
     <details key="DUPLICATE_FEATURES" value="DISCARD"/>
     <details key="ANNOTATION_DETAILS" value="PROCESS"/>
     <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
-    <details key="DUPLICATE_FEATURE_INHERITANCE" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
     <details key="COMMENTS" value="PROCESS"/>
     <details key="DERIVED_FEATURES" value="PROCESS"/>
     <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
