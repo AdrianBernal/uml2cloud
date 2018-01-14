@@ -9,5 +9,5 @@
 	[comment Generar fichero ned para cada Scenario. /]
 	[aScenario.generateNEDFile()/]
 	[aScenario.generateINIFile()/]
-[comment]	[aScenario.testSIMCANM2Ttransformation()/][/comment]
+	[aScenario.testSIMCANM2Ttransformation()/]
 [/template]

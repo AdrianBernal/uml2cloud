@@ -33,9 +33,9 @@ public class TestSIMCANM2Ttransformation extends AbstractAcceleoGenerator {
     /**
      * The name of the module.
      *
-     * @generated NOT
+     * @generated
      */
-    public static final String MODULE_FILE_NAME = "/es/uclm/SIMCAN/M2Ttransformation/unitTests/testSIMCANM2Ttransformation";
+    public static final String MODULE_FILE_NAME = "/es/uclm/uml2cloud/m2t/simcan/unitTests/testSIMCANM2Ttransformation";
     
     /**
      * The name of the templates that are to be generated.
