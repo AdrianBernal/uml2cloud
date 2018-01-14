@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module util('http://www.uclm.es/UML/profiles/UML2Cloud/1')]
+
+
+[query public getEthernet(c : Set(Channel)) : String = Sequence(String){'DataCenterEth10M_channel','DataCenterEth100M_channel','DataCenterEth1G_channel','DataCenterEth10G_channel','DataCenterEth40G_channel','DataCenterEth100G_channel'}->at(Sequence(Channel){Channel::Ethernet10Mbps, Channel::Ethernet100Mbps, Channel::Ethernet1Gbps, Channel::Ethernet10Gbps, Channel::Ethernet40Gbps,Channel::Ethernet100Gbps}->indexOf(c->asSequence()->first()))/]
+
+[query public getDataCenters(aScenario : Scenario) : Sequence(DataCenter) = (aScenario.siblings(DataCenter)->select(d : DataCenter | aScenario.base_Package.packagedElement->includes(d.base_Component))) /]
+
+[query public getNodeType(aRack : Rack) : Node = if (aRack.oclIsTypeOf(RackCmp)) then (aRack.oclAsType(RackCmp).nodeCmpType) else (if(aRack.oclIsTypeOf(RackSto)) then (aRack.oclAsType(RackSto).nodeStoType) else (null) endif) endif /]
+
+[query public getFolder(aScenario : Scenario) : String = aScenario.base_Package.name+'/' /]

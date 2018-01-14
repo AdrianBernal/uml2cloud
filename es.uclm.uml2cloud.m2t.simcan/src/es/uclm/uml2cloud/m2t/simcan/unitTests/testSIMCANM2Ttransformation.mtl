@@ -1,0 +1,621 @@
+[comment encoding = UTF-8 /]
+[module testSIMCANM2Ttransformation('http://www.uclm.es/UML/profiles/UML2Cloud/1','http://www.eclipse.org/uml2/5.0.0/UML')/]
+[import es::uclm::uml2cloud::m2t::simcan::files::generateNEDFile /]
+[import es::uclm::uml2cloud::m2t::simcan::files::generateINIFile /]
+[import es::uclm::uml2cloud::m2t::simcan::files::util /]
+[import es::uclm::uml2cloud::m2t::simcan::services::testService /]
+
+[template public testSIMCANM2Ttransformation(aScenario : Scenario)]
+
+	[file (aScenario.getFolder()+'unitTestResults.html', false, 'UTF-8')]
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="ISO-8859-1">
+				<title>SIMCAN M2T Transformation Unit Tests</title>
+		</head>
+		<body>
+			<table style="background-color:#CCFFCC;border-collapse:collapse;border:1px solid #FFCC00;color:#000000;width:100%" cellpadding="3" cellspacing="3" border="1" align="center"  >
+				<tr>
+			 		<td align="center" colspan="3">SIMCAN M2T Transformation Unit Tests</td>
+				</tr>
+				<tr>
+					<td colspan="3"> File under test: generateNEDFile.mtl</td>
+				</tr>
+				[aScenario.testGenerateHeaderNEDFile()/]
+				[aScenario.siblings(DataCenter).testGenerateDataCenter()/]
+				[aScenario.siblings(DataCenter).rackElements.testGenerateRackElement()/]
+				[aScenario.siblings(DataCenter).testGenerateDataCenterNetwork()/]
+				[aScenario.siblings(DataCenter)->collect(aDataCenter | aDataCenter.rackElements.testGenerateRackConnection())/]
+				[aScenario.testGenerateScenario()/]
+				[aScenario.siblings(DataCenter).testGenerateScenarioDataCenter()/]
+				[aScenario.testGenerateScenarioCloudProvider()/]
+				[aScenario.testGenerateScenarioUserGenerator()/]
+				[aScenario.testGenerateScenarioConnections()/]
+			</table>
+			<br>
+			<table style="background-color:#CCFFCC;border-collapse:collapse;border:1px solid #FFCC00;color:#000000;width:100%" cellpadding="3" cellspacing="3" border="1" align="center"  >
+				<tr>
+			 		<td align="center" colspan="3">SIMCAN M2T Transformation Unit Tests</td>
+				<tr>
+					<td colspan="3"> File under test: generateINIFile.mtl</td>
+				</tr>
+				[aScenario.testGenerateHeaderINIFile()/]
+				[aScenario.testGenerateCloudProviderConfiguration()/]
+				[aScenario.siblings(DataCenter).testGenerateDataCenterConfiguration(aScenario.base_Package.name)/]
+				[aScenario.siblings(Rack).testGenerateRackConfiguration(aScenario.base_Package.name)/]
+				[aScenario.siblings(LocalApplication).testGenerateAppListLocalApplication()/]
+				[aScenario.siblings(VM).testGenerateVmList()/]
+				[aScenario.siblings(User).testGenerateUserList(aScenario)/]
+				[aScenario.siblings(Execute).testGenerateExecuteList()/]
+				[aScenario.siblings(Application).testGenerateApplicationInstantiationList()/]
+				[aScenario.siblings(Request).testGenerateRequestList()/]
+				[aScenario.siblings(VM).testGenerateVmInstantiationList()/]
+				[aScenario.siblings(DataCenter).testGenerateDataCenterList()/]
+				[aScenario.siblings(RackElement).testGenerateRackList()/]
+			</table>
+		</body>
+	</html>
+	[/file]
+	
+[/template]
+
+[template public testGenerateHeaderNEDFile(aScenario : Scenario)]
+<tr>
+	<td colspan="3"> Function under test: generateHeaderNEDFile(aScenario : Scenario)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aScenario.base_Package.name/]</td>
+	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'package((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.simulations\\.'+aScenario.base_Package.name+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Architecture\\.Nodes\\.Cloud\\.CloudBlade;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Architecture\\.Nodes.Cloud.CloudBoard;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Architecture\\.Nodes\\.Cloud\\.CloudRack;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)*'
+		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Management\\.CloudManagers\\.CloudDataCenterManagers\\.\\*\\.\\*;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Management\\.CloudManagers\\.CloudProviders\\.\\*\\.\\*;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Architecture\\.Network\\.DataCenterNetwork\\.\\*;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Management\\.UserGenerators\\.UserGenerator\\.\\*;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Management\\.UserGenerators\\.UserGeneratorBase\\.\\*;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+	,aScenario.generateHeaderNEDFile()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aScenario.generateHeaderNEDFile()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateDataCenter(aDataCenter : DataCenter)]
+<tr>
+	<td colspan="3"> Function under test: generateDataCenter(aDataCenter : DataCenter)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aDataCenter.base_Component.name/]</td>
+	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'module((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)'+aDataCenter.base_Component.name+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+			+'parameters((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+				+'string((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+				+'string((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+				+'string((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+			+'gates((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+				+'input((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)fromCloudProvider((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+				+'output((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)toCloudProvider((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+			+'submodules((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+				+'dcManager((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)CloudDataCenterManager((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+					+'parameters((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+						+'appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+						+'vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+						+'userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+				+'\\}((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+			+'[\\s\\S]*'
+			+'connections((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)allowunconnected((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+				+'dcManager.out((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)-->((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)ned.IdealChannel((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)-->((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)toCloudProvider((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+				+'dcManager.in((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)<--((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)ned.IdealChannel((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)<--((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)fromCloudProvider((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'[\\s\\S]*'
+		+'\\}((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+	,aDataCenter.generateDataCenter()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aDataCenter.generateDataCenter()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateRackElement(aRackElement : RackElement)]
+<tr>
+	<td colspan="3"> Function under test: generateRackElement(aRackElement : RackElement)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aRackElement.rack.base_Component.name/]</td>
+	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'('
+		+aRackElement.rack.eClass().name.toLowerFirst()+'_'+aRackElement.rack.base_Component.name+'_\\d+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)CloudRack((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'){'+aRackElement.instances+'}'
+	,aRackElement.generateRackElement()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aRackElement.generateRackElement()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateDataCenterNetwork(aDataCenter : DataCenter)]
+<tr>
+	<td colspan="3"> Function under test: generateDataCenterNetwork(aDataCenter : DataCenter)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aDataCenter.base_Component.name/]</td>
+	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'dataCenterNetwork((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)DataCenterNetwork((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+			+'gates((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+			+'inComm((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\[((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aDataCenter.rackElements->select(rack.oclIsKindOf(RackCmp))->collectNested(instances)->sum()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\]((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+			+'outComm((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\[((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aDataCenter.rackElements->select(rack.oclIsKindOf(RackCmp))->collectNested(instances)->sum()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\]((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+			+'inStorage((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\[((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aDataCenter.rackElements->select(rack.oclIsKindOf(RackSto))->collectNested(instances)->sum()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\]((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+			+'outStorage((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\[((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aDataCenter.rackElements->select(rack.oclIsKindOf(RackSto))->collectNested(instances)->sum()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\]((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+			+'\\}((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+	,aDataCenter.generateDataCenterNetwork()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aDataCenter.generateDataCenterNetwork()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateRackConnection(aRackElement : RackElement)]
+<tr>
+	<td colspan="3"> Function under test: generateRackConnection(aRackElement : RackElement)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aRackElement.rack.base_Component.name/]</td>
+	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'('
+		+aRackElement.rack.eClass().name.toLowerFirst()+'_'+aRackElement.rack.base_Component.name+'_\\d+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)out((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)-->((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)'+aRackElement.dataCenter.network->getEthernet()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)-->((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)dataCenterNetwork((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)inComm((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\+\\+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+aRackElement.rack.eClass().name.toLowerFirst()+'_'+aRackElement.rack.base_Component.name+'_\\d+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)in((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)<--((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)'+aRackElement.dataCenter.network->getEthernet()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)<--((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)dataCenterNetwork((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)outComm((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\+\\+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'){'+aRackElement.instances+'}'
+	,aRackElement.generateRackConnection()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+
+		<td>[aRackElement.generateRackConnection()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateScenario(aScenario : Scenario)]
+<tr>
+	<td colspan="3"> Function under test: generateScenario(aScenario : Scenario)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aScenario.base_Package.name/]</td>
+	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'network((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)'+aScenario.base_Package.name+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'parameters((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'string((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'string((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'string((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'string((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)dataCentersList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'submodules((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'[\\s\\S]*'
+		+'\\}((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+	,aScenario.generateScenario()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aScenario.generateScenario()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateScenarioDataCenter(aDataCenter : DataCenter)]
+<tr>
+	<td colspan="3"> Function under test: generateScenarioDataCenter(aDataCenter : DataCenter)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aDataCenter.base_Component.name/]</td>
+	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'dc_'+aDataCenter.base_Component.name+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aDataCenter.base_Component.name+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'parameters((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'\\}((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+	,aDataCenter.generateScenarioDataCenter()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aDataCenter.generateScenarioDataCenter()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateScenarioCloudProvider(aScenario : Scenario)]
+<tr>
+	<td colspan="3"> Function under test: generateScenarioCloudProvider(aScenario : Scenario)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aScenario.base_Package.name/]</td>
+	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'cloudProvider((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aScenario.cloudProvider+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'parameters((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'dataCentersList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)dataCentersList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'gates((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'fromDataCenter((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\[((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aScenario.getDataCenters()->size()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\]((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'	
+		+'toDataCenter((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\[((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aScenario.getDataCenters()->size()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\]((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'\\}((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+	,aScenario.generateScenarioCloudProvider()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aScenario.generateScenarioCloudProvider()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateScenarioUserGenerator(aScenario : Scenario)]
+<tr>
+	<td colspan="3"> Function under test: testGenerateScenarioUserGenerator(aScenario : Scenario)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aScenario.base_Package.name/]</td>
+	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'userGenerator((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)UserGenerator((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'parameters((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'\\}((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+	,aScenario.generateScenarioUserGenerator()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aScenario.generateScenarioUserGenerator()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateScenarioConnections(aScenario : Scenario)]
+<tr>
+	<td colspan="3"> Function under test: generateScenarioConnections(aScenario : Scenario)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aScenario.base_Package.name/]</td>
+	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'connections((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)allowunconnected((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+aScenario.getDataCenters()->collect( aDataCenter | ''
+		+'systemManager((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)toDataCenter((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\+\\+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)-->((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)ned.IdealChannel((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)-->((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)dc_+'+aDataCenter.base_Component.name+'_\\d+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)in((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'systemManager((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)fromDataCenter((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\+\\+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)<--((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)ned.IdealChannel((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)<--((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)dc_+'+aDataCenter.base_Component.name+'_\\d+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)out((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'')
+	,aScenario.generateScenarioConnections()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aScenario.generateScenarioConnections()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateHeaderINIFile(aScenario : Scenario)]
+<tr>
+	<td colspan="3"> Function under test: generateHeaderINIFile(aScenario : Scenario)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aScenario.base_Package.name/]</td>
+	[if (matchRE('((\\s*#.*[\\r\\n]+\\s*)+|\\s*)'
+		+'\\[General\\]((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'network *= *'+aScenario.base_Package.name+'((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'cmdenv-express-mode *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'ned-path *= *\\.\\.\\/\\.\\.\\/src;\\.\\.\\/;((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'\\*\\*\\.systemManager\\.cmdenv-log-level *= *debug((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'\\*\\*\\.cmdenv-log-level *= *off((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'cmdenv-log-prefix *= *"\\(%t\\):\\[%l\\] %m  "((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'\\*\\*.bin-recording *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'\\*\\*.module-eventlog-recording *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'\\*\\*.scalar-recording *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'\\*\\*.statistic-recording *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'\\*\\*\\.vector-recording *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]*\\s*)'
+	,aScenario.generateHeaderINIFile()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aScenario.generateHeaderINIFile()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateCloudProviderConfiguration(aScenario : Scenario)]
+<tr>
+	<td colspan="3"> Function under test: generateCloudProviderConfiguration(aScenario : Scenario)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aScenario.base_Package.name/]</td>
+	[if (matchRE('((\\s*#.*[\\r\\n]+\\s*)+|\\s*)'
+		+aScenario.base_Package.name+'\\.appList *= *"'+aScenario.siblings(Application)->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aScenario.base_Package.name+'\\.vmList *= *"'+aScenario.siblings(VM)->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aScenario.base_Package.name+'\\.userList *= *"'+aScenario.siblings(User)->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aScenario.base_Package.name+'\\.dataCentersList *= *"'+aScenario.getDataCenters()->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]*\\s*)'
+	,aScenario.generateCloudProviderConfiguration()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aScenario.generateCloudProviderConfiguration()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateDataCenterConfiguration(aDataCenter : DataCenter, packageName : String)]
+<tr>
+	<td colspan="3"> Function under test: generateHeaderINIFile(aScenario : Scenario)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aDataCenter.base_Component.name/]</td>
+	[if (matchRE('((\\s*#.*[\\r\\n]+\\s*)+|\\s*)'
+		+packageName+'\\.'+aDataCenter.base_Component.name+'\\.dcManager\\.dataCenterConfig *= *"'+aDataCenter.base_Component.name+' '+aDataCenter.rackElements->size()+' [\\s\\S]*'+aDataCenter.rackElements->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'[\\s\\S]*'
+	,aDataCenter.generateDataCenterConfiguration(packageName)))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aDataCenter.generateDataCenterConfiguration(packageName)/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateRackConfiguration(aRack : Rack, packageName : String)]
+<tr>
+	<td colspan="3"> Function under test: generateHeaderINIFile(aScenario : Scenario)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aRack.base_Component.name/]</td>
+	[if (matchRE('((\\s*#.*[\\r\\n]+\\s*)+|\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.channelType *= *"'+aRack.commLink->getEthernet()+'"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.numBoards *= *'+aRack.boards+'((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.bladesPerBoard *= *'+aRack.nodesPerBoard+'((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.board\\[\\*\\]\\.blade\\[\\*\\]\\.staticAppAssignment *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.board\\[\\*\\]\\.blade\\[\\*\\]\\.isVirtualHardware *= *true((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.board\\[\\*\\]\\.blade\\[\\*\\]\\.maxUsers *= *2((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.board\\[\\*\\]\\.blade\\[\\*\\]\\.maxVMs *= *2((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.board\\[\\*\\]\\.blade\\[\\*\\]\\.numCpuCores *= *'+aRack.getNodeType().cpu.numberOfCores+'((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.board\\[\\*\\]\\.blade\\[\\*\\]\\.cpu\\.cpuCore\\[\\*\\]\\.speed *= *'+aRack.getNodeType().cpu.speedMIPS+'((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.board\\[\\*\\]\\.blade\\[\\*\\]\\.cpu\\.cpuCore\\[\\*\\]\\.tick *= *'+aRack.getNodeType().cpu.tickS+'s((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+packageName+'\\.'+aRack.eClass().name.toLowerFirst()+'_'+aRack.base_Component.name+'_\\*\\.board\\[\\*\\]\\.blade\\[\\*\\]\\.appsVectors\\[\\*\\]\\.appModule\\[\\*\\]\\.userAppName *= *"DummyApplication"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]*\\s*)'
+	,aRack.generateRackConfiguration(packageName)))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aRack.generateRackConfiguration(packageName)/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateAppListLocalApplication(aApplication : LocalApplication)]
+<tr>
+	<td colspan="3"> Function under test: generateAppListLocalApplication(aApplication : LocalApplication)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aApplication.base_Component.name/]</td>
+	[if (matchRE(''
+		+aApplication.eClass().name+' '+aApplication.base_Component.name+' 6 inputDataSize int MiB '+aApplication.inputDataSizeMiB+' outputDataSize int MiB '+aApplication.outputDataSizeMiB+' inputFile string - '+aApplication.inputFile+' outputFile string - '+aApplication.outputFile+' MIs int - '+aApplication.MIs+' iterations int - '+aApplication.iterations+' '
+	,aApplication.generateAppListLocalApplication()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aApplication.generateAppListLocalApplication()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateVmList(aVM : VM)]
+<tr>
+	<td colspan="3"> Function under test: generateVmList(aVM : VM)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aVM.base_Component.name/]</td>
+	[if (matchRE(''
+		+aVM.base_Component.name+' '+aVM.costPerHour+' '+aVM.numberOfCores+' '+aVM.SCU+' '+aVM.diskGB+' '+aVM.memoryGB+' '
+	,aVM.generateVmList()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aVM.generateVmList()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateUserList(aUser : User, aScenario : Scenario)]
+<tr>
+	<td colspan="3"> Function under test: generateUserList(aUser : User, aScenario : Scenario)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aUser.base_Lifeline.name/]</td>
+	[if (matchRE(''
+		+aUser.base_Lifeline.name+' 1 [\\s\\S]*'
+	,aUser.generateUserList()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aUser.generateUserList()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateExecuteList(aExecute : Execute)]
+<tr>
+	<td colspan="3"> Function under test: generateExecuteList(aExecute : Execute)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aExecute.base_Message.name/] Execute</td>
+	[if (matchRE(''
+		+'1 [\\s\\S]*'
+	,aExecute.generateExecuteList()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aExecute.generateExecuteList()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateApplicationInstantiationList(aApplication : Application)]
+<tr>
+	<td colspan="3"> Function under test: generateApplicationInstantiationList(aApplicationInstantiation : ApplicationInstantiation)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aApplication.base_Component.name/] Instantiation</td>
+	[if (matchRE(''
+		+aApplication.base_Component.name+' 1'
+	,aApplication.generateApplicationInstantiationList()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aApplication.generateApplicationInstantiationList()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateRequestList(aRequest : Request)]
+<tr>
+	<td colspan="3"> Function under test: generateRequestList(aRequest : Request)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aRequest.base_Message.name/] Request</td>
+	[if (matchRE(''
+		+'1 [\\s\\S]*'
+	,aRequest.generateRequestList()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aRequest.generateRequestList()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateVmInstantiationList(aVM : VM)]
+<tr>
+	<td colspan="3"> Function under test: generateVmInstantiationList(aVMInstantiation : VMInstantiation)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aVM.base_Component.name/] Instantiation</td>
+	[if (matchRE(''
+		+aVM.base_Component.name+' 1'
+	,aVM.generateVmInstantiationList()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aVM.generateVmInstantiationList()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateDataCenterList(aDataCenter : DataCenter)]
+<tr>
+	<td colspan="3"> Function under test: generateDataCenterList(aDataCenter : DataCenter)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aDataCenter.base_Component.name/]</td>
+	[if (matchRE(''
+		+aDataCenter.base_Component.name+' '+aDataCenter.rackElements->size()+' [\\s\\S]*'+aDataCenter.rackElements->size()+' [\\s\\S]*'
+	,aDataCenter.generateDataCenterList()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aDataCenter.generateDataCenterList()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateRackList(aRackElement : RackElement)]
+<tr>
+	<td colspan="3"> Function under test: generateRackList(aRackElement : RackElement)</td>
+</tr>
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aRackElement.rack.base_Component.name/] Element</td>
+	[if (matchRE(''
+		+aRackElement.instances+' '+aRackElement.rack.base_Component.name+' '+aRackElement.rack.boards+' '+aRackElement.rack.nodesPerBoard+' '+aRackElement.rack.getNodeType().base_Component.name+' '+aRackElement.rack.getNodeType().storage.sizePerDeviceGB+' '+aRackElement.rack.getNodeType().memory.sizeGB+' '+aRackElement.rack.getNodeType().cpu.numberOfCores+' '+aRackElement.rack.getNodeType().cpu.speedMIPS
+	,aRackElement.generateRackList()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aRackElement.generateRackList()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public testGenerateUserGeneratorConfiguration(aScenario : Scenario)]
+[printHeader()/]
+<tr style="background-color :#FFFFFF">
+	<td>[aScenario.base_Package.name/]</td>
+	[if (matchRE('((\\s*#.*[\\r\\n]+\\s*)+|\\s*)'
+		+aScenario.base_Package.name+'\\.userGenerator\\.maxStartTime_t1 *= *"'+aScenario.siblings(Request)->first().rentingTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aScenario.base_Package.name+'\\.userGenerator\\.nRentTime_t2 *= *"'+aScenario.siblings(Request)->first().rentingTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aScenario.base_Package.name+'\\.userGenerator\\.maxSubTime_t3 *= *"'+aScenario.siblings(Subscribe)->first().maxSubTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aScenario.base_Package.name+'\\.userGenerator\\.maxSubscriptionTime_t4 *= *"'+aScenario.siblings(Subscribe)->first().maxSubTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]*\\s*)'
+	,aScenario.generateCloudProviderConfiguration()))]
+		<td style="background-color: green">OK</td>
+		<td></td>
+	[else]
+		<td style="background-color: red">FAIL</td>
+		<td>[aScenario.generateCloudProviderConfiguration()/]</td>
+	[/if]
+</tr>
+[/template]
+
+[template public printHeader(arg : OclAny)]
+<tr>
+	<td>Model Element</td>
+	<td>Test Result</td>
+	<td>Text Fragment</td>
+</tr>
+[/template]

@@ -1,0 +1,116 @@
+[comment encoding = UTF-8 /]
+[module generateINIFile('http://www.uclm.es/UML/profiles/UML2Cloud/1')]
+[import es::uclm::uml2cloud::m2t::simcan::files::util /]
+
+
+[template public generateINIFile(aScenario : Scenario)]
+
+[file (aScenario.getFolder()+'omnetpp.ini', false, 'UTF-8')]
+[aScenario.generateHeaderINIFile()/]
+[aScenario.generateCloudProviderConfiguration()/]
+[aScenario.getDataCenters().generateDataCenterConfiguration(aScenario.base_Package.name)/]
+
+[aScenario.generateUserGeneratorConfiguration()/]
+[/file]
+[/template]
+
+[template public generateHeaderINIFile(aScenario : Scenario)]
+['['/]General[']'/]
+network = [aScenario.base_Package.name/]
+cmdenv-express-mode = false
+ned-path = ../../src;../;
+**.cloudProvider.cmdenv-log-level = debug
+**.userGenerator.cmdenv-log-level = debug
+**.cmdenv-log-level = off	## off, error, info, debug and trace
+cmdenv-log-prefix = "(%t):['['/]%l[']'/] %m  "
+**.bin-recording = false
+**.module-eventlog-recording = false
+**.scalar-recording = false
+**.statistic-recording = false
+**.vector-recording = false
+
+[/template]
+
+[template public generateCloudProviderConfiguration(aScenario : Scenario)]
+################################################################
+###  Configuration of Cloud provider:CloudSystemManager
+################################################################
+[comment][aScenario.base_Package.name/].appList = "[aScenario.siblings(Application)->size()+' '/][for (aApplication : LocalApplication | aScenario.siblings(LocalApplication))][aApplication.eClass().name/] [aApplication.base_Component.name/] 6 inputDataSize int MiB [aApplication.inputDataSizeMiB/] outputDataSize int MiB [aApplication.outputDataSizeMiB/] inputFile string - [aApplication.inputFile/] outputFile string - [aApplication.outputFile/] MIs int - [aApplication.MIs/] iterations int - [aApplication.iterations/] [/for]"[/comment]
+[aScenario.base_Package.name/].appList = "[aScenario.siblings(Application)->size()+' '/][aScenario.siblings(LocalApplication).generateAppListLocalApplication()/]"
+[comment][aScenario.base_Package.name/].vmList = "[aScenario.siblings(VM)->size()+' '/][for (aVM : VM | aScenario.siblings(VM))][aVM.base_Component.name/] [aVM.costPerHour/] [aVM.numberOfCores/] [aVM.SCU/] [aVM.diskGB/] [aVM.memory/] [/for]"[/comment]
+[aScenario.base_Package.name/].vmList = "[aScenario.siblings(VM)->size()+' '/][aScenario.siblings(VM).generateVmList()/]"
+[comment][aScenario.base_Package.name/].userList = "[aScenario.siblings(User)->size()+' '/][for (aUser : User | aScenario.siblings(User))][aUser.base_Lifeline.name/] [aUser.instances/] [for (aExecute : Execute | aScenario.siblings(Execute))][if (aUser.base_Lifeline.coveredBy->asSet()->includes(aExecute.base_Message.sendEvent))][aExecute.t4/] [aExecute.applicationInstantiation->size() +' '/][for (aApplicationInstantiation : ApplicationInstantiation | aExecute.applicationInstantiation)][aApplicationInstantiation.applicationType.base_Component.name/] [aApplicationInstantiation.instances/][/for][/if] [/for][for (aRequest : Request | aScenario.siblings(Request))][if (aUser.base_Lifeline.coveredBy->asSet()->includes(aRequest.base_Message.sendEvent))][aRequest.t1/] [aRequest.t2/] [aRequest.vmInstantiation->size()+' '/][for (aVMInstantiation : VMInstantiation | aRequest.vmInstantiation)][aVMInstantiation.vmType.base_Component.name/] [aVMInstantiation.instances/] [/for][/if][/for][/for]"[/comment]
+[aScenario.base_Package.name/].userList = "[aScenario.siblings(User)->size()+' '/][aScenario.siblings(User).generateUserList()/]"
+[comment][aScenario.base_Package.name/].dataCentersList = "[aScenario.getDataCenters()->size()+' '/][for (aDataCenter : DataCenter | aScenario.siblings(DataCenter))][aDataCenter.base_Component.name/] [aDataCenter.rackElements->size()+' '/][for (aRackElement : RackElement | aDataCenter.rackElements)][if (aRackElement.rack.oclIsKindOf(RackCmp))][aRackElement.instances+' '/][aRackElement.rack.base_Component.name/] [aRackElement.rack.boards/] [aRackElement.rack.nodesPerBoard/] [aRackElement.rack.getNodeType().base_Component.name/] [aRackElement.rack.getNodeType().storage.sizePerDeviceGB/] [aRackElement.rack.getNodeType().memory.sizeGB/] [aRackElement.rack.getNodeType().cpu.numberOfCores/] [aRackElement.rack.getNodeType().cpu.speedMIPS/] [/if][/for][aDataCenter.rackElements->size()+' '/][for (aRackElement : RackElement | aDataCenter.rackElements)][if (aRackElement.rack.oclIsKindOf(RackSto))][aRackElement.instances+' '/][aRackElement.rack.base_Component.name/] [aRackElement.rack.boards/] [aRackElement.rack.nodesPerBoard/] [aRackElement.rack.getNodeType().base_Component.name/] [aRackElement.rack.getNodeType().storage.sizePerDeviceGB/] [aRackElement.rack.getNodeType().memory.sizeGB/] [aRackElement.rack.getNodeType().cpu.numberOfCores/] [aRackElement.rack.getNodeType().cpu.speedMIPS/][/if][/for] [/for]"[/comment]
+[aScenario.base_Package.name/].dataCentersList = "[aScenario.getDataCenters()->size()+' '/][aScenario.siblings(DataCenter).generateDataCenterList()/]"
+[/template]
+
+[template public generateDataCenterConfiguration(aDataCenter : DataCenter, packageName : String)]
+###-----------------------------------------------------------------
+###-.-  Configuration of [aDataCenter.base_Component.name/]
+###-----------------------------------------------------------------
+[packageName/].[aDataCenter.base_Component.name/].dcManager.dataCenterConfig = "[aDataCenter.base_Component.name/] [aDataCenter.rackElements->size()+' '/][aDataCenter.rackElements->select(aRackElement : RackElement | aRackElement.rack.oclIsKindOf(RackCmp)).generateRackList()/][aDataCenter.rackElements->size()+' '/][aDataCenter.rackElements->select(aRackElement : RackElement | aRackElement.rack.oclIsKindOf(RackSto)).generateRackList()/]"
+
+	[aDataCenter.rackElements.rack.generateRackConfiguration(packageName+'.'+aDataCenter.base_Component.name)/]
+[/template]
+
+[template public generateRackConfiguration(aRack : Rack, packageName : String)]
+## ---------------------------------------------------------------
+##   Configuration of rack(s) [aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*
+## ---------------------------------------------------------------
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.channelType = "[aRack.commLink->getEthernet()/]"
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.numBoards = [aRack.boards/]
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.bladesPerBoard = [aRack.nodesPerBoard/]
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].staticAppAssignment = false
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].isVirtualHardware = true
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].maxUsers = 2
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].maxVMs = 2
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].numCpuCores = [aRack.getNodeType().cpu.numberOfCores/]
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].cpu.cpuCore['['/]*[']'/].speed = [aRack.getNodeType().cpu.speedMIPS/]
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].cpu.cpuCore['['/]*[']'/].tick = [aRack.getNodeType().cpu.tickS/]s
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].appsVectors['['/]*[']'/].appModule['['/]*[']'/].userAppName = "DummyApplication"
+
+[/template]
+
+[template public generateAppListLocalApplication(aApplication : LocalApplication)]
+[aApplication.eClass().name/] [aApplication.base_Component.name/] 6 inputDataSize int MiB [aApplication.inputDataSizeMiB/] outputDataSize int MiB [aApplication.outputDataSizeMiB/] inputFile string - [aApplication.inputFile/] outputFile string - [aApplication.outputFile/] MIs int - [aApplication.MIs/] iterations int - [aApplication.iterations/] 
+[/template]
+
+[template public generateVmList(aVM : VM)]
+[aVM.base_Component.name/] [aVM.costPerHour/] [aVM.numberOfCores/] [aVM.SCU/] [aVM.diskGB/] [aVM.memoryGB/] 
+[/template]
+
+[template public generateUserList(aUser : User)]
+[aUser.base_Lifeline.name/] 1 [aUser.siblings(Execute)->select(aExecute : Execute | aUser.base_Lifeline.coveredBy->asSet()->includes(aExecute.base_Message.sendEvent)).generateExecuteList()/][aUser.siblings(Request)->select(aRequest : Request | aUser.base_Lifeline.coveredBy->asSet()->includes(aRequest.base_Message.sendEvent)).generateRequestList()/]
+[/template]
+
+[template public generateExecuteList(aExecute : Execute)]
+1 [aExecute.appInstantiation.applicationType.generateApplicationInstantiationList()/]
+[/template]
+
+[template public generateApplicationInstantiationList(aApplication : Application)]
+[aApplication.base_Component.name/] 1
+[/template]
+
+[template public generateRequestList(aRequest : Request)]
+1 [aRequest.vmInstantiation.vmType.generateVmInstantiationList()/]
+[/template]
+
+[template public generateVmInstantiationList(aVM : VM)]
+[aVM.base_Component.name/] 1
+[/template]
+
+[template public generateDataCenterList(aDataCenter : DataCenter)]
+[aDataCenter.base_Component.name/] [aDataCenter.rackElements->size()+' '/][aDataCenter.rackElements->select(aRackElement : RackElement | aRackElement.rack.oclIsKindOf(RackCmp)).generateRackList()/][aDataCenter.rackElements->size()+' '/][aDataCenter.rackElements->select(aRackElement : RackElement | aRackElement.rack.oclIsKindOf(RackSto)).generateRackList()/]
+[/template]
+
+[template public generateRackList(aRackElement : RackElement)]
+[aRackElement.instances+' '/][aRackElement.rack.base_Component.name/] [aRackElement.rack.boards/] [aRackElement.rack.nodesPerBoard/] [aRackElement.rack.getNodeType().base_Component.name/] [aRackElement.rack.getNodeType().storage.sizePerDeviceGB/] [aRackElement.rack.getNodeType().memory.sizeGB/] [aRackElement.rack.getNodeType().cpu.numberOfCores/] [aRackElement.rack.getNodeType().cpu.speedMIPS/] 
+[/template]
+
+[template public generateUserGeneratorConfiguration(aScenario : Scenario)]
+[aScenario.base_Package.name/].userGenerator.maxStartTime_t1 = [aScenario.siblings(Request)->first().rentingTime/]
+[aScenario.base_Package.name/].userGenerator.nRentTime_t2 = [aScenario.siblings(Request)->first().rentingTime/]
+[aScenario.base_Package.name/].userGenerator.maxSubTime_t3 = [aScenario.siblings(Subscribe)->first().maxSubTime/]
+[aScenario.base_Package.name/].userGenerator.maxSubscriptionTime_t4 = [aScenario.siblings(Subscribe)->first().maxSubTime/]
+[/template]

@@ -1,0 +1,200 @@
+[comment encoding = UTF-8 /]
+[module generateNEDFile('http://www.uclm.es/UML/profiles/UML2Cloud/1')]
+[import es::uclm::uml2cloud::m2t::simcan::files::util /]
+
+[template public generateNEDFile(aScenario : Scenario)]
+
+[file (aScenario.getFolder()+'scenario.ned', false, 'UTF-8')]
+[aScenario.generateHeaderNEDFile()/]
+[aScenario.getDataCenters().generateDataCenter()/]
+[aScenario.generateScenario()/]
+[/file]
+[/template]
+
+[template public generateHeaderNEDFile(aScenario : Scenario)]
+package simcan2.simulations.[aScenario.base_Package.name/];
+
+import simcan2.Architecture.Nodes.Cloud.CloudBlade;
+import simcan2.Architecture.Nodes.Cloud.CloudBoard;
+import simcan2.Architecture.Nodes.Cloud.CloudRack;
+import simcan2.Management.CloudManagers.CloudDataCenterManagers.*.*;
+import simcan2.Management.CloudManagers.CloudProviders.*.*;
+import simcan2.Architecture.Network.DataCenterNetwork.*;
+import simcan2.Management.UserGenerators.UserGenerator.*;
+import simcan2.Management.UserGenerators.UserGeneratorBase.*;
+
+[/template]
+
+[template public generateDataCenter(aDataCenter : DataCenter)]
+// ---------------------------------------------------------------
+//   Definition of the data-center [aDataCenter.base_Component.name/]
+// ---------------------------------------------------------------
+module [aDataCenter.base_Component.name/]{
+
+	parameters:
+		string appList;
+		string vmList;
+		string userList;
+
+	gates:
+		input fromCloudProvider;
+		output toCloudProvider;
+	
+	// -------------------------------------------------------
+	//   Definition of main modules
+	// -------------------------------------------------------
+	submodules:
+
+		// ---------------------------------------------------------------
+		//   Definition of the data-center manager
+		// ---------------------------------------------------------------
+		dcManager:CloudDataCenterManager{
+			parameters:
+				appList=appList;
+				vmList=vmList;
+				userList=userList;
+		}
+
+		// ---------------------------------------------------------------
+		//   Definition of Computing Racks
+		// ---------------------------------------------------------------
+		[aDataCenter.rackElements->select(rack.oclIsTypeOf(RackCmp)).generateRackElement()/]
+
+		// ---------------------------------------------------------------
+		//   Definition of Storage Racks
+		// ---------------------------------------------------------------
+		[aDataCenter.rackElements->select(rack.oclIsTypeOf(RackSto)).generateRackElement()/]
+
+		// ---------------------------------------------------------------
+		//   Definition of Network
+		// ---------------------------------------------------------------
+		[aDataCenter.generateDataCenterNetwork()/]
+
+	// ---------------------------------------------------------------
+	//   Connections section
+	// ---------------------------------------------------------------
+	connections allowunconnected:
+
+		// Connections between Data-Center manager and Data-center outside
+		dcManager.out --> ned.IdealChannel --> toCloudProvider;
+		dcManager.in <-- ned.IdealChannel <-- fromCloudProvider;
+
+		// Connections between computing racks and the network
+		[aDataCenter.rackElements->select(rack.oclIsTypeOf(RackCmp)).generateRackConnection()/]
+
+		// Connections between storage racks and the network
+		[aDataCenter.rackElements->select(rack.oclIsTypeOf(RackSto)).generateRackConnection()/]
+
+}
+
+[/template]
+
+[template public generateRackElement(aRackElement : RackElement) ? (aRackElement.instances>0)]
+[for (index : Integer | Sequence(Integer){1..aRackElement.instances})]
+[aRackElement.rack.eClass().name.toLowerFirst()/]_[aRackElement.rack.base_Component.name/]_[index/]:CloudRack;
+[/for]
+[/template]
+
+[template public generateDataCenterNetwork(aDataCenter : DataCenter)]
+dataCenterNetwork:DataCenterNetwork{
+	gates:
+		inComm['['/][aDataCenter.rackElements->select(rack.oclIsKindOf(RackCmp))->collectNested(instances)->sum()/][']'/];
+		outComm['['+aDataCenter.rackElements->select(rack.oclIsKindOf(RackCmp))->collectNested(instances)->sum()+']'/];
+		inStorage['['+aDataCenter.rackElements->select(rack.oclIsKindOf(RackSto))->collectNested(instances)->sum()+']'/];
+		outStorage['['+aDataCenter.rackElements->select(rack.oclIsKindOf(RackSto))->collectNested(instances)->sum()+']'/];
+}
+[/template]
+
+[template public generateRackConnection(aRackElement : RackElement)  ? (aRackElement.instances>0)]
+[for (index : Integer | Sequence(Integer){1..aRackElement.instances})]
+[aRackElement.rack.eClass().name.toLowerFirst()/]_[aRackElement.rack.base_Component.name/]_[index/].out --> [aRackElement.dataCenter.network->getEthernet()/] --> dataCenterNetwork.inComm++;
+[aRackElement.rack.eClass().name.toLowerFirst()/]_[aRackElement.rack.base_Component.name/]_[index/].in <-- [aRackElement.dataCenter.network->getEthernet()/] <-- dataCenterNetwork.outComm++;
+[/for]
+[/template]
+
+[template public generateScenario(aScenario : Scenario)]
+// ---------------------------------------------------------------
+//   Definition of the scenario
+// ---------------------------------------------------------------
+network [aScenario.base_Package.name/]{
+
+	parameters:
+		string appList;
+		string vmList;
+		string userList;
+		string dataCentersList;
+
+	// -------------------------------------------------------
+	//   Definition of main modules
+	// -------------------------------------------------------
+	submodules:
+
+		// ---------------------------------------------------------------
+		//   Definition of the data-centers
+		// ---------------------------------------------------------------
+		[aScenario.getDataCenters().generateScenarioDataCenter()/]
+
+		[aScenario.generateScenarioCloudProvider()/]
+
+		[aScenario.generateScenarioUserGenerator()/]
+	
+	[aScenario.generateScenarioConnections()/]
+}
+[/template]
+
+[template public generateScenarioDataCenter(aDataCenter : DataCenter)]
+dc_[aDataCenter.base_Component.name/]:[aDataCenter.base_Component.name/]{
+	parameters:
+		appList=appList;
+		vmList=vmList;
+		userList=userList;
+}
+[/template]
+
+[template public generateScenarioCloudProvider(aScenario : Scenario)]
+// -------------------------------------------------------
+//   Definition of the cloud provider
+// -------------------------------------------------------
+cloudProvider:[aScenario.cloudProvider/]{
+	parameters:
+		appList=appList;
+		vmList=vmList;
+		userList=userList;
+		dataCentersList=dataCentersList;
+
+	gates:
+		fromDataCenter['['+aScenario.getDataCenters()->size()+']'/];
+		toDataCenter['['+aScenario.getDataCenters()->size()+']'/];
+}
+[/template]
+
+[template public generateScenarioUserGenerator(aScenario : Scenario)]
+// -------------------------------------------------------
+//   Definition of the user generator
+// -------------------------------------------------------
+userGenerator:UserGenerator{
+	parameters:
+		appList=appList;
+		vmList=vmList;
+		userList=userList;
+}
+[/template]
+
+[template public generateScenarioConnections(aScenario : Scenario)]
+// ---------------------------------------------------------------
+//   Connections section
+// ---------------------------------------------------------------
+connections allowunconnected:
+
+	// Connections between the cloud provider and each data-center manager
+	[for (aDataCenter : DataCenter | aScenario.getDataCenters())]
+		cloudProvider.toDataCenter++ --> ned.IdealChannel --> dc_[aDataCenter.base_Component.name/]_[i/].in;
+		cloudProvider.fromDataCenter++ <-- ned.IdealChannel <-- dc_[aDataCenter.base_Component.name/]_[i/].out;	
+	[/for]
+
+	cloudProvider.toUserGenerator --> ned.IdealChannel --> userGenerator.fromCloudProvider;
+	userGenerator.toCloudProvider --> ned.IdealChannel --> cloudProvider.fromUserGenerator;
+[/template]
+
+
+
