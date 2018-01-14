@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="org.eclipse.ui.Examples/es.uclm.uml2cloud.examples"
+            class="org.eclipse.emf.common.ui.wizard.ExampleInstallerWizard"
+            icon="platform:/plugin/es.uclm.uml2cloud.profile/icons/uml2cloud.gif"
+            id="es.uclm.uml2cloud.examples.wizard"
+            name="UML2Cloud Examples"
+            project="true">
+      </wizard>
+      <category
+            id="es.uclm.uml2cloud.examples"
+            name="UML2Cloud Examples"
+            parentCategory="org.eclipse.ui.Examples">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.emf.common.ui.examples">
+      <example
+            id="es.uclm.uml2cloud.examplesbaseCloudSystem"
+            wizardID="es.uclm.uml2cloud.examples.wizard">
+         <projectDescriptor
+               contentURI="baseCloudSystem/"
+               name="baseCloudSystem">
+         </projectDescriptor>
+         <fileToOpen
+               location="pathmap://baseCloudSystem/model.di">
+         </fileToOpen>
+      </example>
+   </extension>
+
+</plugin>
