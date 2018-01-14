@@ -70,11 +70,10 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 			case UML2CloudProfilePackage.REPOSITORY: return createRepository();
 			case UML2CloudProfilePackage.VM: return createVM();
 			case UML2CloudProfilePackage.LOCAL_APPLICATION: return createLocalApplication();
-			case UML2CloudProfilePackage.USER: return createUser();
 			case UML2CloudProfilePackage.CLOUD_PROVIDER: return createCloudProvider();
 			case UML2CloudProfilePackage.REQUEST: return createRequest();
-			case UML2CloudProfilePackage.SUBSCRIBE: return createSubscribe();
 			case UML2CloudProfilePackage.VM_INSTANTIATION: return createVMInstantiation();
+			case UML2CloudProfilePackage.SUBSCRIBE: return createSubscribe();
 			case UML2CloudProfilePackage.APP_INSTANTIATION: return createAppInstantiation();
 			case UML2CloudProfilePackage.OK: return createOK();
 			case UML2CloudProfilePackage.NOTIFY: return createNotify();
@@ -82,6 +81,7 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 			case UML2CloudProfilePackage.RESPONSE: return createResponse();
 			case UML2CloudProfilePackage.REJECT: return createReject();
 			case UML2CloudProfilePackage.EXECUTE: return createExecute();
+			case UML2CloudProfilePackage.USER: return createUser();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -260,16 +260,6 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public User createUser() {
-		UserImpl user = new UserImpl();
-		return user;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CloudProvider createCloudProvider() {
 		CloudProviderImpl cloudProvider = new CloudProviderImpl();
 		return cloudProvider;
@@ -290,9 +280,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Subscribe createSubscribe() {
-		SubscribeImpl subscribe = new SubscribeImpl();
-		return subscribe;
+	public VMInstantiation createVMInstantiation() {
+		VMInstantiationImpl vmInstantiation = new VMInstantiationImpl();
+		return vmInstantiation;
 	}
 
 	/**
@@ -300,9 +290,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VMInstantiation createVMInstantiation() {
-		VMInstantiationImpl vmInstantiation = new VMInstantiationImpl();
-		return vmInstantiation;
+	public Subscribe createSubscribe() {
+		SubscribeImpl subscribe = new SubscribeImpl();
+		return subscribe;
 	}
 
 	/**
@@ -373,6 +363,16 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	public Execute createExecute() {
 		ExecuteImpl execute = new ExecuteImpl();
 		return execute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public User createUser() {
+		UserImpl user = new UserImpl();
+		return user;
 	}
 
 	/**

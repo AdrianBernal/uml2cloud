@@ -183,13 +183,6 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass userEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass cloudProviderEClass = null;
 
 	/**
@@ -204,14 +197,14 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass subscribeEClass = null;
+	private EClass vmInstantiationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vmInstantiationEClass = null;
+	private EClass subscribeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -261,6 +254,13 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * @generated
 	 */
 	private EClass executeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass userEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1119,24 +1119,6 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getUser() {
-		return userEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getUser_Base_Lifeline() {
-		return (EReference)userEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCloudProvider() {
 		return cloudProviderEClass;
 	}
@@ -1182,6 +1164,15 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRequest_VmInstantiation() {
+		return (EReference)requestEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getRequest__T1_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map() {
 		return requestEClass.getEOperations().get(0);
 	}
@@ -1193,6 +1184,33 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 */
 	public EOperation getRequest__T2_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
 		return requestEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVMInstantiation() {
+		return vmInstantiationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVMInstantiation_Instances() {
+		return (EAttribute)vmInstantiationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVMInstantiation_VmType() {
+		return (EReference)vmInstantiationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1238,33 +1256,6 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 */
 	public EOperation getSubscribe__T4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe__DiagnosticChain_Map() {
 		return subscribeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVMInstantiation() {
-		return vmInstantiationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVMInstantiation_Instances() {
-		return (EAttribute)vmInstantiationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVMInstantiation_VmType() {
-		return (EReference)vmInstantiationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1409,6 +1400,24 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 */
 	public EReference getExecute_AppInstantiation() {
 		return (EReference)executeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUser() {
+		return userEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUser_Base_Lifeline() {
+		return (EReference)userEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1567,27 +1576,25 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		createEOperation(localApplicationEClass, LOCAL_APPLICATION___MIS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
 		createEOperation(localApplicationEClass, LOCAL_APPLICATION___ITERATIONS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
 
-		userEClass = createEClass(USER);
-		createEReference(userEClass, USER__BASE_LIFELINE);
-
 		cloudProviderEClass = createEClass(CLOUD_PROVIDER);
 		createEReference(cloudProviderEClass, CLOUD_PROVIDER__BASE_LIFELINE);
 
 		requestEClass = createEClass(REQUEST);
 		createEReference(requestEClass, REQUEST__BASE_MESSAGE);
 		createEAttribute(requestEClass, REQUEST__RENTING_TIME);
+		createEReference(requestEClass, REQUEST__VM_INSTANTIATION);
 		createEOperation(requestEClass, REQUEST___T1_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
 		createEOperation(requestEClass, REQUEST___T2_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+
+		vmInstantiationEClass = createEClass(VM_INSTANTIATION);
+		createEAttribute(vmInstantiationEClass, VM_INSTANTIATION__INSTANCES);
+		createEReference(vmInstantiationEClass, VM_INSTANTIATION__VM_TYPE);
 
 		subscribeEClass = createEClass(SUBSCRIBE);
 		createEReference(subscribeEClass, SUBSCRIBE__BASE_MESSAGE);
 		createEAttribute(subscribeEClass, SUBSCRIBE__MAX_SUB_TIME);
 		createEOperation(subscribeEClass, SUBSCRIBE___T4_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
 		createEOperation(subscribeEClass, SUBSCRIBE___T4_SHOULD_BE_GREATER_THAN_OR_EQUAL_TO_T1_FROM_CONNECT_IF_YOU_WANT_TO_SUBSCRIBE__DIAGNOSTICCHAIN_MAP);
-
-		vmInstantiationEClass = createEClass(VM_INSTANTIATION);
-		createEAttribute(vmInstantiationEClass, VM_INSTANTIATION__INSTANCES);
-		createEReference(vmInstantiationEClass, VM_INSTANTIATION__VM_TYPE);
 
 		appInstantiationEClass = createEClass(APP_INSTANTIATION);
 		createEReference(appInstantiationEClass, APP_INSTANTIATION__APPLICATION_TYPE);
@@ -1611,6 +1618,9 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		executeEClass = createEClass(EXECUTE);
 		createEReference(executeEClass, EXECUTE__BASE_MESSAGE);
 		createEReference(executeEClass, EXECUTE__APP_INSTANTIATION);
+
+		userEClass = createEClass(USER);
+		createEReference(userEClass, USER__BASE_LIFELINE);
 
 		// Create enums
 		channelEEnum = createEEnum(CHANNEL);
@@ -1945,15 +1955,13 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(userEClass, User.class, "User", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUser_Base_Lifeline(), theUMLPackage.getLifeline(), null, "base_Lifeline", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
 		initEClass(cloudProviderEClass, CloudProvider.class, "CloudProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCloudProvider_Base_Lifeline(), theUMLPackage.getLifeline(), null, "base_Lifeline", null, 1, 1, CloudProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(requestEClass, Request.class, "Request", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRequest_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 1, 1, Request.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRequest_RentingTime(), theTypesPackage.getReal(), "rentingTime", null, 1, 1, Request.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRequest_VmInstantiation(), this.getVMInstantiation(), null, "vmInstantiation", null, 1, -1, Request.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getRequest__T1_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "t1_Must_Be_Greater_Than_Or_Equal_To_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1972,6 +1980,10 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(vmInstantiationEClass, VMInstantiation.class, "VMInstantiation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVMInstantiation_Instances(), theTypesPackage.getInteger(), "instances", "1", 1, 1, VMInstantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getVMInstantiation_VmType(), this.getVM(), null, "vmType", null, 1, 1, VMInstantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(subscribeEClass, Subscribe.class, "Subscribe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSubscribe_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 1, 1, Subscribe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1995,10 +2007,6 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(vmInstantiationEClass, VMInstantiation.class, "VMInstantiation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVMInstantiation_Instances(), theTypesPackage.getInteger(), "instances", "1", 1, 1, VMInstantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getVMInstantiation_VmType(), this.getVM(), null, "vmType", null, 1, 1, VMInstantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
 		initEClass(appInstantiationEClass, AppInstantiation.class, "AppInstantiation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAppInstantiation_ApplicationType(), this.getApplication(), null, "applicationType", null, 1, 1, AppInstantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAppInstantiation_Instances(), theTypesPackage.getInteger(), "instances", null, 1, 1, AppInstantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2021,6 +2029,9 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		initEClass(executeEClass, Execute.class, "Execute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExecute_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 1, 1, Execute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getExecute_AppInstantiation(), this.getAppInstantiation(), null, "appInstantiation", null, 1, -1, Execute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(userEClass, User.class, "User", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUser_Base_Lifeline(), theUMLPackage.getLifeline(), null, "base_Lifeline", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(channelEEnum, Channel.class, "Channel");

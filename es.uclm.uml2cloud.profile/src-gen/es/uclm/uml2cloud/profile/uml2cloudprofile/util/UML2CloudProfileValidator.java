@@ -335,16 +335,14 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 				return validateVM((VM)value, diagnostics, context);
 			case UML2CloudProfilePackage.LOCAL_APPLICATION:
 				return validateLocalApplication((LocalApplication)value, diagnostics, context);
-			case UML2CloudProfilePackage.USER:
-				return validateUser((User)value, diagnostics, context);
 			case UML2CloudProfilePackage.CLOUD_PROVIDER:
 				return validateCloudProvider((CloudProvider)value, diagnostics, context);
 			case UML2CloudProfilePackage.REQUEST:
 				return validateRequest((Request)value, diagnostics, context);
-			case UML2CloudProfilePackage.SUBSCRIBE:
-				return validateSubscribe((Subscribe)value, diagnostics, context);
 			case UML2CloudProfilePackage.VM_INSTANTIATION:
 				return validateVMInstantiation((VMInstantiation)value, diagnostics, context);
+			case UML2CloudProfilePackage.SUBSCRIBE:
+				return validateSubscribe((Subscribe)value, diagnostics, context);
 			case UML2CloudProfilePackage.APP_INSTANTIATION:
 				return validateAppInstantiation((AppInstantiation)value, diagnostics, context);
 			case UML2CloudProfilePackage.OK:
@@ -359,6 +357,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 				return validateReject((Reject)value, diagnostics, context);
 			case UML2CloudProfilePackage.EXECUTE:
 				return validateExecute((Execute)value, diagnostics, context);
+			case UML2CloudProfilePackage.USER:
+				return validateUser((User)value, diagnostics, context);
 			case UML2CloudProfilePackage.CHANNEL:
 				return validateChannel((Channel)value, diagnostics, context);
 			case UML2CloudProfilePackage.CPU_SCHEDULER:
@@ -866,15 +866,6 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateUser(User user, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(user, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateCloudProvider(CloudProvider cloudProvider, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(cloudProvider, diagnostics, context);
 	}
@@ -924,6 +915,15 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateVMInstantiation(VMInstantiation vmInstantiation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(vmInstantiation, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateSubscribe(Subscribe subscribe, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(subscribe, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(subscribe, diagnostics, context);
@@ -957,15 +957,6 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 */
 	public boolean validateSubscribe_t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe(Subscribe subscribe, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return subscribe.t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe(diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateVMInstantiation(VMInstantiation vmInstantiation, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(vmInstantiation, diagnostics, context);
 	}
 
 	/**
@@ -1029,6 +1020,15 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 */
 	public boolean validateExecute(Execute execute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(execute, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUser(User user, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(user, diagnostics, context);
 	}
 
 	/**

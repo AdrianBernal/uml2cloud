@@ -5,6 +5,7 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -21,6 +22,7 @@ import org.eclipse.uml2.uml.Message;
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getBase_Message <em>Base Message</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getRentingTime <em>Renting Time</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getVmInstantiation <em>Vm Instantiation</em>}</li>
  * </ul>
  *
  * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRequest()
@@ -79,6 +81,22 @@ public interface Request extends EObject {
 	 * @generated
 	 */
 	void setRentingTime(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Vm Instantiation</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Vm Instantiation</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Vm Instantiation</em>' containment reference list.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRequest_VmInstantiation()
+	 * @model containment="true" required="true" ordered="false"
+	 * @generated
+	 */
+	EList<VMInstantiation> getVmInstantiation();
 
 	/**
 	 * <!-- begin-user-doc -->

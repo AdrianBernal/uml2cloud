@@ -139,15 +139,6 @@ public interface UML2CloudProfileFactory extends EFactory {
 	LocalApplication createLocalApplication();
 
 	/**
-	 * Returns a new object of class '<em>User</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>User</em>'.
-	 * @generated
-	 */
-	User createUser();
-
-	/**
 	 * Returns a new object of class '<em>Cloud Provider</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -166,15 +157,6 @@ public interface UML2CloudProfileFactory extends EFactory {
 	Request createRequest();
 
 	/**
-	 * Returns a new object of class '<em>Subscribe</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Subscribe</em>'.
-	 * @generated
-	 */
-	Subscribe createSubscribe();
-
-	/**
 	 * Returns a new object of class '<em>VM Instantiation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -182,6 +164,15 @@ public interface UML2CloudProfileFactory extends EFactory {
 	 * @generated
 	 */
 	VMInstantiation createVMInstantiation();
+
+	/**
+	 * Returns a new object of class '<em>Subscribe</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Subscribe</em>'.
+	 * @generated
+	 */
+	Subscribe createSubscribe();
 
 	/**
 	 * Returns a new object of class '<em>App Instantiation</em>'.
@@ -245,6 +236,15 @@ public interface UML2CloudProfileFactory extends EFactory {
 	 * @generated
 	 */
 	Execute createExecute();
+
+	/**
+	 * Returns a new object of class '<em>User</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>User</em>'.
+	 * @generated
+	 */
+	User createUser();
 
 	/**
 	 * Returns the package supported by this factory.

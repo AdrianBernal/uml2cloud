@@ -1373,43 +1373,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int LOCAL_APPLICATION_OPERATION_COUNT = APPLICATION_OPERATION_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl <em>User</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getUser()
-	 * @generated
-	 */
-	int USER = 17;
-
-	/**
-	 * The feature id for the '<em><b>Base Lifeline</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER__BASE_LIFELINE = 0;
-
-	/**
-	 * The number of structural features of the '<em>User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl <em>Cloud Provider</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1417,7 +1380,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudProvider()
 	 * @generated
 	 */
-	int CLOUD_PROVIDER = 18;
+	int CLOUD_PROVIDER = 17;
 
 	/**
 	 * The feature id for the '<em><b>Base Lifeline</b></em>' reference.
@@ -1454,7 +1417,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRequest()
 	 * @generated
 	 */
-	int REQUEST = 19;
+	int REQUEST = 18;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1475,13 +1438,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int REQUEST__RENTING_TIME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Vm Instantiation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__VM_INSTANTIATION = 2;
+
+	/**
 	 * The number of structural features of the '<em>Request</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST_FEATURE_COUNT = 2;
+	int REQUEST_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>T1 Must Be Greater Than Or Equal To Zero</em>' operation.
@@ -1509,6 +1481,52 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @ordered
 	 */
 	int REQUEST_OPERATION_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl <em>VM Instantiation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVMInstantiation()
+	 * @generated
+	 */
+	int VM_INSTANTIATION = 19;
+
+	/**
+	 * The feature id for the '<em><b>Instances</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_INSTANTIATION__INSTANCES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Vm Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_INSTANTIATION__VM_TYPE = 1;
+
+	/**
+	 * The number of structural features of the '<em>VM Instantiation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_INSTANTIATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>VM Instantiation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_INSTANTIATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SubscribeImpl <em>Subscribe</em>}' class.
@@ -1575,52 +1593,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int SUBSCRIBE_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl <em>VM Instantiation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVMInstantiation()
-	 * @generated
-	 */
-	int VM_INSTANTIATION = 21;
-
-	/**
-	 * The feature id for the '<em><b>Instances</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_INSTANTIATION__INSTANCES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Vm Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_INSTANTIATION__VM_TYPE = 1;
-
-	/**
-	 * The number of structural features of the '<em>VM Instantiation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_INSTANTIATION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>VM Instantiation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_INSTANTIATION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.AppInstantiationImpl <em>App Instantiation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1628,7 +1600,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getAppInstantiation()
 	 * @generated
 	 */
-	int APP_INSTANTIATION = 22;
+	int APP_INSTANTIATION = 21;
 
 	/**
 	 * The feature id for the '<em><b>Application Type</b></em>' reference.
@@ -1674,7 +1646,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getOK()
 	 * @generated
 	 */
-	int OK = 23;
+	int OK = 22;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1711,7 +1683,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNotify()
 	 * @generated
 	 */
-	int NOTIFY = 24;
+	int NOTIFY = 23;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1748,7 +1720,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getTimeout()
 	 * @generated
 	 */
-	int TIMEOUT = 25;
+	int TIMEOUT = 24;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1785,7 +1757,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getResponse()
 	 * @generated
 	 */
-	int RESPONSE = 26;
+	int RESPONSE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1822,7 +1794,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getReject()
 	 * @generated
 	 */
-	int REJECT = 27;
+	int REJECT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1859,7 +1831,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getExecute()
 	 * @generated
 	 */
-	int EXECUTE = 28;
+	int EXECUTE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1896,6 +1868,43 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @ordered
 	 */
 	int EXECUTE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl <em>User</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getUser()
+	 * @generated
+	 */
+	int USER = 28;
+
+	/**
+	 * The feature id for the '<em><b>Base Lifeline</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__BASE_LIFELINE = 0;
+
+	/**
+	 * The number of structural features of the '<em>User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Channel <em>Channel</em>}' enum.
@@ -2813,27 +2822,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getLocalApplication__Iterations_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User <em>User</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>User</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.User
-	 * @generated
-	 */
-	EClass getUser();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getBase_Lifeline <em>Base Lifeline</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Lifeline</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.User#getBase_Lifeline()
-	 * @see #getUser()
-	 * @generated
-	 */
-	EReference getUser_Base_Lifeline();
-
-	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider <em>Cloud Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2887,6 +2875,17 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EAttribute getRequest_RentingTime();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getVmInstantiation <em>Vm Instantiation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Vm Instantiation</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getVmInstantiation()
+	 * @see #getRequest()
+	 * @generated
+	 */
+	EReference getRequest_VmInstantiation();
+
+	/**
 	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#t1_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>T1 Must Be Greater Than Or Equal To Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2905,6 +2904,38 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRequest__T2_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation <em>VM Instantiation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VM Instantiation</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation
+	 * @generated
+	 */
+	EClass getVMInstantiation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getInstances <em>Instances</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Instances</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getInstances()
+	 * @see #getVMInstantiation()
+	 * @generated
+	 */
+	EAttribute getVMInstantiation_Instances();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getVmType <em>Vm Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Vm Type</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getVmType()
+	 * @see #getVMInstantiation()
+	 * @generated
+	 */
+	EReference getVMInstantiation_VmType();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe <em>Subscribe</em>}'.
@@ -2957,38 +2988,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getSubscribe__T4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation <em>VM Instantiation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VM Instantiation</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation
-	 * @generated
-	 */
-	EClass getVMInstantiation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getInstances <em>Instances</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Instances</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getInstances()
-	 * @see #getVMInstantiation()
-	 * @generated
-	 */
-	EAttribute getVMInstantiation_Instances();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getVmType <em>Vm Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Vm Type</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getVmType()
-	 * @see #getVMInstantiation()
-	 * @generated
-	 */
-	EReference getVMInstantiation_VmType();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.AppInstantiation <em>App Instantiation</em>}'.
@@ -3158,6 +3157,27 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getExecute_AppInstantiation();
+
+	/**
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User <em>User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>User</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.User
+	 * @generated
+	 */
+	EClass getUser();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getBase_Lifeline <em>Base Lifeline</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Lifeline</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.User#getBase_Lifeline()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EReference getUser_Base_Lifeline();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Channel <em>Channel</em>}'.
@@ -3919,24 +3939,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation LOCAL_APPLICATION___ITERATIONS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getLocalApplication__Iterations_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl <em>User</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getUser()
-		 * @generated
-		 */
-		EClass USER = eINSTANCE.getUser();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Lifeline</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference USER__BASE_LIFELINE = eINSTANCE.getUser_Base_Lifeline();
-
-		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl <em>Cloud Provider</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3981,6 +3983,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EAttribute REQUEST__RENTING_TIME = eINSTANCE.getRequest_RentingTime();
 
 		/**
+		 * The meta object literal for the '<em><b>Vm Instantiation</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUEST__VM_INSTANTIATION = eINSTANCE.getRequest_VmInstantiation();
+
+		/**
 		 * The meta object literal for the '<em><b>T1 Must Be Greater Than Or Equal To Zero</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3995,6 +4005,32 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation REQUEST___T2_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRequest__T2_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl <em>VM Instantiation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVMInstantiation()
+		 * @generated
+		 */
+		EClass VM_INSTANTIATION = eINSTANCE.getVMInstantiation();
+
+		/**
+		 * The meta object literal for the '<em><b>Instances</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_INSTANTIATION__INSTANCES = eINSTANCE.getVMInstantiation_Instances();
+
+		/**
+		 * The meta object literal for the '<em><b>Vm Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VM_INSTANTIATION__VM_TYPE = eINSTANCE.getVMInstantiation_VmType();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SubscribeImpl <em>Subscribe</em>}' class.
@@ -4037,32 +4073,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SUBSCRIBE___T4_SHOULD_BE_GREATER_THAN_OR_EQUAL_TO_T1_FROM_CONNECT_IF_YOU_WANT_TO_SUBSCRIBE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscribe__T4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl <em>VM Instantiation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVMInstantiation()
-		 * @generated
-		 */
-		EClass VM_INSTANTIATION = eINSTANCE.getVMInstantiation();
-
-		/**
-		 * The meta object literal for the '<em><b>Instances</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VM_INSTANTIATION__INSTANCES = eINSTANCE.getVMInstantiation_Instances();
-
-		/**
-		 * The meta object literal for the '<em><b>Vm Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VM_INSTANTIATION__VM_TYPE = eINSTANCE.getVMInstantiation_VmType();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.AppInstantiationImpl <em>App Instantiation</em>}' class.
@@ -4205,6 +4215,24 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference EXECUTE__APP_INSTANTIATION = eINSTANCE.getExecute_AppInstantiation();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl <em>User</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getUser()
+		 * @generated
+		 */
+		EClass USER = eINSTANCE.getUser();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Lifeline</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference USER__BASE_LIFELINE = eINSTANCE.getUser_Base_Lifeline();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Channel <em>Channel</em>}' enum.

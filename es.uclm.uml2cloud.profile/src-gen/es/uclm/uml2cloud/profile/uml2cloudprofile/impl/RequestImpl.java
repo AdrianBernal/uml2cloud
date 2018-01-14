@@ -4,14 +4,17 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Request;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
 
 import java.lang.reflect.InvocationTargetException;
 
+import java.util.Collection;
 import java.util.Map;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -26,7 +29,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.uml2.uml.Message;
 
@@ -40,6 +45,7 @@ import org.eclipse.uml2.uml.Message;
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl#getBase_Message <em>Base Message</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl#getRentingTime <em>Renting Time</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl#getVmInstantiation <em>Vm Instantiation</em>}</li>
  * </ul>
  *
  * @generated
@@ -74,6 +80,16 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * @ordered
 	 */
 	protected double rentingTime = RENTING_TIME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getVmInstantiation() <em>Vm Instantiation</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVmInstantiation()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VMInstantiation> vmInstantiation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,6 +174,18 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<VMInstantiation> getVmInstantiation() {
+		if (vmInstantiation == null) {
+			vmInstantiation = new EObjectContainmentEList<VMInstantiation>(VMInstantiation.class, this, UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION);
+		}
+		return vmInstantiation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean t1_Must_Be_Greater_Than_Or_Equal_To_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
@@ -209,6 +237,20 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
+				return ((InternalEList<?>)getVmInstantiation()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case UML2CloudProfilePackage.REQUEST__BASE_MESSAGE:
@@ -216,6 +258,8 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 				return basicGetBase_Message();
 			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
 				return getRentingTime();
+			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
+				return getVmInstantiation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -225,6 +269,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -233,6 +278,10 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 				return;
 			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
 				setRentingTime((Double)newValue);
+				return;
+			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
+				getVmInstantiation().clear();
+				getVmInstantiation().addAll((Collection<? extends VMInstantiation>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -252,6 +301,9 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
 				setRentingTime(RENTING_TIME_EDEFAULT);
 				return;
+			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
+				getVmInstantiation().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -268,6 +320,8 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 				return base_Message != null;
 			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
 				return rentingTime != RENTING_TIME_EDEFAULT;
+			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
+				return vmInstantiation != null && !vmInstantiation.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -176,12 +176,6 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.USER: {
-				User user = (User)theEObject;
-				T result = caseUser(user);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case UML2CloudProfilePackage.CLOUD_PROVIDER: {
 				CloudProvider cloudProvider = (CloudProvider)theEObject;
 				T result = caseCloudProvider(cloudProvider);
@@ -194,15 +188,15 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.SUBSCRIBE: {
-				Subscribe subscribe = (Subscribe)theEObject;
-				T result = caseSubscribe(subscribe);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case UML2CloudProfilePackage.VM_INSTANTIATION: {
 				VMInstantiation vmInstantiation = (VMInstantiation)theEObject;
 				T result = caseVMInstantiation(vmInstantiation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.SUBSCRIBE: {
+				Subscribe subscribe = (Subscribe)theEObject;
+				T result = caseSubscribe(subscribe);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -245,6 +239,12 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 			case UML2CloudProfilePackage.EXECUTE: {
 				Execute execute = (Execute)theEObject;
 				T result = caseExecute(execute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.USER: {
+				User user = (User)theEObject;
+				T result = caseUser(user);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -508,21 +508,6 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>User</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>User</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUser(User object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Cloud Provider</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -553,21 +538,6 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Subscribe</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Subscribe</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSubscribe(Subscribe object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VM Instantiation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -579,6 +549,21 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVMInstantiation(VMInstantiation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Subscribe</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Subscribe</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSubscribe(Subscribe object) {
 		return null;
 	}
 
@@ -684,6 +669,21 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExecute(Execute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>User</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>User</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUser(User object) {
 		return null;
 	}
 

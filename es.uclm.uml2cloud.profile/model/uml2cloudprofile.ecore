@@ -601,10 +601,6 @@
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
         defaultValueLiteral="25"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="User">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Lifeline" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Lifeline"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CloudProvider">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Lifeline" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Lifeline"/>
@@ -652,6 +648,15 @@
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Message"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rentingTime" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vmInstantiation" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//VMInstantiation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VMInstantiation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instances" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vmType" ordered="false"
+        lowerBound="1" eType="#//VM"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Subscribe">
     <eOperations name="t4_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
@@ -699,13 +704,6 @@
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
         defaultValueLiteral="0.0"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VMInstantiation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instances" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
-        defaultValueLiteral="1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vmType" ordered="false"
-        lowerBound="1" eType="#//VM"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AppInstantiation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="applicationType" ordered="false"
         lowerBound="1" eType="#//Application"/>
@@ -737,5 +735,9 @@
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Message"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="appInstantiation" ordered="false"
         lowerBound="1" upperBound="-1" eType="#//AppInstantiation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="User">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Lifeline" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Lifeline"/>
   </eClassifiers>
 </ecore:EPackage>

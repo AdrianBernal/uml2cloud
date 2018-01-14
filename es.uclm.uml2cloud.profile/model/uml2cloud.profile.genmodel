@@ -233,10 +233,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//LocalApplication/iterations_Must_Be_Greater_Than_Or_Equal_To_Zero/context"/>
       </genOperations>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//User">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//User/base_Lifeline"/>
-    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//CloudProvider">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//CloudProvider/base_Lifeline"/>
@@ -245,6 +241,8 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Request/base_Message"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uml2cloudprofile.ecore#//Request/rentingTime"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Request/vmInstantiation"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Request/t1_Must_Be_Greater_Than_Or_Equal_To_Zero">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Request/t1_Must_Be_Greater_Than_Or_Equal_To_Zero/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Request/t1_Must_Be_Greater_Than_Or_Equal_To_Zero/context"/>
@@ -253,6 +251,11 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Request/t2_Must_Be_Greater_Than_Zero/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Request/t2_Must_Be_Greater_Than_Zero/context"/>
       </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//VMInstantiation">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uml2cloudprofile.ecore#//VMInstantiation/instances"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//VMInstantiation/vmType"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//Subscribe">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -266,11 +269,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Subscribe/t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Subscribe/t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe/context"/>
       </genOperations>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//VMInstantiation">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uml2cloudprofile.ecore#//VMInstantiation/instances"/>
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//VMInstantiation/vmType"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//AppInstantiation">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -302,6 +300,10 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Execute/base_Message"/>
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Execute/appInstantiation"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//User">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//User/base_Lifeline"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
