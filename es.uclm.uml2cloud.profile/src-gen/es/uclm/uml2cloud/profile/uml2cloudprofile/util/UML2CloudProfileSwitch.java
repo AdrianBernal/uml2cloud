@@ -72,6 +72,12 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case UML2CloudProfilePackage.BANDWIDTH: {
+				Bandwidth bandwidth = (Bandwidth)theEObject;
+				T result = caseBandwidth(bandwidth);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case UML2CloudProfilePackage.RACK_ELEMENT: {
 				RackElement rackElement = (RackElement)theEObject;
 				T result = caseRackElement(rackElement);
@@ -84,9 +90,9 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.NODE: {
-				Node node = (Node)theEObject;
-				T result = caseNode(node);
+			case UML2CloudProfilePackage.MACHINE: {
+				Machine machine = (Machine)theEObject;
+				T result = caseMachine(machine);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -110,50 +116,62 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.DISK: {
-				Disk disk = (Disk)theEObject;
-				T result = caseDisk(disk);
-				if (result == null) result = caseHardware(disk);
+			case UML2CloudProfilePackage.SIZE: {
+				Size size = (Size)theEObject;
+				T result = caseSize(size);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.RACK_CMP: {
-				RackCmp rackCmp = (RackCmp)theEObject;
-				T result = caseRackCmp(rackCmp);
-				if (result == null) result = caseRack(rackCmp);
+			case UML2CloudProfilePackage.LATENCY: {
+				Latency latency = (Latency)theEObject;
+				T result = caseLatency(latency);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.NODE_CMP: {
-				NodeCmp nodeCmp = (NodeCmp)theEObject;
-				T result = caseNodeCmp(nodeCmp);
-				if (result == null) result = caseNode(nodeCmp);
+			case UML2CloudProfilePackage.TIME: {
+				Time time = (Time)theEObject;
+				T result = caseTime(time);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.RACK_STO: {
-				RackSto rackSto = (RackSto)theEObject;
-				T result = caseRackSto(rackSto);
-				if (result == null) result = caseRack(rackSto);
+			case UML2CloudProfilePackage.STORAGE: {
+				Storage storage = (Storage)theEObject;
+				T result = caseStorage(storage);
+				if (result == null) result = caseHardware(storage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.NODE_STO: {
-				NodeSto nodeSto = (NodeSto)theEObject;
-				T result = caseNodeSto(nodeSto);
-				if (result == null) result = caseNode(nodeSto);
+			case UML2CloudProfilePackage.COMPUTING_RACK: {
+				ComputingRack computingRack = (ComputingRack)theEObject;
+				T result = caseComputingRack(computingRack);
+				if (result == null) result = caseRack(computingRack);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.SCENARIO: {
-				Scenario scenario = (Scenario)theEObject;
-				T result = caseScenario(scenario);
+			case UML2CloudProfilePackage.COMPUTING_MACHINE: {
+				ComputingMachine computingMachine = (ComputingMachine)theEObject;
+				T result = caseComputingMachine(computingMachine);
+				if (result == null) result = caseMachine(computingMachine);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.REPOSITORY: {
-				Repository repository = (Repository)theEObject;
-				T result = caseRepository(repository);
+			case UML2CloudProfilePackage.STORAGE_RACK: {
+				StorageRack storageRack = (StorageRack)theEObject;
+				T result = caseStorageRack(storageRack);
+				if (result == null) result = caseRack(storageRack);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.STORAGE_MACHINE: {
+				StorageMachine storageMachine = (StorageMachine)theEObject;
+				T result = caseStorageMachine(storageMachine);
+				if (result == null) result = caseMachine(storageMachine);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.CLOUD_PROVIDER: {
+				CloudProvider cloudProvider = (CloudProvider)theEObject;
+				T result = caseCloudProvider(cloudProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -163,22 +181,15 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case UML2CloudProfilePackage.PARAMETER: {
+				Parameter parameter = (Parameter)theEObject;
+				T result = caseParameter(parameter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case UML2CloudProfilePackage.VM: {
 				VM vm = (VM)theEObject;
 				T result = caseVM(vm);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UML2CloudProfilePackage.LOCAL_APPLICATION: {
-				LocalApplication localApplication = (LocalApplication)theEObject;
-				T result = caseLocalApplication(localApplication);
-				if (result == null) result = caseApplication(localApplication);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UML2CloudProfilePackage.CLOUD_PROVIDER: {
-				CloudProvider cloudProvider = (CloudProvider)theEObject;
-				T result = caseCloudProvider(cloudProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -248,6 +259,18 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE: {
+				CloudInfrastructure cloudInfrastructure = (CloudInfrastructure)theEObject;
+				T result = caseCloudInfrastructure(cloudInfrastructure);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.DATA_CENTER_ELEMENT: {
+				DataCenterElement dataCenterElement = (DataCenterElement)theEObject;
+				T result = caseDataCenterElement(dataCenterElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -264,6 +287,21 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDataCenter(DataCenter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bandwidth</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bandwidth</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBandwidth(Bandwidth object) {
 		return null;
 	}
 
@@ -298,17 +336,17 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Machine</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Machine</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNode(Node object) {
+	public T caseMachine(Machine object) {
 		return null;
 	}
 
@@ -358,107 +396,137 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Disk</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Size</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Disk</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Size</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDisk(Disk object) {
+	public T caseSize(Size object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Rack Cmp</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Latency</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Rack Cmp</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Latency</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRackCmp(RackCmp object) {
+	public T caseLatency(Latency object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Node Cmp</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Time</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node Cmp</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Time</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNodeCmp(NodeCmp object) {
+	public T caseTime(Time object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Rack Sto</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Storage</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Rack Sto</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Storage</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRackSto(RackSto object) {
+	public T caseStorage(Storage object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Node Sto</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Computing Rack</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node Sto</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Computing Rack</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNodeSto(NodeSto object) {
+	public T caseComputingRack(ComputingRack object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Scenario</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Computing Machine</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Scenario</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Computing Machine</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseScenario(Scenario object) {
+	public T caseComputingMachine(ComputingMachine object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Repository</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Storage Rack</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Repository</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Storage Rack</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRepository(Repository object) {
+	public T caseStorageRack(StorageRack object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Storage Machine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Storage Machine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStorageMachine(StorageMachine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cloud Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cloud Provider</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCloudProvider(CloudProvider object) {
 		return null;
 	}
 
@@ -478,6 +546,21 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParameter(Parameter object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VM</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -489,36 +572,6 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVM(VM object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Local Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Local Application</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLocalApplication(LocalApplication object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cloud Provider</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cloud Provider</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCloudProvider(CloudProvider object) {
 		return null;
 	}
 
@@ -684,6 +737,36 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUser(User object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cloud Infrastructure</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cloud Infrastructure</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCloudInfrastructure(CloudInfrastructure object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Center Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Center Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataCenterElement(DataCenterElement object) {
 		return null;
 	}
 

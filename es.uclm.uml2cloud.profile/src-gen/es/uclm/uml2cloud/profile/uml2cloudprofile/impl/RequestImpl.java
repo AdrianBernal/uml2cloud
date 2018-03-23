@@ -44,7 +44,6 @@ import org.eclipse.uml2.uml.Message;
  * </p>
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl#getBase_Message <em>Base Message</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl#getRentingTime <em>Renting Time</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl#getVmInstantiation <em>Vm Instantiation</em>}</li>
  * </ul>
  *
@@ -60,26 +59,6 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * @ordered
 	 */
 	protected Message base_Message;
-
-	/**
-	 * The default value of the '{@link #getRentingTime() <em>Renting Time</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRentingTime()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double RENTING_TIME_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getRentingTime() <em>Renting Time</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRentingTime()
-	 * @generated
-	 * @ordered
-	 */
-	protected double rentingTime = RENTING_TIME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getVmInstantiation() <em>Vm Instantiation</em>}' containment reference list.
@@ -153,27 +132,6 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getRentingTime() {
-		return rentingTime;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRentingTime(double newRentingTime) {
-		double oldRentingTime = rentingTime;
-		rentingTime = newRentingTime;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.REQUEST__RENTING_TIME, oldRentingTime, rentingTime));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<VMInstantiation> getVmInstantiation() {
 		if (vmInstantiation == null) {
 			vmInstantiation = new EObjectContainmentEList<VMInstantiation>(VMInstantiation.class, this, UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION);
@@ -186,7 +144,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean t1_Must_Be_Greater_Than_Or_Equal_To_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
@@ -197,33 +155,8 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.REQUEST__T1_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "t1_Must_Be_Greater_Than_Or_Equal_To_Zero", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean t2_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.REQUEST__T2_MUST_BE_GREATER_THAN_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "t2_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 UML2CloudProfileValidator.REQUEST__RENTING_TIME_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -256,8 +189,6 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 			case UML2CloudProfilePackage.REQUEST__BASE_MESSAGE:
 				if (resolve) return getBase_Message();
 				return basicGetBase_Message();
-			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
-				return getRentingTime();
 			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
 				return getVmInstantiation();
 		}
@@ -275,9 +206,6 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 		switch (featureID) {
 			case UML2CloudProfilePackage.REQUEST__BASE_MESSAGE:
 				setBase_Message((Message)newValue);
-				return;
-			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
-				setRentingTime((Double)newValue);
 				return;
 			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
 				getVmInstantiation().clear();
@@ -298,9 +226,6 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 			case UML2CloudProfilePackage.REQUEST__BASE_MESSAGE:
 				setBase_Message((Message)null);
 				return;
-			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
-				setRentingTime(RENTING_TIME_EDEFAULT);
-				return;
 			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
 				getVmInstantiation().clear();
 				return;
@@ -318,8 +243,6 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 		switch (featureID) {
 			case UML2CloudProfilePackage.REQUEST__BASE_MESSAGE:
 				return base_Message != null;
-			case UML2CloudProfilePackage.REQUEST__RENTING_TIME:
-				return rentingTime != RENTING_TIME_EDEFAULT;
 			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
 				return vmInstantiation != null && !vmInstantiation.isEmpty();
 		}
@@ -335,28 +258,10 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudProfilePackage.REQUEST___T1_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
-				return t1_Must_Be_Greater_Than_Or_Equal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudProfilePackage.REQUEST___T2_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
-				return t2_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.REQUEST___RENTING_TIME_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
+				return rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (rentingTime: ");
-		result.append(rentingTime);
-		result.append(')');
-		return result.toString();
 	}
 
 } //RequestImpl

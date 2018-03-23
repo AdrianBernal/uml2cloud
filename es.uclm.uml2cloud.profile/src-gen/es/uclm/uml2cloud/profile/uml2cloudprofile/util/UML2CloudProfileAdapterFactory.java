@@ -72,6 +72,10 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 				return createDataCenterAdapter();
 			}
 			@Override
+			public Adapter caseBandwidth(Bandwidth object) {
+				return createBandwidthAdapter();
+			}
+			@Override
 			public Adapter caseRackElement(RackElement object) {
 				return createRackElementAdapter();
 			}
@@ -80,8 +84,8 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 				return createRackAdapter();
 			}
 			@Override
-			public Adapter caseNode(Node object) {
-				return createNodeAdapter();
+			public Adapter caseMachine(Machine object) {
+				return createMachineAdapter();
 			}
 			@Override
 			public Adapter caseCPU(CPU object) {
@@ -96,48 +100,52 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 				return createMemoryAdapter();
 			}
 			@Override
-			public Adapter caseDisk(Disk object) {
-				return createDiskAdapter();
+			public Adapter caseSize(Size object) {
+				return createSizeAdapter();
 			}
 			@Override
-			public Adapter caseRackCmp(RackCmp object) {
-				return createRackCmpAdapter();
+			public Adapter caseLatency(Latency object) {
+				return createLatencyAdapter();
 			}
 			@Override
-			public Adapter caseNodeCmp(NodeCmp object) {
-				return createNodeCmpAdapter();
+			public Adapter caseTime(Time object) {
+				return createTimeAdapter();
 			}
 			@Override
-			public Adapter caseRackSto(RackSto object) {
-				return createRackStoAdapter();
+			public Adapter caseStorage(Storage object) {
+				return createStorageAdapter();
 			}
 			@Override
-			public Adapter caseNodeSto(NodeSto object) {
-				return createNodeStoAdapter();
+			public Adapter caseComputingRack(ComputingRack object) {
+				return createComputingRackAdapter();
 			}
 			@Override
-			public Adapter caseScenario(Scenario object) {
-				return createScenarioAdapter();
+			public Adapter caseComputingMachine(ComputingMachine object) {
+				return createComputingMachineAdapter();
 			}
 			@Override
-			public Adapter caseRepository(Repository object) {
-				return createRepositoryAdapter();
+			public Adapter caseStorageRack(StorageRack object) {
+				return createStorageRackAdapter();
+			}
+			@Override
+			public Adapter caseStorageMachine(StorageMachine object) {
+				return createStorageMachineAdapter();
+			}
+			@Override
+			public Adapter caseCloudProvider(CloudProvider object) {
+				return createCloudProviderAdapter();
 			}
 			@Override
 			public Adapter caseApplication(Application object) {
 				return createApplicationAdapter();
 			}
 			@Override
+			public Adapter caseParameter(Parameter object) {
+				return createParameterAdapter();
+			}
+			@Override
 			public Adapter caseVM(VM object) {
 				return createVMAdapter();
-			}
-			@Override
-			public Adapter caseLocalApplication(LocalApplication object) {
-				return createLocalApplicationAdapter();
-			}
-			@Override
-			public Adapter caseCloudProvider(CloudProvider object) {
-				return createCloudProviderAdapter();
 			}
 			@Override
 			public Adapter caseRequest(Request object) {
@@ -184,6 +192,14 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 				return createUserAdapter();
 			}
 			@Override
+			public Adapter caseCloudInfrastructure(CloudInfrastructure object) {
+				return createCloudInfrastructureAdapter();
+			}
+			@Override
+			public Adapter caseDataCenterElement(DataCenterElement object) {
+				return createDataCenterElementAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -218,6 +234,20 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth <em>Bandwidth</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth
+	 * @generated
+	 */
+	public Adapter createBandwidthAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement <em>Rack Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -246,16 +276,16 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Machine <em>Machine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Node
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Machine
 	 * @generated
 	 */
-	public Adapter createNodeAdapter() {
+	public Adapter createMachineAdapter() {
 		return null;
 	}
 
@@ -302,100 +332,128 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk <em>Disk</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Size <em>Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Disk
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Size
 	 * @generated
 	 */
-	public Adapter createDiskAdapter() {
+	public Adapter createSizeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackCmp <em>Rack Cmp</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Latency <em>Latency</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackCmp
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Latency
 	 * @generated
 	 */
-	public Adapter createRackCmpAdapter() {
+	public Adapter createLatencyAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.NodeCmp <em>Node Cmp</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Time <em>Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.NodeCmp
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Time
 	 * @generated
 	 */
-	public Adapter createNodeCmpAdapter() {
+	public Adapter createTimeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackSto <em>Rack Sto</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage <em>Storage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackSto
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage
 	 * @generated
 	 */
-	public Adapter createRackStoAdapter() {
+	public Adapter createStorageAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.NodeSto <em>Node Sto</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingRack <em>Computing Rack</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.NodeSto
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingRack
 	 * @generated
 	 */
-	public Adapter createNodeStoAdapter() {
+	public Adapter createComputingRackAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario <em>Scenario</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingMachine <em>Computing Machine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingMachine
 	 * @generated
 	 */
-	public Adapter createScenarioAdapter() {
+	public Adapter createComputingMachineAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Repository <em>Repository</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.StorageRack <em>Storage Rack</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Repository
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.StorageRack
 	 * @generated
 	 */
-	public Adapter createRepositoryAdapter() {
+	public Adapter createStorageRackAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.StorageMachine <em>Storage Machine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.StorageMachine
+	 * @generated
+	 */
+	public Adapter createStorageMachineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider <em>Cloud Provider</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider
+	 * @generated
+	 */
+	public Adapter createCloudProviderAdapter() {
 		return null;
 	}
 
@@ -414,6 +472,20 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter
+	 * @generated
+	 */
+	public Adapter createParameterAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM <em>VM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -424,34 +496,6 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVMAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication <em>Local Application</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication
-	 * @generated
-	 */
-	public Adapter createLocalApplicationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider <em>Cloud Provider</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider
-	 * @generated
-	 */
-	public Adapter createCloudProviderAdapter() {
 		return null;
 	}
 
@@ -606,6 +650,34 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUserAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure <em>Cloud Infrastructure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure
+	 * @generated
+	 */
+	public Adapter createCloudInfrastructureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement <em>Data Center Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement
+	 * @generated
+	 */
+	public Adapter createDataCenterElementAdapter() {
 		return null;
 	}
 

@@ -2,21 +2,17 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Rack;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,43 +22,42 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackElementImpl#getInstances <em>Instances</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackElementImpl#getRack <em>Rack</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackElementImpl#getDataCenter <em>Data Center</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackElementImpl#getNumberOfRacks <em>Number Of Racks</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackElementImpl#getRackType <em>Rack Type</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RackElementImpl extends MinimalEObjectImpl.Container implements RackElement {
 	/**
-	 * The default value of the '{@link #getInstances() <em>Instances</em>}' attribute.
+	 * The default value of the '{@link #getNumberOfRacks() <em>Number Of Racks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstances()
+	 * @see #getNumberOfRacks()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int INSTANCES_EDEFAULT = 0;
+	protected static final int NUMBER_OF_RACKS_EDEFAULT = 1;
 
 	/**
-	 * The cached value of the '{@link #getInstances() <em>Instances</em>}' attribute.
+	 * The cached value of the '{@link #getNumberOfRacks() <em>Number Of Racks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstances()
+	 * @see #getNumberOfRacks()
 	 * @generated
 	 * @ordered
 	 */
-	protected int instances = INSTANCES_EDEFAULT;
+	protected int numberOfRacks = NUMBER_OF_RACKS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRack() <em>Rack</em>}' reference.
+	 * The cached value of the '{@link #getRackType() <em>Rack Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRack()
+	 * @see #getRackType()
 	 * @generated
 	 * @ordered
 	 */
-	protected Rack rack;
+	protected Rack rackType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -88,8 +83,8 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getInstances() {
-		return instances;
+	public int getNumberOfRacks() {
+		return numberOfRacks;
 	}
 
 	/**
@@ -97,11 +92,11 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInstances(int newInstances) {
-		int oldInstances = instances;
-		instances = newInstances;
+	public void setNumberOfRacks(int newNumberOfRacks) {
+		int oldNumberOfRacks = numberOfRacks;
+		numberOfRacks = newNumberOfRacks;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK_ELEMENT__INSTANCES, oldInstances, instances));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK_ELEMENT__NUMBER_OF_RACKS, oldNumberOfRacks, numberOfRacks));
 	}
 
 	/**
@@ -109,16 +104,16 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Rack getRack() {
-		if (rack != null && rack.eIsProxy()) {
-			InternalEObject oldRack = (InternalEObject)rack;
-			rack = (Rack)eResolveProxy(oldRack);
-			if (rack != oldRack) {
+	public Rack getRackType() {
+		if (rackType != null && rackType.eIsProxy()) {
+			InternalEObject oldRackType = (InternalEObject)rackType;
+			rackType = (Rack)eResolveProxy(oldRackType);
+			if (rackType != oldRackType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.RACK_ELEMENT__RACK, oldRack, rack));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.RACK_ELEMENT__RACK_TYPE, oldRackType, rackType));
 			}
 		}
-		return rack;
+		return rackType;
 	}
 
 	/**
@@ -126,8 +121,8 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Rack basicGetRack() {
-		return rack;
+	public Rack basicGetRackType() {
+		return rackType;
 	}
 
 	/**
@@ -135,96 +130,11 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRack(Rack newRack) {
-		Rack oldRack = rack;
-		rack = newRack;
+	public void setRackType(Rack newRackType) {
+		Rack oldRackType = rackType;
+		rackType = newRackType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK_ELEMENT__RACK, oldRack, rack));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DataCenter getDataCenter() {
-		if (eContainerFeatureID() != UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER) return null;
-		return (DataCenter)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDataCenter(DataCenter newDataCenter, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newDataCenter, UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDataCenter(DataCenter newDataCenter) {
-		if (newDataCenter != eInternalContainer() || (eContainerFeatureID() != UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER && newDataCenter != null)) {
-			if (EcoreUtil.isAncestor(this, newDataCenter))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newDataCenter != null)
-				msgs = ((InternalEObject)newDataCenter).eInverseAdd(this, UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS, DataCenter.class, msgs);
-			msgs = basicSetDataCenter(newDataCenter, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER, newDataCenter, newDataCenter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetDataCenter((DataCenter)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
-				return basicSetDataCenter(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
-				return eInternalContainer().eInverseRemove(this, UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS, DataCenter.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK_ELEMENT__RACK_TYPE, oldRackType, rackType));
 	}
 
 	/**
@@ -235,13 +145,11 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.RACK_ELEMENT__INSTANCES:
-				return getInstances();
-			case UML2CloudProfilePackage.RACK_ELEMENT__RACK:
-				if (resolve) return getRack();
-				return basicGetRack();
-			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
-				return getDataCenter();
+			case UML2CloudProfilePackage.RACK_ELEMENT__NUMBER_OF_RACKS:
+				return getNumberOfRacks();
+			case UML2CloudProfilePackage.RACK_ELEMENT__RACK_TYPE:
+				if (resolve) return getRackType();
+				return basicGetRackType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -254,14 +162,11 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.RACK_ELEMENT__INSTANCES:
-				setInstances((Integer)newValue);
+			case UML2CloudProfilePackage.RACK_ELEMENT__NUMBER_OF_RACKS:
+				setNumberOfRacks((Integer)newValue);
 				return;
-			case UML2CloudProfilePackage.RACK_ELEMENT__RACK:
-				setRack((Rack)newValue);
-				return;
-			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
-				setDataCenter((DataCenter)newValue);
+			case UML2CloudProfilePackage.RACK_ELEMENT__RACK_TYPE:
+				setRackType((Rack)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -275,14 +180,11 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.RACK_ELEMENT__INSTANCES:
-				setInstances(INSTANCES_EDEFAULT);
+			case UML2CloudProfilePackage.RACK_ELEMENT__NUMBER_OF_RACKS:
+				setNumberOfRacks(NUMBER_OF_RACKS_EDEFAULT);
 				return;
-			case UML2CloudProfilePackage.RACK_ELEMENT__RACK:
-				setRack((Rack)null);
-				return;
-			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
-				setDataCenter((DataCenter)null);
+			case UML2CloudProfilePackage.RACK_ELEMENT__RACK_TYPE:
+				setRackType((Rack)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -296,12 +198,10 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.RACK_ELEMENT__INSTANCES:
-				return instances != INSTANCES_EDEFAULT;
-			case UML2CloudProfilePackage.RACK_ELEMENT__RACK:
-				return rack != null;
-			case UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER:
-				return getDataCenter() != null;
+			case UML2CloudProfilePackage.RACK_ELEMENT__NUMBER_OF_RACKS:
+				return numberOfRacks != NUMBER_OF_RACKS_EDEFAULT;
+			case UML2CloudProfilePackage.RACK_ELEMENT__RACK_TYPE:
+				return rackType != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -309,15 +209,18 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (instances: ");
-		result.append(instances);
+		//StringBuffer result = new StringBuffer(super.toString());
+		StringBuffer result = new StringBuffer("");
+		result.append(" (numberOfRacks: ");
+		result.append(numberOfRacks);
+		result.append(", ");
+		result.append(rackType.getBase_Component().getName());
 		result.append(')');
 		return result.toString();
 	}

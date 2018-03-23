@@ -21,7 +21,6 @@ import org.eclipse.uml2.uml.Message;
  * </p>
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getBase_Message <em>Base Message</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getRentingTime <em>Renting Time</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getVmInstantiation <em>Vm Instantiation</em>}</li>
  * </ul>
  *
@@ -57,32 +56,6 @@ public interface Request extends EObject {
 	void setBase_Message(Message value);
 
 	/**
-	 * Returns the value of the '<em><b>Renting Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Renting Time</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Renting Time</em>' attribute.
-	 * @see #setRentingTime(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getRequest_RentingTime()
-	 * @model dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
-	 * @generated
-	 */
-	double getRentingTime();
-
-	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getRentingTime <em>Renting Time</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Renting Time</em>' attribute.
-	 * @see #getRentingTime()
-	 * @generated
-	 */
-	void setRentingTime(double value);
-
-	/**
 	 * Returns the value of the '<em><b>Vm Instantiation</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation}.
 	 * <!-- begin-user-doc -->
@@ -102,26 +75,13 @@ public interface Request extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.t1>=0
+	 * self.rentingTime.value>0
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	boolean t1_Must_Be_Greater_Than_Or_Equal_To_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * self.t2>0
-	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
-	 * @param context The cache of context-specific information.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	boolean t2_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Request

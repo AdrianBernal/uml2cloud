@@ -21,6 +21,9 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * self.disk.value>0
+ * <!-- end-model-doc -->
  * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfileFactory
  * @model kind="package"
  *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='uml2cloud'"
@@ -70,22 +73,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int DATA_CENTER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Base Component</b></em>' reference.
+	 * The feature id for the '<em><b>Network</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_CENTER__BASE_COMPONENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Network</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_CENTER__NETWORK = 1;
+	int DATA_CENTER__NETWORK = 0;
 
 	/**
 	 * The feature id for the '<em><b>Rack Elements</b></em>' containment reference list.
@@ -94,7 +88,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_CENTER__RACK_ELEMENTS = 2;
+	int DATA_CENTER__RACK_ELEMENTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Base Component</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CENTER__BASE_COMPONENT = 2;
 
 	/**
 	 * The number of structural features of the '<em>Data Center</em>' class.
@@ -133,6 +136,52 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int DATA_CENTER_OPERATION_COUNT = 2;
 
 	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.BandwidthImpl <em>Bandwidth</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.BandwidthImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getBandwidth()
+	 * @generated
+	 */
+	int BANDWIDTH = 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANDWIDTH__VALUE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANDWIDTH__UNIT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Bandwidth</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANDWIDTH_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Bandwidth</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BANDWIDTH_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackElementImpl <em>Rack Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -140,34 +189,25 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackElement()
 	 * @generated
 	 */
-	int RACK_ELEMENT = 1;
+	int RACK_ELEMENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Instances</b></em>' attribute.
+	 * The feature id for the '<em><b>Number Of Racks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_ELEMENT__INSTANCES = 0;
+	int RACK_ELEMENT__NUMBER_OF_RACKS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Rack</b></em>' reference.
+	 * The feature id for the '<em><b>Rack Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_ELEMENT__RACK = 1;
-
-	/**
-	 * The feature id for the '<em><b>Data Center</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RACK_ELEMENT__DATA_CENTER = 2;
+	int RACK_ELEMENT__RACK_TYPE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Rack Element</em>' class.
@@ -176,7 +216,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_ELEMENT_FEATURE_COUNT = 3;
+	int RACK_ELEMENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Rack Element</em>' class.
@@ -195,34 +235,25 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRack()
 	 * @generated
 	 */
-	int RACK = 2;
+	int RACK = 3;
 
 	/**
-	 * The feature id for the '<em><b>Base Component</b></em>' reference.
+	 * The feature id for the '<em><b>Machines Per Board</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK__BASE_COMPONENT = 0;
+	int RACK__MACHINES_PER_BOARD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Nodes Per Board</b></em>' attribute.
+	 * The feature id for the '<em><b>Network</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK__NODES_PER_BOARD = 1;
-
-	/**
-	 * The feature id for the '<em><b>Comm Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RACK__COMM_LINK = 2;
+	int RACK__NETWORK = 1;
 
 	/**
 	 * The feature id for the '<em><b>Boards</b></em>' attribute.
@@ -231,7 +262,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RACK__BOARDS = 3;
+	int RACK__BOARDS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Base Component</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RACK__BASE_COMPONENT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Rack</em>' class.
@@ -270,14 +310,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int RACK_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeImpl <em>Node</em>}' class.
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.MachineImpl <em>Machine</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNode()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.MachineImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getMachine()
 	 * @generated
 	 */
-	int NODE = 3;
+	int MACHINE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Base Component</b></em>' reference.
@@ -286,16 +326,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__BASE_COMPONENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Cpu Scheduler</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__CPU_SCHEDULER = 1;
+	int MACHINE__BASE_COMPONENT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Cpu</b></em>' reference.
@@ -304,7 +335,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__CPU = 2;
+	int MACHINE__CPU = 1;
 
 	/**
 	 * The feature id for the '<em><b>Memory</b></em>' reference.
@@ -313,7 +344,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__MEMORY = 3;
+	int MACHINE__MEMORY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Storage</b></em>' reference.
@@ -322,25 +353,25 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__STORAGE = 4;
+	int MACHINE__STORAGE = 3;
 
 	/**
-	 * The number of structural features of the '<em>Node</em>' class.
+	 * The number of structural features of the '<em>Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 5;
+	int MACHINE_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>Node</em>' class.
+	 * The number of operations of the '<em>Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_OPERATION_COUNT = 0;
+	int MACHINE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.HardwareImpl <em>Hardware</em>}' class.
@@ -350,7 +381,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getHardware()
 	 * @generated
 	 */
-	int HARDWARE = 5;
+	int HARDWARE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Base Component</b></em>' reference.
@@ -387,7 +418,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCPU()
 	 * @generated
 	 */
-	int CPU = 4;
+	int CPU = 5;
 
 	/**
 	 * The feature id for the '<em><b>Base Component</b></em>' reference.
@@ -399,31 +430,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int CPU__BASE_COMPONENT = HARDWARE__BASE_COMPONENT;
 
 	/**
-	 * The feature id for the '<em><b>Number Of Cores</b></em>' attribute.
+	 * The feature id for the '<em><b>Cores</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CPU__NUMBER_OF_CORES = HARDWARE_FEATURE_COUNT + 0;
+	int CPU__CORES = HARDWARE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Speed MIPS</b></em>' attribute.
+	 * The feature id for the '<em><b>MIPS</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CPU__SPEED_MIPS = HARDWARE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Tick S</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CPU__TICK_S = HARDWARE_FEATURE_COUNT + 2;
+	int CPU__MIPS = HARDWARE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>CPU</em>' class.
@@ -432,7 +454,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CPU_FEATURE_COUNT = HARDWARE_FEATURE_COUNT + 3;
+	int CPU_FEATURE_COUNT = HARDWARE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Speed MIPS Must Be Greater Than Zero</em>' operation.
@@ -444,22 +466,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int CPU___SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Tick SMust Be Greater Than Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CPU___TICK_SMUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 1;
-
-	/**
 	 * The operation id for the '<em>Number Of Cores Must Be Greater Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CPU___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 2;
+	int CPU___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>CPU</em>' class.
@@ -468,7 +481,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CPU_OPERATION_COUNT = HARDWARE_OPERATION_COUNT + 3;
+	int CPU_OPERATION_COUNT = HARDWARE_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.MemoryImpl <em>Memory</em>}' class.
@@ -478,7 +491,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getMemory()
 	 * @generated
 	 */
-	int MEMORY = 6;
+	int MEMORY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Base Component</b></em>' reference.
@@ -490,31 +503,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int MEMORY__BASE_COMPONENT = HARDWARE__BASE_COMPONENT;
 
 	/**
-	 * The feature id for the '<em><b>Size GB</b></em>' attribute.
+	 * The feature id for the '<em><b>Capacity</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMORY__SIZE_GB = HARDWARE_FEATURE_COUNT + 0;
+	int MEMORY__CAPACITY = HARDWARE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Read Latency US</b></em>' attribute.
+	 * The feature id for the '<em><b>Latency</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMORY__READ_LATENCY_US = HARDWARE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Write Latency US</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEMORY__WRITE_LATENCY_US = HARDWARE_FEATURE_COUNT + 2;
+	int MEMORY__LATENCY = HARDWARE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Memory</em>' class.
@@ -523,7 +527,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEMORY_FEATURE_COUNT = HARDWARE_FEATURE_COUNT + 3;
+	int MEMORY_FEATURE_COUNT = HARDWARE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Size GB Must Be Greater Than Zero</em>' operation.
@@ -535,41 +539,161 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int MEMORY___SIZE_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Read Latency US Must Be Greater Than Or Equal To Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEMORY___READ_LATENCY_US_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Write Latency US Must Be Greatter Than Or Equal To Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEMORY___WRITE_LATENCY_US_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 2;
-
-	/**
 	 * The number of operations of the '<em>Memory</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMORY_OPERATION_COUNT = HARDWARE_OPERATION_COUNT + 3;
+	int MEMORY_OPERATION_COUNT = HARDWARE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DiskImpl <em>Disk</em>}' class.
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SizeImpl <em>Size</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DiskImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getDisk()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SizeImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getSize()
 	 * @generated
 	 */
-	int DISK = 7;
+	int SIZE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE__VALUE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE__UNIT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Size</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Size</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIZE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.LatencyImpl <em>Latency</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.LatencyImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getLatency()
+	 * @generated
+	 */
+	int LATENCY = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LATENCY__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Time</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LATENCY__TIME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Latency</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LATENCY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Latency</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LATENCY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.TimeImpl <em>Time</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.TimeImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getTime()
+	 * @generated
+	 */
+	int TIME = 10;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME__VALUE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME__UNIT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageImpl <em>Storage</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getStorage()
+	 * @generated
+	 */
+	int STORAGE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Base Component</b></em>' reference.
@@ -578,52 +702,52 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISK__BASE_COMPONENT = HARDWARE__BASE_COMPONENT;
+	int STORAGE__BASE_COMPONENT = HARDWARE__BASE_COMPONENT;
 
 	/**
-	 * The feature id for the '<em><b>Number Of Disks</b></em>' attribute.
+	 * The feature id for the '<em><b>Number Of Drives</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISK__NUMBER_OF_DISKS = HARDWARE_FEATURE_COUNT + 0;
+	int STORAGE__NUMBER_OF_DRIVES = HARDWARE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Read Bandwidth MBps</b></em>' attribute.
+	 * The feature id for the '<em><b>Write Bandwidth</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISK__READ_BANDWIDTH_MBPS = HARDWARE_FEATURE_COUNT + 1;
+	int STORAGE__WRITE_BANDWIDTH = HARDWARE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Write Bandwidth MBps</b></em>' attribute.
+	 * The feature id for the '<em><b>Drive Capacity</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISK__WRITE_BANDWIDTH_MBPS = HARDWARE_FEATURE_COUNT + 2;
+	int STORAGE__DRIVE_CAPACITY = HARDWARE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Size Per Device GB</b></em>' attribute.
+	 * The feature id for the '<em><b>Read Bandwidth</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISK__SIZE_PER_DEVICE_GB = HARDWARE_FEATURE_COUNT + 3;
+	int STORAGE__READ_BANDWIDTH = HARDWARE_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Disk</em>' class.
+	 * The number of structural features of the '<em>Storage</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISK_FEATURE_COUNT = HARDWARE_FEATURE_COUNT + 4;
+	int STORAGE_FEATURE_COUNT = HARDWARE_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Number Of Disks Must Be Greatter Than Zero</em>' operation.
@@ -632,80 +756,44 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISK___NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 0;
+	int STORAGE___NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Read Bandwidth MBps Must Be Greatter Than Zero</em>' operation.
+	 * The number of operations of the '<em>Storage</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISK___READ_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 1;
+	int STORAGE_OPERATION_COUNT = HARDWARE_OPERATION_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Write Bandwidth MBps Must Be Greatter Than Zero</em>' operation.
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingRackImpl <em>Computing Rack</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingRackImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getComputingRack()
+	 * @generated
+	 */
+	int COMPUTING_RACK = 12;
+
+	/**
+	 * The feature id for the '<em><b>Machines Per Board</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISK___WRITE_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 2;
+	int COMPUTING_RACK__MACHINES_PER_BOARD = RACK__MACHINES_PER_BOARD;
 
 	/**
-	 * The operation id for the '<em>Size Per Device GB Must Be Greatter Than Zero</em>' operation.
+	 * The feature id for the '<em><b>Network</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISK___SIZE_PER_DEVICE_GB_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Disk</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISK_OPERATION_COUNT = HARDWARE_OPERATION_COUNT + 4;
-
-	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackCmpImpl <em>Rack Cmp</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackCmpImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackCmp()
-	 * @generated
-	 */
-	int RACK_CMP = 8;
-
-	/**
-	 * The feature id for the '<em><b>Base Component</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RACK_CMP__BASE_COMPONENT = RACK__BASE_COMPONENT;
-
-	/**
-	 * The feature id for the '<em><b>Nodes Per Board</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RACK_CMP__NODES_PER_BOARD = RACK__NODES_PER_BOARD;
-
-	/**
-	 * The feature id for the '<em><b>Comm Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RACK_CMP__COMM_LINK = RACK__COMM_LINK;
+	int COMPUTING_RACK__NETWORK = RACK__NETWORK;
 
 	/**
 	 * The feature id for the '<em><b>Boards</b></em>' attribute.
@@ -714,25 +802,34 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_CMP__BOARDS = RACK__BOARDS;
+	int COMPUTING_RACK__BOARDS = RACK__BOARDS;
 
 	/**
-	 * The feature id for the '<em><b>Node Cmp Type</b></em>' reference.
+	 * The feature id for the '<em><b>Base Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_CMP__NODE_CMP_TYPE = RACK_FEATURE_COUNT + 0;
+	int COMPUTING_RACK__BASE_COMPONENT = RACK__BASE_COMPONENT;
 
 	/**
-	 * The number of structural features of the '<em>Rack Cmp</em>' class.
+	 * The feature id for the '<em><b>Machine Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_CMP_FEATURE_COUNT = RACK_FEATURE_COUNT + 1;
+	int COMPUTING_RACK__MACHINE_TYPE = RACK_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Computing Rack</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_RACK_FEATURE_COUNT = RACK_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Boards Must Be Greatter Than Zero</em>' operation.
@@ -741,7 +838,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_CMP___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
+	int COMPUTING_RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The operation id for the '<em>Nodes Per Board Must Be Greatter Than Zero</em>' operation.
@@ -750,26 +847,26 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_CMP___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
+	int COMPUTING_RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
 
 	/**
-	 * The number of operations of the '<em>Rack Cmp</em>' class.
+	 * The number of operations of the '<em>Computing Rack</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_CMP_OPERATION_COUNT = RACK_OPERATION_COUNT + 0;
+	int COMPUTING_RACK_OPERATION_COUNT = RACK_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeCmpImpl <em>Node Cmp</em>}' class.
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingMachineImpl <em>Computing Machine</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeCmpImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNodeCmp()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingMachineImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getComputingMachine()
 	 * @generated
 	 */
-	int NODE_CMP = 9;
+	int COMPUTING_MACHINE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Base Component</b></em>' reference.
@@ -778,16 +875,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_CMP__BASE_COMPONENT = NODE__BASE_COMPONENT;
-
-	/**
-	 * The feature id for the '<em><b>Cpu Scheduler</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_CMP__CPU_SCHEDULER = NODE__CPU_SCHEDULER;
+	int COMPUTING_MACHINE__BASE_COMPONENT = MACHINE__BASE_COMPONENT;
 
 	/**
 	 * The feature id for the '<em><b>Cpu</b></em>' reference.
@@ -796,7 +884,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_CMP__CPU = NODE__CPU;
+	int COMPUTING_MACHINE__CPU = MACHINE__CPU;
 
 	/**
 	 * The feature id for the '<em><b>Memory</b></em>' reference.
@@ -805,7 +893,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_CMP__MEMORY = NODE__MEMORY;
+	int COMPUTING_MACHINE__MEMORY = MACHINE__MEMORY;
 
 	/**
 	 * The feature id for the '<em><b>Storage</b></em>' reference.
@@ -814,62 +902,53 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_CMP__STORAGE = NODE__STORAGE;
+	int COMPUTING_MACHINE__STORAGE = MACHINE__STORAGE;
 
 	/**
-	 * The number of structural features of the '<em>Node Cmp</em>' class.
+	 * The number of structural features of the '<em>Computing Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_CMP_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+	int COMPUTING_MACHINE_FEATURE_COUNT = MACHINE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Node Cmp</em>' class.
+	 * The number of operations of the '<em>Computing Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_CMP_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int COMPUTING_MACHINE_OPERATION_COUNT = MACHINE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackStoImpl <em>Rack Sto</em>}' class.
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageRackImpl <em>Storage Rack</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackStoImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackSto()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageRackImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getStorageRack()
 	 * @generated
 	 */
-	int RACK_STO = 10;
+	int STORAGE_RACK = 14;
 
 	/**
-	 * The feature id for the '<em><b>Base Component</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RACK_STO__BASE_COMPONENT = RACK__BASE_COMPONENT;
-
-	/**
-	 * The feature id for the '<em><b>Nodes Per Board</b></em>' attribute.
+	 * The feature id for the '<em><b>Machines Per Board</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_STO__NODES_PER_BOARD = RACK__NODES_PER_BOARD;
+	int STORAGE_RACK__MACHINES_PER_BOARD = RACK__MACHINES_PER_BOARD;
 
 	/**
-	 * The feature id for the '<em><b>Comm Link</b></em>' attribute.
+	 * The feature id for the '<em><b>Network</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_STO__COMM_LINK = RACK__COMM_LINK;
+	int STORAGE_RACK__NETWORK = RACK__NETWORK;
 
 	/**
 	 * The feature id for the '<em><b>Boards</b></em>' attribute.
@@ -878,25 +957,34 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_STO__BOARDS = RACK__BOARDS;
+	int STORAGE_RACK__BOARDS = RACK__BOARDS;
 
 	/**
-	 * The feature id for the '<em><b>Node Sto Type</b></em>' reference.
+	 * The feature id for the '<em><b>Base Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_STO__NODE_STO_TYPE = RACK_FEATURE_COUNT + 0;
+	int STORAGE_RACK__BASE_COMPONENT = RACK__BASE_COMPONENT;
 
 	/**
-	 * The number of structural features of the '<em>Rack Sto</em>' class.
+	 * The feature id for the '<em><b>Machine Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_STO_FEATURE_COUNT = RACK_FEATURE_COUNT + 1;
+	int STORAGE_RACK__MACHINE_TYPE = RACK_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Storage Rack</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORAGE_RACK_FEATURE_COUNT = RACK_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Boards Must Be Greatter Than Zero</em>' operation.
@@ -905,7 +993,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_STO___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
+	int STORAGE_RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The operation id for the '<em>Nodes Per Board Must Be Greatter Than Zero</em>' operation.
@@ -914,26 +1002,26 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_STO___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
+	int STORAGE_RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
 
 	/**
-	 * The number of operations of the '<em>Rack Sto</em>' class.
+	 * The number of operations of the '<em>Storage Rack</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK_STO_OPERATION_COUNT = RACK_OPERATION_COUNT + 0;
+	int STORAGE_RACK_OPERATION_COUNT = RACK_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeStoImpl <em>Node Sto</em>}' class.
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageMachineImpl <em>Storage Machine</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeStoImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNodeSto()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageMachineImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getStorageMachine()
 	 * @generated
 	 */
-	int NODE_STO = 11;
+	int STORAGE_MACHINE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Base Component</b></em>' reference.
@@ -942,16 +1030,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_STO__BASE_COMPONENT = NODE__BASE_COMPONENT;
-
-	/**
-	 * The feature id for the '<em><b>Cpu Scheduler</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_STO__CPU_SCHEDULER = NODE__CPU_SCHEDULER;
+	int STORAGE_MACHINE__BASE_COMPONENT = MACHINE__BASE_COMPONENT;
 
 	/**
 	 * The feature id for the '<em><b>Cpu</b></em>' reference.
@@ -960,7 +1039,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_STO__CPU = NODE__CPU;
+	int STORAGE_MACHINE__CPU = MACHINE__CPU;
 
 	/**
 	 * The feature id for the '<em><b>Memory</b></em>' reference.
@@ -969,7 +1048,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_STO__MEMORY = NODE__MEMORY;
+	int STORAGE_MACHINE__MEMORY = MACHINE__MEMORY;
 
 	/**
 	 * The feature id for the '<em><b>Storage</b></em>' reference.
@@ -978,399 +1057,25 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_STO__STORAGE = NODE__STORAGE;
+	int STORAGE_MACHINE__STORAGE = MACHINE__STORAGE;
 
 	/**
-	 * The number of structural features of the '<em>Node Sto</em>' class.
+	 * The number of structural features of the '<em>Storage Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_STO_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+	int STORAGE_MACHINE_FEATURE_COUNT = MACHINE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Node Sto</em>' class.
+	 * The number of operations of the '<em>Storage Machine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_STO_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ScenarioImpl <em>Scenario</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ScenarioImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getScenario()
-	 * @generated
-	 */
-	int SCENARIO = 12;
-
-	/**
-	 * The feature id for the '<em><b>Base Package</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCENARIO__BASE_PACKAGE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Cloud Provider</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCENARIO__CLOUD_PROVIDER = 1;
-
-	/**
-	 * The number of structural features of the '<em>Scenario</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCENARIO_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Scenario</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCENARIO_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RepositoryImpl <em>Repository</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RepositoryImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRepository()
-	 * @generated
-	 */
-	int REPOSITORY = 13;
-
-	/**
-	 * The feature id for the '<em><b>Base Package</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPOSITORY__BASE_PACKAGE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Repository</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPOSITORY_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Repository</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REPOSITORY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ApplicationImpl <em>Application</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ApplicationImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getApplication()
-	 * @generated
-	 */
-	int APPLICATION = 14;
-
-	/**
-	 * The feature id for the '<em><b>Base Component</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__BASE_COMPONENT = 0;
-
-	/**
-	 * The number of structural features of the '<em>Application</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Application</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl <em>VM</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVM()
-	 * @generated
-	 */
-	int VM = 15;
-
-	/**
-	 * The feature id for the '<em><b>Base Component</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM__BASE_COMPONENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Number Of Cores</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM__NUMBER_OF_CORES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Disk GB</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM__DISK_GB = 2;
-
-	/**
-	 * The feature id for the '<em><b>Cost Per Hour</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM__COST_PER_HOUR = 3;
-
-	/**
-	 * The feature id for the '<em><b>SCU</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM__SCU = 4;
-
-	/**
-	 * The feature id for the '<em><b>Memory GB</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM__MEMORY_GB = 5;
-
-	/**
-	 * The number of structural features of the '<em>VM</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_FEATURE_COUNT = 6;
-
-	/**
-	 * The operation id for the '<em>Number Of Cores Must Be Greater Than Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 0;
-
-	/**
-	 * The operation id for the '<em>Disk GB Must Be Greater Than Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM___DISK_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 1;
-
-	/**
-	 * The operation id for the '<em>Cost Per Hour Must Be Greater Than Or Equeal To Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM___COST_PER_HOUR_MUST_BE_GREATER_THAN_OR_EQUEAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 2;
-
-	/**
-	 * The operation id for the '<em>SCU Must Be Greater Than Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM___SCU_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 3;
-
-	/**
-	 * The operation id for the '<em>Memory Must Be Greater Than Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM___MEMORY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 4;
-
-	/**
-	 * The number of operations of the '<em>VM</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_OPERATION_COUNT = 5;
-
-	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.LocalApplicationImpl <em>Local Application</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.LocalApplicationImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getLocalApplication()
-	 * @generated
-	 */
-	int LOCAL_APPLICATION = 16;
-
-	/**
-	 * The feature id for the '<em><b>Base Component</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION__BASE_COMPONENT = APPLICATION__BASE_COMPONENT;
-
-	/**
-	 * The feature id for the '<em><b>Input Data Size Mi B</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B = APPLICATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Output Data Size Mi B</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B = APPLICATION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Input File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION__INPUT_FILE = APPLICATION_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Output File</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION__OUTPUT_FILE = APPLICATION_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>MIs</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION__MIS = APPLICATION_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Iterations</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION__ITERATIONS = APPLICATION_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of structural features of the '<em>Local Application</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION_FEATURE_COUNT = APPLICATION_FEATURE_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>Input Data Size Mi BMust Be Greater Than Or Equal To Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION___INPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = APPLICATION_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Output Data Size Mi BMust Be Greater Than Or Equal To Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION___OUTPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = APPLICATION_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>MIs Must Be Greater Than Or Equal To Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION___MIS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = APPLICATION_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Iterations Must Be Greater Than Or Equal To Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION___ITERATIONS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = APPLICATION_OPERATION_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Local Application</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCAL_APPLICATION_OPERATION_COUNT = APPLICATION_OPERATION_COUNT + 4;
+	int STORAGE_MACHINE_OPERATION_COUNT = MACHINE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl <em>Cloud Provider</em>}' class.
@@ -1380,7 +1085,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudProvider()
 	 * @generated
 	 */
-	int CLOUD_PROVIDER = 17;
+	int CLOUD_PROVIDER = 16;
+
+	/**
+	 * The feature id for the '<em><b>Resource Allocation Policy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_PROVIDER__RESOURCE_ALLOCATION_POLICY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Base Lifeline</b></em>' reference.
@@ -1389,7 +1103,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD_PROVIDER__BASE_LIFELINE = 0;
+	int CLOUD_PROVIDER__BASE_LIFELINE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Cloud Provider</em>' class.
@@ -1398,7 +1112,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD_PROVIDER_FEATURE_COUNT = 1;
+	int CLOUD_PROVIDER_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Cloud Provider</em>' class.
@@ -1410,6 +1124,252 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int CLOUD_PROVIDER_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ApplicationImpl <em>Application</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ApplicationImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getApplication()
+	 * @generated
+	 */
+	int APPLICATION = 17;
+
+	/**
+	 * The feature id for the '<em><b>Base Component</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__BASE_COMPONENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>MIs</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__MIS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Input Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__INPUT_DATA = 2;
+
+	/**
+	 * The feature id for the '<em><b>Output Data</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__OUTPUT_DATA = 3;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__PARAMETER = 4;
+
+	/**
+	 * The number of structural features of the '<em>Application</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Application</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getParameter()
+	 * @generated
+	 */
+	int PARAMETER = 18;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__VALUE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__UNIT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__DESCRIPTION = 3;
+
+	/**
+	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl <em>VM</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVM()
+	 * @generated
+	 */
+	int VM = 19;
+
+	/**
+	 * The feature id for the '<em><b>Base Component</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM__BASE_COMPONENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Cores</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM__CORES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Disk</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM__DISK = 2;
+
+	/**
+	 * The feature id for the '<em><b>Computing Units</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM__COMPUTING_UNITS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Memory</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM__MEMORY = 4;
+
+	/**
+	 * The number of structural features of the '<em>VM</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_FEATURE_COUNT = 5;
+
+	/**
+	 * The operation id for the '<em>Cores Must Be Greater Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>SCU Must Be Greater Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM___SCU_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
+	 * The operation id for the '<em>Memory Must Be Greater Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM___MEMORY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 2;
+
+	/**
+	 * The operation id for the '<em>VM can not be allocated</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM___VM_CAN_NOT_BE_ALLOCATED__DIAGNOSTICCHAIN_MAP = 3;
+
+	/**
+	 * The number of operations of the '<em>VM</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_OPERATION_COUNT = 4;
+
+	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl <em>Request</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1417,7 +1377,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRequest()
 	 * @generated
 	 */
-	int REQUEST = 18;
+	int REQUEST = 20;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1429,22 +1389,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int REQUEST__BASE_MESSAGE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Renting Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUEST__RENTING_TIME = 1;
-
-	/**
 	 * The feature id for the '<em><b>Vm Instantiation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST__VM_INSTANTIATION = 2;
+	int REQUEST__VM_INSTANTIATION = 1;
 
 	/**
 	 * The number of structural features of the '<em>Request</em>' class.
@@ -1453,25 +1404,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST_FEATURE_COUNT = 3;
+	int REQUEST_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>T1 Must Be Greater Than Or Equal To Zero</em>' operation.
+	 * The operation id for the '<em>Renting Time Must Be Greater Than Or Equal To Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST___T1_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 0;
-
-	/**
-	 * The operation id for the '<em>T2 Must Be Greater Than Zero</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUEST___T2_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 1;
+	int REQUEST___RENTING_TIME_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
 	 * The number of operations of the '<em>Request</em>' class.
@@ -1480,7 +1422,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST_OPERATION_COUNT = 2;
+	int REQUEST_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl <em>VM Instantiation</em>}' class.
@@ -1490,7 +1432,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getVMInstantiation()
 	 * @generated
 	 */
-	int VM_INSTANTIATION = 19;
+	int VM_INSTANTIATION = 21;
 
 	/**
 	 * The feature id for the '<em><b>Instances</b></em>' attribute.
@@ -1511,13 +1453,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int VM_INSTANTIATION__VM_TYPE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Renting Time</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_INSTANTIATION__RENTING_TIME = 2;
+
+	/**
 	 * The number of structural features of the '<em>VM Instantiation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM_INSTANTIATION_FEATURE_COUNT = 2;
+	int VM_INSTANTIATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>VM Instantiation</em>' class.
@@ -1536,7 +1487,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getSubscribe()
 	 * @generated
 	 */
-	int SUBSCRIBE = 20;
+	int SUBSCRIBE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1548,13 +1499,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int SUBSCRIBE__BASE_MESSAGE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Max Sub Time</b></em>' attribute.
+	 * The feature id for the '<em><b>Max Time</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBE__MAX_SUB_TIME = 1;
+	int SUBSCRIBE__MAX_TIME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Subscribe</em>' class.
@@ -1566,22 +1517,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int SUBSCRIBE_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>T4 Must Be Greater Than Zero</em>' operation.
+	 * The operation id for the '<em>Max Time Must Be Greater Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBE___T4_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 0;
-
-	/**
-	 * The operation id for the '<em>T4 Should Be Greater Than Or Equal To t1 From Connect If You Want To Subscribe</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBSCRIBE___T4_SHOULD_BE_GREATER_THAN_OR_EQUAL_TO_T1_FROM_CONNECT_IF_YOU_WANT_TO_SUBSCRIBE__DIAGNOSTICCHAIN_MAP = 1;
+	int SUBSCRIBE___MAX_TIME_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
 	 * The number of operations of the '<em>Subscribe</em>' class.
@@ -1590,7 +1532,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBE_OPERATION_COUNT = 2;
+	int SUBSCRIBE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.AppInstantiationImpl <em>App Instantiation</em>}' class.
@@ -1600,7 +1542,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getAppInstantiation()
 	 * @generated
 	 */
-	int APP_INSTANTIATION = 21;
+	int APP_INSTANTIATION = 23;
 
 	/**
 	 * The feature id for the '<em><b>Application Type</b></em>' reference.
@@ -1646,7 +1588,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getOK()
 	 * @generated
 	 */
-	int OK = 22;
+	int OK = 24;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1683,7 +1625,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNotify()
 	 * @generated
 	 */
-	int NOTIFY = 23;
+	int NOTIFY = 25;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1720,7 +1662,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getTimeout()
 	 * @generated
 	 */
-	int TIMEOUT = 24;
+	int TIMEOUT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1757,7 +1699,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getResponse()
 	 * @generated
 	 */
-	int RESPONSE = 25;
+	int RESPONSE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1794,7 +1736,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getReject()
 	 * @generated
 	 */
-	int REJECT = 26;
+	int REJECT = 28;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1831,7 +1773,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getExecute()
 	 * @generated
 	 */
-	int EXECUTE = 27;
+	int EXECUTE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1877,7 +1819,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getUser()
 	 * @generated
 	 */
-	int USER = 28;
+	int USER = 30;
 
 	/**
 	 * The feature id for the '<em><b>Base Lifeline</b></em>' reference.
@@ -1907,34 +1849,144 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int USER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Channel <em>Channel</em>}' enum.
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl <em>Cloud Infrastructure</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Channel
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getChannel()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudInfrastructure()
 	 * @generated
 	 */
-	int CHANNEL = 29;
+	int CLOUD_INFRASTRUCTURE = 31;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPUScheduler <em>CPU Scheduler</em>}' enum.
+	 * The feature id for the '<em><b>Datacenter Element</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPUScheduler
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCPUScheduler()
 	 * @generated
+	 * @ordered
 	 */
-	int CPU_SCHEDULER = 30;
+	int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProviderType <em>Cloud Provider Type</em>}' enum.
+	 * The feature id for the '<em><b>Cloud Provider</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProviderType
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudProviderType()
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_INFRASTRUCTURE__CLOUD_PROVIDER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Base Component</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_INFRASTRUCTURE__BASE_COMPONENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Network</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_INFRASTRUCTURE__NETWORK = 3;
+
+	/**
+	 * The number of structural features of the '<em>Cloud Infrastructure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_INFRASTRUCTURE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Cloud Infrastructure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_INFRASTRUCTURE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterElementImpl <em>Data Center Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterElementImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getDataCenterElement()
 	 * @generated
 	 */
-	int CLOUD_PROVIDER_TYPE = 31;
+	int DATA_CENTER_ELEMENT = 32;
+
+	/**
+	 * The feature id for the '<em><b>Number Of Data Centers</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CENTER_ELEMENT__NUMBER_OF_DATA_CENTERS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Data Center Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CENTER_ELEMENT__DATA_CENTER_TYPE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Data Center Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CENTER_ELEMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Data Center Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CENTER_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.BandwidthUnit <em>Bandwidth Unit</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.BandwidthUnit
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getBandwidthUnit()
+	 * @generated
+	 */
+	int BANDWIDTH_UNIT = 33;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit <em>Size Unit</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getSizeUnit()
+	 * @generated
+	 */
+	int SIZE_UNIT = 34;
+
+	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.TimeUnit <em>Time Unit</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.TimeUnit
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getTimeUnit()
+	 * @generated
+	 */
+	int TIME_UNIT = 35;
 
 
 	/**
@@ -1948,26 +2000,15 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EClass getDataCenter();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getBase_Component <em>Base Component</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getNetwork <em>Network</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Component</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getBase_Component()
-	 * @see #getDataCenter()
-	 * @generated
-	 */
-	EReference getDataCenter_Base_Component();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getNetwork <em>Network</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Network</em>'.
+	 * @return the meta object for the containment reference '<em>Network</em>'.
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getNetwork()
 	 * @see #getDataCenter()
 	 * @generated
 	 */
-	EAttribute getDataCenter_Network();
+	EReference getDataCenter_Network();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getRackElements <em>Rack Elements</em>}'.
@@ -1979,6 +2020,17 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDataCenter_RackElements();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getBase_Component <em>Base Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Component</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getBase_Component()
+	 * @see #getDataCenter()
+	 * @generated
+	 */
+	EReference getDataCenter_Base_Component();
 
 	/**
 	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#rackElements_instances_Should_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Rack Elements instances Should Be Greatter Than Zero</em>}' operation.
@@ -2001,6 +2053,38 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getDataCenter__RackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
 
 	/**
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth <em>Bandwidth</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bandwidth</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth
+	 * @generated
+	 */
+	EClass getBandwidth();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth#getValue()
+	 * @see #getBandwidth()
+	 * @generated
+	 */
+	EAttribute getBandwidth_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth#getUnit()
+	 * @see #getBandwidth()
+	 * @generated
+	 */
+	EAttribute getBandwidth_Unit();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement <em>Rack Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2011,37 +2095,26 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EClass getRackElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getInstances <em>Instances</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getNumberOfRacks <em>Number Of Racks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Instances</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getInstances()
+	 * @return the meta object for the attribute '<em>Number Of Racks</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getNumberOfRacks()
 	 * @see #getRackElement()
 	 * @generated
 	 */
-	EAttribute getRackElement_Instances();
+	EAttribute getRackElement_NumberOfRacks();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getRack <em>Rack</em>}'.
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getRackType <em>Rack Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Rack</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getRack()
+	 * @return the meta object for the reference '<em>Rack Type</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getRackType()
 	 * @see #getRackElement()
 	 * @generated
 	 */
-	EReference getRackElement_Rack();
-
-	/**
-	 * Returns the meta object for the container reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getDataCenter <em>Data Center</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Data Center</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getDataCenter()
-	 * @see #getRackElement()
-	 * @generated
-	 */
-	EReference getRackElement_DataCenter();
+	EReference getRackElement_RackType();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack <em>Rack</em>}'.
@@ -2054,37 +2127,26 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EClass getRack();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getBase_Component <em>Base Component</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getMachinesPerBoard <em>Machines Per Board</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Component</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getBase_Component()
+	 * @return the meta object for the attribute '<em>Machines Per Board</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getMachinesPerBoard()
 	 * @see #getRack()
 	 * @generated
 	 */
-	EReference getRack_Base_Component();
+	EAttribute getRack_MachinesPerBoard();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getNodesPerBoard <em>Nodes Per Board</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getNetwork <em>Network</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nodes Per Board</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getNodesPerBoard()
+	 * @return the meta object for the containment reference '<em>Network</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getNetwork()
 	 * @see #getRack()
 	 * @generated
 	 */
-	EAttribute getRack_NodesPerBoard();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getCommLink <em>Comm Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Comm Link</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getCommLink()
-	 * @see #getRack()
-	 * @generated
-	 */
-	EAttribute getRack_CommLink();
+	EReference getRack_Network();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getBoards <em>Boards</em>}'.
@@ -2096,6 +2158,17 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRack_Boards();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getBase_Component <em>Base Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Component</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#getBase_Component()
+	 * @see #getRack()
+	 * @generated
+	 */
+	EReference getRack_Base_Component();
 
 	/**
 	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#boards_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Boards Must Be Greatter Than Zero</em>}' operation.
@@ -2118,69 +2191,58 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getRack__NodesPerBoard_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Node <em>Node</em>}'.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Machine <em>Machine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Node</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Node
+	 * @return the meta object for class '<em>Machine</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Machine
 	 * @generated
 	 */
-	EClass getNode();
+	EClass getMachine();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getBase_Component <em>Base Component</em>}'.
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Machine#getBase_Component <em>Base Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Base Component</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getBase_Component()
-	 * @see #getNode()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Machine#getBase_Component()
+	 * @see #getMachine()
 	 * @generated
 	 */
-	EReference getNode_Base_Component();
+	EReference getMachine_Base_Component();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getCpuScheduler <em>Cpu Scheduler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cpu Scheduler</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getCpuScheduler()
-	 * @see #getNode()
-	 * @generated
-	 */
-	EAttribute getNode_CpuScheduler();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getCpu <em>Cpu</em>}'.
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Machine#getCpu <em>Cpu</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Cpu</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getCpu()
-	 * @see #getNode()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Machine#getCpu()
+	 * @see #getMachine()
 	 * @generated
 	 */
-	EReference getNode_Cpu();
+	EReference getMachine_Cpu();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getMemory <em>Memory</em>}'.
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Machine#getMemory <em>Memory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Memory</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getMemory()
-	 * @see #getNode()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Machine#getMemory()
+	 * @see #getMachine()
 	 * @generated
 	 */
-	EReference getNode_Memory();
+	EReference getMachine_Memory();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getStorage <em>Storage</em>}'.
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Machine#getStorage <em>Storage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Storage</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Node#getStorage()
-	 * @see #getNode()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Machine#getStorage()
+	 * @see #getMachine()
 	 * @generated
 	 */
-	EReference getNode_Storage();
+	EReference getMachine_Storage();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU <em>CPU</em>}'.
@@ -2193,37 +2255,26 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EClass getCPU();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getNumberOfCores <em>Number Of Cores</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getCores <em>Cores</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number Of Cores</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getNumberOfCores()
+	 * @return the meta object for the attribute '<em>Cores</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getCores()
 	 * @see #getCPU()
 	 * @generated
 	 */
-	EAttribute getCPU_NumberOfCores();
+	EAttribute getCPU_Cores();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getSpeedMIPS <em>Speed MIPS</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getMIPS <em>MIPS</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Speed MIPS</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getSpeedMIPS()
+	 * @return the meta object for the attribute '<em>MIPS</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getMIPS()
 	 * @see #getCPU()
 	 * @generated
 	 */
-	EAttribute getCPU_SpeedMIPS();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getTickS <em>Tick S</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tick S</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getTickS()
-	 * @see #getCPU()
-	 * @generated
-	 */
-	EAttribute getCPU_TickS();
+	EAttribute getCPU_MIPS();
 
 	/**
 	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#speedMIPS_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Speed MIPS Must Be Greater Than Zero</em>}' operation.
@@ -2234,16 +2285,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getCPU__SpeedMIPS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#tickS_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Tick SMust Be Greater Than Zero</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Tick SMust Be Greater Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#tickS_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getCPU__TickS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#numberOfCores_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Number Of Cores Must Be Greater Than Zero</em>}' operation.
@@ -2287,37 +2328,26 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EClass getMemory();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getSizeGB <em>Size GB</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getCapacity <em>Capacity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size GB</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getSizeGB()
+	 * @return the meta object for the containment reference '<em>Capacity</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getCapacity()
 	 * @see #getMemory()
 	 * @generated
 	 */
-	EAttribute getMemory_SizeGB();
+	EReference getMemory_Capacity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getReadLatencyUS <em>Read Latency US</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getLatency <em>Latency</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Read Latency US</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getReadLatencyUS()
+	 * @return the meta object for the containment reference list '<em>Latency</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getLatency()
 	 * @see #getMemory()
 	 * @generated
 	 */
-	EAttribute getMemory_ReadLatencyUS();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getWriteLatencyUS <em>Write Latency US</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Write Latency US</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#getWriteLatencyUS()
-	 * @see #getMemory()
-	 * @generated
-	 */
-	EAttribute getMemory_WriteLatencyUS();
+	EReference getMemory_Latency();
 
 	/**
 	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#sizeGB_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Size GB Must Be Greater Than Zero</em>}' operation.
@@ -2330,233 +2360,258 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getMemory__SizeGB_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#readLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Read Latency US Must Be Greater Than Or Equal To Zero</em>}' operation.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Size <em>Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Read Latency US Must Be Greater Than Or Equal To Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#readLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for class '<em>Size</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Size
 	 * @generated
 	 */
-	EOperation getMemory__ReadLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+	EClass getSize();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#writeLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Write Latency US Must Be Greatter Than Or Equal To Zero</em>}' operation.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Size#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Write Latency US Must Be Greatter Than Or Equal To Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#writeLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Size#getValue()
+	 * @see #getSize()
 	 * @generated
 	 */
-	EOperation getMemory__WriteLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+	EAttribute getSize_Value();
 
 	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk <em>Disk</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Size#getUnit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Disk</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Disk
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Size#getUnit()
+	 * @see #getSize()
 	 * @generated
 	 */
-	EClass getDisk();
+	EAttribute getSize_Unit();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#getNumberOfDisks <em>Number Of Disks</em>}'.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Latency <em>Latency</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number Of Disks</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#getNumberOfDisks()
-	 * @see #getDisk()
+	 * @return the meta object for class '<em>Latency</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Latency
 	 * @generated
 	 */
-	EAttribute getDisk_NumberOfDisks();
+	EClass getLatency();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#getReadBandwidthMBps <em>Read Bandwidth MBps</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Latency#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Read Bandwidth MBps</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#getReadBandwidthMBps()
-	 * @see #getDisk()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Latency#getName()
+	 * @see #getLatency()
 	 * @generated
 	 */
-	EAttribute getDisk_ReadBandwidthMBps();
+	EAttribute getLatency_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#getWriteBandwidthMBps <em>Write Bandwidth MBps</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Latency#getTime <em>Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Write Bandwidth MBps</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#getWriteBandwidthMBps()
-	 * @see #getDisk()
+	 * @return the meta object for the containment reference '<em>Time</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Latency#getTime()
+	 * @see #getLatency()
 	 * @generated
 	 */
-	EAttribute getDisk_WriteBandwidthMBps();
+	EReference getLatency_Time();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#getSizePerDeviceGB <em>Size Per Device GB</em>}'.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Time <em>Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size Per Device GB</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#getSizePerDeviceGB()
-	 * @see #getDisk()
+	 * @return the meta object for class '<em>Time</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Time
 	 * @generated
 	 */
-	EAttribute getDisk_SizePerDeviceGB();
+	EClass getTime();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#numberOfDisks_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Number Of Disks Must Be Greatter Than Zero</em>}' operation.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Time#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Time#getValue()
+	 * @see #getTime()
+	 * @generated
+	 */
+	EAttribute getTime_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Time#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Time#getUnit()
+	 * @see #getTime()
+	 * @generated
+	 */
+	EAttribute getTime_Unit();
+
+	/**
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage <em>Storage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Storage</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage
+	 * @generated
+	 */
+	EClass getStorage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getNumberOfDrives <em>Number Of Drives</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Drives</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getNumberOfDrives()
+	 * @see #getStorage()
+	 * @generated
+	 */
+	EAttribute getStorage_NumberOfDrives();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getWriteBandwidth <em>Write Bandwidth</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Write Bandwidth</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getWriteBandwidth()
+	 * @see #getStorage()
+	 * @generated
+	 */
+	EReference getStorage_WriteBandwidth();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getDriveCapacity <em>Drive Capacity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Drive Capacity</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getDriveCapacity()
+	 * @see #getStorage()
+	 * @generated
+	 */
+	EReference getStorage_DriveCapacity();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getReadBandwidth <em>Read Bandwidth</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Read Bandwidth</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getReadBandwidth()
+	 * @see #getStorage()
+	 * @generated
+	 */
+	EReference getStorage_ReadBandwidth();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#numberOfDisks_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Number Of Disks Must Be Greatter Than Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Number Of Disks Must Be Greatter Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#numberOfDisks_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#numberOfDisks_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getDisk__NumberOfDisks_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+	EOperation getStorage__NumberOfDisks_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#readBandwidthMBps_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Read Bandwidth MBps Must Be Greatter Than Zero</em>}' operation.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingRack <em>Computing Rack</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Read Bandwidth MBps Must Be Greatter Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#readBandwidthMBps_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for class '<em>Computing Rack</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingRack
 	 * @generated
 	 */
-	EOperation getDisk__ReadBandwidthMBps_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+	EClass getComputingRack();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#writeBandwidthMBps_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Write Bandwidth MBps Must Be Greatter Than Zero</em>}' operation.
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingRack#getMachineType <em>Machine Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Write Bandwidth MBps Must Be Greatter Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#writeBandwidthMBps_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the reference '<em>Machine Type</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingRack#getMachineType()
+	 * @see #getComputingRack()
 	 * @generated
 	 */
-	EOperation getDisk__WriteBandwidthMBps_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+	EReference getComputingRack_MachineType();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#sizePerDeviceGB_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Size Per Device GB Must Be Greatter Than Zero</em>}' operation.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingMachine <em>Computing Machine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Size Per Device GB Must Be Greatter Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Disk#sizePerDeviceGB_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for class '<em>Computing Machine</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingMachine
 	 * @generated
 	 */
-	EOperation getDisk__SizePerDeviceGB_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+	EClass getComputingMachine();
 
 	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackCmp <em>Rack Cmp</em>}'.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.StorageRack <em>Storage Rack</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rack Cmp</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackCmp
+	 * @return the meta object for class '<em>Storage Rack</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.StorageRack
 	 * @generated
 	 */
-	EClass getRackCmp();
+	EClass getStorageRack();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackCmp#getNodeCmpType <em>Node Cmp Type</em>}'.
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.StorageRack#getMachineType <em>Machine Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Node Cmp Type</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackCmp#getNodeCmpType()
-	 * @see #getRackCmp()
+	 * @return the meta object for the reference '<em>Machine Type</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.StorageRack#getMachineType()
+	 * @see #getStorageRack()
 	 * @generated
 	 */
-	EReference getRackCmp_NodeCmpType();
+	EReference getStorageRack_MachineType();
 
 	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.NodeCmp <em>Node Cmp</em>}'.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.StorageMachine <em>Storage Machine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Node Cmp</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.NodeCmp
+	 * @return the meta object for class '<em>Storage Machine</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.StorageMachine
 	 * @generated
 	 */
-	EClass getNodeCmp();
+	EClass getStorageMachine();
 
 	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackSto <em>Rack Sto</em>}'.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider <em>Cloud Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rack Sto</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackSto
+	 * @return the meta object for class '<em>Cloud Provider</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider
 	 * @generated
 	 */
-	EClass getRackSto();
+	EClass getCloudProvider();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackSto#getNodeStoType <em>Node Sto Type</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#getResourceAllocationPolicy <em>Resource Allocation Policy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Node Sto Type</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackSto#getNodeStoType()
-	 * @see #getRackSto()
+	 * @return the meta object for the attribute '<em>Resource Allocation Policy</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#getResourceAllocationPolicy()
+	 * @see #getCloudProvider()
 	 * @generated
 	 */
-	EReference getRackSto_NodeStoType();
+	EAttribute getCloudProvider_ResourceAllocationPolicy();
 
 	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.NodeSto <em>Node Sto</em>}'.
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#getBase_Lifeline <em>Base Lifeline</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Node Sto</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.NodeSto
+	 * @return the meta object for the reference '<em>Base Lifeline</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#getBase_Lifeline()
+	 * @see #getCloudProvider()
 	 * @generated
 	 */
-	EClass getNodeSto();
-
-	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario <em>Scenario</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Scenario</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario
-	 * @generated
-	 */
-	EClass getScenario();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario#getBase_Package <em>Base Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Package</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario#getBase_Package()
-	 * @see #getScenario()
-	 * @generated
-	 */
-	EReference getScenario_Base_Package();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario#getCloudProvider <em>Cloud Provider</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cloud Provider</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Scenario#getCloudProvider()
-	 * @see #getScenario()
-	 * @generated
-	 */
-	EAttribute getScenario_CloudProvider();
-
-	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Repository <em>Repository</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Repository</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Repository
-	 * @generated
-	 */
-	EClass getRepository();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Repository#getBase_Package <em>Base Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Package</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Repository#getBase_Package()
-	 * @see #getRepository()
-	 * @generated
-	 */
-	EReference getRepository_Base_Package();
+	EReference getCloudProvider_Base_Lifeline();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Application <em>Application</em>}'.
@@ -2580,6 +2635,104 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getApplication_Base_Component();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Application#getMIs <em>MIs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>MIs</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Application#getMIs()
+	 * @see #getApplication()
+	 * @generated
+	 */
+	EAttribute getApplication_MIs();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Application#getInputData <em>Input Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Input Data</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Application#getInputData()
+	 * @see #getApplication()
+	 * @generated
+	 */
+	EReference getApplication_InputData();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Application#getOutputData <em>Output Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Output Data</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Application#getOutputData()
+	 * @see #getApplication()
+	 * @generated
+	 */
+	EReference getApplication_OutputData();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Application#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameter</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Application#getParameter()
+	 * @see #getApplication()
+	 * @generated
+	 */
+	EReference getApplication_Parameter();
+
+	/**
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter
+	 * @generated
+	 */
+	EClass getParameter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getName()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getValue()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getUnit()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Unit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getDescription()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Description();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM <em>VM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2601,89 +2754,58 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getVM_Base_Component();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getNumberOfCores <em>Number Of Cores</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getCores <em>Cores</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number Of Cores</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getNumberOfCores()
+	 * @return the meta object for the attribute '<em>Cores</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getCores()
 	 * @see #getVM()
 	 * @generated
 	 */
-	EAttribute getVM_NumberOfCores();
+	EAttribute getVM_Cores();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getDiskGB <em>Disk GB</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getDisk <em>Disk</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Disk GB</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getDiskGB()
+	 * @return the meta object for the containment reference '<em>Disk</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getDisk()
 	 * @see #getVM()
 	 * @generated
 	 */
-	EAttribute getVM_DiskGB();
+	EReference getVM_Disk();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getCostPerHour <em>Cost Per Hour</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getComputingUnits <em>Computing Units</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cost Per Hour</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getCostPerHour()
+	 * @return the meta object for the attribute '<em>Computing Units</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getComputingUnits()
 	 * @see #getVM()
 	 * @generated
 	 */
-	EAttribute getVM_CostPerHour();
+	EAttribute getVM_ComputingUnits();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getSCU <em>SCU</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getMemory <em>Memory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>SCU</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getSCU()
+	 * @return the meta object for the containment reference '<em>Memory</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getMemory()
 	 * @see #getVM()
 	 * @generated
 	 */
-	EAttribute getVM_SCU();
+	EReference getVM_Memory();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getMemoryGB <em>Memory GB</em>}'.
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#cores_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Cores Must Be Greater Than Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Memory GB</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getMemoryGB()
-	 * @see #getVM()
+	 * @return the meta object for the '<em>Cores Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#cores_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EAttribute getVM_MemoryGB();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#numberOfCores_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Number Of Cores Must Be Greater Than Zero</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Number Of Cores Must Be Greater Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#numberOfCores_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getVM__NumberOfCores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#diskGB_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Disk GB Must Be Greater Than Zero</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Disk GB Must Be Greater Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#diskGB_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getVM__DiskGB_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Cost Per Hour Must Be Greater Than Or Equeal To Zero</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Cost Per Hour Must Be Greater Than Or Equeal To Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getVM__CostPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero__DiagnosticChain_Map();
+	EOperation getVM__Cores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#SCU_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>SCU Must Be Greater Than Zero</em>}' operation.
@@ -2706,141 +2828,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getVM__Memory_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication <em>Local Application</em>}'.
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#VM_can_not_be_allocated(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>VM can not be allocated</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Local Application</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication
+	 * @return the meta object for the '<em>VM can not be allocated</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#VM_can_not_be_allocated(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EClass getLocalApplication();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getInputDataSizeMiB <em>Input Data Size Mi B</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Data Size Mi B</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getInputDataSizeMiB()
-	 * @see #getLocalApplication()
-	 * @generated
-	 */
-	EAttribute getLocalApplication_InputDataSizeMiB();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getOutputDataSizeMiB <em>Output Data Size Mi B</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Output Data Size Mi B</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getOutputDataSizeMiB()
-	 * @see #getLocalApplication()
-	 * @generated
-	 */
-	EAttribute getLocalApplication_OutputDataSizeMiB();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getInputFile <em>Input File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input File</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getInputFile()
-	 * @see #getLocalApplication()
-	 * @generated
-	 */
-	EAttribute getLocalApplication_InputFile();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getOutputFile <em>Output File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Output File</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getOutputFile()
-	 * @see #getLocalApplication()
-	 * @generated
-	 */
-	EAttribute getLocalApplication_OutputFile();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getMIs <em>MIs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>MIs</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getMIs()
-	 * @see #getLocalApplication()
-	 * @generated
-	 */
-	EAttribute getLocalApplication_MIs();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getIterations <em>Iterations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Iterations</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#getIterations()
-	 * @see #getLocalApplication()
-	 * @generated
-	 */
-	EAttribute getLocalApplication_Iterations();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#inputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Input Data Size Mi BMust Be Greater Than Or Equal To Zero</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Input Data Size Mi BMust Be Greater Than Or Equal To Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#inputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getLocalApplication__InputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#outputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Output Data Size Mi BMust Be Greater Than Or Equal To Zero</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Output Data Size Mi BMust Be Greater Than Or Equal To Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#outputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getLocalApplication__OutputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#MIs_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>MIs Must Be Greater Than Or Equal To Zero</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>MIs Must Be Greater Than Or Equal To Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#MIs_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getLocalApplication__MIs_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#iterations_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Iterations Must Be Greater Than Or Equal To Zero</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Iterations Must Be Greater Than Or Equal To Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.LocalApplication#iterations_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getLocalApplication__Iterations_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider <em>Cloud Provider</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Cloud Provider</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider
-	 * @generated
-	 */
-	EClass getCloudProvider();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#getBase_Lifeline <em>Base Lifeline</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Lifeline</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#getBase_Lifeline()
-	 * @see #getCloudProvider()
-	 * @generated
-	 */
-	EReference getCloudProvider_Base_Lifeline();
+	EOperation getVM__VM_can_not_be_allocated__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request <em>Request</em>}'.
@@ -2864,17 +2859,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getRequest_Base_Message();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getRentingTime <em>Renting Time</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Renting Time</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getRentingTime()
-	 * @see #getRequest()
-	 * @generated
-	 */
-	EAttribute getRequest_RentingTime();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#getVmInstantiation <em>Vm Instantiation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2886,24 +2870,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getRequest_VmInstantiation();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#t1_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>T1 Must Be Greater Than Or Equal To Zero</em>}' operation.
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Renting Time Must Be Greater Than Or Equal To Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>T1 Must Be Greater Than Or Equal To Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Request#t1_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Renting Time Must Be Greater Than Or Equal To Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Request#rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getRequest__T1_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#t2_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>T2 Must Be Greater Than Zero</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>T2 Must Be Greater Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Request#t2_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getRequest__T2_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+	EOperation getRequest__RentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation <em>VM Instantiation</em>}'.
@@ -2938,6 +2912,17 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getVMInstantiation_VmType();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getRentingTime <em>Renting Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Renting Time</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getRentingTime()
+	 * @see #getVMInstantiation()
+	 * @generated
+	 */
+	EReference getVMInstantiation_RentingTime();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe <em>Subscribe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2959,35 +2944,25 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getSubscribe_Base_Message();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#getMaxSubTime <em>Max Sub Time</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#getMaxTime <em>Max Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max Sub Time</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#getMaxSubTime()
+	 * @return the meta object for the containment reference '<em>Max Time</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#getMaxTime()
 	 * @see #getSubscribe()
 	 * @generated
 	 */
-	EAttribute getSubscribe_MaxSubTime();
+	EReference getSubscribe_MaxTime();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#t4_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>T4 Must Be Greater Than Zero</em>}' operation.
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#maxTime_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Max Time Must Be Greater Than Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>T4 Must Be Greater Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#t4_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Max Time Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#maxTime_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getSubscribe__T4_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>T4 Should Be Greater Than Or Equal To t1 From Connect If You Want To Subscribe</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>T4 Should Be Greater Than Or Equal To t1 From Connect If You Want To Subscribe</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getSubscribe__T4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe__DiagnosticChain_Map();
+	EOperation getSubscribe__MaxTime_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.AppInstantiation <em>App Instantiation</em>}'.
@@ -3180,34 +3155,120 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getUser_Base_Lifeline();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Channel <em>Channel</em>}'.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure <em>Cloud Infrastructure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Channel</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Channel
+	 * @return the meta object for class '<em>Cloud Infrastructure</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure
 	 * @generated
 	 */
-	EEnum getChannel();
+	EClass getCloudInfrastructure();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPUScheduler <em>CPU Scheduler</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getDatacenterElement <em>Datacenter Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>CPU Scheduler</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPUScheduler
+	 * @return the meta object for the containment reference list '<em>Datacenter Element</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getDatacenterElement()
+	 * @see #getCloudInfrastructure()
 	 * @generated
 	 */
-	EEnum getCPUScheduler();
+	EReference getCloudInfrastructure_DatacenterElement();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProviderType <em>Cloud Provider Type</em>}'.
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getCloudProvider <em>Cloud Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Cloud Provider Type</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProviderType
+	 * @return the meta object for the reference '<em>Cloud Provider</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getCloudProvider()
+	 * @see #getCloudInfrastructure()
 	 * @generated
 	 */
-	EEnum getCloudProviderType();
+	EReference getCloudInfrastructure_CloudProvider();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getBase_Component <em>Base Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Component</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getBase_Component()
+	 * @see #getCloudInfrastructure()
+	 * @generated
+	 */
+	EReference getCloudInfrastructure_Base_Component();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getNetwork <em>Network</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Network</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getNetwork()
+	 * @see #getCloudInfrastructure()
+	 * @generated
+	 */
+	EReference getCloudInfrastructure_Network();
+
+	/**
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement <em>Data Center Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Center Element</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement
+	 * @generated
+	 */
+	EClass getDataCenterElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement#getNumberOfDataCenters <em>Number Of Data Centers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Data Centers</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement#getNumberOfDataCenters()
+	 * @see #getDataCenterElement()
+	 * @generated
+	 */
+	EAttribute getDataCenterElement_NumberOfDataCenters();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement#getDataCenterType <em>Data Center Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Data Center Type</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement#getDataCenterType()
+	 * @see #getDataCenterElement()
+	 * @generated
+	 */
+	EReference getDataCenterElement_DataCenterType();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.BandwidthUnit <em>Bandwidth Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Bandwidth Unit</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.BandwidthUnit
+	 * @generated
+	 */
+	EEnum getBandwidthUnit();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit <em>Size Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Size Unit</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit
+	 * @generated
+	 */
+	EEnum getSizeUnit();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.TimeUnit <em>Time Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Time Unit</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.TimeUnit
+	 * @generated
+	 */
+	EEnum getTimeUnit();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3243,20 +3304,12 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EClass DATA_CENTER = eINSTANCE.getDataCenter();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Component</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Network</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_CENTER__BASE_COMPONENT = eINSTANCE.getDataCenter_Base_Component();
-
-		/**
-		 * The meta object literal for the '<em><b>Network</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATA_CENTER__NETWORK = eINSTANCE.getDataCenter_Network();
+		EReference DATA_CENTER__NETWORK = eINSTANCE.getDataCenter_Network();
 
 		/**
 		 * The meta object literal for the '<em><b>Rack Elements</b></em>' containment reference list feature.
@@ -3265,6 +3318,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference DATA_CENTER__RACK_ELEMENTS = eINSTANCE.getDataCenter_RackElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Component</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_CENTER__BASE_COMPONENT = eINSTANCE.getDataCenter_Base_Component();
 
 		/**
 		 * The meta object literal for the '<em><b>Rack Elements instances Should Be Greatter Than Zero</b></em>' operation.
@@ -3283,6 +3344,32 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation DATA_CENTER___RACK_ELEMENTS_INSTANCES_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getDataCenter__RackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
 
 		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.BandwidthImpl <em>Bandwidth</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.BandwidthImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getBandwidth()
+		 * @generated
+		 */
+		EClass BANDWIDTH = eINSTANCE.getBandwidth();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BANDWIDTH__VALUE = eINSTANCE.getBandwidth_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BANDWIDTH__UNIT = eINSTANCE.getBandwidth_Unit();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackElementImpl <em>Rack Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3293,28 +3380,20 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EClass RACK_ELEMENT = eINSTANCE.getRackElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Instances</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Number Of Racks</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RACK_ELEMENT__INSTANCES = eINSTANCE.getRackElement_Instances();
+		EAttribute RACK_ELEMENT__NUMBER_OF_RACKS = eINSTANCE.getRackElement_NumberOfRacks();
 
 		/**
-		 * The meta object literal for the '<em><b>Rack</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Rack Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RACK_ELEMENT__RACK = eINSTANCE.getRackElement_Rack();
-
-		/**
-		 * The meta object literal for the '<em><b>Data Center</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RACK_ELEMENT__DATA_CENTER = eINSTANCE.getRackElement_DataCenter();
+		EReference RACK_ELEMENT__RACK_TYPE = eINSTANCE.getRackElement_RackType();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackImpl <em>Rack</em>}' class.
@@ -3327,28 +3406,20 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EClass RACK = eINSTANCE.getRack();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Component</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Machines Per Board</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RACK__BASE_COMPONENT = eINSTANCE.getRack_Base_Component();
+		EAttribute RACK__MACHINES_PER_BOARD = eINSTANCE.getRack_MachinesPerBoard();
 
 		/**
-		 * The meta object literal for the '<em><b>Nodes Per Board</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Network</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RACK__NODES_PER_BOARD = eINSTANCE.getRack_NodesPerBoard();
-
-		/**
-		 * The meta object literal for the '<em><b>Comm Link</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RACK__COMM_LINK = eINSTANCE.getRack_CommLink();
+		EReference RACK__NETWORK = eINSTANCE.getRack_Network();
 
 		/**
 		 * The meta object literal for the '<em><b>Boards</b></em>' attribute feature.
@@ -3357,6 +3428,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RACK__BOARDS = eINSTANCE.getRack_Boards();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Component</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RACK__BASE_COMPONENT = eINSTANCE.getRack_Base_Component();
 
 		/**
 		 * The meta object literal for the '<em><b>Boards Must Be Greatter Than Zero</b></em>' operation.
@@ -3375,14 +3454,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRack__NodesPerBoard_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeImpl <em>Node</em>}' class.
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.MachineImpl <em>Machine</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNode()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.MachineImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getMachine()
 		 * @generated
 		 */
-		EClass NODE = eINSTANCE.getNode();
+		EClass MACHINE = eINSTANCE.getMachine();
 
 		/**
 		 * The meta object literal for the '<em><b>Base Component</b></em>' reference feature.
@@ -3390,15 +3469,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NODE__BASE_COMPONENT = eINSTANCE.getNode_Base_Component();
-
-		/**
-		 * The meta object literal for the '<em><b>Cpu Scheduler</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NODE__CPU_SCHEDULER = eINSTANCE.getNode_CpuScheduler();
+		EReference MACHINE__BASE_COMPONENT = eINSTANCE.getMachine_Base_Component();
 
 		/**
 		 * The meta object literal for the '<em><b>Cpu</b></em>' reference feature.
@@ -3406,7 +3477,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NODE__CPU = eINSTANCE.getNode_Cpu();
+		EReference MACHINE__CPU = eINSTANCE.getMachine_Cpu();
 
 		/**
 		 * The meta object literal for the '<em><b>Memory</b></em>' reference feature.
@@ -3414,7 +3485,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NODE__MEMORY = eINSTANCE.getNode_Memory();
+		EReference MACHINE__MEMORY = eINSTANCE.getMachine_Memory();
 
 		/**
 		 * The meta object literal for the '<em><b>Storage</b></em>' reference feature.
@@ -3422,7 +3493,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NODE__STORAGE = eINSTANCE.getNode_Storage();
+		EReference MACHINE__STORAGE = eINSTANCE.getMachine_Storage();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CPUImpl <em>CPU</em>}' class.
@@ -3435,28 +3506,20 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EClass CPU = eINSTANCE.getCPU();
 
 		/**
-		 * The meta object literal for the '<em><b>Number Of Cores</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cores</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CPU__NUMBER_OF_CORES = eINSTANCE.getCPU_NumberOfCores();
+		EAttribute CPU__CORES = eINSTANCE.getCPU_Cores();
 
 		/**
-		 * The meta object literal for the '<em><b>Speed MIPS</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>MIPS</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CPU__SPEED_MIPS = eINSTANCE.getCPU_SpeedMIPS();
-
-		/**
-		 * The meta object literal for the '<em><b>Tick S</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CPU__TICK_S = eINSTANCE.getCPU_TickS();
+		EAttribute CPU__MIPS = eINSTANCE.getCPU_MIPS();
 
 		/**
 		 * The meta object literal for the '<em><b>Speed MIPS Must Be Greater Than Zero</b></em>' operation.
@@ -3465,14 +3528,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CPU___SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCPU__SpeedMIPS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>Tick SMust Be Greater Than Zero</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CPU___TICK_SMUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCPU__TickS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '<em><b>Number Of Cores Must Be Greater Than Zero</b></em>' operation.
@@ -3511,28 +3566,20 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EClass MEMORY = eINSTANCE.getMemory();
 
 		/**
-		 * The meta object literal for the '<em><b>Size GB</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Capacity</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MEMORY__SIZE_GB = eINSTANCE.getMemory_SizeGB();
+		EReference MEMORY__CAPACITY = eINSTANCE.getMemory_Capacity();
 
 		/**
-		 * The meta object literal for the '<em><b>Read Latency US</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Latency</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MEMORY__READ_LATENCY_US = eINSTANCE.getMemory_ReadLatencyUS();
-
-		/**
-		 * The meta object literal for the '<em><b>Write Latency US</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEMORY__WRITE_LATENCY_US = eINSTANCE.getMemory_WriteLatencyUS();
+		EReference MEMORY__LATENCY = eINSTANCE.getMemory_Latency();
 
 		/**
 		 * The meta object literal for the '<em><b>Size GB Must Be Greater Than Zero</b></em>' operation.
@@ -3543,62 +3590,124 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation MEMORY___SIZE_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getMemory__SizeGB_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Read Latency US Must Be Greater Than Or Equal To Zero</b></em>' operation.
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SizeImpl <em>Size</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SizeImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getSize()
 		 * @generated
 		 */
-		EOperation MEMORY___READ_LATENCY_US_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getMemory__ReadLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+		EClass SIZE = eINSTANCE.getSize();
 
 		/**
-		 * The meta object literal for the '<em><b>Write Latency US Must Be Greatter Than Or Equal To Zero</b></em>' operation.
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation MEMORY___WRITE_LATENCY_US_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getMemory__WriteLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+		EAttribute SIZE__VALUE = eINSTANCE.getSize_Value();
 
 		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DiskImpl <em>Disk</em>}' class.
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DiskImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getDisk()
 		 * @generated
 		 */
-		EClass DISK = eINSTANCE.getDisk();
+		EAttribute SIZE__UNIT = eINSTANCE.getSize_Unit();
 
 		/**
-		 * The meta object literal for the '<em><b>Number Of Disks</b></em>' attribute feature.
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.LatencyImpl <em>Latency</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.LatencyImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getLatency()
 		 * @generated
 		 */
-		EAttribute DISK__NUMBER_OF_DISKS = eINSTANCE.getDisk_NumberOfDisks();
+		EClass LATENCY = eINSTANCE.getLatency();
 
 		/**
-		 * The meta object literal for the '<em><b>Read Bandwidth MBps</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DISK__READ_BANDWIDTH_MBPS = eINSTANCE.getDisk_ReadBandwidthMBps();
+		EAttribute LATENCY__NAME = eINSTANCE.getLatency_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Write Bandwidth MBps</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Time</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DISK__WRITE_BANDWIDTH_MBPS = eINSTANCE.getDisk_WriteBandwidthMBps();
+		EReference LATENCY__TIME = eINSTANCE.getLatency_Time();
 
 		/**
-		 * The meta object literal for the '<em><b>Size Per Device GB</b></em>' attribute feature.
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.TimeImpl <em>Time</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.TimeImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getTime()
+		 * @generated
+		 */
+		EClass TIME = eINSTANCE.getTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DISK__SIZE_PER_DEVICE_GB = eINSTANCE.getDisk_SizePerDeviceGB();
+		EAttribute TIME__VALUE = eINSTANCE.getTime_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TIME__UNIT = eINSTANCE.getTime_Unit();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageImpl <em>Storage</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getStorage()
+		 * @generated
+		 */
+		EClass STORAGE = eINSTANCE.getStorage();
+
+		/**
+		 * The meta object literal for the '<em><b>Number Of Drives</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STORAGE__NUMBER_OF_DRIVES = eINSTANCE.getStorage_NumberOfDrives();
+
+		/**
+		 * The meta object literal for the '<em><b>Write Bandwidth</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STORAGE__WRITE_BANDWIDTH = eINSTANCE.getStorage_WriteBandwidth();
+
+		/**
+		 * The meta object literal for the '<em><b>Drive Capacity</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STORAGE__DRIVE_CAPACITY = eINSTANCE.getStorage_DriveCapacity();
+
+		/**
+		 * The meta object literal for the '<em><b>Read Bandwidth</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STORAGE__READ_BANDWIDTH = eINSTANCE.getStorage_ReadBandwidth();
 
 		/**
 		 * The meta object literal for the '<em><b>Number Of Disks Must Be Greatter Than Zero</b></em>' operation.
@@ -3606,131 +3715,89 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DISK___NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getDisk__NumberOfDisks_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+		EOperation STORAGE___NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getStorage__NumberOfDisks_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Read Bandwidth MBps Must Be Greatter Than Zero</b></em>' operation.
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingRackImpl <em>Computing Rack</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingRackImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getComputingRack()
+		 * @generated
+		 */
+		EClass COMPUTING_RACK = eINSTANCE.getComputingRack();
+
+		/**
+		 * The meta object literal for the '<em><b>Machine Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DISK___READ_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getDisk__ReadBandwidthMBps_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+		EReference COMPUTING_RACK__MACHINE_TYPE = eINSTANCE.getComputingRack_MachineType();
 
 		/**
-		 * The meta object literal for the '<em><b>Write Bandwidth MBps Must Be Greatter Than Zero</b></em>' operation.
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingMachineImpl <em>Computing Machine</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingMachineImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getComputingMachine()
+		 * @generated
+		 */
+		EClass COMPUTING_MACHINE = eINSTANCE.getComputingMachine();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageRackImpl <em>Storage Rack</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageRackImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getStorageRack()
+		 * @generated
+		 */
+		EClass STORAGE_RACK = eINSTANCE.getStorageRack();
+
+		/**
+		 * The meta object literal for the '<em><b>Machine Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DISK___WRITE_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getDisk__WriteBandwidthMBps_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+		EReference STORAGE_RACK__MACHINE_TYPE = eINSTANCE.getStorageRack_MachineType();
 
 		/**
-		 * The meta object literal for the '<em><b>Size Per Device GB Must Be Greatter Than Zero</b></em>' operation.
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageMachineImpl <em>Storage Machine</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageMachineImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getStorageMachine()
+		 * @generated
+		 */
+		EClass STORAGE_MACHINE = eINSTANCE.getStorageMachine();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl <em>Cloud Provider</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudProvider()
+		 * @generated
+		 */
+		EClass CLOUD_PROVIDER = eINSTANCE.getCloudProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>Resource Allocation Policy</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DISK___SIZE_PER_DEVICE_GB_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getDisk__SizePerDeviceGB_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+		EAttribute CLOUD_PROVIDER__RESOURCE_ALLOCATION_POLICY = eINSTANCE.getCloudProvider_ResourceAllocationPolicy();
 
 		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackCmpImpl <em>Rack Cmp</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackCmpImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackCmp()
-		 * @generated
-		 */
-		EClass RACK_CMP = eINSTANCE.getRackCmp();
-
-		/**
-		 * The meta object literal for the '<em><b>Node Cmp Type</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Base Lifeline</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RACK_CMP__NODE_CMP_TYPE = eINSTANCE.getRackCmp_NodeCmpType();
-
-		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeCmpImpl <em>Node Cmp</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeCmpImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNodeCmp()
-		 * @generated
-		 */
-		EClass NODE_CMP = eINSTANCE.getNodeCmp();
-
-		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackStoImpl <em>Rack Sto</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackStoImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRackSto()
-		 * @generated
-		 */
-		EClass RACK_STO = eINSTANCE.getRackSto();
-
-		/**
-		 * The meta object literal for the '<em><b>Node Sto Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RACK_STO__NODE_STO_TYPE = eINSTANCE.getRackSto_NodeStoType();
-
-		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeStoImpl <em>Node Sto</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.NodeStoImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getNodeSto()
-		 * @generated
-		 */
-		EClass NODE_STO = eINSTANCE.getNodeSto();
-
-		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ScenarioImpl <em>Scenario</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ScenarioImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getScenario()
-		 * @generated
-		 */
-		EClass SCENARIO = eINSTANCE.getScenario();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Package</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCENARIO__BASE_PACKAGE = eINSTANCE.getScenario_Base_Package();
-
-		/**
-		 * The meta object literal for the '<em><b>Cloud Provider</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCENARIO__CLOUD_PROVIDER = eINSTANCE.getScenario_CloudProvider();
-
-		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RepositoryImpl <em>Repository</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RepositoryImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRepository()
-		 * @generated
-		 */
-		EClass REPOSITORY = eINSTANCE.getRepository();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Package</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REPOSITORY__BASE_PACKAGE = eINSTANCE.getRepository_Base_Package();
+		EReference CLOUD_PROVIDER__BASE_LIFELINE = eINSTANCE.getCloudProvider_Base_Lifeline();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ApplicationImpl <em>Application</em>}' class.
@@ -3751,6 +3818,80 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference APPLICATION__BASE_COMPONENT = eINSTANCE.getApplication_Base_Component();
 
 		/**
+		 * The meta object literal for the '<em><b>MIs</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APPLICATION__MIS = eINSTANCE.getApplication_MIs();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Data</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APPLICATION__INPUT_DATA = eINSTANCE.getApplication_InputData();
+
+		/**
+		 * The meta object literal for the '<em><b>Output Data</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APPLICATION__OUTPUT_DATA = eINSTANCE.getApplication_OutputData();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameter</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference APPLICATION__PARAMETER = eINSTANCE.getApplication_Parameter();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getParameter()
+		 * @generated
+		 */
+		EClass PARAMETER = eINSTANCE.getParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__VALUE = eINSTANCE.getParameter_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__UNIT = eINSTANCE.getParameter_Unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__DESCRIPTION = eINSTANCE.getParameter_Description();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl <em>VM</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3769,68 +3910,44 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference VM__BASE_COMPONENT = eINSTANCE.getVM_Base_Component();
 
 		/**
-		 * The meta object literal for the '<em><b>Number Of Cores</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cores</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VM__NUMBER_OF_CORES = eINSTANCE.getVM_NumberOfCores();
+		EAttribute VM__CORES = eINSTANCE.getVM_Cores();
 
 		/**
-		 * The meta object literal for the '<em><b>Disk GB</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Disk</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VM__DISK_GB = eINSTANCE.getVM_DiskGB();
+		EReference VM__DISK = eINSTANCE.getVM_Disk();
 
 		/**
-		 * The meta object literal for the '<em><b>Cost Per Hour</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Computing Units</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VM__COST_PER_HOUR = eINSTANCE.getVM_CostPerHour();
+		EAttribute VM__COMPUTING_UNITS = eINSTANCE.getVM_ComputingUnits();
 
 		/**
-		 * The meta object literal for the '<em><b>SCU</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Memory</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VM__SCU = eINSTANCE.getVM_SCU();
+		EReference VM__MEMORY = eINSTANCE.getVM_Memory();
 
 		/**
-		 * The meta object literal for the '<em><b>Memory GB</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cores Must Be Greater Than Zero</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VM__MEMORY_GB = eINSTANCE.getVM_MemoryGB();
-
-		/**
-		 * The meta object literal for the '<em><b>Number Of Cores Must Be Greater Than Zero</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation VM___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__NumberOfCores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>Disk GB Must Be Greater Than Zero</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation VM___DISK_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__DiskGB_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>Cost Per Hour Must Be Greater Than Or Equeal To Zero</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation VM___COST_PER_HOUR_MUST_BE_GREATER_THAN_OR_EQUEAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__CostPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero__DiagnosticChain_Map();
+		EOperation VM___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__Cores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '<em><b>SCU Must Be Greater Than Zero</b></em>' operation.
@@ -3849,112 +3966,12 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation VM___MEMORY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__Memory_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.LocalApplicationImpl <em>Local Application</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.LocalApplicationImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getLocalApplication()
-		 * @generated
-		 */
-		EClass LOCAL_APPLICATION = eINSTANCE.getLocalApplication();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Data Size Mi B</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>VM can not be allocated</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_B = eINSTANCE.getLocalApplication_InputDataSizeMiB();
-
-		/**
-		 * The meta object literal for the '<em><b>Output Data Size Mi B</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_B = eINSTANCE.getLocalApplication_OutputDataSizeMiB();
-
-		/**
-		 * The meta object literal for the '<em><b>Input File</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOCAL_APPLICATION__INPUT_FILE = eINSTANCE.getLocalApplication_InputFile();
-
-		/**
-		 * The meta object literal for the '<em><b>Output File</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOCAL_APPLICATION__OUTPUT_FILE = eINSTANCE.getLocalApplication_OutputFile();
-
-		/**
-		 * The meta object literal for the '<em><b>MIs</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOCAL_APPLICATION__MIS = eINSTANCE.getLocalApplication_MIs();
-
-		/**
-		 * The meta object literal for the '<em><b>Iterations</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOCAL_APPLICATION__ITERATIONS = eINSTANCE.getLocalApplication_Iterations();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Data Size Mi BMust Be Greater Than Or Equal To Zero</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation LOCAL_APPLICATION___INPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getLocalApplication__InputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>Output Data Size Mi BMust Be Greater Than Or Equal To Zero</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation LOCAL_APPLICATION___OUTPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getLocalApplication__OutputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>MIs Must Be Greater Than Or Equal To Zero</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation LOCAL_APPLICATION___MIS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getLocalApplication__MIs_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>Iterations Must Be Greater Than Or Equal To Zero</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation LOCAL_APPLICATION___ITERATIONS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getLocalApplication__Iterations_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl <em>Cloud Provider</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudProvider()
-		 * @generated
-		 */
-		EClass CLOUD_PROVIDER = eINSTANCE.getCloudProvider();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Lifeline</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLOUD_PROVIDER__BASE_LIFELINE = eINSTANCE.getCloudProvider_Base_Lifeline();
+		EOperation VM___VM_CAN_NOT_BE_ALLOCATED__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__VM_can_not_be_allocated__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl <em>Request</em>}' class.
@@ -3975,14 +3992,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference REQUEST__BASE_MESSAGE = eINSTANCE.getRequest_Base_Message();
 
 		/**
-		 * The meta object literal for the '<em><b>Renting Time</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REQUEST__RENTING_TIME = eINSTANCE.getRequest_RentingTime();
-
-		/**
 		 * The meta object literal for the '<em><b>Vm Instantiation</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3991,20 +4000,12 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference REQUEST__VM_INSTANTIATION = eINSTANCE.getRequest_VmInstantiation();
 
 		/**
-		 * The meta object literal for the '<em><b>T1 Must Be Greater Than Or Equal To Zero</b></em>' operation.
+		 * The meta object literal for the '<em><b>Renting Time Must Be Greater Than Or Equal To Zero</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation REQUEST___T1_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRequest__T1_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>T2 Must Be Greater Than Zero</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REQUEST___T2_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRequest__T2_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+		EOperation REQUEST___RENTING_TIME_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRequest__RentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl <em>VM Instantiation</em>}' class.
@@ -4033,6 +4034,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference VM_INSTANTIATION__VM_TYPE = eINSTANCE.getVMInstantiation_VmType();
 
 		/**
+		 * The meta object literal for the '<em><b>Renting Time</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VM_INSTANTIATION__RENTING_TIME = eINSTANCE.getVMInstantiation_RentingTime();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SubscribeImpl <em>Subscribe</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4051,28 +4060,20 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference SUBSCRIBE__BASE_MESSAGE = eINSTANCE.getSubscribe_Base_Message();
 
 		/**
-		 * The meta object literal for the '<em><b>Max Sub Time</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Max Time</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SUBSCRIBE__MAX_SUB_TIME = eINSTANCE.getSubscribe_MaxSubTime();
+		EReference SUBSCRIBE__MAX_TIME = eINSTANCE.getSubscribe_MaxTime();
 
 		/**
-		 * The meta object literal for the '<em><b>T4 Must Be Greater Than Zero</b></em>' operation.
+		 * The meta object literal for the '<em><b>Max Time Must Be Greater Than Zero</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBSCRIBE___T4_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscribe__T4_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>T4 Should Be Greater Than Or Equal To t1 From Connect If You Want To Subscribe</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SUBSCRIBE___T4_SHOULD_BE_GREATER_THAN_OR_EQUAL_TO_T1_FROM_CONNECT_IF_YOU_WANT_TO_SUBSCRIBE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscribe__T4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe__DiagnosticChain_Map();
+		EOperation SUBSCRIBE___MAX_TIME_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscribe__MaxTime_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.AppInstantiationImpl <em>App Instantiation</em>}' class.
@@ -4235,34 +4236,102 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference USER__BASE_LIFELINE = eINSTANCE.getUser_Base_Lifeline();
 
 		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Channel <em>Channel</em>}' enum.
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl <em>Cloud Infrastructure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Channel
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getChannel()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudInfrastructure()
 		 * @generated
 		 */
-		EEnum CHANNEL = eINSTANCE.getChannel();
+		EClass CLOUD_INFRASTRUCTURE = eINSTANCE.getCloudInfrastructure();
 
 		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPUScheduler <em>CPU Scheduler</em>}' enum.
+		 * The meta object literal for the '<em><b>Datacenter Element</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPUScheduler
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCPUScheduler()
 		 * @generated
 		 */
-		EEnum CPU_SCHEDULER = eINSTANCE.getCPUScheduler();
+		EReference CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENT = eINSTANCE.getCloudInfrastructure_DatacenterElement();
 
 		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProviderType <em>Cloud Provider Type</em>}' enum.
+		 * The meta object literal for the '<em><b>Cloud Provider</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProviderType
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getCloudProviderType()
 		 * @generated
 		 */
-		EEnum CLOUD_PROVIDER_TYPE = eINSTANCE.getCloudProviderType();
+		EReference CLOUD_INFRASTRUCTURE__CLOUD_PROVIDER = eINSTANCE.getCloudInfrastructure_CloudProvider();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Component</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOUD_INFRASTRUCTURE__BASE_COMPONENT = eINSTANCE.getCloudInfrastructure_Base_Component();
+
+		/**
+		 * The meta object literal for the '<em><b>Network</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOUD_INFRASTRUCTURE__NETWORK = eINSTANCE.getCloudInfrastructure_Network();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterElementImpl <em>Data Center Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterElementImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getDataCenterElement()
+		 * @generated
+		 */
+		EClass DATA_CENTER_ELEMENT = eINSTANCE.getDataCenterElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Number Of Data Centers</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA_CENTER_ELEMENT__NUMBER_OF_DATA_CENTERS = eINSTANCE.getDataCenterElement_NumberOfDataCenters();
+
+		/**
+		 * The meta object literal for the '<em><b>Data Center Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_CENTER_ELEMENT__DATA_CENTER_TYPE = eINSTANCE.getDataCenterElement_DataCenterType();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.BandwidthUnit <em>Bandwidth Unit</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.BandwidthUnit
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getBandwidthUnit()
+		 * @generated
+		 */
+		EEnum BANDWIDTH_UNIT = eINSTANCE.getBandwidthUnit();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit <em>Size Unit</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getSizeUnit()
+		 * @generated
+		 */
+		EEnum SIZE_UNIT = eINSTANCE.getSizeUnit();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.TimeUnit <em>Time Unit</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.TimeUnit
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getTimeUnit()
+		 * @generated
+		 */
+		EEnum TIME_UNIT = eINSTANCE.getTimeUnit();
 
 	}
 

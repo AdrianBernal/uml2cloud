@@ -2,13 +2,16 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="uml2cloudprofile" nsURI="http://www.uclm.es/UML/profiles/UML2Cloud/1"
     nsPrefix="UML2CloudProfile">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="self.disk.value>0"/>
+  </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
     <details key="originalName" value="uml2cloud"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="DataCenter">
     <eOperations name="rackElements_instances_Should_Be_Greatter_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.rackElements->forAll(instances>0)"/>
+        <details key="documentation" value="self.rackElements->forAll(numberOfRacks>0)"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -28,7 +31,7 @@
     <eOperations name="rackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.rackElements->forAll(instances>=0)"/>
+        <details key="documentation" value="self.rackElements->forAll(numberOfRacks>=0)"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -45,28 +48,31 @@
         </eGenericType>
       </eParameters>
     </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="network" ordered="false"
+        lowerBound="1" eType="#//Bandwidth" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rackElements" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//RackElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="network" ordered="false"
-        lowerBound="1" eType="#//Channel" defaultValueLiteral="Ethernet40Gbps"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rackElements" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//RackElement" containment="true" eOpposite="#//RackElement/dataCenter"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Channel">
-    <eLiterals name="Ethernet10Mbps"/>
-    <eLiterals name="Ethernet100Mbps" value="1"/>
-    <eLiterals name="Ethernet1Gbps" value="2"/>
-    <eLiterals name="Ethernet10Gbps" value="3"/>
-    <eLiterals name="Ethernet40Gbps" value="4"/>
-    <eLiterals name="Ethernet100Gbps" value="5"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bandwidth">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
+        defaultValueLiteral="10.0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false" lowerBound="1"
+        eType="#//BandwidthUnit" defaultValueLiteral="Gbps"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BandwidthUnit">
+    <eLiterals name="Kbps"/>
+    <eLiterals name="Mbps" value="1"/>
+    <eLiterals name="Gbps" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RackElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instances" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rack" ordered="false" lowerBound="1"
-        eType="#//Rack"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataCenter" ordered="false"
-        lowerBound="1" eType="#//DataCenter" eOpposite="#//DataCenter/rackElements"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRacks" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
+        defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rackType" ordered="false"
+        lowerBound="1" eType="#//Rack"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rack" abstract="true">
     <eOperations name="boards_Must_Be_Greatter_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
@@ -90,7 +96,7 @@
     </eOperations>
     <eOperations name="nodesPerBoard_Must_Be_Greatter_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.nodesPerBoard>0"/>
+        <details key="documentation" value="self.machinesPerBoard>0"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -107,56 +113,31 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodesPerBoard" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="machinesPerBoard" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
         defaultValueLiteral="8"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="commLink" ordered="false"
-        lowerBound="1" eType="#//Channel" defaultValueLiteral="Ethernet40Gbps"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="network" ordered="false"
+        lowerBound="1" eType="#//Bandwidth" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="boards" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
         defaultValueLiteral="8"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cpuScheduler" ordered="false"
-        lowerBound="1" eType="#//CPUScheduler" defaultValueLiteral="FIFO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Machine" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cpu" ordered="false" lowerBound="1"
         eType="#//CPU"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="memory" ordered="false"
         lowerBound="1" eType="#//Memory"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="storage" ordered="false"
-        lowerBound="1" eType="#//Disk"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="CPUScheduler">
-    <eLiterals name="FIFO"/>
-    <eLiterals name="RoundRobin" value="1"/>
+        lowerBound="1" eType="#//Storage"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CPU" eSuperTypes="#//Hardware">
     <eOperations name="speedMIPS_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.speedMIPS>0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="tickS_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.tickS>0"/>
+        <details key="documentation" value="self.MIPS>0"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -175,7 +156,7 @@
     </eOperations>
     <eOperations name="numberOfCores_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.numberOfCores>0"/>
+        <details key="documentation" value="self.cores>0"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -192,15 +173,12 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfCores" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cores" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
         defaultValueLiteral="2"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="speedMIPS" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MIPS" ordered="false" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
         defaultValueLiteral="30000"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tickS" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
-        defaultValueLiteral="0.01"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hardware" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
@@ -209,7 +187,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Memory" eSuperTypes="#//Hardware">
     <eOperations name="sizeGB_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.sizeGB>0"/>
+        <details key="documentation" value="self.capacity.value>0"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -226,58 +204,45 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eOperations name="readLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.readLatencyUS>=0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="writeLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.writeLatencyUS>=0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizeGB" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
-        defaultValueLiteral="4.0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="readLatencyUS" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
-        defaultValueLiteral="5"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="writeLatencyUS" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
-        defaultValueLiteral="5"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capacity" ordered="false"
+        lowerBound="1" eType="#//Size" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="latency" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Latency" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Disk" eSuperTypes="#//Hardware">
+  <eClassifiers xsi:type="ecore:EClass" name="Size">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false" lowerBound="1"
+        eType="#//SizeUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SizeUnit">
+    <eLiterals name="KByte"/>
+    <eLiterals name="MByte" value="1"/>
+    <eLiterals name="GByte" value="2"/>
+    <eLiterals name="TByte" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Latency">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" ordered="false" lowerBound="1"
+        eType="#//Time" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Time">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false" lowerBound="1"
+        eType="#//TimeUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TimeUnit">
+    <eLiterals name="s"/>
+    <eLiterals name="ms" value="1"/>
+    <eLiterals name="us" value="2"/>
+    <eLiterals name="ns" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Storage" eSuperTypes="#//Hardware">
     <eOperations name="numberOfDisks_Must_Be_Greatter_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.numberOfDisks>0"/>
+        <details key="documentation" value="self.numberOfDrives>0"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -294,145 +259,59 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eOperations name="readBandwidthMBps_Must_Be_Greatter_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.readBandwidthMBps>0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="writeBandwidthMBps_Must_Be_Greatter_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.writeBandwidthMBps>0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="sizePerDeviceGB_Must_Be_Greatter_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.sizePerDeviceGB>0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfDisks" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfDrives" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
         defaultValueLiteral="1"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="readBandwidthMBps" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
-        defaultValueLiteral="500.0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="writeBandwidthMBps" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
-        defaultValueLiteral="350.0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sizePerDeviceGB" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
-        defaultValueLiteral="1000"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="writeBandwidth" ordered="false"
+        lowerBound="1" eType="#//Bandwidth" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="driveCapacity" ordered="false"
+        lowerBound="1" eType="#//Size" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="readBandwidth" ordered="false"
+        lowerBound="1" eType="#//Bandwidth" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RackCmp" eSuperTypes="#//Rack">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nodeCmpType" ordered="false"
-        lowerBound="1" eType="#//NodeCmp"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComputingRack" eSuperTypes="#//Rack">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="machineType" ordered="false"
+        lowerBound="1" eType="#//ComputingMachine"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NodeCmp" eSuperTypes="#//Node"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RackSto" eSuperTypes="#//Rack">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nodeStoType" ordered="false"
-        lowerBound="1" eType="#//NodeSto"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComputingMachine" eSuperTypes="#//Machine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StorageRack" eSuperTypes="#//Rack">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="machineType" ordered="false"
+        lowerBound="1" eType="#//StorageMachine"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NodeSto" eSuperTypes="#//Node"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Scenario">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Package" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cloudProvider" ordered="false"
-        lowerBound="1" eType="#//CloudProviderType" defaultValueLiteral="CloudProviderFirstFit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StorageMachine" eSuperTypes="#//Machine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CloudProvider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceAllocationPolicy"
+        ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Lifeline" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Lifeline"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="CloudProviderType">
-    <eLiterals name="CloudProviderFirstFit"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Repository">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Package" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Application" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Application">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MIs" ordered="false" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
+        defaultValueLiteral="10000"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputData" ordered="false"
+        lowerBound="1" eType="#//Size" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputData" ordered="false"
+        lowerBound="1" eType="#//Size" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" ordered="false"
+        upperBound="-1" eType="#//Parameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false" lowerBound="1"
+        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VM">
-    <eOperations name="numberOfCores_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="cores_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.numberOfCores>0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="diskGB_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.diskGB>0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.costPerHour>=0"/>
+        <details key="documentation" value="self.cores>0"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -451,7 +330,7 @@
     </eOperations>
     <eOperations name="SCU_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.SCU>0"/>
+        <details key="documentation" value="self.computingUnits>0"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -470,7 +349,26 @@
     </eOperations>
     <eOperations name="memory_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.memoryGB>0"/>
+        <details key="documentation" value="self.memory.value>0"/>
+      </eAnnotations>
+      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="context">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cache of context-specific information."/>
+        </eAnnotations>
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="VM_can_not_be_allocated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="UML::Component.allInstances()->selectByKind(ComputingMachine)->one(cm | cm.cpu.cores>=self.cores)"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -489,145 +387,21 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfCores" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cores" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
         defaultValueLiteral="2"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diskGB" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="disk" ordered="false" lowerBound="1"
+        eType="#//Size" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="computingUnits" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
-        defaultValueLiteral="500.0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="costPerHour" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
-        defaultValueLiteral="15.0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SCU" ordered="false" lowerBound="1"
-        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
         defaultValueLiteral="2.0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="memoryGB" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
-        defaultValueLiteral="4.0"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LocalApplication" eSuperTypes="#//Application">
-    <eOperations name="inputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.inputDataSizeMiB>=0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="outputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.outputDataSizeMiB>=0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="MIs_Must_Be_Greater_Than_Or_Equal_To_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.MIs>=0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="iterations_Must_Be_Greater_Than_Or_Equal_To_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.iterations>=0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputDataSizeMiB" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
-        defaultValueLiteral="10"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputDataSizeMiB" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
-        defaultValueLiteral="5"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputFile" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"
-        defaultValueLiteral="/inputFile_0.dat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputFile" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"
-        defaultValueLiteral="/outputFile_0.dat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MIs" ordered="false" lowerBound="1"
-        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
-        defaultValueLiteral="10000"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iterations" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
-        defaultValueLiteral="25"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CloudProvider">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Lifeline" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Lifeline"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memory" ordered="false"
+        lowerBound="1" eType="#//Size" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Request">
-    <eOperations name="t1_Must_Be_Greater_Than_Or_Equal_To_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.t1>=0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="t2_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.t2>0"/>
+        <details key="documentation" value="self.rentingTime.value>0"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -646,8 +420,6 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Message" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Message"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rentingTime" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vmInstantiation" ordered="false"
         lowerBound="1" upperBound="-1" eType="#//VMInstantiation" containment="true"/>
   </eClassifiers>
@@ -657,31 +429,13 @@
         defaultValueLiteral="1"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vmType" ordered="false"
         lowerBound="1" eType="#//VM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rentingTime" ordered="false"
+        lowerBound="1" eType="#//Time" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Subscribe">
-    <eOperations name="t4_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="maxTime_Must_Be_Greater_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.t4>0"/>
-      </eAnnotations>
-      <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
-        </eAnnotations>
-      </eParameters>
-      <eParameters name="context">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The cache of context-specific information."/>
-        </eAnnotations>
-        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-          <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-        </eGenericType>
-      </eParameters>
-    </eOperations>
-    <eOperations name="t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Request.allInstances()->forAll(t1&lt;=self.t4)"/>
+        <details key="documentation" value="self.maxTime.value>0"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -700,9 +454,8 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Message" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Message"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxSubTime" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
-        defaultValueLiteral="0.0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maxTime" ordered="false"
+        lowerBound="1" eType="#//Time" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AppInstantiation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="applicationType" ordered="false"
@@ -739,5 +492,21 @@
   <eClassifiers xsi:type="ecore:EClass" name="User">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Lifeline" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Lifeline"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CloudInfrastructure">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datacenterElement" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//DataCenterElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cloudProvider" ordered="false"
+        lowerBound="1" eType="#//CloudProvider"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="network" ordered="false"
+        lowerBound="1" eType="#//Bandwidth" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataCenterElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfDataCenters" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataCenterType" ordered="false"
+        lowerBound="1" eType="#//DataCenter"/>
   </eClassifiers>
 </ecore:EPackage>

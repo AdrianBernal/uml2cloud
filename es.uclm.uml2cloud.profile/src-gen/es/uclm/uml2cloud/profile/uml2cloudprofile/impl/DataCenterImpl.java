@@ -2,7 +2,7 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.Channel;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -44,43 +44,23 @@ import org.eclipse.uml2.uml.Component;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterImpl#getBase_Component <em>Base Component</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterImpl#getNetwork <em>Network</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterImpl#getRackElements <em>Rack Elements</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterImpl#getBase_Component <em>Base Component</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DataCenterImpl extends MinimalEObjectImpl.Container implements DataCenter {
 	/**
-	 * The cached value of the '{@link #getBase_Component() <em>Base Component</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBase_Component()
-	 * @generated
-	 * @ordered
-	 */
-	protected Component base_Component;
-
-	/**
-	 * The default value of the '{@link #getNetwork() <em>Network</em>}' attribute.
+	 * The cached value of the '{@link #getNetwork() <em>Network</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getNetwork()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Channel NETWORK_EDEFAULT = Channel.ETHERNET40_GBPS;
-
-	/**
-	 * The cached value of the '{@link #getNetwork() <em>Network</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNetwork()
-	 * @generated
-	 * @ordered
-	 */
-	protected Channel network = NETWORK_EDEFAULT;
+	protected Bandwidth network;
 
 	/**
 	 * The cached value of the '{@link #getRackElements() <em>Rack Elements</em>}' containment reference list.
@@ -91,6 +71,16 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	 * @ordered
 	 */
 	protected EList<RackElement> rackElements;
+
+	/**
+	 * The cached value of the '{@link #getBase_Component() <em>Base Component</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBase_Component()
+	 * @generated
+	 * @ordered
+	 */
+	protected Component base_Component;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,6 +99,61 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	@Override
 	protected EClass eStaticClass() {
 		return UML2CloudProfilePackage.Literals.DATA_CENTER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bandwidth getNetwork() {
+		return network;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetNetwork(Bandwidth newNetwork, NotificationChain msgs) {
+		Bandwidth oldNetwork = network;
+		network = newNetwork;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.DATA_CENTER__NETWORK, oldNetwork, newNetwork);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNetwork(Bandwidth newNetwork) {
+		if (newNetwork != network) {
+			NotificationChain msgs = null;
+			if (network != null)
+				msgs = ((InternalEObject)network).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.DATA_CENTER__NETWORK, null, msgs);
+			if (newNetwork != null)
+				msgs = ((InternalEObject)newNetwork).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.DATA_CENTER__NETWORK, null, msgs);
+			msgs = basicSetNetwork(newNetwork, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.DATA_CENTER__NETWORK, newNetwork, newNetwork));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<RackElement> getRackElements() {
+		if (rackElements == null) {
+			rackElements = new EObjectContainmentEList<RackElement>(RackElement.class, this, UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS);
+		}
+		return rackElements;
 	}
 
 	/**
@@ -147,39 +192,6 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 		base_Component = newBase_Component;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.DATA_CENTER__BASE_COMPONENT, oldBase_Component, base_Component));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Channel getNetwork() {
-		return network;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNetwork(Channel newNetwork) {
-		Channel oldNetwork = network;
-		network = newNetwork == null ? NETWORK_EDEFAULT : newNetwork;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.DATA_CENTER__NETWORK, oldNetwork, network));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<RackElement> getRackElements() {
-		if (rackElements == null) {
-			rackElements = new EObjectContainmentWithInverseEList<RackElement>(RackElement.class, this, UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS, UML2CloudProfilePackage.RACK_ELEMENT__DATA_CENTER);
-		}
-		return rackElements;
 	}
 
 	/**
@@ -237,24 +249,11 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRackElements()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case UML2CloudProfilePackage.DATA_CENTER__NETWORK:
+				return basicSetNetwork(null, msgs);
 			case UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS:
 				return ((InternalEList<?>)getRackElements()).basicRemove(otherEnd, msgs);
 		}
@@ -269,13 +268,13 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.DATA_CENTER__BASE_COMPONENT:
-				if (resolve) return getBase_Component();
-				return basicGetBase_Component();
 			case UML2CloudProfilePackage.DATA_CENTER__NETWORK:
 				return getNetwork();
 			case UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS:
 				return getRackElements();
+			case UML2CloudProfilePackage.DATA_CENTER__BASE_COMPONENT:
+				if (resolve) return getBase_Component();
+				return basicGetBase_Component();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -289,15 +288,15 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.DATA_CENTER__BASE_COMPONENT:
-				setBase_Component((Component)newValue);
-				return;
 			case UML2CloudProfilePackage.DATA_CENTER__NETWORK:
-				setNetwork((Channel)newValue);
+				setNetwork((Bandwidth)newValue);
 				return;
 			case UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS:
 				getRackElements().clear();
 				getRackElements().addAll((Collection<? extends RackElement>)newValue);
+				return;
+			case UML2CloudProfilePackage.DATA_CENTER__BASE_COMPONENT:
+				setBase_Component((Component)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -311,14 +310,14 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.DATA_CENTER__BASE_COMPONENT:
-				setBase_Component((Component)null);
-				return;
 			case UML2CloudProfilePackage.DATA_CENTER__NETWORK:
-				setNetwork(NETWORK_EDEFAULT);
+				setNetwork((Bandwidth)null);
 				return;
 			case UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS:
 				getRackElements().clear();
+				return;
+			case UML2CloudProfilePackage.DATA_CENTER__BASE_COMPONENT:
+				setBase_Component((Component)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -332,12 +331,12 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.DATA_CENTER__BASE_COMPONENT:
-				return base_Component != null;
 			case UML2CloudProfilePackage.DATA_CENTER__NETWORK:
-				return network != NETWORK_EDEFAULT;
+				return network != null;
 			case UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS:
 				return rackElements != null && !rackElements.isEmpty();
+			case UML2CloudProfilePackage.DATA_CENTER__BASE_COMPONENT:
+				return base_Component != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -357,22 +356,6 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 				return rackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (network: ");
-		result.append(network);
-		result.append(')');
-		return result.toString();
 	}
 
 } //DataCenterImpl

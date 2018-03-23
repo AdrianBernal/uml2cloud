@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getInstances <em>Instances</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getVmType <em>Vm Type</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getRentingTime <em>Renting Time</em>}</li>
  * </ul>
  *
  * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVMInstantiation()
@@ -74,5 +75,31 @@ public interface VMInstantiation extends EObject {
 	 * @generated
 	 */
 	void setVmType(VM value);
+
+	/**
+	 * Returns the value of the '<em><b>Renting Time</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Renting Time</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Renting Time</em>' containment reference.
+	 * @see #setRentingTime(Time)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVMInstantiation_RentingTime()
+	 * @model containment="true" required="true" ordered="false"
+	 * @generated
+	 */
+	Time getRentingTime();
+
+	/**
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation#getRentingTime <em>Renting Time</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Renting Time</em>' containment reference.
+	 * @see #getRentingTime()
+	 * @generated
+	 */
+	void setRentingTime(Time value);
 
 } // VMInstantiation

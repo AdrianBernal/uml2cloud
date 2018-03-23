@@ -23,12 +23,33 @@ import org.eclipse.uml2.uml.Lifeline;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl#getResourceAllocationPolicy <em>Resource Allocation Policy</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl#getBase_Lifeline <em>Base Lifeline</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class CloudProviderImpl extends MinimalEObjectImpl.Container implements CloudProvider {
+	/**
+	 * The default value of the '{@link #getResourceAllocationPolicy() <em>Resource Allocation Policy</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResourceAllocationPolicy()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESOURCE_ALLOCATION_POLICY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getResourceAllocationPolicy() <em>Resource Allocation Policy</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResourceAllocationPolicy()
+	 * @generated
+	 * @ordered
+	 */
+	protected String resourceAllocationPolicy = RESOURCE_ALLOCATION_POLICY_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getBase_Lifeline() <em>Base Lifeline</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -56,6 +77,27 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	protected EClass eStaticClass() {
 		return UML2CloudProfilePackage.Literals.CLOUD_PROVIDER;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getResourceAllocationPolicy() {
+		return resourceAllocationPolicy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResourceAllocationPolicy(String newResourceAllocationPolicy) {
+		String oldResourceAllocationPolicy = resourceAllocationPolicy;
+		resourceAllocationPolicy = newResourceAllocationPolicy;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CLOUD_PROVIDER__RESOURCE_ALLOCATION_POLICY, oldResourceAllocationPolicy, resourceAllocationPolicy));
 	}
 
 	/**
@@ -104,6 +146,8 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__RESOURCE_ALLOCATION_POLICY:
+				return getResourceAllocationPolicy();
 			case UML2CloudProfilePackage.CLOUD_PROVIDER__BASE_LIFELINE:
 				if (resolve) return getBase_Lifeline();
 				return basicGetBase_Lifeline();
@@ -119,6 +163,9 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__RESOURCE_ALLOCATION_POLICY:
+				setResourceAllocationPolicy((String)newValue);
+				return;
 			case UML2CloudProfilePackage.CLOUD_PROVIDER__BASE_LIFELINE:
 				setBase_Lifeline((Lifeline)newValue);
 				return;
@@ -134,6 +181,9 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__RESOURCE_ALLOCATION_POLICY:
+				setResourceAllocationPolicy(RESOURCE_ALLOCATION_POLICY_EDEFAULT);
+				return;
 			case UML2CloudProfilePackage.CLOUD_PROVIDER__BASE_LIFELINE:
 				setBase_Lifeline((Lifeline)null);
 				return;
@@ -149,10 +199,28 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__RESOURCE_ALLOCATION_POLICY:
+				return RESOURCE_ALLOCATION_POLICY_EDEFAULT == null ? resourceAllocationPolicy != null : !RESOURCE_ALLOCATION_POLICY_EDEFAULT.equals(resourceAllocationPolicy);
 			case UML2CloudProfilePackage.CLOUD_PROVIDER__BASE_LIFELINE:
 				return base_Lifeline != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (resourceAllocationPolicy: ");
+		result.append(resourceAllocationPolicy);
+		result.append(')');
+		return result.toString();
 	}
 
 } //CloudProviderImpl

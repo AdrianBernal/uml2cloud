@@ -80,20 +80,12 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	public static final int CPU__SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO = 5;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Tick SMust Be Greater Than Zero' of 'CPU'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int CPU__TICK_SMUST_BE_GREATER_THAN_ZERO = 6;
-
-	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Number Of Cores Must Be Greater Than Zero' of 'CPU'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CPU__NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO = 7;
+	public static final int CPU__NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO = 6;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Size GB Must Be Greater Than Zero' of 'Memory'.
@@ -101,79 +93,23 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int MEMORY__SIZE_GB_MUST_BE_GREATER_THAN_ZERO = 8;
+	public static final int MEMORY__SIZE_GB_MUST_BE_GREATER_THAN_ZERO = 7;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Read Latency US Must Be Greater Than Or Equal To Zero' of 'Memory'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Number Of Disks Must Be Greatter Than Zero' of 'Storage'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int MEMORY__READ_LATENCY_US_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 9;
+	public static final int STORAGE__NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO = 8;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Write Latency US Must Be Greatter Than Or Equal To Zero' of 'Memory'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Cores Must Be Greater Than Zero' of 'VM'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int MEMORY__WRITE_LATENCY_US_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO = 10;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Number Of Disks Must Be Greatter Than Zero' of 'Disk'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int DISK__NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO = 11;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Read Bandwidth MBps Must Be Greatter Than Zero' of 'Disk'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int DISK__READ_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO = 12;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Write Bandwidth MBps Must Be Greatter Than Zero' of 'Disk'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int DISK__WRITE_BANDWIDTH_MBPS_MUST_BE_GREATTER_THAN_ZERO = 13;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Size Per Device GB Must Be Greatter Than Zero' of 'Disk'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int DISK__SIZE_PER_DEVICE_GB_MUST_BE_GREATTER_THAN_ZERO = 14;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Number Of Cores Must Be Greater Than Zero' of 'VM'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int VM__NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO = 15;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Disk GB Must Be Greater Than Zero' of 'VM'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int VM__DISK_GB_MUST_BE_GREATER_THAN_ZERO = 16;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Cost Per Hour Must Be Greater Than Or Equeal To Zero' of 'VM'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int VM__COST_PER_HOUR_MUST_BE_GREATER_THAN_OR_EQUEAL_TO_ZERO = 17;
+	public static final int VM__CORES_MUST_BE_GREATER_THAN_ZERO = 9;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'SCU Must Be Greater Than Zero' of 'VM'.
@@ -181,7 +117,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int VM__SCU_MUST_BE_GREATER_THAN_ZERO = 18;
+	public static final int VM__SCU_MUST_BE_GREATER_THAN_ZERO = 10;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Memory Must Be Greater Than Zero' of 'VM'.
@@ -189,71 +125,31 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int VM__MEMORY_MUST_BE_GREATER_THAN_ZERO = 19;
+	public static final int VM__MEMORY_MUST_BE_GREATER_THAN_ZERO = 11;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Input Data Size Mi BMust Be Greater Than Or Equal To Zero' of 'Local Application'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'VM can not be allocated' of 'VM'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int LOCAL_APPLICATION__INPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 20;
+	public static final int VM__VM_CAN_NOT_BE_ALLOCATED = 12;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Output Data Size Mi BMust Be Greater Than Or Equal To Zero' of 'Local Application'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Renting Time Must Be Greater Than Or Equal To Zero' of 'Request'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int LOCAL_APPLICATION__OUTPUT_DATA_SIZE_MI_BMUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 21;
+	public static final int REQUEST__RENTING_TIME_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 13;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'MIs Must Be Greater Than Or Equal To Zero' of 'Local Application'.
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Max Time Must Be Greater Than Zero' of 'Subscribe'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int LOCAL_APPLICATION__MIS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 22;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Iterations Must Be Greater Than Or Equal To Zero' of 'Local Application'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int LOCAL_APPLICATION__ITERATIONS_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 23;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'T1 Must Be Greater Than Or Equal To Zero' of 'Request'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int REQUEST__T1_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 24;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'T2 Must Be Greater Than Zero' of 'Request'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int REQUEST__T2_MUST_BE_GREATER_THAN_ZERO = 25;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'T4 Must Be Greater Than Zero' of 'Subscribe'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int SUBSCRIBE__T4_MUST_BE_GREATER_THAN_ZERO = 26;
-
-	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'T4 Should Be Greater Than Or Equal To t1 From Connect If You Want To Subscribe' of 'Subscribe'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int SUBSCRIBE__T4_SHOULD_BE_GREATER_THAN_OR_EQUAL_TO_T1_FROM_CONNECT_IF_YOU_WANT_TO_SUBSCRIBE = 27;
+	public static final int SUBSCRIBE__MAX_TIME_MUST_BE_GREATER_THAN_ZERO = 14;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -261,7 +157,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 27;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 14;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -303,40 +199,44 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		switch (classifierID) {
 			case UML2CloudProfilePackage.DATA_CENTER:
 				return validateDataCenter((DataCenter)value, diagnostics, context);
+			case UML2CloudProfilePackage.BANDWIDTH:
+				return validateBandwidth((Bandwidth)value, diagnostics, context);
 			case UML2CloudProfilePackage.RACK_ELEMENT:
 				return validateRackElement((RackElement)value, diagnostics, context);
 			case UML2CloudProfilePackage.RACK:
 				return validateRack((Rack)value, diagnostics, context);
-			case UML2CloudProfilePackage.NODE:
-				return validateNode((Node)value, diagnostics, context);
+			case UML2CloudProfilePackage.MACHINE:
+				return validateMachine((Machine)value, diagnostics, context);
 			case UML2CloudProfilePackage.CPU:
 				return validateCPU((CPU)value, diagnostics, context);
 			case UML2CloudProfilePackage.HARDWARE:
 				return validateHardware((Hardware)value, diagnostics, context);
 			case UML2CloudProfilePackage.MEMORY:
 				return validateMemory((Memory)value, diagnostics, context);
-			case UML2CloudProfilePackage.DISK:
-				return validateDisk((Disk)value, diagnostics, context);
-			case UML2CloudProfilePackage.RACK_CMP:
-				return validateRackCmp((RackCmp)value, diagnostics, context);
-			case UML2CloudProfilePackage.NODE_CMP:
-				return validateNodeCmp((NodeCmp)value, diagnostics, context);
-			case UML2CloudProfilePackage.RACK_STO:
-				return validateRackSto((RackSto)value, diagnostics, context);
-			case UML2CloudProfilePackage.NODE_STO:
-				return validateNodeSto((NodeSto)value, diagnostics, context);
-			case UML2CloudProfilePackage.SCENARIO:
-				return validateScenario((Scenario)value, diagnostics, context);
-			case UML2CloudProfilePackage.REPOSITORY:
-				return validateRepository((Repository)value, diagnostics, context);
-			case UML2CloudProfilePackage.APPLICATION:
-				return validateApplication((Application)value, diagnostics, context);
-			case UML2CloudProfilePackage.VM:
-				return validateVM((VM)value, diagnostics, context);
-			case UML2CloudProfilePackage.LOCAL_APPLICATION:
-				return validateLocalApplication((LocalApplication)value, diagnostics, context);
+			case UML2CloudProfilePackage.SIZE:
+				return validateSize((Size)value, diagnostics, context);
+			case UML2CloudProfilePackage.LATENCY:
+				return validateLatency((Latency)value, diagnostics, context);
+			case UML2CloudProfilePackage.TIME:
+				return validateTime((Time)value, diagnostics, context);
+			case UML2CloudProfilePackage.STORAGE:
+				return validateStorage((Storage)value, diagnostics, context);
+			case UML2CloudProfilePackage.COMPUTING_RACK:
+				return validateComputingRack((ComputingRack)value, diagnostics, context);
+			case UML2CloudProfilePackage.COMPUTING_MACHINE:
+				return validateComputingMachine((ComputingMachine)value, diagnostics, context);
+			case UML2CloudProfilePackage.STORAGE_RACK:
+				return validateStorageRack((StorageRack)value, diagnostics, context);
+			case UML2CloudProfilePackage.STORAGE_MACHINE:
+				return validateStorageMachine((StorageMachine)value, diagnostics, context);
 			case UML2CloudProfilePackage.CLOUD_PROVIDER:
 				return validateCloudProvider((CloudProvider)value, diagnostics, context);
+			case UML2CloudProfilePackage.APPLICATION:
+				return validateApplication((Application)value, diagnostics, context);
+			case UML2CloudProfilePackage.PARAMETER:
+				return validateParameter((Parameter)value, diagnostics, context);
+			case UML2CloudProfilePackage.VM:
+				return validateVM((VM)value, diagnostics, context);
 			case UML2CloudProfilePackage.REQUEST:
 				return validateRequest((Request)value, diagnostics, context);
 			case UML2CloudProfilePackage.VM_INSTANTIATION:
@@ -359,12 +259,16 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 				return validateExecute((Execute)value, diagnostics, context);
 			case UML2CloudProfilePackage.USER:
 				return validateUser((User)value, diagnostics, context);
-			case UML2CloudProfilePackage.CHANNEL:
-				return validateChannel((Channel)value, diagnostics, context);
-			case UML2CloudProfilePackage.CPU_SCHEDULER:
-				return validateCPUScheduler((CPUScheduler)value, diagnostics, context);
-			case UML2CloudProfilePackage.CLOUD_PROVIDER_TYPE:
-				return validateCloudProviderType((CloudProviderType)value, diagnostics, context);
+			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE:
+				return validateCloudInfrastructure((CloudInfrastructure)value, diagnostics, context);
+			case UML2CloudProfilePackage.DATA_CENTER_ELEMENT:
+				return validateDataCenterElement((DataCenterElement)value, diagnostics, context);
+			case UML2CloudProfilePackage.BANDWIDTH_UNIT:
+				return validateBandwidthUnit((BandwidthUnit)value, diagnostics, context);
+			case UML2CloudProfilePackage.SIZE_UNIT:
+				return validateSizeUnit((SizeUnit)value, diagnostics, context);
+			case UML2CloudProfilePackage.TIME_UNIT:
+				return validateTimeUnit((TimeUnit)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -408,6 +312,15 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 */
 	public boolean validateDataCenter_rackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero(DataCenter dataCenter, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return dataCenter.rackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero(diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBandwidth(Bandwidth bandwidth, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(bandwidth, diagnostics, context);
 	}
 
 	/**
@@ -464,8 +377,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateNode(Node node, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(node, diagnostics, context);
+	public boolean validateMachine(Machine machine, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(machine, diagnostics, context);
 	}
 
 	/**
@@ -484,7 +397,6 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(cpu, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(cpu, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCPU_speedMIPS_Must_Be_Greater_Than_Zero(cpu, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCPU_tickS_Must_Be_Greater_Than_Zero(cpu, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCPU_numberOfCores_Must_Be_Greater_Than_Zero(cpu, diagnostics, context);
 		return result;
 	}
@@ -497,16 +409,6 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 */
 	public boolean validateCPU_speedMIPS_Must_Be_Greater_Than_Zero(CPU cpu, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return cpu.speedMIPS_Must_Be_Greater_Than_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the tickS_Must_Be_Greater_Than_Zero constraint of '<em>CPU</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateCPU_tickS_Must_Be_Greater_Than_Zero(CPU cpu, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return cpu.tickS_Must_Be_Greater_Than_Zero(diagnostics, context);
 	}
 
 	/**
@@ -544,8 +446,6 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(memory, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(memory, diagnostics, context);
 		if (result || diagnostics != null) result &= validateMemory_sizeGB_Must_Be_Greater_Than_Zero(memory, diagnostics, context);
-		if (result || diagnostics != null) result &= validateMemory_readLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero(memory, diagnostics, context);
-		if (result || diagnostics != null) result &= validateMemory_writeLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero(memory, diagnostics, context);
 		return result;
 	}
 
@@ -560,23 +460,12 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	}
 
 	/**
-	 * Validates the readLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero constraint of '<em>Memory</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMemory_readLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero(Memory memory, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return memory.readLatencyUS_Must_Be_Greater_Than_Or_Equal_To_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the writeLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero constraint of '<em>Memory</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateMemory_writeLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero(Memory memory, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return memory.writeLatencyUS_Must_Be_Greatter_Than_Or_Equal_To_Zero(diagnostics, context);
+	public boolean validateSize(Size size, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(size, diagnostics, context);
 	}
 
 	/**
@@ -584,61 +473,46 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDisk(Disk disk, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(disk, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDisk_numberOfDisks_Must_Be_Greatter_Than_Zero(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDisk_readBandwidthMBps_Must_Be_Greatter_Than_Zero(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDisk_writeBandwidthMBps_Must_Be_Greatter_Than_Zero(disk, diagnostics, context);
-		if (result || diagnostics != null) result &= validateDisk_sizePerDeviceGB_Must_Be_Greatter_Than_Zero(disk, diagnostics, context);
+	public boolean validateLatency(Latency latency, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(latency, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTime(Time time, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(time, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStorage(Storage storage, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(storage, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(storage, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(storage, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(storage, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(storage, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(storage, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(storage, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(storage, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(storage, diagnostics, context);
+		if (result || diagnostics != null) result &= validateStorage_numberOfDisks_Must_Be_Greatter_Than_Zero(storage, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the numberOfDisks_Must_Be_Greatter_Than_Zero constraint of '<em>Disk</em>'.
+	 * Validates the numberOfDisks_Must_Be_Greatter_Than_Zero constraint of '<em>Storage</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateDisk_numberOfDisks_Must_Be_Greatter_Than_Zero(Disk disk, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return disk.numberOfDisks_Must_Be_Greatter_Than_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the readBandwidthMBps_Must_Be_Greatter_Than_Zero constraint of '<em>Disk</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDisk_readBandwidthMBps_Must_Be_Greatter_Than_Zero(Disk disk, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return disk.readBandwidthMBps_Must_Be_Greatter_Than_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the writeBandwidthMBps_Must_Be_Greatter_Than_Zero constraint of '<em>Disk</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDisk_writeBandwidthMBps_Must_Be_Greatter_Than_Zero(Disk disk, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return disk.writeBandwidthMBps_Must_Be_Greatter_Than_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the sizePerDeviceGB_Must_Be_Greatter_Than_Zero constraint of '<em>Disk</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateDisk_sizePerDeviceGB_Must_Be_Greatter_Than_Zero(Disk disk, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return disk.sizePerDeviceGB_Must_Be_Greatter_Than_Zero(diagnostics, context);
+	public boolean validateStorage_numberOfDisks_Must_Be_Greatter_Than_Zero(Storage storage, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return storage.numberOfDisks_Must_Be_Greatter_Than_Zero(diagnostics, context);
 	}
 
 	/**
@@ -646,18 +520,18 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRackCmp(RackCmp rackCmp, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(rackCmp, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(rackCmp, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(rackCmp, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(rackCmp, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(rackCmp, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(rackCmp, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(rackCmp, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(rackCmp, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(rackCmp, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRack_boards_Must_Be_Greatter_Than_Zero(rackCmp, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRack_nodesPerBoard_Must_Be_Greatter_Than_Zero(rackCmp, diagnostics, context);
+	public boolean validateComputingRack(ComputingRack computingRack, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(computingRack, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(computingRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(computingRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(computingRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(computingRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(computingRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(computingRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(computingRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(computingRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRack_boards_Must_Be_Greatter_Than_Zero(computingRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRack_nodesPerBoard_Must_Be_Greatter_Than_Zero(computingRack, diagnostics, context);
 		return result;
 	}
 
@@ -666,8 +540,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateNodeCmp(NodeCmp nodeCmp, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(nodeCmp, diagnostics, context);
+	public boolean validateComputingMachine(ComputingMachine computingMachine, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(computingMachine, diagnostics, context);
 	}
 
 	/**
@@ -675,18 +549,18 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRackSto(RackSto rackSto, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(rackSto, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(rackSto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(rackSto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(rackSto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(rackSto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(rackSto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(rackSto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(rackSto, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(rackSto, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRack_boards_Must_Be_Greatter_Than_Zero(rackSto, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRack_nodesPerBoard_Must_Be_Greatter_Than_Zero(rackSto, diagnostics, context);
+	public boolean validateStorageRack(StorageRack storageRack, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(storageRack, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(storageRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(storageRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(storageRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(storageRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(storageRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(storageRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(storageRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(storageRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRack_boards_Must_Be_Greatter_Than_Zero(storageRack, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRack_nodesPerBoard_Must_Be_Greatter_Than_Zero(storageRack, diagnostics, context);
 		return result;
 	}
 
@@ -695,8 +569,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateNodeSto(NodeSto nodeSto, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(nodeSto, diagnostics, context);
+	public boolean validateStorageMachine(StorageMachine storageMachine, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(storageMachine, diagnostics, context);
 	}
 
 	/**
@@ -704,17 +578,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateScenario(Scenario scenario, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(scenario, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateRepository(Repository repository, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(repository, diagnostics, context);
+	public boolean validateCloudProvider(CloudProvider cloudProvider, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(cloudProvider, diagnostics, context);
 	}
 
 	/**
@@ -724,6 +589,15 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 */
 	public boolean validateApplication(Application application, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(application, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateParameter(Parameter parameter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(parameter, diagnostics, context);
 	}
 
 	/**
@@ -741,42 +615,21 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(vm, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(vm, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(vm, diagnostics, context);
-		if (result || diagnostics != null) result &= validateVM_numberOfCores_Must_Be_Greater_Than_Zero(vm, diagnostics, context);
-		if (result || diagnostics != null) result &= validateVM_diskGB_Must_Be_Greater_Than_Zero(vm, diagnostics, context);
-		if (result || diagnostics != null) result &= validateVM_costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero(vm, diagnostics, context);
+		if (result || diagnostics != null) result &= validateVM_cores_Must_Be_Greater_Than_Zero(vm, diagnostics, context);
 		if (result || diagnostics != null) result &= validateVM_SCU_Must_Be_Greater_Than_Zero(vm, diagnostics, context);
 		if (result || diagnostics != null) result &= validateVM_memory_Must_Be_Greater_Than_Zero(vm, diagnostics, context);
+		if (result || diagnostics != null) result &= validateVM_VM_can_not_be_allocated(vm, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the numberOfCores_Must_Be_Greater_Than_Zero constraint of '<em>VM</em>'.
+	 * Validates the cores_Must_Be_Greater_Than_Zero constraint of '<em>VM</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateVM_numberOfCores_Must_Be_Greater_Than_Zero(VM vm, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return vm.numberOfCores_Must_Be_Greater_Than_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the diskGB_Must_Be_Greater_Than_Zero constraint of '<em>VM</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateVM_diskGB_Must_Be_Greater_Than_Zero(VM vm, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return vm.diskGB_Must_Be_Greater_Than_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero constraint of '<em>VM</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateVM_costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero(VM vm, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return vm.costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero(diagnostics, context);
+	public boolean validateVM_cores_Must_Be_Greater_Than_Zero(VM vm, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return vm.cores_Must_Be_Greater_Than_Zero(diagnostics, context);
 	}
 
 	/**
@@ -800,74 +653,13 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	}
 
 	/**
+	 * Validates the VM_can_not_be_allocated constraint of '<em>VM</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLocalApplication(LocalApplication localApplication, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(localApplication, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validateLocalApplication_inputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validateLocalApplication_outputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validateLocalApplication_MIs_Must_Be_Greater_Than_Or_Equal_To_Zero(localApplication, diagnostics, context);
-		if (result || diagnostics != null) result &= validateLocalApplication_iterations_Must_Be_Greater_Than_Or_Equal_To_Zero(localApplication, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * Validates the inputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero constraint of '<em>Local Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLocalApplication_inputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero(LocalApplication localApplication, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return localApplication.inputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the outputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero constraint of '<em>Local Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLocalApplication_outputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero(LocalApplication localApplication, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return localApplication.outputDataSizeMiB_Must_Be_Greater_Than_Or_Equal_To_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the MIs_Must_Be_Greater_Than_Or_Equal_To_Zero constraint of '<em>Local Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLocalApplication_MIs_Must_Be_Greater_Than_Or_Equal_To_Zero(LocalApplication localApplication, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return localApplication.MIs_Must_Be_Greater_Than_Or_Equal_To_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the iterations_Must_Be_Greater_Than_Or_Equal_To_Zero constraint of '<em>Local Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateLocalApplication_iterations_Must_Be_Greater_Than_Or_Equal_To_Zero(LocalApplication localApplication, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return localApplication.iterations_Must_Be_Greater_Than_Or_Equal_To_Zero(diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateCloudProvider(CloudProvider cloudProvider, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(cloudProvider, diagnostics, context);
+	public boolean validateVM_VM_can_not_be_allocated(VM vm, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return vm.VM_can_not_be_allocated(diagnostics, context);
 	}
 
 	/**
@@ -885,29 +677,18 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(request, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(request, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(request, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRequest_t1_Must_Be_Greater_Than_Or_Equal_To_Zero(request, diagnostics, context);
-		if (result || diagnostics != null) result &= validateRequest_t2_Must_Be_Greater_Than_Zero(request, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRequest_rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero(request, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the t1_Must_Be_Greater_Than_Or_Equal_To_Zero constraint of '<em>Request</em>'.
+	 * Validates the rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero constraint of '<em>Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateRequest_t1_Must_Be_Greater_Than_Or_Equal_To_Zero(Request request, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return request.t1_Must_Be_Greater_Than_Or_Equal_To_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the t2_Must_Be_Greater_Than_Zero constraint of '<em>Request</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateRequest_t2_Must_Be_Greater_Than_Zero(Request request, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return request.t2_Must_Be_Greater_Than_Zero(diagnostics, context);
+	public boolean validateRequest_rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero(Request request, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return request.rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero(diagnostics, context);
 	}
 
 	/**
@@ -934,29 +715,18 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(subscribe, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(subscribe, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(subscribe, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSubscribe_t4_Must_Be_Greater_Than_Zero(subscribe, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSubscribe_t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe(subscribe, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSubscribe_maxTime_Must_Be_Greater_Than_Zero(subscribe, diagnostics, context);
 		return result;
 	}
 
 	/**
-	 * Validates the t4_Must_Be_Greater_Than_Zero constraint of '<em>Subscribe</em>'.
+	 * Validates the maxTime_Must_Be_Greater_Than_Zero constraint of '<em>Subscribe</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateSubscribe_t4_Must_Be_Greater_Than_Zero(Subscribe subscribe, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return subscribe.t4_Must_Be_Greater_Than_Zero(diagnostics, context);
-	}
-
-	/**
-	 * Validates the t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe constraint of '<em>Subscribe</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateSubscribe_t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe(Subscribe subscribe, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return subscribe.t4_Should_Be_Greater_Than_Or_Equal_To_t1_From_Connect_If_You_Want_To_Subscribe(diagnostics, context);
+	public boolean validateSubscribe_maxTime_Must_Be_Greater_Than_Zero(Subscribe subscribe, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return subscribe.maxTime_Must_Be_Greater_Than_Zero(diagnostics, context);
 	}
 
 	/**
@@ -1036,7 +806,25 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateChannel(Channel channel, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateCloudInfrastructure(CloudInfrastructure cloudInfrastructure, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(cloudInfrastructure, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDataCenterElement(DataCenterElement dataCenterElement, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(dataCenterElement, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBandwidthUnit(BandwidthUnit bandwidthUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -1045,7 +833,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCPUScheduler(CPUScheduler cpuScheduler, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateSizeUnit(SizeUnit sizeUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -1054,7 +842,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCloudProviderType(CloudProviderType cloudProviderType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateTimeUnit(TimeUnit timeUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

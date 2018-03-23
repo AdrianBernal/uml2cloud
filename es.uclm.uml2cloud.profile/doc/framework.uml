@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_DQcQELr1Eeev0PnmLcb6WA" name="framework">
+  <packagedElement xmi:type="uml:Package" xmi:id="_rf0vALr-EeekLeWwMaTKrg" name="UML2Cloud">
+    <packagedElement xmi:type="uml:Package" xmi:id="_uuYVsLr-EeekLeWwMaTKrg" name="es.uclm.uml2cloud.validation">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_K1XOgLr_EeekLeWwMaTKrg" name="&lt;&lt;use>>" client="_uuYVsLr-EeekLeWwMaTKrg" supplier="_wiy5oLr-EeekLeWwMaTKrg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_wiy5oLr-EeekLeWwMaTKrg" name="es.uclm.uml2cloud.profile"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_yJw3cLr-EeekLeWwMaTKrg" name="es.uclm.uml2cloud.customization">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_L2OOkLr_EeekLeWwMaTKrg" name="&lt;&lt;use>>" client="_yJw3cLr-EeekLeWwMaTKrg" supplier="_wiy5oLr-EeekLeWwMaTKrg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_z3SwQLr-EeekLeWwMaTKrg" name="es.uclm.uml2cloud.examples">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_PbtHgLr_EeekLeWwMaTKrg" name="&lt;&lt;use>>" client="_z3SwQLr-EeekLeWwMaTKrg" supplier="_wiy5oLr-EeekLeWwMaTKrg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_sWEyoAQdEeiLD-ValWMm3Q" name="es.uclm.uml2cloud.m2t.&lt;system>">
+      <packagedElement xmi:type="uml:Package" xmi:id="_sWEyogQdEeiLD-ValWMm3Q" name="files">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_sWEyowQdEeiLD-ValWMm3Q" name="util.mtl" fileName=""/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_sWEypAQdEeiLD-ValWMm3Q" name="generate&lt;system>Files.mtl" fileName=""/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_sWEypgQdEeiLD-ValWMm3Q" name="&lt;&lt;import>>" client="_sWEypAQdEeiLD-ValWMm3Q" supplier="_sWEyowQdEeiLD-ValWMm3Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_sWEyqAQdEeiLD-ValWMm3Q" name="main">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_sWEyqQQdEeiLD-ValWMm3Q" name="generate&lt;system>Files.mtl" fileName=""/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_sWEyqwQdEeiLD-ValWMm3Q" name="&lt;&lt;import>>" client="_sWEyqQQdEeiLD-ValWMm3Q" supplier="_sWEypAQdEeiLD-ValWMm3Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_sWEyrAQdEeiLD-ValWMm3Q" name="unitTests">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_sWEyrQQdEeiLD-ValWMm3Q" name="&lt;&lt;import>>" client="_sWEyrgQdEeiLD-ValWMm3Q" supplier="_sWEyogQdEeiLD-ValWMm3Q"/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_sWEyrgQdEeiLD-ValWMm3Q" name="test&lt;system>M2Ttransformation.mtl" fileName=""/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_sWEyrwQdEeiLD-ValWMm3Q" name="&lt;&lt;import>>" client="_sWEyrgQdEeiLD-ValWMm3Q" supplier="_sWEysgQdEeiLD-ValWMm3Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_sWEysAQdEeiLD-ValWMm3Q" name="services">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_sWEysQQdEeiLD-ValWMm3Q" name="TestService.java" fileName=""/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_sWEysgQdEeiLD-ValWMm3Q" name="testService.mtl"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_sWEyswQdEeiLD-ValWMm3Q" name="&lt;&lt;call>>" client="_sWEysgQdEeiLD-ValWMm3Q" supplier="_sWEysQQdEeiLD-ValWMm3Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_F5sE4AQgEeiLD-ValWMm3Q" name="&lt;&lt;use>>" client="_sWEyoAQdEeiLD-ValWMm3Q" supplier="_wiy5oLr-EeekLeWwMaTKrg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_xfdHQAQdEeiLD-ValWMm3Q" name="es.uclm.uml2cloud.m2t.&lt;system>.ui">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Mt6xwAQgEeiLD-ValWMm3Q" name="&lt;&lt;use>>" client="_xfdHQAQdEeiLD-ValWMm3Q" supplier="_sWEyoAQdEeiLD-ValWMm3Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_1Al6oLr-EeekLeWwMaTKrg" name="es.uclm.uml2cloud.m2t.simcan2cloud">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_NsArgLr_EeekLeWwMaTKrg" name="&lt;&lt;use>>" client="_1Al6oLr-EeekLeWwMaTKrg" supplier="_wiy5oLr-EeekLeWwMaTKrg"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_piecELr_EeekLeWwMaTKrg" name="files">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_SLQokLsAEeekLeWwMaTKrg" name="util.mtl" fileName=""/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_rCAfsLsAEeekLeWwMaTKrg" name="generateNEDFile.mtl"/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_sdGksLsAEeekLeWwMaTKrg" name="generateINIFile.mtl" fileName=""/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_DpOtELsBEeekLeWwMaTKrg" name="&lt;&lt;import>>" client="_rCAfsLsAEeekLeWwMaTKrg" supplier="_SLQokLsAEeekLeWwMaTKrg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_JtO24LsBEeekLeWwMaTKrg" name="&lt;&lt;import>>" client="_sdGksLsAEeekLeWwMaTKrg" supplier="_SLQokLsAEeekLeWwMaTKrg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_N5w-MLsAEeekLeWwMaTKrg" name="main">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_v_yoULsAEeekLeWwMaTKrg" name="generateSimcan2CloudFiles.mtl" fileName=""/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_h7qw0LsBEeekLeWwMaTKrg" name="&lt;&lt;import>>" client="_v_yoULsAEeekLeWwMaTKrg" supplier="_sdGksLsAEeekLeWwMaTKrg"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_j18FILsBEeekLeWwMaTKrg" name="&lt;&lt;import>>" client="_v_yoULsAEeekLeWwMaTKrg" supplier="_rCAfsLsAEeekLeWwMaTKrg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_b1lG4LsCEeekLeWwMaTKrg" name="unitTests">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_UXaPsLsDEeekLeWwMaTKrg" name="&lt;&lt;import>>" client="_XgVIcLsDEeekLeWwMaTKrg" supplier="_piecELr_EeekLeWwMaTKrg"/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_XgVIcLsDEeekLeWwMaTKrg" name="testSimcan2CloudM2Ttransformation.mtl" fileName=""/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_0fowYLsDEeekLeWwMaTKrg" name="&lt;&lt;import>>" client="_XgVIcLsDEeekLeWwMaTKrg" supplier="_hSaGgLsDEeekLeWwMaTKrg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_cPZfoLsDEeekLeWwMaTKrg" name="services">
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_eObYILsDEeekLeWwMaTKrg" name="TestService.java" fileName=""/>
+        <packagedElement xmi:type="uml:Artifact" xmi:id="_hSaGgLsDEeekLeWwMaTKrg" name="testService.mtl"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_wmvMMLsDEeekLeWwMaTKrg" name="&lt;&lt;call>>" client="_hSaGgLsDEeekLeWwMaTKrg" supplier="_eObYILsDEeekLeWwMaTKrg"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_19ckcLr-EeekLeWwMaTKrg" name="es.uclm.uml2cloud.m2t.simcan2cloud.ui">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_M6fvALr_EeekLeWwMaTKrg" name="&lt;&lt;use>>" client="_19ckcLr-EeekLeWwMaTKrg" supplier="_1Al6oLr-EeekLeWwMaTKrg"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

@@ -2,7 +2,7 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.Channel;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Rack;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
@@ -13,6 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -39,64 +40,44 @@ import org.eclipse.uml2.uml.Component;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackImpl#getBase_Component <em>Base Component</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackImpl#getNodesPerBoard <em>Nodes Per Board</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackImpl#getCommLink <em>Comm Link</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackImpl#getMachinesPerBoard <em>Machines Per Board</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackImpl#getNetwork <em>Network</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackImpl#getBoards <em>Boards</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RackImpl#getBase_Component <em>Base Component</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class RackImpl extends MinimalEObjectImpl.Container implements Rack {
 	/**
-	 * The cached value of the '{@link #getBase_Component() <em>Base Component</em>}' reference.
+	 * The default value of the '{@link #getMachinesPerBoard() <em>Machines Per Board</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBase_Component()
+	 * @see #getMachinesPerBoard()
 	 * @generated
 	 * @ordered
 	 */
-	protected Component base_Component;
+	protected static final int MACHINES_PER_BOARD_EDEFAULT = 8;
 
 	/**
-	 * The default value of the '{@link #getNodesPerBoard() <em>Nodes Per Board</em>}' attribute.
+	 * The cached value of the '{@link #getMachinesPerBoard() <em>Machines Per Board</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNodesPerBoard()
+	 * @see #getMachinesPerBoard()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NODES_PER_BOARD_EDEFAULT = 8;
+	protected int machinesPerBoard = MACHINES_PER_BOARD_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getNodesPerBoard() <em>Nodes Per Board</em>}' attribute.
+	 * The cached value of the '{@link #getNetwork() <em>Network</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNodesPerBoard()
+	 * @see #getNetwork()
 	 * @generated
 	 * @ordered
 	 */
-	protected int nodesPerBoard = NODES_PER_BOARD_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCommLink() <em>Comm Link</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCommLink()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Channel COMM_LINK_EDEFAULT = Channel.ETHERNET40_GBPS;
-
-	/**
-	 * The cached value of the '{@link #getCommLink() <em>Comm Link</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCommLink()
-	 * @generated
-	 * @ordered
-	 */
-	protected Channel commLink = COMM_LINK_EDEFAULT;
+	protected Bandwidth network;
 
 	/**
 	 * The default value of the '{@link #getBoards() <em>Boards</em>}' attribute.
@@ -119,6 +100,16 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	protected int boards = BOARDS_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getBase_Component() <em>Base Component</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBase_Component()
+	 * @generated
+	 * @ordered
+	 */
+	protected Component base_Component;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -135,6 +126,91 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	protected EClass eStaticClass() {
 		return UML2CloudProfilePackage.Literals.RACK;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getMachinesPerBoard() {
+		return machinesPerBoard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMachinesPerBoard(int newMachinesPerBoard) {
+		int oldMachinesPerBoard = machinesPerBoard;
+		machinesPerBoard = newMachinesPerBoard;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__MACHINES_PER_BOARD, oldMachinesPerBoard, machinesPerBoard));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bandwidth getNetwork() {
+		return network;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetNetwork(Bandwidth newNetwork, NotificationChain msgs) {
+		Bandwidth oldNetwork = network;
+		network = newNetwork;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__NETWORK, oldNetwork, newNetwork);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNetwork(Bandwidth newNetwork) {
+		if (newNetwork != network) {
+			NotificationChain msgs = null;
+			if (network != null)
+				msgs = ((InternalEObject)network).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.RACK__NETWORK, null, msgs);
+			if (newNetwork != null)
+				msgs = ((InternalEObject)newNetwork).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.RACK__NETWORK, null, msgs);
+			msgs = basicSetNetwork(newNetwork, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__NETWORK, newNetwork, newNetwork));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getBoards() {
+		return boards;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBoards(int newBoards) {
+		int oldBoards = boards;
+		boards = newBoards;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__BOARDS, oldBoards, boards));
 	}
 
 	/**
@@ -173,69 +249,6 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 		base_Component = newBase_Component;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__BASE_COMPONENT, oldBase_Component, base_Component));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getNodesPerBoard() {
-		return nodesPerBoard;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNodesPerBoard(int newNodesPerBoard) {
-		int oldNodesPerBoard = nodesPerBoard;
-		nodesPerBoard = newNodesPerBoard;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__NODES_PER_BOARD, oldNodesPerBoard, nodesPerBoard));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Channel getCommLink() {
-		return commLink;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCommLink(Channel newCommLink) {
-		Channel oldCommLink = commLink;
-		commLink = newCommLink == null ? COMM_LINK_EDEFAULT : newCommLink;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__COMM_LINK, oldCommLink, commLink));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getBoards() {
-		return boards;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBoards(int newBoards) {
-		int oldBoards = boards;
-		boards = newBoards;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.RACK__BOARDS, oldBoards, boards));
 	}
 
 	/**
@@ -294,17 +307,31 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case UML2CloudProfilePackage.RACK__NETWORK:
+				return basicSetNetwork(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case UML2CloudProfilePackage.RACK__MACHINES_PER_BOARD:
+				return getMachinesPerBoard();
+			case UML2CloudProfilePackage.RACK__NETWORK:
+				return getNetwork();
+			case UML2CloudProfilePackage.RACK__BOARDS:
+				return getBoards();
 			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
 				if (resolve) return getBase_Component();
 				return basicGetBase_Component();
-			case UML2CloudProfilePackage.RACK__NODES_PER_BOARD:
-				return getNodesPerBoard();
-			case UML2CloudProfilePackage.RACK__COMM_LINK:
-				return getCommLink();
-			case UML2CloudProfilePackage.RACK__BOARDS:
-				return getBoards();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -317,17 +344,17 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
-				setBase_Component((Component)newValue);
+			case UML2CloudProfilePackage.RACK__MACHINES_PER_BOARD:
+				setMachinesPerBoard((Integer)newValue);
 				return;
-			case UML2CloudProfilePackage.RACK__NODES_PER_BOARD:
-				setNodesPerBoard((Integer)newValue);
-				return;
-			case UML2CloudProfilePackage.RACK__COMM_LINK:
-				setCommLink((Channel)newValue);
+			case UML2CloudProfilePackage.RACK__NETWORK:
+				setNetwork((Bandwidth)newValue);
 				return;
 			case UML2CloudProfilePackage.RACK__BOARDS:
 				setBoards((Integer)newValue);
+				return;
+			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
+				setBase_Component((Component)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -341,17 +368,17 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
-				setBase_Component((Component)null);
+			case UML2CloudProfilePackage.RACK__MACHINES_PER_BOARD:
+				setMachinesPerBoard(MACHINES_PER_BOARD_EDEFAULT);
 				return;
-			case UML2CloudProfilePackage.RACK__NODES_PER_BOARD:
-				setNodesPerBoard(NODES_PER_BOARD_EDEFAULT);
-				return;
-			case UML2CloudProfilePackage.RACK__COMM_LINK:
-				setCommLink(COMM_LINK_EDEFAULT);
+			case UML2CloudProfilePackage.RACK__NETWORK:
+				setNetwork((Bandwidth)null);
 				return;
 			case UML2CloudProfilePackage.RACK__BOARDS:
 				setBoards(BOARDS_EDEFAULT);
+				return;
+			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
+				setBase_Component((Component)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -365,14 +392,14 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
-				return base_Component != null;
-			case UML2CloudProfilePackage.RACK__NODES_PER_BOARD:
-				return nodesPerBoard != NODES_PER_BOARD_EDEFAULT;
-			case UML2CloudProfilePackage.RACK__COMM_LINK:
-				return commLink != COMM_LINK_EDEFAULT;
+			case UML2CloudProfilePackage.RACK__MACHINES_PER_BOARD:
+				return machinesPerBoard != MACHINES_PER_BOARD_EDEFAULT;
+			case UML2CloudProfilePackage.RACK__NETWORK:
+				return network != null;
 			case UML2CloudProfilePackage.RACK__BOARDS:
 				return boards != BOARDS_EDEFAULT;
+			case UML2CloudProfilePackage.RACK__BASE_COMPONENT:
+				return base_Component != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -404,10 +431,8 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nodesPerBoard: ");
-		result.append(nodesPerBoard);
-		result.append(", commLink: ");
-		result.append(commLink);
+		result.append(" (machinesPerBoard: ");
+		result.append(machinesPerBoard);
 		result.append(", boards: ");
 		result.append(boards);
 		result.append(')');

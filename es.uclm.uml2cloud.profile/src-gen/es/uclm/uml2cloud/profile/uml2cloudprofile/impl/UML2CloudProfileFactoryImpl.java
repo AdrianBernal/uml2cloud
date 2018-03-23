@@ -58,19 +58,22 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case UML2CloudProfilePackage.DATA_CENTER: return createDataCenter();
+			case UML2CloudProfilePackage.BANDWIDTH: return createBandwidth();
 			case UML2CloudProfilePackage.RACK_ELEMENT: return createRackElement();
 			case UML2CloudProfilePackage.CPU: return createCPU();
 			case UML2CloudProfilePackage.MEMORY: return createMemory();
-			case UML2CloudProfilePackage.DISK: return createDisk();
-			case UML2CloudProfilePackage.RACK_CMP: return createRackCmp();
-			case UML2CloudProfilePackage.NODE_CMP: return createNodeCmp();
-			case UML2CloudProfilePackage.RACK_STO: return createRackSto();
-			case UML2CloudProfilePackage.NODE_STO: return createNodeSto();
-			case UML2CloudProfilePackage.SCENARIO: return createScenario();
-			case UML2CloudProfilePackage.REPOSITORY: return createRepository();
-			case UML2CloudProfilePackage.VM: return createVM();
-			case UML2CloudProfilePackage.LOCAL_APPLICATION: return createLocalApplication();
+			case UML2CloudProfilePackage.SIZE: return createSize();
+			case UML2CloudProfilePackage.LATENCY: return createLatency();
+			case UML2CloudProfilePackage.TIME: return createTime();
+			case UML2CloudProfilePackage.STORAGE: return createStorage();
+			case UML2CloudProfilePackage.COMPUTING_RACK: return createComputingRack();
+			case UML2CloudProfilePackage.COMPUTING_MACHINE: return createComputingMachine();
+			case UML2CloudProfilePackage.STORAGE_RACK: return createStorageRack();
+			case UML2CloudProfilePackage.STORAGE_MACHINE: return createStorageMachine();
 			case UML2CloudProfilePackage.CLOUD_PROVIDER: return createCloudProvider();
+			case UML2CloudProfilePackage.APPLICATION: return createApplication();
+			case UML2CloudProfilePackage.PARAMETER: return createParameter();
+			case UML2CloudProfilePackage.VM: return createVM();
 			case UML2CloudProfilePackage.REQUEST: return createRequest();
 			case UML2CloudProfilePackage.VM_INSTANTIATION: return createVMInstantiation();
 			case UML2CloudProfilePackage.SUBSCRIBE: return createSubscribe();
@@ -82,6 +85,8 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 			case UML2CloudProfilePackage.REJECT: return createReject();
 			case UML2CloudProfilePackage.EXECUTE: return createExecute();
 			case UML2CloudProfilePackage.USER: return createUser();
+			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE: return createCloudInfrastructure();
+			case UML2CloudProfilePackage.DATA_CENTER_ELEMENT: return createDataCenterElement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -95,12 +100,12 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case UML2CloudProfilePackage.CHANNEL:
-				return createChannelFromString(eDataType, initialValue);
-			case UML2CloudProfilePackage.CPU_SCHEDULER:
-				return createCPUSchedulerFromString(eDataType, initialValue);
-			case UML2CloudProfilePackage.CLOUD_PROVIDER_TYPE:
-				return createCloudProviderTypeFromString(eDataType, initialValue);
+			case UML2CloudProfilePackage.BANDWIDTH_UNIT:
+				return createBandwidthUnitFromString(eDataType, initialValue);
+			case UML2CloudProfilePackage.SIZE_UNIT:
+				return createSizeUnitFromString(eDataType, initialValue);
+			case UML2CloudProfilePackage.TIME_UNIT:
+				return createTimeUnitFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -114,12 +119,12 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case UML2CloudProfilePackage.CHANNEL:
-				return convertChannelToString(eDataType, instanceValue);
-			case UML2CloudProfilePackage.CPU_SCHEDULER:
-				return convertCPUSchedulerToString(eDataType, instanceValue);
-			case UML2CloudProfilePackage.CLOUD_PROVIDER_TYPE:
-				return convertCloudProviderTypeToString(eDataType, instanceValue);
+			case UML2CloudProfilePackage.BANDWIDTH_UNIT:
+				return convertBandwidthUnitToString(eDataType, instanceValue);
+			case UML2CloudProfilePackage.SIZE_UNIT:
+				return convertSizeUnitToString(eDataType, instanceValue);
+			case UML2CloudProfilePackage.TIME_UNIT:
+				return convertTimeUnitToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -133,6 +138,16 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	public DataCenter createDataCenter() {
 		DataCenterImpl dataCenter = new DataCenterImpl();
 		return dataCenter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bandwidth createBandwidth() {
+		BandwidthImpl bandwidth = new BandwidthImpl();
+		return bandwidth;
 	}
 
 	/**
@@ -170,9 +185,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Disk createDisk() {
-		DiskImpl disk = new DiskImpl();
-		return disk;
+	public Size createSize() {
+		SizeImpl size = new SizeImpl();
+		return size;
 	}
 
 	/**
@@ -180,9 +195,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RackCmp createRackCmp() {
-		RackCmpImpl rackCmp = new RackCmpImpl();
-		return rackCmp;
+	public Latency createLatency() {
+		LatencyImpl latency = new LatencyImpl();
+		return latency;
 	}
 
 	/**
@@ -190,9 +205,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NodeCmp createNodeCmp() {
-		NodeCmpImpl nodeCmp = new NodeCmpImpl();
-		return nodeCmp;
+	public Time createTime() {
+		TimeImpl time = new TimeImpl();
+		return time;
 	}
 
 	/**
@@ -200,9 +215,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RackSto createRackSto() {
-		RackStoImpl rackSto = new RackStoImpl();
-		return rackSto;
+	public Storage createStorage() {
+		StorageImpl storage = new StorageImpl();
+		return storage;
 	}
 
 	/**
@@ -210,9 +225,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NodeSto createNodeSto() {
-		NodeStoImpl nodeSto = new NodeStoImpl();
-		return nodeSto;
+	public ComputingRack createComputingRack() {
+		ComputingRackImpl computingRack = new ComputingRackImpl();
+		return computingRack;
 	}
 
 	/**
@@ -220,9 +235,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Scenario createScenario() {
-		ScenarioImpl scenario = new ScenarioImpl();
-		return scenario;
+	public ComputingMachine createComputingMachine() {
+		ComputingMachineImpl computingMachine = new ComputingMachineImpl();
+		return computingMachine;
 	}
 
 	/**
@@ -230,9 +245,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Repository createRepository() {
-		RepositoryImpl repository = new RepositoryImpl();
-		return repository;
+	public StorageRack createStorageRack() {
+		StorageRackImpl storageRack = new StorageRackImpl();
+		return storageRack;
 	}
 
 	/**
@@ -240,19 +255,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VM createVM() {
-		VMImpl vm = new VMImpl();
-		return vm;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LocalApplication createLocalApplication() {
-		LocalApplicationImpl localApplication = new LocalApplicationImpl();
-		return localApplication;
+	public StorageMachine createStorageMachine() {
+		StorageMachineImpl storageMachine = new StorageMachineImpl();
+		return storageMachine;
 	}
 
 	/**
@@ -263,6 +268,36 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	public CloudProvider createCloudProvider() {
 		CloudProviderImpl cloudProvider = new CloudProviderImpl();
 		return cloudProvider;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Application createApplication() {
+		ApplicationImpl application = new ApplicationImpl();
+		return application;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameter createParameter() {
+		ParameterImpl parameter = new ParameterImpl();
+		return parameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VM createVM() {
+		VMImpl vm = new VMImpl();
+		return vm;
 	}
 
 	/**
@@ -380,8 +415,28 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Channel createChannelFromString(EDataType eDataType, String initialValue) {
-		Channel result = Channel.get(initialValue);
+	public CloudInfrastructure createCloudInfrastructure() {
+		CloudInfrastructureImpl cloudInfrastructure = new CloudInfrastructureImpl();
+		return cloudInfrastructure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataCenterElement createDataCenterElement() {
+		DataCenterElementImpl dataCenterElement = new DataCenterElementImpl();
+		return dataCenterElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BandwidthUnit createBandwidthUnitFromString(EDataType eDataType, String initialValue) {
+		BandwidthUnit result = BandwidthUnit.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -391,7 +446,7 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertChannelToString(EDataType eDataType, Object instanceValue) {
+	public String convertBandwidthUnitToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -400,8 +455,8 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CPUScheduler createCPUSchedulerFromString(EDataType eDataType, String initialValue) {
-		CPUScheduler result = CPUScheduler.get(initialValue);
+	public SizeUnit createSizeUnitFromString(EDataType eDataType, String initialValue) {
+		SizeUnit result = SizeUnit.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -411,7 +466,7 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertCPUSchedulerToString(EDataType eDataType, Object instanceValue) {
+	public String convertSizeUnitToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -420,8 +475,8 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CloudProviderType createCloudProviderTypeFromString(EDataType eDataType, String initialValue) {
-		CloudProviderType result = CloudProviderType.get(initialValue);
+	public TimeUnit createTimeUnitFromString(EDataType eDataType, String initialValue) {
+		TimeUnit result = TimeUnit.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -431,7 +486,7 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertCloudProviderTypeToString(EDataType eDataType, Object instanceValue) {
+	public String convertTimeUnitToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

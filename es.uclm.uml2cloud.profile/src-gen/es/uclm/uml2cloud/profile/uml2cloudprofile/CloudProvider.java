@@ -15,6 +15,7 @@ import org.eclipse.uml2.uml.Lifeline;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#getResourceAllocationPolicy <em>Resource Allocation Policy</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#getBase_Lifeline <em>Base Lifeline</em>}</li>
  * </ul>
  *
@@ -23,6 +24,32 @@ import org.eclipse.uml2.uml.Lifeline;
  * @generated
  */
 public interface CloudProvider extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Resource Allocation Policy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Resource Allocation Policy</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Resource Allocation Policy</em>' attribute.
+	 * @see #setResourceAllocationPolicy(String)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCloudProvider_ResourceAllocationPolicy()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getResourceAllocationPolicy();
+
+	/**
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#getResourceAllocationPolicy <em>Resource Allocation Policy</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Resource Allocation Policy</em>' attribute.
+	 * @see #getResourceAllocationPolicy()
+	 * @generated
+	 */
+	void setResourceAllocationPolicy(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Base Lifeline</b></em>' reference.
 	 * <!-- begin-user-doc -->

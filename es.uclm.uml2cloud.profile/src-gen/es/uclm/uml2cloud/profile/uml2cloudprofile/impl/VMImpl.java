@@ -2,6 +2,7 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
+import es.uclm.uml2cloud.profile.uml2cloudprofile.Size;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.VM;
 
@@ -12,6 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -39,11 +41,10 @@ import org.eclipse.uml2.uml.Component;
  * </p>
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl#getBase_Component <em>Base Component</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl#getNumberOfCores <em>Number Of Cores</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl#getDiskGB <em>Disk GB</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl#getCostPerHour <em>Cost Per Hour</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl#getSCU <em>SCU</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl#getMemoryGB <em>Memory GB</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl#getCores <em>Cores</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl#getDisk <em>Disk</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl#getComputingUnits <em>Computing Units</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMImpl#getMemory <em>Memory</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,104 +61,64 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	protected Component base_Component;
 
 	/**
-	 * The default value of the '{@link #getNumberOfCores() <em>Number Of Cores</em>}' attribute.
+	 * The default value of the '{@link #getCores() <em>Cores</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNumberOfCores()
+	 * @see #getCores()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NUMBER_OF_CORES_EDEFAULT = 2;
+	protected static final int CORES_EDEFAULT = 2;
 
 	/**
-	 * The cached value of the '{@link #getNumberOfCores() <em>Number Of Cores</em>}' attribute.
+	 * The cached value of the '{@link #getCores() <em>Cores</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNumberOfCores()
+	 * @see #getCores()
 	 * @generated
 	 * @ordered
 	 */
-	protected int numberOfCores = NUMBER_OF_CORES_EDEFAULT;
+	protected int cores = CORES_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDiskGB() <em>Disk GB</em>}' attribute.
+	 * The cached value of the '{@link #getDisk() <em>Disk</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDiskGB()
+	 * @see #getDisk()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double DISK_GB_EDEFAULT = 500.0;
+	protected Size disk;
 
 	/**
-	 * The cached value of the '{@link #getDiskGB() <em>Disk GB</em>}' attribute.
+	 * The default value of the '{@link #getComputingUnits() <em>Computing Units</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDiskGB()
+	 * @see #getComputingUnits()
 	 * @generated
 	 * @ordered
 	 */
-	protected double diskGB = DISK_GB_EDEFAULT;
+	protected static final double COMPUTING_UNITS_EDEFAULT = 2.0;
 
 	/**
-	 * The default value of the '{@link #getCostPerHour() <em>Cost Per Hour</em>}' attribute.
+	 * The cached value of the '{@link #getComputingUnits() <em>Computing Units</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCostPerHour()
+	 * @see #getComputingUnits()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double COST_PER_HOUR_EDEFAULT = 15.0;
+	protected double computingUnits = COMPUTING_UNITS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCostPerHour() <em>Cost Per Hour</em>}' attribute.
+	 * The cached value of the '{@link #getMemory() <em>Memory</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCostPerHour()
+	 * @see #getMemory()
 	 * @generated
 	 * @ordered
 	 */
-	protected double costPerHour = COST_PER_HOUR_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSCU() <em>SCU</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSCU()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double SCU_EDEFAULT = 2.0;
-
-	/**
-	 * The cached value of the '{@link #getSCU() <em>SCU</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSCU()
-	 * @generated
-	 * @ordered
-	 */
-	protected double scu = SCU_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getMemoryGB() <em>Memory GB</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMemoryGB()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double MEMORY_GB_EDEFAULT = 4.0;
-
-	/**
-	 * The cached value of the '{@link #getMemoryGB() <em>Memory GB</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMemoryGB()
-	 * @generated
-	 * @ordered
-	 */
-	protected double memoryGB = MEMORY_GB_EDEFAULT;
+	protected Size memory;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -221,8 +182,8 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNumberOfCores() {
-		return numberOfCores;
+	public int getCores() {
+		return cores;
 	}
 
 	/**
@@ -230,11 +191,11 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNumberOfCores(int newNumberOfCores) {
-		int oldNumberOfCores = numberOfCores;
-		numberOfCores = newNumberOfCores;
+	public void setCores(int newCores) {
+		int oldCores = cores;
+		cores = newCores;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__NUMBER_OF_CORES, oldNumberOfCores, numberOfCores));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__CORES, oldCores, cores));
 	}
 
 	/**
@@ -242,8 +203,8 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getDiskGB() {
-		return diskGB;
+	public Size getDisk() {
+		return disk;
 	}
 
 	/**
@@ -251,99 +212,14 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDiskGB(double newDiskGB) {
-		double oldDiskGB = diskGB;
-		diskGB = newDiskGB;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__DISK_GB, oldDiskGB, diskGB));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getCostPerHour() {
-		return costPerHour;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCostPerHour(double newCostPerHour) {
-		double oldCostPerHour = costPerHour;
-		costPerHour = newCostPerHour;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__COST_PER_HOUR, oldCostPerHour, costPerHour));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getSCU() {
-		return scu;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSCU(double newSCU) {
-		double oldSCU = scu;
-		scu = newSCU;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__SCU, oldSCU, scu));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getMemoryGB() {
-		return memoryGB;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMemoryGB(double newMemoryGB) {
-		double oldMemoryGB = memoryGB;
-		memoryGB = newMemoryGB;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__MEMORY_GB, oldMemoryGB, memoryGB));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean numberOfCores_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.VM__NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "numberOfCores_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
+	public NotificationChain basicSetDisk(Size newDisk, NotificationChain msgs) {
+		Size oldDisk = disk;
+		disk = newDisk;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__DISK, oldDisk, newDisk);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return true;
+		return msgs;
 	}
 
 	/**
@@ -351,24 +227,18 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean diskGB_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.VM__DISK_GB_MUST_BE_GREATER_THAN_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "diskGB_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
+	public void setDisk(Size newDisk) {
+		if (newDisk != disk) {
+			NotificationChain msgs = null;
+			if (disk != null)
+				msgs = ((InternalEObject)disk).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.VM__DISK, null, msgs);
+			if (newDisk != null)
+				msgs = ((InternalEObject)newDisk).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.VM__DISK, null, msgs);
+			msgs = basicSetDisk(newDisk, msgs);
+			if (msgs != null) msgs.dispatch();
 		}
-		return true;
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__DISK, newDisk, newDisk));
 	}
 
 	/**
@@ -376,7 +246,71 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public double getComputingUnits() {
+		return computingUnits;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setComputingUnits(double newComputingUnits) {
+		double oldComputingUnits = computingUnits;
+		computingUnits = newComputingUnits;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__COMPUTING_UNITS, oldComputingUnits, computingUnits));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Size getMemory() {
+		return memory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetMemory(Size newMemory, NotificationChain msgs) {
+		Size oldMemory = memory;
+		memory = newMemory;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__MEMORY, oldMemory, newMemory);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMemory(Size newMemory) {
+		if (newMemory != memory) {
+			NotificationChain msgs = null;
+			if (memory != null)
+				msgs = ((InternalEObject)memory).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.VM__MEMORY, null, msgs);
+			if (newMemory != null)
+				msgs = ((InternalEObject)newMemory).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.VM__MEMORY, null, msgs);
+			msgs = basicSetMemory(newMemory, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.VM__MEMORY, newMemory, newMemory));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean cores_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
@@ -387,8 +321,8 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.VM__COST_PER_HOUR_MUST_BE_GREATER_THAN_OR_EQUEAL_TO_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 UML2CloudProfileValidator.VM__CORES_MUST_BE_GREATER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "cores_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -451,22 +385,61 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean VM_can_not_be_allocated(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.VM__VM_CAN_NOT_BE_ALLOCATED,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "VM_can_not_be_allocated", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case UML2CloudProfilePackage.VM__DISK:
+				return basicSetDisk(null, msgs);
+			case UML2CloudProfilePackage.VM__MEMORY:
+				return basicSetMemory(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case UML2CloudProfilePackage.VM__BASE_COMPONENT:
 				if (resolve) return getBase_Component();
 				return basicGetBase_Component();
-			case UML2CloudProfilePackage.VM__NUMBER_OF_CORES:
-				return getNumberOfCores();
-			case UML2CloudProfilePackage.VM__DISK_GB:
-				return getDiskGB();
-			case UML2CloudProfilePackage.VM__COST_PER_HOUR:
-				return getCostPerHour();
-			case UML2CloudProfilePackage.VM__SCU:
-				return getSCU();
-			case UML2CloudProfilePackage.VM__MEMORY_GB:
-				return getMemoryGB();
+			case UML2CloudProfilePackage.VM__CORES:
+				return getCores();
+			case UML2CloudProfilePackage.VM__DISK:
+				return getDisk();
+			case UML2CloudProfilePackage.VM__COMPUTING_UNITS:
+				return getComputingUnits();
+			case UML2CloudProfilePackage.VM__MEMORY:
+				return getMemory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -482,20 +455,17 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 			case UML2CloudProfilePackage.VM__BASE_COMPONENT:
 				setBase_Component((Component)newValue);
 				return;
-			case UML2CloudProfilePackage.VM__NUMBER_OF_CORES:
-				setNumberOfCores((Integer)newValue);
+			case UML2CloudProfilePackage.VM__CORES:
+				setCores((Integer)newValue);
 				return;
-			case UML2CloudProfilePackage.VM__DISK_GB:
-				setDiskGB((Double)newValue);
+			case UML2CloudProfilePackage.VM__DISK:
+				setDisk((Size)newValue);
 				return;
-			case UML2CloudProfilePackage.VM__COST_PER_HOUR:
-				setCostPerHour((Double)newValue);
+			case UML2CloudProfilePackage.VM__COMPUTING_UNITS:
+				setComputingUnits((Double)newValue);
 				return;
-			case UML2CloudProfilePackage.VM__SCU:
-				setSCU((Double)newValue);
-				return;
-			case UML2CloudProfilePackage.VM__MEMORY_GB:
-				setMemoryGB((Double)newValue);
+			case UML2CloudProfilePackage.VM__MEMORY:
+				setMemory((Size)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -512,20 +482,17 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 			case UML2CloudProfilePackage.VM__BASE_COMPONENT:
 				setBase_Component((Component)null);
 				return;
-			case UML2CloudProfilePackage.VM__NUMBER_OF_CORES:
-				setNumberOfCores(NUMBER_OF_CORES_EDEFAULT);
+			case UML2CloudProfilePackage.VM__CORES:
+				setCores(CORES_EDEFAULT);
 				return;
-			case UML2CloudProfilePackage.VM__DISK_GB:
-				setDiskGB(DISK_GB_EDEFAULT);
+			case UML2CloudProfilePackage.VM__DISK:
+				setDisk((Size)null);
 				return;
-			case UML2CloudProfilePackage.VM__COST_PER_HOUR:
-				setCostPerHour(COST_PER_HOUR_EDEFAULT);
+			case UML2CloudProfilePackage.VM__COMPUTING_UNITS:
+				setComputingUnits(COMPUTING_UNITS_EDEFAULT);
 				return;
-			case UML2CloudProfilePackage.VM__SCU:
-				setSCU(SCU_EDEFAULT);
-				return;
-			case UML2CloudProfilePackage.VM__MEMORY_GB:
-				setMemoryGB(MEMORY_GB_EDEFAULT);
+			case UML2CloudProfilePackage.VM__MEMORY:
+				setMemory((Size)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -541,16 +508,14 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 		switch (featureID) {
 			case UML2CloudProfilePackage.VM__BASE_COMPONENT:
 				return base_Component != null;
-			case UML2CloudProfilePackage.VM__NUMBER_OF_CORES:
-				return numberOfCores != NUMBER_OF_CORES_EDEFAULT;
-			case UML2CloudProfilePackage.VM__DISK_GB:
-				return diskGB != DISK_GB_EDEFAULT;
-			case UML2CloudProfilePackage.VM__COST_PER_HOUR:
-				return costPerHour != COST_PER_HOUR_EDEFAULT;
-			case UML2CloudProfilePackage.VM__SCU:
-				return scu != SCU_EDEFAULT;
-			case UML2CloudProfilePackage.VM__MEMORY_GB:
-				return memoryGB != MEMORY_GB_EDEFAULT;
+			case UML2CloudProfilePackage.VM__CORES:
+				return cores != CORES_EDEFAULT;
+			case UML2CloudProfilePackage.VM__DISK:
+				return disk != null;
+			case UML2CloudProfilePackage.VM__COMPUTING_UNITS:
+				return computingUnits != COMPUTING_UNITS_EDEFAULT;
+			case UML2CloudProfilePackage.VM__MEMORY:
+				return memory != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -564,16 +529,14 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudProfilePackage.VM___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
-				return numberOfCores_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudProfilePackage.VM___DISK_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
-				return diskGB_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudProfilePackage.VM___COST_PER_HOUR_MUST_BE_GREATER_THAN_OR_EQUEAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
-				return costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.VM___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return cores_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case UML2CloudProfilePackage.VM___SCU_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return SCU_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case UML2CloudProfilePackage.VM___MEMORY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return memory_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.VM___VM_CAN_NOT_BE_ALLOCATED__DIAGNOSTICCHAIN_MAP:
+				return VM_can_not_be_allocated((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -588,16 +551,10 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (numberOfCores: ");
-		result.append(numberOfCores);
-		result.append(", diskGB: ");
-		result.append(diskGB);
-		result.append(", costPerHour: ");
-		result.append(costPerHour);
-		result.append(", SCU: ");
-		result.append(scu);
-		result.append(", memoryGB: ");
-		result.append(memoryGB);
+		result.append(" (cores: ");
+		result.append(cores);
+		result.append(", computingUnits: ");
+		result.append(computingUnits);
 		result.append(')');
 		return result.toString();
 	}

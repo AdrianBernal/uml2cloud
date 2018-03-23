@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UML2CloudProfile="http://www.uclm.es/UML/profiles/UML2Cloud/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_LVl6UCyYEeimk9UjhXlLXQ" name="cloudSystem">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_LlNDoCyYEeimk9UjhXlLXQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Component" xmi:id="_jcO70CzoEeiHMtOH55pATA" name="cloudInfrastructure"/>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_02KKICzqEeiHMtOH55pATA" name="Interaction1">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_4Nt70CzqEeiHMtOH55pATA" name="cloudProvider"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_4fkg0CzqEeiHMtOH55pATA" name="Lifeline2"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_UbUaACzrEeiHMtOH55pATA" name="VMs">
+      <packagedElement xmi:type="uml:Component" xmi:id="_t9hwUCzoEeiHMtOH55pATA" name="VM_large"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_tgw70CzoEeiHMtOH55pATA" name="VM_medium"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_kJUEQCzoEeiHMtOH55pATA" name="VM_small"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VthBsCzrEeiHMtOH55pATA" name="DataCenters">
+      <packagedElement xmi:type="uml:Component" xmi:id="_vULaMCzoEeiHMtOH55pATA" name="DataCenter"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Wpgv4CzrEeiHMtOH55pATA" name="Racks">
+      <packagedElement xmi:type="uml:Component" xmi:id="_w6FoECzoEeiHMtOH55pATA" name="storageRack"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_y5xA0CzoEeiHMtOH55pATA" name="computingRack"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_YSm0oCzrEeiHMtOH55pATA" name="Machines">
+      <packagedElement xmi:type="uml:Component" xmi:id="_1ZGKACzoEeiHMtOH55pATA" name="storageNode"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_4ZrmICzoEeiHMtOH55pATA" name="computingNode"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ZTd0sCzrEeiHMtOH55pATA" name="CPU">
+      <packagedElement xmi:type="uml:Component" xmi:id="_75NoECzoEeiHMtOH55pATA" name="CPU_quad"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_62OhECzoEeiHMtOH55pATA" name="CPU_dual"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Z-GtICzrEeiHMtOH55pATA" name="Applications">
+      <packagedElement xmi:type="uml:Component" xmi:id="_8qmowCzoEeiHMtOH55pATA" name="appDataIntensive"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ayBdYCzrEeiHMtOH55pATA" name="Memories">
+      <packagedElement xmi:type="uml:Component" xmi:id="_AAZf4CzpEeiHMtOH55pATA" name="mem16GB"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_-TjjkCzoEeiHMtOH55pATA" name="mem4GB"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_brYuUCzrEeiHMtOH55pATA" name="Storage">
+      <packagedElement xmi:type="uml:Component" xmi:id="_BtpE0CzpEeiHMtOH55pATA" name="disk_500GB"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_Cy1LQCzpEeiHMtOH55pATA" name="disk_2TB"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puVMACzoEeiHMtOH55pATA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puXoQCzoEeiHMtOH55pATA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.uclm.es/UML/profiles/UML2Cloud/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML2CLOUD_PROFILE/uml2cloud.profile.uml#_1K9OUIZKEeexBrHTG7KRXw"/>
+    </profileApplication>
+  </uml:Model>
+  <UML2CloudProfile:CloudInfrastructure xmi:id="_rRxUsCzoEeiHMtOH55pATA" cloudProvider="_5MqQUCzqEeiHMtOH55pATA" base_Component="_jcO70CzoEeiHMtOH55pATA">
+    <datacenterElement xmi:type="UML2CloudProfile:DataCenterElement" xmi:id="_uoV9ACzqEeiHMtOH55pATA" numberOfDataCenters="1" dataCenterType="_wTrvYCzoEeiHMtOH55pATA"/>
+    <network xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_wmPNECzqEeiHMtOH55pATA"/>
+  </UML2CloudProfile:CloudInfrastructure>
+  <UML2CloudProfile:VM xmi:id="_sqmI0CzoEeiHMtOH55pATA" base_Component="_kJUEQCzoEeiHMtOH55pATA" cores="1" computingUnits="1.0">
+    <disk xmi:type="UML2CloudProfile:Size" xmi:id="_psUu8CzqEeiHMtOH55pATA" value="250.0" unit="GByte"/>
+    <memory xmi:type="UML2CloudProfile:Size" xmi:id="_rLRZMCzqEeiHMtOH55pATA" value="2.0" unit="GByte"/>
+  </UML2CloudProfile:VM>
+  <UML2CloudProfile:VM xmi:id="_tg1NQCzoEeiHMtOH55pATA" base_Component="_tgw70CzoEeiHMtOH55pATA">
+    <disk xmi:type="UML2CloudProfile:Size" xmi:id="_mTz7ACzqEeiHMtOH55pATA" value="500.0" unit="GByte"/>
+    <memory xmi:type="UML2CloudProfile:Size" xmi:id="_oIAcgCzqEeiHMtOH55pATA" value="4.0" unit="GByte"/>
+  </UML2CloudProfile:VM>
+  <UML2CloudProfile:VM xmi:id="_t9mBwCzoEeiHMtOH55pATA" base_Component="_t9hwUCzoEeiHMtOH55pATA" cores="4" computingUnits="4.0">
+    <disk xmi:type="UML2CloudProfile:Size" xmi:id="_h2UcACzqEeiHMtOH55pATA" value="1.0" unit="TByte"/>
+    <memory xmi:type="UML2CloudProfile:Size" xmi:id="_ktxxUCzqEeiHMtOH55pATA" value="8.0" unit="GByte"/>
+  </UML2CloudProfile:VM>
+  <UML2CloudProfile:DataCenter xmi:id="_wTrvYCzoEeiHMtOH55pATA" base_Component="_vULaMCzoEeiHMtOH55pATA">
+    <network xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_YhCusCzqEeiHMtOH55pATA" value="1.0"/>
+    <rackElements xmi:type="UML2CloudProfile:RackElement" xmi:id="_a4QdsCzqEeiHMtOH55pATA" rackType="_0B01ECzoEeiHMtOH55pATA"/>
+    <rackElements xmi:type="UML2CloudProfile:RackElement" xmi:id="_csA6UCzqEeiHMtOH55pATA" rackType="_yHvuACzoEeiHMtOH55pATA"/>
+  </UML2CloudProfile:DataCenter>
+  <UML2CloudProfile:StorageRack xmi:id="_yHvuACzoEeiHMtOH55pATA" machinesPerBoard="4" boards="1" base_Component="_w6FoECzoEeiHMtOH55pATA" machineType="_24RdwCzoEeiHMtOH55pATA">
+    <network xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_XVEq0CzqEeiHMtOH55pATA"/>
+  </UML2CloudProfile:StorageRack>
+  <UML2CloudProfile:ComputingRack xmi:id="_0B01ECzoEeiHMtOH55pATA" machinesPerBoard="16" base_Component="_y5xA0CzoEeiHMtOH55pATA" machineType="_5DjCgCzoEeiHMtOH55pATA">
+    <network xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_TUcG8CzqEeiHMtOH55pATA"/>
+  </UML2CloudProfile:ComputingRack>
+  <UML2CloudProfile:StorageMachine xmi:id="_24RdwCzoEeiHMtOH55pATA" base_Component="_1ZGKACzoEeiHMtOH55pATA" cpu="_7aN-8CzoEeiHMtOH55pATA" memory="_AAbVECzpEeiHMtOH55pATA" storage="_Cy3ngCzpEeiHMtOH55pATA"/>
+  <UML2CloudProfile:ComputingMachine xmi:id="_5DjCgCzoEeiHMtOH55pATA" base_Component="_4ZrmICzoEeiHMtOH55pATA" cpu="_75QEUCzoEeiHMtOH55pATA" memory="__gGPMCzoEeiHMtOH55pATA" storage="_CemnsCzpEeiHMtOH55pATA"/>
+  <UML2CloudProfile:CPU xmi:id="_7aN-8CzoEeiHMtOH55pATA" base_Component="_62OhECzoEeiHMtOH55pATA" MIPS="52500"/>
+  <UML2CloudProfile:CPU xmi:id="_75QEUCzoEeiHMtOH55pATA" base_Component="_75NoECzoEeiHMtOH55pATA" cores="4" MIPS="60000"/>
+  <UML2CloudProfile:Application xmi:id="_9Myv0CzoEeiHMtOH55pATA" base_Component="_8qmowCzoEeiHMtOH55pATA" MIs="1000">
+    <inputData xmi:type="UML2CloudProfile:Size" xmi:id="_4OKyUCzrEeiHMtOH55pATA" value="50.0" unit="MByte"/>
+    <outputData xmi:type="UML2CloudProfile:Size" xmi:id="_49zfgCzrEeiHMtOH55pATA" value="50.0" unit="MByte"/>
+    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_-jWLsCzrEeiHMtOH55pATA" name="inputFile" value="/inputFile_0.dat" unit="string" description=""/>
+    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_vZIUYC0kEeiHMtOH55pATA" name="outputFile" value="/outputFile_0.dat" unit="string"/>
+    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_3f-fsC0kEeiHMtOH55pATA" name="interactions" value="5" unit="int"/>
+  </UML2CloudProfile:Application>
+  <UML2CloudProfile:Memory xmi:id="__gGPMCzoEeiHMtOH55pATA" base_Component="_-TjjkCzoEeiHMtOH55pATA">
+    <capacity xmi:type="UML2CloudProfile:Size" xmi:id="_tdwOoCzpEeiHMtOH55pATA" value="4.0" unit="GByte"/>
+    <latency xmi:type="UML2CloudProfile:Latency" xmi:id="_vBlY4CzpEeiHMtOH55pATA" name="read">
+      <time xmi:type="UML2CloudProfile:Time" xmi:id="_wP0GkCzpEeiHMtOH55pATA" value="5.0" unit="us"/>
+    </latency>
+    <latency xmi:type="UML2CloudProfile:Latency" xmi:id="_wg854CzpEeiHMtOH55pATA" name="write">
+      <time xmi:type="UML2CloudProfile:Time" xmi:id="_w84n8CzpEeiHMtOH55pATA" value="5.0" unit="us"/>
+    </latency>
+  </UML2CloudProfile:Memory>
+  <UML2CloudProfile:Memory xmi:id="_AAbVECzpEeiHMtOH55pATA" base_Component="_AAZf4CzpEeiHMtOH55pATA">
+    <capacity xmi:type="UML2CloudProfile:Size" xmi:id="_kjhekCzpEeiHMtOH55pATA" value="16.0" unit="GByte"/>
+    <latency xmi:type="UML2CloudProfile:Latency" xmi:id="_l6bnICzpEeiHMtOH55pATA" name="read">
+      <time xmi:type="UML2CloudProfile:Time" xmi:id="_nO3qgCzpEeiHMtOH55pATA" value="5.0" unit="us"/>
+    </latency>
+    <latency xmi:type="UML2CloudProfile:Latency" xmi:id="_ph42ACzpEeiHMtOH55pATA" name="write">
+      <time xmi:type="UML2CloudProfile:Time" xmi:id="_qeGmoCzpEeiHMtOH55pATA" value="5.0" unit="us"/>
+    </latency>
+  </UML2CloudProfile:Memory>
+  <UML2CloudProfile:Storage xmi:id="_CemnsCzpEeiHMtOH55pATA" base_Component="_BtpE0CzpEeiHMtOH55pATA">
+    <writeBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_gXne0CzpEeiHMtOH55pATA" value="500.0" unit="Mbps"/>
+    <driveCapacity xmi:type="UML2CloudProfile:Size" xmi:id="_hXWdgCzpEeiHMtOH55pATA" value="500.0" unit="GByte"/>
+    <readBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_ijTTQCzpEeiHMtOH55pATA" value="500.0" unit="Mbps"/>
+  </UML2CloudProfile:Storage>
+  <UML2CloudProfile:Storage xmi:id="_Cy3ngCzpEeiHMtOH55pATA" base_Component="_Cy1LQCzpEeiHMtOH55pATA">
+    <writeBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_WnZh8CzpEeiHMtOH55pATA" value="500.0" unit="Mbps"/>
+    <driveCapacity xmi:type="UML2CloudProfile:Size" xmi:id="_c00GcCzpEeiHMtOH55pATA" value="2.0" unit="TByte"/>
+    <readBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_eD36kCzpEeiHMtOH55pATA" value="500.0" unit="Mbps"/>
+  </UML2CloudProfile:Storage>
+  <UML2CloudProfile:CloudProvider xmi:id="_5MqQUCzqEeiHMtOH55pATA" resourceAllocationPolicy="" base_Lifeline="_4Nt70CzqEeiHMtOH55pATA"/>
+  <UML2CloudProfile:User xmi:id="_5wadoCzqEeiHMtOH55pATA" base_Lifeline="_4fkg0CzqEeiHMtOH55pATA"/>
+</xmi:XMI>

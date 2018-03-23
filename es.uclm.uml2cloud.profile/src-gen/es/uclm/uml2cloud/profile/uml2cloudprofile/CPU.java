@@ -15,9 +15,8 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getNumberOfCores <em>Number Of Cores</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getSpeedMIPS <em>Speed MIPS</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getTickS <em>Tick S</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getCores <em>Cores</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getMIPS <em>MIPS</em>}</li>
  * </ul>
  *
  * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCPU()
@@ -26,91 +25,64 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  */
 public interface CPU extends Hardware {
 	/**
-	 * Returns the value of the '<em><b>Number Of Cores</b></em>' attribute.
+	 * Returns the value of the '<em><b>Cores</b></em>' attribute.
 	 * The default value is <code>"2"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Number Of Cores</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Cores</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Number Of Cores</em>' attribute.
-	 * @see #setNumberOfCores(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCPU_NumberOfCores()
+	 * @return the value of the '<em>Cores</em>' attribute.
+	 * @see #setCores(int)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCPU_Cores()
 	 * @model default="2" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	int getNumberOfCores();
+	int getCores();
 
 	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getNumberOfCores <em>Number Of Cores</em>}' attribute.
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getCores <em>Cores</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Number Of Cores</em>' attribute.
-	 * @see #getNumberOfCores()
+	 * @param value the new value of the '<em>Cores</em>' attribute.
+	 * @see #getCores()
 	 * @generated
 	 */
-	void setNumberOfCores(int value);
+	void setCores(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Speed MIPS</b></em>' attribute.
+	 * Returns the value of the '<em><b>MIPS</b></em>' attribute.
 	 * The default value is <code>"30000"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Speed MIPS</em>' attribute isn't clear,
+	 * If the meaning of the '<em>MIPS</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Speed MIPS</em>' attribute.
-	 * @see #setSpeedMIPS(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCPU_SpeedMIPS()
+	 * @return the value of the '<em>MIPS</em>' attribute.
+	 * @see #setMIPS(int)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCPU_MIPS()
 	 * @model default="30000" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	int getSpeedMIPS();
+	int getMIPS();
 
 	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getSpeedMIPS <em>Speed MIPS</em>}' attribute.
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getMIPS <em>MIPS</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Speed MIPS</em>' attribute.
-	 * @see #getSpeedMIPS()
+	 * @param value the new value of the '<em>MIPS</em>' attribute.
+	 * @see #getMIPS()
 	 * @generated
 	 */
-	void setSpeedMIPS(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Tick S</b></em>' attribute.
-	 * The default value is <code>"0.01"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tick S</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tick S</em>' attribute.
-	 * @see #setTickS(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCPU_TickS()
-	 * @model default="0.01" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
-	 * @generated
-	 */
-	double getTickS();
-
-	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#getTickS <em>Tick S</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tick S</em>' attribute.
-	 * @see #getTickS()
-	 * @generated
-	 */
-	void setTickS(double value);
+	void setMIPS(int value);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.speedMIPS>0
+	 * self.MIPS>0
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
@@ -123,20 +95,7 @@ public interface CPU extends Hardware {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.tickS>0
-	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
-	 * @param context The cache of context-specific information.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	boolean tickS_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * self.numberOfCores>0
+	 * self.cores>0
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->

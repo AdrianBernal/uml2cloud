@@ -20,11 +20,10 @@ import org.eclipse.uml2.uml.Component;
  * </p>
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getBase_Component <em>Base Component</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getNumberOfCores <em>Number Of Cores</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getDiskGB <em>Disk GB</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getCostPerHour <em>Cost Per Hour</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getSCU <em>SCU</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getMemoryGB <em>Memory GB</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getCores <em>Cores</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getDisk <em>Disk</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getComputingUnits <em>Computing Units</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getMemory <em>Memory</em>}</li>
  * </ul>
  *
  * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM()
@@ -59,184 +58,129 @@ public interface VM extends EObject {
 	void setBase_Component(Component value);
 
 	/**
-	 * Returns the value of the '<em><b>Number Of Cores</b></em>' attribute.
+	 * Returns the value of the '<em><b>Cores</b></em>' attribute.
 	 * The default value is <code>"2"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Number Of Cores</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Cores</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Number Of Cores</em>' attribute.
-	 * @see #setNumberOfCores(int)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_NumberOfCores()
+	 * @return the value of the '<em>Cores</em>' attribute.
+	 * @see #setCores(int)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_Cores()
 	 * @model default="2" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	int getNumberOfCores();
+	int getCores();
 
 	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getNumberOfCores <em>Number Of Cores</em>}' attribute.
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getCores <em>Cores</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Number Of Cores</em>' attribute.
-	 * @see #getNumberOfCores()
+	 * @param value the new value of the '<em>Cores</em>' attribute.
+	 * @see #getCores()
 	 * @generated
 	 */
-	void setNumberOfCores(int value);
+	void setCores(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Disk GB</b></em>' attribute.
-	 * The default value is <code>"500.0"</code>.
+	 * Returns the value of the '<em><b>Disk</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Disk GB</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Disk</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Disk GB</em>' attribute.
-	 * @see #setDiskGB(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_DiskGB()
-	 * @model default="500.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
+	 * @return the value of the '<em>Disk</em>' containment reference.
+	 * @see #setDisk(Size)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_Disk()
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
-	double getDiskGB();
+	Size getDisk();
 
 	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getDiskGB <em>Disk GB</em>}' attribute.
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getDisk <em>Disk</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Disk GB</em>' attribute.
-	 * @see #getDiskGB()
+	 * @param value the new value of the '<em>Disk</em>' containment reference.
+	 * @see #getDisk()
 	 * @generated
 	 */
-	void setDiskGB(double value);
+	void setDisk(Size value);
 
 	/**
-	 * Returns the value of the '<em><b>Cost Per Hour</b></em>' attribute.
-	 * The default value is <code>"15.0"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cost Per Hour</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cost Per Hour</em>' attribute.
-	 * @see #setCostPerHour(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_CostPerHour()
-	 * @model default="15.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
-	 * @generated
-	 */
-	double getCostPerHour();
-
-	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getCostPerHour <em>Cost Per Hour</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cost Per Hour</em>' attribute.
-	 * @see #getCostPerHour()
-	 * @generated
-	 */
-	void setCostPerHour(double value);
-
-	/**
-	 * Returns the value of the '<em><b>SCU</b></em>' attribute.
+	 * Returns the value of the '<em><b>Computing Units</b></em>' attribute.
 	 * The default value is <code>"2.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>SCU</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Computing Units</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>SCU</em>' attribute.
-	 * @see #setSCU(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_SCU()
+	 * @return the value of the '<em>Computing Units</em>' attribute.
+	 * @see #setComputingUnits(double)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_ComputingUnits()
 	 * @model default="2.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */
-	double getSCU();
+	double getComputingUnits();
 
 	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getSCU <em>SCU</em>}' attribute.
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getComputingUnits <em>Computing Units</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>SCU</em>' attribute.
-	 * @see #getSCU()
+	 * @param value the new value of the '<em>Computing Units</em>' attribute.
+	 * @see #getComputingUnits()
 	 * @generated
 	 */
-	void setSCU(double value);
+	void setComputingUnits(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Memory GB</b></em>' attribute.
-	 * The default value is <code>"4.0"</code>.
+	 * Returns the value of the '<em><b>Memory</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Memory GB</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Memory</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Memory GB</em>' attribute.
-	 * @see #setMemoryGB(double)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_MemoryGB()
-	 * @model default="4.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
+	 * @return the value of the '<em>Memory</em>' containment reference.
+	 * @see #setMemory(Size)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getVM_Memory()
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
-	double getMemoryGB();
+	Size getMemory();
 
 	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getMemoryGB <em>Memory GB</em>}' attribute.
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#getMemory <em>Memory</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Memory GB</em>' attribute.
-	 * @see #getMemoryGB()
+	 * @param value the new value of the '<em>Memory</em>' containment reference.
+	 * @see #getMemory()
 	 * @generated
 	 */
-	void setMemoryGB(double value);
+	void setMemory(Size value);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.numberOfCores>0
+	 * self.cores>0
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	boolean numberOfCores_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean cores_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.diskGB>0
-	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
-	 * @param context The cache of context-specific information.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	boolean diskGB_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * self.costPerHour>=0
-	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
-	 * @param context The cache of context-specific information.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	boolean costPerHour_Must_Be_Greater_Than_Or_Equeal_To_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * self.SCU>0
+	 * self.computingUnits>0
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
@@ -249,7 +193,7 @@ public interface VM extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.memoryGB>0
+	 * self.memory.value>0
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
@@ -257,5 +201,18 @@ public interface VM extends EObject {
 	 * @generated
 	 */
 	boolean memory_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * UML::Component.allInstances()->selectByKind(ComputingMachine)->one(cm | cm.cpu.cores>=self.cores)
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean VM_can_not_be_allocated(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // VM

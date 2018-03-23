@@ -31,6 +31,15 @@ public interface UML2CloudProfileFactory extends EFactory {
 	DataCenter createDataCenter();
 
 	/**
+	 * Returns a new object of class '<em>Bandwidth</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bandwidth</em>'.
+	 * @generated
+	 */
+	Bandwidth createBandwidth();
+
+	/**
 	 * Returns a new object of class '<em>Rack Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,85 +67,76 @@ public interface UML2CloudProfileFactory extends EFactory {
 	Memory createMemory();
 
 	/**
-	 * Returns a new object of class '<em>Disk</em>'.
+	 * Returns a new object of class '<em>Size</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Disk</em>'.
+	 * @return a new object of class '<em>Size</em>'.
 	 * @generated
 	 */
-	Disk createDisk();
+	Size createSize();
 
 	/**
-	 * Returns a new object of class '<em>Rack Cmp</em>'.
+	 * Returns a new object of class '<em>Latency</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rack Cmp</em>'.
+	 * @return a new object of class '<em>Latency</em>'.
 	 * @generated
 	 */
-	RackCmp createRackCmp();
+	Latency createLatency();
 
 	/**
-	 * Returns a new object of class '<em>Node Cmp</em>'.
+	 * Returns a new object of class '<em>Time</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Node Cmp</em>'.
+	 * @return a new object of class '<em>Time</em>'.
 	 * @generated
 	 */
-	NodeCmp createNodeCmp();
+	Time createTime();
 
 	/**
-	 * Returns a new object of class '<em>Rack Sto</em>'.
+	 * Returns a new object of class '<em>Storage</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rack Sto</em>'.
+	 * @return a new object of class '<em>Storage</em>'.
 	 * @generated
 	 */
-	RackSto createRackSto();
+	Storage createStorage();
 
 	/**
-	 * Returns a new object of class '<em>Node Sto</em>'.
+	 * Returns a new object of class '<em>Computing Rack</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Node Sto</em>'.
+	 * @return a new object of class '<em>Computing Rack</em>'.
 	 * @generated
 	 */
-	NodeSto createNodeSto();
+	ComputingRack createComputingRack();
 
 	/**
-	 * Returns a new object of class '<em>Scenario</em>'.
+	 * Returns a new object of class '<em>Computing Machine</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Scenario</em>'.
+	 * @return a new object of class '<em>Computing Machine</em>'.
 	 * @generated
 	 */
-	Scenario createScenario();
+	ComputingMachine createComputingMachine();
 
 	/**
-	 * Returns a new object of class '<em>Repository</em>'.
+	 * Returns a new object of class '<em>Storage Rack</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Repository</em>'.
+	 * @return a new object of class '<em>Storage Rack</em>'.
 	 * @generated
 	 */
-	Repository createRepository();
+	StorageRack createStorageRack();
 
 	/**
-	 * Returns a new object of class '<em>VM</em>'.
+	 * Returns a new object of class '<em>Storage Machine</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VM</em>'.
+	 * @return a new object of class '<em>Storage Machine</em>'.
 	 * @generated
 	 */
-	VM createVM();
-
-	/**
-	 * Returns a new object of class '<em>Local Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Local Application</em>'.
-	 * @generated
-	 */
-	LocalApplication createLocalApplication();
+	StorageMachine createStorageMachine();
 
 	/**
 	 * Returns a new object of class '<em>Cloud Provider</em>'.
@@ -146,6 +146,33 @@ public interface UML2CloudProfileFactory extends EFactory {
 	 * @generated
 	 */
 	CloudProvider createCloudProvider();
+
+	/**
+	 * Returns a new object of class '<em>Application</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Application</em>'.
+	 * @generated
+	 */
+	Application createApplication();
+
+	/**
+	 * Returns a new object of class '<em>Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Parameter</em>'.
+	 * @generated
+	 */
+	Parameter createParameter();
+
+	/**
+	 * Returns a new object of class '<em>VM</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VM</em>'.
+	 * @generated
+	 */
+	VM createVM();
 
 	/**
 	 * Returns a new object of class '<em>Request</em>'.
@@ -245,6 +272,24 @@ public interface UML2CloudProfileFactory extends EFactory {
 	 * @generated
 	 */
 	User createUser();
+
+	/**
+	 * Returns a new object of class '<em>Cloud Infrastructure</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cloud Infrastructure</em>'.
+	 * @generated
+	 */
+	CloudInfrastructure createCloudInfrastructure();
+
+	/**
+	 * Returns a new object of class '<em>Data Center Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Center Element</em>'.
+	 * @generated
+	 */
+	DataCenterElement createDataCenterElement();
 
 	/**
 	 * Returns the package supported by this factory.

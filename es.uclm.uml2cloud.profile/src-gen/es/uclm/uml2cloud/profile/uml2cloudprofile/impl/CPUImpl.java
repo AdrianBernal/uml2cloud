@@ -34,73 +34,52 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CPUImpl#getNumberOfCores <em>Number Of Cores</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CPUImpl#getSpeedMIPS <em>Speed MIPS</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CPUImpl#getTickS <em>Tick S</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CPUImpl#getCores <em>Cores</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CPUImpl#getMIPS <em>MIPS</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class CPUImpl extends HardwareImpl implements CPU {
 	/**
-	 * The default value of the '{@link #getNumberOfCores() <em>Number Of Cores</em>}' attribute.
+	 * The default value of the '{@link #getCores() <em>Cores</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNumberOfCores()
+	 * @see #getCores()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NUMBER_OF_CORES_EDEFAULT = 2;
+	protected static final int CORES_EDEFAULT = 2;
 
 	/**
-	 * The cached value of the '{@link #getNumberOfCores() <em>Number Of Cores</em>}' attribute.
+	 * The cached value of the '{@link #getCores() <em>Cores</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNumberOfCores()
+	 * @see #getCores()
 	 * @generated
 	 * @ordered
 	 */
-	protected int numberOfCores = NUMBER_OF_CORES_EDEFAULT;
+	protected int cores = CORES_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSpeedMIPS() <em>Speed MIPS</em>}' attribute.
+	 * The default value of the '{@link #getMIPS() <em>MIPS</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpeedMIPS()
+	 * @see #getMIPS()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int SPEED_MIPS_EDEFAULT = 30000;
+	protected static final int MIPS_EDEFAULT = 30000;
 
 	/**
-	 * The cached value of the '{@link #getSpeedMIPS() <em>Speed MIPS</em>}' attribute.
+	 * The cached value of the '{@link #getMIPS() <em>MIPS</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSpeedMIPS()
+	 * @see #getMIPS()
 	 * @generated
 	 * @ordered
 	 */
-	protected int speedMIPS = SPEED_MIPS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTickS() <em>Tick S</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTickS()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double TICK_S_EDEFAULT = 0.01;
-
-	/**
-	 * The cached value of the '{@link #getTickS() <em>Tick S</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTickS()
-	 * @generated
-	 * @ordered
-	 */
-	protected double tickS = TICK_S_EDEFAULT;
+	protected int mips = MIPS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,8 +105,8 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNumberOfCores() {
-		return numberOfCores;
+	public int getCores() {
+		return cores;
 	}
 
 	/**
@@ -135,11 +114,11 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNumberOfCores(int newNumberOfCores) {
-		int oldNumberOfCores = numberOfCores;
-		numberOfCores = newNumberOfCores;
+	public void setCores(int newCores) {
+		int oldCores = cores;
+		cores = newCores;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CPU__NUMBER_OF_CORES, oldNumberOfCores, numberOfCores));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CPU__CORES, oldCores, cores));
 	}
 
 	/**
@@ -147,8 +126,8 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getSpeedMIPS() {
-		return speedMIPS;
+	public int getMIPS() {
+		return mips;
 	}
 
 	/**
@@ -156,32 +135,11 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSpeedMIPS(int newSpeedMIPS) {
-		int oldSpeedMIPS = speedMIPS;
-		speedMIPS = newSpeedMIPS;
+	public void setMIPS(int newMIPS) {
+		int oldMIPS = mips;
+		mips = newMIPS;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CPU__SPEED_MIPS, oldSpeedMIPS, speedMIPS));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getTickS() {
-		return tickS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTickS(double newTickS) {
-		double oldTickS = tickS;
-		tickS = newTickS;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CPU__TICK_S, oldTickS, tickS));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CPU__MIPS, oldMIPS, mips));
 	}
 
 	/**
@@ -202,31 +160,6 @@ public class CPUImpl extends HardwareImpl implements CPU {
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
 						 UML2CloudProfileValidator.CPU__SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "speedMIPS_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean tickS_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.CPU__TICK_SMUST_BE_GREATER_THAN_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "tickS_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -267,12 +200,10 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.CPU__NUMBER_OF_CORES:
-				return getNumberOfCores();
-			case UML2CloudProfilePackage.CPU__SPEED_MIPS:
-				return getSpeedMIPS();
-			case UML2CloudProfilePackage.CPU__TICK_S:
-				return getTickS();
+			case UML2CloudProfilePackage.CPU__CORES:
+				return getCores();
+			case UML2CloudProfilePackage.CPU__MIPS:
+				return getMIPS();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -285,14 +216,11 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.CPU__NUMBER_OF_CORES:
-				setNumberOfCores((Integer)newValue);
+			case UML2CloudProfilePackage.CPU__CORES:
+				setCores((Integer)newValue);
 				return;
-			case UML2CloudProfilePackage.CPU__SPEED_MIPS:
-				setSpeedMIPS((Integer)newValue);
-				return;
-			case UML2CloudProfilePackage.CPU__TICK_S:
-				setTickS((Double)newValue);
+			case UML2CloudProfilePackage.CPU__MIPS:
+				setMIPS((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -306,14 +234,11 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.CPU__NUMBER_OF_CORES:
-				setNumberOfCores(NUMBER_OF_CORES_EDEFAULT);
+			case UML2CloudProfilePackage.CPU__CORES:
+				setCores(CORES_EDEFAULT);
 				return;
-			case UML2CloudProfilePackage.CPU__SPEED_MIPS:
-				setSpeedMIPS(SPEED_MIPS_EDEFAULT);
-				return;
-			case UML2CloudProfilePackage.CPU__TICK_S:
-				setTickS(TICK_S_EDEFAULT);
+			case UML2CloudProfilePackage.CPU__MIPS:
+				setMIPS(MIPS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -327,12 +252,10 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.CPU__NUMBER_OF_CORES:
-				return numberOfCores != NUMBER_OF_CORES_EDEFAULT;
-			case UML2CloudProfilePackage.CPU__SPEED_MIPS:
-				return speedMIPS != SPEED_MIPS_EDEFAULT;
-			case UML2CloudProfilePackage.CPU__TICK_S:
-				return tickS != TICK_S_EDEFAULT;
+			case UML2CloudProfilePackage.CPU__CORES:
+				return cores != CORES_EDEFAULT;
+			case UML2CloudProfilePackage.CPU__MIPS:
+				return mips != MIPS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -348,8 +271,6 @@ public class CPUImpl extends HardwareImpl implements CPU {
 		switch (operationID) {
 			case UML2CloudProfilePackage.CPU___SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return speedMIPS_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudProfilePackage.CPU___TICK_SMUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
-				return tickS_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case UML2CloudProfilePackage.CPU___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return numberOfCores_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
@@ -366,12 +287,10 @@ public class CPUImpl extends HardwareImpl implements CPU {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (numberOfCores: ");
-		result.append(numberOfCores);
-		result.append(", speedMIPS: ");
-		result.append(speedMIPS);
-		result.append(", tickS: ");
-		result.append(tickS);
+		result.append(" (cores: ");
+		result.append(cores);
+		result.append(", MIPS: ");
+		result.append(mips);
 		result.append(')');
 		return result.toString();
 	}

@@ -20,9 +20,9 @@ import org.eclipse.uml2.uml.Component;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getBase_Component <em>Base Component</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getNetwork <em>Network</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getRackElements <em>Rack Elements</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getBase_Component <em>Base Component</em>}</li>
  * </ul>
  *
  * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDataCenter()
@@ -30,6 +30,48 @@ import org.eclipse.uml2.uml.Component;
  * @generated
  */
 public interface DataCenter extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Network</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Network</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Network</em>' containment reference.
+	 * @see #setNetwork(Bandwidth)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDataCenter_Network()
+	 * @model containment="true" required="true" ordered="false"
+	 * @generated
+	 */
+	Bandwidth getNetwork();
+
+	/**
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getNetwork <em>Network</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Network</em>' containment reference.
+	 * @see #getNetwork()
+	 * @generated
+	 */
+	void setNetwork(Bandwidth value);
+
+	/**
+	 * Returns the value of the '<em><b>Rack Elements</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Rack Elements</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Rack Elements</em>' containment reference list.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDataCenter_RackElements()
+	 * @model containment="true" required="true" ordered="false"
+	 * @generated
+	 */
+	EList<RackElement> getRackElements();
+
 	/**
 	 * Returns the value of the '<em><b>Base Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -57,58 +99,10 @@ public interface DataCenter extends EObject {
 	void setBase_Component(Component value);
 
 	/**
-	 * Returns the value of the '<em><b>Network</b></em>' attribute.
-	 * The default value is <code>"Ethernet40Gbps"</code>.
-	 * The literals are from the enumeration {@link es.uclm.uml2cloud.profile.uml2cloudprofile.Channel}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Network</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Network</em>' attribute.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Channel
-	 * @see #setNetwork(Channel)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDataCenter_Network()
-	 * @model default="Ethernet40Gbps" required="true" ordered="false"
-	 * @generated
-	 */
-	Channel getNetwork();
-
-	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter#getNetwork <em>Network</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Network</em>' attribute.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Channel
-	 * @see #getNetwork()
-	 * @generated
-	 */
-	void setNetwork(Channel value);
-
-	/**
-	 * Returns the value of the '<em><b>Rack Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement}.
-	 * It is bidirectional and its opposite is '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getDataCenter <em>Data Center</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rack Elements</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rack Elements</em>' containment reference list.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDataCenter_RackElements()
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement#getDataCenter
-	 * @model opposite="dataCenter" containment="true" required="true" ordered="false"
-	 * @generated
-	 */
-	EList<RackElement> getRackElements();
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.rackElements->forAll(instances>0)
+	 * self.rackElements->forAll(numberOfRacks>0)
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
@@ -121,7 +115,7 @@ public interface DataCenter extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.rackElements->forAll(instances>=0)
+	 * self.rackElements->forAll(numberOfRacks>=0)
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
