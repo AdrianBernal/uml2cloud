@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
+<extension name="dsml.validation.generated.uml2cloud" point="org.eclipse.emf.validation.constraintProviders">
+      <category id="es.uclm.uml2cloud.validation.uml2cloud" mandatory="false" name="es.uclm.uml2cloud.validation.uml2cloud"/>
+      <constraintProvider cache="false" mode="Batch">
+         <package namespaceUri="http://www.uclm.es/UML/profiles/UML2Cloud/1"/>
+         <constraints categories="es.uclm.uml2cloud.validation.uml2cloud">
+            <constraint id="uml2cloud.DataCenter.rackElements_instances_Should_Be_Greatter_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="rackElements_instances_Should_Be_Greatter_Than_Zero" severity="WARNING" statusCode="1">
+               <message>Constraint 'rackElements_instances_Should_Be_Greatter_Than_Zero' is violated</message><![CDATA[self.rackElements->forAll(numberOfRacks>0)]]></constraint>
+            <constraint id="uml2cloud.DataCenter.rackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="rackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'rackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero' is violated</message><![CDATA[self.rackElements->forAll(numberOfRacks>=0)]]></constraint>
+            <constraint id="uml2cloud.Rack.boards_Must_Be_Greatter_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="boards_Must_Be_Greatter_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'boards_Must_Be_Greatter_Than_Zero' is violated</message><![CDATA[self.boards>0]]></constraint>
+            <constraint id="uml2cloud.Rack.machinesPerBoard_Must_Be_Greatter_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="machinesPerBoard_Must_Be_Greatter_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'machinesPerBoard_Must_Be_Greatter_Than_Zero' is violated</message><![CDATA[self.machinesPerBoard>0]]></constraint>
+            <constraint id="uml2cloud.CPU.MIPS_Must_Be_Greater_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="MIPS_Must_Be_Greater_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'MIPS_Must_Be_Greater_Than_Zero' is violated</message><![CDATA[self.MIPS>0]]></constraint>
+            <constraint id="uml2cloud.CPU.cores_Must_Be_Greater_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="cores_Must_Be_Greater_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'cores_Must_Be_Greater_Than_Zero' is violated</message><![CDATA[self.cores>0]]></constraint>
+            <constraint id="uml2cloud.Storage.numberOfDrives_Must_Be_Greatter_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="numberOfDrives_Must_Be_Greatter_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'numberOfDrives_Must_Be_Greatter_Than_Zero' is violated</message><![CDATA[self.numberOfDrives>0]]></constraint>
+            <constraint id="uml2cloud.Storage.driveCapacity_Must_Be_Greater_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="driveCapacity_Must_Be_Greater_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'driveCapacity_Must_Be_Greater_Than_Zero' is violated</message><![CDATA[self.driveCapacity.value>0]]></constraint>
+            <constraint id="uml2cloud.Storage.readBandwidth_Must_Be_Greatter_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="readBandwidth_Must_Be_Greatter_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'readBandwidth_Must_Be_Greatter_Than_Zero' is violated</message><![CDATA[self.readBandwidth.value>0]]></constraint>
+            <constraint id="uml2cloud.Storage.writeBandwidth_Must_Be_Greatter_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="writeBandwidth_Must_Be_Greatter_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'writeBandwidth_Must_Be_Greatter_Than_Zero' is violated</message><![CDATA[self.writeBandwidth.value>0]]></constraint>
+            <constraint id="uml2cloud.Memory.capacity_Must_Be_Greater_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="capacity_Must_Be_Greater_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'capacity_Must_Be_Greater_Than_Zero' is violated</message><![CDATA[self.capacity.value>0]]></constraint>
+            <constraint id="uml2cloud.Application.MIs_Must_Be_Greater_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="MIs_Must_Be_Greater_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'MIs_Must_Be_Greater_Than_Zero' is violated</message><![CDATA[self.MIs>0]]></constraint>
+            <constraint id="uml2cloud.Application.inputData_Must_Be_Greater_Than_Or_Equal_To_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="inputData_Must_Be_Greater_Than_Or_Equal_To_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'inputData_Must_Be_Greater_Than_Or_Equal_To_Zero' is violated</message><![CDATA[self.inputData.value>=0]]></constraint>
+            <constraint id="uml2cloud.Application.outputData_Must_Be_Greater_Than_Or_Equal_To_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="outputData_Must_Be_Greater_Than_Or_Equal_To_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'outputData_Must_Be_Greater_Than_Or_Equal_To_Zero' is violated</message><![CDATA[self.outputData.value>=0]]></constraint>
+            <constraint id="uml2cloud.VM.cores_Must_Be_Greater_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="cores_Must_Be_Greater_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'cores_Must_Be_Greater_Than_Zero' is violated</message><![CDATA[self.cores>0]]></constraint>
+            <constraint id="uml2cloud.VM.computingUnits_Must_Be_Greater_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="computingUnits_Must_Be_Greater_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'computingUnits_Must_Be_Greater_Than_Zero' is violated</message><![CDATA[self.computingUnits>0]]></constraint>
+            <constraint id="uml2cloud.VM.memory_Must_Be_Greater_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="memory_Must_Be_Greater_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'memory_Must_Be_Greater_Than_Zero' is violated</message><![CDATA[self.memory.value>0]]></constraint>
+            <constraint id="uml2cloud.VM.VM_can_not_be_allocated" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="VM_can_not_be_allocated" severity="ERROR" statusCode="1">
+               <message>Constraint 'VM_can_not_be_allocated' is violated</message><![CDATA[UML::Component.allInstances()->selectByKind(ComputingMachine)->one(cm | cm.cpu.cores>=self.cores)]]></constraint>
+            <constraint id="uml2cloud.Request.rentingTime_Must_Be_Greater_Than__Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="rentingTime_Must_Be_Greater_Than__Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'rentingTime_Must_Be_Greater_Than__Zero' is violated</message><![CDATA[self.vmInstantiation->forAll(rentingTime.value>0)]]></constraint>
+            <constraint id="uml2cloud.Request.instances_Must_Be_Greater_Than__Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="instances_Must_Be_Greater_Than__Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'instances_Must_Be_Greater_Than__Zero' is violated</message><![CDATA[self.vmInstantiation->forAll(instances>0)]]></constraint>
+            <constraint id="uml2cloud.Subscribe.maxTime_Must_Be_Greater_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="maxTime_Must_Be_Greater_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'maxTime_Must_Be_Greater_Than_Zero' is violated</message><![CDATA[self.maxTime.value>0]]></constraint>
+            <constraint id="uml2cloud.Execute.instances_Must_Be_Greater_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="instances_Must_Be_Greater_Than_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'instances_Must_Be_Greater_Than_Zero' is violated</message><![CDATA[self.appInstantiation->forAll(instances>0)]]></constraint>
+            <constraint id="uml2cloud.CloudInfrastructure.datacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="datacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero" severity="ERROR" statusCode="1">
+               <message>Constraint 'datacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero' is violated</message><![CDATA[self.datacenterElements->forAll(numberOfDataCenters>=0)]]></constraint>
+            <constraint id="uml2cloud.CloudInfrastructure.datacenterElements_instances_Should_Be_Greatter_Than_Zero" isEnabledByDefault="true" lang="OCLpivot" mode="Batch" name="datacenterElements_instances_Should_Be_Greatter_Than_Zero" severity="WARNING" statusCode="1">
+               <message>Constraint 'datacenterElements_instances_Should_Be_Greatter_Than_Zero' is violated</message><![CDATA[self.datacenterElements->forAll(numberOfDataCenters>0)]]></constraint>
+         </constraints>
+      </constraintProvider>
+   </extension>
+   <extension name="dsml.validation.generated.uml2cloud" point="org.eclipse.emf.validation.constraintBindings">
+      <clientContext id="VMClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.VMClientSelector"/>
+      </clientContext>
+      <binding context="VMClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.VM.cores_Must_Be_Greater_Than_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.VM.computingUnits_Must_Be_Greater_Than_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.VM.memory_Must_Be_Greater_Than_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.VM.VM_can_not_be_allocated"/>
+      </binding>
+      <clientContext id="SubscribeClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.SubscribeClientSelector"/>
+      </clientContext>
+      <binding context="SubscribeClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Subscribe.maxTime_Must_Be_Greater_Than_Zero"/>
+      </binding>
+      <clientContext id="DataCenterClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.DataCenterClientSelector"/>
+      </clientContext>
+      <binding context="DataCenterClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.DataCenter.rackElements_instances_Should_Be_Greatter_Than_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.DataCenter.rackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero"/>
+      </binding>
+      <clientContext id="StorageClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.StorageClientSelector"/>
+      </clientContext>
+      <binding context="StorageClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Storage.numberOfDrives_Must_Be_Greatter_Than_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Storage.driveCapacity_Must_Be_Greater_Than_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Storage.readBandwidth_Must_Be_Greatter_Than_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Storage.writeBandwidth_Must_Be_Greatter_Than_Zero"/>
+      </binding>
+      <clientContext id="ApplicationClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.ApplicationClientSelector"/>
+      </clientContext>
+      <binding context="ApplicationClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Application.MIs_Must_Be_Greater_Than_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Application.inputData_Must_Be_Greater_Than_Or_Equal_To_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Application.outputData_Must_Be_Greater_Than_Or_Equal_To_Zero"/>
+      </binding>
+      <clientContext id="RequestClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.RequestClientSelector"/>
+      </clientContext>
+      <binding context="RequestClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Request.rentingTime_Must_Be_Greater_Than__Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Request.instances_Must_Be_Greater_Than__Zero"/>
+      </binding>
+      <clientContext id="MemoryClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.MemoryClientSelector"/>
+      </clientContext>
+      <binding context="MemoryClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Memory.capacity_Must_Be_Greater_Than_Zero"/>
+      </binding>
+      <clientContext id="CPUClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.CPUClientSelector"/>
+      </clientContext>
+      <binding context="CPUClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.CPU.MIPS_Must_Be_Greater_Than_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.CPU.cores_Must_Be_Greater_Than_Zero"/>
+      </binding>
+      <clientContext id="ExecuteClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.ExecuteClientSelector"/>
+      </clientContext>
+      <binding context="ExecuteClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Execute.instances_Must_Be_Greater_Than_Zero"/>
+      </binding>
+      <clientContext id="RackClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.RackClientSelector"/>
+      </clientContext>
+      <binding context="RackClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Rack.boards_Must_Be_Greatter_Than_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.Rack.machinesPerBoard_Must_Be_Greatter_Than_Zero"/>
+      </binding>
+      <clientContext id="CloudInfrastructureClientContext">
+         <selector class="es.uclm.uml2cloud.validation.selectors.CloudInfrastructureClientSelector"/>
+      </clientContext>
+      <binding context="CloudInfrastructureClientContext">
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.CloudInfrastructure.datacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero"/>
+         <constraint ref="es.uclm.uml2cloud.validation.uml2cloud.CloudInfrastructure.datacenterElements_instances_Should_Be_Greatter_Than_Zero"/>
+      </binding>
+   </extension>
+</plugin>
