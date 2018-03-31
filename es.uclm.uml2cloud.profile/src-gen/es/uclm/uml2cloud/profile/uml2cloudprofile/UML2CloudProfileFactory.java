@@ -247,13 +247,13 @@ public interface UML2CloudProfileFactory extends EFactory {
 	Response createResponse();
 
 	/**
-	 * Returns a new object of class '<em>Reject</em>'.
+	 * Returns a new object of class '<em>Failure</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Reject</em>'.
+	 * @return a new object of class '<em>Failure</em>'.
 	 * @generated
 	 */
-	Reject createReject();
+	Failure createFailure();
 
 	/**
 	 * Returns a new object of class '<em>Execute</em>'.

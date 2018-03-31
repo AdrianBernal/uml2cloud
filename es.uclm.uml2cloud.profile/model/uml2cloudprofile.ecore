@@ -615,7 +615,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Message" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Message"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Reject">
+  <eClassifiers xsi:type="ecore:EClass" name="Failure">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Message" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Message"/>
   </eClassifiers>

@@ -2,7 +2,7 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
-import es.uclm.uml2cloud.profile.uml2cloudprofile.Reject;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.Failure;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -17,18 +17,18 @@ import org.eclipse.uml2.uml.Message;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Reject</b></em>'.
+ * An implementation of the model object '<em><b>Failure</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RejectImpl#getBase_Message <em>Base Message</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.FailureImpl#getBase_Message <em>Base Message</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RejectImpl extends MinimalEObjectImpl.Container implements Reject {
+public class FailureImpl extends MinimalEObjectImpl.Container implements Failure {
 	/**
 	 * The cached value of the '{@link #getBase_Message() <em>Base Message</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class RejectImpl extends MinimalEObjectImpl.Container implements Reject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RejectImpl() {
+	protected FailureImpl() {
 		super();
 	}
 
@@ -55,7 +55,7 @@ public class RejectImpl extends MinimalEObjectImpl.Container implements Reject {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UML2CloudProfilePackage.Literals.REJECT;
+		return UML2CloudProfilePackage.Literals.FAILURE;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class RejectImpl extends MinimalEObjectImpl.Container implements Reject {
 			base_Message = (Message)eResolveProxy(oldBase_Message);
 			if (base_Message != oldBase_Message) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.REJECT__BASE_MESSAGE, oldBase_Message, base_Message));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.FAILURE__BASE_MESSAGE, oldBase_Message, base_Message));
 			}
 		}
 		return base_Message;
@@ -93,7 +93,7 @@ public class RejectImpl extends MinimalEObjectImpl.Container implements Reject {
 		Message oldBase_Message = base_Message;
 		base_Message = newBase_Message;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.REJECT__BASE_MESSAGE, oldBase_Message, base_Message));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.FAILURE__BASE_MESSAGE, oldBase_Message, base_Message));
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class RejectImpl extends MinimalEObjectImpl.Container implements Reject {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.REJECT__BASE_MESSAGE:
+			case UML2CloudProfilePackage.FAILURE__BASE_MESSAGE:
 				if (resolve) return getBase_Message();
 				return basicGetBase_Message();
 		}
@@ -119,7 +119,7 @@ public class RejectImpl extends MinimalEObjectImpl.Container implements Reject {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.REJECT__BASE_MESSAGE:
+			case UML2CloudProfilePackage.FAILURE__BASE_MESSAGE:
 				setBase_Message((Message)newValue);
 				return;
 		}
@@ -134,7 +134,7 @@ public class RejectImpl extends MinimalEObjectImpl.Container implements Reject {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.REJECT__BASE_MESSAGE:
+			case UML2CloudProfilePackage.FAILURE__BASE_MESSAGE:
 				setBase_Message((Message)null);
 				return;
 		}
@@ -149,10 +149,10 @@ public class RejectImpl extends MinimalEObjectImpl.Container implements Reject {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.REJECT__BASE_MESSAGE:
+			case UML2CloudProfilePackage.FAILURE__BASE_MESSAGE:
 				return base_Message != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //RejectImpl
+} //FailureImpl

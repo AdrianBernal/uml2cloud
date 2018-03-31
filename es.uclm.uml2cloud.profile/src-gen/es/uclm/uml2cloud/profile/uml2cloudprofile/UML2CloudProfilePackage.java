@@ -1792,14 +1792,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int RESPONSE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RejectImpl <em>Reject</em>}' class.
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.FailureImpl <em>Failure</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RejectImpl
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getReject()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.FailureImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getFailure()
 	 * @generated
 	 */
-	int REJECT = 28;
+	int FAILURE = 28;
 
 	/**
 	 * The feature id for the '<em><b>Base Message</b></em>' reference.
@@ -1808,25 +1808,25 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REJECT__BASE_MESSAGE = 0;
+	int FAILURE__BASE_MESSAGE = 0;
 
 	/**
-	 * The number of structural features of the '<em>Reject</em>' class.
+	 * The number of structural features of the '<em>Failure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REJECT_FEATURE_COUNT = 1;
+	int FAILURE_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>Reject</em>' class.
+	 * The number of operations of the '<em>Failure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REJECT_OPERATION_COUNT = 0;
+	int FAILURE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ExecuteImpl <em>Execute</em>}' class.
@@ -3250,25 +3250,25 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getResponse_Base_Message();
 
 	/**
-	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Reject <em>Reject</em>}'.
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Failure <em>Failure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Reject</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Reject
+	 * @return the meta object for class '<em>Failure</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Failure
 	 * @generated
 	 */
-	EClass getReject();
+	EClass getFailure();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Reject#getBase_Message <em>Base Message</em>}'.
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Failure#getBase_Message <em>Base Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Base Message</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Reject#getBase_Message()
-	 * @see #getReject()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Failure#getBase_Message()
+	 * @see #getFailure()
 	 * @generated
 	 */
-	EReference getReject_Base_Message();
+	EReference getFailure_Base_Message();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Execute <em>Execute</em>}'.
@@ -4440,14 +4440,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference RESPONSE__BASE_MESSAGE = eINSTANCE.getResponse_Base_Message();
 
 		/**
-		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RejectImpl <em>Reject</em>}' class.
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.FailureImpl <em>Failure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RejectImpl
-		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getReject()
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.FailureImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getFailure()
 		 * @generated
 		 */
-		EClass REJECT = eINSTANCE.getReject();
+		EClass FAILURE = eINSTANCE.getFailure();
 
 		/**
 		 * The meta object literal for the '<em><b>Base Message</b></em>' reference feature.
@@ -4455,7 +4455,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REJECT__BASE_MESSAGE = eINSTANCE.getReject_Base_Message();
+		EReference FAILURE__BASE_MESSAGE = eINSTANCE.getFailure_Base_Message();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ExecuteImpl <em>Execute</em>}' class.

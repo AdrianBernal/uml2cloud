@@ -13,6 +13,7 @@ import es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingRack;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Execute;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.Failure;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Hardware;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Latency;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Machine;
@@ -21,7 +22,6 @@ import es.uclm.uml2cloud.profile.uml2cloudprofile.Notify;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Rack;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.Reject;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Request;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Response;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Size;
@@ -264,7 +264,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass rejectEClass = null;
+	private EClass failureEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1385,8 +1385,8 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getReject() {
-		return rejectEClass;
+	public EClass getFailure() {
+		return failureEClass;
 	}
 
 	/**
@@ -1394,8 +1394,8 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getReject_Base_Message() {
-		return (EReference)rejectEClass.getEStructuralFeatures().get(0);
+	public EReference getFailure_Base_Message() {
+		return (EReference)failureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1744,8 +1744,8 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		responseEClass = createEClass(RESPONSE);
 		createEReference(responseEClass, RESPONSE__BASE_MESSAGE);
 
-		rejectEClass = createEClass(REJECT);
-		createEReference(rejectEClass, REJECT__BASE_MESSAGE);
+		failureEClass = createEClass(FAILURE);
+		createEReference(failureEClass, FAILURE__BASE_MESSAGE);
 
 		executeEClass = createEClass(EXECUTE);
 		createEReference(executeEClass, EXECUTE__BASE_MESSAGE);
@@ -2121,8 +2121,8 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		initEClass(responseEClass, Response.class, "Response", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResponse_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 1, 1, Response.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(rejectEClass, Reject.class, "Reject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReject_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 1, 1, Reject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(failureEClass, Failure.class, "Failure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFailure_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 1, 1, Failure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(executeEClass, Execute.class, "Execute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExecute_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 1, 1, Execute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

@@ -13,9 +13,9 @@ import org.eclipse.papyrus.uml.service.validation.StereotypeUtil;
  *
  * @generated
  */
-public class RejectClientSelector implements IClientSelector {
+public class FailureClientSelector implements IClientSelector {
 
 	public boolean selects(Object stereoApplicationObj) {
-		return StereotypeUtil.checkStereoApplication(stereoApplicationObj, "Reject"); //$NON-NLS-1$
+		return StereotypeUtil.checkStereoApplication(stereoApplicationObj, "Failure"); //$NON-NLS-1$
 	}
 }

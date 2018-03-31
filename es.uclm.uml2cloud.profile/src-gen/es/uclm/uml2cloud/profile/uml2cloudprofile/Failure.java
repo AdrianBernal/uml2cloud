@@ -8,21 +8,21 @@ import org.eclipse.uml2.uml.Message;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Reject</b></em>'.
+ * A representation of the model object '<em><b>Failure</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Reject#getBase_Message <em>Base Message</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Failure#getBase_Message <em>Base Message</em>}</li>
  * </ul>
  *
- * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getReject()
+ * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getFailure()
  * @model
  * @generated
  */
-public interface Reject extends EObject {
+public interface Failure extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Base Message</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -33,14 +33,14 @@ public interface Reject extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Base Message</em>' reference.
 	 * @see #setBase_Message(Message)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getReject_Base_Message()
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getFailure_Base_Message()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	Message getBase_Message();
 
 	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Reject#getBase_Message <em>Base Message</em>}' reference.
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Failure#getBase_Message <em>Base Message</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Base Message</em>' reference.
@@ -49,4 +49,4 @@ public interface Reject extends EObject {
 	 */
 	void setBase_Message(Message value);
 
-} // Reject
+} // Failure

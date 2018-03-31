@@ -333,8 +333,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 				return validateTimeout((Timeout)value, diagnostics, context);
 			case UML2CloudProfilePackage.RESPONSE:
 				return validateResponse((Response)value, diagnostics, context);
-			case UML2CloudProfilePackage.REJECT:
-				return validateReject((Reject)value, diagnostics, context);
+			case UML2CloudProfilePackage.FAILURE:
+				return validateFailure((Failure)value, diagnostics, context);
 			case UML2CloudProfilePackage.EXECUTE:
 				return validateExecute((Execute)value, diagnostics, context);
 			case UML2CloudProfilePackage.USER:
@@ -945,8 +945,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateReject(Reject reject, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(reject, diagnostics, context);
+	public boolean validateFailure(Failure failure, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(failure, diagnostics, context);
 	}
 
 	/**

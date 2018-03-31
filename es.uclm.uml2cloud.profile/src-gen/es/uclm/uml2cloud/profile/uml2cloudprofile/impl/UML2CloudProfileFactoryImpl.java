@@ -82,7 +82,7 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 			case UML2CloudProfilePackage.NOTIFY: return createNotify();
 			case UML2CloudProfilePackage.TIMEOUT: return createTimeout();
 			case UML2CloudProfilePackage.RESPONSE: return createResponse();
-			case UML2CloudProfilePackage.REJECT: return createReject();
+			case UML2CloudProfilePackage.FAILURE: return createFailure();
 			case UML2CloudProfilePackage.EXECUTE: return createExecute();
 			case UML2CloudProfilePackage.USER: return createUser();
 			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE: return createCloudInfrastructure();
@@ -385,9 +385,9 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Reject createReject() {
-		RejectImpl reject = new RejectImpl();
-		return reject;
+	public Failure createFailure() {
+		FailureImpl failure = new FailureImpl();
+		return failure;
 	}
 
 	/**

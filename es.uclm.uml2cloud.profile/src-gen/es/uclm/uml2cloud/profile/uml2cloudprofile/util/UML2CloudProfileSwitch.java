@@ -241,9 +241,9 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.REJECT: {
-				Reject reject = (Reject)theEObject;
-				T result = caseReject(reject);
+			case UML2CloudProfilePackage.FAILURE: {
+				Failure failure = (Failure)theEObject;
+				T result = caseFailure(failure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -696,17 +696,17 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Reject</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Failure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Reject</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Failure</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseReject(Reject object) {
+	public T caseFailure(Failure object) {
 		return null;
 	}
 

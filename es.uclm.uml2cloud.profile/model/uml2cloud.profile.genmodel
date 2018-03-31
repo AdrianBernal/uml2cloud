@@ -287,9 +287,9 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Response/base_Message"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//Reject">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//Failure">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Reject/base_Message"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Failure/base_Message"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//Execute">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
