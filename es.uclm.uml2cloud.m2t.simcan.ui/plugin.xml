@@ -15,7 +15,7 @@
                enablesFor="+"
                id="es.uclm.uml2cloud.m2t.simcan.ui.popupMenus.acceleoGenerateGenerateSIMCANFilesAction"
                icon="icons/default.gif"
-               label="Generate SIMCAN Files"
+               label="Generate Simcan2Cloud Files"
                menubarPath="org.eclipse.acceleo.module.menu/acceleo"/>
       </objectContribution>
    </extension>

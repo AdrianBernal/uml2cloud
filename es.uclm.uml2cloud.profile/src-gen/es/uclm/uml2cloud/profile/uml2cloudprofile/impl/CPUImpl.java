@@ -147,7 +147,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean speedMIPS_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean MIPS_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
@@ -158,8 +158,8 @@ public class CPUImpl extends HardwareImpl implements CPU {
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.CPU__SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "speedMIPS_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 UML2CloudProfileValidator.CPU__MIPS_MUST_BE_GREATER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "MIPS_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -172,7 +172,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean numberOfCores_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean cores_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
@@ -183,8 +183,8 @@ public class CPUImpl extends HardwareImpl implements CPU {
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.CPU__NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "numberOfCores_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 UML2CloudProfileValidator.CPU__CORES_MUST_BE_GREATER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "cores_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -269,10 +269,10 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudProfilePackage.CPU___SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
-				return speedMIPS_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudProfilePackage.CPU___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
-				return numberOfCores_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.CPU___MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return MIPS_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.CPU___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return cores_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Size extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * The default value is <code>"1.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
@@ -33,7 +34,7 @@ public interface Size extends EObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(double)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getSize_Value()
-	 * @model dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
+	 * @model default="1.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */
 	double getValue();
@@ -50,6 +51,7 @@ public interface Size extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' attribute.
+	 * The default value is <code>"TByte"</code>.
 	 * The literals are from the enumeration {@link es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -61,7 +63,7 @@ public interface Size extends EObject {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit
 	 * @see #setUnit(SizeUnit)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getSize_Unit()
-	 * @model required="true" ordered="false"
+	 * @model default="TByte" required="true" ordered="false"
 	 * @generated
 	 */
 	SizeUnit getUnit();

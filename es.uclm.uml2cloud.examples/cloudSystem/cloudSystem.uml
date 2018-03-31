@@ -4,10 +4,9 @@
     <packageImport xmi:type="uml:PackageImport" xmi:id="_LlNDoCyYEeimk9UjhXlLXQ">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
     </packageImport>
-    <packagedElement xmi:type="uml:Component" xmi:id="_jcO70CzoEeiHMtOH55pATA" name="cloudInfrastructure"/>
     <packagedElement xmi:type="uml:Interaction" xmi:id="_02KKICzqEeiHMtOH55pATA" name="Interaction1">
       <lifeline xmi:type="uml:Lifeline" xmi:id="_4Nt70CzqEeiHMtOH55pATA" name="cloudProvider"/>
-      <lifeline xmi:type="uml:Lifeline" xmi:id="_4fkg0CzqEeiHMtOH55pATA" name="Lifeline2"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_4fkg0CzqEeiHMtOH55pATA" name="User"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_UbUaACzrEeiHMtOH55pATA" name="VMs">
       <packagedElement xmi:type="uml:Component" xmi:id="_t9hwUCzoEeiHMtOH55pATA" name="VM_large"/>
@@ -40,6 +39,7 @@
       <packagedElement xmi:type="uml:Component" xmi:id="_BtpE0CzpEeiHMtOH55pATA" name="disk_500GB"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_Cy1LQCzpEeiHMtOH55pATA" name="disk_2TB"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_xR3WIDDeEeitJZMgMzK3xA" name="Component1"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puVMACzoEeiHMtOH55pATA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puXoQCzoEeiHMtOH55pATA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.uclm.es/UML/profiles/UML2Cloud/1#/"/>
@@ -47,10 +47,6 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML2CLOUD_PROFILE/uml2cloud.profile.uml#_1K9OUIZKEeexBrHTG7KRXw"/>
     </profileApplication>
   </uml:Model>
-  <UML2CloudProfile:CloudInfrastructure xmi:id="_rRxUsCzoEeiHMtOH55pATA" cloudProvider="_5MqQUCzqEeiHMtOH55pATA" base_Component="_jcO70CzoEeiHMtOH55pATA">
-    <datacenterElement xmi:type="UML2CloudProfile:DataCenterElement" xmi:id="_uoV9ACzqEeiHMtOH55pATA" numberOfDataCenters="1" dataCenterType="_wTrvYCzoEeiHMtOH55pATA"/>
-    <network xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_wmPNECzqEeiHMtOH55pATA"/>
-  </UML2CloudProfile:CloudInfrastructure>
   <UML2CloudProfile:VM xmi:id="_sqmI0CzoEeiHMtOH55pATA" base_Component="_kJUEQCzoEeiHMtOH55pATA" cores="1" computingUnits="1.0">
     <disk xmi:type="UML2CloudProfile:Size" xmi:id="_psUu8CzqEeiHMtOH55pATA" value="250.0" unit="GByte"/>
     <memory xmi:type="UML2CloudProfile:Size" xmi:id="_rLRZMCzqEeiHMtOH55pATA" value="2.0" unit="GByte"/>
@@ -104,15 +100,19 @@
     </latency>
   </UML2CloudProfile:Memory>
   <UML2CloudProfile:Storage xmi:id="_CemnsCzpEeiHMtOH55pATA" base_Component="_BtpE0CzpEeiHMtOH55pATA">
-    <writeBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_gXne0CzpEeiHMtOH55pATA" value="500.0" unit="Mbps"/>
     <driveCapacity xmi:type="UML2CloudProfile:Size" xmi:id="_hXWdgCzpEeiHMtOH55pATA" value="500.0" unit="GByte"/>
     <readBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_ijTTQCzpEeiHMtOH55pATA" value="500.0" unit="Mbps"/>
+    <writeBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_gXne0CzpEeiHMtOH55pATA" value="500.0" unit="Mbps"/>
   </UML2CloudProfile:Storage>
   <UML2CloudProfile:Storage xmi:id="_Cy3ngCzpEeiHMtOH55pATA" base_Component="_Cy1LQCzpEeiHMtOH55pATA">
-    <writeBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_WnZh8CzpEeiHMtOH55pATA" value="500.0" unit="Mbps"/>
     <driveCapacity xmi:type="UML2CloudProfile:Size" xmi:id="_c00GcCzpEeiHMtOH55pATA" value="2.0" unit="TByte"/>
     <readBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_eD36kCzpEeiHMtOH55pATA" value="500.0" unit="Mbps"/>
+    <writeBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_WnZh8CzpEeiHMtOH55pATA" value="500.0" unit="Mbps"/>
   </UML2CloudProfile:Storage>
   <UML2CloudProfile:CloudProvider xmi:id="_5MqQUCzqEeiHMtOH55pATA" resourceAllocationPolicy="" base_Lifeline="_4Nt70CzqEeiHMtOH55pATA"/>
   <UML2CloudProfile:User xmi:id="_5wadoCzqEeiHMtOH55pATA" base_Lifeline="_4fkg0CzqEeiHMtOH55pATA"/>
+  <UML2CloudProfile:CloudInfrastructure xmi:id="_zjv5MDDeEeitJZMgMzK3xA" cloudProvider="_5MqQUCzqEeiHMtOH55pATA" base_Component="_xR3WIDDeEeitJZMgMzK3xA">
+    <datacenterElements xmi:type="UML2CloudProfile:DataCenterElement" xmi:id="_58oG0DDeEeitJZMgMzK3xA" numberOfDataCenters="1" dataCenterType="_wTrvYCzoEeiHMtOH55pATA"/>
+    <network xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_2G2IEDDeEeitJZMgMzK3xA"/>
+  </UML2CloudProfile:CloudInfrastructure>
 </xmi:XMI>

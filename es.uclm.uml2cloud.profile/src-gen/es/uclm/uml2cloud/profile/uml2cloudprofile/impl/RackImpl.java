@@ -281,7 +281,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean nodesPerBoard_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean machinesPerBoard_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
@@ -292,8 +292,8 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.RACK__NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "nodesPerBoard_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 UML2CloudProfileValidator.RACK__MACHINES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "machinesPerBoard_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -415,8 +415,8 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 		switch (operationID) {
 			case UML2CloudProfilePackage.RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return boards_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudProfilePackage.RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
-				return nodesPerBoard_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.RACK___MACHINES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return machinesPerBoard_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

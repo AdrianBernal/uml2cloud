@@ -36,7 +36,7 @@ public class SizeImpl extends MinimalEObjectImpl.Container implements Size {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double VALUE_EDEFAULT = 0.0;
+	protected static final double VALUE_EDEFAULT = 1.0;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -56,7 +56,7 @@ public class SizeImpl extends MinimalEObjectImpl.Container implements Size {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final SizeUnit UNIT_EDEFAULT = SizeUnit.KBYTE;
+	protected static final SizeUnit UNIT_EDEFAULT = SizeUnit.TBYTE;
 
 	/**
 	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.

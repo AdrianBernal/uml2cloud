@@ -78,6 +78,6 @@ public interface Memory extends Hardware {
 	 * @model
 	 * @generated
 	 */
-	boolean sizeGB_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean capacity_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Memory

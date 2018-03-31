@@ -187,7 +187,7 @@ public interface VM extends EObject {
 	 * @model
 	 * @generated
 	 */
-	boolean SCU_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean computingUnits_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->

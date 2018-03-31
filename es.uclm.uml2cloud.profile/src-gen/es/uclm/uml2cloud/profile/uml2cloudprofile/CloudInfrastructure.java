@@ -2,6 +2,8 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -17,7 +19,7 @@ import org.eclipse.uml2.uml.Component;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getDatacenterElement <em>Datacenter Element</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getDatacenterElements <em>Datacenter Elements</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getCloudProvider <em>Cloud Provider</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getBase_Component <em>Base Component</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getNetwork <em>Network</em>}</li>
@@ -29,20 +31,20 @@ import org.eclipse.uml2.uml.Component;
  */
 public interface CloudInfrastructure extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Datacenter Element</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Datacenter Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Datacenter Element</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Datacenter Elements</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Datacenter Element</em>' containment reference list.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCloudInfrastructure_DatacenterElement()
+	 * @return the value of the '<em>Datacenter Elements</em>' containment reference list.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCloudInfrastructure_DatacenterElements()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
-	EList<DataCenterElement> getDatacenterElement();
+	EList<DataCenterElement> getDatacenterElements();
 
 	/**
 	 * Returns the value of the '<em><b>Cloud Provider</b></em>' reference.
@@ -121,5 +123,31 @@ public interface CloudInfrastructure extends EObject {
 	 * @generated
 	 */
 	void setNetwork(Bandwidth value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.datacenterElements->forAll(numberOfDataCenters>=0)
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean datacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.datacenterElements->forAll(numberOfDataCenters>0)
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean datacenterElements_instances_Should_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // CloudInfrastructure

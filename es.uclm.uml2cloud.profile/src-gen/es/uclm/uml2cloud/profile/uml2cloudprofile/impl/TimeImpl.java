@@ -36,7 +36,7 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double VALUE_EDEFAULT = 0.0;
+	protected static final double VALUE_EDEFAULT = 5.0;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.

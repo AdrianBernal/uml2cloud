@@ -557,7 +557,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRack__NodesPerBoard_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map() {
+	public EOperation getRack__MachinesPerBoard_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map() {
 		return rackEClass.getEOperations().get(1);
 	}
 
@@ -638,7 +638,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCPU__SpeedMIPS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
+	public EOperation getCPU__MIPS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
 		return cpuEClass.getEOperations().get(0);
 	}
 
@@ -647,7 +647,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCPU__NumberOfCores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
+	public EOperation getCPU__Cores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
 		return cpuEClass.getEOperations().get(1);
 	}
 
@@ -701,7 +701,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMemory__SizeGB_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
+	public EOperation getMemory__Capacity_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
 		return memoryEClass.getEOperations().get(0);
 	}
 
@@ -810,24 +810,6 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * @generated
 	 */
 	public EReference getStorage_WriteBandwidth() {
-		return (EReference)storageEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStorage_DriveCapacity() {
-		return (EReference)storageEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStorage_ReadBandwidth() {
 		return (EReference)storageEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -836,8 +818,53 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getStorage__NumberOfDisks_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map() {
+	public EOperation getStorage__NumberOfDrives_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map() {
 		return storageEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getStorage__DriveCapacity_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
+		return storageEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getStorage__ReadBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map() {
+		return storageEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getStorage__WriteBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map() {
+		return storageEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStorage_DriveCapacity() {
+		return (EReference)storageEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStorage_ReadBandwidth() {
+		return (EReference)storageEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -980,6 +1007,33 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getApplication__MIs_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
+		return applicationEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApplication__InputData_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map() {
+		return applicationEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getApplication__OutputData_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map() {
+		return applicationEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getParameter() {
 		return parameterEClass;
 	}
@@ -1088,7 +1142,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVM__SCU_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
+	public EOperation getVM__ComputingUnits_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
 		return vmEClass.getEOperations().get(1);
 	}
 
@@ -1142,8 +1196,17 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRequest__RentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map() {
+	public EOperation getRequest__RentingTime_Must_Be_Greater_Than__Zero__DiagnosticChain_Map() {
 		return requestEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRequest__Instances_Must_Be_Greater_Than__Zero__DiagnosticChain_Map() {
+		return requestEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1367,6 +1430,15 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getExecute__Instances_Must_Be_Greater_Than_Zero__DiagnosticChain_Map() {
+		return executeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getUser() {
 		return userEClass;
 	}
@@ -1385,6 +1457,15 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getUser_Instances() {
+		return (EAttribute)userEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCloudInfrastructure() {
 		return cloudInfrastructureEClass;
 	}
@@ -1394,7 +1475,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCloudInfrastructure_DatacenterElement() {
+	public EReference getCloudInfrastructure_DatacenterElements() {
 		return (EReference)cloudInfrastructureEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1423,6 +1504,24 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 */
 	public EReference getCloudInfrastructure_Network() {
 		return (EReference)cloudInfrastructureEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getCloudInfrastructure__DatacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero__DiagnosticChain_Map() {
+		return cloudInfrastructureEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getCloudInfrastructure__DatacenterElements_instances_Should_Be_Greatter_Than_Zero__DiagnosticChain_Map() {
+		return cloudInfrastructureEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1528,7 +1627,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		createEAttribute(rackEClass, RACK__BOARDS);
 		createEReference(rackEClass, RACK__BASE_COMPONENT);
 		createEOperation(rackEClass, RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
-		createEOperation(rackEClass, RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(rackEClass, RACK___MACHINES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
 
 		machineEClass = createEClass(MACHINE);
 		createEReference(machineEClass, MACHINE__BASE_COMPONENT);
@@ -1539,8 +1638,8 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		cpuEClass = createEClass(CPU);
 		createEAttribute(cpuEClass, CPU__CORES);
 		createEAttribute(cpuEClass, CPU__MIPS);
-		createEOperation(cpuEClass, CPU___SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
-		createEOperation(cpuEClass, CPU___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(cpuEClass, CPU___MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(cpuEClass, CPU___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
 
 		hardwareEClass = createEClass(HARDWARE);
 		createEReference(hardwareEClass, HARDWARE__BASE_COMPONENT);
@@ -1548,7 +1647,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		memoryEClass = createEClass(MEMORY);
 		createEReference(memoryEClass, MEMORY__CAPACITY);
 		createEReference(memoryEClass, MEMORY__LATENCY);
-		createEOperation(memoryEClass, MEMORY___SIZE_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(memoryEClass, MEMORY___CAPACITY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
 
 		sizeEClass = createEClass(SIZE);
 		createEAttribute(sizeEClass, SIZE__VALUE);
@@ -1564,10 +1663,13 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 
 		storageEClass = createEClass(STORAGE);
 		createEAttribute(storageEClass, STORAGE__NUMBER_OF_DRIVES);
-		createEReference(storageEClass, STORAGE__WRITE_BANDWIDTH);
 		createEReference(storageEClass, STORAGE__DRIVE_CAPACITY);
 		createEReference(storageEClass, STORAGE__READ_BANDWIDTH);
-		createEOperation(storageEClass, STORAGE___NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEReference(storageEClass, STORAGE__WRITE_BANDWIDTH);
+		createEOperation(storageEClass, STORAGE___NUMBER_OF_DRIVES_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(storageEClass, STORAGE___DRIVE_CAPACITY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(storageEClass, STORAGE___READ_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(storageEClass, STORAGE___WRITE_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
 
 		computingRackEClass = createEClass(COMPUTING_RACK);
 		createEReference(computingRackEClass, COMPUTING_RACK__MACHINE_TYPE);
@@ -1589,6 +1691,9 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		createEReference(applicationEClass, APPLICATION__INPUT_DATA);
 		createEReference(applicationEClass, APPLICATION__OUTPUT_DATA);
 		createEReference(applicationEClass, APPLICATION__PARAMETER);
+		createEOperation(applicationEClass, APPLICATION___MIS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(applicationEClass, APPLICATION___INPUT_DATA_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(applicationEClass, APPLICATION___OUTPUT_DATA_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
 
 		parameterEClass = createEClass(PARAMETER);
 		createEAttribute(parameterEClass, PARAMETER__NAME);
@@ -1603,14 +1708,15 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		createEAttribute(vmEClass, VM__COMPUTING_UNITS);
 		createEReference(vmEClass, VM__MEMORY);
 		createEOperation(vmEClass, VM___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
-		createEOperation(vmEClass, VM___SCU_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(vmEClass, VM___COMPUTING_UNITS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
 		createEOperation(vmEClass, VM___MEMORY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
 		createEOperation(vmEClass, VM___VM_CAN_NOT_BE_ALLOCATED__DIAGNOSTICCHAIN_MAP);
 
 		requestEClass = createEClass(REQUEST);
 		createEReference(requestEClass, REQUEST__BASE_MESSAGE);
 		createEReference(requestEClass, REQUEST__VM_INSTANTIATION);
-		createEOperation(requestEClass, REQUEST___RENTING_TIME_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(requestEClass, REQUEST___RENTING_TIME_MUST_BE_GREATER_THAN_ZERO__ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(requestEClass, REQUEST___INSTANCES_MUST_BE_GREATER_THAN_ZERO__ZERO__DIAGNOSTICCHAIN_MAP);
 
 		vmInstantiationEClass = createEClass(VM_INSTANTIATION);
 		createEAttribute(vmInstantiationEClass, VM_INSTANTIATION__INSTANCES);
@@ -1644,15 +1750,19 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		executeEClass = createEClass(EXECUTE);
 		createEReference(executeEClass, EXECUTE__BASE_MESSAGE);
 		createEReference(executeEClass, EXECUTE__APP_INSTANTIATION);
+		createEOperation(executeEClass, EXECUTE___INSTANCES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
 
 		userEClass = createEClass(USER);
 		createEReference(userEClass, USER__BASE_LIFELINE);
+		createEAttribute(userEClass, USER__INSTANCES);
 
 		cloudInfrastructureEClass = createEClass(CLOUD_INFRASTRUCTURE);
-		createEReference(cloudInfrastructureEClass, CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENT);
+		createEReference(cloudInfrastructureEClass, CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS);
 		createEReference(cloudInfrastructureEClass, CLOUD_INFRASTRUCTURE__CLOUD_PROVIDER);
 		createEReference(cloudInfrastructureEClass, CLOUD_INFRASTRUCTURE__BASE_COMPONENT);
 		createEReference(cloudInfrastructureEClass, CLOUD_INFRASTRUCTURE__NETWORK);
+		createEOperation(cloudInfrastructureEClass, CLOUD_INFRASTRUCTURE___DATACENTER_ELEMENTS_INSTANCES_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(cloudInfrastructureEClass, CLOUD_INFRASTRUCTURE___DATACENTER_ELEMENTS_INSTANCES_SHOULD_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
 
 		dataCenterElementEClass = createEClass(DATA_CENTER_ELEMENT);
 		createEAttribute(dataCenterElementEClass, DATA_CENTER_ELEMENT__NUMBER_OF_DATA_CENTERS);
@@ -1729,7 +1839,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(bandwidthEClass, Bandwidth.class, "Bandwidth", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBandwidth_Value(), theTypesPackage.getReal(), "value", "10.0", 1, 1, Bandwidth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBandwidth_Value(), theTypesPackage.getReal(), "value", "1.0", 1, 1, Bandwidth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBandwidth_Unit(), this.getBandwidthUnit(), "unit", "Gbps", 1, 1, Bandwidth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(rackElementEClass, RackElement.class, "RackElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1751,7 +1861,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getRack__NodesPerBoard_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "nodesPerBoard_Must_Be_Greatter_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getRack__MachinesPerBoard_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "machinesPerBoard_Must_Be_Greatter_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1770,7 +1880,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		initEAttribute(getCPU_Cores(), theTypesPackage.getInteger(), "cores", "2", 1, 1, es.uclm.uml2cloud.profile.uml2cloudprofile.CPU.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCPU_MIPS(), theTypesPackage.getInteger(), "MIPS", "30000", 1, 1, es.uclm.uml2cloud.profile.uml2cloudprofile.CPU.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getCPU__SpeedMIPS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "speedMIPS_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getCPU__MIPS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "MIPS_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1779,7 +1889,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getCPU__NumberOfCores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "numberOfCores_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getCPU__Cores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "cores_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1795,7 +1905,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		initEReference(getMemory_Capacity(), this.getSize(), null, "capacity", null, 1, 1, Memory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getMemory_Latency(), this.getLatency(), null, "latency", null, 1, -1, Memory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getMemory__SizeGB_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "sizeGB_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getMemory__Capacity_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "capacity_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1805,24 +1915,51 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(sizeEClass, Size.class, "Size", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSize_Value(), theTypesPackage.getReal(), "value", null, 1, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getSize_Unit(), this.getSizeUnit(), "unit", null, 1, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getSize_Value(), theTypesPackage.getReal(), "value", "1.0", 1, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getSize_Unit(), this.getSizeUnit(), "unit", "TByte", 1, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(latencyEClass, Latency.class, "Latency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLatency_Name(), theTypesPackage.getString(), "name", null, 1, 1, Latency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getLatency_Time(), this.getTime(), null, "time", null, 1, 1, Latency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(timeEClass, Time.class, "Time", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTime_Value(), theTypesPackage.getReal(), "value", null, 1, 1, Time.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTime_Value(), theTypesPackage.getReal(), "value", "5.0", 1, 1, Time.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getTime_Unit(), this.getTimeUnit(), "unit", null, 1, 1, Time.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(storageEClass, Storage.class, "Storage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStorage_NumberOfDrives(), theTypesPackage.getInteger(), "numberOfDrives", "1", 1, 1, Storage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getStorage_WriteBandwidth(), this.getBandwidth(), null, "writeBandwidth", null, 1, 1, Storage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStorage_DriveCapacity(), this.getSize(), null, "driveCapacity", null, 1, 1, Storage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getStorage_ReadBandwidth(), this.getBandwidth(), null, "readBandwidth", null, 1, 1, Storage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getStorage_WriteBandwidth(), this.getBandwidth(), null, "writeBandwidth", null, 1, 1, Storage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getStorage__NumberOfDisks_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "numberOfDisks_Must_Be_Greatter_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getStorage__NumberOfDrives_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "numberOfDrives_Must_Be_Greatter_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getStorage__DriveCapacity_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "driveCapacity_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getStorage__ReadBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "readBandwidth_Must_Be_Greatter_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getStorage__WriteBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "writeBandwidth_Must_Be_Greatter_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1852,6 +1989,33 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		initEReference(getApplication_OutputData(), this.getSize(), null, "outputData", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getApplication_Parameter(), this.getParameter(), null, "parameter", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		op = initEOperation(getApplication__MIs_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "MIs_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApplication__InputData_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "inputData_Must_Be_Greater_Than_Or_Equal_To_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getApplication__OutputData_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "outputData_Must_Be_Greater_Than_Or_Equal_To_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParameter_Name(), theTypesPackage.getString(), "name", null, 1, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getParameter_Value(), theTypesPackage.getString(), "value", null, 1, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1874,7 +2038,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getVM__SCU_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "SCU_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getVM__ComputingUnits_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "computingUnits_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1905,7 +2069,16 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		initEReference(getRequest_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 1, 1, Request.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRequest_VmInstantiation(), this.getVMInstantiation(), null, "vmInstantiation", null, 1, -1, Request.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		op = initEOperation(getRequest__RentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getRequest__RentingTime_Must_Be_Greater_Than__Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "rentingTime_Must_Be_Greater_Than__Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getRequest__Instances_Must_Be_Greater_Than__Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "instances_Must_Be_Greater_Than__Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(ecorePackage.getEMap());
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
@@ -1934,7 +2107,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 
 		initEClass(appInstantiationEClass, AppInstantiation.class, "AppInstantiation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAppInstantiation_ApplicationType(), this.getApplication(), null, "applicationType", null, 1, 1, AppInstantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getAppInstantiation_Instances(), theTypesPackage.getInteger(), "instances", null, 1, 1, AppInstantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAppInstantiation_Instances(), theTypesPackage.getInteger(), "instances", "1", 1, 1, AppInstantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(okEClass, es.uclm.uml2cloud.profile.uml2cloudprofile.OK.class, "OK", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOK_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 1, 1, es.uclm.uml2cloud.profile.uml2cloudprofile.OK.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1955,17 +2128,45 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		initEReference(getExecute_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 1, 1, Execute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getExecute_AppInstantiation(), this.getAppInstantiation(), null, "appInstantiation", null, 1, -1, Execute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		op = initEOperation(getExecute__Instances_Must_Be_Greater_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "instances_Must_Be_Greater_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(userEClass, User.class, "User", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUser_Base_Lifeline(), theUMLPackage.getLifeline(), null, "base_Lifeline", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getUser_Instances(), theTypesPackage.getInteger(), "instances", "1", 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(cloudInfrastructureEClass, CloudInfrastructure.class, "CloudInfrastructure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCloudInfrastructure_DatacenterElement(), this.getDataCenterElement(), null, "datacenterElement", null, 1, -1, CloudInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCloudInfrastructure_DatacenterElements(), this.getDataCenterElement(), null, "datacenterElements", null, 1, -1, CloudInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCloudInfrastructure_CloudProvider(), this.getCloudProvider(), null, "cloudProvider", null, 1, 1, CloudInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCloudInfrastructure_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 1, 1, CloudInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCloudInfrastructure_Network(), this.getBandwidth(), null, "network", null, 1, 1, CloudInfrastructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		op = initEOperation(getCloudInfrastructure__DatacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "datacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getCloudInfrastructure__DatacenterElements_instances_Should_Be_Greatter_Than_Zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "datacenterElements_instances_Should_Be_Greatter_Than_Zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(dataCenterElementEClass, DataCenterElement.class, "DataCenterElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDataCenterElement_NumberOfDataCenters(), theTypesPackage.getInteger(), "numberOfDataCenters", null, 1, 1, DataCenterElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDataCenterElement_NumberOfDataCenters(), theTypesPackage.getInteger(), "numberOfDataCenters", "1", 1, 1, DataCenterElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDataCenterElement_DataCenterType(), this.getDataCenter(), null, "dataCenterType", null, 1, 1, DataCenterElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals

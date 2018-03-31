@@ -36,7 +36,7 @@ public class BandwidthImpl extends MinimalEObjectImpl.Container implements Bandw
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double VALUE_EDEFAULT = 10.0;
+	protected static final double VALUE_EDEFAULT = 1.0;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.

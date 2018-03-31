@@ -47,7 +47,7 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int INSTANCES_EDEFAULT = 0;
+	protected static final int INSTANCES_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getInstances() <em>Instances</em>}' attribute.

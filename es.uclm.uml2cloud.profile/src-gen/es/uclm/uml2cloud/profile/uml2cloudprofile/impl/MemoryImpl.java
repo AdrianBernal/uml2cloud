@@ -147,7 +147,7 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean sizeGB_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean capacity_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
@@ -158,8 +158,8 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.MEMORY__SIZE_GB_MUST_BE_GREATER_THAN_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "sizeGB_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 UML2CloudProfileValidator.MEMORY__CAPACITY_MUST_BE_GREATER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "capacity_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -262,8 +262,8 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudProfilePackage.MEMORY___SIZE_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
-				return sizeGB_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.MEMORY___CAPACITY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return capacity_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

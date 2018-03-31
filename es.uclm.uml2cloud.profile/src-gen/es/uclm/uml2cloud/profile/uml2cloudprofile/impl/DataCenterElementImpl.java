@@ -37,7 +37,7 @@ public class DataCenterElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NUMBER_OF_DATA_CENTERS_EDEFAULT = 0;
+	protected static final int NUMBER_OF_DATA_CENTERS_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getNumberOfDataCenters() <em>Number Of Data Centers</em>}' attribute.

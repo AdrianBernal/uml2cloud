@@ -75,13 +75,26 @@ public interface Request extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * self.rentingTime.value>0
+	 * self.vmInstantiation->forAll(rentingTime.value>0)
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	boolean rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean rentingTime_Must_Be_Greater_Than__Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.vmInstantiation->forAll(instances>0)
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean instances_Must_Be_Greater_Than__Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Request

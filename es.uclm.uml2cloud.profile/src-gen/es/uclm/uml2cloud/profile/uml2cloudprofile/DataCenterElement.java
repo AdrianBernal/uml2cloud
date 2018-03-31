@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface DataCenterElement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Number Of Data Centers</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Number Of Data Centers</em>' attribute isn't clear,
@@ -33,7 +34,7 @@ public interface DataCenterElement extends EObject {
 	 * @return the value of the '<em>Number Of Data Centers</em>' attribute.
 	 * @see #setNumberOfDataCenters(int)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getDataCenterElement_NumberOfDataCenters()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @model default="1" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getNumberOfDataCenters();

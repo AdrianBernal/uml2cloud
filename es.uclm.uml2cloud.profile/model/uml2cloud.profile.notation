@@ -2039,6 +2039,31 @@
       <element xmi:type="uml:Stereotype" href="uml2cloud.profile.uml#_TrQH4IZLEeexBrHTG7KRXw"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eSv24SOPEeiQN6X6Ksq0SQ" x="720" y="260"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_dXfgcDRiEeixJ7Onmcv9MA" type="Stereotype_Shape" fillColor="15198183">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_D-O8sDRjEeixJ7Onmcv9MA" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_D-O8sTRjEeixJ7Onmcv9MA" key="fillColor" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EEMawDRjEeixJ7Onmcv9MA" key="gradient" value="true"/>
+      </eAnnotations>
+      <children xmi:type="notation:DecorationNode" xmi:id="_dXncQDRiEeixJ7Onmcv9MA" type="Stereotype_NameLabel"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_dXoDUDRiEeixJ7Onmcv9MA" type="Stereotype_AttributeCompartment">
+        <children xmi:type="notation:Shape" xmi:id="_IR5KQDRjEeixJ7Onmcv9MA" type="Property_ClassAttributeLabel">
+          <element xmi:type="uml:Property" href="uml2cloud.profile.uml#_IRTUYDRjEeixJ7Onmcv9MA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_IR5KQTRjEeixJ7Onmcv9MA"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_dXoDUTRiEeixJ7Onmcv9MA"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_dXoDUjRiEeixJ7Onmcv9MA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_dXoDUzRiEeixJ7Onmcv9MA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dXoDVDRiEeixJ7Onmcv9MA"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_dXoDVTRiEeixJ7Onmcv9MA" type="Stereotype_OperationCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_dXoDVjRiEeixJ7Onmcv9MA"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_dXoDVzRiEeixJ7Onmcv9MA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_dXoDWDRiEeixJ7Onmcv9MA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dXoDWTRiEeixJ7Onmcv9MA"/>
+      </children>
+      <element xmi:type="uml:Stereotype" href="uml2cloud.profile.uml#_fv1VcPlJEeeOZer_oj06_w"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dXfgcTRiEeixJ7Onmcv9MA" x="1020" y="460"/>
+    </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_3rASwYZWEeexBrHTG7KRXw" name="diagram_compatibility_version" stringValue="1.3.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_3rASwoZWEeexBrHTG7KRXw"/>
     <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_3rASw4ZWEeexBrHTG7KRXw" diagramKindId="org.eclipse.papyrus.uml.diagram.profile">

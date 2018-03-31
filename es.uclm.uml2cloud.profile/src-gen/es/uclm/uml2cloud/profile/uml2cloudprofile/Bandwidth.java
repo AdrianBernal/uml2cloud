@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Bandwidth extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
-	 * The default value is <code>"10.0"</code>.
+	 * The default value is <code>"1.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
@@ -34,7 +34,7 @@ public interface Bandwidth extends EObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(double)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getBandwidth_Value()
-	 * @model default="10.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
+	 * @model default="1.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */
 	double getValue();

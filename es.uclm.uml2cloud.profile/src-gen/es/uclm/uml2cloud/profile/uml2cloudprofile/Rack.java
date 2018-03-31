@@ -160,6 +160,6 @@ public interface Rack extends EObject {
 	 * @model
 	 * @generated
 	 */
-	boolean nodesPerBoard_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean machinesPerBoard_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Rack

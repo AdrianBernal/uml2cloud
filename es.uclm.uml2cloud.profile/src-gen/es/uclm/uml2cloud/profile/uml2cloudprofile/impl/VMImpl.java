@@ -335,7 +335,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean SCU_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean computingUnits_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO: implement this method
 		// -> specify the condition that violates the invariant
 		// -> verify the details of the diagnostic, including severity and message
@@ -346,8 +346,8 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 					(new BasicDiagnostic
 						(Diagnostic.ERROR,
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.VM__SCU_MUST_BE_GREATER_THAN_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "SCU_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 UML2CloudProfileValidator.VM__COMPUTING_UNITS_MUST_BE_GREATER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "computingUnits_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -531,8 +531,8 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 		switch (operationID) {
 			case UML2CloudProfilePackage.VM___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return cores_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
-			case UML2CloudProfilePackage.VM___SCU_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
-				return SCU_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.VM___COMPUTING_UNITS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return computingUnits_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case UML2CloudProfilePackage.VM___MEMORY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return memory_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case UML2CloudProfilePackage.VM___VM_CAN_NOT_BE_ALLOCATED__DIAGNOSTICCHAIN_MAP:

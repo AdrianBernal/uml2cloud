@@ -89,7 +89,7 @@ public interface CPU extends Hardware {
 	 * @model
 	 * @generated
 	 */
-	boolean speedMIPS_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean MIPS_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,6 +102,6 @@ public interface CPU extends Hardware {
 	 * @model
 	 * @generated
 	 */
-	boolean numberOfCores_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+	boolean cores_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // CPU

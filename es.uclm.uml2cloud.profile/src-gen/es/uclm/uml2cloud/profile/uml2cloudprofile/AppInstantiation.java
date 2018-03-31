@@ -50,6 +50,7 @@ public interface AppInstantiation extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Instances</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Instances</em>' attribute isn't clear,
@@ -59,7 +60,7 @@ public interface AppInstantiation extends EObject {
 	 * @return the value of the '<em>Instances</em>' attribute.
 	 * @see #setInstances(int)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getAppInstantiation_Instances()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @model default="1" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getInstances();

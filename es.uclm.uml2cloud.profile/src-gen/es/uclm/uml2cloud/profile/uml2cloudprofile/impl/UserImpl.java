@@ -24,6 +24,7 @@ import org.eclipse.uml2.uml.Lifeline;
  * </p>
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl#getBase_Lifeline <em>Base Lifeline</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl#getInstances <em>Instances</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +39,25 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	 * @ordered
 	 */
 	protected Lifeline base_Lifeline;
+
+	/**
+	 * The default value of the '{@link #getInstances() <em>Instances</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstances()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int INSTANCES_EDEFAULT = 1;
+	/**
+	 * The cached value of the '{@link #getInstances() <em>Instances</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstances()
+	 * @generated
+	 * @ordered
+	 */
+	protected int instances = INSTANCES_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -101,12 +121,35 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getInstances() {
+		return instances;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInstances(int newInstances) {
+		int oldInstances = instances;
+		instances = newInstances;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.USER__INSTANCES, oldInstances, instances));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case UML2CloudProfilePackage.USER__BASE_LIFELINE:
 				if (resolve) return getBase_Lifeline();
 				return basicGetBase_Lifeline();
+			case UML2CloudProfilePackage.USER__INSTANCES:
+				return getInstances();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -121,6 +164,9 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 		switch (featureID) {
 			case UML2CloudProfilePackage.USER__BASE_LIFELINE:
 				setBase_Lifeline((Lifeline)newValue);
+				return;
+			case UML2CloudProfilePackage.USER__INSTANCES:
+				setInstances((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -137,6 +183,9 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 			case UML2CloudProfilePackage.USER__BASE_LIFELINE:
 				setBase_Lifeline((Lifeline)null);
 				return;
+			case UML2CloudProfilePackage.USER__INSTANCES:
+				setInstances(INSTANCES_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -151,8 +200,26 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 		switch (featureID) {
 			case UML2CloudProfilePackage.USER__BASE_LIFELINE:
 				return base_Lifeline != null;
+			case UML2CloudProfilePackage.USER__INSTANCES:
+				return instances != INSTANCES_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (instances: ");
+		result.append(instances);
+		result.append(')');
+		return result.toString();
 	}
 
 } //UserImpl

@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <notation:Diagram xmi:id="_LX8qwCyYEeimk9UjhXlLXQ" type="PapyrusUMLComponentDiagram" name="Component Diagram" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_jdQPgCzoEeiHMtOH55pATA" type="Component_PackagedElementShape">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_trzcoC00EeiD5fpIj1Dbkw" source="PapyrusCSSForceValue">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_trzcoS00EeiD5fpIj1Dbkw" key="gradient" value="true"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_t7DZkC00EeiD5fpIj1Dbkw" key="fillColor" value="true"/>
-      </eAnnotations>
-      <children xmi:type="notation:DecorationNode" xmi:id="_jdxM4CzoEeiHMtOH55pATA" type="Component_NameLabel"/>
-      <children xmi:type="notation:DecorationNode" xmi:id="_jdxz8CzoEeiHMtOH55pATA" type="Component_FloatingNameLabel">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_jdxz8SzoEeiHMtOH55pATA" y="15"/>
-      </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_jd0QMCzoEeiHMtOH55pATA" type="Component_StructureCompartment">
-        <styles xmi:type="notation:TitleStyle" xmi:id="_jd0QMSzoEeiHMtOH55pATA"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jd0QMizoEeiHMtOH55pATA"/>
-      </children>
-      <children xmi:type="notation:BasicCompartment" xmi:id="_rStv4CzoEeiHMtOH55pATA" type="StereotypeCompartment">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GAQJgCzpEeiHMtOH55pATA" source="PapyrusCSSForceValue">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GAQJgSzpEeiHMtOH55pATA" key="visible" value="true"/>
-        </eAnnotations>
-        <styles xmi:type="notation:TitleStyle" xmi:id="_rStv4SzoEeiHMtOH55pATA"/>
-        <styles xmi:type="notation:StringValueStyle" xmi:id="_rStv4izoEeiHMtOH55pATA" name="stereotype" stringValue="uml2cloud::CloudInfrastructure"/>
-        <element xmi:type="uml:Stereotype" href="pathmap://UML2CLOUD_PROFILE/uml2cloud.profile.uml#_dSLxQB_rEeiMKqCHb58rQA"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rStv4yzoEeiHMtOH55pATA"/>
-      </children>
-      <element xmi:type="uml:Component" href="cloudSystem.uml#_jcO70CzoEeiHMtOH55pATA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jdQ2kCzoEeiHMtOH55pATA" x="720" y="440" width="341" height="181"/>
-    </children>
-    <children xmi:type="notation:Shape" xmi:id="_rSnpQCzoEeiHMtOH55pATA" type="StereotypeComment">
-      <styles xmi:type="notation:TitleStyle" xmi:id="_rSnpQSzoEeiHMtOH55pATA"/>
-      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_rSoQUCzoEeiHMtOH55pATA" name="BASE_ELEMENT">
-        <eObjectValue xmi:type="uml:Component" href="cloudSystem.uml#_jcO70CzoEeiHMtOH55pATA"/>
-      </styles>
-      <element xsi:nil="true"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rSnpQizoEeiHMtOH55pATA" x="480" y="80"/>
-    </children>
     <children xmi:type="notation:Shape" xmi:id="_srJicizoEeiHMtOH55pATA" type="StereotypeComment">
       <styles xmi:type="notation:TitleStyle" xmi:id="_srJicyzoEeiHMtOH55pATA"/>
       <styles xmi:type="notation:EObjectValueStyle" xmi:id="_srKJgCzoEeiHMtOH55pATA" name="BASE_ELEMENT">
@@ -601,22 +568,45 @@
       <element xmi:type="uml:Package" href="cloudSystem.uml#_brYuUCzrEeiHMtOH55pATA"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_brZ8cSzrEeiHMtOH55pATA" x="920" y="1160" width="500" height="240"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_xSjSoDDeEeitJZMgMzK3xA" type="Component_PackagedElementShape">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yfqmADDeEeitJZMgMzK3xA" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yfqmATDeEeitJZMgMzK3xA" key="fillColor" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yniIkDDeEeitJZMgMzK3xA" key="gradient" value="true"/>
+      </eAnnotations>
+      <children xmi:type="notation:DecorationNode" xmi:id="_xSsckDDeEeitJZMgMzK3xA" type="Component_NameLabel"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_xSsckTDeEeitJZMgMzK3xA" type="Component_FloatingNameLabel">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_xSsckjDeEeitJZMgMzK3xA" y="15"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_xSsckzDeEeitJZMgMzK3xA" type="Component_StructureCompartment">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_xSsclDDeEeitJZMgMzK3xA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSsclTDeEeitJZMgMzK3xA"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_zlipADDeEeitJZMgMzK3xA" type="StereotypeCompartment">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1BRAEDDeEeitJZMgMzK3xA" source="PapyrusCSSForceValue">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1BRAETDeEeitJZMgMzK3xA" key="visible" value="true"/>
+        </eAnnotations>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_zlipATDeEeitJZMgMzK3xA"/>
+        <styles xmi:type="notation:StringValueStyle" xmi:id="_zlipAjDeEeitJZMgMzK3xA" name="stereotype" stringValue="uml2cloud::CloudInfrastructure"/>
+        <element xmi:type="uml:Stereotype" href="pathmap://UML2CLOUD_PROFILE/uml2cloud.profile.uml#_dSLxQB_rEeiMKqCHb58rQA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zlipAzDeEeitJZMgMzK3xA"/>
+      </children>
+      <element xmi:type="uml:Component" href="cloudSystem.uml#_xR3WIDDeEeitJZMgMzK3xA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSjSoTDeEeitJZMgMzK3xA" x="740" y="440" width="340" height="180"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_zlY3_TDeEeitJZMgMzK3xA" type="StereotypeComment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_zlY3_jDeEeitJZMgMzK3xA"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_zlY4ADDeEeitJZMgMzK3xA" name="BASE_ELEMENT">
+        <eObjectValue xmi:type="uml:Component" href="cloudSystem.uml#_xR3WIDDeEeitJZMgMzK3xA"/>
+      </styles>
+      <element xsi:nil="true"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zlY3_zDeEeitJZMgMzK3xA" x="960" y="460"/>
+    </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_LX8qwSyYEeimk9UjhXlLXQ" name="diagram_compatibility_version" stringValue="1.3.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_LX8qwiyYEeimk9UjhXlLXQ"/>
     <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_LX8qwyyYEeimk9UjhXlLXQ" diagramKindId="org.eclipse.papyrus.uml.diagram.component.root.package">
       <owner xmi:type="uml:Model" href="cloudSystem.uml#_LVl6UCyYEeimk9UjhXlLXQ"/>
     </styles>
     <element xmi:type="uml:Model" href="cloudSystem.uml#_LVl6UCyYEeimk9UjhXlLXQ"/>
-    <edges xmi:type="notation:Connector" xmi:id="_rSo3YCzoEeiHMtOH55pATA" type="StereotypeCommentLink" source="_jdQPgCzoEeiHMtOH55pATA" target="_rSnpQCzoEeiHMtOH55pATA">
-      <styles xmi:type="notation:FontStyle" xmi:id="_rSo3YSzoEeiHMtOH55pATA"/>
-      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_rSpecizoEeiHMtOH55pATA" name="BASE_ELEMENT">
-        <eObjectValue xmi:type="uml:Component" href="cloudSystem.uml#_jcO70CzoEeiHMtOH55pATA"/>
-      </styles>
-      <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_rSo3YizoEeiHMtOH55pATA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rSpecCzoEeiHMtOH55pATA"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rSpecSzoEeiHMtOH55pATA"/>
-    </edges>
     <edges xmi:type="notation:Connector" xmi:id="_srKJgSzoEeiHMtOH55pATA" type="StereotypeCommentLink" source="_kJXHkCzoEeiHMtOH55pATA" target="_srJicizoEeiHMtOH55pATA">
       <styles xmi:type="notation:FontStyle" xmi:id="_srKJgizoEeiHMtOH55pATA"/>
       <styles xmi:type="notation:EObjectValueStyle" xmi:id="_srKwkizoEeiHMtOH55pATA" name="BASE_ELEMENT">
@@ -766,6 +756,16 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Cy-8SSzpEeiHMtOH55pATA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Cy-8SizpEeiHMtOH55pATA"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Cy-8SyzpEeiHMtOH55pATA"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_zlio8DDeEeitJZMgMzK3xA" type="StereotypeCommentLink" source="_xSjSoDDeEeitJZMgMzK3xA" target="_zlY3_TDeEeitJZMgMzK3xA">
+      <styles xmi:type="notation:FontStyle" xmi:id="_zlio8TDeEeitJZMgMzK3xA"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_zlio9TDeEeitJZMgMzK3xA" name="BASE_ELEMENT">
+        <eObjectValue xmi:type="uml:Component" href="cloudSystem.uml#_xR3WIDDeEeitJZMgMzK3xA"/>
+      </styles>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zlio8jDeEeitJZMgMzK3xA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zlio8zDeEeitJZMgMzK3xA"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zlio9DDeEeitJZMgMzK3xA"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_1dEZICzqEeiHMtOH55pATA" type="PapyrusUMLSequenceDiagram" name="NewSequenceDiagram" measurementUnit="Pixel">

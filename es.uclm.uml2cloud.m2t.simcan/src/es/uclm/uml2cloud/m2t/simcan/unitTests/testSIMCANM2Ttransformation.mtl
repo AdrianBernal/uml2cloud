@@ -5,9 +5,9 @@
 [import es::uclm::uml2cloud::m2t::simcan::files::util /]
 [import es::uclm::uml2cloud::m2t::simcan::services::testService /]
 
-[template public testSIMCANM2Ttransformation(aScenario : Scenario)]
+[template public testSIMCANM2Ttransformation(aCloudInfrastructure : CloudInfrastructure)]
 
-	[file (aScenario.getFolder()+'unitTestResults.html', false, 'UTF-8')]
+	[file (aCloudInfrastructure.getFolder()+'unitTestResults.html', false, 'UTF-8')]
 	<!DOCTYPE html>
 	<html>
 		<head>
@@ -22,16 +22,16 @@
 				<tr>
 					<td colspan="3"> File under test: generateNEDFile.mtl</td>
 				</tr>
-				[aScenario.testGenerateHeaderNEDFile()/]
-				[aScenario.siblings(DataCenter).testGenerateDataCenter()/]
-				[aScenario.siblings(DataCenter).rackElements.testGenerateRackElement()/]
-				[aScenario.siblings(DataCenter).testGenerateDataCenterNetwork()/]
-				[aScenario.siblings(DataCenter)->collect(aDataCenter | aDataCenter.rackElements.testGenerateRackConnection())/]
-				[aScenario.testGenerateScenario()/]
-				[aScenario.siblings(DataCenter).testGenerateScenarioDataCenter()/]
-				[aScenario.testGenerateScenarioCloudProvider()/]
-				[aScenario.testGenerateScenarioUserGenerator()/]
-				[aScenario.testGenerateScenarioConnections()/]
+				[aCloudInfrastructure.testGenerateHeaderNEDFile()/]
+				[aCloudInfrastructure.datacenterElements.dataCenterType.testGenerateDataCenter()/]
+				[aCloudInfrastructure.datacenterElements.dataCenterType.rackElements.testGenerateRackElement()/]
+				[aCloudInfrastructure.datacenterElements.dataCenterType.testGenerateDataCenterNetwork()/]
+				[aCloudInfrastructure.datacenterElements.dataCenterType.rackElements.testGenerateRackConnection()/]
+				[aCloudInfrastructure.testGenerateScenario()/]
+				[aCloudInfrastructure.datacenterElements.dataCenterType.testGenerateScenarioDataCenter()/]
+				[aCloudInfrastructure.testGenerateScenarioCloudProvider()/]
+				[aCloudInfrastructure.testGenerateScenarioUserGenerator()/]
+				[aCloudInfrastructure.testGenerateScenarioConnections()/]
 			</table>
 			<br>
 			<table style="background-color:#CCFFCC;border-collapse:collapse;border:1px solid #FFCC00;color:#000000;width:100%" cellpadding="3" cellspacing="3" border="1" align="center"  >
@@ -40,19 +40,19 @@
 				<tr>
 					<td colspan="3"> File under test: generateINIFile.mtl</td>
 				</tr>
-				[aScenario.testGenerateHeaderINIFile()/]
-				[aScenario.testGenerateCloudProviderConfiguration()/]
-				[aScenario.siblings(DataCenter).testGenerateDataCenterConfiguration(aScenario.base_Package.name)/]
-				[aScenario.siblings(Rack).testGenerateRackConfiguration(aScenario.base_Package.name)/]
-				[aScenario.siblings(LocalApplication).testGenerateAppListLocalApplication()/]
-				[aScenario.siblings(VM).testGenerateVmList()/]
-				[aScenario.siblings(User).testGenerateUserList(aScenario)/]
-				[aScenario.siblings(Execute).testGenerateExecuteList()/]
-				[aScenario.siblings(Application).testGenerateApplicationInstantiationList()/]
-				[aScenario.siblings(Request).testGenerateRequestList()/]
-				[aScenario.siblings(VM).testGenerateVmInstantiationList()/]
-				[aScenario.siblings(DataCenter).testGenerateDataCenterList()/]
-				[aScenario.siblings(RackElement).testGenerateRackList()/]
+				[aCloudInfrastructure.testGenerateHeaderINIFile()/]
+				[aCloudInfrastructure.testGenerateCloudProviderConfiguration()/]
+				[aCloudInfrastructure.siblings(DataCenter).testGenerateDataCenterConfiguration(aCloudInfrastructure.base_Component.name)/]
+				[aCloudInfrastructure.siblings(Rack).testGenerateRackConfiguration(aCloudInfrastructure.base_Component.name)/]
+				[aCloudInfrastructure.siblings(LocalApplication).testGenerateAppListLocalApplication()/]
+				[aCloudInfrastructure.siblings(VM).testGenerateVmList()/]
+				[aCloudInfrastructure.siblings(User).testGenerateUserList(aCloudInfrastructure)/]
+				[aCloudInfrastructure.siblings(Execute).testGenerateExecuteList()/]
+				[aCloudInfrastructure.siblings(Application).testGenerateApplicationInstantiationList()/]
+				[aCloudInfrastructure.siblings(Request).testGenerateRequestList()/]
+				[aCloudInfrastructure.siblings(VM).testGenerateVmInstantiationList()/]
+				[aCloudInfrastructure.siblings(DataCenter).testGenerateDataCenterList()/]
+				[aCloudInfrastructure.siblings(RackElement).testGenerateRackList()/]
 			</table>
 		</body>
 	</html>
@@ -60,15 +60,15 @@
 	
 [/template]
 
-[template public testGenerateHeaderNEDFile(aScenario : Scenario)]
+[template public testGenerateHeaderNEDFile(aCloudInfrastructure : CloudInfrastructure)]
 <tr>
-	<td colspan="3"> Function under test: generateHeaderNEDFile(aScenario : Scenario)</td>
+	<td colspan="3"> Function under test: generateHeaderNEDFile(aCloudInfrastructure : CloudInfrastructure)</td>
 </tr>
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
-	<td>[aScenario.base_Package.name/]</td>
+	<td>[aCloudInfrastructure.base_Component.name/]</td>
 	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
-		+'package((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.simulations\\.'+aScenario.base_Package.name+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'package((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.simulations\\.'+aCloudInfrastructure.base_Component.name+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Architecture\\.Nodes\\.Cloud\\.CloudBlade;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Architecture\\.Nodes.Cloud.CloudBoard;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Architecture\\.Nodes\\.Cloud\\.CloudRack;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)*'
@@ -77,12 +77,12 @@
 		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Architecture\\.Network\\.DataCenterNetwork\\.\\*;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Management\\.UserGenerators\\.UserGenerator\\.\\*;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'import((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)simcan2\\.Management\\.UserGenerators\\.UserGeneratorBase\\.\\*;((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
-	,aScenario.generateHeaderNEDFile()))]
+	,aCloudInfrastructure.generateHeaderNEDFile()))]
 		<td style="background-color: green">OK</td>
 		<td></td>
 	[else]
 		<td style="background-color: red">FAIL</td>
-		<td>[aScenario.generateHeaderNEDFile()/]</td>
+		<td>[aCloudInfrastructure.generateHeaderNEDFile()/]</td>
 	[/if]
 </tr>
 [/template]
@@ -195,15 +195,15 @@
 </tr>
 [/template]
 
-[template public testGenerateScenario(aScenario : Scenario)]
+[template public testGenerateScenario(aCloudInfrastructure : CloudInfrastructure)]
 <tr>
-	<td colspan="3"> Function under test: generateScenario(aScenario : Scenario)</td>
+	<td colspan="3"> Function under test: generateScenario(aCloudInfrastructure : CloudInfrastructure)</td>
 </tr>
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
-	<td>[aScenario.base_Package.name/]</td>
+	<td>[aCloudInfrastructure.base_Component.name/]</td>
 	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
-		+'network((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)'+aScenario.base_Package.name+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'network((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)'+aCloudInfrastructure.base_Component.name+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'parameters((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'string((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'string((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
@@ -212,12 +212,12 @@
 		+'submodules((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'[\\s\\S]*'
 		+'\\}((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
-	,aScenario.generateScenario()))]
+	,aCloudInfrastructure.generateScenario()))]
 		<td style="background-color: green">OK</td>
 		<td></td>
 	[else]
 		<td style="background-color: red">FAIL</td>
-		<td>[aScenario.generateScenario()/]</td>
+		<td>[aCloudInfrastructure.generateScenario()/]</td>
 	[/if]
 </tr>
 [/template]
@@ -246,41 +246,41 @@
 </tr>
 [/template]
 
-[template public testGenerateScenarioCloudProvider(aScenario : Scenario)]
+[template public testGenerateScenarioCloudProvider(aCloudInfrastructure : CloudInfrastructure)]
 <tr>
-	<td colspan="3"> Function under test: generateScenarioCloudProvider(aScenario : Scenario)</td>
+	<td colspan="3"> Function under test: generateScenarioCloudProvider(aCloudInfrastructure : CloudInfrastructure)</td>
 </tr>
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
-	<td>[aScenario.base_Package.name/]</td>
+	<td>[aCloudInfrastructure.base_Component.name/]</td>
 	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
-		+'cloudProvider((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aScenario.cloudProvider+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'cloudProvider((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aCloudInfrastructure.cloudProvider+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'parameters((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)appList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'dataCentersList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)dataCentersList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'gates((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
-		+'fromDataCenter((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\[((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aScenario.getDataCenters()->size()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\]((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'	
-		+'toDataCenter((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\[((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aScenario.getDataCenters()->size()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\]((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
+		+'fromDataCenter((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\[((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aCloudInfrastructure.datacenterElements->size()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\]((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'	
+		+'toDataCenter((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\[((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'+aCloudInfrastructure.datacenterElements()->size()+'((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\]((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'\\}((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
-	,aScenario.generateScenarioCloudProvider()))]
+	,aCloudInfrastructure.generateScenarioCloudProvider()))]
 		<td style="background-color: green">OK</td>
 		<td></td>
 	[else]
 		<td style="background-color: red">FAIL</td>
-		<td>[aScenario.generateScenarioCloudProvider()/]</td>
+		<td>[aCloudInfrastructure.generateScenarioCloudProvider()/]</td>
 	[/if]
 </tr>
 [/template]
 
-[template public testGenerateScenarioUserGenerator(aScenario : Scenario)]
+[template public testGenerateScenarioUserGenerator(aCloudInfrastructure : CloudInfrastructure)]
 <tr>
-	<td colspan="3"> Function under test: testGenerateScenarioUserGenerator(aScenario : Scenario)</td>
+	<td colspan="3"> Function under test: testGenerateScenarioUserGenerator(aCloudInfrastructure : CloudInfrastructure)</td>
 </tr>
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
-	<td>[aScenario.base_Package.name/]</td>
+	<td>[aCloudInfrastructure.base_Component.name/]</td>
 	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'userGenerator((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)UserGenerator((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\{((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'parameters((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
@@ -288,49 +288,49 @@
 		+'vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)vmList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)=((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)userList((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'\\}((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
-	,aScenario.generateScenarioUserGenerator()))]
+	,aCloudInfrastructure.generateScenarioUserGenerator()))]
 		<td style="background-color: green">OK</td>
 		<td></td>
 	[else]
 		<td style="background-color: red">FAIL</td>
-		<td>[aScenario.generateScenarioUserGenerator()/]</td>
+		<td>[aCloudInfrastructure.generateScenarioUserGenerator()/]</td>
 	[/if]
 </tr>
 [/template]
 
-[template public testGenerateScenarioConnections(aScenario : Scenario)]
+[template public testGenerateScenarioConnections(aCloudInfrastructure : CloudInfrastructure)]
 <tr>
-	<td colspan="3"> Function under test: generateScenarioConnections(aScenario : Scenario)</td>
+	<td colspan="3"> Function under test: generateScenarioConnections(aCloudInfrastructure : CloudInfrastructure)</td>
 </tr>
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
-	<td>[aScenario.base_Package.name/]</td>
+	<td>[aCloudInfrastructure.base_Component.name/]</td>
 	[if (matchRE('((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'connections((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)allowunconnected((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*):((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
-		+aScenario.getDataCenters()->collect( aDataCenter | ''
+		+aCloudInfrastructure.datacenterElements.dataCenterType->collect( aDataCenter | ''
 		+'systemManager((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)toDataCenter((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\+\\+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)-->((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)ned.IdealChannel((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)-->((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)dc_+'+aDataCenter.base_Component.name+'_\\d+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)in((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'systemManager((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)fromDataCenter((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)\\+\\+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)<--((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)ned.IdealChannel((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)<--((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s+)dc_+'+aDataCenter.base_Component.name+'_\\d+((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*).((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)out((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*);((\\s*\\/\\/.*[\\r\\n]+\\s*)+|\\s*)'
 		+'')
-	,aScenario.generateScenarioConnections()))]
+	,aCloudInfrastructure.generateScenarioConnections()))]
 		<td style="background-color: green">OK</td>
 		<td></td>
 	[else]
 		<td style="background-color: red">FAIL</td>
-		<td>[aScenario.generateScenarioConnections()/]</td>
+		<td>[aCloudInfrastructure.generateScenarioConnections()/]</td>
 	[/if]
 </tr>
 [/template]
 
-[template public testGenerateHeaderINIFile(aScenario : Scenario)]
+[template public testGenerateHeaderINIFile(aCloudInfrastructure : CloudInfrastructure)]
 <tr>
-	<td colspan="3"> Function under test: generateHeaderINIFile(aScenario : Scenario)</td>
+	<td colspan="3"> Function under test: generateHeaderINIFile(aCloudInfrastructure : CloudInfrastructure)</td>
 </tr>
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
-	<td>[aScenario.base_Package.name/]</td>
+	<td>[aCloudInfrastructure.base_Component.name/]</td>
 	[if (matchRE('((\\s*#.*[\\r\\n]+\\s*)+|\\s*)'
 		+'\\[General\\]((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
-		+'network *= *'+aScenario.base_Package.name+'((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+'network *= *'+aCloudInfrastructure.base_Component.name+'((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
 		+'cmdenv-express-mode *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
 		+'ned-path *= *\\.\\.\\/\\.\\.\\/src;\\.\\.\\/;((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
 		+'\\*\\*\\.systemManager\\.cmdenv-log-level *= *debug((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
@@ -341,41 +341,41 @@
 		+'\\*\\*.scalar-recording *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
 		+'\\*\\*.statistic-recording *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
 		+'\\*\\*\\.vector-recording *= *false((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]*\\s*)'
-	,aScenario.generateHeaderINIFile()))]
+	,aCloudInfrastructure.generateHeaderINIFile()))]
 		<td style="background-color: green">OK</td>
 		<td></td>
 	[else]
 		<td style="background-color: red">FAIL</td>
-		<td>[aScenario.generateHeaderINIFile()/]</td>
+		<td>[aCloudInfrastructure.generateHeaderINIFile()/]</td>
 	[/if]
 </tr>
 [/template]
 
-[template public testGenerateCloudProviderConfiguration(aScenario : Scenario)]
+[template public testGenerateCloudProviderConfiguration(aCloudInfrastructure : CloudInfrastructure)]
 <tr>
-	<td colspan="3"> Function under test: generateCloudProviderConfiguration(aScenario : Scenario)</td>
+	<td colspan="3"> Function under test: generateCloudProviderConfiguration(aCloudInfrastructure : CloudInfrastructure)</td>
 </tr>
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
-	<td>[aScenario.base_Package.name/]</td>
+	<td>[aCloudInfrastructure.base_Component.name/]</td>
 	[if (matchRE('((\\s*#.*[\\r\\n]+\\s*)+|\\s*)'
-		+aScenario.base_Package.name+'\\.appList *= *"'+aScenario.siblings(Application)->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
-		+aScenario.base_Package.name+'\\.vmList *= *"'+aScenario.siblings(VM)->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
-		+aScenario.base_Package.name+'\\.userList *= *"'+aScenario.siblings(User)->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
-		+aScenario.base_Package.name+'\\.dataCentersList *= *"'+aScenario.getDataCenters()->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]*\\s*)'
-	,aScenario.generateCloudProviderConfiguration()))]
+		+aCloudInfrastructure.base_Component.name+'\\.appList *= *"'+aCloudInfrastructure.siblings(Application)->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aCloudInfrastructure.base_Component.name+'\\.vmList *= *"'+aCloudInfrastructure.siblings(VM)->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aCloudInfrastructure.base_Component.name+'\\.userList *= *"'+aCloudInfrastructure.siblings(User)->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aCloudInfrastructure.base_Component.name+'\\.dataCentersList *= *"'+aCloudInfrastructure.getDataCenters()->size()+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]*\\s*)'
+	,aCloudInfrastructure.generateCloudProviderConfiguration()))]
 		<td style="background-color: green">OK</td>
 		<td></td>
 	[else]
 		<td style="background-color: red">FAIL</td>
-		<td>[aScenario.generateCloudProviderConfiguration()/]</td>
+		<td>[aCloudInfrastructure.generateCloudProviderConfiguration()/]</td>
 	[/if]
 </tr>
 [/template]
 
 [template public testGenerateDataCenterConfiguration(aDataCenter : DataCenter, packageName : String)]
 <tr>
-	<td colspan="3"> Function under test: generateHeaderINIFile(aScenario : Scenario)</td>
+	<td colspan="3"> Function under test: generateHeaderINIFile(aCloudInfrastructure : CloudInfrastructure)</td>
 </tr>
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
@@ -395,7 +395,7 @@
 
 [template public testGenerateRackConfiguration(aRack : Rack, packageName : String)]
 <tr>
-	<td colspan="3"> Function under test: generateHeaderINIFile(aScenario : Scenario)</td>
+	<td colspan="3"> Function under test: generateHeaderINIFile(aCloudInfrastructure : CloudInfrastructure)</td>
 </tr>
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
@@ -460,9 +460,9 @@
 </tr>
 [/template]
 
-[template public testGenerateUserList(aUser : User, aScenario : Scenario)]
+[template public testGenerateUserList(aUser : User, aCloudInfrastructure : CloudInfrastructure)]
 <tr>
-	<td colspan="3"> Function under test: generateUserList(aUser : User, aScenario : Scenario)</td>
+	<td colspan="3"> Function under test: generateUserList(aUser : User, aCloudInfrastructure : CloudInfrastructure)</td>
 </tr>
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
@@ -593,21 +593,21 @@
 </tr>
 [/template]
 
-[template public testGenerateUserGeneratorConfiguration(aScenario : Scenario)]
+[template public testGenerateUserGeneratorConfiguration(aCloudInfrastructure : CloudInfrastructure)]
 [printHeader()/]
 <tr style="background-color :#FFFFFF">
-	<td>[aScenario.base_Package.name/]</td>
+	<td>[aCloudInfrastructure.base_Component.name/]</td>
 	[if (matchRE('((\\s*#.*[\\r\\n]+\\s*)+|\\s*)'
-		+aScenario.base_Package.name+'\\.userGenerator\\.maxStartTime_t1 *= *"'+aScenario.siblings(Request)->first().rentingTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
-		+aScenario.base_Package.name+'\\.userGenerator\\.nRentTime_t2 *= *"'+aScenario.siblings(Request)->first().rentingTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
-		+aScenario.base_Package.name+'\\.userGenerator\\.maxSubTime_t3 *= *"'+aScenario.siblings(Subscribe)->first().maxSubTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
-		+aScenario.base_Package.name+'\\.userGenerator\\.maxSubscriptionTime_t4 *= *"'+aScenario.siblings(Subscribe)->first().maxSubTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]*\\s*)'
-	,aScenario.generateCloudProviderConfiguration()))]
+		+aCloudInfrastructure.base_Component.name+'\\.userGenerator\\.maxStartTime_t1 *= *"'+aCloudInfrastructure.siblings(Request)->first().rentingTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aCloudInfrastructure.base_Component.name+'\\.userGenerator\\.nRentTime_t2 *= *"'+aCloudInfrastructure.siblings(Request)->first().rentingTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aCloudInfrastructure.base_Component.name+'\\.userGenerator\\.maxSubTime_t3 *= *"'+aCloudInfrastructure.siblings(Subscribe)->first().maxSubTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]+\\s*)'
+		+aCloudInfrastructure.base_Component.name+'\\.userGenerator\\.maxSubscriptionTime_t4 *= *"'+aCloudInfrastructure.siblings(Subscribe)->first().maxSubTime+' [\\s\\S]*"((\\s*#.*[\\r\\n]+\\s*)+|[\\r\\n]*\\s*)'
+	,aCloudInfrastructure.generateCloudProviderConfiguration()))]
 		<td style="background-color: green">OK</td>
 		<td></td>
 	[else]
 		<td style="background-color: red">FAIL</td>
-		<td>[aScenario.generateCloudProviderConfiguration()/]</td>
+		<td>[aCloudInfrastructure.generateCloudProviderConfiguration()/]</td>
 	[/if]
 </tr>
 [/template]

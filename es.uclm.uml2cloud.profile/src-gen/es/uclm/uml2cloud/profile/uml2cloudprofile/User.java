@@ -16,6 +16,7 @@ import org.eclipse.uml2.uml.Lifeline;
  * </p>
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getBase_Lifeline <em>Base Lifeline</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getInstances <em>Instances</em>}</li>
  * </ul>
  *
  * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getUser()
@@ -48,5 +49,32 @@ public interface User extends EObject {
 	 * @generated
 	 */
 	void setBase_Lifeline(Lifeline value);
+
+	/**
+	 * Returns the value of the '<em><b>Instances</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Instances</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Instances</em>' attribute.
+	 * @see #setInstances(int)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getUser_Instances()
+	 * @model default="1" dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @generated
+	 */
+	int getInstances();
+
+	/**
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getInstances <em>Instances</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Instances</em>' attribute.
+	 * @see #getInstances()
+	 * @generated
+	 */
+	void setInstances(int value);
 
 } // User

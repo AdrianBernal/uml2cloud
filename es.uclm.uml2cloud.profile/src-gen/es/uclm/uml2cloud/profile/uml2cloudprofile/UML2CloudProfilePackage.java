@@ -292,13 +292,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
-	 * The operation id for the '<em>Nodes Per Board Must Be Greatter Than Zero</em>' operation.
+	 * The operation id for the '<em>Machines Per Board Must Be Greatter Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 1;
+	int RACK___MACHINES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
 	 * The number of operations of the '<em>Rack</em>' class.
@@ -457,22 +457,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int CPU_FEATURE_COUNT = HARDWARE_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Speed MIPS Must Be Greater Than Zero</em>' operation.
+	 * The operation id for the '<em>MIPS Must Be Greater Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CPU___SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 0;
+	int CPU___MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Number Of Cores Must Be Greater Than Zero</em>' operation.
+	 * The operation id for the '<em>Cores Must Be Greater Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CPU___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 1;
+	int CPU___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>CPU</em>' class.
@@ -530,13 +530,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int MEMORY_FEATURE_COUNT = HARDWARE_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Size GB Must Be Greater Than Zero</em>' operation.
+	 * The operation id for the '<em>Capacity Must Be Greater Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMORY___SIZE_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 0;
+	int MEMORY___CAPACITY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Memory</em>' class.
@@ -714,22 +714,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int STORAGE__NUMBER_OF_DRIVES = HARDWARE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Write Bandwidth</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STORAGE__WRITE_BANDWIDTH = HARDWARE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Drive Capacity</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STORAGE__DRIVE_CAPACITY = HARDWARE_FEATURE_COUNT + 2;
+	int STORAGE__DRIVE_CAPACITY = HARDWARE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Read Bandwidth</b></em>' containment reference.
@@ -738,7 +729,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STORAGE__READ_BANDWIDTH = HARDWARE_FEATURE_COUNT + 3;
+	int STORAGE__READ_BANDWIDTH = HARDWARE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Write Bandwidth</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORAGE__WRITE_BANDWIDTH = HARDWARE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Storage</em>' class.
@@ -750,13 +750,40 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int STORAGE_FEATURE_COUNT = HARDWARE_FEATURE_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Number Of Disks Must Be Greatter Than Zero</em>' operation.
+	 * The operation id for the '<em>Number Of Drives Must Be Greatter Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STORAGE___NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 0;
+	int STORAGE___NUMBER_OF_DRIVES_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Drive Capacity Must Be Greater Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORAGE___DRIVE_CAPACITY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Read Bandwidth Must Be Greatter Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORAGE___READ_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Write Bandwidth Must Be Greatter Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORAGE___WRITE_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = HARDWARE_OPERATION_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Storage</em>' class.
@@ -765,7 +792,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STORAGE_OPERATION_COUNT = HARDWARE_OPERATION_COUNT + 1;
+	int STORAGE_OPERATION_COUNT = HARDWARE_OPERATION_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingRackImpl <em>Computing Rack</em>}' class.
@@ -841,13 +868,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int COMPUTING_RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
 
 	/**
-	 * The operation id for the '<em>Nodes Per Board Must Be Greatter Than Zero</em>' operation.
+	 * The operation id for the '<em>Machines Per Board Must Be Greatter Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
+	int COMPUTING_RACK___MACHINES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___MACHINES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The number of operations of the '<em>Computing Rack</em>' class.
@@ -996,13 +1023,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int STORAGE_RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
 
 	/**
-	 * The operation id for the '<em>Nodes Per Board Must Be Greatter Than Zero</em>' operation.
+	 * The operation id for the '<em>Machines Per Board Must Be Greatter Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STORAGE_RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
+	int STORAGE_RACK___MACHINES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = RACK___MACHINES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP;
 
 	/**
 	 * The number of operations of the '<em>Storage Rack</em>' class.
@@ -1188,13 +1215,40 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int APPLICATION_FEATURE_COUNT = 5;
 
 	/**
+	 * The operation id for the '<em>MIs Must Be Greater Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___MIS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Input Data Must Be Greater Than Or Equal To Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___INPUT_DATA_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
+	 * The operation id for the '<em>Output Data Must Be Greater Than Or Equal To Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___OUTPUT_DATA_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 2;
+
+	/**
 	 * The number of operations of the '<em>Application</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_OPERATION_COUNT = 0;
+	int APPLICATION_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl <em>Parameter</em>}' class.
@@ -1334,13 +1388,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int VM___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
-	 * The operation id for the '<em>SCU Must Be Greater Than Zero</em>' operation.
+	 * The operation id for the '<em>Computing Units Must Be Greater Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM___SCU_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 1;
+	int VM___COMPUTING_UNITS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
 	 * The operation id for the '<em>Memory Must Be Greater Than Zero</em>' operation.
@@ -1407,13 +1461,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int REQUEST_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Renting Time Must Be Greater Than Or Equal To Zero</em>' operation.
+	 * The operation id for the '<em>Renting Time Must Be Greater Than Zero</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST___RENTING_TIME_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 0;
+	int REQUEST___RENTING_TIME_MUST_BE_GREATER_THAN_ZERO__ZERO__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Instances Must Be Greater Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST___INSTANCES_MUST_BE_GREATER_THAN_ZERO__ZERO__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
 	 * The number of operations of the '<em>Request</em>' class.
@@ -1422,7 +1485,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST_OPERATION_COUNT = 1;
+	int REQUEST_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl <em>VM Instantiation</em>}' class.
@@ -1803,13 +1866,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int EXECUTE_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Instances Must Be Greater Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTE___INSTANCES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
 	 * The number of operations of the '<em>Execute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTE_OPERATION_COUNT = 0;
+	int EXECUTE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl <em>User</em>}' class.
@@ -1831,13 +1903,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int USER__BASE_LIFELINE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Instances</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__INSTANCES = 1;
+
+	/**
 	 * The number of structural features of the '<em>User</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_FEATURE_COUNT = 1;
+	int USER_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>User</em>' class.
@@ -1859,13 +1940,13 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int CLOUD_INFRASTRUCTURE = 31;
 
 	/**
-	 * The feature id for the '<em><b>Datacenter Element</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Datacenter Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENT = 0;
+	int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Cloud Provider</b></em>' reference.
@@ -1904,13 +1985,31 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int CLOUD_INFRASTRUCTURE_FEATURE_COUNT = 4;
 
 	/**
+	 * The operation id for the '<em>Datacenter Elements instances Must Be Greatter Than Or Equal To Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_INFRASTRUCTURE___DATACENTER_ELEMENTS_INSTANCES_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Datacenter Elements instances Should Be Greatter Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_INFRASTRUCTURE___DATACENTER_ELEMENTS_INSTANCES_SHOULD_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>Cloud Infrastructure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD_INFRASTRUCTURE_OPERATION_COUNT = 0;
+	int CLOUD_INFRASTRUCTURE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterElementImpl <em>Data Center Element</em>}' class.
@@ -2181,14 +2280,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getRack__Boards_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#nodesPerBoard_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Nodes Per Board Must Be Greatter Than Zero</em>}' operation.
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#machinesPerBoard_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Machines Per Board Must Be Greatter Than Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Nodes Per Board Must Be Greatter Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#nodesPerBoard_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Machines Per Board Must Be Greatter Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Rack#machinesPerBoard_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getRack__NodesPerBoard_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+	EOperation getRack__MachinesPerBoard_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Machine <em>Machine</em>}'.
@@ -2277,24 +2376,24 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EAttribute getCPU_MIPS();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#speedMIPS_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Speed MIPS Must Be Greater Than Zero</em>}' operation.
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#MIPS_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>MIPS Must Be Greater Than Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Speed MIPS Must Be Greater Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#speedMIPS_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>MIPS Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#MIPS_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getCPU__SpeedMIPS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+	EOperation getCPU__MIPS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#numberOfCores_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Number Of Cores Must Be Greater Than Zero</em>}' operation.
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#cores_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Cores Must Be Greater Than Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Number Of Cores Must Be Greater Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#numberOfCores_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Cores Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CPU#cores_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getCPU__NumberOfCores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+	EOperation getCPU__Cores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Hardware <em>Hardware</em>}'.
@@ -2350,14 +2449,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getMemory_Latency();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#sizeGB_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Size GB Must Be Greater Than Zero</em>}' operation.
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#capacity_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Capacity Must Be Greater Than Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Size GB Must Be Greater Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#sizeGB_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Capacity Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Memory#capacity_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getMemory__SizeGB_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+	EOperation getMemory__Capacity_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Size <em>Size</em>}'.
@@ -2488,6 +2587,46 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getStorage_WriteBandwidth();
 
 	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#numberOfDrives_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Number Of Drives Must Be Greatter Than Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Number Of Drives Must Be Greatter Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#numberOfDrives_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getStorage__NumberOfDrives_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#driveCapacity_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Drive Capacity Must Be Greater Than Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Drive Capacity Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#driveCapacity_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getStorage__DriveCapacity_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#readBandwidth_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Read Bandwidth Must Be Greatter Than Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Read Bandwidth Must Be Greatter Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#readBandwidth_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getStorage__ReadBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#writeBandwidth_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Write Bandwidth Must Be Greatter Than Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Write Bandwidth Must Be Greatter Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#writeBandwidth_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getStorage__WriteBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getDriveCapacity <em>Drive Capacity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2508,16 +2647,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getStorage_ReadBandwidth();
-
-	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#numberOfDisks_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Number Of Disks Must Be Greatter Than Zero</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Number Of Disks Must Be Greatter Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#numberOfDisks_Must_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getStorage__NumberOfDisks_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingRack <em>Computing Rack</em>}'.
@@ -2679,6 +2808,36 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getApplication_Parameter();
 
 	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Application#MIs_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>MIs Must Be Greater Than Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>MIs Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Application#MIs_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getApplication__MIs_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Application#inputData_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Input Data Must Be Greater Than Or Equal To Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Input Data Must Be Greater Than Or Equal To Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Application#inputData_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getApplication__InputData_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Application#outputData_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Output Data Must Be Greater Than Or Equal To Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Output Data Must Be Greater Than Or Equal To Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Application#outputData_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getApplication__OutputData_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2808,14 +2967,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getVM__Cores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#SCU_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>SCU Must Be Greater Than Zero</em>}' operation.
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#computingUnits_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Computing Units Must Be Greater Than Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>SCU Must Be Greater Than Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#SCU_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Computing Units Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#computingUnits_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getVM__SCU_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+	EOperation getVM__ComputingUnits_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#memory_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Memory Must Be Greater Than Zero</em>}' operation.
@@ -2870,14 +3029,24 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getRequest_VmInstantiation();
 
 	/**
-	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Renting Time Must Be Greater Than Or Equal To Zero</em>}' operation.
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#rentingTime_Must_Be_Greater_Than__Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Renting Time Must Be Greater Than Zero</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Renting Time Must Be Greater Than Or Equal To Zero</em>' operation.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Request#rentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @return the meta object for the '<em>Renting Time Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Request#rentingTime_Must_Be_Greater_Than__Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
 	 * @generated
 	 */
-	EOperation getRequest__RentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+	EOperation getRequest__RentingTime_Must_Be_Greater_Than__Zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#instances_Must_Be_Greater_Than__Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Instances Must Be Greater Than Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Instances Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Request#instances_Must_Be_Greater_Than__Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getRequest__Instances_Must_Be_Greater_Than__Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation <em>VM Instantiation</em>}'.
@@ -3134,6 +3303,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getExecute_AppInstantiation();
 
 	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Execute#instances_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Instances Must Be Greater Than Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Instances Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Execute#instances_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getExecute__Instances_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User <em>User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3155,6 +3334,17 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EReference getUser_Base_Lifeline();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getInstances <em>Instances</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Instances</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.User#getInstances()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EAttribute getUser_Instances();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure <em>Cloud Infrastructure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3165,15 +3355,15 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EClass getCloudInfrastructure();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getDatacenterElement <em>Datacenter Element</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getDatacenterElements <em>Datacenter Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Datacenter Element</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getDatacenterElement()
+	 * @return the meta object for the containment reference list '<em>Datacenter Elements</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getDatacenterElements()
 	 * @see #getCloudInfrastructure()
 	 * @generated
 	 */
-	EReference getCloudInfrastructure_DatacenterElement();
+	EReference getCloudInfrastructure_DatacenterElements();
 
 	/**
 	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getCloudProvider <em>Cloud Provider</em>}'.
@@ -3207,6 +3397,26 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCloudInfrastructure_Network();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#datacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Datacenter Elements instances Must Be Greatter Than Or Equal To Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Datacenter Elements instances Must Be Greatter Than Or Equal To Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#datacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getCloudInfrastructure__DatacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#datacenterElements_instances_Should_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Datacenter Elements instances Should Be Greatter Than Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Datacenter Elements instances Should Be Greatter Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#datacenterElements_instances_Should_Be_Greatter_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getCloudInfrastructure__DatacenterElements_instances_Should_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement <em>Data Center Element</em>}'.
@@ -3446,12 +3656,12 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation RACK___BOARDS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRack__Boards_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Nodes Per Board Must Be Greatter Than Zero</b></em>' operation.
+		 * The meta object literal for the '<em><b>Machines Per Board Must Be Greatter Than Zero</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation RACK___NODES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRack__NodesPerBoard_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+		EOperation RACK___MACHINES_PER_BOARD_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRack__MachinesPerBoard_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.MachineImpl <em>Machine</em>}' class.
@@ -3522,20 +3732,20 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EAttribute CPU__MIPS = eINSTANCE.getCPU_MIPS();
 
 		/**
-		 * The meta object literal for the '<em><b>Speed MIPS Must Be Greater Than Zero</b></em>' operation.
+		 * The meta object literal for the '<em><b>MIPS Must Be Greater Than Zero</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CPU___SPEED_MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCPU__SpeedMIPS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+		EOperation CPU___MIPS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCPU__MIPS_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>Number Of Cores Must Be Greater Than Zero</b></em>' operation.
+		 * The meta object literal for the '<em><b>Cores Must Be Greater Than Zero</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CPU___NUMBER_OF_CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCPU__NumberOfCores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+		EOperation CPU___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCPU__Cores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.HardwareImpl <em>Hardware</em>}' class.
@@ -3582,12 +3792,12 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference MEMORY__LATENCY = eINSTANCE.getMemory_Latency();
 
 		/**
-		 * The meta object literal for the '<em><b>Size GB Must Be Greater Than Zero</b></em>' operation.
+		 * The meta object literal for the '<em><b>Capacity Must Be Greater Than Zero</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation MEMORY___SIZE_GB_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getMemory__SizeGB_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+		EOperation MEMORY___CAPACITY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getMemory__Capacity_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SizeImpl <em>Size</em>}' class.
@@ -3694,6 +3904,38 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference STORAGE__WRITE_BANDWIDTH = eINSTANCE.getStorage_WriteBandwidth();
 
 		/**
+		 * The meta object literal for the '<em><b>Number Of Drives Must Be Greatter Than Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation STORAGE___NUMBER_OF_DRIVES_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getStorage__NumberOfDrives_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Drive Capacity Must Be Greater Than Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation STORAGE___DRIVE_CAPACITY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getStorage__DriveCapacity_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Read Bandwidth Must Be Greatter Than Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation STORAGE___READ_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getStorage__ReadBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Write Bandwidth Must Be Greatter Than Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation STORAGE___WRITE_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getStorage__WriteBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '<em><b>Drive Capacity</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3708,14 +3950,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference STORAGE__READ_BANDWIDTH = eINSTANCE.getStorage_ReadBandwidth();
-
-		/**
-		 * The meta object literal for the '<em><b>Number Of Disks Must Be Greatter Than Zero</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation STORAGE___NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getStorage__NumberOfDisks_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingRackImpl <em>Computing Rack</em>}' class.
@@ -3850,6 +4084,30 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference APPLICATION__PARAMETER = eINSTANCE.getApplication_Parameter();
 
 		/**
+		 * The meta object literal for the '<em><b>MIs Must Be Greater Than Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APPLICATION___MIS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getApplication__MIs_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Data Must Be Greater Than Or Equal To Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APPLICATION___INPUT_DATA_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getApplication__InputData_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Output Data Must Be Greater Than Or Equal To Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation APPLICATION___OUTPUT_DATA_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getApplication__OutputData_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl <em>Parameter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3950,12 +4208,12 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation VM___CORES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__Cores_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
-		 * The meta object literal for the '<em><b>SCU Must Be Greater Than Zero</b></em>' operation.
+		 * The meta object literal for the '<em><b>Computing Units Must Be Greater Than Zero</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation VM___SCU_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__SCU_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+		EOperation VM___COMPUTING_UNITS_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__ComputingUnits_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '<em><b>Memory Must Be Greater Than Zero</b></em>' operation.
@@ -4000,12 +4258,20 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference REQUEST__VM_INSTANTIATION = eINSTANCE.getRequest_VmInstantiation();
 
 		/**
-		 * The meta object literal for the '<em><b>Renting Time Must Be Greater Than Or Equal To Zero</b></em>' operation.
+		 * The meta object literal for the '<em><b>Renting Time Must Be Greater Than Zero</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation REQUEST___RENTING_TIME_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRequest__RentingTime_Must_Be_Greater_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+		EOperation REQUEST___RENTING_TIME_MUST_BE_GREATER_THAN_ZERO__ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRequest__RentingTime_Must_Be_Greater_Than__Zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Instances Must Be Greater Than Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REQUEST___INSTANCES_MUST_BE_GREATER_THAN_ZERO__ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRequest__Instances_Must_Be_Greater_Than__Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl <em>VM Instantiation</em>}' class.
@@ -4218,6 +4484,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference EXECUTE__APP_INSTANTIATION = eINSTANCE.getExecute_AppInstantiation();
 
 		/**
+		 * The meta object literal for the '<em><b>Instances Must Be Greater Than Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EXECUTE___INSTANCES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getExecute__Instances_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl <em>User</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4236,6 +4510,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EReference USER__BASE_LIFELINE = eINSTANCE.getUser_Base_Lifeline();
 
 		/**
+		 * The meta object literal for the '<em><b>Instances</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute USER__INSTANCES = eINSTANCE.getUser_Instances();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl <em>Cloud Infrastructure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4246,12 +4528,12 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EClass CLOUD_INFRASTRUCTURE = eINSTANCE.getCloudInfrastructure();
 
 		/**
-		 * The meta object literal for the '<em><b>Datacenter Element</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Datacenter Elements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENT = eINSTANCE.getCloudInfrastructure_DatacenterElement();
+		EReference CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS = eINSTANCE.getCloudInfrastructure_DatacenterElements();
 
 		/**
 		 * The meta object literal for the '<em><b>Cloud Provider</b></em>' reference feature.
@@ -4276,6 +4558,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLOUD_INFRASTRUCTURE__NETWORK = eINSTANCE.getCloudInfrastructure_Network();
+
+		/**
+		 * The meta object literal for the '<em><b>Datacenter Elements instances Must Be Greatter Than Or Equal To Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLOUD_INFRASTRUCTURE___DATACENTER_ELEMENTS_INSTANCES_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCloudInfrastructure__DatacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Datacenter Elements instances Should Be Greatter Than Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLOUD_INFRASTRUCTURE___DATACENTER_ELEMENTS_INSTANCES_SHOULD_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCloudInfrastructure__DatacenterElements_instances_Should_Be_Greatter_Than_Zero__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.DataCenterElementImpl <em>Data Center Element</em>}' class.

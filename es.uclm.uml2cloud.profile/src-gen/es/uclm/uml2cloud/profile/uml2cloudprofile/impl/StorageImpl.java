@@ -39,9 +39,9 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
  * </p>
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageImpl#getNumberOfDrives <em>Number Of Drives</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageImpl#getWriteBandwidth <em>Write Bandwidth</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageImpl#getDriveCapacity <em>Drive Capacity</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageImpl#getReadBandwidth <em>Read Bandwidth</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.StorageImpl#getWriteBandwidth <em>Write Bandwidth</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,16 +68,6 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	protected int numberOfDrives = NUMBER_OF_DRIVES_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getWriteBandwidth() <em>Write Bandwidth</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWriteBandwidth()
-	 * @generated
-	 * @ordered
-	 */
-	protected Bandwidth writeBandwidth;
-
-	/**
 	 * The cached value of the '{@link #getDriveCapacity() <em>Drive Capacity</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -96,6 +86,16 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * @ordered
 	 */
 	protected Bandwidth readBandwidth;
+
+	/**
+	 * The cached value of the '{@link #getWriteBandwidth() <em>Write Bandwidth</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWriteBandwidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected Bandwidth writeBandwidth;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,6 +178,106 @@ public class StorageImpl extends HardwareImpl implements Storage {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH, newWriteBandwidth, newWriteBandwidth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean numberOfDrives_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.STORAGE__NUMBER_OF_DRIVES_MUST_BE_GREATTER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "numberOfDrives_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean driveCapacity_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.STORAGE__DRIVE_CAPACITY_MUST_BE_GREATER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "driveCapacity_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean readBandwidth_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.STORAGE__READ_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "readBandwidth_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean writeBandwidth_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.STORAGE__WRITE_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "writeBandwidth_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
 	}
 
 	/**
@@ -271,40 +371,15 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean numberOfDisks_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO: implement this method
-		// -> specify the condition that violates the invariant
-		// -> verify the details of the diagnostic, including severity and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(new BasicDiagnostic
-						(Diagnostic.ERROR,
-						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
-						 UML2CloudProfileValidator.STORAGE__NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO,
-						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "numberOfDisks_Must_Be_Greatter_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
-						 new Object [] { this }));
-			}
-			return false;
-		}
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH:
-				return basicSetWriteBandwidth(null, msgs);
 			case UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY:
 				return basicSetDriveCapacity(null, msgs);
 			case UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH:
 				return basicSetReadBandwidth(null, msgs);
+			case UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH:
+				return basicSetWriteBandwidth(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -319,12 +394,12 @@ public class StorageImpl extends HardwareImpl implements Storage {
 		switch (featureID) {
 			case UML2CloudProfilePackage.STORAGE__NUMBER_OF_DRIVES:
 				return getNumberOfDrives();
-			case UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH:
-				return getWriteBandwidth();
 			case UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY:
 				return getDriveCapacity();
 			case UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH:
 				return getReadBandwidth();
+			case UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH:
+				return getWriteBandwidth();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -340,14 +415,14 @@ public class StorageImpl extends HardwareImpl implements Storage {
 			case UML2CloudProfilePackage.STORAGE__NUMBER_OF_DRIVES:
 				setNumberOfDrives((Integer)newValue);
 				return;
-			case UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH:
-				setWriteBandwidth((Bandwidth)newValue);
-				return;
 			case UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY:
 				setDriveCapacity((Size)newValue);
 				return;
 			case UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH:
 				setReadBandwidth((Bandwidth)newValue);
+				return;
+			case UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH:
+				setWriteBandwidth((Bandwidth)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -364,14 +439,14 @@ public class StorageImpl extends HardwareImpl implements Storage {
 			case UML2CloudProfilePackage.STORAGE__NUMBER_OF_DRIVES:
 				setNumberOfDrives(NUMBER_OF_DRIVES_EDEFAULT);
 				return;
-			case UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH:
-				setWriteBandwidth((Bandwidth)null);
-				return;
 			case UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY:
 				setDriveCapacity((Size)null);
 				return;
 			case UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH:
 				setReadBandwidth((Bandwidth)null);
+				return;
+			case UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH:
+				setWriteBandwidth((Bandwidth)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -387,12 +462,12 @@ public class StorageImpl extends HardwareImpl implements Storage {
 		switch (featureID) {
 			case UML2CloudProfilePackage.STORAGE__NUMBER_OF_DRIVES:
 				return numberOfDrives != NUMBER_OF_DRIVES_EDEFAULT;
-			case UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH:
-				return writeBandwidth != null;
 			case UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY:
 				return driveCapacity != null;
 			case UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH:
 				return readBandwidth != null;
+			case UML2CloudProfilePackage.STORAGE__WRITE_BANDWIDTH:
+				return writeBandwidth != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -406,8 +481,14 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case UML2CloudProfilePackage.STORAGE___NUMBER_OF_DISKS_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
-				return numberOfDisks_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.STORAGE___NUMBER_OF_DRIVES_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return numberOfDrives_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.STORAGE___DRIVE_CAPACITY_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return driveCapacity_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.STORAGE___READ_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return readBandwidth_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.STORAGE___WRITE_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return writeBandwidth_Must_Be_Greatter_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

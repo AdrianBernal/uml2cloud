@@ -16,9 +16,9 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * </p>
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getNumberOfDrives <em>Number Of Drives</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getWriteBandwidth <em>Write Bandwidth</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getDriveCapacity <em>Drive Capacity</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getReadBandwidth <em>Read Bandwidth</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getWriteBandwidth <em>Write Bandwidth</em>}</li>
  * </ul>
  *
  * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getStorage()
@@ -80,6 +80,58 @@ public interface Storage extends Hardware {
 	void setWriteBandwidth(Bandwidth value);
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.numberOfDrives>0
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean numberOfDrives_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.driveCapacity.value>0
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean driveCapacity_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.readBandwidth.value>0
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean readBandwidth_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.writeBandwidth.value>0
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean writeBandwidth_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
 	 * Returns the value of the '<em><b>Drive Capacity</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -130,18 +182,5 @@ public interface Storage extends Hardware {
 	 * @generated
 	 */
 	void setReadBandwidth(Bandwidth value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * self.numberOfDrives>0
-	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
-	 * @param context The cache of context-specific information.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	boolean numberOfDisks_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Storage

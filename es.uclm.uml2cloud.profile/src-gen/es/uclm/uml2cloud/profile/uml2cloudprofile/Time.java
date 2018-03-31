@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Time extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * The default value is <code>"5.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
@@ -33,7 +34,7 @@ public interface Time extends EObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(double)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getTime_Value()
-	 * @model dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
+	 * @model default="5.0" dataType="org.eclipse.uml2.types.Real" required="true" ordered="false"
 	 * @generated
 	 */
 	double getValue();
