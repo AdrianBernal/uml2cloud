@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ASCII"?>
+<elementtypesconfigurations:ElementTypeSetConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:applystereotypeadvice="http://www.eclipse.org/papyrus/uml/types/applystereotypeadvice/1.1" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.2" identifier="a2b_8_1522693699985_Semantic" name="a2b_8_1522693699985_Semantic" metamodelNsURI="a2b_8_1522693699985_Semantic">
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522693717253" name="Application (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.package_1522694028700" name="Package">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Package_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694035292" name="Application (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694039533" name="VM (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694043786" name="CloudInfrastructure (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694048027" name="DataCenter (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694056611" name="ComputingRack (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694061641" name="StorageRack (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694070561" name="ComputingMachine (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694073925" name="StorageMachine (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694091419" name="CPU (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694096965" name="Memory (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694099923" name="Storage (Component)">
+    <specializedTypes xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522693717253_ASAC" target="//@elementTypeConfigurations.0">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::Application" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694035292_ASAC" target="//@elementTypeConfigurations.2">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::Application" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694039533_ASAC" target="//@elementTypeConfigurations.3">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::VM" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694043786_ASAC" target="//@elementTypeConfigurations.4">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::CloudInfrastructure" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694048027_ASAC" target="//@elementTypeConfigurations.5">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::DataCenter" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694056611_ASAC" target="//@elementTypeConfigurations.6">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::ComputingRack" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694061641_ASAC" target="//@elementTypeConfigurations.7">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::StorageRack" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694070561_ASAC" target="//@elementTypeConfigurations.8">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::ComputingMachine" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694073925_ASAC" target="//@elementTypeConfigurations.9">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::StorageMachine" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694091419_ASAC" target="//@elementTypeConfigurations.10">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::CPU" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694096965_ASAC" target="//@elementTypeConfigurations.11">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::Memory" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="uml2cloudinfrastructurediagrampalettemodel.component.tool.component_1522694099923_ASAC" target="//@elementTypeConfigurations.12">
+    <stereotypesToApply stereotypeQualifiedName="uml2cloud::Storage" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+</elementtypesconfigurations:ElementTypeSetConfiguration>

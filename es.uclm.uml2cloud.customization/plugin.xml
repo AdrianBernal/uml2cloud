@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.infra.architecture.models">
+      <model
+            path="resources/architecture/uml2cloud.architecture">
+      </model>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.properties.contexts">
+         <context contextModel="/resources/properties/uml2cloud.ctx">
+         </context>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
+      <elementTypeSet
+            clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
+            path="resources/palettes/infrastructureDiagram/uml2cloudinfrastructurediagrampalettemodel_Semantic.elementtypesconfigurations">
+      </elementTypeSet>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
+      <elementTypeSet
+            clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
+            path="resources/palettes/interactionDiagram/uml2cloudinteractiondiagrampalettemodel_Semantic.elementtypesconfigurations">
+      </elementTypeSet>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
+      <elementTypeSet
+            clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
+            path="resources/palettes/infrastructureDiagram/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations">
+      </elementTypeSet>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
+      <elementTypeSet
+            clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
+            path="resources/palettes/interactionDiagram/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations">
+      </elementTypeSet>
+   </extension>
+
+</plugin>
