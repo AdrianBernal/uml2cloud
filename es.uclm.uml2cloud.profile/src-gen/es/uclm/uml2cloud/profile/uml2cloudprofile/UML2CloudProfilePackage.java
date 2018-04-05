@@ -2576,6 +2576,28 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EAttribute getStorage_NumberOfDrives();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getDriveCapacity <em>Drive Capacity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Drive Capacity</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getDriveCapacity()
+	 * @see #getStorage()
+	 * @generated
+	 */
+	EReference getStorage_DriveCapacity();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getReadBandwidth <em>Read Bandwidth</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Read Bandwidth</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getReadBandwidth()
+	 * @see #getStorage()
+	 * @generated
+	 */
+	EReference getStorage_ReadBandwidth();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getWriteBandwidth <em>Write Bandwidth</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2625,28 +2647,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getStorage__WriteBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getDriveCapacity <em>Drive Capacity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Drive Capacity</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getDriveCapacity()
-	 * @see #getStorage()
-	 * @generated
-	 */
-	EReference getStorage_DriveCapacity();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getReadBandwidth <em>Read Bandwidth</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Read Bandwidth</em>'.
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getReadBandwidth()
-	 * @see #getStorage()
-	 * @generated
-	 */
-	EReference getStorage_ReadBandwidth();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.ComputingRack <em>Computing Rack</em>}'.
@@ -3896,6 +3896,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EAttribute STORAGE__NUMBER_OF_DRIVES = eINSTANCE.getStorage_NumberOfDrives();
 
 		/**
+		 * The meta object literal for the '<em><b>Drive Capacity</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STORAGE__DRIVE_CAPACITY = eINSTANCE.getStorage_DriveCapacity();
+
+		/**
+		 * The meta object literal for the '<em><b>Read Bandwidth</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STORAGE__READ_BANDWIDTH = eINSTANCE.getStorage_ReadBandwidth();
+
+		/**
 		 * The meta object literal for the '<em><b>Write Bandwidth</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3934,22 +3950,6 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation STORAGE___WRITE_BANDWIDTH_MUST_BE_GREATTER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getStorage__WriteBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '<em><b>Drive Capacity</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STORAGE__DRIVE_CAPACITY = eINSTANCE.getStorage_DriveCapacity();
-
-		/**
-		 * The meta object literal for the '<em><b>Read Bandwidth</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STORAGE__READ_BANDWIDTH = eINSTANCE.getStorage_ReadBandwidth();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ComputingRackImpl <em>Computing Rack</em>}' class.

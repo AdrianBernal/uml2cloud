@@ -209,18 +209,15 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		//StringBuffer result = new StringBuffer(super.toString());
-		StringBuffer result = new StringBuffer("");
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (instances: ");
 		result.append(instances);
-		result.append(", ");
-		result.append(applicationType.getBase_Component().getName());
 		result.append(')');
 		return result.toString();
 	}

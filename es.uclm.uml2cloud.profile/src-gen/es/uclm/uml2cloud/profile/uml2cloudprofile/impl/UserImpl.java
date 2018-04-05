@@ -49,6 +49,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	 * @ordered
 	 */
 	protected static final int INSTANCES_EDEFAULT = 1;
+
 	/**
 	 * The cached value of the '{@link #getInstances() <em>Instances</em>}' attribute.
 	 * <!-- begin-user-doc -->

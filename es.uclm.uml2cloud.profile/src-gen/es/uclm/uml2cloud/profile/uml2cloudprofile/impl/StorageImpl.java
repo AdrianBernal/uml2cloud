@@ -142,6 +142,92 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Size getDriveCapacity() {
+		return driveCapacity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDriveCapacity(Size newDriveCapacity, NotificationChain msgs) {
+		Size oldDriveCapacity = driveCapacity;
+		driveCapacity = newDriveCapacity;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY, oldDriveCapacity, newDriveCapacity);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDriveCapacity(Size newDriveCapacity) {
+		if (newDriveCapacity != driveCapacity) {
+			NotificationChain msgs = null;
+			if (driveCapacity != null)
+				msgs = ((InternalEObject)driveCapacity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY, null, msgs);
+			if (newDriveCapacity != null)
+				msgs = ((InternalEObject)newDriveCapacity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY, null, msgs);
+			msgs = basicSetDriveCapacity(newDriveCapacity, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY, newDriveCapacity, newDriveCapacity));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bandwidth getReadBandwidth() {
+		return readBandwidth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetReadBandwidth(Bandwidth newReadBandwidth, NotificationChain msgs) {
+		Bandwidth oldReadBandwidth = readBandwidth;
+		readBandwidth = newReadBandwidth;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH, oldReadBandwidth, newReadBandwidth);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReadBandwidth(Bandwidth newReadBandwidth) {
+		if (newReadBandwidth != readBandwidth) {
+			NotificationChain msgs = null;
+			if (readBandwidth != null)
+				msgs = ((InternalEObject)readBandwidth).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH, null, msgs);
+			if (newReadBandwidth != null)
+				msgs = ((InternalEObject)newReadBandwidth).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH, null, msgs);
+			msgs = basicSetReadBandwidth(newReadBandwidth, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH, newReadBandwidth, newReadBandwidth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Bandwidth getWriteBandwidth() {
 		return writeBandwidth;
 	}
@@ -278,92 +364,6 @@ public class StorageImpl extends HardwareImpl implements Storage {
 			return false;
 		}
 		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Size getDriveCapacity() {
-		return driveCapacity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDriveCapacity(Size newDriveCapacity, NotificationChain msgs) {
-		Size oldDriveCapacity = driveCapacity;
-		driveCapacity = newDriveCapacity;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY, oldDriveCapacity, newDriveCapacity);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDriveCapacity(Size newDriveCapacity) {
-		if (newDriveCapacity != driveCapacity) {
-			NotificationChain msgs = null;
-			if (driveCapacity != null)
-				msgs = ((InternalEObject)driveCapacity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY, null, msgs);
-			if (newDriveCapacity != null)
-				msgs = ((InternalEObject)newDriveCapacity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY, null, msgs);
-			msgs = basicSetDriveCapacity(newDriveCapacity, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.STORAGE__DRIVE_CAPACITY, newDriveCapacity, newDriveCapacity));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Bandwidth getReadBandwidth() {
-		return readBandwidth;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetReadBandwidth(Bandwidth newReadBandwidth, NotificationChain msgs) {
-		Bandwidth oldReadBandwidth = readBandwidth;
-		readBandwidth = newReadBandwidth;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH, oldReadBandwidth, newReadBandwidth);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setReadBandwidth(Bandwidth newReadBandwidth) {
-		if (newReadBandwidth != readBandwidth) {
-			NotificationChain msgs = null;
-			if (readBandwidth != null)
-				msgs = ((InternalEObject)readBandwidth).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH, null, msgs);
-			if (newReadBandwidth != null)
-				msgs = ((InternalEObject)newReadBandwidth).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH, null, msgs);
-			msgs = basicSetReadBandwidth(newReadBandwidth, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.STORAGE__READ_BANDWIDTH, newReadBandwidth, newReadBandwidth));
 	}
 
 	/**
