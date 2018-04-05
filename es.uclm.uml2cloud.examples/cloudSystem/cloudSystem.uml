@@ -58,7 +58,7 @@
       <packagedElement xmi:type="uml:Component" xmi:id="_BtpE0CzpEeiHMtOH55pATA" name="disk_500GB"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_Cy1LQCzpEeiHMtOH55pATA" name="disk_2TB"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_xR3WIDDeEeitJZMgMzK3xA" name="Component1"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_xR3WIDDeEeitJZMgMzK3xA" name="cloudInfrastructure"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_puVMACzoEeiHMtOH55pATA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puXoQCzoEeiHMtOH55pATA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.uclm.es/UML/profiles/UML2Cloud/1#/"/>
