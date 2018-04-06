@@ -69,7 +69,7 @@ cmdenv-log-prefix = "(%t):['['/]%l[']'/] %m  "
 [packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].cpu.cpuCore['['/]*[']'/].speed = [aRack.getNodeType().cpu.MIPS/]
 [packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].cpu.cpuCore['['/]*[']'/].tick = 0.01s 
 [packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].appsVectors['['/]*[']'/].appModule['['/]*[']'/].userAppName = "DummyApplication"
-[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].memorySize = [aRack.getNodeType().memory.capacity/]
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].memorySize = [aRack.getNodeType().memory.capacity.getSize()/]
 [packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].memoryReadLatency = [aRack.getNodeType().memory.latency->getLatency('read')/]
 [packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].memoryWriteLatency = [aRack.getNodeType().memory.latency->getLatency('write')/]
 [packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].diskSize = [aRack.getNodeType().storage.driveCapacity.getCapacity()/]
@@ -91,19 +91,19 @@ LocalApplication [aApplication.base_Component.name/] [3+aApplication.parameter->
 [/template]
 
 [template public generateExecuteList(aExecute : Execute)]
-[aExecute.appInstantiation->size()/] [aExecute.appInstantiation.generateAppInstantiationList()/]
+[aExecute.appInstantiation->size()/][aExecute.appInstantiation.generateAppInstantiationList()/]
 [/template]
 
 [template public generateAppInstantiationList(aAppInstantiation : AppInstantiation)   ? (aAppInstantiation.instances>0)]
-[aAppInstantiation.applicationType.base_Component.name/] [aAppInstantiation.instances/]
+ [aAppInstantiation.applicationType.base_Component.name/] [aAppInstantiation.instances/]
 [/template]
 
 [template public generateRequestList(aRequest : Request)]
-[aRequest.vmInstantiation->size()/] [aRequest.vmInstantiation.generateVmInstantiationList()/] 
+[aRequest.vmInstantiation->size()/][aRequest.vmInstantiation.generateVmInstantiationList()/] 
 [/template]
 
 [template public generateVmInstantiationList(aVMInstantiation : VMInstantiation)]
-[aVMInstantiation.vmType.base_Component.name/] [aVMInstantiation.instances/] [aVMInstantiation.rentingTime/]
+ [aVMInstantiation.vmType.base_Component.name/] [aVMInstantiation.instances/] [aVMInstantiation.rentingTime.getHours()/]
 [/template]
 
 [template public generateDataCenterList(aDataCenterElement : DataCenterElement)]
@@ -115,7 +115,8 @@ LocalApplication [aApplication.base_Component.name/] [3+aApplication.parameter->
 [/template]
 
 [template public generateUserGeneratorConfiguration(aCloudInfrastructure : CloudInfrastructure)]
-[aCloudInfrastructure.base_Component.name/].userGenerator.maxStartTime_t1 = [aCloudInfrastructure.siblings(Subscribe)->first().maxTime/]
-[aCloudInfrastructure.base_Component.name/].userGenerator.nRentTime_t2 = [aCloudInfrastructure.siblings(Request)->first().vmInstantiation->asSequence()->first().rentingTime/]
-[aCloudInfrastructure.base_Component.name/].userGenerator.maxSubTime_t3 = [aCloudInfrastructure.siblings(Subscribe)->first().maxTime/]
+[aCloudInfrastructure.base_Component.name/].userGenerator.maxStartTime_t1 = [aCloudInfrastructure.siblings(Subscribe)->first().maxTime.getSeconds()/]
+[aCloudInfrastructure.base_Component.name/].userGenerator.nRentTime_t2 = [aCloudInfrastructure.siblings(Request)->first().vmInstantiation->asSequence()->first().rentingTime.getSeconds()/]
+[aCloudInfrastructure.base_Component.name/].userGenerator.maxSubTime_t3 = [aCloudInfrastructure.siblings(Subscribe)->first().maxTime.getSeconds()/]
+[aCloudInfrastructure.base_Component.name/].userGenerator.maxSubscriptionTime_t4 = [aCloudInfrastructure.siblings(Subscribe)->first().maxTime.getSeconds()/]
 [/template]

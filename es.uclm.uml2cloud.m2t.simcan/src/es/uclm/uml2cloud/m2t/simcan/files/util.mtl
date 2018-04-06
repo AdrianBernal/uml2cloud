@@ -12,6 +12,10 @@
 
 [query public getTime(time : Time) : String = time.value.toString()+time.unit/]
 
+[query public getHours(time : Time) : Real = time.value*Sequence(Real){24,1,1/60,1/(60*60),1/(60*60*1000),1/(60*60*1000*1000)}->at(Sequence(SizeUnit){TimeUnit::d, TimeUnit::h, TimeUnit::min, TimeUnit::s, TimeUnit::ms, TimeUnit::us}->indexOf(time.unit))/]
+
+[query public getSeconds(time : Time) : Real = time.value*Sequence(Real){24*60*60,60*60,60,1,1/1000,1/(1000*1000)}->at(Sequence(SizeUnit){TimeUnit::d, TimeUnit::h, TimeUnit::min, TimeUnit::s, TimeUnit::ms, TimeUnit::us}->indexOf(time.unit))/]
+
 [query public getBandwidth(bandwidth : Bandwidth) : String = bandwidth.value.toString()+bandwidth.unit/]
 
 [query public getSizeUnit(sizeUnit : SizeUnit) : String = Sequence(String){'TiB','GiB','MiB','KiB'}->at(Sequence(SizeUnit){SizeUnit::TByte, SizeUnit::GByte, SizeUnit::MByte, SizeUnit::KByte}->indexOf(sizeUnit))/]
@@ -20,6 +24,6 @@
 
 [query public getCapacity(size : Size) : String = size.value.toString()+Sequence(String){'TB','GB','MB','KB'}->at(Sequence(SizeUnit){SizeUnit::TByte, SizeUnit::GByte, SizeUnit::MByte, SizeUnit::KByte}->indexOf(size.unit))/]
 
-[query public sizeToGB(size : Size) : Real = size.value*Sequence(Real){1000,1,1/1000,1/1000/1000}->at(Sequence(SizeUnit){SizeUnit::TByte, SizeUnit::GByte, SizeUnit::MByte, SizeUnit::KByte}->indexOf(size.unit))/]
+[query public sizeToGB(size : Size) : Real = size.value*Sequence(Real){1000,1,1/1000,1/(1000*1000)}->at(Sequence(SizeUnit){SizeUnit::TByte, SizeUnit::GByte, SizeUnit::MByte, SizeUnit::KByte}->indexOf(size.unit))/]
 
 [query public getLatency(latencies : Set(Latency), name : String) : String =  latencies->any(latency | latency.name.toUpper().strstr(name.toUpper())).time.getTime()/]

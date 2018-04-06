@@ -107,7 +107,7 @@ dataCenterNetwork:DataCenterNetwork{
 
 [template public generateRackConnection(aRackElement : RackElement, network : Bandwidth)  ? (aRackElement.numberOfRacks>0)]
 [for (index : Integer | Sequence(Integer){1..aRackElement.numberOfRacks})]
-[aRackElement.rackType.eClass().name.toLowerFirst()/]_[aRackElement.rackType.base_Component.name/]_[index/].out --> {datarate[network.getBandwidth()/];} --> dataCenterNetwork.inComm++;
+[aRackElement.rackType.eClass().name.toLowerFirst()/]_[aRackElement.rackType.base_Component.name/]_[index/].out --> {datarate=[network.getBandwidth()/];} --> dataCenterNetwork.inComm++;
 [aRackElement.rackType.eClass().name.toLowerFirst()/]_[aRackElement.rackType.base_Component.name/]_[index/].in <-- {datarate=[network.getBandwidth()/];} <-- dataCenterNetwork.outComm++;
 [/for]
 [/template]
@@ -191,8 +191,8 @@ connections allowunconnected:
 	// Connections between the cloud provider and each data-center manager
 [for (aDataCenterElement : DataCenterElement | aCloudInfrastructure.datacenterElements)]
 	[for (index : Integer | Sequence(Integer){1..aDataCenterElement.numberOfDataCenters})]
-		cloudProvider.toDataCenter++ --> {datarate[aCloudInfrastructure.network.getBandwidth()/];} --> dc_[aDataCenterElement.dataCenterType.base_Component.name/]_[index/].in;
-		cloudProvider.fromDataCenter++ <-- {datarate[aCloudInfrastructure.network.getBandwidth()/];} <-- dc_[aDataCenterElement.dataCenterType.base_Component.name/]_[index/].out;	
+		cloudProvider.toDataCenter++ --> {datarate=[aCloudInfrastructure.network.getBandwidth()/];} --> dc_[aDataCenterElement.dataCenterType.base_Component.name/]_[index/].in;
+		cloudProvider.fromDataCenter++ <-- {datarate=[aCloudInfrastructure.network.getBandwidth()/];} <-- dc_[aDataCenterElement.dataCenterType.base_Component.name/]_[index/].out;	
 	[/for]
 [/for]
 
