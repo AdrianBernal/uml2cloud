@@ -9,6 +9,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.validation,
  org.eclipse.papyrus.uml.service.validation,
  org.eclipse.uml2.uml,
- es.uclm.uml2cloud.profile
+ es.uclm.uml2cloud.profile;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
