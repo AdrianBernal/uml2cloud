@@ -19,6 +19,36 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum TimeUnit implements Enumerator {
 	/**
+	 * The '<em><b>D</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #D_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	D(0, "d", "d"),
+
+	/**
+	 * The '<em><b>H</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #H_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	H(1, "h", "h"),
+
+	/**
+	 * The '<em><b>Min</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MIN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MIN(2, "min", "min"),
+
+	/**
 	 * The '<em><b>S</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +56,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	S(0, "s", "s"),
+	S(3, "s", "s"),
 
 	/**
 	 * The '<em><b>Ms</b></em>' literal object.
@@ -36,7 +66,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MS(1, "ms", "ms"),
+	MS(4, "ms", "ms"),
 
 	/**
 	 * The '<em><b>Us</b></em>' literal object.
@@ -46,17 +76,52 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	US(2, "us", "us"),
+	US(5, "us", "us");
 
 	/**
-	 * The '<em><b>Ns</b></em>' literal object.
+	 * The '<em><b>D</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>D</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #NS_VALUE
+	 * @see #D
+	 * @model name="d"
 	 * @generated
 	 * @ordered
 	 */
-	NS(3, "ns", "ns");
+	public static final int D_VALUE = 0;
+
+	/**
+	 * The '<em><b>H</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>H</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #H
+	 * @model name="h"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int H_VALUE = 1;
+
+	/**
+	 * The '<em><b>Min</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Min</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #MIN
+	 * @model name="min"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MIN_VALUE = 2;
 
 	/**
 	 * The '<em><b>S</b></em>' literal value.
@@ -71,7 +136,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int S_VALUE = 0;
+	public static final int S_VALUE = 3;
 
 	/**
 	 * The '<em><b>Ms</b></em>' literal value.
@@ -86,7 +151,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MS_VALUE = 1;
+	public static final int MS_VALUE = 4;
 
 	/**
 	 * The '<em><b>Us</b></em>' literal value.
@@ -101,22 +166,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int US_VALUE = 2;
-
-	/**
-	 * The '<em><b>Ns</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Ns</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #NS
-	 * @model name="ns"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int NS_VALUE = 3;
+	public static final int US_VALUE = 5;
 
 	/**
 	 * An array of all the '<em><b>Time Unit</b></em>' enumerators.
@@ -126,10 +176,12 @@ public enum TimeUnit implements Enumerator {
 	 */
 	private static final TimeUnit[] VALUES_ARRAY =
 		new TimeUnit[] {
+			D,
+			H,
+			MIN,
 			S,
 			MS,
 			US,
-			NS,
 		};
 
 	/**
@@ -186,10 +238,12 @@ public enum TimeUnit implements Enumerator {
 	 */
 	public static TimeUnit get(int value) {
 		switch (value) {
+			case D_VALUE: return D;
+			case H_VALUE: return H;
+			case MIN_VALUE: return MIN;
 			case S_VALUE: return S;
 			case MS_VALUE: return MS;
 			case US_VALUE: return US;
-			case NS_VALUE: return NS;
 		}
 		return null;
 	}

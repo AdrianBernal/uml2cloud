@@ -54,6 +54,58 @@ public interface Storage extends Hardware {
 	void setNumberOfDrives(int value);
 
 	/**
+	 * Returns the value of the '<em><b>Drive Capacity</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Drive Capacity</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Drive Capacity</em>' containment reference.
+	 * @see #setDriveCapacity(Size)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getStorage_DriveCapacity()
+	 * @model containment="true" required="true" ordered="false"
+	 * @generated
+	 */
+	Size getDriveCapacity();
+
+	/**
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getDriveCapacity <em>Drive Capacity</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Drive Capacity</em>' containment reference.
+	 * @see #getDriveCapacity()
+	 * @generated
+	 */
+	void setDriveCapacity(Size value);
+
+	/**
+	 * Returns the value of the '<em><b>Read Bandwidth</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Read Bandwidth</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Read Bandwidth</em>' containment reference.
+	 * @see #setReadBandwidth(Bandwidth)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getStorage_ReadBandwidth()
+	 * @model containment="true" required="true" ordered="false"
+	 * @generated
+	 */
+	Bandwidth getReadBandwidth();
+
+	/**
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getReadBandwidth <em>Read Bandwidth</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Read Bandwidth</em>' containment reference.
+	 * @see #getReadBandwidth()
+	 * @generated
+	 */
+	void setReadBandwidth(Bandwidth value);
+
+	/**
 	 * Returns the value of the '<em><b>Write Bandwidth</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -130,57 +182,5 @@ public interface Storage extends Hardware {
 	 * @generated
 	 */
 	boolean writeBandwidth_Must_Be_Greatter_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
-
-	/**
-	 * Returns the value of the '<em><b>Drive Capacity</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Drive Capacity</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Drive Capacity</em>' containment reference.
-	 * @see #setDriveCapacity(Size)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getStorage_DriveCapacity()
-	 * @model containment="true" required="true" ordered="false"
-	 * @generated
-	 */
-	Size getDriveCapacity();
-
-	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getDriveCapacity <em>Drive Capacity</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Drive Capacity</em>' containment reference.
-	 * @see #getDriveCapacity()
-	 * @generated
-	 */
-	void setDriveCapacity(Size value);
-
-	/**
-	 * Returns the value of the '<em><b>Read Bandwidth</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Read Bandwidth</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Read Bandwidth</em>' containment reference.
-	 * @see #setReadBandwidth(Bandwidth)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getStorage_ReadBandwidth()
-	 * @model containment="true" required="true" ordered="false"
-	 * @generated
-	 */
-	Bandwidth getReadBandwidth();
-
-	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Storage#getReadBandwidth <em>Read Bandwidth</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Read Bandwidth</em>' containment reference.
-	 * @see #getReadBandwidth()
-	 * @generated
-	 */
-	void setReadBandwidth(Bandwidth value);
 
 } // Storage

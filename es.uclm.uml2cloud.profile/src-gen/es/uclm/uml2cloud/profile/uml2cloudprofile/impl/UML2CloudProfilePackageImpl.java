@@ -809,6 +809,24 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getStorage_DriveCapacity() {
+		return (EReference)storageEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStorage_ReadBandwidth() {
+		return (EReference)storageEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getStorage_WriteBandwidth() {
 		return (EReference)storageEClass.getEStructuralFeatures().get(3);
 	}
@@ -847,24 +865,6 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 */
 	public EOperation getStorage__WriteBandwidth_Must_Be_Greatter_Than_Zero__DiagnosticChain_Map() {
 		return storageEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStorage_DriveCapacity() {
-		return (EReference)storageEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStorage_ReadBandwidth() {
-		return (EReference)storageEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2182,10 +2182,12 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		addEEnumLiteral(sizeUnitEEnum, SizeUnit.TBYTE);
 
 		initEEnum(timeUnitEEnum, TimeUnit.class, "TimeUnit");
+		addEEnumLiteral(timeUnitEEnum, TimeUnit.D);
+		addEEnumLiteral(timeUnitEEnum, TimeUnit.H);
+		addEEnumLiteral(timeUnitEEnum, TimeUnit.MIN);
 		addEEnumLiteral(timeUnitEEnum, TimeUnit.S);
 		addEEnumLiteral(timeUnitEEnum, TimeUnit.MS);
 		addEEnumLiteral(timeUnitEEnum, TimeUnit.US);
-		addEEnumLiteral(timeUnitEEnum, TimeUnit.NS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -1270,21 +1270,29 @@
       </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_1pOgQAgTEeipCKjf3hYSIw" type="Enumeration_NameLabel"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_1pOgQQgTEeipCKjf3hYSIw" type="Enumeration_LiteralCompartment">
-        <children xmi:type="notation:Shape" xmi:id="_eDr84AgUEeipCKjf3hYSIw" type="EnumerationLiteral_LiteralLabel">
-          <element xmi:type="uml:EnumerationLiteral" href="uml2cloud.profile.uml#_eDSUQAgUEeipCKjf3hYSIw"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_eDr84QgUEeipCKjf3hYSIw"/>
+        <children xmi:type="notation:Shape" xmi:id="_NMM60DjGEeixyNYQ2R-fdA" type="EnumerationLiteral_LiteralLabel">
+          <element xmi:type="uml:EnumerationLiteral" href="uml2cloud.profile.uml#_NLdT8DjGEeixyNYQ2R-fdA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_NMM60TjGEeixyNYQ2R-fdA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_e4-mIAgUEeipCKjf3hYSIw" type="EnumerationLiteral_LiteralLabel">
-          <element xmi:type="uml:EnumerationLiteral" href="uml2cloud.profile.uml#_e4mLoAgUEeipCKjf3hYSIw"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_e4-mIQgUEeipCKjf3hYSIw"/>
+        <children xmi:type="notation:Shape" xmi:id="_Pn120DjGEeixyNYQ2R-fdA" type="EnumerationLiteral_LiteralLabel">
+          <element xmi:type="uml:EnumerationLiteral" href="uml2cloud.profile.uml#_PnPZ4DjGEeixyNYQ2R-fdA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Pn120TjGEeixyNYQ2R-fdA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_kwRJoAgUEeipCKjf3hYSIw" type="EnumerationLiteral_LiteralLabel">
-          <element xmi:type="uml:EnumerationLiteral" href="uml2cloud.profile.uml#_kv4vIAgUEeipCKjf3hYSIw"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_kwRJoQgUEeipCKjf3hYSIw"/>
+        <children xmi:type="notation:Shape" xmi:id="_QPQcIDjGEeixyNYQ2R-fdA" type="EnumerationLiteral_LiteralLabel">
+          <element xmi:type="uml:EnumerationLiteral" href="uml2cloud.profile.uml#_QOXEQDjGEeixyNYQ2R-fdA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_QPQcITjGEeixyNYQ2R-fdA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_u_Xa4AgUEeipCKjf3hYSIw" type="EnumerationLiteral_LiteralLabel">
-          <element xmi:type="uml:EnumerationLiteral" href="uml2cloud.profile.uml#_u-reYAgUEeipCKjf3hYSIw"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_u_Xa4QgUEeipCKjf3hYSIw"/>
+        <children xmi:type="notation:Shape" xmi:id="_QiuKsDjGEeixyNYQ2R-fdA" type="EnumerationLiteral_LiteralLabel">
+          <element xmi:type="uml:EnumerationLiteral" href="uml2cloud.profile.uml#_QiRewDjGEeixyNYQ2R-fdA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_QiuKsTjGEeixyNYQ2R-fdA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_Rb088DjGEeixyNYQ2R-fdA" type="EnumerationLiteral_LiteralLabel">
+          <element xmi:type="uml:EnumerationLiteral" href="uml2cloud.profile.uml#_RbYRADjGEeixyNYQ2R-fdA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Rb088TjGEeixyNYQ2R-fdA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_Rz1NQDjGEeixyNYQ2R-fdA" type="EnumerationLiteral_LiteralLabel">
+          <element xmi:type="uml:EnumerationLiteral" href="uml2cloud.profile.uml#_RzYhUDjGEeixyNYQ2R-fdA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Rz1NQTjGEeixyNYQ2R-fdA"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_1pOgQggTEeipCKjf3hYSIw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_1pOgQwgTEeipCKjf3hYSIw"/>
@@ -1323,7 +1331,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JR215Ay4EeiRp7woUwXOeA"/>
       </children>
       <element xmi:type="uml:DataType" href="uml2cloud.profile.uml#_JRsd0Ay4EeiRp7woUwXOeA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JRsd0gy4EeiRp7woUwXOeA" x="660" y="680" width="160" height="120"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JRsd0gy4EeiRp7woUwXOeA" x="660" y="720" width="160" height="120"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_8lMl8BaPEeil09uxt68Thw" type="DataType_Shape" fillColor="15198183">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-atWERaPEeil09uxt68Thw" source="PapyrusCSSForceValue">

@@ -236,10 +236,12 @@
         eType="#//TimeUnit"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TimeUnit">
-    <eLiterals name="s"/>
-    <eLiterals name="ms" value="1"/>
-    <eLiterals name="us" value="2"/>
-    <eLiterals name="ns" value="3"/>
+    <eLiterals name="d"/>
+    <eLiterals name="h" value="1"/>
+    <eLiterals name="min" value="2"/>
+    <eLiterals name="s" value="3"/>
+    <eLiterals name="ms" value="4"/>
+    <eLiterals name="us" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Storage" eSuperTypes="#//Hardware">
     <eOperations name="numberOfDrives_Must_Be_Greatter_Than_Zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">

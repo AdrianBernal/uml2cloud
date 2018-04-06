@@ -46,10 +46,12 @@
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//SizeUnit/TByte"/>
     </genEnums>
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="uml2cloudprofile.ecore#//TimeUnit">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/d"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/h"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/min"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/s"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/ms"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/us"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/ns"/>
     </genEnums>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//DataCenter">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//DataCenter/network"/>

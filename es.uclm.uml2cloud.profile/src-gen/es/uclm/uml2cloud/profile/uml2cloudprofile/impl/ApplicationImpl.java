@@ -8,10 +8,12 @@ import es.uclm.uml2cloud.profile.uml2cloudprofile.Size;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
 
+import java.lang.reflect.InvocationTargetException;
+
+import java.util.Collection;
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -27,6 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.InternalEList;
