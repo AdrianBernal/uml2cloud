@@ -140,7 +140,6 @@
       </owningRules>
       <childRules xmi:id="_w60e5oyjEeeExa11VlSyvg"/>
       <palettes href="platform:/plugin/org.eclipse.papyrus.uml.diagram.sequence/model/PapyrusUMLSequenceDiagram.paletteconfiguration#/"/>
-      <palettes href="platform:/plugin/es.uclm.uml2cloud.customization/resources/palettes/interactionDiagram/uml2cloudinteractiondiagrampalettemodel.paletteconfiguration#/"/>
     </representationKinds>
     <representationKinds xsi:type="gmfdiagrepresentation:PapyrusDiagram" xmi:id="_w60e54yjEeeExa11VlSyvg" id="org.eclipse.papyrus.uml.diagram.stateMachine" name="State Machine Diagram" icon="platform:/plugin/org.eclipse.papyrus.uml.diagram.statemachine/icons/obj16/Diagram_StateMachine.gif" concerns="_wlxbgIyjEeeExa11VlSyvg" implementationID="PapyrusUMLStateMachineDiagram" creationCommandClass="org.eclipse.papyrus.uml.diagram.statemachine.CreateStateMachineDiagramCommand">
       <modelRules xmi:id="_w60e6IyjEeeExa11VlSyvg">

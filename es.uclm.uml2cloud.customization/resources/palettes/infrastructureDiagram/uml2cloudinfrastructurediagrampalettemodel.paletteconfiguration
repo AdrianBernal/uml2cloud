@@ -4,147 +4,147 @@
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.package_1522694028700" label="Package" description="Create a Package">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Package.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.3"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.3"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.4"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.4"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:SeparatorConfiguration" id="Separator_1522694030309" label="Separator"/>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694035292" label="Application (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.5"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.5"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.6"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.6"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.7"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.7"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694039533" label="VM (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.8"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.8"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.9"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.9"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.10"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.10"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:SeparatorConfiguration" id="Separator_1522694040512" label="Separator"/>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694043786" label="CloudInfrastructure (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.11"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.11"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.12"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.12"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.13"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.13"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694048027" label="DataCenter (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.14"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.14"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.15"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.15"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.16"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.16"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:SeparatorConfiguration" id="Separator_1522694049264" label="Separator"/>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694056611" label="ComputingRack (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.17"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.17"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.18"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.18"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.19"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.19"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694061641" label="StorageRack (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.20"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.20"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.21"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.21"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.22"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.22"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:SeparatorConfiguration" id="Separator_1522694062900" label="Separator"/>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694070561" label="ComputingMachine (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.23"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.23"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.24"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.24"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.25"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.25"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694073925" label="StorageMachine (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.26"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.26"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.27"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.27"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.28"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.28"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:SeparatorConfiguration" id="Separator_1522694075927" label="Separator"/>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694091419" label="CPU (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.29"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.29"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.30"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.30"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.31"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.31"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694096965" label="Memory (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.32"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.32"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.33"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.33"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.34"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.34"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="component.tool.component_1522694099923" label="Storage (Component)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Component.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.35"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.35"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.36"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.36"/>
       </elementDescriptors>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.37"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinfrastructurediagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.37"/>
       </elementDescriptors>
     </ownedConfigurations>
   </drawerConfigurations>
