@@ -23,11 +23,11 @@
             id="es.uclm.uml2cloud.examplesbaseCloudSystem"
             wizardID="es.uclm.uml2cloud.examples.wizard">
          <projectDescriptor
-               contentURI="baseCloudSystem/"
-               name="baseCloudSystem">
+               contentURI="cloudSystem/"
+               name="cloudSystem">
          </projectDescriptor>
          <fileToOpen
-               location="pathmap://baseCloudSystem/model.di">
+               location="pathmap://cloudSystem/cloudSystem.di">
          </fileToOpen>
       </example>
    </extension>
