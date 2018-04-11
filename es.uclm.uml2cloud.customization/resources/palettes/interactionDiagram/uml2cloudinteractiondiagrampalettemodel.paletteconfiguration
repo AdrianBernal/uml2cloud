@@ -4,77 +4,77 @@
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createCombinedFragment5CreationTool_1522507052205" label="Combined Fragment" description="Create Combined Fragment">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/CombinedFragment.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.15"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.15"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createInteractionOperand6CreationTool_1522507059706" label="Interaction Operand" description="Create Interaction Operand">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/InteractionOperand.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.16"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.16"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:SeparatorConfiguration" id="Separator_1522504807361" label="Separator"/>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createLifeline1CreationTool_1522507077815" label="User (Lifeline)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Lifeline.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.17"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.17"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createLifeline1CreationTool_1522507082440" label="CloudProvider (Lifeline)" description="">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Lifeline.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.18"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.18"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:SeparatorConfiguration" id="Separator_1522504820475" label="Separator"/>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createMessageSync1CreationTool_1522507092596" label="Request (Message Sync)" description="" kind="ConnectionTool">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Message_synchCall.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.19"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.19"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createMessageReply3CreationTool_1522507127035" label="Response (Message Reply)" description="" kind="ConnectionTool">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Message_reply.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.20"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.20"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:SeparatorConfiguration" id="Separator_1522504875096" label="Separator"/>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createMessageAsync2CreationTool_1522507151646" label="Execute (Message Async)" description="" kind="ConnectionTool">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Message_asynchCall.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.21"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.21"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createMessageReply3CreationTool_1522507162431" label="OK (Message Reply)" description="" kind="ConnectionTool">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Message_reply.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.22"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.22"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createMessageReply3CreationTool_1522507169053" label="Failure (Message Reply)" description="" kind="ConnectionTool">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Message_reply.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.23"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.23"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:SeparatorConfiguration" id="Separator_1522506014721" label="Separator"/>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createMessageAsync2CreationTool_1522507191049" label="Subscribe (Message Async)" description="" kind="ConnectionTool">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Message_asynchCall.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.24"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.24"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createMessageReply3CreationTool_1522507206065" label="Notify (Message Reply)" description="" kind="ConnectionTool">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Message_reply.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.25"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.25"/>
       </elementDescriptors>
     </ownedConfigurations>
     <ownedConfigurations xsi:type="paletteconfiguration:ToolConfiguration" id="createMessageReply3CreationTool_1522507210549" label="Timeout (Message Reply)" description="" kind="ConnectionTool">
       <icon pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Message_reply.gif"/>
       <elementDescriptors>
-        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.26"/>
+        <elementType xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/uml2cloudinteractiondiagrampalettemodel_UI.elementtypesconfigurations#//@elementTypeConfigurations.26"/>
       </elementDescriptors>
     </ownedConfigurations>
   </drawerConfigurations>
