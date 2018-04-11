@@ -74,11 +74,26 @@
          unpack="false"/>
 
    <plugin
-<<<<<<< HEAD
-         id="es.uclm.uml2cloud.customization"
-=======
          id="es.uclm.uml2cloud.examples"
->>>>>>> refs/remotes/origin/master
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="es.uclm.uml2cloud.customization"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.uclm.uml2cloud.customization.elementTypeSets"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="es.uclm.uml2cloud.customization.elementTypes"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
