@@ -603,7 +603,7 @@
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_LX8qwSyYEeimk9UjhXlLXQ" name="diagram_compatibility_version" stringValue="1.3.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_LX8qwiyYEeimk9UjhXlLXQ"/>
-    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_LX8qwyyYEeimk9UjhXlLXQ" diagramKindId="org.eclipse.papyrus.uml.diagram.component.root.package">
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_LX8qwyyYEeimk9UjhXlLXQ" diagramKindId="es.uclm.uml2cloud.diagram.component.root.package">
       <owner xmi:type="uml:Model" href="cloudSystem.uml#_LVl6UCyYEeimk9UjhXlLXQ"/>
     </styles>
     <element xmi:type="uml:Model" href="cloudSystem.uml#_LVl6UCyYEeimk9UjhXlLXQ"/>
@@ -890,7 +890,7 @@
     <children xmi:type="notation:BasicCompartment" xmi:id="_mH-DsDwaEeiflZvkuDjYZA" type="GRILLING"/>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_1dEZJizqEeiHMtOH55pATA" name="diagram_compatibility_version" stringValue="1.3.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_1dEZJyzqEeiHMtOH55pATA"/>
-    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_1dEZKCzqEeiHMtOH55pATA" diagramKindId="org.eclipse.papyrus.uml.diagram.sequence">
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_1dEZKCzqEeiHMtOH55pATA" diagramKindId="es.uclm.uml2cloud.diagram.sequence">
       <owner xmi:type="uml:Interaction" href="cloudSystem.uml#_02KKICzqEeiHMtOH55pATA"/>
     </styles>
     <element xmi:type="uml:Interaction" href="cloudSystem.uml#_02KKICzqEeiHMtOH55pATA"/>
