@@ -209,15 +209,18 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		//StringBuffer result = new StringBuffer(super.toString());
+		StringBuffer result = new StringBuffer("");
 		result.append(" (numberOfRacks: ");
 		result.append(numberOfRacks);
+		result.append(", ");
+		result.append(rackType.getBase_Component().getName());
 		result.append(')');
 		return result.toString();
 	}
