@@ -209,15 +209,18 @@ public class DataCenterElementImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		//StringBuffer result = new StringBuffer(super.toString());
+		StringBuffer result = new StringBuffer("");
 		result.append(" (numberOfDataCenters: ");
 		result.append(numberOfDataCenters);
+		result.append(", ");
+		result.append(dataCenterType.getBase_Component().getName());
 		result.append(')');
 		return result.toString();
 	}

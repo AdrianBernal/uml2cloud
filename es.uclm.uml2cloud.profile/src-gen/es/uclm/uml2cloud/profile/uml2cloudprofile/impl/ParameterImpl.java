@@ -303,21 +303,24 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
+		//StringBuffer result = new StringBuffer(super.toString());
+		StringBuffer result = new StringBuffer("");
+		result.append("(");
+		//result.append(" (name: ");
 		result.append(name);
-		result.append(", value: ");
+		//result.append(", value: ");
+		result.append(": ");
 		result.append(value);
-		result.append(", unit: ");
-		result.append(unit);
-		result.append(", description: ");
-		result.append(description);
+		//result.append(", unit: ");
+		//result.append(unit);
+		//result.append(", description: ");
+		//result.append(description);
 		result.append(')');
 		return result.toString();
 	}

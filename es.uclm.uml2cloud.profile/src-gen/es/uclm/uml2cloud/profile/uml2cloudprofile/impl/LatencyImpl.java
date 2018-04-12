@@ -228,15 +228,20 @@ public class LatencyImpl extends MinimalEObjectImpl.Container implements Latency
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
+		//StringBuffer result = new StringBuffer(super.toString());
+		StringBuffer result = new StringBuffer("");
+		//result.append(" (name: ");
+		result.append('(');
 		result.append(name);
+		result.append(": ");
+		result.append(time.getValue());
+		result.append(time.getUnit());
 		result.append(')');
 		return result.toString();
 	}
