@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module generateINIFile('http://www.uclm.es/UML/profiles/UML2Cloud/1')]
+[module generateINIFile('http://www.uclm.es/UML/profiles/UML2Cloud/1','http://www.eclipse.org/uml2/5.0.0/UML')]
 [import es::uclm::uml2cloud::m2t::simcan::files::util /]
 
 
@@ -51,14 +51,17 @@ cmdenv-log-prefix = "(%t):['['/]%l[']'/] %m  "
 ###-----------------------------------------------------------------
 [packageName/].[aDataCenterElement.dataCenterType.base_Component.name/].dcManager.dataCenterConfig = "[aDataCenterElement.generateDataCenterList()/]"
 
-	[aDataCenterElement.dataCenterType.rackElements.rackType.generateRackConfiguration(packageName+'.dc_'+aDataCenterElement.dataCenterType.base_Component.name)+'_*'/]
+	[aDataCenterElement.dataCenterType.rackElements.rackType.generateRackConfiguration(packageName+'.dc_'+aDataCenterElement.dataCenterType.base_Component.name+'_*')/]
 [/template]
 
 [template public generateRackConfiguration(aRack : Rack, packageName : String)]
 ## ---------------------------------------------------------------
 ##   Configuration of rack(s) [aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*
 ## ---------------------------------------------------------------
-[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.channelType = "[aRack.network/]"
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.channelType = "UserCustom_channel"
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].out.UserCustom_channel.datarate = [aRack.network.getBandwidth()/]
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].out.UserCustom_channel.datarate = [aRack.network.getBandwidth()/]
+[packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.switch.out['['/]*[']'/].UserCustom_channel.datarate = [aRack.network.getBandwidth()/]
 [packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.numBoards = [aRack.boards/]
 [packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.bladesPerBoard = [aRack.machinesPerBoard/]
 [packageName/].[aRack.eClass().name.toLowerFirst()/]_[aRack.base_Component.name/]_*.board['['/]*[']'/].blade['['/]*[']'/].staticAppAssignment = false
@@ -87,7 +90,7 @@ LocalApplication [aApplication.base_Component.name/] [3+aApplication.parameter->
 [/template]
 
 [template public generateUserList(aUser : User)]
-[aUser.base_Lifeline.name/] [aUser.instances/] [aUser.siblings(Execute)->select(aExecute : Execute | aUser.base_Lifeline.coveredBy->asSet()->includes(aExecute.base_Message.sendEvent)).generateExecuteList()/][aUser.siblings(Request)->select(aRequest : Request | aUser.base_Lifeline.coveredBy->asSet()->includes(aRequest.base_Message.sendEvent)).generateRequestList()/]
+[aUser.base_Lifeline.name/] [aUser.instances/] [aUser.siblings(Execute)->select(aExecute : Execute | aUser.base_Lifeline.coveredBy->asSet()->includes(aExecute.base_Message.sendEvent)).generateExecuteList()/] [aUser.siblings(Request)->select(aRequest : Request | aUser.base_Lifeline.coveredBy->asSet()->includes(aRequest.base_Message.sendEvent)).generateRequestList()/]
 [/template]
 
 [template public generateExecuteList(aExecute : Execute)]

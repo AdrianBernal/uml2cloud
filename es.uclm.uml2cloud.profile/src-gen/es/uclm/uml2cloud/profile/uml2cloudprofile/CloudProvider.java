@@ -26,6 +26,7 @@ import org.eclipse.uml2.uml.Lifeline;
 public interface CloudProvider extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Resource Allocation Policy</b></em>' attribute.
+	 * The default value is <code>"FirstFit"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Resource Allocation Policy</em>' attribute isn't clear,
@@ -35,7 +36,7 @@ public interface CloudProvider extends EObject {
 	 * @return the value of the '<em>Resource Allocation Policy</em>' attribute.
 	 * @see #setResourceAllocationPolicy(String)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCloudProvider_ResourceAllocationPolicy()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model default="FirstFit" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getResourceAllocationPolicy();

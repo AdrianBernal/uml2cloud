@@ -33,9 +33,9 @@ public class GenerateSIMCANFiles extends AbstractAcceleoGenerator {
     /**
      * The name of the module.
      *
-     * @generated
+     * @generated NOT
      */
-    public static final String MODULE_FILE_NAME = "/es/uclm/uml2cloud/m2t/simcan/main/generateSIMCANFiles";
+    public static final String MODULE_FILE_NAME = "/bin/es/uclm/uml2cloud/m2t/simcan/main/generateSIMCANFiles";
     
     /**
      * The name of the templates that are to be generated.

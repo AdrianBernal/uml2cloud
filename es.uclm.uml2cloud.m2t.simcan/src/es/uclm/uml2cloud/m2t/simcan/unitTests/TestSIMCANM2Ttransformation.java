@@ -33,9 +33,9 @@ public class TestSIMCANM2Ttransformation extends AbstractAcceleoGenerator {
     /**
      * The name of the module.
      *
-     * @generated
+     * @generated NOT
      */
-    public static final String MODULE_FILE_NAME = "/es/uclm/uml2cloud/m2t/simcan/unitTests/testSIMCANM2Ttransformation";
+    public static final String MODULE_FILE_NAME = "/bin/es/uclm/uml2cloud/m2t/simcan/unitTests/testSIMCANM2Ttransformation";
     
     /**
      * The name of the templates that are to be generated.
@@ -342,6 +342,9 @@ public class TestSIMCANM2Ttransformation extends AbstractAcceleoGenerator {
         super.registerPackages(resourceSet);
         if (!isInWorkspace(es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage.class)) {
             resourceSet.getPackageRegistry().put(es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage.eINSTANCE.getNsURI(), es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage.eINSTANCE);
+        }
+        if (!isInWorkspace(org.eclipse.uml2.uml.UMLPackage.class)) {
+            resourceSet.getPackageRegistry().put(org.eclipse.uml2.uml.UMLPackage.eINSTANCE.getNsURI(), org.eclipse.uml2.uml.UMLPackage.eINSTANCE);
         }
         
         /*

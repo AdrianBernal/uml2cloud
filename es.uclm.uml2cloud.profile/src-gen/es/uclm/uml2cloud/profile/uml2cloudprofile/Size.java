@@ -51,7 +51,7 @@ public interface Size extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' attribute.
-	 * The default value is <code>"TByte"</code>.
+	 * The default value is <code>"MByte"</code>.
 	 * The literals are from the enumeration {@link es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -63,7 +63,7 @@ public interface Size extends EObject {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit
 	 * @see #setUnit(SizeUnit)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getSize_Unit()
-	 * @model default="TByte" required="true" ordered="false"
+	 * @model default="MByte" required="true" ordered="false"
 	 * @generated
 	 */
 	SizeUnit getUnit();

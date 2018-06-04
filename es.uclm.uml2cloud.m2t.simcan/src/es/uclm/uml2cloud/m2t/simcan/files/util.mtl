@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module util('http://www.uclm.es/UML/profiles/UML2Cloud/1')]
+[module util('http://www.uclm.es/UML/profiles/UML2Cloud/1','http://www.eclipse.org/uml2/5.0.0/UML')]
 
 
 [comment][query public getEthernet(c : Set(Channel)) : String = Sequence(String){'DataCenterEth10M_channel','DataCenterEth100M_channel','DataCenterEth1G_channel','DataCenterEth10G_channel','DataCenterEth40G_channel','DataCenterEth100G_channel'}->at(Sequence(Channel){Channel::Ethernet10Mbps, Channel::Ethernet100Mbps, Channel::Ethernet1Gbps, Channel::Ethernet10Gbps, Channel::Ethernet40Gbps,Channel::Ethernet100Gbps}->indexOf(c->asSequence()->first()))/][/comment]
@@ -12,9 +12,9 @@
 
 [query public getTime(time : Time) : String = time.value.toString()+time.unit/]
 
-[query public getHours(time : Time) : Real = time.value*Sequence(Real){24,1,1/60,1/(60*60),1/(60*60*1000),1/(60*60*1000*1000)}->at(Sequence(SizeUnit){TimeUnit::d, TimeUnit::h, TimeUnit::min, TimeUnit::s, TimeUnit::ms, TimeUnit::us}->indexOf(time.unit))/]
+[query public getHours(time : Time) : Real = time.value*Sequence(Real){1,1/60,1/(60*60),1/(60*60*1000),1/(60*60*1000*1000)}->at(Sequence(SizeUnit){TimeUnit::h, TimeUnit::min, TimeUnit::s, TimeUnit::ms, TimeUnit::us}->indexOf(time.unit))/]
 
-[query public getSeconds(time : Time) : Real = time.value*Sequence(Real){24*60*60,60*60,60,1,1/1000,1/(1000*1000)}->at(Sequence(SizeUnit){TimeUnit::d, TimeUnit::h, TimeUnit::min, TimeUnit::s, TimeUnit::ms, TimeUnit::us}->indexOf(time.unit))/]
+[query public getSeconds(time : Time) : Real = time.value*Sequence(Real){60*60,60,1,1/1000,1/(1000*1000)}->at(Sequence(SizeUnit){TimeUnit::h, TimeUnit::min, TimeUnit::s, TimeUnit::ms, TimeUnit::us}->indexOf(time.unit))/]
 
 [query public getBandwidth(bandwidth : Bandwidth) : String = bandwidth.value.toString()+bandwidth.unit/]
 

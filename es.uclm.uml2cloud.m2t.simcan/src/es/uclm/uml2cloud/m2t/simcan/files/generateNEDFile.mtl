@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module generateNEDFile('http://www.uclm.es/UML/profiles/UML2Cloud/1')]
+[module generateNEDFile('http://www.uclm.es/UML/profiles/UML2Cloud/1','http://www.eclipse.org/uml2/5.0.0/UML')]
 [import es::uclm::uml2cloud::m2t::simcan::files::util /]
 
 [template public generateNEDFile(aCloudInfrastructure : CloudInfrastructure)]
@@ -17,8 +17,8 @@ package simcan2.simulations.[aCloudInfrastructure.base_Component.name/];
 import simcan2.Architecture.Nodes.Cloud.CloudBlade;
 import simcan2.Architecture.Nodes.Cloud.CloudBoard;
 import simcan2.Architecture.Nodes.Cloud.CloudRack;
-import simcan2.Management.CloudManagers.CloudDataCenterManagers.*.*;
-import simcan2.Management.CloudManagers.CloudProviders.*.*;
+import simcan2.Management.DataCenterManager.DataCenterManager;
+import simcan2.Management.CloudProviders.*.*;
 import simcan2.Architecture.Network.DataCenterNetwork.*;
 import simcan2.Management.UserGenerators.UserGenerator.*;
 import simcan2.Management.UserGenerators.UserGeneratorBase.*;
@@ -48,7 +48,7 @@ module [aDataCenterElement.dataCenterType.base_Component.name/]{
 		// ---------------------------------------------------------------
 		//   Definition of the data-center manager
 		// ---------------------------------------------------------------
-		dcManager:CloudDataCenterManager{
+		dcManager:DataCenterManager{
 			parameters:
 				appList=appList;
 				vmList=vmList;
@@ -80,10 +80,10 @@ module [aDataCenterElement.dataCenterType.base_Component.name/]{
 		dcManager.in <-- ned.IdealChannel <-- fromCloudProvider;
 
 		// Connections between computing racks and the network
-		[aDataCenterElement.dataCenterType.rackElements->select(rackType.oclIsTypeOf(ComputingRack)).generateRackConnection(aDataCenterElement.dataCenterType.network)/]
+		[aDataCenterElement.dataCenterType.rackElements->select(rackType.oclIsTypeOf(ComputingRack)).generateRackComputingConnection(aDataCenterElement.dataCenterType.network)/]
 
 		// Connections between storage racks and the network
-		[aDataCenterElement.dataCenterType.rackElements->select(rackType.oclIsTypeOf(StorageRack)).generateRackConnection(aDataCenterElement.dataCenterType.network)/]
+		[aDataCenterElement.dataCenterType.rackElements->select(rackType.oclIsTypeOf(StorageRack)).generateRackStorageConnection(aDataCenterElement.dataCenterType.network)/]
 
 }
 
@@ -105,10 +105,17 @@ dataCenterNetwork:DataCenterNetwork{
 }
 [/template]
 
-[template public generateRackConnection(aRackElement : RackElement, network : Bandwidth)  ? (aRackElement.numberOfRacks>0)]
+[template public generateRackComputingConnection(aRackElement : RackElement, network : Bandwidth)  ? (aRackElement.numberOfRacks>0)]
 [for (index : Integer | Sequence(Integer){1..aRackElement.numberOfRacks})]
 [aRackElement.rackType.eClass().name.toLowerFirst()/]_[aRackElement.rackType.base_Component.name/]_[index/].out --> {datarate=[network.getBandwidth()/];} --> dataCenterNetwork.inComm++;
 [aRackElement.rackType.eClass().name.toLowerFirst()/]_[aRackElement.rackType.base_Component.name/]_[index/].in <-- {datarate=[network.getBandwidth()/];} <-- dataCenterNetwork.outComm++;
+[/for]
+[/template]
+
+[template public generateRackStorageConnection(aRackElement : RackElement, network : Bandwidth)  ? (aRackElement.numberOfRacks>0)]
+[for (index : Integer | Sequence(Integer){1..aRackElement.numberOfRacks})]
+[aRackElement.rackType.eClass().name.toLowerFirst()/]_[aRackElement.rackType.base_Component.name/]_[index/].out --> {datarate=[network.getBandwidth()/];} --> dataCenterNetwork.inStorage++;
+[aRackElement.rackType.eClass().name.toLowerFirst()/]_[aRackElement.rackType.base_Component.name/]_[index/].in <-- {datarate=[network.getBandwidth()/];} <-- dataCenterNetwork.outStorage++;
 [/for]
 [/template]
 
@@ -163,10 +170,11 @@ cloudProvider:CloudProvider[aCloudInfrastructure.cloudProvider.resourceAllocatio
 		vmList=vmList;
 		userList=userList;
 		dataCentersList=dataCentersList;
+		@display("p=245,221;i=provider");
 
 	gates:
-		fromDataCenter['['+aCloudInfrastructure.datacenterElements->collectNested(numberOfDataCenters)->sum()+']'/];
-		toDataCenter['['+aCloudInfrastructure.datacenterElements->collectNested(numberOfDataCenters)->sum()+']'/];
+		fromDataCenter['['/][aCloudInfrastructure.datacenterElements->collectNested(numberOfDataCenters)->sum()/][']'/];
+		toDataCenter['['/][aCloudInfrastructure.datacenterElements->collectNested(numberOfDataCenters)->sum()/][']'/];
 }
 [/template]
 
@@ -179,6 +187,7 @@ userGenerator:UserGenerator{
 		appList=appList;
 		vmList=vmList;
 		userList=userList;
+		@display("p=245,368;i=users");
 }
 [/template]
 
@@ -191,8 +200,8 @@ connections allowunconnected:
 	// Connections between the cloud provider and each data-center manager
 [for (aDataCenterElement : DataCenterElement | aCloudInfrastructure.datacenterElements)]
 	[for (index : Integer | Sequence(Integer){1..aDataCenterElement.numberOfDataCenters})]
-		cloudProvider.toDataCenter++ --> {datarate=[aCloudInfrastructure.network.getBandwidth()/];} --> dc_[aDataCenterElement.dataCenterType.base_Component.name/]_[index/].in;
-		cloudProvider.fromDataCenter++ <-- {datarate=[aCloudInfrastructure.network.getBandwidth()/];} <-- dc_[aDataCenterElement.dataCenterType.base_Component.name/]_[index/].out;	
+		cloudProvider.toDataCenter++ --> {datarate=[aCloudInfrastructure.network.getBandwidth()/];} --> dc_[aDataCenterElement.dataCenterType.base_Component.name/]_[index/].fromCloudProvider;
+		cloudProvider.fromDataCenter++ <-- {datarate=[aCloudInfrastructure.network.getBandwidth()/];} <-- dc_[aDataCenterElement.dataCenterType.base_Component.name/]_[index/].toCloudProvider;	
 	[/for]
 [/for]
 

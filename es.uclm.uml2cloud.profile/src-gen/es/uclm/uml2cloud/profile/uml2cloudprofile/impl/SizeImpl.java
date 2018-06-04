@@ -56,7 +56,7 @@ public class SizeImpl extends MinimalEObjectImpl.Container implements Size {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final SizeUnit UNIT_EDEFAULT = SizeUnit.TBYTE;
+	protected static final SizeUnit UNIT_EDEFAULT = SizeUnit.MBYTE;
 
 	/**
 	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.

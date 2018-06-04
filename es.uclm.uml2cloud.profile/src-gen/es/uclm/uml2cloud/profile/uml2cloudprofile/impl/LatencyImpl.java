@@ -38,7 +38,7 @@ public class LatencyImpl extends MinimalEObjectImpl.Container implements Latency
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = "read";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.

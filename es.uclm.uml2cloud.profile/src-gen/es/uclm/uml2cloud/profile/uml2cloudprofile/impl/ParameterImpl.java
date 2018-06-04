@@ -37,7 +37,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = "inputFile";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -57,7 +57,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALUE_EDEFAULT = null;
+	protected static final String VALUE_EDEFAULT = "/inputFile_0.dat";
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -77,7 +77,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UNIT_EDEFAULT = null;
+	protected static final String UNIT_EDEFAULT = "string";
 
 	/**
 	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
@@ -97,7 +97,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
+	protected static final String DESCRIPTION_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.

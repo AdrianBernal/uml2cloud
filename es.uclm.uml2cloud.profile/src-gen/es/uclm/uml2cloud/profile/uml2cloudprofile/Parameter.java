@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Parameter extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The default value is <code>"inputFile"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -35,7 +36,7 @@ public interface Parameter extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getParameter_Name()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model default="inputFile" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getName();
@@ -52,6 +53,7 @@ public interface Parameter extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * The default value is <code>"/inputFile_0.dat"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
@@ -61,7 +63,7 @@ public interface Parameter extends EObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getParameter_Value()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model default="/inputFile_0.dat" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getValue();
@@ -78,6 +80,7 @@ public interface Parameter extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' attribute.
+	 * The default value is <code>"string"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Unit</em>' attribute isn't clear,
@@ -87,7 +90,7 @@ public interface Parameter extends EObject {
 	 * @return the value of the '<em>Unit</em>' attribute.
 	 * @see #setUnit(String)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getParameter_Unit()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model default="string" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getUnit();
@@ -104,6 +107,7 @@ public interface Parameter extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
@@ -113,7 +117,7 @@ public interface Parameter extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getParameter_Description()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model default=" " dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
 	String getDescription();

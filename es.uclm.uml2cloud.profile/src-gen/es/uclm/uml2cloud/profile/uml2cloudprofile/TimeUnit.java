@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum TimeUnit implements Enumerator {
 	/**
-	 * The '<em><b>D</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #D_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	D(0, "d", "d"),
-
-	/**
 	 * The '<em><b>H</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,7 +26,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	H(1, "h", "h"),
+	H(0, "h", "h"),
 
 	/**
 	 * The '<em><b>Min</b></em>' literal object.
@@ -46,7 +36,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MIN(2, "min", "min"),
+	MIN(1, "min", "min"),
 
 	/**
 	 * The '<em><b>S</b></em>' literal object.
@@ -56,7 +46,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	S(3, "s", "s"),
+	S(2, "s", "s"),
 
 	/**
 	 * The '<em><b>Ms</b></em>' literal object.
@@ -66,7 +56,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MS(4, "ms", "ms"),
+	MS(3, "ms", "ms"),
 
 	/**
 	 * The '<em><b>Us</b></em>' literal object.
@@ -76,22 +66,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	US(5, "us", "us");
-
-	/**
-	 * The '<em><b>D</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>D</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #D
-	 * @model name="d"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int D_VALUE = 0;
+	US(4, "us", "us");
 
 	/**
 	 * The '<em><b>H</b></em>' literal value.
@@ -106,7 +81,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int H_VALUE = 1;
+	public static final int H_VALUE = 0;
 
 	/**
 	 * The '<em><b>Min</b></em>' literal value.
@@ -121,7 +96,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MIN_VALUE = 2;
+	public static final int MIN_VALUE = 1;
 
 	/**
 	 * The '<em><b>S</b></em>' literal value.
@@ -136,7 +111,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int S_VALUE = 3;
+	public static final int S_VALUE = 2;
 
 	/**
 	 * The '<em><b>Ms</b></em>' literal value.
@@ -151,7 +126,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MS_VALUE = 4;
+	public static final int MS_VALUE = 3;
 
 	/**
 	 * The '<em><b>Us</b></em>' literal value.
@@ -166,7 +141,7 @@ public enum TimeUnit implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int US_VALUE = 5;
+	public static final int US_VALUE = 4;
 
 	/**
 	 * An array of all the '<em><b>Time Unit</b></em>' enumerators.
@@ -176,7 +151,6 @@ public enum TimeUnit implements Enumerator {
 	 */
 	private static final TimeUnit[] VALUES_ARRAY =
 		new TimeUnit[] {
-			D,
 			H,
 			MIN,
 			S,
@@ -238,7 +212,6 @@ public enum TimeUnit implements Enumerator {
 	 */
 	public static TimeUnit get(int value) {
 		switch (value) {
-			case D_VALUE: return D;
 			case H_VALUE: return H;
 			case MIN_VALUE: return MIN;
 			case S_VALUE: return S;

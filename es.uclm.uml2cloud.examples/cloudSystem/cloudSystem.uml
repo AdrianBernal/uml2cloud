@@ -86,9 +86,9 @@
   <UML2CloudProfile:Application xmi:id="_9Myv0CzoEeiHMtOH55pATA" base_Component="_8qmowCzoEeiHMtOH55pATA" MIs="1000">
     <inputData xmi:type="UML2CloudProfile:Size" xmi:id="_4OKyUCzrEeiHMtOH55pATA" value="50.0" unit="MByte"/>
     <outputData xmi:type="UML2CloudProfile:Size" xmi:id="_49zfgCzrEeiHMtOH55pATA" value="50.0" unit="MByte"/>
-    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_-jWLsCzrEeiHMtOH55pATA" name="inputFile" value="/inputFile_0.dat" unit="string" description=""/>
-    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_vZIUYC0kEeiHMtOH55pATA" name="outputFile" value="/outputFile_0.dat" unit="string"/>
-    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_3f-fsC0kEeiHMtOH55pATA" name="interactions" value="5" unit="int"/>
+    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_-jWLsCzrEeiHMtOH55pATA" name="inputFile" value="/inputFile_0.dat" unit="string" description=" "/>
+    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_vZIUYC0kEeiHMtOH55pATA" name="outputFile" value="/outputFile_0.dat" unit="string" description=" "/>
+    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_3f-fsC0kEeiHMtOH55pATA" name="interactions" value="5" unit="int" description=" "/>
   </UML2CloudProfile:Application>
   <UML2CloudProfile:Memory xmi:id="__gGPMCzoEeiHMtOH55pATA" base_Component="_-TjjkCzoEeiHMtOH55pATA">
     <capacity xmi:type="UML2CloudProfile:Size" xmi:id="_tdwOoCzpEeiHMtOH55pATA" value="4.0" unit="GByte"/>
@@ -125,7 +125,9 @@
   </UML2CloudProfile:CloudInfrastructure>
   <UML2CloudProfile:User xmi:id="_FCMjQDjFEeigKPw-EUNZoA" base_Lifeline="_DV3kUDjFEeigKPw-EUNZoA"/>
   <UML2CloudProfile:Request xmi:id="_tngEkD0QEeiFfMsviakT9Q" base_Message="_pSWCMD0QEeiFfMsviakT9Q">
-    <vmInstantiation xmi:type="UML2CloudProfile:VMInstantiation" xmi:id="_G3eUAD0REeiFfMsviakT9Q" instances="5" vmType="_sqmI0CzoEeiHMtOH55pATA"/>
+    <vmInstantiation xmi:type="UML2CloudProfile:VMInstantiation" xmi:id="_G3eUAD0REeiFfMsviakT9Q" instances="5" vmType="_sqmI0CzoEeiHMtOH55pATA">
+      <rentingTime xmi:type="UML2CloudProfile:Time" xmi:id="_Y58TcD6cEeiw-dudD4v1eg" value="2.0" unit="h"/>
+    </vmInstantiation>
   </UML2CloudProfile:Request>
   <UML2CloudProfile:Execute xmi:id="_uSErkD0QEeiFfMsviakT9Q" base_Message="_p5ErAD0QEeiFfMsviakT9Q">
     <appInstantiation xmi:type="UML2CloudProfile:AppInstantiation" xmi:id="_JNqvUD0REeiFfMsviakT9Q" applicationType="_9Myv0CzoEeiHMtOH55pATA"/>

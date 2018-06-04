@@ -21,9 +21,6 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * self.disk.value>0
- * <!-- end-model-doc -->
  * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfileFactory
  * @model kind="package"
  *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='uml2cloud'"
@@ -1415,13 +1412,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int VM___VM_CAN_NOT_BE_ALLOCATED__DIAGNOSTICCHAIN_MAP = 3;
 
 	/**
+	 * The operation id for the '<em>Disk Must Be Greater Than Zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM___DISK_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 4;
+
+	/**
 	 * The number of operations of the '<em>VM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM_OPERATION_COUNT = 4;
+	int VM_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl <em>Request</em>}' class.
@@ -1479,13 +1485,31 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int REQUEST___INSTANCES_MUST_BE_GREATER_THAN_ZERO__ZERO__DIAGNOSTICCHAIN_MAP = 1;
 
 	/**
+	 * The operation id for the '<em>Request Must Be Sent To ACloud Provider</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST___REQUEST_MUST_BE_SENT_TO_ACLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP = 2;
+
+	/**
+	 * The operation id for the '<em>Request Must Be Sent By AUser</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST___REQUEST_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP = 3;
+
+	/**
 	 * The number of operations of the '<em>Request</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST_OPERATION_COUNT = 2;
+	int REQUEST_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl <em>VM Instantiation</em>}' class.
@@ -1589,13 +1613,31 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int SUBSCRIBE___MAX_TIME_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
+	 * The operation id for the '<em>Subscribe Must Be Sent To ACloud Provider</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBSCRIBE___SUBSCRIBE_MUST_BE_SENT_TO_ACLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
+	 * The operation id for the '<em>Subscribe Must Be Sent By AUser</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBSCRIBE___SUBSCRIBE_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP = 2;
+
+	/**
 	 * The number of operations of the '<em>Subscribe</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIBE_OPERATION_COUNT = 1;
+	int SUBSCRIBE_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.AppInstantiationImpl <em>App Instantiation</em>}' class.
@@ -1875,13 +1917,31 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int EXECUTE___INSTANCES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
+	 * The operation id for the '<em>Execute Must Be Sent To ACloud Provider</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTE___EXECUTE_MUST_BE_SENT_TO_ACLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
+	 * The operation id for the '<em>Execute Must Be Sent By AUser</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTE___EXECUTE_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP = 2;
+
+	/**
 	 * The number of operations of the '<em>Execute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTE_OPERATION_COUNT = 1;
+	int EXECUTE_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl <em>User</em>}' class.
@@ -1921,13 +1981,40 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int USER_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>User Must Have ASubscribe Message</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER___USER_MUST_HAVE_ASUBSCRIBE_MESSAGE__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>User Must Have AExecute Message</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER___USER_MUST_HAVE_AEXECUTE_MESSAGE__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
+	 * The operation id for the '<em>User Must Have ARequest Message</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER___USER_MUST_HAVE_AREQUEST_MESSAGE__DIAGNOSTICCHAIN_MAP = 2;
+
+	/**
 	 * The number of operations of the '<em>User</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_OPERATION_COUNT = 0;
+	int USER_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl <em>Cloud Infrastructure</em>}' class.
@@ -2997,6 +3084,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getVM__VM_can_not_be_allocated__DiagnosticChain_Map();
 
 	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VM#disk_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Disk Must Be Greater Than Zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Disk Must Be Greater Than Zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.VM#disk_Must_Be_Greater_Than_Zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getVM__Disk_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request <em>Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3047,6 +3144,26 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRequest__Instances_Must_Be_Greater_Than__Zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#Request_Must_Be_Sent_To_A_CloudProvider(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Request Must Be Sent To ACloud Provider</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Request Must Be Sent To ACloud Provider</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Request#Request_Must_Be_Sent_To_A_CloudProvider(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getRequest__Request_Must_Be_Sent_To_A_CloudProvider__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Request#Request_Must_Be_Sent_By_A_User(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Request Must Be Sent By AUser</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Request Must Be Sent By AUser</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Request#Request_Must_Be_Sent_By_A_User(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getRequest__Request_Must_Be_Sent_By_A_User__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMInstantiation <em>VM Instantiation</em>}'.
@@ -3132,6 +3249,26 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getSubscribe__MaxTime_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#Subscribe_Must_Be_Sent_To_A_CloudProvider(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscribe Must Be Sent To ACloud Provider</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Subscribe Must Be Sent To ACloud Provider</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#Subscribe_Must_Be_Sent_To_A_CloudProvider(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getSubscribe__Subscribe_Must_Be_Sent_To_A_CloudProvider__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#Subscribe_Must_Be_Sent_By_A_User(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Subscribe Must Be Sent By AUser</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Subscribe Must Be Sent By AUser</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Subscribe#Subscribe_Must_Be_Sent_By_A_User(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getSubscribe__Subscribe_Must_Be_Sent_By_A_User__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.AppInstantiation <em>App Instantiation</em>}'.
@@ -3313,6 +3450,26 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getExecute__Instances_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Execute#Execute_Must_Be_Sent_To_A_CloudProvider(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Execute Must Be Sent To ACloud Provider</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Execute Must Be Sent To ACloud Provider</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Execute#Execute_Must_Be_Sent_To_A_CloudProvider(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getExecute__Execute_Must_Be_Sent_To_A_CloudProvider__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Execute#Execute_Must_Be_Sent_By_A_User(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Execute Must Be Sent By AUser</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Execute Must Be Sent By AUser</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Execute#Execute_Must_Be_Sent_By_A_User(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getExecute__Execute_Must_Be_Sent_By_A_User__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User <em>User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3343,6 +3500,36 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUser_Instances();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#User_Must_Have_A_Subscribe_Message(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>User Must Have ASubscribe Message</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>User Must Have ASubscribe Message</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.User#User_Must_Have_A_Subscribe_Message(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUser__User_Must_Have_A_Subscribe_Message__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#User_Must_Have_A_Execute_Message(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>User Must Have AExecute Message</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>User Must Have AExecute Message</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.User#User_Must_Have_A_Execute_Message(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUser__User_Must_Have_A_Execute_Message__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#User_Must_Have_A_Request_Message(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>User Must Have ARequest Message</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>User Must Have ARequest Message</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.User#User_Must_Have_A_Request_Message(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getUser__User_Must_Have_A_Request_Message__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure <em>Cloud Infrastructure</em>}'.
@@ -4232,6 +4419,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation VM___VM_CAN_NOT_BE_ALLOCATED__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__VM_can_not_be_allocated__DiagnosticChain_Map();
 
 		/**
+		 * The meta object literal for the '<em><b>Disk Must Be Greater Than Zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VM___DISK_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getVM__Disk_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RequestImpl <em>Request</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4272,6 +4467,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation REQUEST___INSTANCES_MUST_BE_GREATER_THAN_ZERO__ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRequest__Instances_Must_Be_Greater_Than__Zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Request Must Be Sent To ACloud Provider</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REQUEST___REQUEST_MUST_BE_SENT_TO_ACLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRequest__Request_Must_Be_Sent_To_A_CloudProvider__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Request Must Be Sent By AUser</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REQUEST___REQUEST_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getRequest__Request_Must_Be_Sent_By_A_User__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMInstantiationImpl <em>VM Instantiation</em>}' class.
@@ -4340,6 +4551,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SUBSCRIBE___MAX_TIME_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscribe__MaxTime_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Subscribe Must Be Sent To ACloud Provider</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SUBSCRIBE___SUBSCRIBE_MUST_BE_SENT_TO_ACLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscribe__Subscribe_Must_Be_Sent_To_A_CloudProvider__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Subscribe Must Be Sent By AUser</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SUBSCRIBE___SUBSCRIBE_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSubscribe__Subscribe_Must_Be_Sent_By_A_User__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.AppInstantiationImpl <em>App Instantiation</em>}' class.
@@ -4492,6 +4719,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation EXECUTE___INSTANCES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getExecute__Instances_Must_Be_Greater_Than_Zero__DiagnosticChain_Map();
 
 		/**
+		 * The meta object literal for the '<em><b>Execute Must Be Sent To ACloud Provider</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EXECUTE___EXECUTE_MUST_BE_SENT_TO_ACLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getExecute__Execute_Must_Be_Sent_To_A_CloudProvider__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Execute Must Be Sent By AUser</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EXECUTE___EXECUTE_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getExecute__Execute_Must_Be_Sent_By_A_User__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl <em>User</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4516,6 +4759,30 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute USER__INSTANCES = eINSTANCE.getUser_Instances();
+
+		/**
+		 * The meta object literal for the '<em><b>User Must Have ASubscribe Message</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER___USER_MUST_HAVE_ASUBSCRIBE_MESSAGE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getUser__User_Must_Have_A_Subscribe_Message__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>User Must Have AExecute Message</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER___USER_MUST_HAVE_AEXECUTE_MESSAGE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getUser__User_Must_Have_A_Execute_Message__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>User Must Have ARequest Message</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation USER___USER_MUST_HAVE_AREQUEST_MESSAGE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getUser__User_Must_Have_A_Request_Message__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl <em>Cloud Infrastructure</em>}' class.

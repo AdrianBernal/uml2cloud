@@ -38,7 +38,7 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RESOURCE_ALLOCATION_POLICY_EDEFAULT = null;
+	protected static final String RESOURCE_ALLOCATION_POLICY_EDEFAULT = "FirstFit";
 
 	/**
 	 * The cached value of the '{@link #getResourceAllocationPolicy() <em>Resource Allocation Policy</em>}' attribute.

@@ -184,12 +184,20 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	public static final int VM__VM_CAN_NOT_BE_ALLOCATED = 18;
 
 	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Disk Must Be Greater Than Zero' of 'VM'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int VM__DISK_MUST_BE_GREATER_THAN_ZERO = 19;
+
+	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Renting Time Must Be Greater Than Zero' of 'Request'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int REQUEST__RENTING_TIME_MUST_BE_GREATER_THAN_ZERO = 19;
+	public static final int REQUEST__RENTING_TIME_MUST_BE_GREATER_THAN_ZERO = 20;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Instances Must Be Greater Than Zero' of 'Request'.
@@ -197,7 +205,23 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int REQUEST__INSTANCES_MUST_BE_GREATER_THAN_ZERO = 20;
+	public static final int REQUEST__INSTANCES_MUST_BE_GREATER_THAN_ZERO = 21;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Request Must Be Sent To ACloud Provider' of 'Request'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int REQUEST__REQUEST_MUST_BE_SENT_TO_ACLOUD_PROVIDER = 22;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Request Must Be Sent By AUser' of 'Request'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int REQUEST__REQUEST_MUST_BE_SENT_BY_AUSER = 23;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Max Time Must Be Greater Than Zero' of 'Subscribe'.
@@ -205,7 +229,23 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBE__MAX_TIME_MUST_BE_GREATER_THAN_ZERO = 21;
+	public static final int SUBSCRIBE__MAX_TIME_MUST_BE_GREATER_THAN_ZERO = 24;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Subscribe Must Be Sent To ACloud Provider' of 'Subscribe'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int SUBSCRIBE__SUBSCRIBE_MUST_BE_SENT_TO_ACLOUD_PROVIDER = 25;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Subscribe Must Be Sent By AUser' of 'Subscribe'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int SUBSCRIBE__SUBSCRIBE_MUST_BE_SENT_BY_AUSER = 26;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Instances Must Be Greater Than Zero' of 'Execute'.
@@ -213,7 +253,47 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int EXECUTE__INSTANCES_MUST_BE_GREATER_THAN_ZERO = 22;
+	public static final int EXECUTE__INSTANCES_MUST_BE_GREATER_THAN_ZERO = 27;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Execute Must Be Sent To ACloud Provider' of 'Execute'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int EXECUTE__EXECUTE_MUST_BE_SENT_TO_ACLOUD_PROVIDER = 28;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Execute Must Be Sent By AUser' of 'Execute'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int EXECUTE__EXECUTE_MUST_BE_SENT_BY_AUSER = 29;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Have ASubscribe Message' of 'User'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int USER__USER_MUST_HAVE_ASUBSCRIBE_MESSAGE = 30;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Have AExecute Message' of 'User'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int USER__USER_MUST_HAVE_AEXECUTE_MESSAGE = 31;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Have ARequest Message' of 'User'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int USER__USER_MUST_HAVE_AREQUEST_MESSAGE = 32;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Datacenter Elements instances Must Be Greatter Than Or Equal To Zero' of 'Cloud Infrastructure'.
@@ -221,7 +301,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO = 23;
+	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO = 33;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Datacenter Elements instances Should Be Greatter Than Zero' of 'Cloud Infrastructure'.
@@ -229,7 +309,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_SHOULD_BE_GREATTER_THAN_ZERO = 24;
+	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_SHOULD_BE_GREATTER_THAN_ZERO = 34;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -237,7 +317,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 24;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 34;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -774,6 +854,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateVM_computingUnits_Must_Be_Greater_Than_Zero(vm, diagnostics, context);
 		if (result || diagnostics != null) result &= validateVM_memory_Must_Be_Greater_Than_Zero(vm, diagnostics, context);
 		if (result || diagnostics != null) result &= validateVM_VM_can_not_be_allocated(vm, diagnostics, context);
+		if (result || diagnostics != null) result &= validateVM_disk_Must_Be_Greater_Than_Zero(vm, diagnostics, context);
 		return result;
 	}
 
@@ -818,6 +899,16 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	}
 
 	/**
+	 * Validates the disk_Must_Be_Greater_Than_Zero constraint of '<em>VM</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateVM_disk_Must_Be_Greater_Than_Zero(VM vm, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return vm.disk_Must_Be_Greater_Than_Zero(diagnostics, context);
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -834,6 +925,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(request, diagnostics, context);
 		if (result || diagnostics != null) result &= validateRequest_rentingTime_Must_Be_Greater_Than__Zero(request, diagnostics, context);
 		if (result || diagnostics != null) result &= validateRequest_instances_Must_Be_Greater_Than__Zero(request, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRequest_Request_Must_Be_Sent_To_A_CloudProvider(request, diagnostics, context);
+		if (result || diagnostics != null) result &= validateRequest_Request_Must_Be_Sent_By_A_User(request, diagnostics, context);
 		return result;
 	}
 
@@ -855,6 +948,26 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 */
 	public boolean validateRequest_instances_Must_Be_Greater_Than__Zero(Request request, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return request.instances_Must_Be_Greater_Than__Zero(diagnostics, context);
+	}
+
+	/**
+	 * Validates the Request_Must_Be_Sent_To_A_CloudProvider constraint of '<em>Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRequest_Request_Must_Be_Sent_To_A_CloudProvider(Request request, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return request.Request_Must_Be_Sent_To_A_CloudProvider(diagnostics, context);
+	}
+
+	/**
+	 * Validates the Request_Must_Be_Sent_By_A_User constraint of '<em>Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRequest_Request_Must_Be_Sent_By_A_User(Request request, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return request.Request_Must_Be_Sent_By_A_User(diagnostics, context);
 	}
 
 	/**
@@ -882,6 +995,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(subscribe, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(subscribe, diagnostics, context);
 		if (result || diagnostics != null) result &= validateSubscribe_maxTime_Must_Be_Greater_Than_Zero(subscribe, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSubscribe_Subscribe_Must_Be_Sent_To_A_CloudProvider(subscribe, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSubscribe_Subscribe_Must_Be_Sent_By_A_User(subscribe, diagnostics, context);
 		return result;
 	}
 
@@ -893,6 +1008,26 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 */
 	public boolean validateSubscribe_maxTime_Must_Be_Greater_Than_Zero(Subscribe subscribe, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return subscribe.maxTime_Must_Be_Greater_Than_Zero(diagnostics, context);
+	}
+
+	/**
+	 * Validates the Subscribe_Must_Be_Sent_To_A_CloudProvider constraint of '<em>Subscribe</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSubscribe_Subscribe_Must_Be_Sent_To_A_CloudProvider(Subscribe subscribe, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return subscribe.Subscribe_Must_Be_Sent_To_A_CloudProvider(diagnostics, context);
+	}
+
+	/**
+	 * Validates the Subscribe_Must_Be_Sent_By_A_User constraint of '<em>Subscribe</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSubscribe_Subscribe_Must_Be_Sent_By_A_User(Subscribe subscribe, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return subscribe.Subscribe_Must_Be_Sent_By_A_User(diagnostics, context);
 	}
 
 	/**
@@ -965,6 +1100,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(execute, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(execute, diagnostics, context);
 		if (result || diagnostics != null) result &= validateExecute_instances_Must_Be_Greater_Than_Zero(execute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateExecute_Execute_Must_Be_Sent_To_A_CloudProvider(execute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateExecute_Execute_Must_Be_Sent_By_A_User(execute, diagnostics, context);
 		return result;
 	}
 
@@ -979,12 +1116,74 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	}
 
 	/**
+	 * Validates the Execute_Must_Be_Sent_To_A_CloudProvider constraint of '<em>Execute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateExecute_Execute_Must_Be_Sent_To_A_CloudProvider(Execute execute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return execute.Execute_Must_Be_Sent_To_A_CloudProvider(diagnostics, context);
+	}
+
+	/**
+	 * Validates the Execute_Must_Be_Sent_By_A_User constraint of '<em>Execute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateExecute_Execute_Must_Be_Sent_By_A_User(Execute execute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return execute.Execute_Must_Be_Sent_By_A_User(diagnostics, context);
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean validateUser(User user, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(user, diagnostics, context);
+		if (!validate_NoCircularContainment(user, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(user, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(user, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(user, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(user, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(user, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(user, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(user, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(user, diagnostics, context);
+		if (result || diagnostics != null) result &= validateUser_User_Must_Have_A_Subscribe_Message(user, diagnostics, context);
+		if (result || diagnostics != null) result &= validateUser_User_Must_Have_A_Execute_Message(user, diagnostics, context);
+		if (result || diagnostics != null) result &= validateUser_User_Must_Have_A_Request_Message(user, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * Validates the User_Must_Have_A_Subscribe_Message constraint of '<em>User</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUser_User_Must_Have_A_Subscribe_Message(User user, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return user.User_Must_Have_A_Subscribe_Message(diagnostics, context);
+	}
+
+	/**
+	 * Validates the User_Must_Have_A_Execute_Message constraint of '<em>User</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUser_User_Must_Have_A_Execute_Message(User user, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return user.User_Must_Have_A_Execute_Message(diagnostics, context);
+	}
+
+	/**
+	 * Validates the User_Must_Have_A_Request_Message constraint of '<em>User</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUser_User_Must_Have_A_Request_Message(User user, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return user.User_Must_Have_A_Request_Message(diagnostics, context);
 	}
 
 	/**

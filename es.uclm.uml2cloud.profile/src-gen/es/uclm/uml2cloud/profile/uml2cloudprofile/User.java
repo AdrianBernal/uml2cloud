@@ -2,6 +2,8 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.uml2.uml.Lifeline;
@@ -76,5 +78,44 @@ public interface User extends EObject {
 	 * @generated
 	 */
 	void setInstances(int value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.base_Lifeline.coveredBy->intersection(uml2cloud::Subscribe.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean User_Must_Have_A_Subscribe_Message(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.base_Lifeline.coveredBy->intersection(uml2cloud::Execute.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean User_Must_Have_A_Execute_Message(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.base_Lifeline.coveredBy->intersection(uml2cloud::Request.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean User_Must_Have_A_Request_Message(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // User

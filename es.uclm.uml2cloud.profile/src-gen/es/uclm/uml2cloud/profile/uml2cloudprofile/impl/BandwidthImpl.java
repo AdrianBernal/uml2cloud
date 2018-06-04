@@ -200,7 +200,7 @@ public class BandwidthImpl extends MinimalEObjectImpl.Container implements Bandw
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {

@@ -206,7 +206,7 @@ public interface VM extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * UML::Component.allInstances()->selectByKind(ComputingMachine)->one(cm | cm.cpu.cores>=self.cores)
+	 * uml2cloud::ComputingMachine.allInstances()->one(cm | cm.cpu.cores>=self.cores)
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->
@@ -214,5 +214,18 @@ public interface VM extends EObject {
 	 * @generated
 	 */
 	boolean VM_can_not_be_allocated(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.disk.value>0
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean disk_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // VM

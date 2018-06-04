@@ -46,7 +46,6 @@
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//SizeUnit/TByte"/>
     </genEnums>
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="uml2cloudprofile.ecore#//TimeUnit">
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/d"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/h"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/min"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="uml2cloudprofile.ecore#//TimeUnit/s"/>
@@ -236,6 +235,10 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//VM/VM_can_not_be_allocated/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//VM/VM_can_not_be_allocated/context"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//VM/disk_Must_Be_Greater_Than_Zero">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//VM/disk_Must_Be_Greater_Than_Zero/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//VM/disk_Must_Be_Greater_Than_Zero/context"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//Request">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -249,6 +252,14 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Request/instances_Must_Be_Greater_Than__Zero">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Request/instances_Must_Be_Greater_Than__Zero/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Request/instances_Must_Be_Greater_Than__Zero/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Request/Request_Must_Be_Sent_To_A_CloudProvider">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Request/Request_Must_Be_Sent_To_A_CloudProvider/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Request/Request_Must_Be_Sent_To_A_CloudProvider/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Request/Request_Must_Be_Sent_By_A_User">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Request/Request_Must_Be_Sent_By_A_User/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Request/Request_Must_Be_Sent_By_A_User/context"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//VMInstantiation">
@@ -266,6 +277,14 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Subscribe/maxTime_Must_Be_Greater_Than_Zero">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Subscribe/maxTime_Must_Be_Greater_Than_Zero/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Subscribe/maxTime_Must_Be_Greater_Than_Zero/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Subscribe/Subscribe_Must_Be_Sent_To_A_CloudProvider">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Subscribe/Subscribe_Must_Be_Sent_To_A_CloudProvider/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Subscribe/Subscribe_Must_Be_Sent_To_A_CloudProvider/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Subscribe/Subscribe_Must_Be_Sent_By_A_User">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Subscribe/Subscribe_Must_Be_Sent_By_A_User/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Subscribe/Subscribe_Must_Be_Sent_By_A_User/context"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//AppInstantiation">
@@ -302,11 +321,31 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Execute/instances_Must_Be_Greater_Than_Zero/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Execute/instances_Must_Be_Greater_Than_Zero/context"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Execute/Execute_Must_Be_Sent_To_A_CloudProvider">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Execute/Execute_Must_Be_Sent_To_A_CloudProvider/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Execute/Execute_Must_Be_Sent_To_A_CloudProvider/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Execute/Execute_Must_Be_Sent_By_A_User">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Execute/Execute_Must_Be_Sent_By_A_User/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Execute/Execute_Must_Be_Sent_By_A_User/context"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//User">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//User/base_Lifeline"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uml2cloudprofile.ecore#//User/instances"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//User/User_Must_Have_A_Subscribe_Message">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//User/User_Must_Have_A_Subscribe_Message/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//User/User_Must_Have_A_Subscribe_Message/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//User/User_Must_Have_A_Execute_Message">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//User/User_Must_Have_A_Execute_Message/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//User/User_Must_Have_A_Execute_Message/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//User/User_Must_Have_A_Request_Message">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//User/User_Must_Have_A_Request_Message/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//User/User_Must_Have_A_Request_Message/context"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//CloudInfrastructure">
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"

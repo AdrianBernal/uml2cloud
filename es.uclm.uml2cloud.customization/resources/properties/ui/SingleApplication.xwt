@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Composite xmlns="http://www.eclipse.org/xwt/presentation"
-	xmlns:j="clr-namespace:java.lang" xmlns:ppe="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets"
+	xmlns:j="clr-namespace:java.lang"
+	xmlns:ppe="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets"
 	xmlns:ppel="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets.layout"
 	xmlns:x="http://www.eclipse.org/xwt">
 	<Composite.layout>
@@ -8,24 +9,34 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:StringEditor property="UML:NamedElement:name"
+			input="{Binding}"></ppe:StringEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:IntegerEditor input="{Binding}" property="uml2cloud:Application:MIs"></ppe:IntegerEditor>
+		<ppe:IntegerEditor input="{Binding}"
+			property="uml2cloud:Application:MIs"></ppe:IntegerEditor>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:DataTypeEditor view="uml2cloud:Single Size"
-			property="uml2cloud:Application:inputData" input="{Binding}"></ppe:DataTypeEditor>
-		<ppe:DataTypeEditor view="uml2cloud:Single Size"
-			property="uml2cloud:Application:outputData" input="{Binding}"></ppe:DataTypeEditor>
+			input="{Binding}" property="uml2cloud:Application:inputData"></ppe:DataTypeEditor>
+		<ppe:DataTypeEditor input="{Binding}"
+			view="uml2cloud:Single Size"
+			property="uml2cloud:Application:outputData"></ppe:DataTypeEditor>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:DataTypeEditor view="uml2cloud:Single Parameter"
-			property="uml2cloud:Application:parameter" input="{Binding}"></ppe:DataTypeEditor>
+		<ppe:DataTypeEditor input="{Binding}"
+			view="uml2cloud:Single Parameter"
+			property="uml2cloud:Application:parameter"></ppe:DataTypeEditor>
 	</Composite>
 </Composite>

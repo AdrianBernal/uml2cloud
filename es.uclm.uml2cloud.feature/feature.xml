@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="es.uclm.uml2cloud.feature"
-      label="UML2Cloud Profile Feature"
+      label="UML2Cloud Profile Tools"
       version="1.0.0.qualifier"
       provider-name="www.uclm.es">
 
@@ -23,9 +23,9 @@
       <import plugin="org.eclipse.uml2.types"/>
       <import plugin="org.eclipse.uml2.uml"/>
       <import plugin="org.eclipse.papyrus.uml.extensionpoints" version="1.3.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.papyrus.dsml.validation"/>
       <import plugin="org.eclipse.ui" version="3.109.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.papyrus.infra.core" version="3.0.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.dsml.validation" version="1.2.0" match="compatible"/>
       <import plugin="org.eclipse.core.resources"/>
       <import plugin="es.uclm.uml2cloud.m2t.simcan" version="1.0.0" match="compatible"/>
       <import plugin="org.eclipse.emf.ecore.xmi"/>
@@ -33,14 +33,9 @@
       <import plugin="org.eclipse.ocl.ecore"/>
       <import plugin="org.eclipse.acceleo.model"/>
       <import plugin="org.eclipse.acceleo.engine"/>
-      <import plugin="es.uclm.uml2cloud.profile" version="1.0.0" match="compatible"/>
-      <import plugin="org.eclipse.acceleo.common" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.acceleo.model" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.acceleo.profiler" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.acceleo.engine" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="com.google.guava"/>
       <import plugin="org.eclipse.emf.validation"/>
       <import plugin="org.eclipse.papyrus.uml.service.validation"/>
+      <import plugin="es.uclm.uml2cloud.profile" version="1.0.0" match="compatible"/>
       <import plugin="org.eclipse.emf.common.ui" version="2.12.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.papyrus.infra.properties" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.papyrus.infra.gmfdiag.css"/>
@@ -52,7 +47,15 @@
       <import plugin="es.uclm.uml2cloud.customization.elementTypeSets" version="1.0.0" match="compatible"/>
       <import plugin="org.eclipse.uml2.uml" version="5.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.papyrus.uml.extensionpoints" version="1.2.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.papyrus.sdk.feature" version="3.0.0"/>
+      <import plugin="org.eclipse.acceleo.common" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.acceleo.model" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.acceleo.profiler" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.acceleo.engine" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="com.google.guava"/>
+      <import plugin="org.eclipse.emf.codegen"/>
+      <import plugin="org.eclipse.emf.common"/>
+      <import plugin="lpg.runtime.java"/>
+      <import feature="org.eclipse.papyrus.sdk.feature" version="3.3.0.201803070847"/>
    </requires>
 
    <plugin
@@ -64,13 +67,6 @@
 
    <plugin
          id="es.uclm.uml2cloud.m2t.simcan.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="es.uclm.uml2cloud.m2t.simcan"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -110,6 +106,13 @@
 
    <plugin
          id="org.eclipse.papyrus.dsml.validation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="es.uclm.uml2cloud.m2t.simcan"
          download-size="0"
          install-size="0"
          version="0.0.0"

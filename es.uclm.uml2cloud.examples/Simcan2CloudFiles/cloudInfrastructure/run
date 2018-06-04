@@ -1,0 +1,2 @@
+#!/bin/sh
+../../src/simcan2Cloud -n ../:../../src $*

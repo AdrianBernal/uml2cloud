@@ -56,7 +56,7 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TimeUnit UNIT_EDEFAULT = TimeUnit.D;
+	protected static final TimeUnit UNIT_EDEFAULT = TimeUnit.H;
 
 	/**
 	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
