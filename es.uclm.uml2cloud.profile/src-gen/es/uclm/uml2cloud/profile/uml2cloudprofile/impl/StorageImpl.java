@@ -121,6 +121,7 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getNumberOfDrives() {
 		return numberOfDrives;
 	}
@@ -130,6 +131,7 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumberOfDrives(int newNumberOfDrives) {
 		int oldNumberOfDrives = numberOfDrives;
 		numberOfDrives = newNumberOfDrives;
@@ -142,6 +144,7 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Size getDriveCapacity() {
 		return driveCapacity;
 	}
@@ -166,6 +169,7 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDriveCapacity(Size newDriveCapacity) {
 		if (newDriveCapacity != driveCapacity) {
 			NotificationChain msgs = null;
@@ -185,6 +189,7 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Bandwidth getReadBandwidth() {
 		return readBandwidth;
 	}
@@ -209,6 +214,7 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReadBandwidth(Bandwidth newReadBandwidth) {
 		if (newReadBandwidth != readBandwidth) {
 			NotificationChain msgs = null;
@@ -228,6 +234,7 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Bandwidth getWriteBandwidth() {
 		return writeBandwidth;
 	}
@@ -252,6 +259,7 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWriteBandwidth(Bandwidth newWriteBandwidth) {
 		if (newWriteBandwidth != writeBandwidth) {
 			NotificationChain msgs = null;
@@ -502,7 +510,7 @@ public class StorageImpl extends HardwareImpl implements Storage {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (numberOfDrives: ");
 		result.append(numberOfDrives);
 		result.append(')');

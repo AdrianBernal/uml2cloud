@@ -61,6 +61,7 @@ public class ComputingRackImpl extends RackImpl implements ComputingRack {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComputingMachine getMachineType() {
 		if (machineType != null && machineType.eIsProxy()) {
 			InternalEObject oldMachineType = (InternalEObject)machineType;
@@ -87,6 +88,7 @@ public class ComputingRackImpl extends RackImpl implements ComputingRack {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMachineType(ComputingMachine newMachineType) {
 		ComputingMachine oldMachineType = machineType;
 		machineType = newMachineType;

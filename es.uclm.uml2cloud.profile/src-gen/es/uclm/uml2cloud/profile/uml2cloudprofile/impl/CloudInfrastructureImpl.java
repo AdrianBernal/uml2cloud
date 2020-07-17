@@ -4,7 +4,6 @@ package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Bandwidth;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure;
-import es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenterElement;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
@@ -46,7 +45,6 @@ import org.eclipse.uml2.uml.Component;
  * </p>
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl#getDatacenterElements <em>Datacenter Elements</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl#getCloudProvider <em>Cloud Provider</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl#getBase_Component <em>Base Component</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudInfrastructureImpl#getNetwork <em>Network</em>}</li>
  * </ul>
@@ -63,16 +61,6 @@ public class CloudInfrastructureImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected EList<DataCenterElement> datacenterElements;
-
-	/**
-	 * The cached value of the '{@link #getCloudProvider() <em>Cloud Provider</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCloudProvider()
-	 * @generated
-	 * @ordered
-	 */
-	protected CloudProvider cloudProvider;
 
 	/**
 	 * The cached value of the '{@link #getBase_Component() <em>Base Component</em>}' reference.
@@ -118,6 +106,7 @@ public class CloudInfrastructureImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DataCenterElement> getDatacenterElements() {
 		if (datacenterElements == null) {
 			datacenterElements = new EObjectContainmentEList<DataCenterElement>(DataCenterElement.class, this, UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS);
@@ -130,44 +119,7 @@ public class CloudInfrastructureImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CloudProvider getCloudProvider() {
-		if (cloudProvider != null && cloudProvider.eIsProxy()) {
-			InternalEObject oldCloudProvider = (InternalEObject)cloudProvider;
-			cloudProvider = (CloudProvider)eResolveProxy(oldCloudProvider);
-			if (cloudProvider != oldCloudProvider) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__CLOUD_PROVIDER, oldCloudProvider, cloudProvider));
-			}
-		}
-		return cloudProvider;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CloudProvider basicGetCloudProvider() {
-		return cloudProvider;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCloudProvider(CloudProvider newCloudProvider) {
-		CloudProvider oldCloudProvider = cloudProvider;
-		cloudProvider = newCloudProvider;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__CLOUD_PROVIDER, oldCloudProvider, cloudProvider));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@Override
 	public Component getBase_Component() {
 		if (base_Component != null && base_Component.eIsProxy()) {
 			InternalEObject oldBase_Component = (InternalEObject)base_Component;
@@ -194,6 +146,7 @@ public class CloudInfrastructureImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Component(Component newBase_Component) {
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;
@@ -206,6 +159,7 @@ public class CloudInfrastructureImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Bandwidth getNetwork() {
 		return network;
 	}
@@ -230,6 +184,7 @@ public class CloudInfrastructureImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNetwork(Bandwidth newNetwork) {
 		if (newNetwork != network) {
 			NotificationChain msgs = null;
@@ -320,9 +275,6 @@ public class CloudInfrastructureImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS:
 				return getDatacenterElements();
-			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__CLOUD_PROVIDER:
-				if (resolve) return getCloudProvider();
-				return basicGetCloudProvider();
 			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__BASE_COMPONENT:
 				if (resolve) return getBase_Component();
 				return basicGetBase_Component();
@@ -345,9 +297,6 @@ public class CloudInfrastructureImpl extends MinimalEObjectImpl.Container implem
 				getDatacenterElements().clear();
 				getDatacenterElements().addAll((Collection<? extends DataCenterElement>)newValue);
 				return;
-			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__CLOUD_PROVIDER:
-				setCloudProvider((CloudProvider)newValue);
-				return;
 			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__BASE_COMPONENT:
 				setBase_Component((Component)newValue);
 				return;
@@ -369,9 +318,6 @@ public class CloudInfrastructureImpl extends MinimalEObjectImpl.Container implem
 			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS:
 				getDatacenterElements().clear();
 				return;
-			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__CLOUD_PROVIDER:
-				setCloudProvider((CloudProvider)null);
-				return;
 			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__BASE_COMPONENT:
 				setBase_Component((Component)null);
 				return;
@@ -392,8 +338,6 @@ public class CloudInfrastructureImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS:
 				return datacenterElements != null && !datacenterElements.isEmpty();
-			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__CLOUD_PROVIDER:
-				return cloudProvider != null;
 			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__BASE_COMPONENT:
 				return base_Component != null;
 			case UML2CloudProfilePackage.CLOUD_INFRASTRUCTURE__NETWORK:

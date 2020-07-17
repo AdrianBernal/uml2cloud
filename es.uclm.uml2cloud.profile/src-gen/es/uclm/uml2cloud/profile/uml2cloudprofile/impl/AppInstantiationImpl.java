@@ -83,6 +83,7 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Application getApplicationType() {
 		if (applicationType != null && applicationType.eIsProxy()) {
 			InternalEObject oldApplicationType = (InternalEObject)applicationType;
@@ -109,6 +110,7 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setApplicationType(Application newApplicationType) {
 		Application oldApplicationType = applicationType;
 		applicationType = newApplicationType;
@@ -121,6 +123,7 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getInstances() {
 		return instances;
 	}
@@ -130,6 +133,7 @@ public class AppInstantiationImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInstances(int newInstances) {
 		int oldInstances = instances;
 		instances = newInstances;

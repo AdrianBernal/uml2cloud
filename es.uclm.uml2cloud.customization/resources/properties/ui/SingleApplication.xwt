@@ -9,13 +9,6 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout></ppel:PropertiesLayout>
-		</Composite.layout>
-		<ppe:StringEditor property="UML:NamedElement:name"
-			input="{Binding}"></ppe:StringEditor>
-	</Composite>
-	<Composite>
-		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:IntegerEditor input="{Binding}"
@@ -25,18 +18,16 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:DataTypeEditor view="uml2cloud:Single Size"
-			input="{Binding}" property="uml2cloud:Application:inputData"></ppe:DataTypeEditor>
-		<ppe:DataTypeEditor input="{Binding}"
-			view="uml2cloud:Single Size"
-			property="uml2cloud:Application:outputData"></ppe:DataTypeEditor>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="uml2cloud:Application:inputData"></ppe:ReferenceDialog>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="uml2cloud:Application:outputData"></ppe:ReferenceDialog>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:DataTypeEditor input="{Binding}"
-			view="uml2cloud:Single Parameter"
-			property="uml2cloud:Application:parameter"></ppe:DataTypeEditor>
+		<ppe:MultiReference input="{Binding}"
+			property="uml2cloud:Application:parameter"></ppe:MultiReference>
 	</Composite>
 </Composite>

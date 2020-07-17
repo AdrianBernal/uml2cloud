@@ -91,6 +91,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message getBase_Message() {
 		if (base_Message != null && base_Message.eIsProxy()) {
 			InternalEObject oldBase_Message = (InternalEObject)base_Message;
@@ -117,6 +118,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Message(Message newBase_Message) {
 		Message oldBase_Message = base_Message;
 		base_Message = newBase_Message;
@@ -129,6 +131,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getMaxTime() {
 		return maxTime;
 	}
@@ -153,6 +156,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxTime(Time newMaxTime) {
 		if (newMaxTime != maxTime) {
 			NotificationChain msgs = null;

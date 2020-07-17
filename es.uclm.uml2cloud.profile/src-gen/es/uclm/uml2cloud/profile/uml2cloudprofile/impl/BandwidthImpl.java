@@ -92,6 +92,7 @@ public class BandwidthImpl extends MinimalEObjectImpl.Container implements Bandw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getValue() {
 		return value;
 	}
@@ -101,6 +102,7 @@ public class BandwidthImpl extends MinimalEObjectImpl.Container implements Bandw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(double newValue) {
 		double oldValue = value;
 		value = newValue;
@@ -113,6 +115,7 @@ public class BandwidthImpl extends MinimalEObjectImpl.Container implements Bandw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BandwidthUnit getUnit() {
 		return unit;
 	}
@@ -122,6 +125,7 @@ public class BandwidthImpl extends MinimalEObjectImpl.Container implements Bandw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnit(BandwidthUnit newUnit) {
 		BandwidthUnit oldUnit = unit;
 		unit = newUnit == null ? UNIT_EDEFAULT : newUnit;

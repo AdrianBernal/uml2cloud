@@ -9,13 +9,6 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout></ppel:PropertiesLayout>
-		</Composite.layout>
-		<ppe:StringEditor property="UML:NamedElement:name"
-			input="{Binding}"></ppe:StringEditor>
-	</Composite>
-	<Composite>
-		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:IntegerEditor input="{Binding}"
@@ -29,13 +22,7 @@
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
 			property="uml2cloud:StorageRack:machineType"></ppe:ReferenceDialog>
-	</Composite>
-	<Composite>
-		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
-		</Composite.layout>
-		<ppe:DataTypeEditor
-			view="uml2cloud:Single Bandwidth" input="{Binding}"
-			property="uml2cloud:Rack:network"></ppe:DataTypeEditor>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="uml2cloud:Rack:network"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

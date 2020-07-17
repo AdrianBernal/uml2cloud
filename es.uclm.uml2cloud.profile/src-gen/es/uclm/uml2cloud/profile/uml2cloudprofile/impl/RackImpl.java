@@ -133,6 +133,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getMachinesPerBoard() {
 		return machinesPerBoard;
 	}
@@ -142,6 +143,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMachinesPerBoard(int newMachinesPerBoard) {
 		int oldMachinesPerBoard = machinesPerBoard;
 		machinesPerBoard = newMachinesPerBoard;
@@ -154,6 +156,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Bandwidth getNetwork() {
 		return network;
 	}
@@ -178,6 +181,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNetwork(Bandwidth newNetwork) {
 		if (newNetwork != network) {
 			NotificationChain msgs = null;
@@ -197,6 +201,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getBoards() {
 		return boards;
 	}
@@ -206,6 +211,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBoards(int newBoards) {
 		int oldBoards = boards;
 		boards = newBoards;
@@ -218,6 +224,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component getBase_Component() {
 		if (base_Component != null && base_Component.eIsProxy()) {
 			InternalEObject oldBase_Component = (InternalEObject)base_Component;
@@ -244,6 +251,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Component(Component newBase_Component) {
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;
@@ -430,7 +438,7 @@ public abstract class RackImpl extends MinimalEObjectImpl.Container implements R
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (machinesPerBoard: ");
 		result.append(machinesPerBoard);
 		result.append(", boards: ");

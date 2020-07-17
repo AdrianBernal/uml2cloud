@@ -1,13 +1,14 @@
 [comment encoding = UTF-8 /]
-[module generateNEDFile('http://www.uclm.es/UML/profiles/UML2Cloud/1','http://www.eclipse.org/uml2/5.0.0/UML')]
+[module generateNEDFile('http://www.uclm.es/UML/profiles/UML2Cloud/2','http://www.eclipse.org/uml2/5.0.0/UML')]
 [import es::uclm::uml2cloud::m2t::simcan::files::util /]
 
 [template public generateNEDFile(aCloudInfrastructure : CloudInfrastructure)]
 
-[file (aCloudInfrastructure.getFolder()+'scenario.ned', false, 'UTF-8')]
+[file (aCloudInfrastructure.getFolderName()+'scenario.ned', false, 'UTF-8')]
 [aCloudInfrastructure.generateHeaderNEDFile()/]
 [aCloudInfrastructure.datacenterElements.generateDataCenter()/]
 [aCloudInfrastructure.generateScenario()/]
+[aCloudInfrastructure.datacenterElements.dataCenterType.rackElements.rackType.generateRackNetwork()/]
 [/file]
 [/template]
 
@@ -20,8 +21,7 @@ import simcan2.Architecture.Nodes.Cloud.CloudRack;
 import simcan2.Management.DataCenterManager.DataCenterManager;
 import simcan2.Management.CloudProviders.*.*;
 import simcan2.Architecture.Network.DataCenterNetwork.*;
-import simcan2.Management.UserGenerators.UserGenerator.*;
-import simcan2.Management.UserGenerators.UserGeneratorBase.*;
+import simcan2.Management.UserGenerators.UserGeneratorCost.*;
 
 [/template]
 
@@ -34,6 +34,7 @@ module [aDataCenterElement.dataCenterType.base_Component.name/]{
 	parameters:
 		string appList;
 		string vmList;
+		string slaList;
 		string userList;
 
 	gates:
@@ -52,6 +53,7 @@ module [aDataCenterElement.dataCenterType.base_Component.name/]{
 			parameters:
 				appList=appList;
 				vmList=vmList;
+				slaList=slaList;
 				userList=userList;
 		}
 
@@ -95,6 +97,11 @@ module [aDataCenterElement.dataCenterType.base_Component.name/]{
 [/for]
 [/template]
 
+[template public generateRackNetwork(aRack : Rack)]
+
+channel [aRack.base_Component.name/]Custom_channel extends ned.DatarateChannel like IDataCenterChannel {datarate=[aRack.network.getBandwidth()/];}
+[/template]
+
 [template public generateDataCenterNetwork(aDataCenter : DataCenter)]
 dataCenterNetwork:DataCenterNetwork{
 	gates:
@@ -128,6 +135,7 @@ network [aCloudInfrastructure.base_Component.name/]{
 	parameters:
 		string appList;
 		string vmList;
+		string slaList;
 		string userList;
 		string dataCentersList;
 
@@ -155,6 +163,7 @@ dc_[aDataCenterElement.dataCenterType.base_Component.name/]_[index/]:[aDataCente
 	parameters:
 		appList=appList;
 		vmList=vmList;
+		slaList=slaList;
 		userList=userList;
 }
 [/for]
@@ -164,10 +173,11 @@ dc_[aDataCenterElement.dataCenterType.base_Component.name/]_[index/]:[aDataCente
 // -------------------------------------------------------
 //   Definition of the cloud provider
 // -------------------------------------------------------
-cloudProvider:CloudProvider[aCloudInfrastructure.cloudProvider.resourceAllocationPolicy/]{
+cloudProvider:CloudProvider_firstBestFit{
 	parameters:
 		appList=appList;
 		vmList=vmList;
+		slaList=slaList;
 		userList=userList;
 		dataCentersList=dataCentersList;
 		@display("p=245,221;i=provider");
@@ -182,10 +192,11 @@ cloudProvider:CloudProvider[aCloudInfrastructure.cloudProvider.resourceAllocatio
 // -------------------------------------------------------
 //   Definition of the user generator
 // -------------------------------------------------------
-userGenerator:UserGenerator{
+userGenerator:UserGeneratorCost{
 	parameters:
 		appList=appList;
 		vmList=vmList;
+		slaList=slaList;
 		userList=userList;
 		@display("p=245,368;i=users");
 }
@@ -208,6 +219,3 @@ connections allowunconnected:
 	cloudProvider.toUserGenerator --> ned.IdealChannel --> userGenerator.fromCloudProvider;
 	userGenerator.toCloudProvider --> ned.IdealChannel --> cloudProvider.fromUserGenerator;
 [/template]
-
-
-

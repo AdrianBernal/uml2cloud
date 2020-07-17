@@ -1,10 +1,10 @@
 [comment encoding = UTF-8 /]
-[module generateRUNFile('http://www.eclipse.org/uml2/5.0.0/UML', 'http://www.uclm.es/UML/profiles/UML2Cloud/1')]
+[module generateRUNFile('http://www.uclm.es/UML/profiles/UML2Cloud/2','http://www.eclipse.org/uml2/5.0.0/UML')]
 [import es::uclm::uml2cloud::m2t::simcan::files::util /]
 
 [template public generateRUNFile(aCloudInfrastructure : CloudInfrastructure)]
-[file (aCloudInfrastructure.getFolder()+'run', false, 'UTF-8')]
+[file (aCloudInfrastructure.getFolderName()+'run', false, 'UTF-8')]
 #!/bin/sh
-../../src/simcan2Cloud -n ../:../../src $*
+../../src/SIMCAN-2.0 -n ../:../../src $*
 [/file]
 [/template]

@@ -35,7 +35,8 @@ public class GenerateSIMCANFiles extends AbstractAcceleoGenerator {
      *
      * @generated NOT
      */
-    public static final String MODULE_FILE_NAME = "/bin/es/uclm/uml2cloud/m2t/simcan/main/generateSIMCANFiles";
+	public static final String MODULE_FILE_NAME = "/bin/es/uclm/uml2cloud/m2t/simcan/main/generateSIMCANFiles";
+	//public static final String MODULE_FILE_NAME = "/es/uclm/uml2cloud/m2t/simcan/main/generateSIMCANFiles";
     
     /**
      * The name of the templates that are to be generated.
@@ -343,6 +344,9 @@ public class GenerateSIMCANFiles extends AbstractAcceleoGenerator {
         if (!isInWorkspace(org.eclipse.uml2.uml.UMLPackage.class)) {
             resourceSet.getPackageRegistry().put(org.eclipse.uml2.uml.UMLPackage.eINSTANCE.getNsURI(), org.eclipse.uml2.uml.UMLPackage.eINSTANCE);
         }
+        if (!isInWorkspace(es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage.class)) {
+            resourceSet.getPackageRegistry().put(es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage.eINSTANCE.getNsURI(), es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage.eINSTANCE);
+        }
         
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
@@ -396,14 +400,20 @@ public class GenerateSIMCANFiles extends AbstractAcceleoGenerator {
         
         /*
          * TODO If you need additional resource factories registrations, you can register them here. the following line
-         * (in comment) is an example of the resource factory registration for UML.
+         * (in comment) is an example of the resource factory registration.
          *
          * If you want to use the generator in stand alone, the resource factory registration will be required.
          *  
          * To learn more about the registration of Resource Factories, have a look at the Acceleo documentation (Help -> Help Contents). 
          */ 
         
-        // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(UMLResource.FILE_EXTENSION, UMLResource.Factory.INSTANCE);
+        // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(XyzResource.FILE_EXTENSION, XyzResource.Factory.INSTANCE);
+        
+        /*
+         * Some metamodels require a very complex setup for standalone usage. For example, if you want to use a generator
+         * targetting UML models in standalone, you NEED to use the following:
+         */ 
+        // UMLResourcesUtil.init(resourceSet)
     }
     
 }

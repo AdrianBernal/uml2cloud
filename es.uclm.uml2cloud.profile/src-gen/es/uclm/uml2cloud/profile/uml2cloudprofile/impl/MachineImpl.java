@@ -99,6 +99,7 @@ public abstract class MachineImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component getBase_Component() {
 		if (base_Component != null && base_Component.eIsProxy()) {
 			InternalEObject oldBase_Component = (InternalEObject)base_Component;
@@ -125,6 +126,7 @@ public abstract class MachineImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Component(Component newBase_Component) {
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;
@@ -137,6 +139,7 @@ public abstract class MachineImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CPU getCpu() {
 		if (cpu != null && cpu.eIsProxy()) {
 			InternalEObject oldCpu = (InternalEObject)cpu;
@@ -163,6 +166,7 @@ public abstract class MachineImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCpu(CPU newCpu) {
 		CPU oldCpu = cpu;
 		cpu = newCpu;
@@ -175,6 +179,7 @@ public abstract class MachineImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Memory getMemory() {
 		if (memory != null && memory.eIsProxy()) {
 			InternalEObject oldMemory = (InternalEObject)memory;
@@ -201,6 +206,7 @@ public abstract class MachineImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMemory(Memory newMemory) {
 		Memory oldMemory = memory;
 		memory = newMemory;
@@ -213,6 +219,7 @@ public abstract class MachineImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Storage getStorage() {
 		if (storage != null && storage.eIsProxy()) {
 			InternalEObject oldStorage = (InternalEObject)storage;
@@ -239,6 +246,7 @@ public abstract class MachineImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStorage(Storage newStorage) {
 		Storage oldStorage = storage;
 		storage = newStorage;

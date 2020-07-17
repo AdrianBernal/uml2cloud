@@ -144,6 +144,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component getBase_Component() {
 		if (base_Component != null && base_Component.eIsProxy()) {
 			InternalEObject oldBase_Component = (InternalEObject)base_Component;
@@ -170,6 +171,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Component(Component newBase_Component) {
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;
@@ -182,6 +184,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getCores() {
 		return cores;
 	}
@@ -191,6 +194,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCores(int newCores) {
 		int oldCores = cores;
 		cores = newCores;
@@ -203,6 +207,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Size getDisk() {
 		return disk;
 	}
@@ -227,6 +232,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisk(Size newDisk) {
 		if (newDisk != disk) {
 			NotificationChain msgs = null;
@@ -246,6 +252,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getComputingUnits() {
 		return computingUnits;
 	}
@@ -255,6 +262,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComputingUnits(double newComputingUnits) {
 		double oldComputingUnits = computingUnits;
 		computingUnits = newComputingUnits;
@@ -267,6 +275,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Size getMemory() {
 		return memory;
 	}
@@ -291,6 +300,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMemory(Size newMemory) {
 		if (newMemory != memory) {
 			NotificationChain msgs = null;
@@ -577,7 +587,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (cores: ");
 		result.append(cores);
 		result.append(", computingUnits: ");

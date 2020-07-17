@@ -41,4 +41,13 @@ public class UML2CloudModelCreationCommand extends ModelCreationCommandBase {
 		}
 	}
 	
+	/**
+	 * Gets the model name.
+	 *
+	 * @return the model name
+	 */
+	protected String getModelName() {
+		return "CloudScenario";
+	}
+	
 }

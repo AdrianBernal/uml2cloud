@@ -3,7 +3,9 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile;
 
 import java.util.Map;
+
 import org.eclipse.emf.common.util.DiagnosticChain;
+
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.uml2.uml.Lifeline;
@@ -19,10 +21,11 @@ import org.eclipse.uml2.uml.Lifeline;
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getBase_Lifeline <em>Base Lifeline</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getInstances <em>Instances</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getSla <em>Sla</em>}</li>
  * </ul>
  *
  * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getUser()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface User extends EObject {
@@ -80,17 +83,30 @@ public interface User extends EObject {
 	void setInstances(int value);
 
 	/**
+	 * Returns the value of the '<em><b>Sla</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sla</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * self.base_Lifeline.coveredBy->intersection(uml2cloud::Subscribe.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1
-	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
-	 * @param context The cache of context-specific information.
-	 * <!-- end-model-doc -->
-	 * @model
+	 * @return the value of the '<em>Sla</em>' reference.
+	 * @see #setSla(SLA)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getUser_Sla()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	boolean User_Must_Have_A_Subscribe_Message(DiagnosticChain diagnostics, Map<Object, Object> context);
+	SLA getSla();
+
+	/**
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User#getSla <em>Sla</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sla</em>' reference.
+	 * @see #getSla()
+	 * @generated
+	 */
+	void setSla(SLA value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,5 +133,31 @@ public interface User extends EObject {
 	 * @generated
 	 */
 	boolean User_Must_Have_A_Request_Message(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * true
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean User_Must_Sign_A_VM_SLA_Offered_By_The_CloudProvider(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.base_Lifeline.coveredBy->intersection(uml2cloud::Resume.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean User_Must_Have_A_Resume_Message(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // User

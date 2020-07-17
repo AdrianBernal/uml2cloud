@@ -1,7 +1,1353 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:PapyrusDSMLValidationRule="http://www.eclipse.org/papyrus/dsmlvalidation" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
-  <uml:Profile xmi:id="_1K9OUIZKEeexBrHTG7KRXw" name="uml2cloud" URI="http://www.uclm.es/UML/profiles/UML2Cloud/1" metaclassReference="_LivIoIZLEeexBrHTG7KRXw _LiyL8IZLEeexBrHTG7KRXw _kEI2UIZVEeexBrHTG7KRXw _kEKrgIZVEeexBrHTG7KRXw _ICV-AI7xEeeBEvSpaJE2FQ">
+  <uml:Profile xmi:id="_1K9OUIZKEeexBrHTG7KRXw" name="uml2cloud" URI="http://www.uclm.es/UML/profiles/UML2Cloud/2" metaclassReference="_LivIoIZLEeexBrHTG7KRXw _LiyL8IZLEeexBrHTG7KRXw _kEI2UIZVEeexBrHTG7KRXw _kEKrgIZVEeexBrHTG7KRXw _ICV-AI7xEeeBEvSpaJE2FQ" metamodelReference="_42q84DhKEeqRQpKn4D3Xng">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tSFPwIZZEeexBrHTG7KRXw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sGgDMB8dEemRYJlbJg2P8Q" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sGgqQB8dEemRYJlbJg2P8Q" key="Version" value="0.0.0"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sGgqQR8dEemRYJlbJg2P8Q" key="Comment" value="&lt;undefined>"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sGgqQh8dEemRYJlbJg2P8Q" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sGgqQx8dEemRYJlbJg2P8Q" key="Date" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sGgqRB8dEemRYJlbJg2P8Q" key="Author" value="&lt;undefined>"/>
+      </eAnnotations>
+      <contents xmi:type="ecore:EPackage" xmi:id="_jbWWcF17EeqBlrygcYPzvg" name="uml2cloudprofile" nsURI="http://www.uclm.es/UML/profiles/UML2Cloud/2" nsPrefix="UML2CloudProfile">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWcV17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWcl17EeqBlrygcYPzvg" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWc117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWdF17EeqBlrygcYPzvg" key="originalName" value="uml2cloud"/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbp4cF17EeqBlrygcYPzvg" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbp4cV17EeqBlrygcYPzvg" key="Version" value="2.0.0"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbp4cl17EeqBlrygcYPzvg" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbp4c117EeqBlrygcYPzvg" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbp4dF17EeqBlrygcYPzvg" key="Date" value="2020-03-03"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbp4dV17EeqBlrygcYPzvg" key="Author" value=""/>
+        </eAnnotations>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWWdV17EeqBlrygcYPzvg" name="DataCenter">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWdl17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_MwZOkIZLEeexBrHTG7KRXw"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWWd117EeqBlrygcYPzvg" name="rackElements_instances_Should_Be_Greatter_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWeF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWeV17EeqBlrygcYPzvg" key="body" value="self.rackElements->forAll(numberOfRacks>0)"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWWe117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWfF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWfV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWWf117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWgF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWgV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWWgl17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWWg117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWWhF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWWhV17EeqBlrygcYPzvg" name="rackElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWhl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWh117EeqBlrygcYPzvg" key="body" value="self.rackElements->forAll(numberOfRacks>=0)"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWWiV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWil17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWi117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWWjV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWjl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWj117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWWkF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWWkV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWWkl17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWWk117EeqBlrygcYPzvg" name="network" ordered="false" lowerBound="1" eType="_jbWWmV17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWWlV17EeqBlrygcYPzvg" name="rackElements" ordered="false" lowerBound="1" upperBound="-1" eType="_jbWWpF17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWWl117EeqBlrygcYPzvg" name="base_Component" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWWmV17EeqBlrygcYPzvg" name="Bandwidth">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWml17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lixsAAgREeipCKjf3hYSIw"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWWm117EeqBlrygcYPzvg" name="value" ordered="false" lowerBound="1" defaultValueLiteral="1.0">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWWnV17EeqBlrygcYPzvg" name="unit" ordered="false" lowerBound="1" eType="_jbWWn117EeqBlrygcYPzvg" defaultValueLiteral="Gbps"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_jbWWn117EeqBlrygcYPzvg" name="BandwidthUnit">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWoF17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_9w7coAgSEeipCKjf3hYSIw"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWWoV17EeqBlrygcYPzvg" name="Kbps"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWWol17EeqBlrygcYPzvg" name="Mbps" value="1"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWWo117EeqBlrygcYPzvg" name="Gbps" value="2"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWWpF17EeqBlrygcYPzvg" name="RackElement">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWpV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_wpQS0IZMEeexBrHTG7KRXw"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWWpl17EeqBlrygcYPzvg" name="numberOfRacks" ordered="false" lowerBound="1" defaultValueLiteral="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWWqF17EeqBlrygcYPzvg" name="rackType" ordered="false" lowerBound="1" eType="_jbWWql17EeqBlrygcYPzvg"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWWql17EeqBlrygcYPzvg" name="Rack" abstract="true">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWq117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_PGXAYIZLEeexBrHTG7KRXw"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWWrF17EeqBlrygcYPzvg" name="boards_Must_Be_Greatter_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWrV17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWrl17EeqBlrygcYPzvg" key="body" value="self.boards>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWWsF17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWsV17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWsl17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWWtF17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWtV17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWtl17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWWt117EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWWuF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWWuV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWWul17EeqBlrygcYPzvg" name="machinesPerBoard_Must_Be_Greatter_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWu117EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWvF17EeqBlrygcYPzvg" key="body" value="self.machinesPerBoard>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWWvl17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWv117EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWwF17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWWwl17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWWw117EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWWxF17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWWxV17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWWxl17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWWx117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWWyF17EeqBlrygcYPzvg" name="machinesPerBoard" ordered="false" lowerBound="1" defaultValueLiteral="8">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWWyl17EeqBlrygcYPzvg" name="network" ordered="false" lowerBound="1" eType="_jbWWmV17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWWzF17EeqBlrygcYPzvg" name="boards" ordered="false" lowerBound="1" defaultValueLiteral="8">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWWzl17EeqBlrygcYPzvg" name="base_Component" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWW0F17EeqBlrygcYPzvg" name="Machine" abstract="true">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWW0V17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_QxnBQIZLEeexBrHTG7KRXw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWW0l17EeqBlrygcYPzvg" name="base_Component" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWW1F17EeqBlrygcYPzvg" name="cpu" ordered="false" lowerBound="1" eType="_jbWW2l17EeqBlrygcYPzvg"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWW1l17EeqBlrygcYPzvg" name="memory" ordered="false" lowerBound="1" eType="_jbWXAV17EeqBlrygcYPzvg"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWW2F17EeqBlrygcYPzvg" name="storage" ordered="false" lowerBound="1" eType="_jbWXNV17EeqBlrygcYPzvg"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWW2l17EeqBlrygcYPzvg" name="CPU" eSuperTypes="_jbWW_V17EeqBlrygcYPzvg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWW2117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_TMK_MIZLEeexBrHTG7KRXw"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWW3F17EeqBlrygcYPzvg" name="MIPS_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWW3V17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWW3l17EeqBlrygcYPzvg" key="body" value="self.MIPS>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWW4F17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWW4V17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWW4l17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWW5F17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWW5V17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWW5l17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWW5117EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWW6F17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWW6V17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWW6l17EeqBlrygcYPzvg" name="cores_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWW6117EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWW7F17EeqBlrygcYPzvg" key="body" value="self.cores>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWW7l17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWW7117EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWW8F17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWW8l17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWW8117EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWW9F17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWW9V17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWW9l17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWW9117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWW-F17EeqBlrygcYPzvg" name="cores" ordered="false" lowerBound="1" defaultValueLiteral="2">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWW-l17EeqBlrygcYPzvg" name="MIPS" ordered="false" lowerBound="1" defaultValueLiteral="30000">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWW_V17EeqBlrygcYPzvg" name="Hardware" abstract="true">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWW_l17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_S91oQIZLEeexBrHTG7KRXw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWW_117EeqBlrygcYPzvg" name="base_Component" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXAV17EeqBlrygcYPzvg" name="Memory" eSuperTypes="_jbWW_V17EeqBlrygcYPzvg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXAl17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ThwNoIZLEeexBrHTG7KRXw"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWXA117EeqBlrygcYPzvg" name="capacity_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXBF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXBV17EeqBlrygcYPzvg" key="body" value="self.capacity.value>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXB117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXCF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXCV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXC117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXDF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXDV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWXDl17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXD117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXEF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXEV17EeqBlrygcYPzvg" name="capacity" ordered="false" lowerBound="1" eType="_jbWXFl17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXE117EeqBlrygcYPzvg" name="latency" ordered="false" lowerBound="1" upperBound="-1" eType="_jbWXIl17EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXFl17EeqBlrygcYPzvg" name="Size">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXF117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_izv58AgREeipCKjf3hYSIw"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXGF17EeqBlrygcYPzvg" name="value" ordered="false" lowerBound="1" defaultValueLiteral="1.0">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXGl17EeqBlrygcYPzvg" name="unit" ordered="false" lowerBound="1" eType="_jbWXHF17EeqBlrygcYPzvg" defaultValueLiteral="MByte"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_jbWXHF17EeqBlrygcYPzvg" name="SizeUnit">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXHV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eDW3oAgSEeipCKjf3hYSIw"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXHl17EeqBlrygcYPzvg" name="KByte"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXH117EeqBlrygcYPzvg" name="MByte" value="1"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXIF17EeqBlrygcYPzvg" name="GByte" value="2"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXIV17EeqBlrygcYPzvg" name="TByte" value="3"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXIl17EeqBlrygcYPzvg" name="Latency">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXI117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_JRsd0Ay4EeiRp7woUwXOeA"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXJF17EeqBlrygcYPzvg" name="name" ordered="false" lowerBound="1" defaultValueLiteral="read">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXJl17EeqBlrygcYPzvg" name="time" ordered="false" lowerBound="1" eType="_jbWXKF17EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXKF17EeqBlrygcYPzvg" name="Time">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXKV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_LiyYEAgVEeipCKjf3hYSIw"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXKl17EeqBlrygcYPzvg" name="value" ordered="false" lowerBound="1" defaultValueLiteral="5.0">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXLF17EeqBlrygcYPzvg" name="unit" ordered="false" lowerBound="1" eType="_jbWXLl17EeqBlrygcYPzvg" defaultValueLiteral="h"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_jbWXLl17EeqBlrygcYPzvg" name="TimeUnit">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXL117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_1pLc8AgTEeipCKjf3hYSIw"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXMF17EeqBlrygcYPzvg" name="h"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXMV17EeqBlrygcYPzvg" name="min" value="1"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXMl17EeqBlrygcYPzvg" name="s" value="2"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXM117EeqBlrygcYPzvg" name="ms" value="3"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXNF17EeqBlrygcYPzvg" name="us" value="4"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXNV17EeqBlrygcYPzvg" name="Storage" eSuperTypes="_jbWW_V17EeqBlrygcYPzvg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXNl17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_TbgbsIZLEeexBrHTG7KRXw"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWXN117EeqBlrygcYPzvg" name="numberOfDrives_Must_Be_Greatter_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXOF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXOV17EeqBlrygcYPzvg" key="body" value="self.numberOfDrives>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXO117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXPF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXPV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXP117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXQF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXQV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWXQl17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXQ117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXRF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWXRV17EeqBlrygcYPzvg" name="driveCapacity_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXRl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXR117EeqBlrygcYPzvg" key="body" value="self.driveCapacity.value>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXSV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXSl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXS117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXTV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXTl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXT117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWXUF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXUV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXUl17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWXU117EeqBlrygcYPzvg" name="readBandwidth_Must_Be_Greatter_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXVF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXVV17EeqBlrygcYPzvg" key="body" value="self.readBandwidth.value>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXV117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXWF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXWV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXW117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXXF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXXV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWXXl17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXX117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXYF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWXYV17EeqBlrygcYPzvg" name="writeBandwidth_Must_Be_Greatter_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXYl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXY117EeqBlrygcYPzvg" key="body" value="self.writeBandwidth.value>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXZV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXZl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXZ117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXaV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXal17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXa117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWXbF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXbV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXbl17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXb117EeqBlrygcYPzvg" name="numberOfDrives" ordered="false" lowerBound="1" defaultValueLiteral="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXcV17EeqBlrygcYPzvg" name="driveCapacity" ordered="false" lowerBound="1" eType="_jbWXFl17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXc117EeqBlrygcYPzvg" name="readBandwidth" ordered="false" lowerBound="1" eType="_jbWWmV17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXdV17EeqBlrygcYPzvg" name="writeBandwidth" ordered="false" lowerBound="1" eType="_jbWWmV17EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXeF17EeqBlrygcYPzvg" name="ComputingRack" eSuperTypes="_jbWWql17EeqBlrygcYPzvg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXeV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RQqUwIZLEeexBrHTG7KRXw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXel17EeqBlrygcYPzvg" name="machineType" ordered="false" lowerBound="1" eType="_jbWXfV17EeqBlrygcYPzvg"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXfV17EeqBlrygcYPzvg" name="ComputingMachine" eSuperTypes="_jbWW0F17EeqBlrygcYPzvg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXfl17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_SVyJwIZLEeexBrHTG7KRXw"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXf117EeqBlrygcYPzvg" name="type" ordered="false" lowerBound="1" eType="_jbWXgl17EeqBlrygcYPzvg"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EEnum" xmi:id="_jbWXgl17EeqBlrygcYPzvg" name="MachineType">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXg117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_brPBwGwYEem_VeXGb2WR0A"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXhF17EeqBlrygcYPzvg" name="Normal"/>
+          <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_jbWXhV17EeqBlrygcYPzvg" name="Reserved" value="1"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXhl17EeqBlrygcYPzvg" name="StorageRack" eSuperTypes="_jbWWql17EeqBlrygcYPzvg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXh117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RfYGMIZLEeexBrHTG7KRXw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXiF17EeqBlrygcYPzvg" name="machineType" ordered="false" lowerBound="1" eType="_jbWXi117EeqBlrygcYPzvg"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXi117EeqBlrygcYPzvg" name="StorageMachine" eSuperTypes="_jbWW0F17EeqBlrygcYPzvg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXjF17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_SdkMwIZLEeexBrHTG7KRXw"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXjl17EeqBlrygcYPzvg" name="CloudProvider">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXj117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_TrQH4IZLEeexBrHTG7KRXw"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWXkF17EeqBlrygcYPzvg" name="CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXkV17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXkl17EeqBlrygcYPzvg" key="body" value="true"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXlF17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXlV17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXll17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXmF17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXmV17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXml17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbWXm117EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXnF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbWXnV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXnl17EeqBlrygcYPzvg" name="resourceAllocationPolicy" ordered="false" lowerBound="1" defaultValueLiteral="_firstFist_cost">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXoF17EeqBlrygcYPzvg" name="base_Lifeline" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXol17EeqBlrygcYPzvg" name="sla" ordered="false" lowerBound="1" upperBound="-1" eType="_jbWXpl17EeqBlrygcYPzvg"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXpF17EeqBlrygcYPzvg" name="offer" ordered="false" lowerBound="1" defaultValueLiteral="0.0">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXpl17EeqBlrygcYPzvg" name="SLA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXp117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_5lTX8D9ZEemCRds-lNZP0g"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXqF17EeqBlrygcYPzvg" name="base_Component" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXql17EeqBlrygcYPzvg" name="vmcost" ordered="false" lowerBound="1" upperBound="-1" eType="_jbWXrF17EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXrF17EeqBlrygcYPzvg" name="VMCost">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXrV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_WRCIsEcSEemheYndKe_CWw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXrl17EeqBlrygcYPzvg" name="base" ordered="false" lowerBound="1" eType="_jbWXul17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXsF17EeqBlrygcYPzvg" name="incpriority" ordered="false" lowerBound="1">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXsV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXsl17EeqBlrygcYPzvg" key="originalName" value="inc-priority"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXtF17EeqBlrygcYPzvg" name="discount" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXtl17EeqBlrygcYPzvg" name="compensation" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXuF17EeqBlrygcYPzvg" name="vm" ordered="false" lowerBound="1" eType="_jbWXwF17EeqBlrygcYPzvg"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXul17EeqBlrygcYPzvg" name="Cost">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXu117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_tLqf4DaUEemEgr9NrwVHLA"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXvF17EeqBlrygcYPzvg" name="value" ordered="false" lowerBound="1" defaultValueLiteral="1.0">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXvl17EeqBlrygcYPzvg" name="rate" ordered="false" lowerBound="1" eType="_jbWXLl17EeqBlrygcYPzvg"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbWXwF17EeqBlrygcYPzvg" name="VM">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXwV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ne1bkIZVEeexBrHTG7KRXw"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbWXwl17EeqBlrygcYPzvg" name="cores_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXw117EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXxF17EeqBlrygcYPzvg" key="body" value="self.cores>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbWXxl17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9gF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9gV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW9g117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9hF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9hV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW9hl17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW9h117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW9iF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW9iV17EeqBlrygcYPzvg" name="computingUnits_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9il17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9i117EeqBlrygcYPzvg" key="body" value="self.computingUnits>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW9jV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9jl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9j117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW9kV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9kl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9k117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW9lF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW9lV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW9ll17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW9l117EeqBlrygcYPzvg" name="memory_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9mF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9mV17EeqBlrygcYPzvg" key="body" value="self.memory.value>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW9m117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9nF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9nV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW9n117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9oF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9oV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW9ol17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW9o117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW9pF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW9pV17EeqBlrygcYPzvg" name="VM_can_not_be_allocated">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9pl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9p117EeqBlrygcYPzvg" key="body" value="uml2cloud::ComputingMachine.allInstances()->one(cm | cm.cpu.cores>=self.cores)"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW9qV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9ql17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9q117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW9rV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9rl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9r117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW9sF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW9sV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW9sl17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW9s117EeqBlrygcYPzvg" name="disk_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9tF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9tV17EeqBlrygcYPzvg" key="body" value="self.disk.value>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW9t117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9uF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9uV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW9u117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9vF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9vV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW9vl17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW9v117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW9wF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW9wV17EeqBlrygcYPzvg" name="base_Component" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbW9w117EeqBlrygcYPzvg" name="cores" ordered="false" lowerBound="1" defaultValueLiteral="2">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW9xV17EeqBlrygcYPzvg" name="disk" ordered="false" lowerBound="1" eType="_jbWXFl17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbW9x117EeqBlrygcYPzvg" name="computingUnits" ordered="false" lowerBound="1" defaultValueLiteral="2.0">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW9yV17EeqBlrygcYPzvg" name="memory" ordered="false" lowerBound="1" eType="_jbWXFl17EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbW9y117EeqBlrygcYPzvg" name="Application">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9zF17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_mafCoIZVEeexBrHTG7KRXw"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW9zV17EeqBlrygcYPzvg" name="MIs_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW9zl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW9z117EeqBlrygcYPzvg" key="body" value="self.MIs>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW90V17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW90l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW90117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW91V17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW91l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW91117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW92F17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW92V17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW92l17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW92117EeqBlrygcYPzvg" name="inputData_Must_Be_Greater_Than_Or_Equal_To_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW93F17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW93V17EeqBlrygcYPzvg" key="body" value="self.inputData.value>=0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW93117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW94F17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW94V17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW94117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW95F17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW95V17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW95l17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW95117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW96F17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW96V17EeqBlrygcYPzvg" name="outputData_Must_Be_Greater_Than_Or_Equal_To_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW96l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW96117EeqBlrygcYPzvg" key="body" value="self.outputData.value>=0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW97V17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW97l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW97117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW98V17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW98l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW98117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW99F17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW99V17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW99l17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW99117EeqBlrygcYPzvg" name="base_Component" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbW9-V17EeqBlrygcYPzvg" name="MIs" ordered="false" lowerBound="1" defaultValueLiteral="10000">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW9-117EeqBlrygcYPzvg" name="inputData" ordered="false" lowerBound="1" eType="_jbWXFl17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW9_V17EeqBlrygcYPzvg" name="outputData" ordered="false" lowerBound="1" eType="_jbWXFl17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW9_117EeqBlrygcYPzvg" name="parameter" ordered="false" upperBound="-1" eType="_jbW-AV17EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbW-AV17EeqBlrygcYPzvg" name="Parameter">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Al17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Vf0AMBL9Eeil09uxt68Thw"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbW-A117EeqBlrygcYPzvg" name="name" ordered="false" lowerBound="1" defaultValueLiteral="inputFile">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbW-BV17EeqBlrygcYPzvg" name="value" ordered="false" lowerBound="1" defaultValueLiteral="/inputFile_0.dat">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbW-B117EeqBlrygcYPzvg" name="type" ordered="false" lowerBound="1" defaultValueLiteral="string">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbW-CV17EeqBlrygcYPzvg" name="description" ordered="false" defaultValueLiteral=" ">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbW-C117EeqBlrygcYPzvg" name="Request">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-DF17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_fwlhAIZWEeexBrHTG7KRXw"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-DV17EeqBlrygcYPzvg" name="rentingTime_Must_Be_Greater_Than__Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Dl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-D117EeqBlrygcYPzvg" key="body" value="self.vmInstantiation->forAll(rentingTime.value>0)"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-EV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-El17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-E117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-FV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Fl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-F117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-GF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-GV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-Gl17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-G117EeqBlrygcYPzvg" name="instances_Must_Be_Greater_Than__Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-HF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-HV17EeqBlrygcYPzvg" key="body" value="self.vmInstantiation->forAll(instances>0)"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-H117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-IF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-IV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-I117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-JF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-JV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-Jl17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-J117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-KF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-KV17EeqBlrygcYPzvg" name="Request_Must_Be_Sent_To_A_CloudProvider">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Kl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-K117EeqBlrygcYPzvg" key="body" value="uml2cloud::CloudProvider.allInstances()->one(cp | cp.base_Lifeline.coveredBy->includes(self.base_Message.receiveEvent))"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-LV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Ll17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-L117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-MV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Ml17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-M117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-NF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-NV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-Nl17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-N117EeqBlrygcYPzvg" name="Request_Must_Be_Sent_By_A_User">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-OF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-OV17EeqBlrygcYPzvg" key="body" value="uml2cloud::User.allInstances()->one(u | u.base_Lifeline.coveredBy->includes(self.base_Message.sendEvent))"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-O117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-PF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-PV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-P117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-QF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-QV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-Ql17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-Q117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-RF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-RV17EeqBlrygcYPzvg" name="Request_For_A_VM_Not_Offered_In_The_Signed_SLA_By_The_User">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Rl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-R117EeqBlrygcYPzvg" key="body" value="true"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-SV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Sl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-S117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-TV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Tl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-T117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-UF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-UV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-Ul17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW-U117EeqBlrygcYPzvg" name="base_Message" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW-VV17EeqBlrygcYPzvg" name="vmInstantiation" ordered="false" lowerBound="1" eType="_jbW-V117EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbW-V117EeqBlrygcYPzvg" name="VMInstantiation">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-WF17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_RwX5IIZXEeexBrHTG7KRXw"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbW-WV17EeqBlrygcYPzvg" name="instances" ordered="false" lowerBound="1" defaultValueLiteral="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW-W117EeqBlrygcYPzvg" name="vmType" ordered="false" lowerBound="1" eType="_jbWXwF17EeqBlrygcYPzvg"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW-XV17EeqBlrygcYPzvg" name="rentingTime" ordered="false" lowerBound="1" eType="_jbWXKF17EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbW-X117EeqBlrygcYPzvg" name="Subscribe">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-YF17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_szZ3EIZWEeexBrHTG7KRXw"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-YV17EeqBlrygcYPzvg" name="maxTime_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Yl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-Y117EeqBlrygcYPzvg" key="body" value="self.maxTime.value>0"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-ZV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-Zl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-Z117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-aV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-al17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-a117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-bF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-bV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-bl17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-b117EeqBlrygcYPzvg" name="Subscribe_Must_Be_Sent_To_A_CloudProvider">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-cF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-cV17EeqBlrygcYPzvg" key="body" value="uml2cloud::CloudProvider.allInstances()->one(cp | cp.base_Lifeline.coveredBy->includes(self.base_Message.receiveEvent))"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-c117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-dF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-dV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-d117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-eF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-eV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-el17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-e117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-fF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-fV17EeqBlrygcYPzvg" name="Subscribe_Must_Be_Sent_By_A_User">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-fl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-f117EeqBlrygcYPzvg" key="body" value="uml2cloud::User.allInstances()->one(u | u.base_Lifeline.coveredBy->includes(self.base_Message.sendEvent))"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-gV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-gl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-g117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-hV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-hl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-h117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-iF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-iV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-il17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW-i117EeqBlrygcYPzvg" name="base_Message" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW-jV17EeqBlrygcYPzvg" name="maxTime" ordered="false" lowerBound="1" eType="_jbWXKF17EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbW-j117EeqBlrygcYPzvg" name="AppInstantiation">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-kF17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_hHY0gIZZEeexBrHTG7KRXw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW-kV17EeqBlrygcYPzvg" name="applicationType" ordered="false" lowerBound="1" eType="_jbW9y117EeqBlrygcYPzvg"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbW-k117EeqBlrygcYPzvg" name="instances" ordered="false" lowerBound="1" defaultValueLiteral="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbW-lV17EeqBlrygcYPzvg" name="Execute">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-ll17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_cX2zIJ0qEeeOKogk-od_wQ"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-l117EeqBlrygcYPzvg" name="instances_Must_Be_Greater_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-mF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-mV17EeqBlrygcYPzvg" key="body" value="self.appInstantiation->forAll(instances>0)"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-m117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-nF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-nV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-n117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-oF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-oV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-ol17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-o117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-pF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-pV17EeqBlrygcYPzvg" name="Execute_Must_Be_Sent_To_A_CloudProvider">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-pl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-p117EeqBlrygcYPzvg" key="body" value="uml2cloud::CloudProvider.allInstances()->one(cp | cp.base_Lifeline.coveredBy->includes(self.base_Message.receiveEvent))"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-qV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-ql17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-q117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-rV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-rl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-r117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-sF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-sV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-sl17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-s117EeqBlrygcYPzvg" name="Execute_Must_Be_Sent_By_A_User">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-tF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-tV17EeqBlrygcYPzvg" key="body" value="uml2cloud::User.allInstances()->one(u | u.base_Lifeline.coveredBy->includes(self.base_Message.sendEvent))"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-t117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-uF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-uV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-u117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-vF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-vV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-vl17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-v117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-wF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW-wV17EeqBlrygcYPzvg" name="base_Message" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW-w117EeqBlrygcYPzvg" name="appInstantiation" ordered="false" lowerBound="1" upperBound="-1" eType="_jbW-j117EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbW-xV17EeqBlrygcYPzvg" name="User" abstract="true">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-xl17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_fv1VcPlJEeeOZer_oj06_w"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-x117EeqBlrygcYPzvg" name="User_Must_Have_A_Execute_Message">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-yF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-yV17EeqBlrygcYPzvg" key="body" value="self.base_Lifeline.coveredBy->intersection(uml2cloud::Execute.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-y117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-zF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-zV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-z117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-0F17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-0V17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-0l17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-0117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-1F17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-1V17EeqBlrygcYPzvg" name="User_Must_Have_A_Request_Message">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-1l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-1117EeqBlrygcYPzvg" key="body" value="self.base_Lifeline.coveredBy->intersection(uml2cloud::Request.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-2V17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-2l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-2117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-3V17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-3l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-3117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-4F17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-4V17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-4l17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-4117EeqBlrygcYPzvg" name="User_Must_Sign_A_VM_SLA_Offered_By_The_CloudProvider">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-5F17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-5V17EeqBlrygcYPzvg" key="body" value="true"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-5117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-6F17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-6V17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-6117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-7F17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-7V17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-7l17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-7117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-8F17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW-8V17EeqBlrygcYPzvg" name="User_Must_Have_A_Resume_Message">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-8l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-8117EeqBlrygcYPzvg" key="body" value="self.base_Lifeline.coveredBy->intersection(uml2cloud::Resume.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW-9V17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW-9l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW-9117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW--V17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW--l17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW--117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW-_F17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-_V17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW-_l17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW-_117EeqBlrygcYPzvg" name="base_Lifeline" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Lifeline"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbW_AV17EeqBlrygcYPzvg" name="instances" ordered="false" lowerBound="1" defaultValueLiteral="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW_A117EeqBlrygcYPzvg" name="sla" ordered="false" lowerBound="1" eType="_jbWXpl17EeqBlrygcYPzvg"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbW_BV17EeqBlrygcYPzvg" name="CloudInfrastructure">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW_Bl17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_dSLxQB_rEeiMKqCHb58rQA"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW_B117EeqBlrygcYPzvg" name="datacenterElements_instances_Must_Be_Greatter_Than_Or_Equal_To_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW_CF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW_CV17EeqBlrygcYPzvg" key="body" value="self.datacenterElements->forAll(numberOfDataCenters>=0)"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW_C117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW_DF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW_DV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW_D117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW_EF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW_EV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW_El17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW_E117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW_FF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbW_FV17EeqBlrygcYPzvg" name="datacenterElements_instances_Should_Be_Greatter_Than_Zero">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW_Fl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW_F117EeqBlrygcYPzvg" key="body" value="self.datacenterElements->forAll(numberOfDataCenters>0)"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW_GV17EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW_Gl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW_G117EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbW_HV17EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbW_Hl17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbW_H117EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbW_IF17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW_IV17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbW_Il17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW_I117EeqBlrygcYPzvg" name="datacenterElements" ordered="false" lowerBound="1" upperBound="-1" eType="_jbXkkF17EeqBlrygcYPzvg" containment="true"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW_JV17EeqBlrygcYPzvg" name="base_Component" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbW_J117EeqBlrygcYPzvg" name="network" ordered="false" lowerBound="1" eType="_jbWWmV17EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXkkF17EeqBlrygcYPzvg" name="DataCenterElement">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkkV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_vBVTkB_rEeiMKqCHb58rQA"/>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbXkkl17EeqBlrygcYPzvg" name="numberOfDataCenters" ordered="false" lowerBound="1" defaultValueLiteral="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Integer"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbXklF17EeqBlrygcYPzvg" name="dataCenterType" ordered="false" lowerBound="1" eType="_jbWWdV17EeqBlrygcYPzvg"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXkll17EeqBlrygcYPzvg" name="PriorityUser" eSuperTypes="_jbW-xV17EeqBlrygcYPzvg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkl117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_oYsxEDadEemEgr9NrwVHLA"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXkmV17EeqBlrygcYPzvg" name="RegularUser" eSuperTypes="_jbW-xV17EeqBlrygcYPzvg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkml17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_FBL2cDj5Eem7_8J1_Mhl2A"/>
+          <eOperations xmi:type="ecore:EOperation" xmi:id="_jbXkm117EeqBlrygcYPzvg" name="RegularUser_Must_Have_A_Subscribe_Message">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXknF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbXknV17EeqBlrygcYPzvg" key="body" value="self.base_Lifeline.coveredBy->intersection(uml2cloud::Subscribe.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1"/>
+            </eAnnotations>
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbXkn117EeqBlrygcYPzvg" name="diagnostics">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkoF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbXkoV17EeqBlrygcYPzvg" key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+              </eAnnotations>
+              <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+            </eParameters>
+            <eParameters xmi:type="ecore:EParameter" xmi:id="_jbXko117EeqBlrygcYPzvg" name="context">
+              <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkpF17EeqBlrygcYPzvg" source="http://www.eclipse.org/emf/2002/GenModel">
+                <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbXkpV17EeqBlrygcYPzvg" key="documentation" value="The cache of context-specific information."/>
+              </eAnnotations>
+              <eGenericType xmi:type="ecore:EGenericType" xmi:id="_jbXkpl17EeqBlrygcYPzvg">
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbXkp117EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eTypeArguments xmi:type="ecore:EGenericType" xmi:id="_jbXkqF17EeqBlrygcYPzvg">
+                  <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+                </eTypeArguments>
+                <eClassifier xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+              </eGenericType>
+            </eParameters>
+          </eOperations>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXkql17EeqBlrygcYPzvg" name="Resume">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkq117EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_fz8zMEGdEemAo74uZMglMw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbXkrF17EeqBlrygcYPzvg" name="base_Message" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbXkrl17EeqBlrygcYPzvg" name="resumeTime" ordered="false" lowerBound="1" eType="_jbWXKF17EeqBlrygcYPzvg" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXksF17EeqBlrygcYPzvg" name="ResponseOfferedVMs">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXksV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Hzv-sEVwEemrEaoe5_6_Tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbXksl17EeqBlrygcYPzvg" name="base_Message" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXktF17EeqBlrygcYPzvg" name="Ok">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXktV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_JQm-QEVwEemrEaoe5_6_Tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbXktl17EeqBlrygcYPzvg" name="base_Message" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXkuF17EeqBlrygcYPzvg" name="TimeoutRenting">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkuV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_unsJcEVwEemrEaoe5_6_Tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbXkul17EeqBlrygcYPzvg" name="base_Message" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXkvF17EeqBlrygcYPzvg" name="Notify">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkvV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_w44wAEVwEemrEaoe5_6_Tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbXkvl17EeqBlrygcYPzvg" name="base_Message" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXkwF17EeqBlrygcYPzvg" name="TimeoutSubscription">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkwV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_6_BSgEVwEemrEaoe5_6_Tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbXkwl17EeqBlrygcYPzvg" name="base_Message" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXkxF17EeqBlrygcYPzvg" name="RequestOfferedVMs">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkxV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_Hl6hkEVxEemrEaoe5_6_Tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbXkxl17EeqBlrygcYPzvg" name="base_Message" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jbXkyF17EeqBlrygcYPzvg" name="Response">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbXkyV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_MBPLcEVzEemrEaoe5_6_Tw"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbXkyl17EeqBlrygcYPzvg" name="base_Message" ordered="false">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
       <contents xmi:type="ecore:EPackage" xmi:id="_FFVTwED9EeipCYRDCdomvQ" name="uml2cloudprofile" nsURI="http://www.uclm.es/UML/profiles/UML2Cloud/1" nsPrefix="UML2CloudProfile">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFVTwUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/emf/2002/Ecore">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FFVTwkD9EeipCYRDCdomvQ" key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
@@ -901,31 +2247,31 @@
           </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_FFV8YED9EeipCYRDCdomvQ" name="OK">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFV8YUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_XdmgsJxbEeeZWf-zKUd_hQ"/>
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFV8YUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
           <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FFV8YkD9EeipCYRDCdomvQ" name="base_Message" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
           </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_FFV8ZED9EeipCYRDCdomvQ" name="Notify">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFV8ZUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_YL378JxbEeeZWf-zKUd_hQ"/>
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFV8ZUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
           <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FFV8ZkD9EeipCYRDCdomvQ" name="base_Message" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
           </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_FFV8aED9EeipCYRDCdomvQ" name="Timeout">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFV8aUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_ZPG6kJxbEeeZWf-zKUd_hQ"/>
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFV8aUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
           <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FFV8akD9EeipCYRDCdomvQ" name="base_Message" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
           </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_FFV8bED9EeipCYRDCdomvQ" name="Response">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFV8bUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_aoaoEJ0lEeeUQ6uby8QiRg"/>
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFV8bUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
           <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FFV8bkD9EeipCYRDCdomvQ" name="base_Message" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
           </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_FFV8cED9EeipCYRDCdomvQ" name="Failure">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFV8cUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_dho38J0lEeeUQ6uby8QiRg"/>
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FFV8cUD9EeipCYRDCdomvQ" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
           <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_FFV8ckD9EeipCYRDCdomvQ" name="base_Message" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Message"/>
           </eStructuralFeatures>
@@ -1187,6 +2533,9 @@
     <elementImport xmi:type="uml:ElementImport" xmi:id="_ICV-AI7xEeeBEvSpaJE2FQ" alias="DataType">
       <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
     </elementImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_42q84DhKEeqRQpKn4D3Xng">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_MwZOkIZLEeexBrHTG7KRXw" name="DataCenter">
       <ownedRule xmi:type="uml:Constraint" xmi:id="_s-4YMIZfEeet7_l3X_UfPA" name="rackElements_instances_Should_Be_Greatter_Than_Zero">
         <specification xmi:type="uml:OpaqueExpression" xmi:id="_82qwQIZfEeet7_l3X_UfPA">
@@ -1253,6 +2602,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_SVyJwIZLEeexBrHTG7KRXw" name="ComputingMachine">
       <generalization xmi:type="uml:Generalization" xmi:id="_s8hX0IZLEeexBrHTG7KRXw" general="_QxnBQIZLEeexBrHTG7KRXw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xIDIoGwYEem_VeXGb2WR0A" name="type" type="_brPBwGwYEem_VeXGb2WR0A"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_SdkMwIZLEeexBrHTG7KRXw" name="StorageMachine">
       <generalization xmi:type="uml:Generalization" xmi:id="_r9HwUIZLEeexBrHTG7KRXw" general="_QxnBQIZLEeexBrHTG7KRXw"/>
@@ -1334,12 +2684,25 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_TrQH4IZLEeexBrHTG7KRXw" name="CloudProvider">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_bNXjEHJEEemn3MxcvPR6CA" name="CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_bNYxMHJEEemn3MxcvPR6CA" name="constraintSpec">
+          <language>OCL</language>
+          <body>true</body>
+        </specification>
+      </ownedRule>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_SEeh4IZMEeexBrHTG7KRXw" name="resourceAllocationPolicy">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_o46ukD_OEeitrYtD37_4mA" value="FirstFit"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_o46ukD_OEeitrYtD37_4mA" value="_firstFist_cost"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_VUh8sCE0EeijN6zgko-0mg" name="base_Lifeline" association="_VUeSUCE0EeijN6zgko-0mg">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Lifeline"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Bt5QwDmpEem7_8J1_Mhl2A" name="sla" type="_5lTX8D9ZEemCRds-lNZP0g" association="_Btr1YDmpEem7_8J1_Mhl2A">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZzwdgDmpEem7_8J1_Mhl2A" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_l6QgIF0_EeqBlrygcYPzvg" name="offer">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        <defaultValue xmi:type="uml:LiteralReal" xmi:id="_WUIBgF17EeqBlrygcYPzvg"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Extension" xmi:id="_lNdaYIZLEeexBrHTG7KRXw" name="E_Machine_Component1" memberEnd="_lNeBcIZLEeexBrHTG7KRXw _lNeogIZLEeexBrHTG7KRXw">
@@ -1527,13 +2890,16 @@
           <body>uml2cloud::User.allInstances()->one(u | u.base_Lifeline.coveredBy->includes(self.base_Message.sendEvent))</body>
         </specification>
       </ownedRule>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_JskT4HJGEemn3MxcvPR6CA" name="Request_For_A_VM_Not_Offered_In_The_Signed_SLA_By_The_User">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_JsliAHJGEemn3MxcvPR6CA" name="constraintSpec">
+          <language>OCL</language>
+          <body>true</body>
+        </specification>
+      </ownedRule>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_xJwMQIZWEeexBrHTG7KRXw" name="base_Message" association="_xJvlMIZWEeexBrHTG7KRXw">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_6BoQgviUEee9u4WotLDcAQ" name="vmInstantiation" type="_RwX5IIZXEeexBrHTG7KRXw" association="_6BefgPiUEee9u4WotLDcAQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7xtHAPiUEee9u4WotLDcAQ" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7xtHAfiUEee9u4WotLDcAQ" value="*"/>
-      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6BoQgviUEee9u4WotLDcAQ" name="vmInstantiation" type="_RwX5IIZXEeexBrHTG7KRXw" association="_6BefgPiUEee9u4WotLDcAQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_szZ3EIZWEeexBrHTG7KRXw" name="Subscribe">
       <ownedRule xmi:type="uml:Constraint" xmi:id="_v9Yg8JxpEee4qvZEBCOXDg" name="maxTime_Must_Be_Greater_Than_Zero">
@@ -1598,46 +2964,6 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q1NksIZZEeexBrHTG7KRXw" value="*"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Stereotype" xmi:id="_XdmgsJxbEeeZWf-zKUd_hQ" name="OK">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_KnLycZxcEeeZWf-zKUd_hQ" name="base_Message" association="_KnCBcJxcEeeZWf-zKUd_hQ">
-        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Stereotype" xmi:id="_YL378JxbEeeZWf-zKUd_hQ" name="Notify">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_LK48cpxcEeeZWf-zKUd_hQ" name="base_Message" association="_LK48cJxcEeeZWf-zKUd_hQ">
-        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Stereotype" xmi:id="_ZPG6kJxbEeeZWf-zKUd_hQ" name="Timeout">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_LyThwpxcEeeZWf-zKUd_hQ" name="base_Message" association="_LyThwJxcEeeZWf-zKUd_hQ">
-        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Extension" xmi:id="_KnCBcJxcEeeZWf-zKUd_hQ" name="E_OK_Message1" memberEnd="_KnLycJxcEeeZWf-zKUd_hQ _KnLycZxcEeeZWf-zKUd_hQ">
-      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_KnLycJxcEeeZWf-zKUd_hQ" name="extension_OK" type="_XdmgsJxbEeeZWf-zKUd_hQ" aggregation="composite" association="_KnCBcJxcEeeZWf-zKUd_hQ"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Extension" xmi:id="_LK48cJxcEeeZWf-zKUd_hQ" name="E_Notify_Message1" memberEnd="_LK48cZxcEeeZWf-zKUd_hQ _LK48cpxcEeeZWf-zKUd_hQ">
-      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_LK48cZxcEeeZWf-zKUd_hQ" name="extension_Notify" type="_YL378JxbEeeZWf-zKUd_hQ" aggregation="composite" association="_LK48cJxcEeeZWf-zKUd_hQ"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Extension" xmi:id="_LyThwJxcEeeZWf-zKUd_hQ" name="E_Timeout_Message1" memberEnd="_LyThwZxcEeeZWf-zKUd_hQ _LyThwpxcEeeZWf-zKUd_hQ">
-      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_LyThwZxcEeeZWf-zKUd_hQ" name="extension_Timeout" type="_ZPG6kJxbEeeZWf-zKUd_hQ" aggregation="composite" association="_LyThwJxcEeeZWf-zKUd_hQ"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Stereotype" xmi:id="_aoaoEJ0lEeeUQ6uby8QiRg" name="Response">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_eT1J4Z0lEeeUQ6uby8QiRg" name="base_Message" association="_eTrY4J0lEeeUQ6uby8QiRg">
-        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Stereotype" xmi:id="_dho38J0lEeeUQ6uby8QiRg" name="Failure">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_emKQAZ0lEeeUQ6uby8QiRg" name="base_Message" association="_emAfAJ0lEeeUQ6uby8QiRg">
-        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Extension" xmi:id="_eTrY4J0lEeeUQ6uby8QiRg" name="E_Response_Message1" memberEnd="_eT1J4J0lEeeUQ6uby8QiRg _eT1J4Z0lEeeUQ6uby8QiRg">
-      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_eT1J4J0lEeeUQ6uby8QiRg" name="extension_Response" type="_aoaoEJ0lEeeUQ6uby8QiRg" aggregation="composite" association="_eTrY4J0lEeeUQ6uby8QiRg"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Extension" xmi:id="_emAfAJ0lEeeUQ6uby8QiRg" name="E_Failure_Message1" memberEnd="_emKQAJ0lEeeUQ6uby8QiRg _emKQAZ0lEeeUQ6uby8QiRg">
-      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_emKQAJ0lEeeUQ6uby8QiRg" name="extension_Failure" type="_dho38J0lEeeUQ6uby8QiRg" aggregation="composite" association="_emAfAJ0lEeeUQ6uby8QiRg"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_cX2zIJ0qEeeOKogk-od_wQ" name="Execute">
       <ownedRule xmi:type="uml:Constraint" xmi:id="_5e3i4DDVEei5MfeefuWchw" name="instances_Must_Be_Greater_Than_Zero">
         <specification xmi:type="uml:OpaqueExpression" xmi:id="_5e3i4TDVEei5MfeefuWchw" name="constraintSpec">
@@ -1680,13 +3006,7 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_6BoQg_iUEee9u4WotLDcAQ" name="request" type="_fwlhAIZWEeexBrHTG7KRXw" association="_6BefgPiUEee9u4WotLDcAQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Stereotype" xmi:id="_fv1VcPlJEeeOZer_oj06_w" name="User">
-      <ownedRule xmi:type="uml:Constraint" xmi:id="_OtAWcEDuEeitrYtD37_4mA" name="User_Must_Have_A_Subscribe_Message">
-        <specification xmi:type="uml:OpaqueExpression" xmi:id="_OtA9gEDuEeitrYtD37_4mA" name="constraintSpec">
-          <language>OCL</language>
-          <body>self.base_Lifeline.coveredBy->intersection(uml2cloud::Subscribe.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1</body>
-        </specification>
-      </ownedRule>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_fv1VcPlJEeeOZer_oj06_w" name="User" isAbstract="true">
       <ownedRule xmi:type="uml:Constraint" xmi:id="_ICci8EDuEeitrYtD37_4mA" name="User_Must_Have_A_Execute_Message">
         <specification xmi:type="uml:OpaqueExpression" xmi:id="_ICdxEEDuEeitrYtD37_4mA" name="constraintSpec">
           <language>OCL</language>
@@ -1699,6 +3019,18 @@
           <body>self.base_Lifeline.coveredBy->intersection(uml2cloud::Request.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1</body>
         </specification>
       </ownedRule>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_ZbszUEPwEemrEaoe5_6_Tw" name="User_Must_Sign_A_VM_SLA_Offered_By_The_CloudProvider">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_Zb19QEPwEemrEaoe5_6_Tw" name="constraintSpec">
+          <language>OCL</language>
+          <body>true</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_1lYDgHJCEemn3MxcvPR6CA" name="User_Must_Have_A_Resume_Message">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_1lszoHJCEemn3MxcvPR6CA" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.base_Lifeline.coveredBy->intersection(uml2cloud::Resume.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1</body>
+        </specification>
+      </ownedRule>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_hN2LkflJEeeOZer_oj06_w" name="base_Lifeline" association="_hNzvUPlJEeeOZer_oj06_w">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Lifeline"/>
       </ownedAttribute>
@@ -1706,6 +3038,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_mVs8IDRjEeixJ7Onmcv9MA" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RygjYkccEemheYndKe_CWw" name="sla" type="_5lTX8D9ZEemCRds-lNZP0g" association="_RyeuMEccEemheYndKe_CWw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Extension" xmi:id="_hNzvUPlJEeeOZer_oj06_w" name="E_User_Lifeline1" memberEnd="_hN2LkPlJEeeOZer_oj06_w _hN2LkflJEeeOZer_oj06_w">
       <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_hN2LkPlJEeeOZer_oj06_w" name="extension_User" type="_fv1VcPlJEeeOZer_oj06_w" aggregation="composite" association="_hNzvUPlJEeeOZer_oj06_w"/>
@@ -1771,7 +3104,7 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_T7iVsD_OEeitrYtD37_4mA" value="/inputFile_0.dat"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_VyqjEBu2EeiKrIfrDVEl1w" name="unit">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VyqjEBu2EeiKrIfrDVEl1w" name="type">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_O0KMMD_OEeitrYtD37_4mA" value="string"/>
       </ownedAttribute>
@@ -1805,7 +3138,6 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1n00gB_tEeiMKqCHb58rQA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1n00gR_tEeiMKqCHb58rQA" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_mFI5UCOIEeiQN6X6Ksq0SQ" name="cloudProvider" type="_TrQH4IZLEeexBrHTG7KRXw"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_czxe0iOMEeiQN6X6Ksq0SQ" name="base_Component" association="_czxe0COMEeiQN6X6Ksq0SQ">
         <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Component"/>
       </ownedAttribute>
@@ -1842,6 +3174,160 @@
     <packagedElement xmi:type="uml:Extension" xmi:id="_czxe0COMEeiQN6X6Ksq0SQ" name="E_CloudInfrastructure_Component1" memberEnd="_czxe0SOMEeiQN6X6Ksq0SQ _czxe0iOMEeiQN6X6Ksq0SQ">
       <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_czxe0SOMEeiQN6X6Ksq0SQ" name="extension_CloudInfrastructure" type="_dSLxQB_rEeiMKqCHb58rQA" aggregation="composite" association="_czxe0COMEeiQN6X6Ksq0SQ"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_tLqf4DaUEemEgr9NrwVHLA" name="Cost">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_nylbADaXEemEgr9NrwVHLA" name="value">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        <defaultValue xmi:type="uml:LiteralReal" xmi:id="_QRi0EEP0EemrEaoe5_6_Tw" value="1.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ybjk0DaXEemEgr9NrwVHLA" name="rate" type="_1pLc8AgTEeipCKjf3hYSIw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_oYsxEDadEemEgr9NrwVHLA" name="PriorityUser">
+      <generalization xmi:type="uml:Generalization" xmi:id="_sXaCUDadEemEgr9NrwVHLA" general="_fv1VcPlJEeeOZer_oj06_w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_FBL2cDj5Eem7_8J1_Mhl2A" name="RegularUser">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_OtAWcEDuEeitrYtD37_4mA" name="RegularUser_Must_Have_A_Subscribe_Message">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_OtA9gEDuEeitrYtD37_4mA" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.base_Lifeline.coveredBy->intersection(uml2cloud::Subscribe.allInstances()->collect(m | m.base_Message.sendEvent))->size()=1</body>
+        </specification>
+      </ownedRule>
+      <generalization xmi:type="uml:Generalization" xmi:id="_z67DoDj5Eem7_8J1_Mhl2A" general="_fv1VcPlJEeeOZer_oj06_w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Btr1YDmpEem7_8J1_Mhl2A" memberEnd="_Bt5QwDmpEem7_8J1_Mhl2A _Bt7F8DmpEem7_8J1_Mhl2A">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Bt20gDmpEem7_8J1_Mhl2A" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Bt4CoDmpEem7_8J1_Mhl2A" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Bt7F8DmpEem7_8J1_Mhl2A" name="cloudprovider" type="_TrQH4IZLEeexBrHTG7KRXw" association="_Btr1YDmpEem7_8J1_Mhl2A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rB3IoDnzEem7_8J1_Mhl2A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rGctsDnzEem7_8J1_Mhl2A" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_5lTX8D9ZEemCRds-lNZP0g" name="SLA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WMrrQD9eEemCRds-lNZP0g" name="base_Component" association="_WMlkoD9eEemCRds-lNZP0g">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Component"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WMrrQT9eEemCRds-lNZP0g"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_eZQd8UcbEemheYndKe_CWw" name="vmcost" type="_WRCIsEcSEemheYndKe_CWw" association="_eZOBsEcbEemheYndKe_CWw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EgEAcEcdEemheYndKe_CWw" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_WMlkoD9eEemCRds-lNZP0g" name="E_SLA_Component86" memberEnd="_WMqdID9eEemCRds-lNZP0g _WMrrQD9eEemCRds-lNZP0g">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_WMqdID9eEemCRds-lNZP0g" name="extension_SLA" type="_5lTX8D9ZEemCRds-lNZP0g" aggregation="composite" association="_WMlkoD9eEemCRds-lNZP0g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_fz8zMEGdEemAo74uZMglMw" name="Resume">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Bbg_sEGeEemAo74uZMglMw" name="base_Message" association="_BbejcEGeEemAo74uZMglMw">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Bbg_sUGeEemAo74uZMglMw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Pzz68EGeEemAo74uZMglMw" name="resumeTime" type="_LiyYEAgVEeipCKjf3hYSIw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_BbejcEGeEemAo74uZMglMw" name="E_Resume_Message78" memberEnd="_BbgYoEGeEemAo74uZMglMw _Bbg_sEGeEemAo74uZMglMw">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_BbgYoEGeEemAo74uZMglMw" name="extension_Resume" type="_fz8zMEGdEemAo74uZMglMw" aggregation="composite" association="_BbejcEGeEemAo74uZMglMw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_Hzv-sEVwEemrEaoe5_6_Tw" name="ResponseOfferedVMs">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0FxJcUV1EemrEaoe5_6_Tw" name="base_Message" association="_0FwiYEV1EemrEaoe5_6_Tw">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0FxJckV1EemrEaoe5_6_Tw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_JQm-QEVwEemrEaoe5_6_Tw" name="Ok">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ebZSQUV2EemrEaoe5_6_Tw" name="base_Message" association="_ebYrMEV2EemrEaoe5_6_Tw">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ebZSQkV2EemrEaoe5_6_Tw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_unsJcEVwEemrEaoe5_6_Tw" name="TimeoutRenting">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sjLFQEV2EemrEaoe5_6_Tw" name="base_Message" association="_sjJQEEV2EemrEaoe5_6_Tw">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sjLFQUV2EemrEaoe5_6_Tw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_w44wAEVwEemrEaoe5_6_Tw" name="Notify">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_y5I-QEV1EemrEaoe5_6_Tw" name="base_Message" association="_y4p2EEV1EemrEaoe5_6_Tw">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_y5I-QUV1EemrEaoe5_6_Tw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_6_BSgEVwEemrEaoe5_6_Tw" name="TimeoutSubscription">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_zb-lkEV1EemrEaoe5_6_Tw" name="base_Message" association="_zb9XcEV1EemrEaoe5_6_Tw">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zb-lkUV1EemrEaoe5_6_Tw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_Hl6hkEVxEemrEaoe5_6_Tw" name="RequestOfferedVMs">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0m45gEV1EemrEaoe5_6_Tw" name="base_Message" association="_0m3EUEV1EemrEaoe5_6_Tw">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0m45gUV1EemrEaoe5_6_Tw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_MBPLcEVzEemrEaoe5_6_Tw" name="Response">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_zpzJsUV2EemrEaoe5_6_Tw" name="base_Message" association="_zpyioEV2EemrEaoe5_6_Tw">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Message"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zpzJskV2EemrEaoe5_6_Tw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_y4p2EEV1EemrEaoe5_6_Tw" name="E_Notify_Message86" memberEnd="_y5DesEV1EemrEaoe5_6_Tw _y5I-QEV1EemrEaoe5_6_Tw">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_y5DesEV1EemrEaoe5_6_Tw" name="extension_Notify" type="_w44wAEVwEemrEaoe5_6_Tw" aggregation="composite" association="_y4p2EEV1EemrEaoe5_6_Tw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_zb9XcEV1EemrEaoe5_6_Tw" name="E_TimeoutSubscription_Message87" memberEnd="_zb9-gEV1EemrEaoe5_6_Tw _zb-lkEV1EemrEaoe5_6_Tw">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_zb9-gEV1EemrEaoe5_6_Tw" name="extension_TimeoutSubscription" type="_6_BSgEVwEemrEaoe5_6_Tw" aggregation="composite" association="_zb9XcEV1EemrEaoe5_6_Tw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_0FwiYEV1EemrEaoe5_6_Tw" name="E_ResponseOfferedVMs_Message88" memberEnd="_0FxJcEV1EemrEaoe5_6_Tw _0FxJcUV1EemrEaoe5_6_Tw">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_0FxJcEV1EemrEaoe5_6_Tw" name="extension_ResponseOfferedVMs" type="_Hzv-sEVwEemrEaoe5_6_Tw" aggregation="composite" association="_0FwiYEV1EemrEaoe5_6_Tw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_0m3EUEV1EemrEaoe5_6_Tw" name="E_RequestOfferedVMs_Message89" memberEnd="_0m3EUUV1EemrEaoe5_6_Tw _0m45gEV1EemrEaoe5_6_Tw">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_0m3EUUV1EemrEaoe5_6_Tw" name="extension_RequestOfferedVMs" type="_Hl6hkEVxEemrEaoe5_6_Tw" aggregation="composite" association="_0m3EUEV1EemrEaoe5_6_Tw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_ebYrMEV2EemrEaoe5_6_Tw" name="E_Ok_Message90" memberEnd="_ebZSQEV2EemrEaoe5_6_Tw _ebZSQUV2EemrEaoe5_6_Tw">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ebZSQEV2EemrEaoe5_6_Tw" name="extension_Ok" type="_JQm-QEVwEemrEaoe5_6_Tw" aggregation="composite" association="_ebYrMEV2EemrEaoe5_6_Tw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_sjJQEEV2EemrEaoe5_6_Tw" name="E_TimeoutRenting_Message91" memberEnd="_sjJQEUV2EemrEaoe5_6_Tw _sjLFQEV2EemrEaoe5_6_Tw">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_sjJQEUV2EemrEaoe5_6_Tw" name="extension_TimeoutRenting" type="_unsJcEVwEemrEaoe5_6_Tw" aggregation="composite" association="_sjJQEEV2EemrEaoe5_6_Tw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_zpyioEV2EemrEaoe5_6_Tw" name="E_Response_Message93" memberEnd="_zpzJsEV2EemrEaoe5_6_Tw _zpzJsUV2EemrEaoe5_6_Tw">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_zpzJsEV2EemrEaoe5_6_Tw" name="extension_Response" type="_MBPLcEVzEemrEaoe5_6_Tw" aggregation="composite" association="_zpyioEV2EemrEaoe5_6_Tw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_WRCIsEcSEemheYndKe_CWw" name="VMCost">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4PgxoEcYEemheYndKe_CWw" name="base" type="_tLqf4DaUEemEgr9NrwVHLA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_BvL7oEcaEemheYndKe_CWw" name="inc-priority">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CA8aAEcaEemheYndKe_CWw" name="discount">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CX0B4EcaEemheYndKe_CWw" name="compensation">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_le2nokcbEemheYndKe_CWw" name="vm" type="_ne1bkIZVEeexBrHTG7KRXw" association="_le2AkEcbEemheYndKe_CWw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_eZOBsEcbEemheYndKe_CWw" memberEnd="_eZQd8UcbEemheYndKe_CWw _eZRFAEcbEemheYndKe_CWw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eZP24EcbEemheYndKe_CWw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eZQd8EcbEemheYndKe_CWw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_eZRFAEcbEemheYndKe_CWw" name="sla" type="_5lTX8D9ZEemCRds-lNZP0g" association="_eZOBsEcbEemheYndKe_CWw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_le2AkEcbEemheYndKe_CWw" memberEnd="_le2nokcbEemheYndKe_CWw _le65EEcbEemheYndKe_CWw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_le2noEcbEemheYndKe_CWw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_le2noUcbEemheYndKe_CWw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_le65EEcbEemheYndKe_CWw" name="vmcost" type="_WRCIsEcSEemheYndKe_CWw" association="_le2AkEcbEemheYndKe_CWw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o0Xx8EcbEemheYndKe_CWw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o0cDYEcbEemheYndKe_CWw" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RyeuMEccEemheYndKe_CWw" memberEnd="_RygjYkccEemheYndKe_CWw _RyhKcEccEemheYndKe_CWw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RygjYEccEemheYndKe_CWw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RygjYUccEemheYndKe_CWw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_RyhKcEccEemheYndKe_CWw" name="user" type="_fv1VcPlJEeeOZer_oj06_w" association="_RyeuMEccEemheYndKe_CWw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bHwbgEccEemheYndKe_CWw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bH17EEccEemheYndKe_CWw" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_brPBwGwYEem_VeXGb2WR0A" name="MachineType">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_kt0ckGwYEem_VeXGb2WR0A" name="Normal"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nMjv4GwYEem_VeXGb2WR0A" name="Reserved"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zfuJoIZMEeexBrHTG7KRXw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zfv-0IZMEeexBrHTG7KRXw" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
@@ -1861,7 +3347,7 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://DSMLValidation_PROFILES/PapyrusValidationRuleDSML.uml#__sUW0OhNEeCjcc2EgK3Uwg"/>
     </profileApplication>
   </uml:Profile>
-  <Ecore:EPackage xmi:id="_96kPgIZaEeexBrHTG7KRXw" base_Package="_1K9OUIZKEeexBrHTG7KRXw" packageName="uml2cloudprofile" nsPrefix="UML2CloudProfile" nsURI="http://www.uclm.es/UML/profiles/UML2Cloud/1" basePackage="es.uclm.uml2cloud.profile" prefix="UML2CloudProfile"/>
+  <Ecore:EPackage xmi:id="_96kPgIZaEeexBrHTG7KRXw" base_Package="_1K9OUIZKEeexBrHTG7KRXw" packageName="uml2cloudprofile" nsPrefix="UML2CloudProfile" nsURI="http://www.uclm.es/UML/profiles/UML2Cloud/2" basePackage="es.uclm.uml2cloud.profile" prefix="UML2CloudProfile"/>
   <PapyrusDSMLValidationRule:ValidationRule xmi:id="_0aIo0IZfEeet7_l3X_UfPA" severity="WARNING" base_Constraint="_s-4YMIZfEeet7_l3X_UfPA"/>
   <PapyrusDSMLValidationRule:ValidationRule xmi:id="_EDtD8DBwEei5MfeefuWchw" severity="WARNING" base_Constraint="_-Sy1QDBvEei5MfeefuWchw"/>
 </xmi:XMI>

@@ -2,7 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: es.uclm.uml2cloud.profile;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: es.uclm.uml2cloud.profile
+Bundle-Version: 2.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin

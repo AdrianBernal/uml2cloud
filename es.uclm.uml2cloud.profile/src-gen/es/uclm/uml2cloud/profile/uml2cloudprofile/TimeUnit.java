@@ -71,10 +71,6 @@ public enum TimeUnit implements Enumerator {
 	/**
 	 * The '<em><b>H</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>H</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #H
 	 * @model name="h"
@@ -86,10 +82,6 @@ public enum TimeUnit implements Enumerator {
 	/**
 	 * The '<em><b>Min</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Min</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MIN
 	 * @model name="min"
@@ -101,10 +93,6 @@ public enum TimeUnit implements Enumerator {
 	/**
 	 * The '<em><b>S</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>S</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #S
 	 * @model name="s"
@@ -116,10 +104,6 @@ public enum TimeUnit implements Enumerator {
 	/**
 	 * The '<em><b>Ms</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Ms</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MS
 	 * @model name="ms"
@@ -131,10 +115,6 @@ public enum TimeUnit implements Enumerator {
 	/**
 	 * The '<em><b>Us</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Us</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #US
 	 * @model name="us"
@@ -259,6 +239,7 @@ public enum TimeUnit implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -268,6 +249,7 @@ public enum TimeUnit implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -277,6 +259,7 @@ public enum TimeUnit implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}

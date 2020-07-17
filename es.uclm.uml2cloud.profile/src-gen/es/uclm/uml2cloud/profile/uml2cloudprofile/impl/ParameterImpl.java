@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl#getValue <em>Value</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl#getType <em>Type</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ParameterImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
@@ -70,24 +70,24 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	protected String value = VALUE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnit()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UNIT_EDEFAULT = "string";
+	protected static final String TYPE_EDEFAULT = "string";
 
 	/**
-	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnit()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected String unit = UNIT_EDEFAULT;
+	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -133,6 +133,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -142,6 +143,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -154,6 +156,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return value;
 	}
@@ -163,6 +166,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
@@ -175,8 +179,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUnit() {
-		return unit;
+	@Override
+	public String getType() {
+		return type;
 	}
 
 	/**
@@ -184,11 +189,12 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUnit(String newUnit) {
-		String oldUnit = unit;
-		unit = newUnit;
+	@Override
+	public void setType(String newType) {
+		String oldType = type;
+		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.PARAMETER__UNIT, oldUnit, unit));
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.PARAMETER__TYPE, oldType, type));
 	}
 
 	/**
@@ -196,6 +202,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -205,6 +212,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -224,8 +232,8 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 				return getName();
 			case UML2CloudProfilePackage.PARAMETER__VALUE:
 				return getValue();
-			case UML2CloudProfilePackage.PARAMETER__UNIT:
-				return getUnit();
+			case UML2CloudProfilePackage.PARAMETER__TYPE:
+				return getType();
 			case UML2CloudProfilePackage.PARAMETER__DESCRIPTION:
 				return getDescription();
 		}
@@ -246,8 +254,8 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 			case UML2CloudProfilePackage.PARAMETER__VALUE:
 				setValue((String)newValue);
 				return;
-			case UML2CloudProfilePackage.PARAMETER__UNIT:
-				setUnit((String)newValue);
+			case UML2CloudProfilePackage.PARAMETER__TYPE:
+				setType((String)newValue);
 				return;
 			case UML2CloudProfilePackage.PARAMETER__DESCRIPTION:
 				setDescription((String)newValue);
@@ -270,8 +278,8 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 			case UML2CloudProfilePackage.PARAMETER__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case UML2CloudProfilePackage.PARAMETER__UNIT:
-				setUnit(UNIT_EDEFAULT);
+			case UML2CloudProfilePackage.PARAMETER__TYPE:
+				setType(TYPE_EDEFAULT);
 				return;
 			case UML2CloudProfilePackage.PARAMETER__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
@@ -292,8 +300,8 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case UML2CloudProfilePackage.PARAMETER__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case UML2CloudProfilePackage.PARAMETER__UNIT:
-				return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
+			case UML2CloudProfilePackage.PARAMETER__TYPE:
+				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case UML2CloudProfilePackage.PARAMETER__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
@@ -309,11 +317,14 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		//StringBuffer result = new StringBuffer(super.toString());
-		StringBuffer result = new StringBuffer("");
-		result.append("(");
+		//StringBuilder result = new StringBuilder(super.toString());
+		StringBuilder result = new StringBuilder("");
 		//result.append(" (name: ");
+		result.append(" (");
 		result.append(name);
+		result.append(" (");
+		result.append(type);
+		result.append(")");
 		//result.append(", value: ");
 		result.append(": ");
 		result.append(value);

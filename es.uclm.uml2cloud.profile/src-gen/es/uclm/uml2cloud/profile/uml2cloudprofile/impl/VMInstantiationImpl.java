@@ -96,6 +96,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getInstances() {
 		return instances;
 	}
@@ -105,6 +106,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInstances(int newInstances) {
 		int oldInstances = instances;
 		instances = newInstances;
@@ -117,6 +119,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VM getVmType() {
 		if (vmType != null && vmType.eIsProxy()) {
 			InternalEObject oldVmType = (InternalEObject)vmType;
@@ -143,6 +146,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVmType(VM newVmType) {
 		VM oldVmType = vmType;
 		vmType = newVmType;
@@ -155,6 +159,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getRentingTime() {
 		return rentingTime;
 	}
@@ -179,6 +184,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRentingTime(Time newRentingTime) {
 		if (newRentingTime != rentingTime) {
 			NotificationChain msgs = null;
@@ -295,7 +301,7 @@ public class VMInstantiationImpl extends MinimalEObjectImpl.Container implements
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (instances: ");
 		result.append(instances);
 		result.append(')');

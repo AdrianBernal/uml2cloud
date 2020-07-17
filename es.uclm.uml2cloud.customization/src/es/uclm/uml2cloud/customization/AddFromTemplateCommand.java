@@ -20,8 +20,10 @@ import org.eclipse.papyrus.infra.emf.utils.EMFHelper;
 import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationUtils;
 import org.eclipse.papyrus.uml.diagram.wizards.utils.WizardsHelper;
 import org.eclipse.papyrus.uml.tools.model.UmlUtils;
+import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.PackageableElement;
+import org.osgi.framework.Bundle;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.uml2.uml.Package;
 
@@ -153,53 +155,54 @@ public class AddFromTemplateCommand extends RecordingCommand {
 
 			//2. copy all elements
 			EcoreUtil.Copier copier = new EcoreUtil.Copier();
-			//Collection<EObject> umlObjects = copier.copyAll(templateUmlResource.getContents());
+
 			Collection<EObject> umlObjects = copier.copyAll(templateUmlResource.getContents());
 			Collection<EObject> diObjects = (templateDiResource == null) ? null : copier.copyAll(templateDiResource.getContents());
 			Collection<EObject> notationObjects = (templateNotationResource == null) ? null : copier.copyAll(templateNotationResource.getContents());
-			diagram = (Diagram) notationObjects.iterator().next();
-			System.out.println("a");
-			//Package modelToImport = (Package)templateUmlResource.getContents().get(0);
-			Package modelToImport = (Package)umlObjects.iterator().next();
-			EList<PackageableElement> elementsToImport =  modelToImport.getPackagedElements();
-			Package myModel = (Package)myModelUMLResource.getContents().get(0);
 			
-			EList<PackageableElement> modelElements = myModel.getPackagedElements();
-			for (PackageableElement modelElement : modelElements) {
-				String modelElementName = modelElement.getName();
-				for (PackageableElement elementToImport : elementsToImport) {
-					String elementToImportName = elementToImport.getName();
-					if (elementToImportName.equals(modelElementName)) {
-						String lastCharacter = elementToImportName.substring(elementToImportName.length() - 1);
-						try {
-							Integer integer = Integer.parseInt(lastCharacter);
-							integer++;
-							elementToImportName=elementToImportName.substring(0,elementToImportName.length() - 1)+integer.toString();
-						} catch (NumberFormatException e) {
-							elementToImportName=elementToImportName+"1";
+			//3. set copied elements in goods resources
+			
+			diagram = (Diagram) notationObjects.iterator().next();
+			
+			for (EObject umlObject : umlObjects) {
+				if (umlObject instanceof Model ) {
+					Package modelToImport = (Package) umlObject;
+					EList<PackageableElement> elementsToImport =  modelToImport.getPackagedElements();
+					Package myModel = (Package)myModelUMLResource.getContents().get(0);
+					
+					//Change name if it is equal to oder element name
+					EList<PackageableElement> modelElements = myModel.getPackagedElements();
+					for (PackageableElement modelElement : modelElements) {
+						String modelElementName = modelElement.getName();
+						for (PackageableElement elementToImport : elementsToImport) {
+							String elementToImportName = elementToImport.getName();
+							if (elementToImportName.equals(modelElementName)) {
+								String lastCharacter = elementToImportName.substring(elementToImportName.length() - 1);
+								try {
+									Integer integer = Integer.parseInt(lastCharacter);
+									integer++;
+									elementToImportName=elementToImportName.substring(0,elementToImportName.length() - 1)+integer.toString();
+								} catch (NumberFormatException e) {
+									elementToImportName=elementToImportName+"1";
+								}
+								elementToImport.setName(elementToImportName);
+							}
 						}
-						elementToImport.setName(elementToImportName);
 					}
+					
+					myModel.getPackagedElements().addAll(elementsToImport);
+					
+				} else {
+					myModelUMLResource.getContents().add(umlObject);
 				}
 			}
 			
-			myModel.getPackagedElements().addAll(elementsToImport);
+			//Set myModel reference instead of new model reference
 			copier.put(templateUmlResource.getContents().get(0), myModelUMLResource.getContents().get(0));
-			//System.out.println("a");
-			//System.out.println("a");
-			copier.copyReferences();
-			//System.out.println("a");
-			
-//			//3. set copied elements in goods resources
 
-			//EObject eo = umlObjects.iterator().next();
-			//EList<EObject> el = eo.eContents();
-			
-			//myModelUMLResource.getContents().get(0).eContents().addAll(umlObjects);
-			
-			//EList<EObject> el = myModelUMLResource.getContents();
-			
-			//myModelUMLResource.getContents().addAll(umlObjects);
+			//Set new references
+			copier.copyReferences();
+
 			if(diObjects != null) {
 				//myModelDiResource.getContents().addAll(diObjects);
 			}
@@ -221,7 +224,8 @@ public class AddFromTemplateCommand extends RecordingCommand {
 	 * @return the resource
 	 */
 	private Resource loadTemplateResource(String path, ResourceSet resourceSet) {
-		java.net.URL templateURL = Platform.getBundle(myPluginId).getResource(path);
+		Bundle bundle = Platform.getBundle(myPluginId);
+		java.net.URL templateURL = bundle.getResource(path);
 		if(templateURL != null) {
 			String fullUri = templateURL.getPath();
 			URI uri = URI.createPlatformPluginURI(myPluginId + fullUri, true);

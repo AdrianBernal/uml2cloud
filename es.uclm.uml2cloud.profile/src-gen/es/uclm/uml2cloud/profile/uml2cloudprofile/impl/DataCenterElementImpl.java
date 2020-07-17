@@ -83,6 +83,7 @@ public class DataCenterElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getNumberOfDataCenters() {
 		return numberOfDataCenters;
 	}
@@ -92,6 +93,7 @@ public class DataCenterElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumberOfDataCenters(int newNumberOfDataCenters) {
 		int oldNumberOfDataCenters = numberOfDataCenters;
 		numberOfDataCenters = newNumberOfDataCenters;
@@ -104,6 +106,7 @@ public class DataCenterElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataCenter getDataCenterType() {
 		if (dataCenterType != null && dataCenterType.eIsProxy()) {
 			InternalEObject oldDataCenterType = (InternalEObject)dataCenterType;
@@ -130,6 +133,7 @@ public class DataCenterElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDataCenterType(DataCenter newDataCenterType) {
 		DataCenter oldDataCenterType = dataCenterType;
 		dataCenterType = newDataCenterType;

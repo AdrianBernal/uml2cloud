@@ -20,12 +20,7 @@
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
 			property="uml2cloud:VMInstantiation:vmType"></ppe:ReferenceDialog>
-	</Composite>
-	<Composite>
-		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
-		</Composite.layout>
-		<ppe:DataTypeEditor view="uml2cloud:Single Time"
-			input="{Binding}" property="uml2cloud:VMInstantiation:rentingTime"></ppe:DataTypeEditor>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="uml2cloud:VMInstantiation:rentingTime"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

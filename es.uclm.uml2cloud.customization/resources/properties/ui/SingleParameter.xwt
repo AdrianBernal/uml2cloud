@@ -16,7 +16,7 @@
 		<ppe:StringEditor input="{Binding}"
 			property="uml2cloud:Parameter:value"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}"
-			property="uml2cloud:Parameter:unit"></ppe:StringEditor>
+			property="uml2cloud:Parameter:type"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}"
 			property="uml2cloud:Parameter:description"></ppe:StringEditor>
 	</Composite>

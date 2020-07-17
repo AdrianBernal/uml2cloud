@@ -16,6 +16,8 @@ import org.eclipse.gmf.runtime.diagram.core.util.ViewUtil;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Node;
+import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.window.Window;
 import org.eclipse.papyrus.infra.core.resource.IModel;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
@@ -28,6 +30,7 @@ import org.eclipse.papyrus.uml.diagram.common.commands.CreateBehavioredClassifie
 import org.eclipse.papyrus.uml.diagram.sequence.edit.parts.SequenceDiagramEditPart;
 import org.eclipse.papyrus.uml.diagram.sequence.part.UMLDiagramEditorPlugin;
 import org.eclipse.papyrus.uml.tools.utils.NamedElementUtil;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.uml2.uml.Behavior;
 import org.eclipse.uml2.uml.BehavioredClassifier;
 import org.eclipse.uml2.uml.Package;
@@ -38,6 +41,7 @@ import org.eclipse.papyrus.uml.diagram.wizards.command.InitFromTemplateCommand;
 import org.eclipse.papyrus.infra.gmfdiag.common.AbstractPapyrusGmfCreateDiagramCommandHandler;
 import org.eclipse.papyrus.commands.RenameDiagramHandler;
 import org.eclipse.gmf.runtime.common.core.command.CompositeCommand;
+import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
 public class CreateUML2CloudInteractionDiagramCommand extends CreateBehavioredClassifierDiagramCommand {
 	private Diagram diagram;
@@ -59,7 +63,7 @@ public class CreateUML2CloudInteractionDiagramCommand extends CreateBehavioredCl
 
 	@Override
 	protected String getDefaultDiagramName() {
-		return "CloudinSeqDiagram";
+		return "";
 	}
 	
 	@Override
@@ -108,18 +112,26 @@ public class CreateUML2CloudInteractionDiagramCommand extends CreateBehavioredCl
 //	        
 //			eContents().addAll(umlObjects);
 //		}
+
+		ElementListSelectionDialog dialog = new ElementListSelectionDialog(Display.getCurrent().getActiveShell(), new LabelProvider());
+		dialog.setElements(new String[] { "Regular", "Priority" });
+		dialog.setTitle("Which kind of user are you modeling?");
+		// user pressed cancel
+		if (dialog.open() != Window.OK) {
+		        return;
+		}
+		String userSelected = (String) dialog.getResult()[0];
+		
 		ServicesRegistry registry;
 		ModelSet modelSet;
 		try {
 			registry = ServiceUtilsForResource.getInstance().getServiceRegistry(owner.eResource());
 			modelSet = registry.getService(ModelSet.class);
-			AddFromTemplateCommand addFromTemplateCommand = new AddFromTemplateCommand(modelSet.getTransactionalEditingDomain(), modelSet, "es.uclm.simcan.examples", "baseCloudSystem\\baseCloudSystem.uml", "baseCloudSystem\\baseCloudSystem.notation",
-					"baseCloudSystem\\baseCloudSystem.di");
+			AddFromTemplateCommand addFromTemplateCommand = new AddFromTemplateCommand(modelSet.getTransactionalEditingDomain(), modelSet, "es.uclm.uml2cloud.customization", "resources\\models\\base" + userSelected + "UserCloudSystem.uml", "resources\\models\\base" + userSelected + "UserCloudSystem.notation", "resources\\models\\base" + userSelected + "UserCloudSystem.di");
 			modelSet.getTransactionalEditingDomain().getCommandStack().execute(addFromTemplateCommand);
-			Resource myModelNotationResource = NotationUtils.getNotationResource(modelSet);
+			//Resource myModelNotationResource = NotationUtils.getNotationResource(modelSet);
 			diagram = addFromTemplateCommand.getDiagram();
 			diagram.setName(getName());
-			System.out.println("a");
 		} catch (ServiceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -146,7 +158,7 @@ public class CreateUML2CloudInteractionDiagramCommand extends CreateBehavioredCl
 //			DiagramUtils.setOwner(diagram, owner);
 //			DiagramUtils.setPrototype(diagram, prototype);
 			setName(name);
-			EcoreUtil.delete(element);
+			EcoreUtil.delete(element);			
 			initializeModel(owner);
 			
 //			initializeDiagram(diagram);

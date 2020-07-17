@@ -9,7 +9,10 @@
    </extension>
    <extension
          point="org.eclipse.papyrus.infra.properties.contexts">
-         <context contextModel="/resources/properties/uml2cloud.ctx">
+         <context
+               appliedByDefault="true"
+               contextModel="resources/properties/uml2cloud.ctx"
+               isCustomizable="true">
          </context>
    </extension>
    

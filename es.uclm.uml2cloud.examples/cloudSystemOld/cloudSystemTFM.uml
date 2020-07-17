@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:UML2CloudProfile="http://www.uclm.es/UML/profiles/UML2Cloud/2" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_NBPEAB_QEemfpfuicdrdbg" name="cloudSystem">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_NQGmcB_QEemfpfuicdrdbg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_OfC7gI0NEemHvr1-LBPevw" name="PriceScheme">
+      <packagedElement xmi:type="uml:Component" xmi:id="_F0bowIwxEemFP824l1buPw" name="SLA_regular"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_j72S0IwyEemFP824l1buPw" name="SLA_priority"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4HcK4I0NEemHvr1-LBPevw" name="OfferedResources">
+      <packagedElement xmi:type="uml:Component" xmi:id="_KXQwMIwwEemFP824l1buPw" name="VM_small"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_9SdyQIwxEemFP824l1buPw" name="VM_medium"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_KRVccIwyEemFP824l1buPw" name="VM_large"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_3yJZwIwwEemFP824l1buPw" name="AppDataIntensive"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jkPXII0OEemHvr1-LBPevw" name="Hardware">
+      <packagedElement xmi:type="uml:Component" xmi:id="_rh8sEIwzEemFP824l1buPw" name="CPU_4_cores"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_x1vlYIwzEemFP824l1buPw" name="Memory_16GB"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_jWHdoIw0EemFP824l1buPw" name="Storage_1TB"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_F6zXoI0PEemHvr1-LBPevw" name="FacilitiesStructure">
+      <packagedElement xmi:type="uml:Component" xmi:id="_oAjo8IwzEemFP824l1buPw" name="CloudInfrastructure"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_NvYJQIw1EemFP824l1buPw" name="ComputingRack"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_naakEIw1EemFP824l1buPw" name="DataCenter"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_8IJz4Iw0EemFP824l1buPw" name="ComputingMachine_medium"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_l19gIJboEemLQuZmN_YOhg" name="StorageRack"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_mlZZAJboEemLQuZmN_YOhg" name="StorageMachine"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_ND6kkB_QEemfpfuicdrdbg" name="UserAInteraction">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_9_bHoIxtEemFP824l1buPw" name="User_A" coveredBy="_fLd4sI0REemHvr1-LBPevw _h_s64I0REemHvr1-LBPevw _tLNKAI0REemHvr1-LBPevw _CW_LQI0SEemHvr1-LBPevw"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="__VVKoIxtEemFP824l1buPw" name="CloudProvider" coveredBy="_fLd4sY0REemHvr1-LBPevw _h_s64Y0REemHvr1-LBPevw _tLNKAY0REemHvr1-LBPevw _CW_LQY0SEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLd4sI0REemHvr1-LBPevw" name="RequestSendEvent" covered="_9_bHoIxtEemFP824l1buPw" message="_fLa1YI0REemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fLd4sY0REemHvr1-LBPevw" name="RequestReceiveEvent" covered="__VVKoIxtEemFP824l1buPw" message="_fLa1YI0REemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_h_s64I0REemHvr1-LBPevw" name="ExecuteSendEvent" covered="_9_bHoIxtEemFP824l1buPw" message="_h_sT0I0REemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_h_s64Y0REemHvr1-LBPevw" name="ExecuteReceiveEvent" covered="__VVKoIxtEemFP824l1buPw" message="_h_sT0I0REemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_tLNKAI0REemHvr1-LBPevw" name="ResumeSendEvent" covered="_9_bHoIxtEemFP824l1buPw" message="_tLMi8I0REemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_tLNKAY0REemHvr1-LBPevw" name="ResumeReceiveEvent" covered="__VVKoIxtEemFP824l1buPw" message="_tLMi8I0REemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CW_LQI0SEemHvr1-LBPevw" name="SubscribeSendEvent" covered="_9_bHoIxtEemFP824l1buPw" message="_CW-kMI0SEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CW_LQY0SEemHvr1-LBPevw" name="SubscribeReceiveEvent" covered="__VVKoIxtEemFP824l1buPw" message="_CW-kMI0SEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_fLa1YI0REemHvr1-LBPevw" name="5*Request(VM_small, 1h)" messageSort="asynchCall" receiveEvent="_fLd4sY0REemHvr1-LBPevw" sendEvent="_fLd4sI0REemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_h_sT0I0REemHvr1-LBPevw" name="Execute(Application, IP)" messageSort="asynchCall" receiveEvent="_h_s64Y0REemHvr1-LBPevw" sendEvent="_h_s64I0REemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_tLMi8I0REemHvr1-LBPevw" name="Resume(1h)" messageSort="asynchCall" receiveEvent="_tLNKAY0REemHvr1-LBPevw" sendEvent="_tLNKAI0REemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_CW-kMI0SEemHvr1-LBPevw" name="Subscribe(VM_small, 3h)" messageSort="asynchCall" receiveEvent="_CW_LQY0SEemHvr1-LBPevw" sendEvent="_CW_LQI0SEemHvr1-LBPevw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_WUES0I0UEemHvr1-LBPevw" name="UserB1Interaction">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_WUES0Y0UEemHvr1-LBPevw" name="User_B1" coveredBy="_WUES040UEemHvr1-LBPevw _WUES1Y0UEemHvr1-LBPevw _WUES140UEemHvr1-LBPevw _WUES2Y0UEemHvr1-LBPevw"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_WUES0o0UEemHvr1-LBPevw" name="CloudProvider" coveredBy="_WUES1I0UEemHvr1-LBPevw _WUES1o0UEemHvr1-LBPevw _WUES2I0UEemHvr1-LBPevw _WUES2o0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WUES040UEemHvr1-LBPevw" name="RequestSendEvent" covered="_WUES0Y0UEemHvr1-LBPevw" message="_WUES240UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WUES1I0UEemHvr1-LBPevw" name="RequestReceiveEvent" covered="_WUES0o0UEemHvr1-LBPevw" message="_WUES240UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WUES1Y0UEemHvr1-LBPevw" name="ExecuteSendEvent" covered="_WUES0Y0UEemHvr1-LBPevw" message="_WUES3I0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WUES1o0UEemHvr1-LBPevw" name="ExecuteReceiveEvent" covered="_WUES0o0UEemHvr1-LBPevw" message="_WUES3I0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WUES140UEemHvr1-LBPevw" name="ResumeSendEvent" covered="_WUES0Y0UEemHvr1-LBPevw" message="_WUES3Y0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WUES2I0UEemHvr1-LBPevw" name="ResumeReceiveEvent" covered="_WUES0o0UEemHvr1-LBPevw" message="_WUES3Y0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WUES2Y0UEemHvr1-LBPevw" name="SubscribeSendEvent" covered="_WUES0Y0UEemHvr1-LBPevw" message="_WUES3o0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WUES2o0UEemHvr1-LBPevw" name="SubscribeReceiveEvent" covered="_WUES0o0UEemHvr1-LBPevw" message="_WUES3o0UEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_WUES240UEemHvr1-LBPevw" name="5*Request(VM_medium, 1h)" messageSort="asynchCall" receiveEvent="_WUES1I0UEemHvr1-LBPevw" sendEvent="_WUES040UEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_WUES3I0UEemHvr1-LBPevw" name="2*Execute(Application, IP)" messageSort="asynchCall" receiveEvent="_WUES1o0UEemHvr1-LBPevw" sendEvent="_WUES1Y0UEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_WUES3Y0UEemHvr1-LBPevw" name="Resume(1h)" messageSort="asynchCall" receiveEvent="_WUES2I0UEemHvr1-LBPevw" sendEvent="_WUES140UEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_WUES3o0UEemHvr1-LBPevw" name="Subscribe(VM_medium, 3h)" messageSort="asynchCall" receiveEvent="_WUES2o0UEemHvr1-LBPevw" sendEvent="_WUES2Y0UEemHvr1-LBPevw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_26tN0I0UEemHvr1-LBPevw" name="UserB2Interaction">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_26tN0Y0UEemHvr1-LBPevw" name="User_B2" coveredBy="_26tN040UEemHvr1-LBPevw _26tN1Y0UEemHvr1-LBPevw _26tN140UEemHvr1-LBPevw _26tN2Y0UEemHvr1-LBPevw"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_26tN0o0UEemHvr1-LBPevw" name="CloudProvider" coveredBy="_26tN1I0UEemHvr1-LBPevw _26tN1o0UEemHvr1-LBPevw _26tN2I0UEemHvr1-LBPevw _26tN2o0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_26tN040UEemHvr1-LBPevw" name="RequestSendEvent" covered="_26tN0Y0UEemHvr1-LBPevw" message="_26tN240UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_26tN1I0UEemHvr1-LBPevw" name="RequestReceiveEvent" covered="_26tN0o0UEemHvr1-LBPevw" message="_26tN240UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_26tN1Y0UEemHvr1-LBPevw" name="ExecuteSendEvent" covered="_26tN0Y0UEemHvr1-LBPevw" message="_26tN3I0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_26tN1o0UEemHvr1-LBPevw" name="ExecuteReceiveEvent" covered="_26tN0o0UEemHvr1-LBPevw" message="_26tN3I0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_26tN140UEemHvr1-LBPevw" name="ResumeSendEvent" covered="_26tN0Y0UEemHvr1-LBPevw" message="_26tN3Y0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_26tN2I0UEemHvr1-LBPevw" name="ResumeReceiveEvent" covered="_26tN0o0UEemHvr1-LBPevw" message="_26tN3Y0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_26tN2Y0UEemHvr1-LBPevw" name="SubscribeSendEvent" covered="_26tN0Y0UEemHvr1-LBPevw" message="_26tN3o0UEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_26tN2o0UEemHvr1-LBPevw" name="SubscribeReceiveEvent" covered="_26tN0o0UEemHvr1-LBPevw" message="_26tN3o0UEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_26tN240UEemHvr1-LBPevw" name="5*Request(VM_large, 1h)" messageSort="asynchCall" receiveEvent="_26tN1I0UEemHvr1-LBPevw" sendEvent="_26tN040UEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_26tN3I0UEemHvr1-LBPevw" name="2*Execute(Application, IP)" messageSort="asynchCall" receiveEvent="_26tN1o0UEemHvr1-LBPevw" sendEvent="_26tN1Y0UEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_26tN3Y0UEemHvr1-LBPevw" name="Resume(1h)" messageSort="asynchCall" receiveEvent="_26tN2I0UEemHvr1-LBPevw" sendEvent="_26tN140UEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_26tN3o0UEemHvr1-LBPevw" name="Subscribe(VM_large, 3h)" messageSort="asynchCall" receiveEvent="_26tN2o0UEemHvr1-LBPevw" sendEvent="_26tN2Y0UEemHvr1-LBPevw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_SQ5i4I0VEemHvr1-LBPevw" name="UserCInteraction">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_SQ5i4Y0VEemHvr1-LBPevw" name="User_C" coveredBy="_SQ5i440VEemHvr1-LBPevw _SQ5i5Y0VEemHvr1-LBPevw _SQ5i540VEemHvr1-LBPevw _SQ5i6Y0VEemHvr1-LBPevw"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_SQ5i4o0VEemHvr1-LBPevw" name="CloudProvider" coveredBy="_SQ5i5I0VEemHvr1-LBPevw _SQ5i5o0VEemHvr1-LBPevw _SQ5i6I0VEemHvr1-LBPevw _SQ5i6o0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SQ5i440VEemHvr1-LBPevw" name="RequestSendEvent" covered="_SQ5i4Y0VEemHvr1-LBPevw" message="_SQ5i640VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SQ5i5I0VEemHvr1-LBPevw" name="RequestReceiveEvent" covered="_SQ5i4o0VEemHvr1-LBPevw" message="_SQ5i640VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SQ5i5Y0VEemHvr1-LBPevw" name="ExecuteSendEvent" covered="_SQ5i4Y0VEemHvr1-LBPevw" message="_SQ5i7I0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SQ5i5o0VEemHvr1-LBPevw" name="ExecuteReceiveEvent" covered="_SQ5i4o0VEemHvr1-LBPevw" message="_SQ5i7I0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SQ5i540VEemHvr1-LBPevw" name="ResumeSendEvent" covered="_SQ5i4Y0VEemHvr1-LBPevw" message="_SQ5i7Y0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SQ5i6I0VEemHvr1-LBPevw" name="ResumeReceiveEvent" covered="_SQ5i4o0VEemHvr1-LBPevw" message="_SQ5i7Y0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SQ5i6Y0VEemHvr1-LBPevw" name="SubscribeSendEvent" covered="_SQ5i4Y0VEemHvr1-LBPevw" message="_SQ5i7o0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SQ5i6o0VEemHvr1-LBPevw" name="SubscribeReceiveEvent" covered="_SQ5i4o0VEemHvr1-LBPevw" message="_SQ5i7o0VEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_SQ5i640VEemHvr1-LBPevw" name="2*Request(VM_medium, 1h)" messageSort="asynchCall" receiveEvent="_SQ5i5I0VEemHvr1-LBPevw" sendEvent="_SQ5i440VEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_SQ5i7I0VEemHvr1-LBPevw" name="Execute(Application, IP)" messageSort="asynchCall" receiveEvent="_SQ5i5o0VEemHvr1-LBPevw" sendEvent="_SQ5i5Y0VEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_SQ5i7Y0VEemHvr1-LBPevw" name="Resume(1h)" messageSort="asynchCall" receiveEvent="_SQ5i6I0VEemHvr1-LBPevw" sendEvent="_SQ5i540VEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_SQ5i7o0VEemHvr1-LBPevw" name="Subscribe(VM_small, 3h)" messageSort="asynchCall" receiveEvent="_SQ5i6o0VEemHvr1-LBPevw" sendEvent="_SQ5i6Y0VEemHvr1-LBPevw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_TOl6MI0VEemHvr1-LBPevw" name="UserDInteraction">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_TOl6MY0VEemHvr1-LBPevw" name="User_D" coveredBy="_TOl6M40VEemHvr1-LBPevw _TOl6NY0VEemHvr1-LBPevw _TOl6N40VEemHvr1-LBPevw _TOl6OY0VEemHvr1-LBPevw"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_TOl6Mo0VEemHvr1-LBPevw" name="CloudProvider" coveredBy="_TOl6NI0VEemHvr1-LBPevw _TOl6No0VEemHvr1-LBPevw _TOl6OI0VEemHvr1-LBPevw _TOl6Oo0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TOl6M40VEemHvr1-LBPevw" name="RequestSendEvent" covered="_TOl6MY0VEemHvr1-LBPevw" message="_TOl6O40VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TOl6NI0VEemHvr1-LBPevw" name="RequestReceiveEvent" covered="_TOl6Mo0VEemHvr1-LBPevw" message="_TOl6O40VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TOl6NY0VEemHvr1-LBPevw" name="ExecuteSendEvent" covered="_TOl6MY0VEemHvr1-LBPevw" message="_TOl6PI0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TOl6No0VEemHvr1-LBPevw" name="ExecuteReceiveEvent" covered="_TOl6Mo0VEemHvr1-LBPevw" message="_TOl6PI0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TOl6N40VEemHvr1-LBPevw" name="ResumeSendEvent" covered="_TOl6MY0VEemHvr1-LBPevw" message="_TOl6PY0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TOl6OI0VEemHvr1-LBPevw" name="ResumeReceiveEvent" covered="_TOl6Mo0VEemHvr1-LBPevw" message="_TOl6PY0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TOl6OY0VEemHvr1-LBPevw" name="SubscribeSendEvent" covered="_TOl6MY0VEemHvr1-LBPevw" message="_TOl6Po0VEemHvr1-LBPevw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TOl6Oo0VEemHvr1-LBPevw" name="SubscribeReceiveEvent" covered="_TOl6Mo0VEemHvr1-LBPevw" message="_TOl6Po0VEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_TOl6O40VEemHvr1-LBPevw" name="50*Request(VM_medium, 1h)" messageSort="asynchCall" receiveEvent="_TOl6NI0VEemHvr1-LBPevw" sendEvent="_TOl6M40VEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_TOl6PI0VEemHvr1-LBPevw" name="Execute(Application, IP)" messageSort="asynchCall" receiveEvent="_TOl6No0VEemHvr1-LBPevw" sendEvent="_TOl6NY0VEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_TOl6PY0VEemHvr1-LBPevw" name="Resume(1h)" messageSort="asynchCall" receiveEvent="_TOl6OI0VEemHvr1-LBPevw" sendEvent="_TOl6N40VEemHvr1-LBPevw"/>
+      <message xmi:type="uml:Message" xmi:id="_TOl6Po0VEemHvr1-LBPevw" name="Subscribe(VM_medium, 3h)" messageSort="asynchCall" receiveEvent="_TOl6Oo0VEemHvr1-LBPevw" sendEvent="_TOl6OY0VEemHvr1-LBPevw"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UmufwIwuEemFP824l1buPw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Umvt4IwuEemFP824l1buPw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.uclm.es/UML/profiles/UML2Cloud/2#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML2CLOUD_PROFILE/uml2cloud.profile.uml#_1K9OUIZKEeexBrHTG7KRXw"/>
+    </profileApplication>
+  </uml:Model>
+  <UML2CloudProfile:VM xmi:id="_KXUakIwwEemFP824l1buPw" base_Component="_KXQwMIwwEemFP824l1buPw" cores="1" computingUnits="1.0">
+    <disk xmi:type="UML2CloudProfile:Size" xmi:id="_BRgSQI0EEemZN8c3ONyqrA" value="250.0" unit="GByte"/>
+    <memory xmi:type="UML2CloudProfile:Size" xmi:id="_EQH_gI0EEemZN8c3ONyqrA" unit="GByte"/>
+  </UML2CloudProfile:VM>
+  <UML2CloudProfile:Application xmi:id="_3yMdEIwwEemFP824l1buPw" base_Component="_3yJZwIwwEemFP824l1buPw" MIs="5000">
+    <inputData xmi:type="UML2CloudProfile:Size" xmi:id="_9qnB8IwwEemFP824l1buPw" value="375.0"/>
+    <outputData xmi:type="UML2CloudProfile:Size" xmi:id="_-mliAIwwEemFP824l1buPw" value="250.0"/>
+    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_ejszcJboEemLQuZmN_YOhg"/>
+    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_e5igkJboEemLQuZmN_YOhg" name="outputFile" value="/outputFile_0.dat"/>
+    <parameter xmi:type="UML2CloudProfile:Parameter" xmi:id="_5xlowDuGEeqRFMNBPCHsvg" name="iterations" value="5" unit="int"/>
+  </UML2CloudProfile:Application>
+  <UML2CloudProfile:SLA xmi:id="_F0kysIwxEemFP824l1buPw" base_Component="_F0bowIwxEemFP824l1buPw">
+    <vmcost xmi:type="UML2CloudProfile:VMCost" xmi:id="_HZt5oIwzEemFP824l1buPw" increase="0.1" discount="0.2" vm="_KXUakIwwEemFP824l1buPw">
+      <base xmi:type="UML2CloudProfile:Cost" xmi:id="_IfvGgIwzEemFP824l1buPw" value="10.0"/>
+    </vmcost>
+    <vmcost xmi:type="UML2CloudProfile:VMCost" xmi:id="_H8WFkIwzEemFP824l1buPw" increase="0.1" discount="0.2" vm="_9SeZWIwxEemFP824l1buPw">
+      <base xmi:type="UML2CloudProfile:Cost" xmi:id="_JIWlsIwzEemFP824l1buPw" value="15.0"/>
+    </vmcost>
+    <vmcost xmi:type="UML2CloudProfile:VMCost" xmi:id="_H-xugIwzEemFP824l1buPw" increase="0.1" discount="0.2" vm="_KRWqk4wyEemFP824l1buPw">
+      <base xmi:type="UML2CloudProfile:Cost" xmi:id="_KjPPUIwzEemFP824l1buPw" value="23.0"/>
+    </vmcost>
+  </UML2CloudProfile:SLA>
+  <UML2CloudProfile:VM xmi:id="_9SeZWIwxEemFP824l1buPw" base_Component="_9SdyQIwxEemFP824l1buPw">
+    <disk xmi:type="UML2CloudProfile:Size" xmi:id="_H1KzkI0EEemZN8c3ONyqrA" value="500.0" unit="GByte"/>
+    <memory xmi:type="UML2CloudProfile:Size" xmi:id="_IEAg0I0EEemZN8c3ONyqrA" value="2.0" unit="GByte"/>
+  </UML2CloudProfile:VM>
+  <UML2CloudProfile:VM xmi:id="_KRWqk4wyEemFP824l1buPw" base_Component="_KRVccIwyEemFP824l1buPw" cores="4" computingUnits="4.0">
+    <disk xmi:type="UML2CloudProfile:Size" xmi:id="_N2tSkIwwEemFP824l1buPw" unit="TByte"/>
+    <memory xmi:type="UML2CloudProfile:Size" xmi:id="_u4USUIwwEemFP824l1buPw" value="8.0" unit="GByte"/>
+  </UML2CloudProfile:VM>
+  <UML2CloudProfile:SLA xmi:id="_j73g8owyEemFP824l1buPw" base_Component="_j72S0IwyEemFP824l1buPw" type="Priority">
+    <vmcost xmi:type="UML2CloudProfile:VMCost" xmi:id="_MOosEIwxEemFP824l1buPw" increase="0.1" discount="0.2" compensation="2.5" vm="_KXUakIwwEemFP824l1buPw">
+      <base xmi:type="UML2CloudProfile:Cost" xmi:id="_QBmAUIwxEemFP824l1buPw" value="10.0"/>
+    </vmcost>
+    <vmcost xmi:type="UML2CloudProfile:VMCost" xmi:id="_ZCjOAIwyEemFP824l1buPw" increase="0.1" discount="0.2" compensation="1.11" vm="_9SeZWIwxEemFP824l1buPw">
+      <base xmi:type="UML2CloudProfile:Cost" xmi:id="_aQNT8IwyEemFP824l1buPw" value="22.5"/>
+    </vmcost>
+    <vmcost xmi:type="UML2CloudProfile:VMCost" xmi:id="_ZTS_wIwyEemFP824l1buPw" increase="0.1" discount="0.2" compensation="0.72" vm="_KRWqk4wyEemFP824l1buPw">
+      <base xmi:type="UML2CloudProfile:Cost" xmi:id="_bQY-kIwyEemFP824l1buPw" value="34.5"/>
+    </vmcost>
+  </UML2CloudProfile:SLA>
+  <UML2CloudProfile:CloudInfrastructure xmi:id="_oAtZ8IwzEemFP824l1buPw" base_Component="_oAjo8IwzEemFP824l1buPw">
+    <datacenterElements xmi:type="UML2CloudProfile:DataCenterElement" xmi:id="_4pHrwIw1EemFP824l1buPw" dataCenterType="_nadAUIw1EemFP824l1buPw"/>
+    <network xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_7Jk2UIw1EemFP824l1buPw"/>
+  </UML2CloudProfile:CloudInfrastructure>
+  <UML2CloudProfile:CPU xmi:id="_riFO8IwzEemFP824l1buPw" base_Component="_rh8sEIwzEemFP824l1buPw" cores="4" MIPS="60000"/>
+  <UML2CloudProfile:Memory xmi:id="_x1yBoIwzEemFP824l1buPw" base_Component="_x1vlYIwzEemFP824l1buPw">
+    <capacity xmi:type="UML2CloudProfile:Size" xmi:id="_0_-FsIwzEemFP824l1buPw" value="16.0" unit="GByte"/>
+    <latency xmi:type="UML2CloudProfile:Latency" xmi:id="_3AB48IwzEemFP824l1buPw">
+      <time xmi:type="UML2CloudProfile:Time" xmi:id="_K8JpIIw0EemFP824l1buPw" unit="us"/>
+    </latency>
+    <latency xmi:type="UML2CloudProfile:Latency" xmi:id="_3fHosIwzEemFP824l1buPw" name="write">
+      <time xmi:type="UML2CloudProfile:Time" xmi:id="_MepWoIw0EemFP824l1buPw" unit="us"/>
+    </latency>
+  </UML2CloudProfile:Memory>
+  <UML2CloudProfile:Storage xmi:id="_jWQnkIw0EemFP824l1buPw" base_Component="_jWHdoIw0EemFP824l1buPw">
+    <driveCapacity xmi:type="UML2CloudProfile:Size" xmi:id="_l448YIw0EemFP824l1buPw" unit="TByte"/>
+    <readBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_pXfKMIw0EemFP824l1buPw" value="500.0" unit="Mbps"/>
+    <writeBandwidth xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_rjWk0Iw0EemFP824l1buPw" value="350.0" unit="Mbps"/>
+  </UML2CloudProfile:Storage>
+  <UML2CloudProfile:ComputingMachine xmi:id="_8INeQIw0EemFP824l1buPw" base_Component="_8IJz4Iw0EemFP824l1buPw" cpu="_riFO8IwzEemFP824l1buPw" memory="_x1yBoIwzEemFP824l1buPw" storage="_jWQnkIw0EemFP824l1buPw"/>
+  <UML2CloudProfile:ComputingRack xmi:id="_Nve28Iw1EemFP824l1buPw" boards="16" base_Component="_NvYJQIw1EemFP824l1buPw" machineType="_8INeQIw0EemFP824l1buPw">
+    <network xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_kN-dQIw1EemFP824l1buPw" value="10.0"/>
+  </UML2CloudProfile:ComputingRack>
+  <UML2CloudProfile:DataCenter xmi:id="_nadAUIw1EemFP824l1buPw" base_Component="_naakEIw1EemFP824l1buPw">
+    <network xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_q9oMIIw1EemFP824l1buPw"/>
+    <rackElements xmi:type="UML2CloudProfile:RackElement" xmi:id="_raJwEIw1EemFP824l1buPw" rackType="_Nve28Iw1EemFP824l1buPw"/>
+    <rackElements xmi:type="UML2CloudProfile:RackElement" xmi:id="_CQr_MDuLEeqAnK5ON3IUyQ" rackType="_l2GDAJboEemLQuZmN_YOhg"/>
+  </UML2CloudProfile:DataCenter>
+  <UML2CloudProfile:RegularUser xmi:id="_j_JAIIxuEemFP824l1buPw" base_Lifeline="_9_bHoIxtEemFP824l1buPw" instances="2500" sla="_F0kysIwxEemFP824l1buPw"/>
+  <UML2CloudProfile:CloudProvider xmi:id="_sSHi8IxuEemFP824l1buPw" base_Lifeline="__VVKoIxtEemFP824l1buPw" sla="_F0kysIwxEemFP824l1buPw _j73g8owyEemFP824l1buPw"/>
+  <UML2CloudProfile:Request xmi:id="_K739cI0SEemHvr1-LBPevw" base_Message="_fLa1YI0REemHvr1-LBPevw">
+    <vmInstantiation xmi:type="UML2CloudProfile:VMInstantiation" xmi:id="_kQO2QI0VEemHvr1-LBPevw" instances="5" vmType="_KXUakIwwEemFP824l1buPw">
+      <rentingTime xmi:type="UML2CloudProfile:Time" xmi:id="_kQO2QY0VEemHvr1-LBPevw" value="1.0"/>
+    </vmInstantiation>
+  </UML2CloudProfile:Request>
+  <UML2CloudProfile:Execute xmi:id="_L0bWEI0SEemHvr1-LBPevw" base_Message="_h_sT0I0REemHvr1-LBPevw">
+    <appInstantiation xmi:type="UML2CloudProfile:AppInstantiation" xmi:id="_nLa1AI0VEemHvr1-LBPevw" applicationType="_3yMdEIwwEemFP824l1buPw"/>
+  </UML2CloudProfile:Execute>
+  <UML2CloudProfile:Resume xmi:id="_QnYHsI0SEemHvr1-LBPevw" base_Message="_tLMi8I0REemHvr1-LBPevw">
+    <resumeTime xmi:type="UML2CloudProfile:Time" xmi:id="_qBiGgI0VEemHvr1-LBPevw" value="1.0"/>
+  </UML2CloudProfile:Resume>
+  <UML2CloudProfile:Subscribe xmi:id="_RjP6EI0SEemHvr1-LBPevw" base_Message="_CW-kMI0SEemHvr1-LBPevw">
+    <maxTime xmi:type="UML2CloudProfile:Time" xmi:id="_rbbRoI0VEemHvr1-LBPevw" value="3.0"/>
+  </UML2CloudProfile:Subscribe>
+  <UML2CloudProfile:RegularUser xmi:id="_WUFg8I0UEemHvr1-LBPevw" base_Lifeline="_WUES0Y0UEemHvr1-LBPevw" instances="1000" sla="_F0kysIwxEemFP824l1buPw"/>
+  <UML2CloudProfile:CloudProvider xmi:id="_WUGIAI0UEemHvr1-LBPevw" base_Lifeline="_WUES0o0UEemHvr1-LBPevw" sla="_F0kysIwxEemFP824l1buPw _j73g8owyEemFP824l1buPw"/>
+  <UML2CloudProfile:Request xmi:id="_WUGvEI0UEemHvr1-LBPevw" base_Message="_WUES240UEemHvr1-LBPevw">
+    <vmInstantiation xmi:type="UML2CloudProfile:VMInstantiation" xmi:id="_y-qZkI0VEemHvr1-LBPevw" instances="5" vmType="_9SeZWIwxEemFP824l1buPw">
+      <rentingTime xmi:type="UML2CloudProfile:Time" xmi:id="_0Kt9AI0VEemHvr1-LBPevw" value="1.0"/>
+    </vmInstantiation>
+  </UML2CloudProfile:Request>
+  <UML2CloudProfile:Execute xmi:id="_WUGvEY0UEemHvr1-LBPevw" base_Message="_WUES3I0UEemHvr1-LBPevw">
+    <appInstantiation xmi:type="UML2CloudProfile:AppInstantiation" xmi:id="_2VS-MI0VEemHvr1-LBPevw" applicationType="_3yMdEIwwEemFP824l1buPw" instances="2"/>
+  </UML2CloudProfile:Execute>
+  <UML2CloudProfile:Resume xmi:id="_WUHWII0UEemHvr1-LBPevw" base_Message="_WUES3Y0UEemHvr1-LBPevw">
+    <resumeTime xmi:type="UML2CloudProfile:Time" xmi:id="_4eQOwI0VEemHvr1-LBPevw" value="1.0"/>
+  </UML2CloudProfile:Resume>
+  <UML2CloudProfile:Subscribe xmi:id="_WUHWIY0UEemHvr1-LBPevw" base_Message="_WUES3o0UEemHvr1-LBPevw">
+    <maxTime xmi:type="UML2CloudProfile:Time" xmi:id="_5RaKAI0VEemHvr1-LBPevw" value="3.0"/>
+  </UML2CloudProfile:Subscribe>
+  <UML2CloudProfile:RegularUser xmi:id="_26vDAI0UEemHvr1-LBPevw" base_Lifeline="_26tN0Y0UEemHvr1-LBPevw" instances="1000" sla="_F0kysIwxEemFP824l1buPw"/>
+  <UML2CloudProfile:CloudProvider xmi:id="_26wRII0UEemHvr1-LBPevw" base_Lifeline="_26tN0o0UEemHvr1-LBPevw" sla="_F0kysIwxEemFP824l1buPw _j73g8owyEemFP824l1buPw"/>
+  <UML2CloudProfile:Request xmi:id="_26wRIY0UEemHvr1-LBPevw" base_Message="_26tN240UEemHvr1-LBPevw">
+    <vmInstantiation xmi:type="UML2CloudProfile:VMInstantiation" xmi:id="_DVk9oI0WEemHvr1-LBPevw" instances="5" vmType="_KRWqk4wyEemFP824l1buPw">
+      <rentingTime xmi:type="UML2CloudProfile:Time" xmi:id="_DVk9oY0WEemHvr1-LBPevw" value="1.0"/>
+    </vmInstantiation>
+  </UML2CloudProfile:Request>
+  <UML2CloudProfile:Execute xmi:id="_26w4MI0UEemHvr1-LBPevw" base_Message="_26tN3I0UEemHvr1-LBPevw">
+    <appInstantiation xmi:type="UML2CloudProfile:AppInstantiation" xmi:id="__cAggI0UEemHvr1-LBPevw" applicationType="_3yMdEIwwEemFP824l1buPw" instances="2"/>
+  </UML2CloudProfile:Execute>
+  <UML2CloudProfile:Resume xmi:id="_26w4MY0UEemHvr1-LBPevw" base_Message="_26tN3Y0UEemHvr1-LBPevw">
+    <resumeTime xmi:type="UML2CloudProfile:Time" xmi:id="_HwuTQI0WEemHvr1-LBPevw" value="1.0"/>
+  </UML2CloudProfile:Resume>
+  <UML2CloudProfile:Subscribe xmi:id="_26xfQI0UEemHvr1-LBPevw" base_Message="_26tN3o0UEemHvr1-LBPevw">
+    <maxTime xmi:type="UML2CloudProfile:Time" xmi:id="_JDwocI0WEemHvr1-LBPevw" value="3.0"/>
+  </UML2CloudProfile:Subscribe>
+  <UML2CloudProfile:RegularUser xmi:id="_SQ8mMI0VEemHvr1-LBPevw" base_Lifeline="_SQ5i4Y0VEemHvr1-LBPevw" instances="1000" sla="_F0kysIwxEemFP824l1buPw"/>
+  <UML2CloudProfile:CloudProvider xmi:id="_SQ9NQI0VEemHvr1-LBPevw" base_Lifeline="_SQ5i4o0VEemHvr1-LBPevw" sla="_F0kysIwxEemFP824l1buPw _j73g8owyEemFP824l1buPw"/>
+  <UML2CloudProfile:Request xmi:id="_SQ90UI0VEemHvr1-LBPevw" base_Message="_SQ5i640VEemHvr1-LBPevw">
+    <vmInstantiation xmi:type="UML2CloudProfile:VMInstantiation" xmi:id="_DyDTsI0VEemHvr1-LBPevw" instances="2" vmType="_9SeZWIwxEemFP824l1buPw">
+      <rentingTime xmi:type="UML2CloudProfile:Time" xmi:id="_FvKgoI0VEemHvr1-LBPevw" value="1.0"/>
+    </vmInstantiation>
+  </UML2CloudProfile:Request>
+  <UML2CloudProfile:Execute xmi:id="_SQ90UY0VEemHvr1-LBPevw" base_Message="_SQ5i7I0VEemHvr1-LBPevw">
+    <appInstantiation xmi:type="UML2CloudProfile:AppInstantiation" xmi:id="_CFV6QI0VEemHvr1-LBPevw" applicationType="_3yMdEIwwEemFP824l1buPw"/>
+  </UML2CloudProfile:Execute>
+  <UML2CloudProfile:Resume xmi:id="_SQ-bYI0VEemHvr1-LBPevw" base_Message="_SQ5i7Y0VEemHvr1-LBPevw">
+    <resumeTime xmi:type="UML2CloudProfile:Time" xmi:id="_J2IWAI0VEemHvr1-LBPevw" value="1.0"/>
+  </UML2CloudProfile:Resume>
+  <UML2CloudProfile:Subscribe xmi:id="_SQ_CcI0VEemHvr1-LBPevw" base_Message="_SQ5i7o0VEemHvr1-LBPevw">
+    <maxTime xmi:type="UML2CloudProfile:Time" xmi:id="_LI924I0VEemHvr1-LBPevw" value="3.0"/>
+  </UML2CloudProfile:Subscribe>
+  <UML2CloudProfile:RegularUser xmi:id="_TOnIUI0VEemHvr1-LBPevw" base_Lifeline="_TOl6MY0VEemHvr1-LBPevw" instances="500" sla="_F0kysIwxEemFP824l1buPw"/>
+  <UML2CloudProfile:CloudProvider xmi:id="_TOoWcI0VEemHvr1-LBPevw" base_Lifeline="_TOl6Mo0VEemHvr1-LBPevw" sla="_F0kysIwxEemFP824l1buPw _j73g8owyEemFP824l1buPw"/>
+  <UML2CloudProfile:Request xmi:id="_TOoWcY0VEemHvr1-LBPevw" base_Message="_TOl6O40VEemHvr1-LBPevw">
+    <vmInstantiation xmi:type="UML2CloudProfile:VMInstantiation" xmi:id="_akfUQI0WEemHvr1-LBPevw" instances="50" vmType="_9SeZWIwxEemFP824l1buPw">
+      <rentingTime xmi:type="UML2CloudProfile:Time" xmi:id="_akfUQY0WEemHvr1-LBPevw" value="1.0"/>
+    </vmInstantiation>
+  </UML2CloudProfile:Request>
+  <UML2CloudProfile:Execute xmi:id="_TOo9gI0VEemHvr1-LBPevw" base_Message="_TOl6PI0VEemHvr1-LBPevw">
+    <appInstantiation xmi:type="UML2CloudProfile:AppInstantiation" xmi:id="_eHncwI0WEemHvr1-LBPevw" applicationType="_3yMdEIwwEemFP824l1buPw"/>
+  </UML2CloudProfile:Execute>
+  <UML2CloudProfile:Resume xmi:id="_TOo9gY0VEemHvr1-LBPevw" base_Message="_TOl6PY0VEemHvr1-LBPevw">
+    <resumeTime xmi:type="UML2CloudProfile:Time" xmi:id="_hQkKsI0WEemHvr1-LBPevw" value="1.0"/>
+  </UML2CloudProfile:Resume>
+  <UML2CloudProfile:Subscribe xmi:id="_TOpkkI0VEemHvr1-LBPevw" base_Message="_TOl6Po0VEemHvr1-LBPevw">
+    <maxTime xmi:type="UML2CloudProfile:Time" xmi:id="_iXRUEI0WEemHvr1-LBPevw" value="3.0"/>
+  </UML2CloudProfile:Subscribe>
+  <UML2CloudProfile:StorageRack xmi:id="_l2GDAJboEemLQuZmN_YOhg" machinesPerBoard="4" boards="4" base_Component="_l19gIJboEemLQuZmN_YOhg" machineType="_mlb1QJboEemLQuZmN_YOhg">
+    <network xmi:type="UML2CloudProfile:Bandwidth" xmi:id="_sa8QEJboEemLQuZmN_YOhg" value="2.0"/>
+  </UML2CloudProfile:StorageRack>
+  <UML2CloudProfile:StorageMachine xmi:id="_mlb1QJboEemLQuZmN_YOhg" base_Component="_mlZZAJboEemLQuZmN_YOhg" cpu="_riFO8IwzEemFP824l1buPw" memory="_x1yBoIwzEemFP824l1buPw" storage="_jWQnkIw0EemFP824l1buPw"/>
+</xmi:XMI>

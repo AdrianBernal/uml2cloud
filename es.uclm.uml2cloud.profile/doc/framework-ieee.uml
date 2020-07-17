@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_jktAUBmCEemcCIfB0PVI_Q" name="framework-ieee">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_jpR-UBmCEemcCIfB0PVI_Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ELxZIBmDEemcCIfB0PVI_Q" name="Model4Cloud">
+    <packagedElement xmi:type="uml:Package" xmi:id="_FoB7wBmDEemcCIfB0PVI_Q" name="es.uclm.model4cloud.validation">
+      <packagedElement xmi:type="uml:Usage" xmi:id="_xBuwsBmDEemcCIfB0PVI_Q" client="_FoB7wBmDEemcCIfB0PVI_Q" supplier="_J529UBmDEemcCIfB0PVI_Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_J529UBmDEemcCIfB0PVI_Q" name="es.uclm.model4cloud.profile"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_LNehUBmDEemcCIfB0PVI_Q" name="es.uclm.model4cloud.customization">
+      <packagedElement xmi:type="uml:Usage" xmi:id="_x1Uw0BmDEemcCIfB0PVI_Q" client="_LNehUBmDEemcCIfB0PVI_Q" supplier="_J529UBmDEemcCIfB0PVI_Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_MvFeABmDEemcCIfB0PVI_Q" name="es.uclm.model4cloud.examples">
+      <packagedElement xmi:type="uml:Usage" xmi:id="_uITsgBmDEemcCIfB0PVI_Q" client="_MvFeABmDEemcCIfB0PVI_Q" supplier="_J529UBmDEemcCIfB0PVI_Q"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

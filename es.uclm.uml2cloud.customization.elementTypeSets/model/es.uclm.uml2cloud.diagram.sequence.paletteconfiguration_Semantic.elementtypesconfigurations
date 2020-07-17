@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elementtypesconfigurations:ElementTypeSetConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:applystereotypeadvice="http://www.eclipse.org/papyrus/uml/types/applystereotypeadvice/1.1" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.2" xmi:id="_n6HnwEDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.interaction.elementTypeSets" name="es.uclm.uml2cloud.interaction.elementTypeSets" metamodelNsURI="http://www.eclipse.org/uml2/5.0.0/UML">
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_3JCB8EDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createCombinedFragment5CreationTool_1580122670983" name="Combined Fragment" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.CombinedFragment_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_3ve98EDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createInteractionOperand6CreationTool_1580122675022" name="Interaction Operand" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.InteractionOperand_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_8d2KgEDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580122706724" name="User (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_9P8V0EDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580122711978" name="CloudProvider (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_iu_70ED1EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580123393032" name="RegularUser (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_i8b64ED1EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580123394439" name="PriorityUser (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_mzUQYED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123849822" name="ResponseOfferedVMs (Message Sync)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_SynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_owQeMED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123862928" name="RequestOfferedVMs (Message Sync)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_SynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_qDirAED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123871658" name="ResponseOfferedVMs (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_t2djAED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123897129" name="Request (Message Sync)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_SynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_vOnowED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123906376" name="Response (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_ycpD8ED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580123927976" name="Execute (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_1q3TcED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123949600" name="Ok (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_9tma0ED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124003577" name="TimeoutRenting (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_IyuVIED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580124077931" name="Resume (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_MQ8IcED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580124101232" name="Subscribe (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_NRUAUED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124107981" name="Notify (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_OQ7DMED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124114652" name="TimeoutSubscription (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_8d2xkEDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580122706724_ASAC" target="_8d2KgEDzEeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_8d2xkUDzEeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::User" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_9P884UDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580122711978_ASAC" target="_9P8V0EDzEeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_9P884kDzEeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::CloudProvider" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_iu_70kD1EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580123393032_ASAC" target="_iu_70ED1EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_iu_700D1EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::RegularUser" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_i8b64kD1EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580123394439_ASAC" target="_i8b64ED1EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_i8b640D1EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::PriorityUser" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_mzUQYkD2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123849822_ASAC" target="_mzUQYED2EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_mzUQY0D2EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::ResponseOfferedVMs" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_owRFQED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123862928_ASAC" target="_owQeMED2EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_owRFQUD2EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::RequestOfferedVMs" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_qDjSEUD2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123871658_ASAC" target="_qDirAED2EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_qDjSEkD2EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::ResponseOfferedVMs" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_t2djAkD2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123897129_ASAC" target="_t2djAED2EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_t2djA0D2EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::Request" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_vOnowkD2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123906376_ASAC" target="_vOnowED2EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_vOnow0D2EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::Response" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_ycpD8kD2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580123927976_ASAC" target="_ycpD8ED2EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_ycpD80D2EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::Execute" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_1q3TckD2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123949600_ASAC" target="_1q3TcED2EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_1q3Tc0D2EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::Ok" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_9tma0kD2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124003577_ASAC" target="_9tma0ED2EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_9tma00D2EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::TimeoutRenting" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_Iyu8MUD3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580124077931_ASAC" target="_IyuVIED3EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_Iyu8MkD3EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::Resume" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_MQ8IckD3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580124101232_ASAC" target="_MQ8IcED3EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_MQ8Ic0D3EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::Subscribe" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_NRUAUkD3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124107981_ASAC" target="_NRUAUED3EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_NRUAU0D3EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::Notify" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_OQ7qQED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124114652_ASAC" target="_OQ7DMED3EeqgZodcSzjH_A">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_OQ7qQUD3EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::TimeoutSubscription" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+</elementtypesconfigurations:ElementTypeSetConfiguration>

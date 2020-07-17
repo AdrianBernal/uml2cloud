@@ -9,10 +9,10 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor property="UML:NamedElement:name"
-			input="{Binding}"></ppe:StringEditor>
+		<ppe:EnumCombo input="{Binding}"
+			property="uml2cloud:ComputingMachine:type"></ppe:EnumCombo>
 	</Composite>
 	<Composite>
 		<Composite.layout>

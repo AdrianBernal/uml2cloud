@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/es.uclm.uml2cloud.feature_1.0.0.qualifier.jar" id="es.uclm.uml2cloud.feature" version="1.0.0.qualifier">
+   <feature url="features/es.uclm.uml2cloud.feature_2.0.0.202003091917.jar" id="es.uclm.uml2cloud.feature" version="2.0.0.202003091917">
       <category name="es.uclm.uml2cloud.category"/>
    </feature>
    <category-def name="es.uclm.uml2cloud.category" label="UML2Cloud"/>
-   <repository-reference location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/oxygen/" enabled="true" />
+   <repository-reference location="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2019-12/" enabled="true" />
+   <repository-reference location="https://download.eclipse.org/modeling/mdt/papyrus/components/incubation/" enabled="true" />
 </site>

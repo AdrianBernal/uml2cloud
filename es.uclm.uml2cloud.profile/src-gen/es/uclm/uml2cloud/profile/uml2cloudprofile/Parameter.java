@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getName <em>Name</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getValue <em>Value</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getUnit <em>Unit</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getType <em>Type</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getDescription <em>Description</em>}</li>
  * </ul>
  *
@@ -79,31 +79,31 @@ public interface Parameter extends EObject {
 	void setValue(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Unit</b></em>' attribute.
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The default value is <code>"string"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Unit</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unit</em>' attribute.
-	 * @see #setUnit(String)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getParameter_Unit()
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see #setType(String)
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getParameter_Type()
 	 * @model default="string" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getUnit();
+	String getType();
 
 	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getUnit <em>Unit</em>}' attribute.
+	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unit</em>' attribute.
-	 * @see #getUnit()
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see #getType()
 	 * @generated
 	 */
-	void setUnit(String value);
+	void setType(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.

@@ -9,16 +9,16 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor property="UML:NamedElement:name"
-			input="{Binding}"></ppe:StringEditor>
+		<ppe:StringEditor input="{Binding}"
+			property="uml2cloud:CloudProvider:resourceAllocationPolicy"></ppe:StringEditor>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="uml2cloud:CloudProvider:resourceAllocationPolicy"></ppe:StringEditor>
+		<ppe:MultiReference input="{Binding}"
+			property="uml2cloud:CloudProvider:sla"></ppe:MultiReference>
 	</Composite>
 </Composite>

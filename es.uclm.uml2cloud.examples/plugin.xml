@@ -20,14 +20,14 @@
    <extension
          point="org.eclipse.emf.common.ui.examples">
       <example
-            id="es.uclm.uml2cloud.examplesbaseCloudSystem"
+            id="es.uclm.uml2cloud.examples.baseCloudSystem"
             wizardID="es.uclm.uml2cloud.examples.wizard">
          <projectDescriptor
-               contentURI="cloudSystem/"
-               name="cloudSystem">
+               contentURI="baseCloudSystem/"
+               name="baseCloudSystem">
          </projectDescriptor>
          <fileToOpen
-               location="pathmap://cloudSystem/cloudSystem.di">
+               location="pathmap://baseCloudSystem/baseCloudSystem.di">
          </fileToOpen>
       </example>
    </extension>

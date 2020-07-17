@@ -5,14 +5,14 @@
          point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
       <elementTypeSet
             clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
-            path="model/uml2cloudinfrastructurediagrampalettemodel_Semantic.elementtypesconfigurations">
+            path="model/es.uclm.uml2cloud.diagram.component.paletteconfiguration_Semantic.elementtypesconfigurations">
       </elementTypeSet>
    </extension>
    <extension
          point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
       <elementTypeSet
             clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
-            path="model/uml2cloudinteractiondiagrampalettemodel_Semantic.elementtypesconfigurations">
+            path="model/es.uclm.uml2cloud.diagram.sequence.paletteconfiguration_Semantic.elementtypesconfigurations">
       </elementTypeSet>
    </extension>
 
