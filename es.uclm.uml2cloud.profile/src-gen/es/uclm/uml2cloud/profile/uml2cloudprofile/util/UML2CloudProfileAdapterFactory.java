@@ -232,6 +232,10 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 				return createResponseAdapter();
 			}
 			@Override
+			public Adapter caseRefuse(Refuse object) {
+				return createRefuseAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -822,6 +826,20 @@ public class UML2CloudProfileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Refuse <em>Refuse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Refuse
+	 * @generated
+	 */
+	public Adapter createRefuseAdapter() {
 		return null;
 	}
 

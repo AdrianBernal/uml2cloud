@@ -25,6 +25,7 @@ import es.uclm.uml2cloud.profile.uml2cloudprofile.Parameter;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.PriorityUser;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Rack;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.RackElement;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.Refuse;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.RegularUser;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.Request;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.RequestOfferedVMs;
@@ -358,6 +359,13 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * @generated
 	 */
 	private EClass responseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass refuseEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1769,6 +1777,16 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * @generated
 	 */
 	@Override
+	public EOperation getExecute__Number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances__DiagnosticChain_Map() {
+		return executeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getUser() {
 		return userEClass;
 	}
@@ -2139,6 +2157,26 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * @generated
 	 */
 	@Override
+	public EClass getRefuse() {
+		return refuseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRefuse_Base_Message() {
+		return (EReference)refuseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getBandwidthUnit() {
 		return bandwidthUnitEEnum;
 	}
@@ -2359,6 +2397,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		createEOperation(executeEClass, EXECUTE___INSTANCES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP);
 		createEOperation(executeEClass, EXECUTE___EXECUTE_MUST_BE_SENT_TO_ACLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP);
 		createEOperation(executeEClass, EXECUTE___EXECUTE_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP);
+		createEOperation(executeEClass, EXECUTE___NUMBER_OF_APP_INSTANTIATION_COLLECTIONS_MUST_BE_EQUAL_THAN_TOTAL_VM_INSTANCES__DIAGNOSTICCHAIN_MAP);
 
 		userEClass = createEClass(USER);
 		createEReference(userEClass, USER__BASE_LIFELINE);
@@ -2409,6 +2448,9 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 
 		responseEClass = createEClass(RESPONSE);
 		createEReference(responseEClass, RESPONSE__BASE_MESSAGE);
+
+		refuseEClass = createEClass(REFUSE);
+		createEReference(refuseEClass, REFUSE__BASE_MESSAGE);
 
 		// Create enums
 		bandwidthUnitEEnum = createEEnum(BANDWIDTH_UNIT);
@@ -2866,6 +2908,15 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getExecute__Number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(userEClass, User.class, "User", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUser_Base_Lifeline(), theUMLPackage.getLifeline(), null, "base_Lifeline", null, 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getUser_Instances(), theTypesPackage.getInteger(), "instances", "1", 1, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2971,6 +3022,9 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 
 		initEClass(responseEClass, Response.class, "Response", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResponse_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 0, 1, Response.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(refuseEClass, Refuse.class, "Refuse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRefuse_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 0, 1, Refuse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(bandwidthUnitEEnum, BandwidthUnit.class, "BandwidthUnit");

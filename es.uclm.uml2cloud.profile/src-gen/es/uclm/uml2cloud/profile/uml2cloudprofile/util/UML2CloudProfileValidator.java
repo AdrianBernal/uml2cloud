@@ -288,12 +288,20 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	public static final int EXECUTE__EXECUTE_MUST_BE_SENT_BY_AUSER = 31;
 
 	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Number Of App Instantiation Collections Must Be Equal Than Total VM Instances' of 'Execute'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int EXECUTE__NUMBER_OF_APP_INSTANTIATION_COLLECTIONS_MUST_BE_EQUAL_THAN_TOTAL_VM_INSTANCES = 32;
+
+	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Have AExecute Message' of 'User'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int USER__USER_MUST_HAVE_AEXECUTE_MESSAGE = 32;
+	public static final int USER__USER_MUST_HAVE_AEXECUTE_MESSAGE = 33;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Have ARequest Message' of 'User'.
@@ -301,7 +309,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int USER__USER_MUST_HAVE_AREQUEST_MESSAGE = 33;
+	public static final int USER__USER_MUST_HAVE_AREQUEST_MESSAGE = 34;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Sign AVM SLA Offered By The Cloud Provider' of 'User'.
@@ -309,7 +317,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int USER__USER_MUST_SIGN_AVM_SLA_OFFERED_BY_THE_CLOUD_PROVIDER = 34;
+	public static final int USER__USER_MUST_SIGN_AVM_SLA_OFFERED_BY_THE_CLOUD_PROVIDER = 35;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Have AResume Message' of 'User'.
@@ -317,7 +325,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int USER__USER_MUST_HAVE_ARESUME_MESSAGE = 35;
+	public static final int USER__USER_MUST_HAVE_ARESUME_MESSAGE = 36;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Datacenter Elements instances Must Be Greatter Than Or Equal To Zero' of 'Cloud Infrastructure'.
@@ -325,7 +333,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO = 36;
+	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO = 37;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Datacenter Elements instances Should Be Greatter Than Zero' of 'Cloud Infrastructure'.
@@ -333,7 +341,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_SHOULD_BE_GREATTER_THAN_ZERO = 37;
+	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_SHOULD_BE_GREATTER_THAN_ZERO = 38;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Regular User Must Have ASubscribe Message' of 'Regular User'.
@@ -341,7 +349,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int REGULAR_USER__REGULAR_USER_MUST_HAVE_ASUBSCRIBE_MESSAGE = 38;
+	public static final int REGULAR_USER__REGULAR_USER_MUST_HAVE_ASUBSCRIBE_MESSAGE = 39;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -349,7 +357,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 38;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 39;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -471,6 +479,8 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 				return validateRequestOfferedVMs((RequestOfferedVMs)value, diagnostics, context);
 			case UML2CloudProfilePackage.RESPONSE:
 				return validateResponse((Response)value, diagnostics, context);
+			case UML2CloudProfilePackage.REFUSE:
+				return validateRefuse((Refuse)value, diagnostics, context);
 			case UML2CloudProfilePackage.BANDWIDTH_UNIT:
 				return validateBandwidthUnit((BandwidthUnit)value, diagnostics, context);
 			case UML2CloudProfilePackage.SIZE_UNIT:
@@ -1165,6 +1175,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateExecute_instances_Must_Be_Greater_Than_Zero(execute, diagnostics, context);
 		if (result || diagnostics != null) result &= validateExecute_Execute_Must_Be_Sent_To_A_CloudProvider(execute, diagnostics, context);
 		if (result || diagnostics != null) result &= validateExecute_Execute_Must_Be_Sent_By_A_User(execute, diagnostics, context);
+		if (result || diagnostics != null) result &= validateExecute_number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances(execute, diagnostics, context);
 		return result;
 	}
 
@@ -1196,6 +1207,16 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 */
 	public boolean validateExecute_Execute_Must_Be_Sent_By_A_User(Execute execute, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return execute.Execute_Must_Be_Sent_By_A_User(diagnostics, context);
+	}
+
+	/**
+	 * Validates the number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances constraint of '<em>Execute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateExecute_number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances(Execute execute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return execute.number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances(diagnostics, context);
 	}
 
 	/**
@@ -1434,6 +1455,15 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 */
 	public boolean validateResponse(Response response, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(response, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRefuse(Refuse refuse, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(refuse, diagnostics, context);
 	}
 
 	/**

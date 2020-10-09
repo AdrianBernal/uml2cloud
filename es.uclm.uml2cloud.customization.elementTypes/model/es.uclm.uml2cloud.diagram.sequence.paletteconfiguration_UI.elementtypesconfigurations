@@ -72,4 +72,8 @@
     <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypeSets/model/es.uclm.uml2cloud.diagram.sequence.paletteconfiguration_Semantic.elementtypesconfigurations#_OQ7DMED3EeqgZodcSzjH_A"/>
     <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
   </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_nL-HUPM3Eeqy6400172RDA" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createRefuseMessageAsync2CreationTool_Message_AsynchEdge" name="Refuse (Message Async)" hint="Message_AsynchEdge" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypeSets/model/es.uclm.uml2cloud.diagram.sequence.paletteconfiguration_Semantic.elementtypesconfigurations#_FP0x8PM3Eeqy6400172RDA"/>
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
+  </elementTypeConfigurations>
 </elementtypesconfigurations:ElementTypeSetConfiguration>

@@ -83,6 +83,12 @@
         <elementType xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/es.uclm.uml2cloud.diagram.sequence.paletteconfiguration_UI.elementtypesconfigurations#_Iyu8MED3EeqgZodcSzjH_A"/>
       </elementDescriptors>
     </ownedConfigurations>
+    <ownedConfigurations xmi:type="paletteconfiguration:ToolConfiguration" id="createRefuseMessageAsync2CreationTool" label="Refuse (Message Async)" kind="ConnectionTool" toolClassName="">
+      <icon xmi:type="paletteconfiguration:IconDescriptor" pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Message_asynchCall.gif"/>
+      <elementDescriptors xmi:type="paletteconfiguration:ElementDescriptor">
+        <elementType xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/es.uclm.uml2cloud.customization.elementTypes/model/es.uclm.uml2cloud.diagram.sequence.paletteconfiguration_UI.elementtypesconfigurations#_nL-HUPM3Eeqy6400172RDA"/>
+      </elementDescriptors>
+    </ownedConfigurations>
     <ownedConfigurations xmi:type="paletteconfiguration:SeparatorConfiguration" id="Separator_1580124081859" label="Separator"/>
     <ownedConfigurations xmi:type="paletteconfiguration:ToolConfiguration" id="createMessageAsync2CreationTool_1580124101232" label="Subscribe (Message Async)" description="" kind="ConnectionTool">
       <icon xmi:type="paletteconfiguration:IconDescriptor" pluginID="org.eclipse.uml2.uml.edit" iconPath="/icons/full/obj16/Message_asynchCall.gif"/>

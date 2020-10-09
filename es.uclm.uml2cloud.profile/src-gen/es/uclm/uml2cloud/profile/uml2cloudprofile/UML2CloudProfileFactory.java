@@ -355,6 +355,15 @@ public interface UML2CloudProfileFactory extends EFactory {
 	Response createResponse();
 
 	/**
+	 * Returns a new object of class '<em>Refuse</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Refuse</em>'.
+	 * @generated
+	 */
+	Refuse createRefuse();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

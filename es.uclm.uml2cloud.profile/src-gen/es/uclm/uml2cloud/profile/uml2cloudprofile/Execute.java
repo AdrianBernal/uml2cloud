@@ -110,4 +110,17 @@ public interface Execute extends EObject {
 	 */
 	boolean Execute_Must_Be_Sent_By_A_User(DiagnosticChain diagnostics, Map<Object, Object> context);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * true
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances(DiagnosticChain diagnostics, Map<Object, Object> context);
+
 } // Execute

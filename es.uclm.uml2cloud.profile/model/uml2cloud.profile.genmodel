@@ -346,6 +346,10 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Execute/Execute_Must_Be_Sent_By_A_User/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Execute/Execute_Must_Be_Sent_By_A_User/context"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Execute/number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Execute/number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Execute/number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances/context"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="uml2cloudprofile.ecore#//User">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -431,6 +435,10 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//Response">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Response/base_Message"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//Refuse">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Refuse/base_Message"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -1960,13 +1960,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int EXECUTE___EXECUTE_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP = 2;
 
 	/**
+	 * The operation id for the '<em>Number Of App Instantiation Collections Must Be Equal Than Total VM Instances</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTE___NUMBER_OF_APP_INSTANTIATION_COLLECTIONS_MUST_BE_EQUAL_THAN_TOTAL_VM_INSTANCES__DIAGNOSTICCHAIN_MAP = 3;
+
+	/**
 	 * The number of operations of the '<em>Execute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTE_OPERATION_COUNT = 3;
+	int EXECUTE_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl <em>User</em>}' class.
@@ -2675,6 +2684,43 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int RESPONSE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RefuseImpl <em>Refuse</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RefuseImpl
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRefuse()
+	 * @generated
+	 */
+	int REFUSE = 41;
+
+	/**
+	 * The feature id for the '<em><b>Base Message</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFUSE__BASE_MESSAGE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Refuse</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFUSE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Refuse</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFUSE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.BandwidthUnit <em>Bandwidth Unit</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2682,7 +2728,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getBandwidthUnit()
 	 * @generated
 	 */
-	int BANDWIDTH_UNIT = 41;
+	int BANDWIDTH_UNIT = 42;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.SizeUnit <em>Size Unit</em>}' enum.
@@ -2692,7 +2738,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getSizeUnit()
 	 * @generated
 	 */
-	int SIZE_UNIT = 42;
+	int SIZE_UNIT = 43;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.TimeUnit <em>Time Unit</em>}' enum.
@@ -2702,7 +2748,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getTimeUnit()
 	 * @generated
 	 */
-	int TIME_UNIT = 43;
+	int TIME_UNIT = 44;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.MachineType <em>Machine Type</em>}' enum.
@@ -2712,7 +2758,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getMachineType()
 	 * @generated
 	 */
-	int MACHINE_TYPE = 44;
+	int MACHINE_TYPE = 45;
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.DataCenter <em>Data Center</em>}'.
@@ -4086,6 +4132,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getExecute__Execute_Must_Be_Sent_By_A_User__DiagnosticChain_Map();
 
 	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Execute#number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Number Of App Instantiation Collections Must Be Equal Than Total VM Instances</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Number Of App Instantiation Collections Must Be Equal Than Total VM Instances</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Execute#number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getExecute__Number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.User <em>User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4471,6 +4527,27 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getResponse_Base_Message();
+
+	/**
+	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Refuse <em>Refuse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Refuse</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Refuse
+	 * @generated
+	 */
+	EClass getRefuse();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Refuse#getBase_Message <em>Base Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Message</em>'.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Refuse#getBase_Message()
+	 * @see #getRefuse()
+	 * @generated
+	 */
+	EReference getRefuse_Base_Message();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.BandwidthUnit <em>Bandwidth Unit</em>}'.
@@ -5632,6 +5709,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation EXECUTE___EXECUTE_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP = eINSTANCE.getExecute__Execute_Must_Be_Sent_By_A_User__DiagnosticChain_Map();
 
 		/**
+		 * The meta object literal for the '<em><b>Number Of App Instantiation Collections Must Be Equal Than Total VM Instances</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EXECUTE___NUMBER_OF_APP_INSTANTIATION_COLLECTIONS_MUST_BE_EQUAL_THAN_TOTAL_VM_INSTANCES__DIAGNOSTICCHAIN_MAP = eINSTANCE.getExecute__Number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl <em>User</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5952,6 +6037,24 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESPONSE__BASE_MESSAGE = eINSTANCE.getResponse_Base_Message();
+
+		/**
+		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RefuseImpl <em>Refuse</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RefuseImpl
+		 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UML2CloudProfilePackageImpl#getRefuse()
+		 * @generated
+		 */
+		EClass REFUSE = eINSTANCE.getRefuse();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Message</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REFUSE__BASE_MESSAGE = eINSTANCE.getRefuse_Base_Message();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.BandwidthUnit <em>Bandwidth Unit</em>}' enum.

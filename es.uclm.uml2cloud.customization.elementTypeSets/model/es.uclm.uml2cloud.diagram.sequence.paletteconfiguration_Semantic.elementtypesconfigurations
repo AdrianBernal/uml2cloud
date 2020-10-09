@@ -54,6 +54,9 @@
   <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_OQ7DMED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124114652" name="TimeoutSubscription (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
     <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
   </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_FP0x8PM3Eeqy6400172RDA" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createRefuseMessageAsync2CreationTool" name="Refuse (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
+  </elementTypeConfigurations>
   <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_8d2xkEDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580122706724_ASAC" target="_8d2KgEDzEeqgZodcSzjH_A">
     <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_8d2xkUDzEeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::User" updateName="true">
       <requiredProfiles>uml2cloud</requiredProfiles>
@@ -131,6 +134,11 @@
   </adviceBindingsConfigurations>
   <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_OQ7qQED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124114652_ASAC" target="_OQ7DMED3EeqgZodcSzjH_A">
     <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_OQ7qQUD3EeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::TimeoutSubscription" updateName="true">
+      <requiredProfiles>uml2cloud</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_U8k-sPM3Eeqy6400172RDA" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createRefuseMessageAsync2CreationTool_ASAC" target="_FP0x8PM3Eeqy6400172RDA">
+    <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_gBF1APM3Eeqy6400172RDA" stereotypeQualifiedName="uml2cloud::Refuse" updateName="true">
       <requiredProfiles>uml2cloud</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>

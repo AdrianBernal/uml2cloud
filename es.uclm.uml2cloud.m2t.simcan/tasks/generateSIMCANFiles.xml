@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateSIMCANFiles" name="es.uclm.uml2cloud.m2t.simcan">
     <property name="ECLIPSE_HOME" value="../../../../../../Eclipse/Papyrus-4.6.0"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../../../Eclipse/workspace/runtime-EclipseApplication"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../../Eclipse/workspace/workspace-papyrus-4.6.0"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="es.uclm.uml2cloud.m2t.simcan.libraryclasspath">

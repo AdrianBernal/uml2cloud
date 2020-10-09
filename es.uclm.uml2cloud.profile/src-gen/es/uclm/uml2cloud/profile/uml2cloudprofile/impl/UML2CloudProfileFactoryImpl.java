@@ -94,6 +94,7 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 			case UML2CloudProfilePackage.TIMEOUT_SUBSCRIPTION: return createTimeoutSubscription();
 			case UML2CloudProfilePackage.REQUEST_OFFERED_VMS: return createRequestOfferedVMs();
 			case UML2CloudProfilePackage.RESPONSE: return createResponse();
+			case UML2CloudProfilePackage.REFUSE: return createRefuse();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -546,6 +547,17 @@ public class UML2CloudProfileFactoryImpl extends EFactoryImpl implements UML2Clo
 	public Response createResponse() {
 		ResponseImpl response = new ResponseImpl();
 		return response;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Refuse createRefuse() {
+		RefuseImpl refuse = new RefuseImpl();
+		return refuse;
 	}
 
 	/**
