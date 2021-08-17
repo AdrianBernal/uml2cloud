@@ -138,7 +138,7 @@ public interface User extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * true
+	 * uml2cloud::CloudProvider.allInstances()->collect(cp | cp.sla)->includes(self.sla)
 	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
 	 * @param context The cache of context-specific information.
 	 * <!-- end-model-doc -->

@@ -38,4 +38,4 @@
 
 [query public getUserType(aUser : User) : String = if (aUser.oclIsTypeOf(RegularUser)) then ('Regular') else (if(aUser.oclIsTypeOf(PriorityUser)) then ('Priority') else ('Regular') endif) endif /]
 
-[query public getReservedComputingMachines(aDataCenter : DataCenter) : Integer = aDataCenter.rackElements->select(aRackElement : RackElement | aRackElement.rackType.oclIsTypeOf(ComputingRack))->select(aRackElement : RackElement | aRackElement.rackType.oclAsType(ComputingRack).machineType=MachineType::Reserved)->collectNested(numberOfRacks*rackType.boards*rackType.machinesPerBoard)->sum() /]
+[query public getReservedComputingMachines(aDataCenter : DataCenter) : Integer = aDataCenter.rackElements->select(aRackElement : RackElement | aRackElement.rackType.oclIsTypeOf(ComputingRack))->select(aRackElement : RackElement | aRackElement.rackType.oclAsType(ComputingRack).machineType.type=MachineType::Reserved)->collectNested(numberOfRacks*rackType.boards*rackType.machinesPerBoard)->sum() /]

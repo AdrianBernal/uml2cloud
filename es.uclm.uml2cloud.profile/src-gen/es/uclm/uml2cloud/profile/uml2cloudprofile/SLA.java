@@ -2,6 +2,8 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -67,5 +69,70 @@ public interface SLA extends EObject {
 	 * @generated
 	 */
 	EList<VMCost> getVmcost();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.vmcost->forAll(vmcost | vmcost.compensation >= 0)
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean SLA_compensation_must_be_grater_than_or_equal_to_zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.vmcost->forAll(vmcost | vmcost.discount >= 0)
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean SLA_discount_must_be_grater_than_or_equal_to_zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.vmcost->forAll(vmcost | vmcost.incpriority >= 0)
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='SLA_inc-priority_must_be_grater_than_or_equal_to_zero'"
+	 * @generated
+	 */
+	boolean SLA_incpriority_must_be_grater_than_or_equal_to_zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.vmcost->forAll(vmcost | vmcost.base.value >= 0)
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean SLA_base_cost_must_be_grater_than_or_equal_to_zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.vmcost->isUnique(vmcost | vmcost.vm)
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean CloudProvider_must_offer_once_each_VM_for_each_SLA_type(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // SLA

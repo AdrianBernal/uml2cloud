@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: UML2Cloud Customization elementTypes
 Bundle-SymbolicName: es.uclm.uml2cloud.customization.elementTypes;singleton:=true
-Bundle-Version: 2.0.0.qualifier
-Require-Bundle: es.uclm.uml2cloud.profile;bundle-version="[2.0.0,3.0.0)",
- es.uclm.uml2cloud.customization.elementTypeSets;bundle-version="[2.0.0,3.0.0)",
- org.eclipse.ui;bundle-version="3.109.0"
+Bundle-Version: 2.1.0.qualifier
+Require-Bundle: es.uclm.uml2cloud.profile;bundle-version="[2.1.0,3.0.0)",
+ es.uclm.uml2cloud.customization.elementTypeSets;bundle-version="[2.1.0,3.0.0)",
+ org.eclipse.ui;bundle-version="3.117.0"

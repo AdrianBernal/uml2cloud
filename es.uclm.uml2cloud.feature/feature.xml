@@ -2,7 +2,7 @@
 <feature
       id="es.uclm.uml2cloud.feature"
       label="UML2Cloud Profile Tools"
-      version="2.0.0.qualifier"
+      version="2.1.0.qualifier"
       provider-name="www.uclm.es">
 
    <description url="http://www.example.com/description">
@@ -65,60 +65,59 @@
          id="es.uclm.uml2cloud.profile"
          download-size="0"
          install-size="0"
-         version="2.0.0.qualifier"
+         version="2.1.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="es.uclm.uml2cloud.m2t.simcan.ui"
          download-size="0"
          install-size="0"
-         version="2.0.0.qualifier"
+         version="2.1.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="es.uclm.uml2cloud.validation"
          download-size="0"
          install-size="0"
-         version="2.0.0.qualifier"
+         version="2.1.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="es.uclm.uml2cloud.examples"
          download-size="0"
          install-size="0"
-         version="2.0.0.qualifier"/>
-
-   <plugin
-         id="es.uclm.uml2cloud.customization"
-         download-size="0"
-         install-size="0"
-         version="2.0.0.qualifier"
-         unpack="false"/>
+         version="2.1.0.qualifier"/>
 
    <plugin
          id="es.uclm.uml2cloud.customization.elementTypeSets"
          download-size="0"
          install-size="0"
-         version="2.0.0.qualifier"/>
+         version="2.1.0.qualifier"/>
 
    <plugin
          id="es.uclm.uml2cloud.customization.elementTypes"
          download-size="0"
          install-size="0"
-         version="2.0.0.qualifier"/>
+         version="2.1.0.qualifier"/>
 
    <plugin
          id="es.uclm.uml2cloud.m2t.simcan"
          download-size="0"
          install-size="0"
-         version="2.0.0.qualifier"
+         version="2.1.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.papyrus.dsml.validation"
          download-size="0"
          install-size="0"
-         version="1.2.0.201706230731"
+         version="1.2.0.qualifier"/>
+
+   <plugin
+         id="es.uclm.uml2cloud.customization"
+         download-size="0"
+         install-size="0"
+         version="2.1.0.qualifier"
          unpack="false"/>
 
 </feature>

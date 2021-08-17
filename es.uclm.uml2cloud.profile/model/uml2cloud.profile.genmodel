@@ -194,12 +194,36 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//CloudProvider/CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type/diagnostics"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//CloudProvider/CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type/context"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//CloudProvider/CloudProvider_offer_must_be_greater_than_or_equal_to_zero">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//CloudProvider/CloudProvider_offer_must_be_greater_than_or_equal_to_zero/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//CloudProvider/CloudProvider_offer_must_be_greater_than_or_equal_to_zero/context"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//SLA">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//SLA/base_Component"/>
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//SLA/vmcost"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//SLA/SLA_compensation_must_be_grater_than_or_equal_to_zero">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//SLA/SLA_compensation_must_be_grater_than_or_equal_to_zero/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//SLA/SLA_compensation_must_be_grater_than_or_equal_to_zero/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//SLA/SLA_discount_must_be_grater_than_or_equal_to_zero">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//SLA/SLA_discount_must_be_grater_than_or_equal_to_zero/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//SLA/SLA_discount_must_be_grater_than_or_equal_to_zero/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//SLA/SLA_incpriority_must_be_grater_than_or_equal_to_zero">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//SLA/SLA_incpriority_must_be_grater_than_or_equal_to_zero/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//SLA/SLA_incpriority_must_be_grater_than_or_equal_to_zero/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//SLA/SLA_base_cost_must_be_grater_than_or_equal_to_zero">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//SLA/SLA_base_cost_must_be_grater_than_or_equal_to_zero/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//SLA/SLA_base_cost_must_be_grater_than_or_equal_to_zero/context"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//SLA/CloudProvider_must_offer_once_each_VM_for_each_SLA_type">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//SLA/CloudProvider_must_offer_once_each_VM_for_each_SLA_type/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//SLA/CloudProvider_must_offer_once_each_VM_for_each_SLA_type/context"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//VMCost">
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
@@ -395,7 +419,12 @@
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//DataCenterElement/dataCenterType"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//PriorityUser"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//PriorityUser">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//PriorityUser/PriorityUser_has_been_modeled_but_no_machine_has_been_reserved">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//PriorityUser/PriorityUser_has_been_modeled_but_no_machine_has_been_reserved/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//PriorityUser/PriorityUser_has_been_modeled_but_no_machine_has_been_reserved/context"/>
+      </genOperations>
+    </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//RegularUser">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//RegularUser/RegularUser_Must_Have_A_Subscribe_Message">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//RegularUser/RegularUser_Must_Have_A_Subscribe_Message/diagnostics"/>
@@ -407,6 +436,10 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Resume/base_Message"/>
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference uml2cloudprofile.ecore#//Resume/resumeTime"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="uml2cloudprofile.ecore#//Resume/ResumeTime_is_at_least_twice_as_long_as_the_renting_time">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Resume/ResumeTime_is_at_least_twice_as_long_as_the_renting_time/diagnostics"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="uml2cloudprofile.ecore#//Resume/ResumeTime_is_at_least_twice_as_long_as_the_renting_time/context"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="uml2cloudprofile.ecore#//ResponseOfferedVMs">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

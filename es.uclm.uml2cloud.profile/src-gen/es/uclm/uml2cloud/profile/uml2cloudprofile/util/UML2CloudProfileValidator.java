@@ -136,12 +136,60 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	public static final int CLOUD_PROVIDER__CLOUD_PROVIDER_MUST_OFFER_ONCE_EACH_VM_FOR_EACH_SLA_TYPE = 12;
 
 	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Cloud Provider offer must be greater than or equal to zero' of 'Cloud Provider'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int CLOUD_PROVIDER__CLOUD_PROVIDER_OFFER_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 13;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'SLA compensation must be grater than or equal to zero' of 'SLA'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int SLA__SLA_COMPENSATION_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO = 14;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'SLA discount must be grater than or equal to zero' of 'SLA'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int SLA__SLA_DISCOUNT_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO = 15;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'SLA incpriority must be grater than or equal to zero' of 'SLA'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int SLA__SLA_INCPRIORITY_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO = 16;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'SLA base cost must be grater than or equal to zero' of 'SLA'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int SLA__SLA_BASE_COST_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO = 17;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Cloud Provider must offer once each VM for each SLA type' of 'SLA'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int SLA__CLOUD_PROVIDER_MUST_OFFER_ONCE_EACH_VM_FOR_EACH_SLA_TYPE = 18;
+
+	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Cores Must Be Greater Than Zero' of 'VM'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int VM__CORES_MUST_BE_GREATER_THAN_ZERO = 13;
+	public static final int VM__CORES_MUST_BE_GREATER_THAN_ZERO = 19;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Computing Units Must Be Greater Than Zero' of 'VM'.
@@ -149,7 +197,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int VM__COMPUTING_UNITS_MUST_BE_GREATER_THAN_ZERO = 14;
+	public static final int VM__COMPUTING_UNITS_MUST_BE_GREATER_THAN_ZERO = 20;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Memory Must Be Greater Than Zero' of 'VM'.
@@ -157,7 +205,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int VM__MEMORY_MUST_BE_GREATER_THAN_ZERO = 15;
+	public static final int VM__MEMORY_MUST_BE_GREATER_THAN_ZERO = 21;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'VM can not be allocated' of 'VM'.
@@ -165,7 +213,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int VM__VM_CAN_NOT_BE_ALLOCATED = 16;
+	public static final int VM__VM_CAN_NOT_BE_ALLOCATED = 22;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Disk Must Be Greater Than Zero' of 'VM'.
@@ -173,7 +221,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int VM__DISK_MUST_BE_GREATER_THAN_ZERO = 17;
+	public static final int VM__DISK_MUST_BE_GREATER_THAN_ZERO = 23;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'MIs Must Be Greater Than Zero' of 'Application'.
@@ -181,7 +229,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int APPLICATION__MIS_MUST_BE_GREATER_THAN_ZERO = 18;
+	public static final int APPLICATION__MIS_MUST_BE_GREATER_THAN_ZERO = 24;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Input Data Must Be Greater Than Or Equal To Zero' of 'Application'.
@@ -189,7 +237,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int APPLICATION__INPUT_DATA_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 19;
+	public static final int APPLICATION__INPUT_DATA_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 25;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Output Data Must Be Greater Than Or Equal To Zero' of 'Application'.
@@ -197,7 +245,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int APPLICATION__OUTPUT_DATA_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 20;
+	public static final int APPLICATION__OUTPUT_DATA_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO = 26;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Renting Time Must Be Greater Than Zero' of 'Request'.
@@ -205,7 +253,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int REQUEST__RENTING_TIME_MUST_BE_GREATER_THAN_ZERO = 21;
+	public static final int REQUEST__RENTING_TIME_MUST_BE_GREATER_THAN_ZERO = 27;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Instances Must Be Greater Than Zero' of 'Request'.
@@ -213,7 +261,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int REQUEST__INSTANCES_MUST_BE_GREATER_THAN_ZERO = 22;
+	public static final int REQUEST__INSTANCES_MUST_BE_GREATER_THAN_ZERO = 28;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Request Must Be Sent To ACloud Provider' of 'Request'.
@@ -221,7 +269,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int REQUEST__REQUEST_MUST_BE_SENT_TO_ACLOUD_PROVIDER = 23;
+	public static final int REQUEST__REQUEST_MUST_BE_SENT_TO_ACLOUD_PROVIDER = 29;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Request Must Be Sent By AUser' of 'Request'.
@@ -229,7 +277,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int REQUEST__REQUEST_MUST_BE_SENT_BY_AUSER = 24;
+	public static final int REQUEST__REQUEST_MUST_BE_SENT_BY_AUSER = 30;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Request For AVM Not Offered In The Signed SLA By The User' of 'Request'.
@@ -237,7 +285,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int REQUEST__REQUEST_FOR_AVM_NOT_OFFERED_IN_THE_SIGNED_SLA_BY_THE_USER = 25;
+	public static final int REQUEST__REQUEST_FOR_AVM_NOT_OFFERED_IN_THE_SIGNED_SLA_BY_THE_USER = 31;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Max Time Must Be Greater Than Zero' of 'Subscribe'.
@@ -245,7 +293,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBE__MAX_TIME_MUST_BE_GREATER_THAN_ZERO = 26;
+	public static final int SUBSCRIBE__MAX_TIME_MUST_BE_GREATER_THAN_ZERO = 32;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Subscribe Must Be Sent To ACloud Provider' of 'Subscribe'.
@@ -253,7 +301,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBE__SUBSCRIBE_MUST_BE_SENT_TO_ACLOUD_PROVIDER = 27;
+	public static final int SUBSCRIBE__SUBSCRIBE_MUST_BE_SENT_TO_ACLOUD_PROVIDER = 33;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Subscribe Must Be Sent By AUser' of 'Subscribe'.
@@ -261,7 +309,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int SUBSCRIBE__SUBSCRIBE_MUST_BE_SENT_BY_AUSER = 28;
+	public static final int SUBSCRIBE__SUBSCRIBE_MUST_BE_SENT_BY_AUSER = 34;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Instances Must Be Greater Than Zero' of 'Execute'.
@@ -269,7 +317,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int EXECUTE__INSTANCES_MUST_BE_GREATER_THAN_ZERO = 29;
+	public static final int EXECUTE__INSTANCES_MUST_BE_GREATER_THAN_ZERO = 35;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Execute Must Be Sent To ACloud Provider' of 'Execute'.
@@ -277,7 +325,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int EXECUTE__EXECUTE_MUST_BE_SENT_TO_ACLOUD_PROVIDER = 30;
+	public static final int EXECUTE__EXECUTE_MUST_BE_SENT_TO_ACLOUD_PROVIDER = 36;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Execute Must Be Sent By AUser' of 'Execute'.
@@ -285,7 +333,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int EXECUTE__EXECUTE_MUST_BE_SENT_BY_AUSER = 31;
+	public static final int EXECUTE__EXECUTE_MUST_BE_SENT_BY_AUSER = 37;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Number Of App Instantiation Collections Must Be Equal Than Total VM Instances' of 'Execute'.
@@ -293,7 +341,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int EXECUTE__NUMBER_OF_APP_INSTANTIATION_COLLECTIONS_MUST_BE_EQUAL_THAN_TOTAL_VM_INSTANCES = 32;
+	public static final int EXECUTE__NUMBER_OF_APP_INSTANTIATION_COLLECTIONS_MUST_BE_EQUAL_THAN_TOTAL_VM_INSTANCES = 38;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Have AExecute Message' of 'User'.
@@ -301,7 +349,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int USER__USER_MUST_HAVE_AEXECUTE_MESSAGE = 33;
+	public static final int USER__USER_MUST_HAVE_AEXECUTE_MESSAGE = 39;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Have ARequest Message' of 'User'.
@@ -309,7 +357,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int USER__USER_MUST_HAVE_AREQUEST_MESSAGE = 34;
+	public static final int USER__USER_MUST_HAVE_AREQUEST_MESSAGE = 40;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Sign AVM SLA Offered By The Cloud Provider' of 'User'.
@@ -317,7 +365,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int USER__USER_MUST_SIGN_AVM_SLA_OFFERED_BY_THE_CLOUD_PROVIDER = 35;
+	public static final int USER__USER_MUST_SIGN_AVM_SLA_OFFERED_BY_THE_CLOUD_PROVIDER = 41;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'User Must Have AResume Message' of 'User'.
@@ -325,7 +373,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int USER__USER_MUST_HAVE_ARESUME_MESSAGE = 36;
+	public static final int USER__USER_MUST_HAVE_ARESUME_MESSAGE = 42;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Datacenter Elements instances Must Be Greatter Than Or Equal To Zero' of 'Cloud Infrastructure'.
@@ -333,7 +381,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO = 37;
+	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_MUST_BE_GREATTER_THAN_OR_EQUAL_TO_ZERO = 43;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Datacenter Elements instances Should Be Greatter Than Zero' of 'Cloud Infrastructure'.
@@ -341,7 +389,15 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_SHOULD_BE_GREATTER_THAN_ZERO = 38;
+	public static final int CLOUD_INFRASTRUCTURE__DATACENTER_ELEMENTS_INSTANCES_SHOULD_BE_GREATTER_THAN_ZERO = 44;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Priority User has been modeled but no machine has been reserved' of 'Priority User'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int PRIORITY_USER__PRIORITY_USER_HAS_BEEN_MODELED_BUT_NO_MACHINE_HAS_BEEN_RESERVED = 45;
 
 	/**
 	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Regular User Must Have ASubscribe Message' of 'Regular User'.
@@ -349,7 +405,15 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final int REGULAR_USER__REGULAR_USER_MUST_HAVE_ASUBSCRIBE_MESSAGE = 39;
+	public static final int REGULAR_USER__REGULAR_USER_MUST_HAVE_ASUBSCRIBE_MESSAGE = 46;
+
+	/**
+	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Resume Time is at least twice as long as the renting time' of 'Resume'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final int RESUME__RESUME_TIME_IS_AT_LEAST_TWICE_AS_LONG_AS_THE_RENTING_TIME = 47;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
@@ -357,7 +421,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 39;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 47;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -842,6 +906,7 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(cloudProvider, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(cloudProvider, diagnostics, context);
 		if (result || diagnostics != null) result &= validateCloudProvider_CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type(cloudProvider, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCloudProvider_CloudProvider_offer_must_be_greater_than_or_equal_to_zero(cloudProvider, diagnostics, context);
 		return result;
 	}
 
@@ -856,12 +921,86 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	}
 
 	/**
+	 * Validates the CloudProvider_offer_must_be_greater_than_or_equal_to_zero constraint of '<em>Cloud Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCloudProvider_CloudProvider_offer_must_be_greater_than_or_equal_to_zero(CloudProvider cloudProvider, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return cloudProvider.CloudProvider_offer_must_be_greater_than_or_equal_to_zero(diagnostics, context);
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean validateSLA(SLA sla, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(sla, diagnostics, context);
+		if (!validate_NoCircularContainment(sla, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSLA_SLA_compensation_must_be_grater_than_or_equal_to_zero(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSLA_SLA_discount_must_be_grater_than_or_equal_to_zero(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSLA_SLA_incpriority_must_be_grater_than_or_equal_to_zero(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSLA_SLA_base_cost_must_be_grater_than_or_equal_to_zero(sla, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSLA_CloudProvider_must_offer_once_each_VM_for_each_SLA_type(sla, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * Validates the SLA_compensation_must_be_grater_than_or_equal_to_zero constraint of '<em>SLA</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSLA_SLA_compensation_must_be_grater_than_or_equal_to_zero(SLA sla, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return sla.SLA_compensation_must_be_grater_than_or_equal_to_zero(diagnostics, context);
+	}
+
+	/**
+	 * Validates the SLA_discount_must_be_grater_than_or_equal_to_zero constraint of '<em>SLA</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSLA_SLA_discount_must_be_grater_than_or_equal_to_zero(SLA sla, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return sla.SLA_discount_must_be_grater_than_or_equal_to_zero(diagnostics, context);
+	}
+
+	/**
+	 * Validates the SLA_incpriority_must_be_grater_than_or_equal_to_zero constraint of '<em>SLA</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSLA_SLA_incpriority_must_be_grater_than_or_equal_to_zero(SLA sla, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return sla.SLA_incpriority_must_be_grater_than_or_equal_to_zero(diagnostics, context);
+	}
+
+	/**
+	 * Validates the SLA_base_cost_must_be_grater_than_or_equal_to_zero constraint of '<em>SLA</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSLA_SLA_base_cost_must_be_grater_than_or_equal_to_zero(SLA sla, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return sla.SLA_base_cost_must_be_grater_than_or_equal_to_zero(diagnostics, context);
+	}
+
+	/**
+	 * Validates the CloudProvider_must_offer_once_each_VM_for_each_SLA_type constraint of '<em>SLA</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSLA_CloudProvider_must_offer_once_each_VM_for_each_SLA_type(SLA sla, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return sla.CloudProvider_must_offer_once_each_VM_for_each_SLA_type(diagnostics, context);
 	}
 
 	/**
@@ -1349,7 +1488,18 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validateUser_User_Must_Have_A_Request_Message(priorityUser, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUser_User_Must_Sign_A_VM_SLA_Offered_By_The_CloudProvider(priorityUser, diagnostics, context);
 		if (result || diagnostics != null) result &= validateUser_User_Must_Have_A_Resume_Message(priorityUser, diagnostics, context);
+		if (result || diagnostics != null) result &= validatePriorityUser_PriorityUser_has_been_modeled_but_no_machine_has_been_reserved(priorityUser, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * Validates the PriorityUser_has_been_modeled_but_no_machine_has_been_reserved constraint of '<em>Priority User</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePriorityUser_PriorityUser_has_been_modeled_but_no_machine_has_been_reserved(PriorityUser priorityUser, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return priorityUser.PriorityUser_has_been_modeled_but_no_machine_has_been_reserved(diagnostics, context);
 	}
 
 	/**
@@ -1391,7 +1541,27 @@ public class UML2CloudProfileValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateResume(Resume resume, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(resume, diagnostics, context);
+		if (!validate_NoCircularContainment(resume, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(resume, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(resume, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(resume, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(resume, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(resume, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(resume, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(resume, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(resume, diagnostics, context);
+		if (result || diagnostics != null) result &= validateResume_ResumeTime_is_at_least_twice_as_long_as_the_renting_time(resume, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * Validates the ResumeTime_is_at_least_twice_as_long_as_the_renting_time constraint of '<em>Resume</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateResume_ResumeTime_is_at_least_twice_as_long_as_the_renting_time(Resume resume, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return resume.ResumeTime_is_at_least_twice_as_long_as_the_renting_time(diagnostics, context);
 	}
 
 	/**

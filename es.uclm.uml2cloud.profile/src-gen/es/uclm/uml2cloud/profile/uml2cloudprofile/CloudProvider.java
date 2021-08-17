@@ -140,4 +140,17 @@ public interface CloudProvider extends EObject {
 	 */
 	boolean CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type(DiagnosticChain diagnostics, Map<Object, Object> context);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * self.offer >= 0
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean CloudProvider_offer_must_be_greater_than_or_equal_to_zero(DiagnosticChain diagnostics, Map<Object, Object> context);
+
 } // CloudProvider

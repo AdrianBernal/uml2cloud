@@ -41,7 +41,7 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.uclm.es/UML/profiles/UML2Cloud/2";
+	String eNS_URI = "http://www.uclm.es/UML/profiles/UML2Cloud/2.1";
 
 	/**
 	 * The package namespace name.
@@ -1175,13 +1175,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int CLOUD_PROVIDER___CLOUD_PROVIDER_MUST_OFFER_ONCE_EACH_VM_FOR_EACH_SLA_TYPE__DIAGNOSTICCHAIN_MAP = 0;
 
 	/**
+	 * The operation id for the '<em>Cloud Provider offer must be greater than or equal to zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_PROVIDER___CLOUD_PROVIDER_OFFER_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>Cloud Provider</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD_PROVIDER_OPERATION_COUNT = 1;
+	int CLOUD_PROVIDER_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SLAImpl <em>SLA</em>}' class.
@@ -1221,13 +1230,58 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int SLA_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>SLA compensation must be grater than or equal to zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLA___SLA_COMPENSATION_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>SLA discount must be grater than or equal to zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLA___SLA_DISCOUNT_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
+	 * The operation id for the '<em>SLA incpriority must be grater than or equal to zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLA___SLA_INCPRIORITY_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 2;
+
+	/**
+	 * The operation id for the '<em>SLA base cost must be grater than or equal to zero</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLA___SLA_BASE_COST_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = 3;
+
+	/**
+	 * The operation id for the '<em>Cloud Provider must offer once each VM for each SLA type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLA___CLOUD_PROVIDER_MUST_OFFER_ONCE_EACH_VM_FOR_EACH_SLA_TYPE__DIAGNOSTICCHAIN_MAP = 4;
+
+	/**
 	 * The number of operations of the '<em>SLA</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLA_OPERATION_COUNT = 0;
+	int SLA_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMCostImpl <em>VM Cost</em>}' class.
@@ -2270,13 +2324,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int PRIORITY_USER___USER_MUST_HAVE_ARESUME_MESSAGE__DIAGNOSTICCHAIN_MAP = USER___USER_MUST_HAVE_ARESUME_MESSAGE__DIAGNOSTICCHAIN_MAP;
 
 	/**
+	 * The operation id for the '<em>Priority User has been modeled but no machine has been reserved</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITY_USER___PRIORITY_USER_HAS_BEEN_MODELED_BUT_NO_MACHINE_HAS_BEEN_RESERVED__DIAGNOSTICCHAIN_MAP = USER_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Priority User</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIORITY_USER_OPERATION_COUNT = USER_OPERATION_COUNT + 0;
+	int PRIORITY_USER_OPERATION_COUNT = USER_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RegularUserImpl <em>Regular User</em>}' class.
@@ -2416,13 +2479,22 @@ public interface UML2CloudProfilePackage extends EPackage {
 	int RESUME_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Resume Time is at least twice as long as the renting time</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESUME___RESUME_TIME_IS_AT_LEAST_TWICE_AS_LONG_AS_THE_RENTING_TIME__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
 	 * The number of operations of the '<em>Resume</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME_OPERATION_COUNT = 0;
+	int RESUME_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ResponseOfferedVMsImpl <em>Response Offered VMs</em>}' class.
@@ -3458,6 +3530,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EOperation getCloudProvider__CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type__DiagnosticChain_Map();
 
 	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#CloudProvider_offer_must_be_greater_than_or_equal_to_zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Cloud Provider offer must be greater than or equal to zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Cloud Provider offer must be greater than or equal to zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider#CloudProvider_offer_must_be_greater_than_or_equal_to_zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getCloudProvider__CloudProvider_offer_must_be_greater_than_or_equal_to_zero__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.SLA <em>SLA</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3488,6 +3570,56 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSLA_Vmcost();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.SLA#SLA_compensation_must_be_grater_than_or_equal_to_zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>SLA compensation must be grater than or equal to zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>SLA compensation must be grater than or equal to zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.SLA#SLA_compensation_must_be_grater_than_or_equal_to_zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getSLA__SLA_compensation_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.SLA#SLA_discount_must_be_grater_than_or_equal_to_zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>SLA discount must be grater than or equal to zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>SLA discount must be grater than or equal to zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.SLA#SLA_discount_must_be_grater_than_or_equal_to_zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getSLA__SLA_discount_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.SLA#SLA_incpriority_must_be_grater_than_or_equal_to_zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>SLA incpriority must be grater than or equal to zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>SLA incpriority must be grater than or equal to zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.SLA#SLA_incpriority_must_be_grater_than_or_equal_to_zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getSLA__SLA_incpriority_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.SLA#SLA_base_cost_must_be_grater_than_or_equal_to_zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>SLA base cost must be grater than or equal to zero</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>SLA base cost must be grater than or equal to zero</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.SLA#SLA_base_cost_must_be_grater_than_or_equal_to_zero(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getSLA__SLA_base_cost_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.SLA#CloudProvider_must_offer_once_each_VM_for_each_SLA_type(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Cloud Provider must offer once each VM for each SLA type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Cloud Provider must offer once each VM for each SLA type</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.SLA#CloudProvider_must_offer_once_each_VM_for_each_SLA_type(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getSLA__CloudProvider_must_offer_once_each_VM_for_each_SLA_type__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.VMCost <em>VM Cost</em>}'.
@@ -4330,6 +4462,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	EClass getPriorityUser();
 
 	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.PriorityUser#PriorityUser_has_been_modeled_but_no_machine_has_been_reserved(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Priority User has been modeled but no machine has been reserved</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Priority User has been modeled but no machine has been reserved</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.PriorityUser#PriorityUser_has_been_modeled_but_no_machine_has_been_reserved(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getPriorityUser__PriorityUser_has_been_modeled_but_no_machine_has_been_reserved__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.RegularUser <em>Regular User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4380,6 +4522,16 @@ public interface UML2CloudProfilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getResume_ResumeTime();
+
+	/**
+	 * Returns the meta object for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.Resume#ResumeTime_is_at_least_twice_as_long_as_the_renting_time(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Resume Time is at least twice as long as the renting time</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Resume Time is at least twice as long as the renting time</em>' operation.
+	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.Resume#ResumeTime_is_at_least_twice_as_long_as_the_renting_time(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getResume__ResumeTime_is_at_least_twice_as_long_as_the_renting_time__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.ResponseOfferedVMs <em>Response Offered VMs</em>}'.
@@ -5175,6 +5327,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EOperation CLOUD_PROVIDER___CLOUD_PROVIDER_MUST_OFFER_ONCE_EACH_VM_FOR_EACH_SLA_TYPE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCloudProvider__CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type__DiagnosticChain_Map();
 
 		/**
+		 * The meta object literal for the '<em><b>Cloud Provider offer must be greater than or equal to zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CLOUD_PROVIDER___CLOUD_PROVIDER_OFFER_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getCloudProvider__CloudProvider_offer_must_be_greater_than_or_equal_to_zero__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.SLAImpl <em>SLA</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5199,6 +5359,46 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SLA__VMCOST = eINSTANCE.getSLA_Vmcost();
+
+		/**
+		 * The meta object literal for the '<em><b>SLA compensation must be grater than or equal to zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SLA___SLA_COMPENSATION_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSLA__SLA_compensation_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>SLA discount must be grater than or equal to zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SLA___SLA_DISCOUNT_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSLA__SLA_discount_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>SLA incpriority must be grater than or equal to zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SLA___SLA_INCPRIORITY_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSLA__SLA_incpriority_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>SLA base cost must be grater than or equal to zero</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SLA___SLA_BASE_COST_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSLA__SLA_base_cost_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Cloud Provider must offer once each VM for each SLA type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SLA___CLOUD_PROVIDER_MUST_OFFER_ONCE_EACH_VM_FOR_EACH_SLA_TYPE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSLA__CloudProvider_must_offer_once_each_VM_for_each_SLA_type__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.VMCostImpl <em>VM Cost</em>}' class.
@@ -5869,6 +6069,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		EClass PRIORITY_USER = eINSTANCE.getPriorityUser();
 
 		/**
+		 * The meta object literal for the '<em><b>Priority User has been modeled but no machine has been reserved</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PRIORITY_USER___PRIORITY_USER_HAS_BEEN_MODELED_BUT_NO_MACHINE_HAS_BEEN_RESERVED__DIAGNOSTICCHAIN_MAP = eINSTANCE.getPriorityUser__PriorityUser_has_been_modeled_but_no_machine_has_been_reserved__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.RegularUserImpl <em>Regular User</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5911,6 +6119,14 @@ public interface UML2CloudProfilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESUME__RESUME_TIME = eINSTANCE.getResume_ResumeTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Resume Time is at least twice as long as the renting time</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation RESUME___RESUME_TIME_IS_AT_LEAST_TWICE_AS_LONG_AS_THE_RENTING_TIME__DIAGNOSTICCHAIN_MAP = eINSTANCE.getResume__ResumeTime_is_at_least_twice_as_long_as_the_renting_time__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.ResponseOfferedVMsImpl <em>Response Offered VMs</em>}' class.

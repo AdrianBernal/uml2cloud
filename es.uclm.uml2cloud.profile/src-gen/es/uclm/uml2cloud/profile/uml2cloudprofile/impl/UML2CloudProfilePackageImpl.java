@@ -1137,6 +1137,16 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * @generated
 	 */
 	@Override
+	public EOperation getCloudProvider__CloudProvider_offer_must_be_greater_than_or_equal_to_zero__DiagnosticChain_Map() {
+		return cloudProviderEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getSLA() {
 		return slaEClass;
 	}
@@ -1159,6 +1169,56 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	@Override
 	public EReference getSLA_Vmcost() {
 		return (EReference)slaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSLA__SLA_compensation_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map() {
+		return slaEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSLA__SLA_discount_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map() {
+		return slaEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSLA__SLA_incpriority_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map() {
+		return slaEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSLA__SLA_base_cost_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map() {
+		return slaEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSLA__CloudProvider_must_offer_once_each_VM_for_each_SLA_type__DiagnosticChain_Map() {
+		return slaEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1967,6 +2027,16 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	 * @generated
 	 */
 	@Override
+	public EOperation getPriorityUser__PriorityUser_has_been_modeled_but_no_machine_has_been_reserved__DiagnosticChain_Map() {
+		return priorityUserEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRegularUser() {
 		return regularUserEClass;
 	}
@@ -2009,6 +2079,16 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 	@Override
 	public EReference getResume_ResumeTime() {
 		return (EReference)resumeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getResume__ResumeTime_is_at_least_twice_as_long_as_the_renting_time__DiagnosticChain_Map() {
+		return resumeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2322,10 +2402,16 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		createEReference(cloudProviderEClass, CLOUD_PROVIDER__SLA);
 		createEAttribute(cloudProviderEClass, CLOUD_PROVIDER__OFFER);
 		createEOperation(cloudProviderEClass, CLOUD_PROVIDER___CLOUD_PROVIDER_MUST_OFFER_ONCE_EACH_VM_FOR_EACH_SLA_TYPE__DIAGNOSTICCHAIN_MAP);
+		createEOperation(cloudProviderEClass, CLOUD_PROVIDER___CLOUD_PROVIDER_OFFER_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
 
 		slaEClass = createEClass(SLA);
 		createEReference(slaEClass, SLA__BASE_COMPONENT);
 		createEReference(slaEClass, SLA__VMCOST);
+		createEOperation(slaEClass, SLA___SLA_COMPENSATION_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(slaEClass, SLA___SLA_DISCOUNT_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(slaEClass, SLA___SLA_INCPRIORITY_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(slaEClass, SLA___SLA_BASE_COST_MUST_BE_GRATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP);
+		createEOperation(slaEClass, SLA___CLOUD_PROVIDER_MUST_OFFER_ONCE_EACH_VM_FOR_EACH_SLA_TYPE__DIAGNOSTICCHAIN_MAP);
 
 		vmCostEClass = createEClass(VM_COST);
 		createEReference(vmCostEClass, VM_COST__BASE);
@@ -2420,6 +2506,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		createEReference(dataCenterElementEClass, DATA_CENTER_ELEMENT__DATA_CENTER_TYPE);
 
 		priorityUserEClass = createEClass(PRIORITY_USER);
+		createEOperation(priorityUserEClass, PRIORITY_USER___PRIORITY_USER_HAS_BEEN_MODELED_BUT_NO_MACHINE_HAS_BEEN_RESERVED__DIAGNOSTICCHAIN_MAP);
 
 		regularUserEClass = createEClass(REGULAR_USER);
 		createEOperation(regularUserEClass, REGULAR_USER___REGULAR_USER_MUST_HAVE_ASUBSCRIBE_MESSAGE__DIAGNOSTICCHAIN_MAP);
@@ -2427,6 +2514,7 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		resumeEClass = createEClass(RESUME);
 		createEReference(resumeEClass, RESUME__BASE_MESSAGE);
 		createEReference(resumeEClass, RESUME__RESUME_TIME);
+		createEOperation(resumeEClass, RESUME___RESUME_TIME_IS_AT_LEAST_TWICE_AS_LONG_AS_THE_RENTING_TIME__DIAGNOSTICCHAIN_MAP);
 
 		responseOfferedVMsEClass = createEClass(RESPONSE_OFFERED_VMS);
 		createEReference(responseOfferedVMsEClass, RESPONSE_OFFERED_VMS__BASE_MESSAGE);
@@ -2681,9 +2769,63 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getCloudProvider__CloudProvider_offer_must_be_greater_than_or_equal_to_zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "CloudProvider_offer_must_be_greater_than_or_equal_to_zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(slaEClass, es.uclm.uml2cloud.profile.uml2cloudprofile.SLA.class, "SLA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSLA_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 0, 1, es.uclm.uml2cloud.profile.uml2cloudprofile.SLA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSLA_Vmcost(), this.getVMCost(), null, "vmcost", null, 1, -1, es.uclm.uml2cloud.profile.uml2cloudprofile.SLA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		op = initEOperation(getSLA__SLA_compensation_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "SLA_compensation_must_be_grater_than_or_equal_to_zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getSLA__SLA_discount_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "SLA_discount_must_be_grater_than_or_equal_to_zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getSLA__SLA_incpriority_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "SLA_incpriority_must_be_grater_than_or_equal_to_zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getSLA__SLA_base_cost_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "SLA_base_cost_must_be_grater_than_or_equal_to_zero", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getSLA__CloudProvider_must_offer_once_each_VM_for_each_SLA_type__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "CloudProvider_must_offer_once_each_VM_for_each_SLA_type", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(vmCostEClass, VMCost.class, "VMCost", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVMCost_Base(), this.getCost(), null, "base", null, 1, 1, VMCost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2987,6 +3129,15 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 
 		initEClass(priorityUserEClass, PriorityUser.class, "PriorityUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		op = initEOperation(getPriorityUser__PriorityUser_has_been_modeled_but_no_machine_has_been_reserved__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "PriorityUser_has_been_modeled_but_no_machine_has_been_reserved", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(regularUserEClass, RegularUser.class, "RegularUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getRegularUser__RegularUser_Must_Have_A_Subscribe_Message__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "RegularUser_Must_Have_A_Subscribe_Message", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -3001,6 +3152,15 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		initEClass(resumeEClass, Resume.class, "Resume", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResume_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 0, 1, Resume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getResume_ResumeTime(), this.getTime(), null, "resumeTime", null, 1, 1, Resume.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		op = initEOperation(getResume__ResumeTime_is_at_least_twice_as_long_as_the_renting_time__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "ResumeTime_is_at_least_twice_as_long_as_the_renting_time", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(responseOfferedVMsEClass, ResponseOfferedVMs.class, "ResponseOfferedVMs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResponseOfferedVMs_Base_Message(), theUMLPackage.getMessage(), null, "base_Message", null, 0, 1, ResponseOfferedVMs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -3070,6 +3230,12 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		   source,
 		   new String[] {
 			   "originalName", "uml2cloud"
+		   });
+		addAnnotation
+		  (getSLA__SLA_incpriority_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map(),
+		   source,
+		   new String[] {
+			   "originalName", "SLA_inc-priority_must_be_grater_than_or_equal_to_zero"
 		   });
 		addAnnotation
 		  (getVMCost_Incpriority(),

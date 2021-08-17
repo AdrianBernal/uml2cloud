@@ -2,6 +2,8 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.uml2.uml.Message;
@@ -75,5 +77,18 @@ public interface Resume extends EObject {
 	 * @generated
 	 */
 	void setResumeTime(Time value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * uml2cloud::Request.allInstances()->select(req | uml2cloud::RegularUser.allInstances()->select(ru | ru.base_Lifeline.coveredBy->includes(self.base_Message.sendEvent))->forAll( ru | ru.base_Lifeline.coveredBy->includes(req.base_Message.sendEvent)))->forAll(req | req.vmInstantiation.rentingTime.value*2>self.resumeTime.value)
+	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
+	 * @param context The cache of context-specific information.
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean ResumeTime_is_at_least_twice_as_long_as_the_renting_time(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // Resume
