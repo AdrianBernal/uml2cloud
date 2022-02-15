@@ -5,7 +5,6 @@ Bundle-SymbolicName: es.uclm.uml2cloud.profile;singleton:=true
 Automatic-Module-Name: es.uclm.uml2cloud.profile
 Bundle-Version: 2.1.0.qualifier
 Bundle-ClassPath: .
-Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: es.uclm.uml2cloud.profile.uml2cloudprofile,
