@@ -105,6 +105,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getCores() {
 		return cores;
 	}
@@ -114,6 +115,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCores(int newCores) {
 		int oldCores = cores;
 		cores = newCores;
@@ -126,6 +128,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getMIPS() {
 		return mips;
 	}
@@ -135,6 +138,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMIPS(int newMIPS) {
 		int oldMIPS = mips;
 		mips = newMIPS;
@@ -286,7 +290,7 @@ public class CPUImpl extends HardwareImpl implements CPU {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (cores: ");
 		result.append(cores);
 		result.append(", MIPS: ");

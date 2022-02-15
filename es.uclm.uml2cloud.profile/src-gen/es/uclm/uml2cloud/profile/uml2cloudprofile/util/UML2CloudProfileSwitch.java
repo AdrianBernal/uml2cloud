@@ -175,6 +175,30 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case UML2CloudProfilePackage.SLA: {
+				SLA sla = (SLA)theEObject;
+				T result = caseSLA(sla);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.VM_COST: {
+				VMCost vmCost = (VMCost)theEObject;
+				T result = caseVMCost(vmCost);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.COST: {
+				Cost cost = (Cost)theEObject;
+				T result = caseCost(cost);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.VM: {
+				VM vm = (VM)theEObject;
+				T result = caseVM(vm);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case UML2CloudProfilePackage.APPLICATION: {
 				Application application = (Application)theEObject;
 				T result = caseApplication(application);
@@ -184,12 +208,6 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 			case UML2CloudProfilePackage.PARAMETER: {
 				Parameter parameter = (Parameter)theEObject;
 				T result = caseParameter(parameter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UML2CloudProfilePackage.VM: {
-				VM vm = (VM)theEObject;
-				T result = caseVM(vm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -217,36 +235,6 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UML2CloudProfilePackage.OK: {
-				OK ok = (OK)theEObject;
-				T result = caseOK(ok);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UML2CloudProfilePackage.NOTIFY: {
-				Notify notify = (Notify)theEObject;
-				T result = caseNotify(notify);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UML2CloudProfilePackage.TIMEOUT: {
-				Timeout timeout = (Timeout)theEObject;
-				T result = caseTimeout(timeout);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UML2CloudProfilePackage.RESPONSE: {
-				Response response = (Response)theEObject;
-				T result = caseResponse(response);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UML2CloudProfilePackage.FAILURE: {
-				Failure failure = (Failure)theEObject;
-				T result = caseFailure(failure);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case UML2CloudProfilePackage.EXECUTE: {
 				Execute execute = (Execute)theEObject;
 				T result = caseExecute(execute);
@@ -268,6 +256,74 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 			case UML2CloudProfilePackage.DATA_CENTER_ELEMENT: {
 				DataCenterElement dataCenterElement = (DataCenterElement)theEObject;
 				T result = caseDataCenterElement(dataCenterElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.PRIORITY_USER: {
+				PriorityUser priorityUser = (PriorityUser)theEObject;
+				T result = casePriorityUser(priorityUser);
+				if (result == null) result = caseUser(priorityUser);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.REGULAR_USER: {
+				RegularUser regularUser = (RegularUser)theEObject;
+				T result = caseRegularUser(regularUser);
+				if (result == null) result = caseUser(regularUser);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.RESUME: {
+				Resume resume = (Resume)theEObject;
+				T result = caseResume(resume);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.RESPONSE_OFFERED_VMS: {
+				ResponseOfferedVMs responseOfferedVMs = (ResponseOfferedVMs)theEObject;
+				T result = caseResponseOfferedVMs(responseOfferedVMs);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.OK: {
+				Ok ok = (Ok)theEObject;
+				T result = caseOk(ok);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.TIMEOUT_RENTING: {
+				TimeoutRenting timeoutRenting = (TimeoutRenting)theEObject;
+				T result = caseTimeoutRenting(timeoutRenting);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.NOTIFY: {
+				Notify notify = (Notify)theEObject;
+				T result = caseNotify(notify);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.TIMEOUT_SUBSCRIPTION: {
+				TimeoutSubscription timeoutSubscription = (TimeoutSubscription)theEObject;
+				T result = caseTimeoutSubscription(timeoutSubscription);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.REQUEST_OFFERED_VMS: {
+				RequestOfferedVMs requestOfferedVMs = (RequestOfferedVMs)theEObject;
+				T result = caseRequestOfferedVMs(requestOfferedVMs);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.RESPONSE: {
+				Response response = (Response)theEObject;
+				T result = caseResponse(response);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UML2CloudProfilePackage.REFUSE: {
+				Refuse refuse = (Refuse)theEObject;
+				T result = caseRefuse(refuse);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -531,6 +587,66 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>SLA</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>SLA</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSLA(SLA object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VM Cost</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VM Cost</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVMCost(VMCost object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cost</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cost</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCost(Cost object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VM</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VM</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVM(VM object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Application</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -557,21 +673,6 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseParameter(Parameter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VM</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VM</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVM(VM object) {
 		return null;
 	}
 
@@ -636,81 +737,6 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>OK</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>OK</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOK(OK object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Notify</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Notify</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNotify(Notify object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Timeout</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Timeout</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTimeout(Timeout object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Response</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Response</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResponse(Response object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Failure</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Failure</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFailure(Failure object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Execute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -767,6 +793,171 @@ public class UML2CloudProfileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDataCenterElement(DataCenterElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Priority User</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Priority User</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePriorityUser(PriorityUser object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Regular User</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Regular User</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRegularUser(RegularUser object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Resume</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Resume</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResume(Resume object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Response Offered VMs</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Response Offered VMs</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResponseOfferedVMs(ResponseOfferedVMs object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ok</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ok</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOk(Ok object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Timeout Renting</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Timeout Renting</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTimeoutRenting(TimeoutRenting object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Notify</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Notify</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNotify(Notify object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Timeout Subscription</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Timeout Subscription</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTimeoutSubscription(TimeoutSubscription object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Request Offered VMs</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Request Offered VMs</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequestOfferedVMs(RequestOfferedVMs object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResponse(Response object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Refuse</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Refuse</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRefuse(Refuse object) {
 		return null;
 	}
 

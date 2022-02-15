@@ -55,10 +55,10 @@ public class GenerateAll {
 	 * @generated
 	 */
 	public GenerateAll(URI modelURI, IContainer targetFolder, List<? extends Object> arguments) {
-		this.modelURI = modelURI;
-		this.targetFolder = targetFolder;
-		this.arguments = arguments;
-	}
+    this.modelURI = modelURI;
+    this.targetFolder = targetFolder;
+    this.arguments = arguments;
+  }
 
 	/**
 	 * Launches the generation.
@@ -70,37 +70,17 @@ public class GenerateAll {
 	 * @generated
 	 */
 	public void doGenerate(IProgressMonitor monitor) throws IOException {
-		if (!targetFolder.getLocation().toFile().exists()) {
-			targetFolder.getLocation().toFile().mkdirs();
-		}
-		
-		monitor.subTask("Loading...");
-		es.uclm.uml2cloud.m2t.simcan.main.GenerateSIMCANFiles gen0 = new es.uclm.uml2cloud.m2t.simcan.main.GenerateSIMCANFiles(modelURI, targetFolder.getLocation().toFile(), arguments);
-		monitor.worked(1);
-		String generationID = org.eclipse.acceleo.engine.utils.AcceleoLaunchingUtil.computeUIProjectID("es.uclm.uml2cloud.m2t.simcan", "es.uclm.uml2cloud.m2t.simcan.main.GenerateSIMCANFiles", modelURI.toString(), targetFolder.getFullPath().toString(), new ArrayList<String>());
-		gen0.setGenerationID(generationID);
-		gen0.doGenerate(BasicMonitor.toMonitor(monitor));
-			
-		EObject model = gen0.getModel();
-		if (model != null) {
-				
-			
-//			monitor.subTask("Loading...");
-//			es.uclm.uml2cloud.m2t.simcan.services.TestService gen1 = new es.uclm.uml2cloud.m2t.simcan.services.TestService(model, targetFolder.getLocation().toFile(), arguments);
-//			monitor.worked(1);
-//			generationID = org.eclipse.acceleo.engine.utils.AcceleoLaunchingUtil.computeUIProjectID("es.uclm.uml2cloud.m2t.simcan", "es.uclm.uml2cloud.m2t.simcan.services.TestService", modelURI.toString(), targetFolder.getFullPath().toString(), new ArrayList<String>());
-//			gen1.setGenerationID(generationID);
-//			gen1.doGenerate(BasicMonitor.toMonitor(monitor));
-			
-			monitor.subTask("Loading...");
-			es.uclm.uml2cloud.m2t.simcan.unitTests.TestSIMCANM2Ttransformation gen2 = new es.uclm.uml2cloud.m2t.simcan.unitTests.TestSIMCANM2Ttransformation(model, targetFolder.getLocation().toFile(), arguments);
-			monitor.worked(1);
-			generationID = org.eclipse.acceleo.engine.utils.AcceleoLaunchingUtil.computeUIProjectID("es.uclm.uml2cloud.m2t.simcan", "es.uclm.uml2cloud.m2t.simcan.unitTests.TestSIMCANM2Ttransformation", modelURI.toString(), targetFolder.getFullPath().toString(), new ArrayList<String>());
-			gen2.setGenerationID(generationID);
-			gen2.doGenerate(BasicMonitor.toMonitor(monitor));
-		}
-			
-		
-	}
+    if (!targetFolder.getLocation().toFile().exists()) {
+      targetFolder.getLocation().toFile().mkdirs();
+    }
+    
+    monitor.subTask("Loading...");
+    es.uclm.uml2cloud.m2t.simcan.main.GenerateSIMCANFiles gen0 = new es.uclm.uml2cloud.m2t.simcan.main.GenerateSIMCANFiles(modelURI, targetFolder.getLocation().toFile(), arguments);
+    monitor.worked(1);
+    String generationID = org.eclipse.acceleo.engine.utils.AcceleoLaunchingUtil.computeUIProjectID("es.uclm.uml2cloud.m2t.simcan", "es.uclm.uml2cloud.m2t.simcan.main.GenerateSIMCANFiles", modelURI.toString(), targetFolder.getFullPath().toString(), new ArrayList<String>());
+    gen0.setGenerationID(generationID);
+    gen0.doGenerate(BasicMonitor.toMonitor(monitor));
+    
+  }
 
 }

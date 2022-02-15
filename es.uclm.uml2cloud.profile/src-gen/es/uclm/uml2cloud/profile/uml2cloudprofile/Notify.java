@@ -34,7 +34,7 @@ public interface Notify extends EObject {
 	 * @return the value of the '<em>Base Message</em>' reference.
 	 * @see #setBase_Message(Message)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getNotify_Base_Message()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	Message getBase_Message();

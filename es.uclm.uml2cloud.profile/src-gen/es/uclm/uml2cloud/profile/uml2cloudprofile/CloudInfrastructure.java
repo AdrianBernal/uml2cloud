@@ -21,7 +21,6 @@ import org.eclipse.uml2.uml.Component;
  * </p>
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getDatacenterElements <em>Datacenter Elements</em>}</li>
- *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getCloudProvider <em>Cloud Provider</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getBase_Component <em>Base Component</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getNetwork <em>Network</em>}</li>
  * </ul>
@@ -46,32 +45,6 @@ public interface CloudInfrastructure extends EObject {
 	 * @generated
 	 */
 	EList<DataCenterElement> getDatacenterElements();
-
-	/**
-	 * Returns the value of the '<em><b>Cloud Provider</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cloud Provider</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cloud Provider</em>' reference.
-	 * @see #setCloudProvider(CloudProvider)
-	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getCloudInfrastructure_CloudProvider()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	CloudProvider getCloudProvider();
-
-	/**
-	 * Sets the value of the '{@link es.uclm.uml2cloud.profile.uml2cloudprofile.CloudInfrastructure#getCloudProvider <em>Cloud Provider</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cloud Provider</em>' reference.
-	 * @see #getCloudProvider()
-	 * @generated
-	 */
-	void setCloudProvider(CloudProvider value);
 
 	/**
 	 * Returns the value of the '<em><b>Base Component</b></em>' reference.

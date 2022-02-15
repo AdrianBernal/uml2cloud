@@ -106,6 +106,7 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Bandwidth getNetwork() {
 		return network;
 	}
@@ -130,6 +131,7 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNetwork(Bandwidth newNetwork) {
 		if (newNetwork != network) {
 			NotificationChain msgs = null;
@@ -149,6 +151,7 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RackElement> getRackElements() {
 		if (rackElements == null) {
 			rackElements = new EObjectContainmentEList<RackElement>(RackElement.class, this, UML2CloudProfilePackage.DATA_CENTER__RACK_ELEMENTS);
@@ -161,6 +164,7 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component getBase_Component() {
 		if (base_Component != null && base_Component.eIsProxy()) {
 			InternalEObject oldBase_Component = (InternalEObject)base_Component;
@@ -187,6 +191,7 @@ public class DataCenterImpl extends MinimalEObjectImpl.Container implements Data
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Component(Component newBase_Component) {
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;

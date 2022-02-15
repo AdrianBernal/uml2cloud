@@ -10,7 +10,6 @@ import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator
 
 import java.lang.reflect.InvocationTargetException;
 
-import java.util.Collection;
 import java.util.Map;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -29,9 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectValidator;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.uml2.uml.Message;
 
@@ -61,14 +58,14 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	protected Message base_Message;
 
 	/**
-	 * The cached value of the '{@link #getVmInstantiation() <em>Vm Instantiation</em>}' containment reference list.
+	 * The cached value of the '{@link #getVmInstantiation() <em>Vm Instantiation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVmInstantiation()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VMInstantiation> vmInstantiation;
+	protected VMInstantiation vmInstantiation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,6 +91,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message getBase_Message() {
 		if (base_Message != null && base_Message.eIsProxy()) {
 			InternalEObject oldBase_Message = (InternalEObject)base_Message;
@@ -120,6 +118,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Message(Message newBase_Message) {
 		Message oldBase_Message = base_Message;
 		base_Message = newBase_Message;
@@ -132,11 +131,44 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VMInstantiation> getVmInstantiation() {
-		if (vmInstantiation == null) {
-			vmInstantiation = new EObjectContainmentEList<VMInstantiation>(VMInstantiation.class, this, UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION);
-		}
+	@Override
+	public VMInstantiation getVmInstantiation() {
 		return vmInstantiation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetVmInstantiation(VMInstantiation newVmInstantiation, NotificationChain msgs) {
+		VMInstantiation oldVmInstantiation = vmInstantiation;
+		vmInstantiation = newVmInstantiation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION, oldVmInstantiation, newVmInstantiation);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setVmInstantiation(VMInstantiation newVmInstantiation) {
+		if (newVmInstantiation != vmInstantiation) {
+			NotificationChain msgs = null;
+			if (vmInstantiation != null)
+				msgs = ((InternalEObject)vmInstantiation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION, null, msgs);
+			if (newVmInstantiation != null)
+				msgs = ((InternalEObject)newVmInstantiation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION, null, msgs);
+			msgs = basicSetVmInstantiation(newVmInstantiation, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION, newVmInstantiation, newVmInstantiation));
 	}
 
 	/**
@@ -194,11 +226,86 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean Request_Must_Be_Sent_To_A_CloudProvider(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.REQUEST__REQUEST_MUST_BE_SENT_TO_ACLOUD_PROVIDER,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Request_Must_Be_Sent_To_A_CloudProvider", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Request_Must_Be_Sent_By_A_User(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.REQUEST__REQUEST_MUST_BE_SENT_BY_AUSER,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Request_Must_Be_Sent_By_A_User", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Request_For_A_VM_Not_Offered_In_The_Signed_SLA_By_The_User(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.REQUEST__REQUEST_FOR_AVM_NOT_OFFERED_IN_THE_SIGNED_SLA_BY_THE_USER,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Request_For_A_VM_Not_Offered_In_The_Signed_SLA_By_The_User", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
-				return ((InternalEList<?>)getVmInstantiation()).basicRemove(otherEnd, msgs);
+				return basicSetVmInstantiation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -225,7 +332,6 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -233,8 +339,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 				setBase_Message((Message)newValue);
 				return;
 			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
-				getVmInstantiation().clear();
-				getVmInstantiation().addAll((Collection<? extends VMInstantiation>)newValue);
+				setVmInstantiation((VMInstantiation)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -252,7 +357,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 				setBase_Message((Message)null);
 				return;
 			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
-				getVmInstantiation().clear();
+				setVmInstantiation((VMInstantiation)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -269,7 +374,7 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 			case UML2CloudProfilePackage.REQUEST__BASE_MESSAGE:
 				return base_Message != null;
 			case UML2CloudProfilePackage.REQUEST__VM_INSTANTIATION:
-				return vmInstantiation != null && !vmInstantiation.isEmpty();
+				return vmInstantiation != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -287,6 +392,12 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 				return rentingTime_Must_Be_Greater_Than__Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case UML2CloudProfilePackage.REQUEST___INSTANCES_MUST_BE_GREATER_THAN_ZERO__ZERO__DIAGNOSTICCHAIN_MAP:
 				return instances_Must_Be_Greater_Than__Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.REQUEST___REQUEST_MUST_BE_SENT_TO_ACLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP:
+				return Request_Must_Be_Sent_To_A_CloudProvider((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.REQUEST___REQUEST_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP:
+				return Request_Must_Be_Sent_By_A_User((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.REQUEST___REQUEST_FOR_AVM_NOT_OFFERED_IN_THE_SIGNED_SLA_BY_THE_USER__DIAGNOSTICCHAIN_MAP:
+				return Request_For_A_VM_Not_Offered_In_The_Signed_SLA_By_The_User((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

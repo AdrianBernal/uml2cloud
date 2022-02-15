@@ -71,7 +71,7 @@ public class AcceleoGenerateGenerateSIMCANFilesAction extends ActionDelegate imp
 							IFile model = (IFile)filesIt.next();
 							URI modelURI = URI.createPlatformResourceURI(model.getFullPath().toString(), true);
 							try {
-								IContainer target = model.getProject().getFolder("SIMCANFiles");
+								IContainer target = model.getProject().getFolder("Simcan2CloudFiles");
 								GenerateAll generator = new GenerateAll(modelURI, target, getArguments());
 								generator.doGenerate(monitor);
 							} catch (IOException e) {

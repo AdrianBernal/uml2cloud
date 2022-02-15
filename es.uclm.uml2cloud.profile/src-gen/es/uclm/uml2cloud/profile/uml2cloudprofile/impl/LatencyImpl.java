@@ -38,7 +38,7 @@ public class LatencyImpl extends MinimalEObjectImpl.Container implements Latency
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = "read";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -84,6 +84,7 @@ public class LatencyImpl extends MinimalEObjectImpl.Container implements Latency
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -93,6 +94,7 @@ public class LatencyImpl extends MinimalEObjectImpl.Container implements Latency
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -105,6 +107,7 @@ public class LatencyImpl extends MinimalEObjectImpl.Container implements Latency
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getTime() {
 		return time;
 	}
@@ -129,6 +132,7 @@ public class LatencyImpl extends MinimalEObjectImpl.Container implements Latency
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTime(Time newTime) {
 		if (newTime != time) {
 			NotificationChain msgs = null;

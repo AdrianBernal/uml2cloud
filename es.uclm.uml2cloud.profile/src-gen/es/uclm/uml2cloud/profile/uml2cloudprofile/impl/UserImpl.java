@@ -2,16 +2,32 @@
  */
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
+import es.uclm.uml2cloud.profile.uml2cloudprofile.SLA;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.User;
 
+import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
+
+import java.lang.reflect.InvocationTargetException;
+
+import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import org.eclipse.emf.ecore.util.EObjectValidator;
 
 import org.eclipse.uml2.uml.Lifeline;
 
@@ -25,11 +41,12 @@ import org.eclipse.uml2.uml.Lifeline;
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl#getBase_Lifeline <em>Base Lifeline</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl#getInstances <em>Instances</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.UserImpl#getSla <em>Sla</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class UserImpl extends MinimalEObjectImpl.Container implements User {
+public abstract class UserImpl extends MinimalEObjectImpl.Container implements User {
 	/**
 	 * The cached value of the '{@link #getBase_Lifeline() <em>Base Lifeline</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -61,6 +78,16 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	protected int instances = INSTANCES_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getSla() <em>Sla</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSla()
+	 * @generated
+	 * @ordered
+	 */
+	protected SLA sla;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -84,6 +111,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getBase_Lifeline() {
 		if (base_Lifeline != null && base_Lifeline.eIsProxy()) {
 			InternalEObject oldBase_Lifeline = (InternalEObject)base_Lifeline;
@@ -110,6 +138,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Lifeline(Lifeline newBase_Lifeline) {
 		Lifeline oldBase_Lifeline = base_Lifeline;
 		base_Lifeline = newBase_Lifeline;
@@ -122,6 +151,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getInstances() {
 		return instances;
 	}
@@ -131,11 +161,152 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInstances(int newInstances) {
 		int oldInstances = instances;
 		instances = newInstances;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.USER__INSTANCES, oldInstances, instances));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SLA getSla() {
+		if (sla != null && sla.eIsProxy()) {
+			InternalEObject oldSla = (InternalEObject)sla;
+			sla = (SLA)eResolveProxy(oldSla);
+			if (sla != oldSla) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, UML2CloudProfilePackage.USER__SLA, oldSla, sla));
+			}
+		}
+		return sla;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SLA basicGetSla() {
+		return sla;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSla(SLA newSla) {
+		SLA oldSla = sla;
+		sla = newSla;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.USER__SLA, oldSla, sla));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean User_Must_Have_A_Execute_Message(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.USER__USER_MUST_HAVE_AEXECUTE_MESSAGE,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "User_Must_Have_A_Execute_Message", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean User_Must_Have_A_Request_Message(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.USER__USER_MUST_HAVE_AREQUEST_MESSAGE,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "User_Must_Have_A_Request_Message", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean User_Must_Sign_A_VM_SLA_Offered_By_The_CloudProvider(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.USER__USER_MUST_SIGN_AVM_SLA_OFFERED_BY_THE_CLOUD_PROVIDER,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "User_Must_Sign_A_VM_SLA_Offered_By_The_CloudProvider", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean User_Must_Have_A_Resume_Message(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.USER__USER_MUST_HAVE_ARESUME_MESSAGE,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "User_Must_Have_A_Resume_Message", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
 	}
 
 	/**
@@ -151,6 +322,9 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 				return basicGetBase_Lifeline();
 			case UML2CloudProfilePackage.USER__INSTANCES:
 				return getInstances();
+			case UML2CloudProfilePackage.USER__SLA:
+				if (resolve) return getSla();
+				return basicGetSla();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,6 +342,9 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 				return;
 			case UML2CloudProfilePackage.USER__INSTANCES:
 				setInstances((Integer)newValue);
+				return;
+			case UML2CloudProfilePackage.USER__SLA:
+				setSla((SLA)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,6 +364,9 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 			case UML2CloudProfilePackage.USER__INSTANCES:
 				setInstances(INSTANCES_EDEFAULT);
 				return;
+			case UML2CloudProfilePackage.USER__SLA:
+				setSla((SLA)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -203,8 +383,31 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 				return base_Lifeline != null;
 			case UML2CloudProfilePackage.USER__INSTANCES:
 				return instances != INSTANCES_EDEFAULT;
+			case UML2CloudProfilePackage.USER__SLA:
+				return sla != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case UML2CloudProfilePackage.USER___USER_MUST_HAVE_AEXECUTE_MESSAGE__DIAGNOSTICCHAIN_MAP:
+				return User_Must_Have_A_Execute_Message((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.USER___USER_MUST_HAVE_AREQUEST_MESSAGE__DIAGNOSTICCHAIN_MAP:
+				return User_Must_Have_A_Request_Message((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.USER___USER_MUST_SIGN_AVM_SLA_OFFERED_BY_THE_CLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP:
+				return User_Must_Sign_A_VM_SLA_Offered_By_The_CloudProvider((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.USER___USER_MUST_HAVE_ARESUME_MESSAGE__DIAGNOSTICCHAIN_MAP:
+				return User_Must_Have_A_Resume_Message((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -216,7 +419,7 @@ public class UserImpl extends MinimalEObjectImpl.Container implements User {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (instances: ");
 		result.append(instances);
 		result.append(')');

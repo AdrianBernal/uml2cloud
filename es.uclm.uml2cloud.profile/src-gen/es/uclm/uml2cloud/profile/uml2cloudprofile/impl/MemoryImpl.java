@@ -92,6 +92,7 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Size getCapacity() {
 		return capacity;
 	}
@@ -116,6 +117,7 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCapacity(Size newCapacity) {
 		if (newCapacity != capacity) {
 			NotificationChain msgs = null;
@@ -135,6 +137,7 @@ public class MemoryImpl extends HardwareImpl implements Memory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Latency> getLatency() {
 		if (latency == null) {
 			latency = new EObjectContainmentEList<Latency>(Latency.class, this, UML2CloudProfilePackage.MEMORY__LATENCY);

@@ -56,7 +56,7 @@ public class SizeImpl extends MinimalEObjectImpl.Container implements Size {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final SizeUnit UNIT_EDEFAULT = SizeUnit.TBYTE;
+	protected static final SizeUnit UNIT_EDEFAULT = SizeUnit.MBYTE;
 
 	/**
 	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
@@ -92,6 +92,7 @@ public class SizeImpl extends MinimalEObjectImpl.Container implements Size {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getValue() {
 		return value;
 	}
@@ -101,6 +102,7 @@ public class SizeImpl extends MinimalEObjectImpl.Container implements Size {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(double newValue) {
 		double oldValue = value;
 		value = newValue;
@@ -113,6 +115,7 @@ public class SizeImpl extends MinimalEObjectImpl.Container implements Size {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SizeUnit getUnit() {
 		return unit;
 	}
@@ -122,6 +125,7 @@ public class SizeImpl extends MinimalEObjectImpl.Container implements Size {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnit(SizeUnit newUnit) {
 		SizeUnit oldUnit = unit;
 		unit = newUnit == null ? UNIT_EDEFAULT : newUnit;

@@ -56,7 +56,7 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TimeUnit UNIT_EDEFAULT = TimeUnit.D;
+	protected static final TimeUnit UNIT_EDEFAULT = TimeUnit.H;
 
 	/**
 	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
@@ -92,6 +92,7 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getValue() {
 		return value;
 	}
@@ -101,6 +102,7 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(double newValue) {
 		double oldValue = value;
 		value = newValue;
@@ -113,6 +115,7 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimeUnit getUnit() {
 		return unit;
 	}
@@ -122,6 +125,7 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnit(TimeUnit newUnit) {
 		TimeUnit oldUnit = unit;
 		unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
@@ -206,7 +210,7 @@ public class TimeImpl extends MinimalEObjectImpl.Container implements Time {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(", unit: ");

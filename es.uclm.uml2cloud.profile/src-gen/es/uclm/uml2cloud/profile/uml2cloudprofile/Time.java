@@ -51,6 +51,7 @@ public interface Time extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' attribute.
+	 * The default value is <code>"h"</code>.
 	 * The literals are from the enumeration {@link es.uclm.uml2cloud.profile.uml2cloudprofile.TimeUnit}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -62,7 +63,7 @@ public interface Time extends EObject {
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.TimeUnit
 	 * @see #setUnit(TimeUnit)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getTime_Unit()
-	 * @model required="true" ordered="false"
+	 * @model default="h" required="true" ordered="false"
 	 * @generated
 	 */
 	TimeUnit getUnit();

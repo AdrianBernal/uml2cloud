@@ -3,15 +3,33 @@
 package es.uclm.uml2cloud.profile.uml2cloudprofile.impl;
 
 import es.uclm.uml2cloud.profile.uml2cloudprofile.CloudProvider;
+import es.uclm.uml2cloud.profile.uml2cloudprofile.SLA;
 import es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage;
 
+import es.uclm.uml2cloud.profile.uml2cloudprofile.util.UML2CloudProfileValidator;
+
+import java.lang.reflect.InvocationTargetException;
+
+import java.util.Collection;
+import java.util.Map;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectValidator;
 
 import org.eclipse.uml2.uml.Lifeline;
 
@@ -25,6 +43,8 @@ import org.eclipse.uml2.uml.Lifeline;
  * <ul>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl#getResourceAllocationPolicy <em>Resource Allocation Policy</em>}</li>
  *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl#getBase_Lifeline <em>Base Lifeline</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl#getSla <em>Sla</em>}</li>
+ *   <li>{@link es.uclm.uml2cloud.profile.uml2cloudprofile.impl.CloudProviderImpl#getOffer <em>Offer</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,7 +58,7 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RESOURCE_ALLOCATION_POLICY_EDEFAULT = null;
+	protected static final String RESOURCE_ALLOCATION_POLICY_EDEFAULT = "_firstFist_cost";
 
 	/**
 	 * The cached value of the '{@link #getResourceAllocationPolicy() <em>Resource Allocation Policy</em>}' attribute.
@@ -59,6 +79,36 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	 * @ordered
 	 */
 	protected Lifeline base_Lifeline;
+
+	/**
+	 * The cached value of the '{@link #getSla() <em>Sla</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSla()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SLA> sla;
+
+	/**
+	 * The default value of the '{@link #getOffer() <em>Offer</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOffer()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double OFFER_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getOffer() <em>Offer</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOffer()
+	 * @generated
+	 * @ordered
+	 */
+	protected double offer = OFFER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -84,6 +134,7 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getResourceAllocationPolicy() {
 		return resourceAllocationPolicy;
 	}
@@ -93,6 +144,7 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResourceAllocationPolicy(String newResourceAllocationPolicy) {
 		String oldResourceAllocationPolicy = resourceAllocationPolicy;
 		resourceAllocationPolicy = newResourceAllocationPolicy;
@@ -105,6 +157,7 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getBase_Lifeline() {
 		if (base_Lifeline != null && base_Lifeline.eIsProxy()) {
 			InternalEObject oldBase_Lifeline = (InternalEObject)base_Lifeline;
@@ -131,11 +184,98 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Lifeline(Lifeline newBase_Lifeline) {
 		Lifeline oldBase_Lifeline = base_Lifeline;
 		base_Lifeline = newBase_Lifeline;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CLOUD_PROVIDER__BASE_LIFELINE, oldBase_Lifeline, base_Lifeline));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<SLA> getSla() {
+		if (sla == null) {
+			sla = new EObjectResolvingEList<SLA>(SLA.class, this, UML2CloudProfilePackage.CLOUD_PROVIDER__SLA);
+		}
+		return sla;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getOffer() {
+		return offer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setOffer(double newOffer) {
+		double oldOffer = offer;
+		offer = newOffer;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UML2CloudProfilePackage.CLOUD_PROVIDER__OFFER, oldOffer, offer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.CLOUD_PROVIDER__CLOUD_PROVIDER_MUST_OFFER_ONCE_EACH_VM_FOR_EACH_SLA_TYPE,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean CloudProvider_offer_must_be_greater_than_or_equal_to_zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.CLOUD_PROVIDER__CLOUD_PROVIDER_OFFER_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "CloudProvider_offer_must_be_greater_than_or_equal_to_zero", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
 	}
 
 	/**
@@ -151,6 +291,10 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 			case UML2CloudProfilePackage.CLOUD_PROVIDER__BASE_LIFELINE:
 				if (resolve) return getBase_Lifeline();
 				return basicGetBase_Lifeline();
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__SLA:
+				return getSla();
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__OFFER:
+				return getOffer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -160,6 +304,7 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -168,6 +313,13 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 				return;
 			case UML2CloudProfilePackage.CLOUD_PROVIDER__BASE_LIFELINE:
 				setBase_Lifeline((Lifeline)newValue);
+				return;
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__SLA:
+				getSla().clear();
+				getSla().addAll((Collection<? extends SLA>)newValue);
+				return;
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__OFFER:
+				setOffer((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,6 +339,12 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 			case UML2CloudProfilePackage.CLOUD_PROVIDER__BASE_LIFELINE:
 				setBase_Lifeline((Lifeline)null);
 				return;
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__SLA:
+				getSla().clear();
+				return;
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__OFFER:
+				setOffer(OFFER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -203,8 +361,29 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 				return RESOURCE_ALLOCATION_POLICY_EDEFAULT == null ? resourceAllocationPolicy != null : !RESOURCE_ALLOCATION_POLICY_EDEFAULT.equals(resourceAllocationPolicy);
 			case UML2CloudProfilePackage.CLOUD_PROVIDER__BASE_LIFELINE:
 				return base_Lifeline != null;
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__SLA:
+				return sla != null && !sla.isEmpty();
+			case UML2CloudProfilePackage.CLOUD_PROVIDER__OFFER:
+				return offer != OFFER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case UML2CloudProfilePackage.CLOUD_PROVIDER___CLOUD_PROVIDER_MUST_OFFER_ONCE_EACH_VM_FOR_EACH_SLA_TYPE__DIAGNOSTICCHAIN_MAP:
+				return CloudProvider_Must_Offer_Once_Each_VM_For_Each_SLA_Type((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.CLOUD_PROVIDER___CLOUD_PROVIDER_OFFER_MUST_BE_GREATER_THAN_OR_EQUAL_TO_ZERO__DIAGNOSTICCHAIN_MAP:
+				return CloudProvider_offer_must_be_greater_than_or_equal_to_zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -216,9 +395,11 @@ public class CloudProviderImpl extends MinimalEObjectImpl.Container implements C
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (resourceAllocationPolicy: ");
 		result.append(resourceAllocationPolicy);
+		result.append(", offer: ");
+		result.append(offer);
 		result.append(')');
 		return result.toString();
 	}

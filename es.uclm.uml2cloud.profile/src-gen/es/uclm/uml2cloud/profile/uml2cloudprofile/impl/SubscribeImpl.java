@@ -91,6 +91,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message getBase_Message() {
 		if (base_Message != null && base_Message.eIsProxy()) {
 			InternalEObject oldBase_Message = (InternalEObject)base_Message;
@@ -117,6 +118,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Message(Message newBase_Message) {
 		Message oldBase_Message = base_Message;
 		base_Message = newBase_Message;
@@ -129,6 +131,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time getMaxTime() {
 		return maxTime;
 	}
@@ -153,6 +156,7 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxTime(Time newMaxTime) {
 		if (newMaxTime != maxTime) {
 			NotificationChain msgs = null;
@@ -185,6 +189,56 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
 						 UML2CloudProfileValidator.SUBSCRIBE__MAX_TIME_MUST_BE_GREATER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "maxTime_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Subscribe_Must_Be_Sent_To_A_CloudProvider(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.SUBSCRIBE__SUBSCRIBE_MUST_BE_SENT_TO_ACLOUD_PROVIDER,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Subscribe_Must_Be_Sent_To_A_CloudProvider", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Subscribe_Must_Be_Sent_By_A_User(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.SUBSCRIBE__SUBSCRIBE_MUST_BE_SENT_BY_AUSER,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Subscribe_Must_Be_Sent_By_A_User", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -286,6 +340,10 @@ public class SubscribeImpl extends MinimalEObjectImpl.Container implements Subsc
 		switch (operationID) {
 			case UML2CloudProfilePackage.SUBSCRIBE___MAX_TIME_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return maxTime_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.SUBSCRIBE___SUBSCRIBE_MUST_BE_SENT_TO_ACLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP:
+				return Subscribe_Must_Be_Sent_To_A_CloudProvider((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.SUBSCRIBE___SUBSCRIBE_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP:
+				return Subscribe_Must_Be_Sent_By_A_User((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

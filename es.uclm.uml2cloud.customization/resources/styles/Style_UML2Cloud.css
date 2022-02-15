@@ -1,0 +1,11 @@
+Compartment[type=StereotypeCompartment]{
+	visible:true;
+}
+
+Component{
+	canonical: true;
+}
+
+Lifeline{
+	isNameWrap : true;
+}

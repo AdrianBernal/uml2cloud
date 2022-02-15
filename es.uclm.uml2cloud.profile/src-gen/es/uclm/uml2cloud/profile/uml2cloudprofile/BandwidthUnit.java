@@ -51,10 +51,6 @@ public enum BandwidthUnit implements Enumerator {
 	/**
 	 * The '<em><b>Kbps</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Kbps</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #KBPS
 	 * @model name="Kbps"
@@ -66,10 +62,6 @@ public enum BandwidthUnit implements Enumerator {
 	/**
 	 * The '<em><b>Mbps</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Mbps</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MBPS
 	 * @model name="Mbps"
@@ -81,10 +73,6 @@ public enum BandwidthUnit implements Enumerator {
 	/**
 	 * The '<em><b>Gbps</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Gbps</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #GBPS
 	 * @model name="Gbps"
@@ -205,6 +193,7 @@ public enum BandwidthUnit implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -214,6 +203,7 @@ public enum BandwidthUnit implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -223,6 +213,7 @@ public enum BandwidthUnit implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}

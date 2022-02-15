@@ -63,6 +63,7 @@ public abstract class HardwareImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component getBase_Component() {
 		if (base_Component != null && base_Component.eIsProxy()) {
 			InternalEObject oldBase_Component = (InternalEObject)base_Component;
@@ -89,6 +90,7 @@ public abstract class HardwareImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Component(Component newBase_Component) {
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;

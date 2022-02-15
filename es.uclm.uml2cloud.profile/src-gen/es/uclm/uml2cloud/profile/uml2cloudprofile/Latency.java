@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Latency extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The default value is <code>"read"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -33,7 +34,7 @@ public interface Latency extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see es.uclm.uml2cloud.profile.uml2cloudprofile.UML2CloudProfilePackage#getLatency_Name()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model default="read" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getName();

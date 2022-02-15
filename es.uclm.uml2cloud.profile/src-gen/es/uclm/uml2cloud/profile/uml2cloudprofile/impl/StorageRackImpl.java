@@ -61,6 +61,7 @@ public class StorageRackImpl extends RackImpl implements StorageRack {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StorageMachine getMachineType() {
 		if (machineType != null && machineType.eIsProxy()) {
 			InternalEObject oldMachineType = (InternalEObject)machineType;
@@ -87,6 +88,7 @@ public class StorageRackImpl extends RackImpl implements StorageRack {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMachineType(StorageMachine newMachineType) {
 		StorageMachine oldMachineType = machineType;
 		machineType = newMachineType;

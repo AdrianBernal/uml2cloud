@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="ASCII"?>
+<contexts:Context xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constraints="http://www.eclipse.org/papyrus/constraints/0.9" xmlns:contexts="http://www.eclipse.org/papyrus/properties/contexts/0.9" xmi:id="_6an_ADyUEeqBIPKLm3hTUQ" name="uml2cloud">
+  <dependencies href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_69QJkKDJEeSZxfCXzZz3-w"/>
+  <tabs xmi:id="_969SMDyUEeqBIPKLm3hTUQ" label="uml2cloud" id="uml2cloud" priority="5">
+    <sections xmi:id="_97HDMDyUEeqBIPKLm3hTUQ" name="Single Parameter" sectionFile="ui/SingleParameter.xwt">
+      <widget href="ui/SingleParameter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97HDMTyUEeqBIPKLm3hTUQ" name="Multiple Parameter" sectionFile="ui/MultipleParameter.xwt">
+      <widget href="ui/MultipleParameter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97HDMjyUEeqBIPKLm3hTUQ" name="Single ResponseOfferedVMs" sectionFile="ui/SingleResponseOfferedVMs.xwt">
+      <widget href="ui/SingleResponseOfferedVMs.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97HDMzyUEeqBIPKLm3hTUQ" name="Multiple ResponseOfferedVMs" sectionFile="ui/MultipleResponseOfferedVMs.xwt">
+      <widget href="ui/MultipleResponseOfferedVMs.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97HqQDyUEeqBIPKLm3hTUQ" name="Single Bandwidth" sectionFile="ui/SingleBandwidth.xwt">
+      <widget href="ui/SingleBandwidth.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97HqQTyUEeqBIPKLm3hTUQ" name="Multiple Bandwidth" sectionFile="ui/MultipleBandwidth.xwt">
+      <widget href="ui/MultipleBandwidth.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97HqQjyUEeqBIPKLm3hTUQ" name="Single Size" sectionFile="ui/SingleSize.xwt">
+      <widget href="ui/SingleSize.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97HqQzyUEeqBIPKLm3hTUQ" name="Multiple Size" sectionFile="ui/MultipleSize.xwt">
+      <widget href="ui/MultipleSize.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97HqRDyUEeqBIPKLm3hTUQ" name="Single DataCenter" sectionFile="ui/SingleDataCenter.xwt">
+      <widget href="ui/SingleDataCenter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97HqRTyUEeqBIPKLm3hTUQ" name="Multiple DataCenter" sectionFile="ui/MultipleDataCenter.xwt">
+      <widget href="ui/MultipleDataCenter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97IRUDyUEeqBIPKLm3hTUQ" name="Single Latency" sectionFile="ui/SingleLatency.xwt">
+      <widget href="ui/SingleLatency.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97IRUTyUEeqBIPKLm3hTUQ" name="Multiple Latency" sectionFile="ui/MultipleLatency.xwt">
+      <widget href="ui/MultipleLatency.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97IRUjyUEeqBIPKLm3hTUQ" name="Single VMCost" sectionFile="ui/SingleVMCost.xwt">
+      <widget href="ui/SingleVMCost.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97IRUzyUEeqBIPKLm3hTUQ" name="Multiple VMCost" sectionFile="ui/MultipleVMCost.xwt">
+      <widget href="ui/MultipleVMCost.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97IRVDyUEeqBIPKLm3hTUQ" name="Single RackElement" sectionFile="ui/SingleRackElement.xwt">
+      <widget href="ui/SingleRackElement.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97IRVTyUEeqBIPKLm3hTUQ" name="Multiple RackElement" sectionFile="ui/MultipleRackElement.xwt">
+      <widget href="ui/MultipleRackElement.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97I4YDyUEeqBIPKLm3hTUQ" name="Single VMInstantiation" sectionFile="ui/SingleVMInstantiation.xwt">
+      <widget href="ui/SingleVMInstantiation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97I4YTyUEeqBIPKLm3hTUQ" name="Multiple VMInstantiation" sectionFile="ui/MultipleVMInstantiation.xwt">
+      <widget href="ui/MultipleVMInstantiation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97I4YjyUEeqBIPKLm3hTUQ" name="Single Notify" sectionFile="ui/SingleNotify.xwt">
+      <widget href="ui/SingleNotify.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97I4YzyUEeqBIPKLm3hTUQ" name="Multiple Notify" sectionFile="ui/MultipleNotify.xwt">
+      <widget href="ui/MultipleNotify.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97I4ZDyUEeqBIPKLm3hTUQ" name="Single ComputingMachine" sectionFile="ui/SingleComputingMachine.xwt">
+      <widget href="ui/SingleComputingMachine.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97I4ZTyUEeqBIPKLm3hTUQ" name="Multiple ComputingMachine" sectionFile="ui/MultipleComputingMachine.xwt">
+      <widget href="ui/MultipleComputingMachine.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97I4ZjyUEeqBIPKLm3hTUQ" name="Single Machine" sectionFile="ui/SingleMachine.xwt">
+      <widget href="ui/SingleMachine.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97JfcDyUEeqBIPKLm3hTUQ" name="Multiple Machine" sectionFile="ui/MultipleMachine.xwt">
+      <widget href="ui/MultipleMachine.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97JfcTyUEeqBIPKLm3hTUQ" name="Single Ok" sectionFile="ui/SingleOk.xwt">
+      <widget href="ui/SingleOk.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97JfcjyUEeqBIPKLm3hTUQ" name="Multiple Ok" sectionFile="ui/MultipleOk.xwt">
+      <widget href="ui/MultipleOk.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97JfczyUEeqBIPKLm3hTUQ" name="Single VM" sectionFile="ui/SingleVM.xwt">
+      <widget href="ui/SingleVM.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KGgDyUEeqBIPKLm3hTUQ" name="Multiple VM" sectionFile="ui/MultipleVM.xwt">
+      <widget href="ui/MultipleVM.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KGgTyUEeqBIPKLm3hTUQ" name="Single RequestOfferedVMs" sectionFile="ui/SingleRequestOfferedVMs.xwt">
+      <widget href="ui/SingleRequestOfferedVMs.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KGgjyUEeqBIPKLm3hTUQ" name="Multiple RequestOfferedVMs" sectionFile="ui/MultipleRequestOfferedVMs.xwt">
+      <widget href="ui/MultipleRequestOfferedVMs.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KGgzyUEeqBIPKLm3hTUQ" name="Single TimeoutRenting" sectionFile="ui/SingleTimeoutRenting.xwt">
+      <widget href="ui/SingleTimeoutRenting.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KGhDyUEeqBIPKLm3hTUQ" name="Multiple TimeoutRenting" sectionFile="ui/MultipleTimeoutRenting.xwt">
+      <widget href="ui/MultipleTimeoutRenting.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KGhTyUEeqBIPKLm3hTUQ" name="Single AppInstantiation" sectionFile="ui/SingleAppInstantiation.xwt">
+      <widget href="ui/SingleAppInstantiation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KGhjyUEeqBIPKLm3hTUQ" name="Multiple AppInstantiation" sectionFile="ui/MultipleAppInstantiation.xwt">
+      <widget href="ui/MultipleAppInstantiation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KGhzyUEeqBIPKLm3hTUQ" name="Single ComputingRack" sectionFile="ui/SingleComputingRack.xwt">
+      <widget href="ui/SingleComputingRack.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KGiDyUEeqBIPKLm3hTUQ" name="Multiple ComputingRack" sectionFile="ui/MultipleComputingRack.xwt">
+      <widget href="ui/MultipleComputingRack.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KtkDyUEeqBIPKLm3hTUQ" name="Single Rack" sectionFile="ui/SingleRack.xwt">
+      <widget href="ui/SingleRack.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KtkTyUEeqBIPKLm3hTUQ" name="Multiple Rack" sectionFile="ui/MultipleRack.xwt">
+      <widget href="ui/MultipleRack.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KtkjyUEeqBIPKLm3hTUQ" name="Single Subscribe" sectionFile="ui/SingleSubscribe.xwt">
+      <widget href="ui/SingleSubscribe.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KtkzyUEeqBIPKLm3hTUQ" name="Multiple Subscribe" sectionFile="ui/MultipleSubscribe.xwt">
+      <widget href="ui/MultipleSubscribe.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KtlDyUEeqBIPKLm3hTUQ" name="Single Storage" sectionFile="ui/SingleStorage.xwt">
+      <widget href="ui/SingleStorage.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97KtlTyUEeqBIPKLm3hTUQ" name="Multiple Storage" sectionFile="ui/MultipleStorage.xwt">
+      <widget href="ui/MultipleStorage.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97LUoDyUEeqBIPKLm3hTUQ" name="Single Hardware" sectionFile="ui/SingleHardware.xwt">
+      <widget href="ui/SingleHardware.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97LUoTyUEeqBIPKLm3hTUQ" name="Multiple Hardware" sectionFile="ui/MultipleHardware.xwt">
+      <widget href="ui/MultipleHardware.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97LUojyUEeqBIPKLm3hTUQ" name="Single User" sectionFile="ui/SingleUser.xwt">
+      <widget href="ui/SingleUser.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97LUozyUEeqBIPKLm3hTUQ" name="Multiple User" sectionFile="ui/MultipleUser.xwt">
+      <widget href="ui/MultipleUser.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97LUpDyUEeqBIPKLm3hTUQ" name="Single Response" sectionFile="ui/SingleResponse.xwt">
+      <widget href="ui/SingleResponse.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97LUpTyUEeqBIPKLm3hTUQ" name="Multiple Response" sectionFile="ui/MultipleResponse.xwt">
+      <widget href="ui/MultipleResponse.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97L7sDyUEeqBIPKLm3hTUQ" name="Single Memory" sectionFile="ui/SingleMemory.xwt">
+      <widget href="ui/SingleMemory.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97L7sTyUEeqBIPKLm3hTUQ" name="Multiple Memory" sectionFile="ui/MultipleMemory.xwt">
+      <widget href="ui/MultipleMemory.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97L7sjyUEeqBIPKLm3hTUQ" name="Single SLA" sectionFile="ui/SingleSLA.xwt">
+      <widget href="ui/SingleSLA.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97L7szyUEeqBIPKLm3hTUQ" name="Multiple SLA" sectionFile="ui/MultipleSLA.xwt">
+      <widget href="ui/MultipleSLA.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97L7tDyUEeqBIPKLm3hTUQ" name="Single DataCenterElement" sectionFile="ui/SingleDataCenterElement.xwt">
+      <widget href="ui/SingleDataCenterElement.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97MiwDyUEeqBIPKLm3hTUQ" name="Multiple DataCenterElement" sectionFile="ui/MultipleDataCenterElement.xwt">
+      <widget href="ui/MultipleDataCenterElement.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97MiwTyUEeqBIPKLm3hTUQ" name="Single PriorityUser" sectionFile="ui/SinglePriorityUser.xwt">
+      <widget href="ui/SinglePriorityUser.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97MiwjyUEeqBIPKLm3hTUQ" name="Multiple PriorityUser" sectionFile="ui/MultiplePriorityUser.xwt">
+      <widget href="ui/MultiplePriorityUser.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97MiwzyUEeqBIPKLm3hTUQ" name="Single Time" sectionFile="ui/SingleTime.xwt">
+      <widget href="ui/SingleTime.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97NJ0DyUEeqBIPKLm3hTUQ" name="Multiple Time" sectionFile="ui/MultipleTime.xwt">
+      <widget href="ui/MultipleTime.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97NJ0TyUEeqBIPKLm3hTUQ" name="Single CloudInfrastructure" sectionFile="ui/SingleCloudInfrastructure.xwt">
+      <widget href="ui/SingleCloudInfrastructure.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97Nw4DyUEeqBIPKLm3hTUQ" name="Multiple CloudInfrastructure" sectionFile="ui/MultipleCloudInfrastructure.xwt">
+      <widget href="ui/MultipleCloudInfrastructure.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97Nw4TyUEeqBIPKLm3hTUQ" name="Single RegularUser" sectionFile="ui/SingleRegularUser.xwt">
+      <widget href="ui/SingleRegularUser.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97Nw4jyUEeqBIPKLm3hTUQ" name="Multiple RegularUser" sectionFile="ui/MultipleRegularUser.xwt">
+      <widget href="ui/MultipleRegularUser.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97Nw4zyUEeqBIPKLm3hTUQ" name="Single TimeoutSubscription" sectionFile="ui/SingleTimeoutSubscription.xwt">
+      <widget href="ui/SingleTimeoutSubscription.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97Nw5DyUEeqBIPKLm3hTUQ" name="Multiple TimeoutSubscription" sectionFile="ui/MultipleTimeoutSubscription.xwt">
+      <widget href="ui/MultipleTimeoutSubscription.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97Nw5TyUEeqBIPKLm3hTUQ" name="Single Resume" sectionFile="ui/SingleResume.xwt">
+      <widget href="ui/SingleResume.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97Nw5jyUEeqBIPKLm3hTUQ" name="Multiple Resume" sectionFile="ui/MultipleResume.xwt">
+      <widget href="ui/MultipleResume.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97OX8DyUEeqBIPKLm3hTUQ" name="Single CloudProvider" sectionFile="ui/SingleCloudProvider.xwt">
+      <widget href="ui/SingleCloudProvider.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97OX8TyUEeqBIPKLm3hTUQ" name="Multiple CloudProvider" sectionFile="ui/MultipleCloudProvider.xwt">
+      <widget href="ui/MultipleCloudProvider.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97OX8jyUEeqBIPKLm3hTUQ" name="Single Application" sectionFile="ui/SingleApplication.xwt">
+      <widget href="ui/SingleApplication.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97OX8zyUEeqBIPKLm3hTUQ" name="Multiple Application" sectionFile="ui/MultipleApplication.xwt">
+      <widget href="ui/MultipleApplication.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97OX9DyUEeqBIPKLm3hTUQ" name="Single Cost" sectionFile="ui/SingleCost.xwt">
+      <widget href="ui/SingleCost.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97O_ADyUEeqBIPKLm3hTUQ" name="Multiple Cost" sectionFile="ui/MultipleCost.xwt">
+      <widget href="ui/MultipleCost.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97O_ATyUEeqBIPKLm3hTUQ" name="Single StorageRack" sectionFile="ui/SingleStorageRack.xwt">
+      <widget href="ui/SingleStorageRack.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97O_AjyUEeqBIPKLm3hTUQ" name="Multiple StorageRack" sectionFile="ui/MultipleStorageRack.xwt">
+      <widget href="ui/MultipleStorageRack.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97O_AzyUEeqBIPKLm3hTUQ" name="Single Execute" sectionFile="ui/SingleExecute.xwt">
+      <widget href="ui/SingleExecute.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97O_BDyUEeqBIPKLm3hTUQ" name="Multiple Execute" sectionFile="ui/MultipleExecute.xwt">
+      <widget href="ui/MultipleExecute.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97O_BTyUEeqBIPKLm3hTUQ" name="Single CPU" sectionFile="ui/SingleCPU.xwt">
+      <widget href="ui/SingleCPU.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97PmEDyUEeqBIPKLm3hTUQ" name="Multiple CPU" sectionFile="ui/MultipleCPU.xwt">
+      <widget href="ui/MultipleCPU.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97PmETyUEeqBIPKLm3hTUQ" name="Single StorageMachine" sectionFile="ui/SingleStorageMachine.xwt">
+      <widget href="ui/SingleStorageMachine.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97PmEjyUEeqBIPKLm3hTUQ" name="Multiple StorageMachine" sectionFile="ui/MultipleStorageMachine.xwt">
+      <widget href="ui/MultipleStorageMachine.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97PmEzyUEeqBIPKLm3hTUQ" name="Single Request" sectionFile="ui/SingleRequest.xwt">
+      <widget href="ui/SingleRequest.xwt#/"/>
+    </sections>
+    <sections xmi:id="_97PmFDyUEeqBIPKLm3hTUQ" name="Multiple Request" sectionFile="ui/MultipleRequest.xwt">
+      <widget href="ui/MultipleRequest.xwt#/"/>
+    </sections>
+  </tabs>
+  <views xmi:id="_6an_ATyUEeqBIPKLm3hTUQ" name="Single Parameter" sections="_97HDMDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoATjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_AjyUEeqBIPKLm3hTUQ" name="isSingleParameter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_AzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Parameter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_BDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Parameter" sections="_97HDMTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoATjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_BTyUEeqBIPKLm3hTUQ" name="isMultipleParameter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_BjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Parameter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_BzyUEeqBIPKLm3hTUQ" name="Single ResponseOfferedVMs" sections="_97HDMjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6an__zyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_CDyUEeqBIPKLm3hTUQ" name="isSingleResponseOfferedVMs">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_CTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::ResponseOfferedVMs"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_CjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple ResponseOfferedVMs" sections="_97HDMzyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6an__zyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_CzyUEeqBIPKLm3hTUQ" name="isMultipleResponseOfferedVMs">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_DDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::ResponseOfferedVMs"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_DTyUEeqBIPKLm3hTUQ" name="Single Bandwidth" sections="_97HqQDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoADTyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_DjyUEeqBIPKLm3hTUQ" name="isSingleBandwidth">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_DzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Bandwidth"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_EDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Bandwidth" sections="_97HqQTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoADTyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_ETyUEeqBIPKLm3hTUQ" name="isMultipleBandwidth">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_EjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Bandwidth"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_EzyUEeqBIPKLm3hTUQ" name="Single Size" sections="_97HqQjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAKDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_FDyUEeqBIPKLm3hTUQ" name="isSingleSize">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_FTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Size"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_FjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Size" sections="_97HqQzyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAKDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_FzyUEeqBIPKLm3hTUQ" name="isMultipleSize">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_GDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Size"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_GTyUEeqBIPKLm3hTUQ" name="Single DataCenter" sections="_97HqRDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoASzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_GjyUEeqBIPKLm3hTUQ" name="isSingleDataCenter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_GzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::DataCenter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_HDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple DataCenter" sections="_97HqRTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoASzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_HTyUEeqBIPKLm3hTUQ" name="isMultipleDataCenter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_HjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::DataCenter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_HzyUEeqBIPKLm3hTUQ" name="Single Latency" sections="_97IRUDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoANDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_IDyUEeqBIPKLm3hTUQ" name="isSingleLatency">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_ITyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Latency"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_IjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Latency" sections="_97IRUTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoANDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_IzyUEeqBIPKLm3hTUQ" name="isMultipleLatency">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_JDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Latency"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_JTyUEeqBIPKLm3hTUQ" name="Single VMCost" sections="_97IRUjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAUzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_JjyUEeqBIPKLm3hTUQ" name="isSingleVMCost">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_JzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::VMCost"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_KDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple VMCost" sections="_97IRUzyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAUzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_KTyUEeqBIPKLm3hTUQ" name="isMultipleVMCost">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_KjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::VMCost"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_KzyUEeqBIPKLm3hTUQ" name="Single RackElement" sections="_97IRVDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAKzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_LDyUEeqBIPKLm3hTUQ" name="isSingleRackElement">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_LTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::RackElement"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_LjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple RackElement" sections="_97IRVTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAKzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_LzyUEeqBIPKLm3hTUQ" name="isMultipleRackElement">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_MDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::RackElement"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_MTyUEeqBIPKLm3hTUQ" name="Single VMInstantiation" sections="_97I4YDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAXzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_MjyUEeqBIPKLm3hTUQ" name="isSingleVMInstantiation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_MzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::VMInstantiation"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_NDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple VMInstantiation" sections="_97I4YTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAXzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_NTyUEeqBIPKLm3hTUQ" name="isMultipleVMInstantiation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_NjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::VMInstantiation"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_NzyUEeqBIPKLm3hTUQ" name="Single Notify" sections="_97I4YjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoARDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_ODyUEeqBIPKLm3hTUQ" name="isSingleNotify">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_OTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Notify"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_OjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Notify" sections="_97I4YzyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoARDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_OzyUEeqBIPKLm3hTUQ" name="isMultipleNotify">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_PDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Notify"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_PTyUEeqBIPKLm3hTUQ" name="Single ComputingMachine" sections="_97I4ZDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoARjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_PjyUEeqBIPKLm3hTUQ" name="isSingleComputingMachine">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_PzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::ComputingMachine"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_QDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple ComputingMachine" sections="_97I4ZTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoARjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_QTyUEeqBIPKLm3hTUQ" name="isMultipleComputingMachine">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_QjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::ComputingMachine"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_QzyUEeqBIPKLm3hTUQ" name="Single Machine" sections="_97I4ZjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAQDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_RDyUEeqBIPKLm3hTUQ" name="isSingleMachine">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_RTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Machine"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_RjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Machine" sections="_97JfcDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAQDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_RzyUEeqBIPKLm3hTUQ" name="isMultipleMachine">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_SDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Machine"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_STyUEeqBIPKLm3hTUQ" name="Single Ok" sections="_97JfcTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAPTyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_SjyUEeqBIPKLm3hTUQ" name="isSingleOk">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_SzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Ok"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_TDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Ok" sections="_97JfcjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAPTyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_TTyUEeqBIPKLm3hTUQ" name="isMultipleOk">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_TjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Ok"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_TzyUEeqBIPKLm3hTUQ" name="Single VM" sections="_97JfczyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAIzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_UDyUEeqBIPKLm3hTUQ" name="isSingleVM">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_UTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::VM"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_UjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple VM" sections="_97KGgDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAIzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_UzyUEeqBIPKLm3hTUQ" name="isMultipleVM">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_VDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::VM"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_VTyUEeqBIPKLm3hTUQ" name="Single RequestOfferedVMs" sections="_97KGgTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAEDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_VjyUEeqBIPKLm3hTUQ" name="isSingleRequestOfferedVMs">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_VzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::RequestOfferedVMs"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_WDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple RequestOfferedVMs" sections="_97KGgjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAEDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_WTyUEeqBIPKLm3hTUQ" name="isMultipleRequestOfferedVMs">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_WjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::RequestOfferedVMs"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_WzyUEeqBIPKLm3hTUQ" name="Single TimeoutRenting" sections="_97KGgzyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoARTyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_XDyUEeqBIPKLm3hTUQ" name="isSingleTimeoutRenting">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_XTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::TimeoutRenting"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_XjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple TimeoutRenting" sections="_97KGhDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoARTyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_XzyUEeqBIPKLm3hTUQ" name="isMultipleTimeoutRenting">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_YDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::TimeoutRenting"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_YTyUEeqBIPKLm3hTUQ" name="Single AppInstantiation" sections="_97KGhTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6an_-DyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_YjyUEeqBIPKLm3hTUQ" name="isSingleAppInstantiation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_YzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::AppInstantiation"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_ZDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple AppInstantiation" sections="_97KGhjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6an_-DyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_ZTyUEeqBIPKLm3hTUQ" name="isMultipleAppInstantiation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_ZjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::AppInstantiation"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_ZzyUEeqBIPKLm3hTUQ" name="Single ComputingRack" sections="_97KGhzyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAADyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_aDyUEeqBIPKLm3hTUQ" name="isSingleComputingRack">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_aTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::ComputingRack"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_ajyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple ComputingRack" sections="_97KGiDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAADyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_azyUEeqBIPKLm3hTUQ" name="isMultipleComputingRack">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_bDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::ComputingRack"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_bTyUEeqBIPKLm3hTUQ" name="Single Rack" sections="_97KtkDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAGzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_bjyUEeqBIPKLm3hTUQ" name="isSingleRack">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_bzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Rack"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_cDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Rack" sections="_97KtkTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAGzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_cTyUEeqBIPKLm3hTUQ" name="isMultipleRack">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_cjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Rack"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_czyUEeqBIPKLm3hTUQ" name="Single Subscribe" sections="_97KtkjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAAjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_dDyUEeqBIPKLm3hTUQ" name="isSingleSubscribe">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_dTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Subscribe"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_djyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Subscribe" sections="_97KtkzyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAAjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_dzyUEeqBIPKLm3hTUQ" name="isMultipleSubscribe">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_eDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Subscribe"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_eTyUEeqBIPKLm3hTUQ" name="Single Storage" sections="_97KtlDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoALzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_ejyUEeqBIPKLm3hTUQ" name="isSingleStorage">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_ezyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Storage"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_fDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Storage" sections="_97KtlTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoALzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_fTyUEeqBIPKLm3hTUQ" name="isMultipleStorage">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_fjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Storage"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_fzyUEeqBIPKLm3hTUQ" name="Single Hardware" sections="_97LUoDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoACTyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_gDyUEeqBIPKLm3hTUQ" name="isSingleHardware">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_gTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_gjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Hardware" sections="_97LUoTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoACTyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_gzyUEeqBIPKLm3hTUQ" name="isMultipleHardware">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_hDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_hTyUEeqBIPKLm3hTUQ" name="Single User" sections="_97LUojyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoABjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_hjyUEeqBIPKLm3hTUQ" name="isSingleUser">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_hzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::User"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_iDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple User" sections="_97LUozyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoABjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_iTyUEeqBIPKLm3hTUQ" name="isMultipleUser">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_ijyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::User"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_izyUEeqBIPKLm3hTUQ" name="Single Response" sections="_97LUpDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAOjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_jDyUEeqBIPKLm3hTUQ" name="isSingleResponse">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_jTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Response"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_jjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Response" sections="_97LUpTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAOjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_jzyUEeqBIPKLm3hTUQ" name="isMultipleResponse">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_kDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Response"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_kTyUEeqBIPKLm3hTUQ" name="Single Memory" sections="_97L7sDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAXDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_kjyUEeqBIPKLm3hTUQ" name="isSingleMemory">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_kzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Memory"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_lDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Memory" sections="_97L7sTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAXDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_lTyUEeqBIPKLm3hTUQ" name="isMultipleMemory">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_ljyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Memory"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_lzyUEeqBIPKLm3hTUQ" name="Single SLA" sections="_97L7sjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAPjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_mDyUEeqBIPKLm3hTUQ" name="isSingleSLA">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_mTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::SLA"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_mjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple SLA" sections="_97L7szyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAPjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_mzyUEeqBIPKLm3hTUQ" name="isMultipleSLA">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_nDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::SLA"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_nTyUEeqBIPKLm3hTUQ" name="Single DataCenterElement" sections="_97L7tDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoANzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_njyUEeqBIPKLm3hTUQ" name="isSingleDataCenterElement">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_nzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::DataCenterElement"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_oDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple DataCenterElement" sections="_97MiwDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoANzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_oTyUEeqBIPKLm3hTUQ" name="isMultipleDataCenterElement">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_ojyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::DataCenterElement"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_ozyUEeqBIPKLm3hTUQ" name="Single PriorityUser" sections="_97MiwTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6an_-zyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_pDyUEeqBIPKLm3hTUQ" name="isSinglePriorityUser">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_pTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::PriorityUser"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_pjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple PriorityUser" sections="_97MiwjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6an_-zyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_pzyUEeqBIPKLm3hTUQ" name="isMultiplePriorityUser">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_qDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::PriorityUser"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_qTyUEeqBIPKLm3hTUQ" name="Single Time" sections="_97MiwzyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoACjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_qjyUEeqBIPKLm3hTUQ" name="isSingleTime">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_qzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Time"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_rDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Time" sections="_97NJ0DyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoACjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_rTyUEeqBIPKLm3hTUQ" name="isMultipleTime">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_rjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Time"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_rzyUEeqBIPKLm3hTUQ" name="Single CloudInfrastructure" sections="_97NJ0TyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAWTyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_sDyUEeqBIPKLm3hTUQ" name="isSingleCloudInfrastructure">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_sTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::CloudInfrastructure"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_sjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple CloudInfrastructure" sections="_97Nw4DyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAWTyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_szyUEeqBIPKLm3hTUQ" name="isMultipleCloudInfrastructure">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_tDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::CloudInfrastructure"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_tTyUEeqBIPKLm3hTUQ" name="Single RegularUser" sections="_97Nw4TyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAEzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_tjyUEeqBIPKLm3hTUQ" name="isSingleRegularUser">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_tzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::RegularUser"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_uDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple RegularUser" sections="_97Nw4jyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAEzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_uTyUEeqBIPKLm3hTUQ" name="isMultipleRegularUser">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_ujyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::RegularUser"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_uzyUEeqBIPKLm3hTUQ" name="Single TimeoutSubscription" sections="_97Nw4zyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAIjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_vDyUEeqBIPKLm3hTUQ" name="isSingleTimeoutSubscription">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_vTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::TimeoutSubscription"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_vjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple TimeoutSubscription" sections="_97Nw5DyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAIjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_vzyUEeqBIPKLm3hTUQ" name="isMultipleTimeoutSubscription">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_wDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::TimeoutSubscription"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_wTyUEeqBIPKLm3hTUQ" name="Single Resume" sections="_97Nw5TyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAOzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_wjyUEeqBIPKLm3hTUQ" name="isSingleResume">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_wzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Resume"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_xDyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Resume" sections="_97Nw5jyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAOzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_xTyUEeqBIPKLm3hTUQ" name="isMultipleResume">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_xjyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Resume"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_xzyUEeqBIPKLm3hTUQ" name="Single CloudProvider" sections="_97OX8DyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoASDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_yDyUEeqBIPKLm3hTUQ" name="isSingleCloudProvider">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_yTyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::CloudProvider"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_yjyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple CloudProvider" sections="_97OX8TyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoASDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_yzyUEeqBIPKLm3hTUQ" name="isMultipleCloudProvider">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_zDyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::CloudProvider"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_zTyUEeqBIPKLm3hTUQ" name="Single Application" sections="_97OX8jyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAFjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_zjyUEeqBIPKLm3hTUQ" name="isSingleApplication">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_zzyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Application"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_0DyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Application" sections="_97OX8zyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAFjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_0TyUEeqBIPKLm3hTUQ" name="isMultipleApplication">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_0jyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Application"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_0zyUEeqBIPKLm3hTUQ" name="Single Cost" sections="_97OX9DyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAHzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_1DyUEeqBIPKLm3hTUQ" name="isSingleCost">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_1TyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Cost"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_1jyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Cost" sections="_97O_ADyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAHzyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_1zyUEeqBIPKLm3hTUQ" name="isMultipleCost">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_2DyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Cost"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_2TyUEeqBIPKLm3hTUQ" name="Single StorageRack" sections="_97O_ATyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoABDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_2jyUEeqBIPKLm3hTUQ" name="isSingleStorageRack">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_2zyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::StorageRack"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_3DyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple StorageRack" sections="_97O_AjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoABDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_3TyUEeqBIPKLm3hTUQ" name="isMultipleStorageRack">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_3jyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::StorageRack"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_3zyUEeqBIPKLm3hTUQ" name="Single Execute" sections="_97O_AzyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAFDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_4DyUEeqBIPKLm3hTUQ" name="isSingleExecute">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_4TyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Execute"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_4jyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Execute" sections="_97O_BDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAFDyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_4zyUEeqBIPKLm3hTUQ" name="isMultipleExecute">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_5DyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Execute"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_5TyUEeqBIPKLm3hTUQ" name="Single CPU" sections="_97O_BTyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6an__DyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_5jyUEeqBIPKLm3hTUQ" name="isSingleCPU">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_5zyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::CPU"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_6DyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple CPU" sections="_97PmEDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6an__DyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_6TyUEeqBIPKLm3hTUQ" name="isMultipleCPU">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_6jyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::CPU"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_6zyUEeqBIPKLm3hTUQ" name="Single StorageMachine" sections="_97PmETyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoALjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_7DyUEeqBIPKLm3hTUQ" name="isSingleStorageMachine">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_7TyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::StorageMachine"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_7jyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple StorageMachine" sections="_97PmEjyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoALjyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_7zyUEeqBIPKLm3hTUQ" name="isMultipleStorageMachine">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_8DyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::StorageMachine"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_8TyUEeqBIPKLm3hTUQ" name="Single Request" sections="_97PmEzyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAETyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_8jyUEeqBIPKLm3hTUQ" name="isSingleRequest">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_8zyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Request"/>
+    </constraints>
+  </views>
+  <views xmi:id="_6an_9DyUEeqBIPKLm3hTUQ" elementMultiplicity="-1" name="Multiple Request" sections="_97PmFDyUEeqBIPKLm3hTUQ" automaticContext="true" datacontexts="_6aoAETyUEeqBIPKLm3hTUQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_6an_9TyUEeqBIPKLm3hTUQ" name="isMultipleRequest">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_6an_9jyUEeqBIPKLm3hTUQ" name="stereotypeName" value="uml2cloud::Request"/>
+    </constraints>
+  </views>
+  <dataContexts xmi:id="_6an_9zyUEeqBIPKLm3hTUQ" name="uml2cloud">
+    <elements xmi:id="_6an_-DyUEeqBIPKLm3hTUQ" name="AppInstantiation">
+      <properties xmi:id="_6an_-TyUEeqBIPKLm3hTUQ" name="applicationType" type="Reference"/>
+      <properties xmi:id="_6an_-jyUEeqBIPKLm3hTUQ" name="instances" type="Integer"/>
+    </elements>
+    <elements xmi:id="_6an_-zyUEeqBIPKLm3hTUQ" name="PriorityUser" supertypes="_6aoABjyUEeqBIPKLm3hTUQ"/>
+    <elements xmi:id="_6an__DyUEeqBIPKLm3hTUQ" name="CPU" supertypes="_6aoACTyUEeqBIPKLm3hTUQ">
+      <properties xmi:id="_6an__TyUEeqBIPKLm3hTUQ" name="cores" type="Integer"/>
+      <properties xmi:id="_6an__jyUEeqBIPKLm3hTUQ" name="MIPS" type="Integer"/>
+    </elements>
+    <elements xmi:id="_6an__zyUEeqBIPKLm3hTUQ" name="ResponseOfferedVMs">
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAADyUEeqBIPKLm3hTUQ" name="ComputingRack" supertypes="_6aoAGzyUEeqBIPKLm3hTUQ">
+      <properties xmi:id="_6aoAATyUEeqBIPKLm3hTUQ" name="machineType" type="Reference"/>
+    </elements>
+    <elements xmi:id="_6aoAAjyUEeqBIPKLm3hTUQ" name="Subscribe">
+      <properties xmi:id="_6aoAAzyUEeqBIPKLm3hTUQ" name="maxTime" type="Reference"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoABDyUEeqBIPKLm3hTUQ" name="StorageRack" supertypes="_6aoAGzyUEeqBIPKLm3hTUQ">
+      <properties xmi:id="_6aoABTyUEeqBIPKLm3hTUQ" name="machineType" type="Reference"/>
+    </elements>
+    <elements xmi:id="_6aoABjyUEeqBIPKLm3hTUQ" name="User">
+      <properties xmi:id="_6aoABzyUEeqBIPKLm3hTUQ" name="instances" type="Integer"/>
+      <properties xmi:id="_6aoACDyUEeqBIPKLm3hTUQ" name="sla" type="Reference"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zpqDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoACTyUEeqBIPKLm3hTUQ" name="Hardware">
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690z56DJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoACjyUEeqBIPKLm3hTUQ" name="Time">
+      <properties xmi:id="_6aoACzyUEeqBIPKLm3hTUQ" name="value" type="Double"/>
+      <properties xmi:id="_6aoADDyUEeqBIPKLm3hTUQ" name="unit" type="Enumeration"/>
+    </elements>
+    <elements xmi:id="_6aoADTyUEeqBIPKLm3hTUQ" name="Bandwidth">
+      <properties xmi:id="_6aoADjyUEeqBIPKLm3hTUQ" name="value" type="Double"/>
+      <properties xmi:id="_6aoADzyUEeqBIPKLm3hTUQ" name="unit" type="Enumeration"/>
+    </elements>
+    <elements xmi:id="_6aoAEDyUEeqBIPKLm3hTUQ" name="RequestOfferedVMs">
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAETyUEeqBIPKLm3hTUQ" name="Request">
+      <properties xmi:id="_6aoAEjyUEeqBIPKLm3hTUQ" name="vmInstantiation" type="Reference"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAEzyUEeqBIPKLm3hTUQ" name="RegularUser" supertypes="_6aoABjyUEeqBIPKLm3hTUQ"/>
+    <elements xmi:id="_6aoAFDyUEeqBIPKLm3hTUQ" name="Execute">
+      <properties xmi:id="_6aoAFTyUEeqBIPKLm3hTUQ" name="appInstantiation" type="Reference" multiplicity="-1"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAFjyUEeqBIPKLm3hTUQ" name="Application">
+      <properties xmi:id="_6aoAFzyUEeqBIPKLm3hTUQ" name="MIs" type="Integer"/>
+      <properties xmi:id="_6aoAGDyUEeqBIPKLm3hTUQ" name="inputData" type="Reference"/>
+      <properties xmi:id="_6aoAGTyUEeqBIPKLm3hTUQ" name="outputData" type="Reference"/>
+      <properties xmi:id="_6aoAGjyUEeqBIPKLm3hTUQ" name="parameter" type="Reference" multiplicity="-1"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690z56DJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAGzyUEeqBIPKLm3hTUQ" name="Rack">
+      <properties xmi:id="_6aoAHDyUEeqBIPKLm3hTUQ" name="machinesPerBoard" type="Integer"/>
+      <properties xmi:id="_6aoAHTyUEeqBIPKLm3hTUQ" name="network" type="Reference"/>
+      <properties xmi:id="_6aoAHjyUEeqBIPKLm3hTUQ" name="boards" type="Integer"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690z56DJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAHzyUEeqBIPKLm3hTUQ" name="Cost">
+      <properties xmi:id="_6aoAIDyUEeqBIPKLm3hTUQ" name="value" type="Double"/>
+      <properties xmi:id="_6aoAITyUEeqBIPKLm3hTUQ" name="rate" type="Enumeration"/>
+    </elements>
+    <elements xmi:id="_6aoAIjyUEeqBIPKLm3hTUQ" name="TimeoutSubscription">
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAIzyUEeqBIPKLm3hTUQ" name="VM">
+      <properties xmi:id="_6aoAJDyUEeqBIPKLm3hTUQ" name="cores" type="Integer"/>
+      <properties xmi:id="_6aoAJTyUEeqBIPKLm3hTUQ" name="disk" type="Reference"/>
+      <properties xmi:id="_6aoAJjyUEeqBIPKLm3hTUQ" name="computingUnits" type="Double"/>
+      <properties xmi:id="_6aoAJzyUEeqBIPKLm3hTUQ" name="memory" type="Reference"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690z56DJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAKDyUEeqBIPKLm3hTUQ" name="Size">
+      <properties xmi:id="_6aoAKTyUEeqBIPKLm3hTUQ" name="value" type="Double"/>
+      <properties xmi:id="_6aoAKjyUEeqBIPKLm3hTUQ" name="unit" type="Enumeration"/>
+    </elements>
+    <elements xmi:id="_6aoAKzyUEeqBIPKLm3hTUQ" name="RackElement">
+      <properties xmi:id="_6aoALDyUEeqBIPKLm3hTUQ" name="numberOfRacks" type="Integer"/>
+      <properties xmi:id="_6aoALTyUEeqBIPKLm3hTUQ" name="rackType" type="Reference"/>
+    </elements>
+    <elements xmi:id="_6aoALjyUEeqBIPKLm3hTUQ" name="StorageMachine" supertypes="_6aoAQDyUEeqBIPKLm3hTUQ"/>
+    <elements xmi:id="_6aoALzyUEeqBIPKLm3hTUQ" name="Storage" supertypes="_6aoACTyUEeqBIPKLm3hTUQ">
+      <properties xmi:id="_6aoAMDyUEeqBIPKLm3hTUQ" name="numberOfDrives" type="Integer"/>
+      <properties xmi:id="_6aoAMTyUEeqBIPKLm3hTUQ" name="driveCapacity" type="Reference"/>
+      <properties xmi:id="_6aoAMjyUEeqBIPKLm3hTUQ" name="readBandwidth" type="Reference"/>
+      <properties xmi:id="_6aoAMzyUEeqBIPKLm3hTUQ" name="writeBandwidth" type="Reference"/>
+    </elements>
+    <elements xmi:id="_6aoANDyUEeqBIPKLm3hTUQ" name="Latency">
+      <properties xmi:id="_6aoANTyUEeqBIPKLm3hTUQ" name="name"/>
+      <properties xmi:id="_6aoANjyUEeqBIPKLm3hTUQ" name="time" type="Reference"/>
+    </elements>
+    <elements xmi:id="_6aoANzyUEeqBIPKLm3hTUQ" name="DataCenterElement">
+      <properties xmi:id="_6aoAODyUEeqBIPKLm3hTUQ" name="numberOfDataCenters" type="Integer"/>
+      <properties xmi:id="_6aoAOTyUEeqBIPKLm3hTUQ" name="dataCenterType" type="Reference"/>
+    </elements>
+    <elements xmi:id="_6aoAOjyUEeqBIPKLm3hTUQ" name="Response">
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAOzyUEeqBIPKLm3hTUQ" name="Resume">
+      <properties xmi:id="_6aoAPDyUEeqBIPKLm3hTUQ" name="resumeTime" type="Reference"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAPTyUEeqBIPKLm3hTUQ" name="Ok">
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAPjyUEeqBIPKLm3hTUQ" name="SLA">
+      <properties xmi:id="_6aoAPzyUEeqBIPKLm3hTUQ" name="vmcost" type="Reference" multiplicity="-1"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690z56DJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAQDyUEeqBIPKLm3hTUQ" name="Machine">
+      <properties xmi:id="_6aoAQTyUEeqBIPKLm3hTUQ" name="cpu" type="Reference"/>
+      <properties xmi:id="_6aoAQjyUEeqBIPKLm3hTUQ" name="memory" type="Reference"/>
+      <properties xmi:id="_6aoAQzyUEeqBIPKLm3hTUQ" name="storage" type="Reference"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690z56DJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoARDyUEeqBIPKLm3hTUQ" name="Notify">
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoARTyUEeqBIPKLm3hTUQ" name="TimeoutRenting">
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zkKDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoARjyUEeqBIPKLm3hTUQ" name="ComputingMachine" supertypes="_6aoAQDyUEeqBIPKLm3hTUQ">
+      <properties xmi:id="_6aoARzyUEeqBIPKLm3hTUQ" name="type" type="Enumeration"/>
+    </elements>
+    <elements xmi:id="_6aoASDyUEeqBIPKLm3hTUQ" name="CloudProvider">
+      <properties xmi:id="_6aoASTyUEeqBIPKLm3hTUQ" name="resourceAllocationPolicy"/>
+      <properties xmi:id="_6aoASjyUEeqBIPKLm3hTUQ" name="sla" type="Reference" multiplicity="-1"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690zpqDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoASzyUEeqBIPKLm3hTUQ" name="DataCenter">
+      <properties xmi:id="_6aoATDyUEeqBIPKLm3hTUQ" name="network" type="Reference"/>
+      <properties xmi:id="_6aoATTyUEeqBIPKLm3hTUQ" name="rackElements" type="Reference" multiplicity="-1"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690z56DJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoATjyUEeqBIPKLm3hTUQ" name="Parameter">
+      <properties xmi:id="_6aoATzyUEeqBIPKLm3hTUQ" name="name"/>
+      <properties xmi:id="_6aoAUDyUEeqBIPKLm3hTUQ" name="value"/>
+      <properties xmi:id="_6aoAUTyUEeqBIPKLm3hTUQ" name="type"/>
+      <properties xmi:id="_6aoAUjyUEeqBIPKLm3hTUQ" name="description"/>
+    </elements>
+    <elements xmi:id="_6aoAUzyUEeqBIPKLm3hTUQ" name="VMCost">
+      <properties xmi:id="_6aoAVDyUEeqBIPKLm3hTUQ" name="base" type="Reference"/>
+      <properties xmi:id="_6aoAVTyUEeqBIPKLm3hTUQ" name="increase" type="Double"/>
+      <properties xmi:id="_6aoAVjyUEeqBIPKLm3hTUQ" name="discount" type="Double"/>
+      <properties xmi:id="_6aoAVzyUEeqBIPKLm3hTUQ" name="compensation" type="Double"/>
+      <properties xmi:id="_6aoAWDyUEeqBIPKLm3hTUQ" name="vm" type="Reference"/>
+    </elements>
+    <elements xmi:id="_6aoAWTyUEeqBIPKLm3hTUQ" name="CloudInfrastructure">
+      <properties xmi:id="_6aoAWjyUEeqBIPKLm3hTUQ" name="datacenterElements" type="Reference" multiplicity="-1"/>
+      <properties xmi:id="_6aoAWzyUEeqBIPKLm3hTUQ" name="network" type="Reference"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690z56DJEeSZxfCXzZz3-w"/>
+    </elements>
+    <elements xmi:id="_6aoAXDyUEeqBIPKLm3hTUQ" name="Memory" supertypes="_6aoACTyUEeqBIPKLm3hTUQ">
+      <properties xmi:id="_6aoAXTyUEeqBIPKLm3hTUQ" name="capacity" type="Reference"/>
+      <properties xmi:id="_6aoAXjyUEeqBIPKLm3hTUQ" name="latency" type="Reference" multiplicity="-1"/>
+    </elements>
+    <elements xmi:id="_6aoAXzyUEeqBIPKLm3hTUQ" name="VMInstantiation">
+      <properties xmi:id="_6aoAYDyUEeqBIPKLm3hTUQ" name="instances" type="Integer"/>
+      <properties xmi:id="_6aoAYTyUEeqBIPKLm3hTUQ" name="vmType" type="Reference"/>
+      <properties xmi:id="_6aoAYjyUEeqBIPKLm3hTUQ" name="rentingTime" type="Reference"/>
+    </elements>
+    <modelElementFactory href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@modelElementFactories.2"/>
+  </dataContexts>
+</contexts:Context>

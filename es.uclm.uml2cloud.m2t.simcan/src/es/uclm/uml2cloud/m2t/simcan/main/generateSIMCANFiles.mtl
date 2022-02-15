@@ -1,7 +1,8 @@
 [comment encoding = UTF-8 /]
-[module generateSIMCANFiles('http://www.uclm.es/UML/profiles/UML2Cloud/1','http://www.eclipse.org/uml2/5.0.0/UML')]
+[module generateSIMCANFiles('http://www.eclipse.org/uml2/5.0.0/UML','http://www.uclm.es/UML/profiles/UML2Cloud/2')]
 [import es::uclm::uml2cloud::m2t::simcan::files::generateNEDFile /]
 [import es::uclm::uml2cloud::m2t::simcan::files::generateINIFile /]
+[import es::uclm::uml2cloud::m2t::simcan::files::generateRUNFile /]
 [import es::uclm::uml2cloud::m2t::simcan::unitTests::testSIMCANM2Ttransformation /]
 
 [template public generateSIMCANFiles(aCloudInfrastructure : CloudInfrastructure)]
@@ -9,5 +10,6 @@
 	[comment Generar fichero ned para cada Scenario. /]
 	[aCloudInfrastructure.generateNEDFile()/]
 	[aCloudInfrastructure.generateINIFile()/]
+	[aCloudInfrastructure.generateRUNFile()/]
 [comment]	[aCloudInfrastructure.testSIMCANM2Ttransformation()/][/comment]
 [/template]

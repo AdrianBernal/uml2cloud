@@ -138,6 +138,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component getBase_Component() {
 		if (base_Component != null && base_Component.eIsProxy()) {
 			InternalEObject oldBase_Component = (InternalEObject)base_Component;
@@ -164,6 +165,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Component(Component newBase_Component) {
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;
@@ -176,6 +178,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getMIs() {
 		return mIs;
 	}
@@ -185,6 +188,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMIs(int newMIs) {
 		int oldMIs = mIs;
 		mIs = newMIs;
@@ -197,6 +201,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Size getInputData() {
 		return inputData;
 	}
@@ -221,6 +226,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInputData(Size newInputData) {
 		if (newInputData != inputData) {
 			NotificationChain msgs = null;
@@ -240,6 +246,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Size getOutputData() {
 		return outputData;
 	}
@@ -264,6 +271,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOutputData(Size newOutputData) {
 		if (newOutputData != outputData) {
 			NotificationChain msgs = null;
@@ -283,6 +291,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> getParameter() {
 		if (parameter == null) {
 			parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, UML2CloudProfilePackage.APPLICATION__PARAMETER);
@@ -512,7 +521,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (MIs: ");
 		result.append(mIs);
 		result.append(')');

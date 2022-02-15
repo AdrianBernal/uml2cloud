@@ -144,6 +144,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component getBase_Component() {
 		if (base_Component != null && base_Component.eIsProxy()) {
 			InternalEObject oldBase_Component = (InternalEObject)base_Component;
@@ -170,6 +171,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Component(Component newBase_Component) {
 		Component oldBase_Component = base_Component;
 		base_Component = newBase_Component;
@@ -182,6 +184,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getCores() {
 		return cores;
 	}
@@ -191,6 +194,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCores(int newCores) {
 		int oldCores = cores;
 		cores = newCores;
@@ -203,6 +207,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Size getDisk() {
 		return disk;
 	}
@@ -227,6 +232,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisk(Size newDisk) {
 		if (newDisk != disk) {
 			NotificationChain msgs = null;
@@ -246,6 +252,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getComputingUnits() {
 		return computingUnits;
 	}
@@ -255,6 +262,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComputingUnits(double newComputingUnits) {
 		double oldComputingUnits = computingUnits;
 		computingUnits = newComputingUnits;
@@ -267,6 +275,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Size getMemory() {
 		return memory;
 	}
@@ -291,6 +300,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMemory(Size newMemory) {
 		if (newMemory != memory) {
 			NotificationChain msgs = null;
@@ -398,6 +408,31 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
 						 UML2CloudProfileValidator.VM__VM_CAN_NOT_BE_ALLOCATED,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "VM_can_not_be_allocated", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean disk_Must_Be_Greater_Than_Zero(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.VM__DISK_MUST_BE_GREATER_THAN_ZERO,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "disk_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -537,6 +572,8 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 				return memory_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 			case UML2CloudProfilePackage.VM___VM_CAN_NOT_BE_ALLOCATED__DIAGNOSTICCHAIN_MAP:
 				return VM_can_not_be_allocated((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.VM___DISK_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
+				return disk_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -550,7 +587,7 @@ public class VMImpl extends MinimalEObjectImpl.Container implements VM {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (cores: ");
 		result.append(cores);
 		result.append(", computingUnits: ");

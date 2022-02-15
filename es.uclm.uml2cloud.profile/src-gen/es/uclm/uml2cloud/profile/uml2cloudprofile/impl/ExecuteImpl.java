@@ -94,6 +94,7 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message getBase_Message() {
 		if (base_Message != null && base_Message.eIsProxy()) {
 			InternalEObject oldBase_Message = (InternalEObject)base_Message;
@@ -120,6 +121,7 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBase_Message(Message newBase_Message) {
 		Message oldBase_Message = base_Message;
 		base_Message = newBase_Message;
@@ -132,6 +134,7 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AppInstantiation> getAppInstantiation() {
 		if (appInstantiation == null) {
 			appInstantiation = new EObjectContainmentEList<AppInstantiation>(AppInstantiation.class, this, UML2CloudProfilePackage.EXECUTE__APP_INSTANTIATION);
@@ -157,6 +160,81 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
 						 UML2CloudProfileValidator.EXECUTE__INSTANCES_MUST_BE_GREATER_THAN_ZERO,
 						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "instances_Must_Be_Greater_Than_Zero", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Execute_Must_Be_Sent_To_A_CloudProvider(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.EXECUTE__EXECUTE_MUST_BE_SENT_TO_ACLOUD_PROVIDER,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Execute_Must_Be_Sent_To_A_CloudProvider", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean Execute_Must_Be_Sent_By_A_User(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.EXECUTE__EXECUTE_MUST_BE_SENT_BY_AUSER,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "Execute_Must_Be_Sent_By_A_User", EObjectValidator.getObjectLabel(this, context) }),
+						 new Object [] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO: implement this method
+		// -> specify the condition that violates the invariant
+		// -> verify the details of the diagnostic, including severity and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		if (false) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(new BasicDiagnostic
+						(Diagnostic.ERROR,
+						 UML2CloudProfileValidator.DIAGNOSTIC_SOURCE,
+						 UML2CloudProfileValidator.EXECUTE__NUMBER_OF_APP_INSTANTIATION_COLLECTIONS_MUST_BE_EQUAL_THAN_TOTAL_VM_INSTANCES,
+						 EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic", new Object[] { "number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances", EObjectValidator.getObjectLabel(this, context) }),
 						 new Object [] { this }));
 			}
 			return false;
@@ -260,6 +338,12 @@ public class ExecuteImpl extends MinimalEObjectImpl.Container implements Execute
 		switch (operationID) {
 			case UML2CloudProfilePackage.EXECUTE___INSTANCES_MUST_BE_GREATER_THAN_ZERO__DIAGNOSTICCHAIN_MAP:
 				return instances_Must_Be_Greater_Than_Zero((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.EXECUTE___EXECUTE_MUST_BE_SENT_TO_ACLOUD_PROVIDER__DIAGNOSTICCHAIN_MAP:
+				return Execute_Must_Be_Sent_To_A_CloudProvider((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.EXECUTE___EXECUTE_MUST_BE_SENT_BY_AUSER__DIAGNOSTICCHAIN_MAP:
+				return Execute_Must_Be_Sent_By_A_User((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case UML2CloudProfilePackage.EXECUTE___NUMBER_OF_APP_INSTANTIATION_COLLECTIONS_MUST_BE_EQUAL_THAN_TOTAL_VM_INSTANCES__DIAGNOSTICCHAIN_MAP:
+				return number_Of_AppInstantiation_Collections_Must_Be_Equal_Than_Total_VM_Instances((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -83,6 +83,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getNumberOfRacks() {
 		return numberOfRacks;
 	}
@@ -92,6 +93,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNumberOfRacks(int newNumberOfRacks) {
 		int oldNumberOfRacks = numberOfRacks;
 		numberOfRacks = newNumberOfRacks;
@@ -104,6 +106,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Rack getRackType() {
 		if (rackType != null && rackType.eIsProxy()) {
 			InternalEObject oldRackType = (InternalEObject)rackType;
@@ -130,6 +133,7 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRackType(Rack newRackType) {
 		Rack oldRackType = rackType;
 		rackType = newRackType;
@@ -224,5 +228,4 @@ public class RackElementImpl extends MinimalEObjectImpl.Container implements Rac
 		result.append(')');
 		return result.toString();
 	}
-
 } //RackElementImpl
