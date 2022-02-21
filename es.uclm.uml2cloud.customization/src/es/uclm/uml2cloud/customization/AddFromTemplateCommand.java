@@ -2,7 +2,6 @@ package es.uclm.uml2cloud.customization;
 
 import java.io.IOException;
 import java.util.Collection;
-import java.util.Iterator;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
@@ -21,7 +20,6 @@ import org.eclipse.papyrus.infra.gmfdiag.common.model.NotationUtils;
 import org.eclipse.papyrus.uml.diagram.wizards.utils.WizardsHelper;
 import org.eclipse.papyrus.uml.tools.model.UmlUtils;
 import org.eclipse.uml2.uml.Model;
-import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.PackageableElement;
 import org.osgi.framework.Bundle;
 import org.eclipse.emf.common.util.EList;

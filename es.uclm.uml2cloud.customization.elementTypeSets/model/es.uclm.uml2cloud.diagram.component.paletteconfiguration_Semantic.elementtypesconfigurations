@@ -1,44 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <elementtypesconfigurations:ElementTypeSetConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:applystereotypeadvice="http://www.eclipse.org/papyrus/uml/types/applystereotypeadvice/1.1" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.2" xmi:id="_Th6f4EDwEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.infrastructure.elementTypeSets" name="es.uclm.uml2cloud.infrastructure.elementTypeSets" metamodelNsURI="http://www.eclipse.org/uml2/5.0.0/UML">
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_9zziwEDxEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.package_1580121856704" name="Package" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Package_Shape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_Woar4EDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122023319" name="Application (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_XMVRQEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122027089" name="VM (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_XpaO0EDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122030137" name="SLA (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_ZVGUkEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122041420" name="CloudInfrastructure (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_aJKOwEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122046888" name="DataCenter (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_dI5WUEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122066993" name="ComputingMachine (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_eVSQ8EDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122075003" name="StorageMachine (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_fjSVIEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122083182" name="CPU (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_gd3uEEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122089324" name="Memory (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_hQ8w0EDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122094679" name="Storage (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_m6MRQEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122132559" name="ComputingRack (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_nPUzwEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122134775" name="StorageRack (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
-  </elementTypeConfigurations>
   <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_Woar5EDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122023319_ASAC" target="_Woar4EDyEeqgZodcSzjH_A">
     <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_Wob6AEDyEeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::Application" updateName="true">
       <requiredProfiles>uml2cloud</requiredProfiles>
@@ -99,4 +60,43 @@
       <requiredProfiles>uml2cloud</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_9zziwEDxEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.package_1580121856704" name="Package" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Package_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_Woar4EDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122023319" name="Application (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_XMVRQEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122027089" name="VM (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_XpaO0EDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122030137" name="SLA (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_ZVGUkEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122041420" name="CloudInfrastructure (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_aJKOwEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122046888" name="DataCenter (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_dI5WUEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122066993" name="ComputingMachine (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_eVSQ8EDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122075003" name="StorageMachine (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_fjSVIEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122083182" name="CPU (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_gd3uEEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122089324" name="Memory (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_hQ8w0EDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122094679" name="Storage (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_m6MRQEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122132559" name="ComputingRack (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_nPUzwEDyEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.component.paletteconfiguration.component.tool.component_1580122134775" name="StorageRack (Component)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Component_PackagedElementShape"/>
+  </elementTypeConfigurations>
 </elementtypesconfigurations:ElementTypeSetConfiguration>

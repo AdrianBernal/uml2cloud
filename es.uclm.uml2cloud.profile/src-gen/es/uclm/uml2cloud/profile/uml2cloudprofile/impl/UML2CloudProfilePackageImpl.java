@@ -3231,18 +3231,6 @@ public class UML2CloudProfilePackageImpl extends EPackageImpl implements UML2Clo
 		   new String[] {
 			   "originalName", "uml2cloud"
 		   });
-		addAnnotation
-		  (getSLA__SLA_incpriority_must_be_grater_than_or_equal_to_zero__DiagnosticChain_Map(),
-		   source,
-		   new String[] {
-			   "originalName", "SLA_inc-priority_must_be_grater_than_or_equal_to_zero"
-		   });
-		addAnnotation
-		  (getVMCost_Incpriority(),
-		   source,
-		   new String[] {
-			   "originalName", "inc-priority"
-		   });
 	}
 
 } //UML2CloudProfilePackageImpl

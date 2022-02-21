@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module util('http://www.uclm.es/UML/profiles/UML2Cloud/2','http://www.eclipse.org/uml2/5.0.0/UML')]
+[module util('http://www.uclm.es/UML/profiles/UML2Cloud/2.1','http://www.eclipse.org/uml2/5.0.0/UML')]
 
 
 [comment][query public getEthernet(c : Set(Channel)) : String = Sequence(String){'DataCenterEth10M_channel','DataCenterEth100M_channel','DataCenterEth1G_channel','DataCenterEth10G_channel','DataCenterEth40G_channel','DataCenterEth100G_channel'}->at(Sequence(Channel){Channel::Ethernet10Mbps, Channel::Ethernet100Mbps, Channel::Ethernet1Gbps, Channel::Ethernet10Gbps, Channel::Ethernet40Gbps,Channel::Ethernet100Gbps}->indexOf(c->asSequence()->first()))/][/comment]

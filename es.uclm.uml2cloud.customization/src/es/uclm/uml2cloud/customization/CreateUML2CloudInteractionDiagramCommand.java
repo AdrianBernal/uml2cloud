@@ -39,14 +39,15 @@ import org.eclipse.uml2.uml.UMLPackage;
 import org.eclipse.papyrus.uml.tools.model.UmlUtils;
 import org.eclipse.papyrus.uml.diagram.wizards.command.InitFromTemplateCommand;
 import org.eclipse.papyrus.infra.gmfdiag.common.AbstractPapyrusGmfCreateDiagramCommandHandler;
-import org.eclipse.papyrus.commands.RenameDiagramHandler;
 import org.eclipse.gmf.runtime.common.core.command.CompositeCommand;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
-public class CreateUML2CloudInteractionDiagramCommand extends CreateBehavioredClassifierDiagramCommand {
-	private Diagram diagram;
 
-	@Override
+public class CreateUML2CloudInteractionDiagramCommand extends AbstractPapyrusGmfCreateDiagramCommandHandler {
+	private Diagram diagram;
+	
+	private String name = ""; //$NON-NLS-1$
+
 	protected EClass getBehaviorEClass() {
 		return UMLPackage.eINSTANCE.getInteraction();
 	}
@@ -66,7 +67,6 @@ public class CreateUML2CloudInteractionDiagramCommand extends CreateBehavioredCl
 		return "";
 	}
 	
-	@Override
 	protected void initializeModel(EObject owner) {
 //		Behavior behavior = null;
 //		if (owner.eClass() == getBehaviorEClass()) {
@@ -174,5 +174,20 @@ public class CreateUML2CloudInteractionDiagramCommand extends CreateBehavioredCl
 		//super.initializeDiagram(diagram);
 	}
 	
+	/**
+	 * Set the name of the diagram and its containing element
+	 *
+	 * @param newName
+	 */
+	protected void setName(String newName) {
+		if (newName == null || newName.equals(name)) {
+			return;
+		}
+		name = newName;
+	}
+
+	protected String getName() {
+		return name;
+	}
 
 }

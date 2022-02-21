@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module generateSIMCANFiles('http://www.eclipse.org/uml2/5.0.0/UML','http://www.uclm.es/UML/profiles/UML2Cloud/2')]
+[module generateSIMCANFiles('http://www.eclipse.org/uml2/5.0.0/UML','http://www.uclm.es/UML/profiles/UML2Cloud/2.1')]
 [import es::uclm::uml2cloud::m2t::simcan::files::generateNEDFile /]
 [import es::uclm::uml2cloud::m2t::simcan::files::generateINIFile /]
 [import es::uclm::uml2cloud::m2t::simcan::files::generateRUNFile /]

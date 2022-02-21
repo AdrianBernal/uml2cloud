@@ -435,11 +435,8 @@
       </eParameters>
     </eOperations>
     <eOperations name="SLA_incpriority_must_be_grater_than_or_equal_to_zero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <details key="originalName" value="SLA_inc-priority_must_be_grater_than_or_equal_to_zero"/>
-      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="self.vmcost->forAll(vmcost | vmcost.incpriority >= 0)"/>
+        <details key="documentation" value="self.vmcost->forAll(vmcost | vmcost.incpriority >= 0.0)"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -503,11 +500,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="base" ordered="false" lowerBound="1"
         eType="#//Cost" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="incpriority" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real">
-      <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <details key="originalName" value="inc-priority"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+        lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="discount" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="compensation" ordered="false"
@@ -795,7 +788,7 @@
     <eOperations name="Request_For_A_VM_Not_Offered_In_The_Signed_SLA_By_The_User"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="uml2cloud::User.allInstances()->select(user | user.base_Lifeline.coveredBy->includes(self.sendEvent))->collect(user | user.sla.vmcost->collect(vmcost | vmcost.vm))->includes(self.vmInstantation.vmType)"/>
+        <details key="documentation" value="uml2cloud::User.allInstances()->select(user | user.base_Lifeline.coveredBy->includes(self.base_Message.sendEvent))->collect(user | user.sla.vmcost->collect(vmcost | vmcost.vm))->includes(self.vmInstantiation.vmType)"/>
       </eAnnotations>
       <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

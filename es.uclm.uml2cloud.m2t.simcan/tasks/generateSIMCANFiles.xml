@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateSIMCANFiles" name="es.uclm.uml2cloud.m2t.simcan">
-    <property name="ECLIPSE_HOME" value="../../../../../../Eclipse/Papyrus-5.0.0"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../../../Eclipse/workspace/workspace-papyrus-5.0.0"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../Eclipse/Papyrus-5.2.0"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../../Eclipse/workspace/workspace-papyrus-5.2.0"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="es.uclm.uml2cloud.m2t.simcan.libraryclasspath">
         <pathelement location="${ECLIPSE_WORKSPACE}/es.uclm.uml2cloud.m2t.simcan/bin"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.18.0.v20200506-2143.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.15.300.v20200520-1959.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi.compatibility.state_1.1.800.v20200511-1223.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.common_3.12.0.v20200504-1602.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.jobs_3.10.800.v20200421-0950.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.registry_3.8.800.v20200406-0956.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.preferences_3.8.0.v20200422-1833.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.contenttype_3.7.700.v20200517-1644.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.app_1.4.500.v20200422-1833.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore_2.24.0.v20210405-0628.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.common_2.22.0.v20210319-0732.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.uml2.types_2.5.0.v20200302-1312.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.uml2.common_2.5.0.v20200302-1312.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.uml2.uml_5.5.0.v20200302-1312.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.23.0.v20210730-2035.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.17.0.v20210823-1805.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi.compatibility.state_1.2.500.v20210730-0750.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.common_3.15.0.v20210518-0604.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.jobs_3.12.0.v20210723-1034.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.registry_3.11.0.v20210723-1953.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.preferences_3.9.0.v20210726-0943.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.contenttype_3.8.0.v20210621-0954.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.app_1.6.0.v20210723-1130.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/es.uclm.uml2cloud.profile_2.1.1.202203011230.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore_2.25.0.v20210816-0937.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.common_2.23.0.v20210924-1718.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.uml2.types_2.5.0.v20210228-1829.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.uml2.common_2.5.0.v20210228-1829.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.uml2.uml_5.5.0.v20210228-1829.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore.xmi_2.16.0.v20190528-0725.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.mapping.ecore2xml_2.11.0.v20180706-1146.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl_3.15.0.v20200608-1555.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl_3.16.0.v20210310-0557.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/lpg.runtime.java_2.0.17.v201004271640.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl.common_1.8.400.v20200608-1555.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl.ecore_3.15.0.v20200608-1555.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.common_3.7.9.201911060712.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.model_3.7.9.201911060712.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.profiler_3.7.9.201911060712.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.engine_3.7.9.201911060712.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen.ecore_2.26.0.v20210506-1425.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl.common_1.8.600.v20210310-0557.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl.ecore_3.16.0.v20210310-0557.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.common_3.7.11.202102190929.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.model_3.7.11.202102190929.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.profiler_3.7.11.202102190929.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.engine_3.7.11.202102190929.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen.ecore_2.28.0.v20210925-0555.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen_2.22.0.v20210420-0623.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_27.1.0.v20190517-1946.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_30.1.0.v20210127-2300.jar"/>
     </path>
 
     <path id="es.uclm.uml2cloud.m2t.simcan.classpath">

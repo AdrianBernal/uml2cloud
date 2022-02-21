@@ -565,7 +565,7 @@
           </eOperations>
           <eOperations xmi:type="ecore:EOperation" xmi:id="_xtAC2SWjEeuN8I8deI0TLg" name="SLA_incpriority_must_be_grater_than_or_equal_to_zero">
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xtAC2iWjEeuN8I8deI0TLg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xtAC2yWjEeuN8I8deI0TLg" key="originalName" value="SLA_inc-priority_must_be_grater_than_or_equal_to_zero"/>
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xtAC2yWjEeuN8I8deI0TLg" key="originalName" value="SLA_incpriority_must_be_grater_than_or_equal_to_zero"/>
             </eAnnotations>
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xtAC3CWjEeuN8I8deI0TLg" source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xtAC3SWjEeuN8I8deI0TLg" key="body" value="self.vmcost->forAll(vmcost | vmcost.incpriority >= 0)"/>
@@ -654,7 +654,7 @@
           <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_xtADCyWjEeuN8I8deI0TLg" name="base" ordered="false" lowerBound="1" eType="_xtADFyWjEeuN8I8deI0TLg" containment="true"/>
           <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_xtADDSWjEeuN8I8deI0TLg" name="incpriority" ordered="false" lowerBound="1">
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xtADDiWjEeuN8I8deI0TLg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xtADDyWjEeuN8I8deI0TLg" key="originalName" value="inc-priority"/>
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xtADDyWjEeuN8I8deI0TLg" key="originalName" value="incpriority"/>
             </eAnnotations>
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
           </eStructuralFeatures>
@@ -2077,7 +2077,7 @@
           <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jbWXrl17EeqBlrygcYPzvg" name="base" ordered="false" lowerBound="1" eType="_jbWXul17EeqBlrygcYPzvg" containment="true"/>
           <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_jbWXsF17EeqBlrygcYPzvg" name="incpriority" ordered="false" lowerBound="1">
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jbWXsV17EeqBlrygcYPzvg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXsl17EeqBlrygcYPzvg" key="originalName" value="inc-priority"/>
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jbWXsl17EeqBlrygcYPzvg" key="originalName" value="incpriority"/>
             </eAnnotations>
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
           </eStructuralFeatures>
@@ -4481,7 +4481,7 @@
       <ownedRule xmi:type="uml:Constraint" xmi:id="_JskT4HJGEemn3MxcvPR6CA" name="Request_For_A_VM_Not_Offered_In_The_Signed_SLA_By_The_User">
         <specification xmi:type="uml:OpaqueExpression" xmi:id="_JsliAHJGEemn3MxcvPR6CA" name="constraintSpec">
           <language>OCL</language>
-          <body>uml2cloud::User.allInstances()->select(user | user.base_Lifeline.coveredBy->includes(self.sendEvent))->collect(user | user.sla.vmcost->collect(vmcost | vmcost.vm))->includes(self.vmInstantation.vmType)</body>
+          <body>uml2cloud::User.allInstances()->select(user | user.base_Lifeline.coveredBy->includes(self.base_Message.sendEvent))->collect(user | user.sla.vmcost->collect(vmcost | vmcost.vm))->includes(self.vmInstantiation.vmType)</body>
         </specification>
       </ownedRule>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_xJwMQIZWEeexBrHTG7KRXw" name="base_Message" association="_xJvlMIZWEeexBrHTG7KRXw">
@@ -4815,10 +4815,10 @@
           <body>self.vmcost->forAll(vmcost | vmcost.discount >= 0)</body>
         </specification>
       </ownedRule>
-      <ownedRule xmi:type="uml:Constraint" xmi:id="_IK3wUCGmEeuGG5BaWdgrPg" name="SLA_inc-priority_must_be_grater_than_or_equal_to_zero">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_IK3wUCGmEeuGG5BaWdgrPg" name="SLA_incpriority_must_be_grater_than_or_equal_to_zero">
         <specification xmi:type="uml:OpaqueExpression" xmi:id="_IK4-cCGmEeuGG5BaWdgrPg" name="constraintSpec">
           <language>OCL</language>
-          <body>self.vmcost->forAll(vmcost | vmcost.incpriority >= 0)</body>
+          <body>self.vmcost->forAll(vmcost | vmcost.incpriority >= 0.0)</body>
         </specification>
       </ownedRule>
       <ownedRule xmi:type="uml:Constraint" xmi:id="_MHNDACGmEeuGG5BaWdgrPg" name="SLA_base_cost_must_be_grater_than_or_equal_to_zero">
@@ -4827,7 +4827,7 @@
           <body>self.vmcost->forAll(vmcost | vmcost.base.value >= 0)</body>
         </specification>
       </ownedRule>
-      <ownedRule xmi:type="uml:Constraint" xmi:id="_SmzHMCGnEeuGG5BaWdgrPg" name="CloudProvider_must_offer_once_each_VM_for_each_SLA_type" visibility="private">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_SmzHMCGnEeuGG5BaWdgrPg" name="CloudProvider_must_offer_once_each_VM_for_each_SLA_type" visibility="public">
         <specification xmi:type="uml:OpaqueExpression" xmi:id="_Sm0VUCGnEeuGG5BaWdgrPg" name="constraintSpec">
           <language>OCL</language>
           <body>self.vmcost->isUnique(vmcost | vmcost.vm)</body>
@@ -4925,7 +4925,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:DataType" xmi:id="_WRCIsEcSEemheYndKe_CWw" name="VMCost">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_4PgxoEcYEemheYndKe_CWw" name="base" type="_tLqf4DaUEemEgr9NrwVHLA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_BvL7oEcaEemheYndKe_CWw" name="inc-priority">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_BvL7oEcaEemheYndKe_CWw" name="incpriority">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_CA8aAEcaEemheYndKe_CWw" name="discount">

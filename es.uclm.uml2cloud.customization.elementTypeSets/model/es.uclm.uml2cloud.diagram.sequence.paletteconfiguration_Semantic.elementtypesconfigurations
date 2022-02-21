@@ -1,62 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <elementtypesconfigurations:ElementTypeSetConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:applystereotypeadvice="http://www.eclipse.org/papyrus/uml/types/applystereotypeadvice/1.1" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.2" xmi:id="_n6HnwEDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.interaction.elementTypeSets" name="es.uclm.uml2cloud.interaction.elementTypeSets" metamodelNsURI="http://www.eclipse.org/uml2/5.0.0/UML">
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_3JCB8EDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createCombinedFragment5CreationTool_1580122670983" name="Combined Fragment" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.CombinedFragment_Shape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_3ve98EDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createInteractionOperand6CreationTool_1580122675022" name="Interaction Operand" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.InteractionOperand_Shape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_8d2KgEDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580122706724" name="User (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_9P8V0EDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580122711978" name="CloudProvider (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_iu_70ED1EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580123393032" name="RegularUser (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_i8b64ED1EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580123394439" name="PriorityUser (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_mzUQYED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123849822" name="ResponseOfferedVMs (Message Sync)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_SynchEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_owQeMED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123862928" name="RequestOfferedVMs (Message Sync)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_SynchEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_qDirAED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123871658" name="ResponseOfferedVMs (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_t2djAED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123897129" name="Request (Message Sync)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_SynchEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_vOnowED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123906376" name="Response (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_ycpD8ED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580123927976" name="Execute (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_1q3TcED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123949600" name="Ok (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_9tma0ED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124003577" name="TimeoutRenting (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_IyuVIED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580124077931" name="Resume (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_MQ8IcED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580124101232" name="Subscribe (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_NRUAUED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124107981" name="Notify (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_OQ7DMED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124114652" name="TimeoutSubscription (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
-  </elementTypeConfigurations>
-  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_FP0x8PM3Eeqy6400172RDA" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createRefuseMessageAsync2CreationTool" name="Refuse (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
-  </elementTypeConfigurations>
   <adviceBindingsConfigurations xmi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" xmi:id="_8d2xkEDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580122706724_ASAC" target="_8d2KgEDzEeqgZodcSzjH_A">
     <stereotypesToApply xmi:type="applystereotypeadvice:StereotypeToApply" xmi:id="_8d2xkUDzEeqgZodcSzjH_A" stereotypeQualifiedName="uml2cloud::User" updateName="true">
       <requiredProfiles>uml2cloud</requiredProfiles>
@@ -142,4 +85,61 @@
       <requiredProfiles>uml2cloud</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_3JCB8EDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createCombinedFragment5CreationTool_1580122670983" name="Combined Fragment" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.CombinedFragment_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_3ve98EDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createInteractionOperand6CreationTool_1580122675022" name="Interaction Operand" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.InteractionOperand_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_8d2KgEDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580122706724" name="User (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_9P8V0EDzEeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580122711978" name="CloudProvider (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_iu_70ED1EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580123393032" name="RegularUser (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_i8b64ED1EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createLifeline1CreationTool_1580123394439" name="PriorityUser (Lifeline)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Lifeline_Shape"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_mzUQYED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123849822" name="ResponseOfferedVMs (Message Sync)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_SynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_owQeMED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123862928" name="RequestOfferedVMs (Message Sync)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_SynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_qDirAED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123871658" name="ResponseOfferedVMs (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_t2djAED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageSync1CreationTool_1580123897129" name="Request (Message Sync)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_SynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_vOnowED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123906376" name="Response (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_ycpD8ED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580123927976" name="Execute (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_1q3TcED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580123949600" name="Ok (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_9tma0ED2EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124003577" name="TimeoutRenting (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_IyuVIED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580124077931" name="Resume (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_MQ8IcED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageAsync2CreationTool_1580124101232" name="Subscribe (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_NRUAUED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124107981" name="Notify (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_OQ7DMED3EeqgZodcSzjH_A" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createMessageReply3CreationTool_1580124114652" name="TimeoutSubscription (Message Reply)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_ReplyEdge"/>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" xmi:id="_FP0x8PM3Eeqy6400172RDA" identifier="es.uclm.uml2cloud.diagram.sequence.paletteconfiguration.createRefuseMessageAsync2CreationTool" name="Refuse (Message Async)" hint="" kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+    <specializedTypes xmi:type="elementtypesconfigurations:SpecializationTypeConfiguration" href="platform:/plugin/org.eclipse.papyrus.uml.service.types/model/umldi.elementtypesconfigurations#org.eclipse.papyrus.umldi.Message_AsynchEdge"/>
+  </elementTypeConfigurations>
 </elementtypesconfigurations:ElementTypeSetConfiguration>
